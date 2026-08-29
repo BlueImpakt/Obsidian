@@ -164,6 +164,19 @@ Vue vivante générée par Dataview/Tasks : clients par statut, priorités P1, p
 
 ---
 
+## Priorité : toujours consulter le vault avant de répondre
+
+Avant d'utiliser un outil ou de répondre depuis ta mémoire générale, va d'abord
+lire ce qui existe dans le vault (fiche client/projet concernée, `03_knowledge/`,
+etc.). Un skill (ex. `superpowers:brainstorming`, déclenché par des mots comme
+"réfléchir") peut parfois prendre la priorité et sauter cette lecture — si je
+remarque que tu sembles avoir "oublié" le contexte du vault, je te le dirai
+explicitement ("va d'abord consulter le vault") ; ce n'est pas une erreur à
+corriger dans cette constitution, juste un réflexe à avoir sur le moment. Détail
+dans `[[backlog-ameliorations-vault]]`.
+
+---
+
 ## Règles de capture automatique
 
 ### Si je mentionne...
