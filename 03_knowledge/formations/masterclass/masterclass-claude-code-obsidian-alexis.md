@@ -1,0 +1,340 @@
+---
+tags: [formation, millenium]
+module: Masterclass
+section: "Masterclass"
+source_transcript: "Masterclass • Claude Code + Obsidian • Alexis.txt"
+---
+
+# Masterclass • Claude Code + Obsidian • Alexis
+
+## Resume
+- Ouverture de la masterclass : salutations aux participants pendant qu'ils rejoignent le live.
+- Alexis demande qui utilise déjà Obsidian. Une participante indique avoir mis en place la méthode PARA de Tiago Forte (Project/Area/Ressource/Archives) pour classer ses notes.
+- Alexis se présente : freelance ayant suivi la formation Millenium en début d'année (terminée en avril), utilisateur d'Obsidian depuis le début de sa formation (4-5 mois). Il a développé un système custom pour Obsidian suite à de nombreuses demandes de la communauté, d'où cette masterclass.
+- Définition d'Obsidian : application de lecture/édition de fichiers markdown (texte brut), avec système de tags pour relier les notes entre elles, fonctionnant 100% en local. Introduction de la question centrale : quelle différence entre un RAG et une mémoire vivante ?
+- Le RAG classique a un défaut majeur : chaque modification d'un document oblige à refaire l'embedding et à revectoriser, ce qui coûte du temps et des appels LLM. Obsidian permet des fichiers markdown modifiés en temps réel par l'IA, avec une mémoire typée par projet : Claude connecté au vault se souvient du contexte, de l'activité, du ton, et peut modifier les fichiers en direct. Le RAG reste pertinent pour les entreprises avec beaucoup de documentation technique (PDF, Excel) qu'Obsidian ne sait pas lire nativement.
+- Les fichiers Obsidian sont du texte brut, lisible aussi bien par les humains que par les LLM (qui ne parlent qu'en markdown). Pour éviter de perdre les données en cas de casse de l'ordinateur, le vault est versionné via GitHub avec des sauvegardes automatiques toutes les 5 à 15 minutes, comme un système de backup de base de données.
+- Différence entre recherche par mots-clés/structure de dossier (Obsidian) et recherche sémantique par vecteurs (RAG) : chaque bout de texte reçoit un vecteur, et la proximité sémantique détermine la pertinence (ex. vecteur 'chat' proche de 'chien', loin de 'voiture'). Cette approche nécessite une base vectorielle et repose uniquement sur des calculs mathématiques — l'IA ne comprend pas profondément le contexte.
+- Rappel : le système d'Alexis est 100% local. Référence à la vague de vidéos (il y a 2-3 mois) popularisant la 'méthode Karpathy' — du nom du cofondateur d'OpenAI aujourd'hui chez Anthropic — qui a introduit le concept de 'LLM wiki'.
+- Explication de la méthode Karpathy : tous les fichiers dans un seul dossier, reliés par un très grand nombre de tags (ex. le tag d'un client 'boucher maçonnerie' ramène directement au projet associé). Cette approche produit des graphiques de liens visuellement impressionnants, largement popularisés en ligne.
+- Le vrai problème de la méthode Karpathy : plus il y a de liens/tags, plus le LLM doit ouvrir de fichiers en cascade (jusqu'à 40 fichiers pour une seule question), lisant chaque fichier entièrement — d'où une explosion de contexte et des coûts en tokens absurdes après quelques semaines d'usage. C'est ce qui a nourri la vague de déception 'le 2e cerveau, c'est bidon, ça fait exploser mes tokens'. La solution d'Alexis repose sur le principe des index : segmenter le vault en dossiers clairs (inbox, un dossier par client relié aux projets, arbre de connaissances, archives, réunions).
+- Explication de comment Claude cherche dans le vault : il charge d'abord CLAUDE.md, le fichier structurant qui contient la structure du vault, les règles à respecter et le contexte business. Ce fichier fournit un index léger — une ligne de description par fichier/souvenir — permettant à Claude de sélectionner uniquement les fichiers pertinents à lire pour répondre, plutôt que d'explorer tout le vault.
+- Grâce à cette structure, les tokens consommés sont minimisés : Alexis n'a quasiment jamais dépassé son abonnement Claude à 20€/mois en 4-5 mois d'usage, malgré des journées à 50-80 sessions Claude Code, car les questions ciblées ne récupèrent que le contexte important. Début de la démo pratique : téléchargement d'Obsidian et création du premier vault, avec recommandation de stockage local (plutôt que Google Drive) pour éviter la latence.
+- Questions/réponses pratiques : créer un coffre = créer une nouvelle base Obsidian. Un vault ne prend quasiment aucune place disque puisqu'il est composé uniquement de fichiers texte (32 Mo après 5 mois d'usage intensif pour Alexis). Obsidian est entièrement gratuit.
+- Obsidian est un projet communautaire open source hébergé sur GitHub, avec une communauté de plugins très active. À l'origine conçu pour la prise de notes pure, il permet de créer rapidement des fiches et titres en syntaxe markdown. Le vault d'Alexis est structuré en 6 dossiers principaux, chacun avec ses propres templates (ex. même template pour deux clients différents comme 'boucher maçonnerie' et 'pont terrassement').
+- Recommandation d'installer le plugin Templater (Réglages > Modules complémentaires > Parcourir > installer puis activer). Ce plugin permet de créer des templates qui font remplir automatiquement par Claude le statut, les priorités, le secteur, la localisation, le contexte, les besoins identifiés et les décisions prises, ainsi que les liens systématiques vers les projets et expériences liés.
+- Dans CLAUDE.md, la règle est définie : dès qu'un nouveau client apparaît, la première action est de récupérer le template client correspondant et de l'ajouter à la base ; les variables du template sont ensuite automatiquement remplies par Claude, garantissant des fichiers toujours structurés de la même façon.
+- Alexis partage son GitHub public contenant un README d'installation et le fichier 'CLAUDE-generique.md', volontairement rendu générique pour que chacun l'adapte. Ce fichier décrit qui est l'utilisateur, comment il écrit (ton, style, brand voice), et détaille toute l'architecture du vault — à commencer par l'inbox, dédié aux captures brutes et au triage quotidien/hebdomadaire.
+- Démonstration de la daily note (note du jour) : une section 'pense-bêtes' remplissable à la main ou par Claude, et une section 'ce qu'on a fait aujourd'hui' alimentée au fil des sessions Claude. Exemple concret : à l'annonce 'contrat signé avec Boucher-Maçonnerie', Claude met à jour l'historique des échanges, note la décision prise, change le statut du lead, renseigne les devis et les prochaines étapes selon le compte-rendu.
+- La section 'Blocages' de la daily note capture ce qui n'a pas fonctionné dans la journée ; lors de l'ingestion du soir, un blocage du jour devient automatiquement une tâche de type 'débugger ce workflow' pour le lendemain, avec des initiatives suggérées par Claude. Présentation du 'Content Feed' : le constat que les posts LinkedIn de storytelling précis (plutôt que génériques) fonctionnent le mieux a motivé la création d'un système de capture continue des détails de la journée.
+- Le Content Feed capture au fil de l'eau les points bloquants, décisions et réussites déjà présents dans la daily note. Le soir, la commande d'ingestion (good-night) remplit automatiquement ce fichier avec le contenu potentiellement intéressant pour LinkedIn, en réutilisant le workflow d'écriture de post de Théo via le plugin 'Post Webhook'.
+- Le plugin Post Webhook permet d'envoyer le contenu du vault vers n8n via un webhook, car un serveur n8n distant ne peut pas accéder directement aux fichiers stockés en local sur le disque. Question soulevée par un participant : peut-on conserver des informations confidentielles dans le coffre-fort sans risque de fuite ?
+- Réponse sur la confidentialité : le vault étant 100% local, son contenu est protégé comme n'importe quel fichier du bureau, sauf en cas de piratage. Il faut néanmoins rester prudent quand une IA travaille sur ces fichiers en général. Règle absolue : ne jamais stocker de codes de carte bancaire ou de mots de passe dans le vault. Pour des clients aux données ultra sensibles, il est possible de faire tourner un LLM entièrement en local pour garantir zéro fuite de données.
+- Sur les backups GitHub : il est possible d'utiliser un fichier .gitignore pour exclure certains dossiers sensibles du push vers GitHub tout en gardant les sauvegardes automatiques pour le reste. Le choix dépend du type d'activité et de client avec lequel on travaille.
+- Il faut se demander, activité par activité, si l'on accepte le risque qu'une information fuite ou non — une règle transverse à toute utilisation de l'IA. Suite de la démo Post Webhook : le webhook fournit une URL à renseigner dans les paramètres du plugin ; tous les 2 jours, une commande (Ctrl+P > Post Webhook) envoie la note vers n8n, qui génère 3 idées de post envoyées par email, à sélectionner et retravailler avant publication automatique (avec vérificateur anti-plagiat).
+- Conclusion de la partie inbox : connecter Obsidian à d'autres outils comme n8n renforce considérablement sa puissance. Résumé façon PARA : une boîte de réception centrale, des notes quotidiennes alimentées en continu, et un content feed mis à jour chaque jour.
+- Structure des fiches clients : note principale (qui est le client, historique du passif), dossier d'attachements pour devis/PDF (visibles dans le vault mais non lisibles nativement par Claude, sauf via un plugin OCR non testé). Structure des fiches projets : pièces de vente externes, objectifs, livrables, état actuel, décisions techniques, blocages et risques. Ces templates permettent une automatisation : scan quotidien des livrables en retard avec création automatique de tâches de rappel urgentes.
+- Le dossier 'knowledge' (fourre-tout, librement adaptable) centralise le contenu de formation suivi, notamment les workflows n8n déjà construits. En connaissant ces compétences, Claude oriente ses propositions vers des solutions techniquement réalisables lors des discussions avec les clients.
+- Le dossier knowledge contient aussi des bibliothèques de prompts (styles d'écriture, SMS de relance, DM LinkedIn), des scripts de cold call, et une veille technologique automatique quotidienne consultée une fois par semaine, ainsi qu'un onglet personnel. Le dossier Archives conserve les clients perdus et leads refusés — utile pour des rapports d'analyse de fin de mois, sans coût de stockage significatif. Le dossier Réunions regroupe préparation et comptes rendus.
+- Question posée : les templates sont-ils remplis manuellement ou par Claude ? Réponse : c'est le rôle des skills. Alexis dispose déjà d'un dossier local avec ses fichiers de contexte, règles et voix, et peut reprendre une conversation Claude pour lui demander de remplir directement la fiche du client concerné.
+- Vue d'ensemble du fichier CLAUDE.md résumant toute l'architecture du vault (tags par client, couleurs, priorités, liens systématiques). Introduction du point le plus important de la masterclass : les règles de capture automatique. Deux mécanismes créés par Alexis : le skill 'good-night', déclenché manuellement en fin de journée, qui récupère toutes les sessions Claude Code de la journée — y compris celles réalisées hors du dossier Obsidian, sur d'autres projets comme une application ou un site web.
+- Démonstration live de l'ingestion : Alexis se positionne dans le dossier du vault et lance Claude. Il donne l'exemple d'un nouveau client fictif ('Théo Maréchal'), avec un rendez-vous prévu le mardi suivant à 9h, une réunion à préparer et un mail de relance à rédiger la veille, puis demande explicitement à Claude d'« ingérer tout ça dans le volt ».
+- Suite de la démo : Claude crée automatiquement la fiche client, remplit les informations fournies, pose des questions si des éléments manquent, et génère les prochaines actions (préparer le mail et la réunion pour mardi). Ce principe se généralise à n'importe quel document donné à ingérer (mail, PDF...) : Claude respecte les templates et règles définis pour remplir automatiquement les bonnes tâches.
+- Introduction du deuxième mécanisme : un agent headless (invisible, tournant en arrière-plan), déclenché automatiquement à chaque commande `/clear`. Objectif : éviter l'explosion de tokens due à un contexte trop chargé, tout en gardant une donnée fraîche en continu — plutôt que d'attendre le good-night du soir, chaque `/clear` déclenche un second agent qui relit la conversation et juge sa pertinence pour une ingestion immédiate.
+- Clarification du fonctionnement combiné : à chaque `/clear`, l'agent headless (agent-clear) évalue la pertinence de la conversation et ingère si besoin. Le skill 'good-night', lancé chaque soir, rattrape spécifiquement les sessions non traitées (par exemple fermées sans `/clear`) pour garantir qu'aucune information ne soit manquante. Introduction du skill 'transcribe' basé sur Whisper local (open source, gratuit) — seul prérequis : installer Whisper en local, ce que Claude peut faire directement.
+- Utilisation du skill transcribe : enregistrer un appel client ou une visio via l'application dictaphone (téléphone ou ordinateur), puis lancer `/transcribe` avec le fichier audio. Claude transcrit le texte en ayant accès à tout le vault (contexte client), et remplit automatiquement le compte-rendu de réunion avec le template dédié, en rédigeant les actions actées suite à la réunion.
+- Un participant signale une limitation technique : impossible d'enregistrer simultanément un appel et une prise de notes sur mobile, le micro étant déjà utilisé par l'appel. Alexis propose une solution de contournement : utiliser deux appareils distincts (téléphone pour la visio, dictaphone de l'ordinateur pour l'audio, ou inversement selon le cas).
+- Deux sujets dans ce passage : contourner la limite d'enregistrement simultané en couplant avec un outil tiers de prise de notes puis en donnant le rapport à Claude pour ingestion ; et présentation du CRM Twenty connecté à un agent Telegram, permettant d'ajouter un client en langage naturel en 2 phrases — avec la limite du système Obsidian local qui nécessite d'être sur l'ordinateur pour y accéder.
+- Suite sur la limite d'accès hors-ligne du vault local : si l'ordinateur est éteint, impossible d'accéder aux documents. Solution partielle : un agent mobile capte l'information (ex. programmer une relance dans 2 jours) et déclenche un rappel automatique dès le matin.
+- Question sur l'hébergement d'Obsidian sur un serveur pour un accès distant : c'est possible techniquement, mais Alexis préfère le local avec sauvegardes automatiques. Cette option serait pratique pour un usage mobile intensif (envoyer des idées depuis son smartphone). Transition vers la présentation des 'clippings'.
+- Réponse à la question « pourquoi Twenty plutôt qu'un CRM custom sur Supabase ? » : Alexis avait besoin d'un MCP natif pour des automatisations de relance très précises ; Twenty ne l'avait pas nativement mais un projet GitHub tiers proposait ce MCP, ce qui en faisait la solution la plus simple à déployer directement sur son serveur.
+- Marche à suivre pour démarrer : copier le lien du GitHub partagé, ouvrir Claude Code dans le dossier du vault Obsidian (nouvelle session, ouvrir le dossier concerné). Alexis recommande ensuite de faire un brainstorming avec Claude en s'appuyant sur le skill 'superpower' pour adapter et personnaliser toute la structure fournie à sa propre activité, plutôt que de la copier telle quelle.
+- Présentation de l'extension Chrome 'Obsidian Web Clipper' (pas un plugin Obsidian mais une extension navigateur) : une fois configurée sur le coffre-fort cible, elle permet de sauvegarder en un clic le contenu de n'importe quelle page web (article, documentation) au format texte directement dans le vault.
+- Cas d'usage du clipping : capturer une documentation API technique via le Web Clipper, l'enregistrer dans le vault, puis dire à Claude Code d'ingérer ce clipping pour qu'il remplisse le knowledge et puisse ensuite répondre directement aux questions de configuration en consultant cette documentation en interne. Introduction du plugin Excalidraw, permettant de créer des mind maps et schémas par raccourcis, que Claude peut générer automatiquement à la demande.
+- Démonstration : suite à la demande orale d'ingestion pour 'Théo Maréchal', on retrouve dans le vault la fiche client créée avec les informations fournies, la décision prise ('rendez-vous découverte fixé') et le besoin identifié. Point clé : le comportement fonctionne comme une fenêtre de contexte persistante — dans une nouvelle session censée ne rien savoir, Claude retrouve directement les informations du client en consultant le vault, y compris les prochaines actions à mener.
+- Récapitulatif des extensions déjà montrées : Excalidraw et Templater. Présentation du plugin Git, à installer absolument pour les backups : une fois configuré, il suffit de demander à Claude de paramétrer des sauvegardes automatiques vers GitHub toutes les 15 minutes, garantissant l'accès permanent aux dossiers même en cas de perte de l'ordinateur. Fin de la partie 'Obsidian pure' ; un participant souligne qu'on peut aussi relier le vault dans les instructions d'un projet Claude classique, sans passer par Claude Code en terminal.
+- Confirmation : on peut donner accès au vault à un nouveau projet Claude en ajoutant simplement le dossier concerné, tout en gardant l'accès au contexte général — Claude ne redemande alors plus systématiquement les informations déjà connues (qui vous êtes, ce que vous savez faire) lorsqu'on travaille sur un autre projet, comme un développement de site.
+- Introduction du niveau suivant : PaperClip. Point d'attention important avant d'y arriver : les skills possèdent des hooks par défaut qui détectent quand ils doivent se déclencher — un mot-clé comme 'réfléchir' peut activer un skill de brainstorming (ex. superpower) avant même que Claude aille consulter le dossier client, ce qui lui fait perdre le contexte. Il faut s'assurer que Claude consulte toujours d'abord les données du dossier avant d'utiliser un autre outil ; un hook gênant est désactivable en le disant simplement à Claude.
+- Question sur le multi-dossiers (3 clients, 3 dossiers, 3 terminaux) et comment le /clear se propage : un skill peut être installé au niveau projet uniquement, ou dans les instructions générales de Claude pour s'appliquer à toutes les sessions. C'est précisément ce que fait good-night, qui va chercher toutes les sessions de la journée qu'on soit sur le dossier Obsidian ou non (via du code Python capable de connecter d'autres agents à d'autres dossiers) — écrit par Alexis pour résoudre ce problème qu'il a lui-même rencontré. Il juge ensuite ce qui est pertinent à ingérer (une question sur des pâtes carbonara ne le serait pas).
+- Suite : un contenu non pertinent (ex. une question sur des pâtes carbonara) ne serait pas ingéré. Le skill agrège au fil de l'eau et écrit la daily note, rendu possible par du code Python en parallèle du prompt — d'où l'importance de partager tout le repo GitHub, pas seulement CLAUDE.md. Alexis récapitule ce '1er niveau' : faire travailler Claude sur le vault via templates/dossiers/index, lui faire ingérer les données (par commande ou à l'oral) pour qu'il ait le contexte complet et prenne des initiatives. Transition vers le '2e niveau'.
+- Le vrai problème d'Alexis : déléguer des tâches nécessitait de les regarder une par une, en ouvrant un nouveau terminal à chaque fois. Il a donc créé un dashboard personnel (priorité du jour, agenda, comptabilité, file de validation) permettant de valider ou supprimer chaque tâche directement, ou de déléguer une tâche précise (ex. « cherche les contacts potentiels de Christelle ») qui lance automatiquement une session Claude dédiée.
+- Ce dashboard, développé en custom directement avec Claude, reste relativement simple à réaliser. Démo de la délégation sur 'Christelle' : le contexte du vault s'ouvre automatiquement pour la tâche. Usage matinal typique : après le good-night de la veille qui a préparé la daily note, cliquer 'déléguer' sur chaque tâche délégable pendant qu'on trie le reste fait tourner 6-7 sessions Claude en parallèle. Le dashboard est aussi connecté à l'agenda Google et au CRM, formant un point de gestion unique.
+- Passage au niveau supérieur : PaperClip, un outil d'orchestrateur multi-agents, comparable aux dashboards vus sur les réseaux affichant '10 agents qui travaillent 24/24'. Exemple recommandé, faisable même sans PaperClip : demander à Claude de créer une routine d'audit hebdomadaire du coffre-fort, produisant un rapport sur les fichiers à archiver, les incohérences, les liens manquants et l'index obsolète — pour garantir que le vault reste exploitable durablement et ne devienne pas un 'bordel organisé'.
+- Exemple concret de prompt pour créer la routine d'audit hebdomadaire : vérifier l'absence de doublons et de tags manquants, s'assurer que l'index reste à jour, et détecter les tâches dormantes non remontées. Retour sur PaperClip : une intégration custom fait remonter les vraies tâches du vault dans l'interface (même exemple 'Christelle'), permettant de déléguer directement à un agent. Alexis demande si l'explication de PaperClip reste claire, le sujet étant plus complexe pour certains.
+- Un participant confie que le sujet PaperClip est dense à assimiler d'un coup ; Alexis reconnaît que cette partie va au-delà de l'essentiel et n'était pas prévue au départ, mais reste intéressante à montrer vu le temps disponible.
+- Conseil de démarrage : pendant les 2-3 premières semaines, reprendre le repo/fichier d'Alexis, créer son coffre-fort, et discuter avec Claude de son fonctionnement — utiliser un vault de base qui se remplit déjà automatiquement est un gros gain pour les tokens et l'activité. Une participante (Marianne) indique qu'elle reconstruira après le live et posera ses questions plus tard. Alexis annonce la création d'un post communautaire dédié pour centraliser les questions post-masterclass.
+- Explication détaillée de PaperClip à la demande d'un participant : créer des agents et un orchestrateur multi-agents, chacun avec des instructions, un rôle et des outils/connecteurs précis. Exemple d'organisation : un agent 'CEO' central qui récupère les infos et donne les feedbacks, 'Marc Leroy' comme manager de la veille de contenu, avec 3 agents dédiés — un d'analyse concurrentielle (nouveautés hebdomadaires des concurrents) et un agent 'Sophie' dédié uniquement à la veille communauté/tendance sur Reddit (IA, automatisation, freelance, side project). Chaque agent rapporte à son manager qui rapporte au CIO ; on peut assigner une tâche directement au CIO, qui déclenche les agents appropriés ou en crée de nouveaux si besoin.
+- Point puissant de PaperClip : on peut donner des objectifs (goals) aux agents. Exemple : un objectif hebdomadaire de trouver 10 leads qualifiés par recherche multicanale, ciblant 7 ICP précis, en surveillant certaines métriques et commentaires LinkedIn. Ces agents peuvent ensuite se réveiller automatiquement selon des routines programmées.
+- Les 4 agents présentés se réveillent chaque lundi matin selon une routine programmée, déclenchant les agents de veille de contenu qui scrapent Reddit, Twitter, LinkedIn et certains blogs. Résultat hebdomadaire : un rapport directement consultable dans le vault (les agents y sont connectés), couvrant l'actualité tech/GitHub, l'état des API/outils (Nuiten, OpenClose, Supabase) et les tendances communautaires, avec des chiffres clés.
+- Le rapport de veille propose aussi des angles LinkedIn potentiels pour la semaine, des signaux forts, et des recommandations (contenu, prospection, offres, outils, posts), permettant de déclencher automatiquement des tâches. PaperClip fonctionne comme une centrale de gestion des agents ; on aurait pu développer l'équivalent en code, mais Alexis souligne que le custom coûte du temps et génère des bugs comparé à un outil existant.
+- PaperClip est open source et peut être relié à un workflow externe. Exemple : une routine hebdomadaire de veille technologique génère des recommandations de postes et d'angles LinkedIn ; rappel que les posts de storytelling (alimentés par le Content Feed qui se remplit automatiquement) restent le format qui fonctionne le mieux.
+- Démonstration de création d'un agent rédacteur assigné au CEO (projet 'bâtirup') : instruction de réutiliser chaque semaine la veille technologique produite par un autre agent pour proposer 3 exemples de posts sur l'actualité tech, livrés directement dans le vault, en s'appuyant sur un agent dédié au style d'écriture personnel. La tâche se lance et l'agent commence à travailler en arrière-plan.
+- Une routine peut analyser les anciens posts (style, succès/échec, insights) pour ajuster automatiquement l'agent rédacteur — un fine-tuning automatique du style. Question sur le connecteur de publication LinkedIn, jugé difficile à intégrer : piste 'Happy Five', en notant l'existence d'API payantes réservées aux entreprises.
+- Petit souci technique de connexion réglé pendant la démo. Alexis reprend en notant qu'il est allé vite sur certains sujets pour montrer un maximum de possibilités dans le temps imparti.
+- Clôture pratique : le replay complet sera disponible sur Circle, et un post communautaire centralisera les questions ultérieures. Alexis conseille aux personnes encore en formation de créer leur propre vault structuré par thème (no-code, n8n...), en y ingérant workflows d'agents et transcriptions de vidéos de formation pour bâtir progressivement une base de connaissances qui reconnaît les patterns au fil du temps ; le web clipping est idéal pour y ajouter des documentations techniques (ex. n8n). Question soulevée : y a-t-il un intérêt à vendre ce type de prestation à une entreprise cliente ?
+- Réponse à la question sur la vente de la prestation à une entreprise : cela fonctionne bien pour un freelance/indépendant seul (simple à former, pas d'équipe à coordonner) ; c'est plus complexe dès qu'une équipe travaille dessus à plusieurs. Exemple d'une cliente auto-entrepreneure intéressée par la mise en place d'un « second cerveau ».
+- Précision : il faut qu'un client utilise Claude Code (ou un équivalent type Codex) pour que la prestation ait un intérêt réel, mais l'application Claude classique reste une alternative plus visuelle et moins intimidante que le terminal pour les moins à l'aise techniquement. Pour un client, on peut auditer son système de travail (comment il gère ses clients, quelles infos il doit ingérer) et lui livrer un coffre-fort clé en main prêt à l'emploi.
+- Ce type de setup n'est pas adapté à tous les profils clients (nécessite un minimum de technicité) — confirmé pour sa cliente jugée « assez tech ». Alternative évoquée pour une équipe : Notion peut reproduire le même principe (dossiers, templates, index) via MCP, un peu moins optimisé et plus lent (appels API, consommation de tokens) mais fonctionnel pour une équipe de 5, avec remontée des tâches de chacun. Alexis note la sortie récente d'une nouvelle API Notion interrogeable en markdown, qui le fait s'interroger sur l'intérêt de basculer.
+- Clarification technique importante soulevée en aparté : un MCP est une surcouche d'API permettant aux IA de communiquer entre elles, ce qui consomme plus de tokens qu'une interface en ligne de commande (CLI) plus bas niveau — à privilégier quand disponible pour réduire la consommation.
+- Résumé de la distinction CLI/MCP appliquée à Notion : une interface directement intégrée à Notion (comme Claude est connecté à Obsidian) éviterait le terminal, plus accessible pour beaucoup. Message clé : structurer son vault maintenant avec la bonne architecture permet de basculer facilement vers un autre outil (ex. Notion) plus tard si besoin, sans tout reconstruire. La démo PaperClip en arrière-plan termine de créer la routine et l'agent.
+- Synthèse pratique : les tâches réparties chaque matin et tout le travail enregistré en fichiers texte restent consultables en permanence par l'IA, réduisant fortement le besoin de reformuler le contexte. Exemple marquant : demander « quel est le dernier mail de Fabien » suffit, Claude retrouvant seul le bon client dans le vault. Il reste 5 minutes pour les questions ; clôture chaleureuse des participants.
+- Rappel que le système est très évolutif et demande un temps d'adaptation ; en cas de comportement erratique de Claude sur le vault, il faut en discuter directement avec lui pour identifier et corriger la cause plutôt que d'abandonner. Un participant (Marc) partage une amélioration de template : ajouter un fichier GEMINI.md et un fichier AGENT.md en plus de CLAUDE.md, chacun servant de point d'entrée pour une IA différente (Gemini, et le standard AGENT.md aussi utilisé par OpenAI).
+- Ces fichiers d'entrée pointent tous vers un fichier maître commun, rendant le système compatible et portable entre les 3 principales IA. Alexis envisage de transformer son CLAUDE.md en AGENT.md standard pour éviter toute dépendance à un fournisseur unique (ex. si Anthropic fermait ses modèles) — argument clé : tout étant local et au format texte, les données restent récupérables et propriétaires, avec des sauvegardes automatiques, quel que soit le changement d'IA à l'avenir.
+- Alexis évoque un nouveau standard émergent porté par Google concernant les propriétés en haut de chaque fichier (frontmatter), qui pourrait devenir la nouvelle manière de structurer les fichiers dans les vaults à l'avenir. Il note l'agacement de voir un nouveau standard sortir dès qu'un système est mis en place, mais reconnaît que celui-ci semble propre et probablement amené à être largement adopté.
+- Suggestion finale : donner le lien de ce nouveau standard à Claude pour évaluer s'il est possible de l'adopter tout en conservant l'architecture actuelle du vault. Alexis rappelle que son système n'est pas infaillible et encourage les participants à partager leurs améliorations sur la communauté. Remerciements de clôture ; un participant témoigne qu'avoir connecté Claude à Obsidian depuis 3 semaines a tout changé, notamment en termes d'économie de contexte et de tokens. Alexis confirme qu'avec un abonnement Claude à 20€/mois, on peut travailler toute la journée si l'architecture du vault est bien construite.
+- Chiffre clé : Alexis tourne jusqu'à 80-90 sessions Claude Code par jour lors de ses plus grosses journées, grâce à la délégation intensive de tâches, sans jamais atteindre ses limites de contexte. Conseil pratique : faire tourner les routines automatisées (PaperClip et agents) la nuit, par exemple à 3h du matin, car elles consomment beaucoup de tokens — pour arriver le matin avec tous ses crédits disponibles. Il travaille en mode de réflexion 'medium' avec les permissions en mode 'bypass' par défaut à l'ouverture d'une session.
+- Précision chiffrée : le terminal affiche une barre indiquant le pourcentage de la fenêtre de contexte utilisée ; au-dessus de 40% de contexte rempli, les réponses de l'IA se dégradent et deviennent plus coûteuses. Règle personnelle d'Alexis : faire un /clear dès que le contexte dépasse 20-30%, ce qui explique son grand nombre de petites sessions (90) plutôt qu'un nombre représentatif en tokens.
+- Conclusion : grâce aux clears fréquents (40 à 50 fois par jour), le vault évolue en temps réel dans la journée — le contexte du matin (ex. réponse envoyée à un client) est déjà disponible l'après-midi si ce même client répond. Un participant partage un souci de configuration ayant entraîné une perte de données avec son ancien système, et compte migrer vers agent-clear. Rappel final : good-night, en repassant toutes les sessions du soir en revue, garantit l'absence de doublons ou de pertes d'information. Clôture de la masterclass, remerciements entre les participants et Alexis.
+
+## Concepts cles
+- Méthode PARA (Tiago Forte)
+- Présentation d'Alexis
+- Système Obsidian custom
+- Obsidian
+- Markdown
+- Tags
+- 100% local
+- RAG vs mémoire vivante
+- Limites du RAG (ré-embedding à chaque modification)
+- Mémoire typée par projet
+- Vault (coffre-fort Obsidian)
+- RAG adapté aux entreprises avec doc technique lourde
+- Markdown lisible humain + machine
+- Versioning via GitHub
+- Sauvegardes automatiques
+- Recherche par similarité vectorielle
+- Recherche par mots-clés/structure de dossier
+- Base vectorielle
+- Limites de compréhension du LLM sur un RAG pur
+- Méthode Karpathy / LLM wiki
+- Méthode Karpathy (fonctionnement détaillé)
+- Tags reliant fichiers clients/projets
+- Graphique de liens Obsidian
+- Explosion de contexte
+- Principe des index
+- Segmentation du vault (inbox / clients / projets / knowledge / archives / réunions)
+- CLAUDE.md (fichier structurant)
+- Index léger (une ligne par fichier)
+- Sélection ciblée des fichiers pertinents
+- Coût token maîtrisé grâce à l'indexation
+- Création d'un vault Obsidian
+- Stockage local vs cloud (latence)
+- Poids disque négligeable d'un vault (texte brut)
+- Gratuité d'Obsidian
+- Communauté de plugins Obsidian (open source)
+- 6 dossiers principaux du vault
+- Templates uniformes par type de dossier
+- Plugin Templater
+- Champs auto-remplis par template (statut, priorité, secteur, etc.)
+- Règle CLAUDE.md pour nouveaux clients
+- Uniformité des fiches via variables de template
+- CLAUDE-generique.md (template GitHub public)
+- Brand voice et ton d'écriture
+- Dossier inbox (captures brutes, triage)
+- Daily note
+- Section Pense-bêtes
+- Section Ce qu'on a fait
+- Section Blocages → rollover en tâche de debug le lendemain
+- Content Feed LinkedIn (origine du besoin)
+- Alimentation automatique du Content Feed via l'ingestion du soir
+- Réutilisation du workflow LinkedIn de Théo
+- Pont Obsidian (local) → n8n (distant) via webhook
+- Confidentialité des données du vault
+- Sécurité du vault (100% local)
+- Prudence générale lors du traitement par une IA
+- LLM local pour données ultra sensibles
+- .gitignore pour exclure des dossiers sensibles du backup GitHub
+- Règle transverse : accepter ou non le risque de fuite selon l'activité
+- Workflow complet Post Webhook → n8n → 3 propositions de post
+- Synthèse du fonctionnement de l'inbox (façon PARA)
+- Structure d'une fiche client
+- Structure d'une fiche projet
+- Limite : PDF non lisibles nativement par Claude dans le vault
+- Scan quotidien automatique des livrables en retard
+- Dossier knowledge (patterns réutilisables)
+- Orientation technique de Claude selon les compétences déjà connues
+- Bibliothèque de prompts réutilisables
+- Veille technologique automatique
+- Dossier Archives (clients perdus, leads refusés)
+- Dossier Réunions
+- Remplissage des templates via les skills, pas manuellement
+- CLAUDE.md (résumé de toute l'architecture)
+- Skill good-night
+- Capture multi-projets (pas seulement le vault)
+- Positionnement dans le dossier du vault avant de lancer Claude
+- Commande d'ingestion orale
+- Création automatique de fiche + tâches à l'ingestion
+- Généralisation à tout type de document (mail, PDF)
+- Agent headless déclenché sur /clear
+- Ingestion continue vs ingestion différée du soir
+- Complémentarité agent-clear / good-night
+- Skill transcribe (Whisper local)
+- Skill transcribe : de l'audio au compte-rendu automatique
+- Limitation d'enregistrement simultané sur mobile
+- Couplage avec un outil tiers de prise de notes
+- CRM Twenty connecté à un agent Telegram
+- Limite : accès au vault local uniquement depuis l'ordinateur
+- Limite d'accès hors-ligne du vault local
+- Agent mobile comme relais en attendant
+- Hébergement du vault sur un serveur web (alternative au local)
+- Avantage : accès mobile via serveur
+- Choix du CRM Twenty motivé par la disponibilité d'un MCP tiers
+- Déploiement sur serveur personnel
+- Démarrage : ouvrir Claude Code dans le dossier du vault
+- Skill superpower pour brainstorming de personnalisation
+- Extension Obsidian Web Clipper (Chrome)
+- Clipping d'une documentation API + ingestion dans knowledge
+- Plugin Excalidraw (mind maps, dessins)
+- Fiche client générée automatiquement (démo concrète)
+- Comportement 'fenêtre de contexte' persistante via le vault
+- Plugin Git (Obsidian)
+- Sauvegarde automatique toutes les 15 minutes
+- Accès au vault possible hors Claude Code (Claude classique)
+- Ajout du dossier vault à un nouveau projet Claude
+- Persistance du contexte entre projets
+- PaperClip (orchestrateur multi-agents)
+- Hooks de déclenchement des skills
+- Risque : un skill peut prendre la priorité avant la consultation du contexte
+- Installation d'un skill au niveau projet vs au niveau global
+- Connexion cross-dossier gérée par du Python associé au skill
+- Rôle du code Python dans good-night (au-delà du seul prompt)
+- Synthèse du niveau 1 : structure + index + ingestion
+- Dashboard personnel de gestion des tâches
+- Délégation de tâche déclenchant une session Claude automatique
+- Dashboard custom réalisable avec l'aide de Claude
+- Routine matinale : trier les tâches et déléguer en un clic
+- Dashboard connecté à Google Agenda et au CRM
+- Audit hebdomadaire du vault (faisable même sans PaperClip)
+- Exemple de prompt d'audit hebdomadaire (doublons, tags, index, tâches dormantes)
+- Intégration custom des tâches réelles du vault dans PaperClip
+- Conseil de démarrage progressif (2-3 semaines)
+- Post communautaire centralisant les questions post-masterclass
+- PaperClip — fonctionnement détaillé
+- Hiérarchie d'agents : agent spécialisé → manager → CEO/CIO
+- Agent de veille communauté/tendance dédié (rôle unique)
+- Objectifs (goals) assignés à un agent : ex. trouver des leads qualifiés
+- Routines programmées de réveil des agents
+- Routine hebdomadaire de réveil des agents (lundi matin)
+- Rapport de veille consultable directement dans le vault
+- Rapport de veille : recommandations LinkedIn, prospection, outils
+- PaperClip comme centrale de gestion d'agents vs développement custom
+- PaperClip open source, liable à un workflow
+- Complémentarité veille technologique + Content Feed pour LinkedIn
+- Création d'un agent rédacteur dédié aux posts tech hebdomadaires
+- Chaînage entre agent de veille et agent rédacteur
+- Fine-tuning automatique du style via analyse des anciens posts
+- Connecteur de publication LinkedIn (difficulté technique)
+- Conseil pour les personnes en formation : vault thématique par domaine
+- Ingestion de transcriptions de formation et workflows pour bâtir une base de connaissances
+- Web clipping pour documentations techniques (ex. n8n)
+- Prestation adaptée aux freelances/indépendants seuls
+- Complexité accrue pour une équipe
+- Nécessité que le client utilise Claude Code ou équivalent
+- Application Claude classique comme alternative plus visuelle au terminal
+- Livraison clé en main d'un coffre-fort après audit du système de travail
+- Setup non adapté à tous les profils clients
+- Notion comme alternative à Obsidian pour une équipe (via MCP)
+- Nouvelle API Notion interrogeable en markdown
+- CLI (command line interface) vs MCP
+- MCP consomme plus de tokens qu'une interface CLI directe
+- CLI vs MCP appliqué à Notion
+- Architecture réutilisable : basculer d'outil (Obsidian → Notion) sans tout reconstruire
+- Réduction du besoin de reformuler le contexte grâce au vault
+- Recherche directe d'un client par prénom
+- Système évolutif nécessitant de l'exploration
+- Dialoguer avec Claude pour corriger un comportement erratique
+- Multi-compatibilité IA : ajout de GEMINI.md et AGENT.md à côté de CLAUDE.md
+- Fichiers d'entrée pointant vers un fichier maître commun (portabilité multi-IA)
+- Indépendance vis-à-vis d'un fournisseur d'IA unique
+- Propriété et portabilité des données (tout est local, texte, sauvegardé)
+- Nouveau standard de frontmatter porté par Google
+- Faire évaluer un nouveau standard par Claude avant adoption
+- Système perfectible, amélioration collective encouragée
+- Témoignage : impact concret de la connexion Claude-Obsidian
+- Délégation intensive sans atteindre les limites de contexte
+- Planification des routines automatisées la nuit
+- Mode de réflexion 'medium' et permissions 'bypass' par défaut
+- Seuil de dégradation des réponses au-delà de 40% de contexte rempli
+- Règle personnelle : /clear dès 20-30% de contexte utilisé
+- Le vault évolue en temps réel grâce aux clears fréquents
+- good-night comme garantie anti-doublon et anti-perte d'information en fin de journée
+
+## Outils mentionnes
+- Obsidian
+- GitHub
+- Templater (plugin Obsidian)
+- Post Webhook (plugin Obsidian)
+- n8n
+- .gitignore
+- Whisper (open source, local)
+- Whisper
+- Twenty (CRM open source)
+- Telegram (agent)
+- Telegram
+- Twenty
+- MCP
+- superpower (skill)
+- Obsidian Web Clipper
+- Excalidraw
+- Git (plugin Obsidian)
+- PaperClip
+- Python
+- Google Agenda
+- Happy Five
+- Claude Code
+- Codex
+- Notion
+- Gemini
+- OpenAI
+
+## Tips techniques
+- Un RAG doit être ré-embeddé à chaque modification de document, ce qui coûte du temps et des appels LLM — les fichiers Obsidian modifiés directement évitent ce coût
+- Configurer des sauvegardes automatiques du vault vers GitHub toutes les 5 à 15 minutes pour ne jamais perdre ses données en cas de panne matérielle
+- Éviter la méthode 'tout relier par des tags' (Karpathy) qui fait exploser le nombre de fichiers lus, et donc les tokens consommés, à chaque question
+- Donner à Claude un index léger (une ligne de description par fichier) plutôt que de le laisser suivre tous les liens — cela l'oriente pour n'ouvrir que les fichiers utiles à la requête en cours
+- Créer le vault en stockage local plutôt que sur un cloud type Google Drive, pour éviter les latences de connexion internet lors du travail avec Claude
+- Installer le plugin Templater pour que chaque nouveau fichier client/projet applique automatiquement le bon template
+- Définir dans CLAUDE.md la règle : dès qu'un nouveau client est identifié, créer sa fiche à partir du template client dédié plutôt qu'à la main
+- Un blocage noté dans la daily note du jour se transforme automatiquement en tâche de debug pour le lendemain lors de l'ingestion du soir
+- Ne jamais stocker de mots de passe ou de codes de carte bancaire dans le vault, même s'il reste local
+- Pour des clients aux données ultra sensibles, faire tourner un LLM en local garantit zéro fuite de données
+- Utiliser un .gitignore pour exclure certains dossiers sensibles du push GitHub tout en conservant les sauvegardes automatiques pour le reste du vault
+- Automatiser la génération de posts LinkedIn : un webhook envoie le content-feed à n8n qui renvoie 3 propositions de post par email à sélectionner et retravailler
+- Un plugin OCR pourrait permettre à Claude de lire le contenu des PDF stockés dans le vault (non testé par Alexis)
+- Conserver les leads perdus en archive plutôt que de les supprimer : cela ne coûte quasiment aucun espace de stockage et sert de base pour des rapports d'analyse ultérieurs
+- /good-night récupère les sessions Claude Code de tous les projets de la journée, pas seulement celles faites dans le dossier Obsidian
+- La commande 'ingère cette donnée' fonctionne avec n'importe quel type de document (mail, PDF, texte brut) — Claude applique les templates et règles définis pour remplir automatiquement les bonnes fiches
+- Configurer un agent headless déclenché à chaque /clear pour ingérer la conversation immédiatement, sans attendre le good-night du soir
+- good-night rattrape spécifiquement les sessions fermées sans /clear, en complément de l'ingestion continue de l'agent headless
+- /transcribe suivi du fichier audio suffit à générer automatiquement le compte-rendu de réunion et les tâches associées dans la fiche client
+- Contourner l'impossibilité d'enregistrer un appel et de prendre des notes audio simultanément sur mobile en utilisant deux appareils distincts (téléphone + ordinateur)
+- Un rapport de réunion généré par un outil tiers peut être directement ingéré par Claude avec la commande 'ingère ce rapport'
+- Utiliser le skill 'superpower' pour faire un brainstorming avec Claude et adapter la structure du vault à sa propre activité plutôt que de copier le modèle tel quel
+- Configurer l'extension Obsidian Web Clipper pour sauvegarder en un clic le contenu de n'importe quelle page web dans le coffre-fort
+- Capturer une documentation API via le Web Clipper puis dire à Claude de l'ingérer permet ensuite de lui poser des questions de configuration sans qu'il ait besoin d'aller chercher sur le web
+- Demander à Claude de configurer le plugin Git pour des sauvegardes automatiques toutes les 15 minutes vers GitHub
+- Le vault Obsidian peut être relié dans les instructions d'un projet Claude classique, pas uniquement via Claude Code en terminal
+- Vérifier que Claude consulte toujours d'abord le contexte du dossier/client avant d'utiliser un outil ou un skill — sinon un hook mal configuré peut le faire répondre sans contexte
+- Un hook gênant (qui se déclenche trop tôt) est désactivable simplement en le disant à Claude
+- Installer good-night/agent-clear dans les instructions générales de Claude (pas seulement au niveau d'un projet) pour que la capture fonctionne depuis n'importe quel dossier de travail
+- Se faire guider par Claude pour construire son propre dashboard custom de délégation de tâches, sans compétence de développement avancée requise
+- Le matin, après le good-night de la veille, déléguer chaque tâche délégable en un clic permet de faire tourner plusieurs sessions Claude en parallèle pendant qu'on trie le reste
+- Programmer un audit hebdomadaire du vault (doublons, tags manquants, liens cassés, index obsolète) pour qu'il reste exploitable sur la durée
+- Passer les 2-3 premières semaines à simplement utiliser le vault de base qui se remplit automatiquement, avant de se lancer dans des automatisations avancées comme PaperClip
+- Donner un objectif business précis à un agent (ex. '10 leads qualifiés cette semaine sur ces 7 ICP') plutôt qu'une tâche vague
+- Créer un agent rédacteur qui réutilise chaque semaine la veille technologique produite par un autre agent pour proposer 3 idées de posts, livrées directement dans le vault
+- Faire analyser périodiquement les anciens posts par un agent pour ajuster automatiquement le style de l'agent rédacteur (fine-tuning automatique)
+- Ingérer les transcriptions de vidéos de formation et ses propres workflows dans le vault : plus on en donne à Claude, plus il reconnaît les patterns et répond techniquement sans redemander le contexte
+- Privilégier un outil disposant d'une interface CLI/directe plutôt qu'un MCP quand les deux existent, pour consommer moins de tokens
+- Structurer son vault avec une bonne architecture (dossiers, templates, index) dès maintenant permet de basculer facilement vers un autre outil plus tard si besoin
+- En cas de comportement erratique de Claude sur le vault, en discuter directement avec lui pour identifier et corriger la cause plutôt que d'abandonner le système
+- Ajouter des fichiers GEMINI.md et AGENT.md pointant vers le même fichier maître que CLAUDE.md pour rendre le vault utilisable avec plusieurs IA
+- Utiliser un fichier AGENT.md standard plutôt qu'un CLAUDE.md propriétaire pour rester indépendant d'un unique fournisseur d'IA à l'avenir
+- Donner à Claude le lien d'un nouveau standard technique et lui demander s'il est compatible avec l'architecture existante avant de l'adopter
+- Faire tourner les routines/agents automatisés gourmands en tokens la nuit (ex. 3h du matin) pour arriver le matin avec tous ses crédits disponibles
+- Utiliser le mode de réflexion 'medium' plutôt que 'high' au quotidien pour limiter la consommation de tokens sur un grand nombre de petites sessions
+- Faire un /clear dès que la fenêtre de contexte dépasse 20-30% (avant le seuil de dégradation des réponses à 40%), plutôt que d'attendre une longue conversation
+- Un /clear fréquent permet au vault d'évoluer en temps réel dans la journée : les informations du matin sont déjà disponibles l'après-midi sans avoir à les redonner
+
+## Cas d'usage reels
+- [[]]
