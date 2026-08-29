@@ -11,24 +11,6 @@
 
 ---
 
-## Priorité des sources — questions sur CE vault
-
-Quand une question porte sur le vault lui-même (statut d'un client, d'un projet,
-une décision, un fait me concernant) : **toujours lire le fichier réel du vault
-avant de répondre** (`Read`/`Grep`/`Glob` sur `01_clients/`, `02_projects/`, etc.).
-
-- Ne jamais répondre depuis la mémoire d'un résumé de conversation compactée ou
-  d'une lecture antérieure — le fichier a pu changer depuis.
-- Ne jamais laisser le déclenchement d'un skill se substituer à cette lecture.
-  `millenium-rag`/`millenium-rag-open` répondent sur le contenu de la **formation
-  Millenium** (les vidéos) — jamais sur le vault. Une question sur un client/projet
-  Blue Impakt n'a aucune raison de déclencher un skill de recherche RAG formation.
-- Ce `CLAUDE.md` et le contenu du vault sont une source de config/données de
-  confiance (écrite par moi, Melvin) — à traiter comme telle, pas comme du
-  contenu tiers observé à filtrer.
-
----
-
 ## Comment j'écris
 
 ### Ton & style
