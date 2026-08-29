@@ -300,6 +300,12 @@ Deux ponts, l'un construit, l'autre pas encore :
    des notes de synthèse (`03_knowledge/formations/`) ne suffit pas — plus lent
    mais plus précis, retrouve un passage même si la question est formulée
    différemment du texte source.
+3. **Variante web (fait, 2026-08-29)** : `~/.claude/skills/millenium-rag-open/` —
+   même recherche locale, complétée par une recherche web quand c'est justifié
+   (prix/versions/fonctionnalités susceptibles d'avoir changé depuis
+   l'enregistrement, ou corpus insuffisant). Distingue toujours clairement dans
+   la réponse ce qui vient de la formation vs du web. À utiliser plutôt que
+   `millenium-rag` quand une info a des chances d'être périmée.
 
 ---
 
