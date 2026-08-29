@@ -3,10 +3,12 @@
 
 ## Qui je suis
 - **Melvin Perrottet**, founder Blue Impakt
-- Freelance/agence à activité mixte : automatisation IA (agents, n8n), dev web/no-code, et consulting — le mix exact précisé au fil des missions
+- Blue Impakt a **deux activités distinctes**, à ne pas confondre dans les fiches :
+  1. **Service/agence** : automatisation IA (agents, n8n), dev web/no-code, consulting — pour associations environnementales et entreprises à impact (voir `02_projects/site-blue-impakt/`)
+  2. **Produit propre** : KM0, plateforme circuit court (producteurs locaux ↔ consommateurs, 0% commission) — voir `02_projects/km0-circuit-court/`
 - Background : formation Millenium (agents IA, automatisation, no-code, prospection) → crédibilité technique en cours de construction
 - Auto-entrepreneur / micro-entreprise
-- Side project : formation Millenium elle-même (pipeline RAG d'enrichissement de contenu pédagogique) → strictement séparé des clients Blue Impakt, voir `04_personal/`
+- Side project : formation Millenium elle-même (pipeline RAG d'enrichissement de contenu pédagogique) → strictement séparé des clients/produits Blue Impakt, voir `04_personal/`
 
 ---
 
@@ -252,7 +254,8 @@ Quand je dis **"ingère"**, voici la séquence exacte :
 ### Infra & automation
 - **Automatisation** : n8n (formation Millenium en cours — stack définitive pas encore figée, s'étoffera au fil des modules)
 - **IA** : Claude Code / Claude API (outil principal, y compris pour ce vault)
-- **Database** : à définir selon les projets clients
+- **Database** : PostgreSQL + Prisma (stack KM0) ; à définir selon les projets clients sinon
+- **Produit KM0** : NestJS 10 (TypeScript), Stripe (paiements Click & Collect) + Mollie (abonnements/facturation), Vite/Vercel (frontend) — voir `[[km0-circuit-court]]`
 - **CRM** : Notion
 
 ### Prospection
