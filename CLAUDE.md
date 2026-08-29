@@ -3,9 +3,8 @@
 
 ## Qui je suis
 - **Melvin Perrottet**, founder Blue Impakt
-- Blue Impakt a **deux activités distinctes**, à ne pas confondre dans les fiches :
-  1. **Service/agence** : automatisation IA (agents, n8n), dev web/no-code, consulting — pour associations environnementales et entreprises à impact (voir `02_projects/site-blue-impakt/`)
-  2. **Produit propre** : KM0, plateforme circuit court (producteurs locaux ↔ consommateurs, 0% commission) — voir `02_projects/km0-circuit-court/`
+- **Activité principale (ce que fait Blue Impakt)** : service/agence — automatisation IA (agents, n8n), dev web/no-code, consulting — pour associations environnementales et entreprises à impact (voir `02_projects/site-blue-impakt/`). C'est le cœur du business, ça ne change pas.
+- **KM0** : un projet mené **en parallèle** par Blue Impakt (produit propre, plateforme circuit court — producteurs locaux ↔ consommateurs, 0% commission), pas l'activité principale. Voir `02_projects/km0-circuit-court/`. Ne pas mélanger les deux dans les fiches : KM0 a son propre statut de projet, indépendant de l'activité de service.
 - Background : formation Millenium (agents IA, automatisation, no-code, prospection) → crédibilité technique en cours de construction
 - Auto-entrepreneur / micro-entreprise
 - Side project : formation Millenium elle-même (pipeline RAG d'enrichissement de contenu pédagogique) → strictement séparé des clients/produits Blue Impakt, voir `04_personal/`
