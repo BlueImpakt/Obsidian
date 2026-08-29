@@ -1,0 +1,184 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Les Fondamentaux IA"
+source_transcript: "0.14 Les Acteurs de l'IA.txt"
+---
+
+# 0.14 Les Acteurs de l'IA
+
+## Resume
+- Introduction à la partie consacrée aux acteurs incontournables de l'IA, une sélection volontairement restreinte aux principaux car le paysage évolue très vite. Recommandation de faire de la veille sur les grandes annonces majeures (changement de génération de modèle) plutôt que sur les petits updates. Trois acteurs principaux se disputent la course aux LLM en entreprise, plus un quatrième moins attendu mais tout aussi central : OpenAI, celui qui a déclenché toute cette nouvelle course à l'IA.
+- OpenAI compte environ 500 millions d'utilisateurs par semaine et plus de 800 millions en incluant Copilot, avec des revenus en forte croissance mais aussi des dépenses massives en recherche et infrastructure (deals avec Nvidia) pour viser l'autosuffisance. Malgré une position de leader toujours dominante, leur avance s'est réduite par rapport à il y a deux ans, notamment car GPT-5 a freiné leur expansion et leur capacité à impacter le grand public comme avant.
+- OpenAI a longtemps enchaîné les effets « wow » (ChatGPT en 2022, GPT-4) mais depuis GPT-5 peine à avancer, tiraillé entre innovation technologique et logique commerciale, à l'image d'Apple qui préfère des sorties progressives plutôt qu'un produit unique très risqué. Microsoft a investi 13 milliards dans OpenAI en échange d'un accès à ses serveurs à prix avantageux et d'un accord sur les revenus, ce qui crée une tension car les besoins de Microsoft ne sont pas toujours alignés avec ceux d'OpenAI ; plusieurs chercheurs en sécurité ont aussi quitté OpenAI en 2024.
+- Google dispose d'une puissance de calcul et financière inégalée, de ses propres puces (TPU) et d'une base d'utilisateurs déjà conquise via Google Workspace. En unifiant depuis un an ses multiples initiatives (VO3, Genie, Opal, Nanobanana) au sein de Gemini, Google a résolu son problème historique de manque de clarté produit et maîtrise désormais toute la chaîne, des scientifiques à l'infrastructure jusqu'au produit fini.
+- Le principal risque pour Google dans les années à venir est sa situation monopolistique et la pression réglementaire américaine (menace de vente forcée de Chrome), plus que le retard technologique ou financier qu'ils ont désormais rattrapé face à OpenAI grâce à leurs propres TPU. Meta a pris un autre chemin : pari initial sur l'open source avec le recrutement de figures comme Yann LeCun pour diriger son labo, avec l'ambition de rendre l'IA accessible à tous.
+- Meta a dû composer avec les impératifs du capitalisme dans une course où OpenAI, censé être « open », ne l'est plus, et où Claude ne l'est pas non plus ; l'ouverture de Meta a eu pour effet secondaire de dévoiler leur travail à la concurrence. Le passage évoque un virage stratégique probable de Meta vers un modèle plus commercial et moins open source, motivé par les enjeux financiers considérables du secteur.
+- Les recrutements massifs de Meta dans l'IA laissent présager un projet plus interne et stratégique. Meta reste un acteur à ne pas sous-estimer grâce à WhatsApp, Facebook et Instagram, même si ses intégrations IA sont mal réalisées et que Llama peine face aux derniers modèles en termes d'accessibilité pour le grand public, qui préfère la simplicité d'un abonnement à la complexité de l'open source auto-hébergé.
+- Microsoft tire 75 milliards de revenus de son cloud Azure, en vendant de la puissance de calcul à tout le monde ; sa position n'est pas à la pointe de l'IA, mais son investissement dans OpenAI lui garantit de bénéficier en premier des avancées de ce dernier, à la différence de Google qui maîtrise toute sa chaîne. Anthropic, contrairement à OpenAI, est rentable (projection de 5 milliards de revenus en 2025, 9 milliards en fin d'année, valorisation proche de 100 milliards) : Claude est conçu pour être plus sûr et fiable, quitte à être plus restrictif en usage. Sa force vient de ses gros clients business et de revenus générés essentiellement via les API (outils comme Cursor). Amazon a investi 4 milliards et Google 1 milliard dans Anthropic, et Claude est intégré dans Alexa.
+- La stratégie d'Anthropic est de miser sur la fiabilité plutôt que sur la performance brute affichée dans les benchmarks : ces derniers séduisent la presse et les investisseurs, mais les entreprises veulent avant tout un outil fiable, bien construit et testé avant sa mise sur le marché. GPT-5 est cité comme exemple de problèmes de lenteur liés à une logique de vitesse de déploiement, alors qu'Anthropic privilégie une approche plus réfléchie et moins orientée grand public.
+- Transition vers l'infrastructure sous-jacente aux LLM : il faut des puces avant-gardistes et des usines capables de les produire en volume, ce qui crée une structure en poupées russes où OpenAI est la façade visible et Nvidia l'élément clé derrière, surnommé le « dealer de l'IA » du fait de son quasi-monopole, ce qui explique sa valorisation boursière très élevée. Ces puces sont fabriquées principalement par TSMC, numéro un mondial de la production, puis revendues par Nvidia à environ 40 000 euros pièce.
+- La demande de puces explose : Nvidia génère 130 milliards de revenus en 2025 et est en passe de devenir la plus grande entreprise mondiale, ayant totalement contrôlé le marché. C'est justement cette dépendance à Nvidia qu'OpenAI cherche à résoudre, contrairement à Google. TSMC (Taiwan Semiconductor), concentré uniquement à Taïwan, est l'un des principaux fournisseurs de puces en production pour le compte de tiers (comme les puces Snapdragon pour smartphones), à l'opposé d'acteurs qui conçoivent leurs propres puces comme Samsung ou Google.
+- Nvidia entretient des liens très forts avec Taïwan : son fondateur Jensen Huang est taïwanais, ce qui explique en partie pourquoi la production de puces passe par ce pays. Taïwan détient une part monumentale (67%) de la production mondiale de puces pour compte de tiers, allant jusqu'à un quasi-monopole de 90% sur les puces les plus avancées (68% de toutes les puces créées). Cet enjeu est aussi géopolitique, la Chine convoitant Taïwan : Bloomberg estime qu'une guerre pour sa récupération pourrait causer 10 000 milliards de dollars de dégâts sur l'économie mondiale.
+- Rappel de la structure en poupées russes : TSMC fabrique les puces conçues par Nvidia, qui les revend à OpenAI. TSMC, conscient des risques géopolitiques, commence à construire des usines aux États-Unis avec un investissement de 165 milliards de dollars, même si leur mise en service prendra du temps. Ces intérêts économiques expliquent en partie les tensions géopolitiques autour de Taïwan.
+- TSMC est un acteur fondamental pour l'IA et Taïwan représente un enjeu stratégique majeur pour les États-Unis. AMD est présenté comme le challenger de Nvidia (part de marché bien moindre) : historiquement fabricant de cartes graphiques pour PC, il se développe aujourd'hui dans l'IA, porté par la volonté des grandes entreprises (Microsoft, Oracle, etc.) de diversifier leurs fournisseurs pour ne pas trop dépendre de Nvidia, d'où des partenariats stratégiques signés par AMD. L'intervenant partage, à titre personnel et sans que ce soit un conseil financier, avoir investi dans Nvidia, AMD et TSMC, par principe d'investir dans ce qu'on comprend. Introduction d'Oracle, entreprise discrète mais bien gérée, portée par Larry Ellison.
+- IBM et Microsoft se portent bien depuis qu'ils se sont recentrés sur les entreprises plutôt que de disperser leurs efforts (allusion moqueuse à l'échec des Windows Phone). Oracle suit une logique similaire en fournissant des architectures et un très grand nombre de serveurs mis à disposition des entreprises.
+- Larry Ellison rivalise depuis peu avec Elon Musk pour le titre d'homme le plus riche, porté par la forte croissance du cloud Oracle, notamment un contrat signé à 300 milliards de dollars sur 5 ans avec OpenAI pour héberger ses serveurs. Alors que beaucoup se concentrent sur l'IA elle-même, Oracle a construit l'infrastructure permettant de la faire tourner. Image filée : Nvidia vend des pioches, fabriquées par TSMC.
+- Le rôle d'Oracle est de fournir « la mine » : l'infrastructure fondamentale sur laquelle l'IA tourne. Présentation des mini champions européens Mistral et Hugging Face. Mistral, l'« IA à la française », est selon l'intervenant survendue par les médias malgré des fondateurs brillants, la pression politique pour en faire un champion national leur nuisant plus qu'autre chose. Mistral a levé 1,7 milliard récemment pour une valorisation de 11,7 milliards, mais des revenus estimés à seulement 60 millions, sans commune mesure avec le deal Oracle-OpenAI à 300 milliards. Des rumeurs (non vérifiées) évoquent des contrats à 100 millions sur 5 ans avec de grands groupes européens, traduisant une croyance dans la souveraineté numérique.
+- Souhait d'avoir aussi un champion français/européen pour les données. Mistral se positionne différemment de Claude ou OpenAI en misant davantage sur le conseil et l'intégration IA individualisée en entreprise, en comptant sur les organismes publics et grands groupes européens pour une croissance protégée par la souveraineté. Introduction de Hugging Face, autre champion moins médiatisé, décrit comme le « GitHub de l'IA », beaucoup plus communautaire.
+- Hugging Face héberge plus de 1,7 million de modèles IA et 400 000 bases de données pour les entraîner. Financièrement, l'entreprise génère 70 millions de revenus récurrents (plus que Mistral, bien que moins médiatisée) pour une valorisation de 4,5 milliards. Elle adopte une posture neutre et ouverte à tous (logo en forme de smiley câlin) et est devenue incontournable pour la communauté IA élargie, avec de nombreux forums actifs.
+- D'autres spécialistes plus petits : Eleven Labs, spécialisé dans la voix, valorisé à 3,3 milliards, permet de cloner une voix en deux minutes (perfectible, avec du fine-tuning possible sur une plus longue durée), performant en anglais mais moins en français, avec de solides chiffres sur ses Voice Services/API. Midjourney, à l'« efficacité allemande », ne compte que 130 employés pour 500 millions de revenus annuels, soit environ 3,8 millions de revenus par employé.
+- Midjourney se concentre exclusivement sur la génération d'images et de vidéos ; sans être générique ni toujours le meilleur partout, sa focalisation lui permet des avancées significatives sur son créneau. Sans investisseurs externes, l'entreprise est autofinancée et donc libre, à l'image de Telegram : une petite structure discrète mais très performante. Introduction de la catégorie des outils « Builder », à commencer par n8n, un outil de création d'automatisations (comme Zapier mais bien plus puissant), utilisé par des millions d'utilisateurs sans compétences en programmation.
+- n8n connaît une croissance folle : sa valorisation est passée de 250 millions à 2,3 milliards en un an, alors que l'outil est open source et que la majorité de ses utilisateurs ne sont pas payants. L'entreprise a créé de nombreuses intégrations avec des services comme Gmail, la suite Google, Airtable ou Slack.
+- n8n a intégré LangChain à son écosystème pour faciliter la construction d'agents IA. LangChain est la structure technique sous-jacente à n8n : créer un agent nécessite d'assembler des blocs spécifiques (nœud agent, nœud mémoire), avec un identifiant de session pour se souvenir du contexte, ainsi que la capacité à lire et vectoriser des données. n8n fournit l'interface, jolie et facile à prendre en main, connectable à de nombreux outils, mais s'appuie sur LangChain pour percer : c'est l'un des produits les plus likés sur GitHub, avec 28 millions de téléchargements par mois et une valorisation d'1 milliard.
+- Open Router, outil plus secondaire mais malin : face à l'évolution constante des modèles IA (chaque nouveau modèle remplaçant l'ancien), il évite de payer plusieurs abonnements/clés API séparés en centralisant une seule clé API pour accéder à tous les LLM, avec changement de modèle en un clic (par exemple passer de GPT-6 à Gemini 3.5) contre une petite commission. Open Router compte 2,5 millions d'utilisateurs. Conclusion de la présentation des principaux acteurs de l'IA.
+
+## Concepts cles
+- veille sur les grandes annonces IA vs petits updates
+- course aux LLM dans les entreprises
+- OpenAI comme déclencheur de la course à l'IA
+- croissance des utilisateurs et revenus d'OpenAI
+- investissement massif en R&D et infrastructure
+- essoufflement relatif de la position dominante d'OpenAI
+- GPT-5 comme frein à l'expansion
+- effet wow des lancements successifs de ChatGPT/GPT-4
+- tension entre avancées techniques et avancées commerciales
+- comparaison avec la stratégie produit d'Apple
+- dépendance d'OpenAI vis-à-vis de Microsoft
+- départ de chercheurs en sécurité en 2024
+- maîtrise de toute la chaîne de valeur par Google
+- unification des initiatives IA au sein de Gemini
+- puces propriétaires (TPU) comme avantage stratégique
+- manque de clarté produit historique de Google
+- risque réglementaire/monopolistique pour Google
+- possible vente forcée de Chrome
+- indépendance de Google grâce aux TPU propres
+- pari initial de Meta sur l'open source
+- recrutement de talents (Yann LeCun) par Meta
+- paradoxe de l'ouverture de Meta face à la concurrence fermée
+- virage commercial anticipé de Meta
+- abandon progressif de l'open source pressenti
+- recrutements massifs de Meta comme signal stratégique
+- force de distribution de Meta (WhatsApp, Facebook, Instagram)
+- difficulté d'accessibilité de l'open source pour le grand public
+- arbitrage simplicité (abonnement) vs contrôle des données (open source)
+- Microsoft/Azure : 75 milliards de revenus cloud
+- dépendance de Microsoft aux avancées d'OpenAI
+- Anthropic rentable contrairement à OpenAI
+- Claude conçu pour la sûreté et la fiabilité
+- revenus d'Anthropic via API et clients business
+- investissements Amazon et Google dans Anthropic
+- fiabilité vs performance sur les benchmarks
+- positionnement entreprise d'Anthropic
+- problèmes de GPT-5 (lenteur)
+- approche réfléchie vs vitesse de déploiement
+- structure en poupées russes de l'infrastructure IA
+- Nvidia, quasi-monopole et « dealer de l'IA »
+- TSMC, producteur numéro 1 mondial de puces
+- prix de revente des puces par Nvidia (~40 000 euros)
+- Nvidia : 130 milliards de revenus en 2025
+- dépendance stratégique à Nvidia (problème pour OpenAI)
+- TSMC, production de puces pour compte de tiers
+- acteurs concevant leurs propres puces (Samsung, Google)
+- Jensen Huang, fondateur taïwanais de Nvidia
+- Taïwan : 67% de la production mondiale de puces, jusqu'à 90% pour les plus avancées
+- enjeu géopolitique Taïwan-Chine
+- estimation Bloomberg des dégâts économiques d'une guerre (10 000 milliards de dollars)
+- structure en poupées russes : TSMC, Nvidia, OpenAI
+- investissement de TSMC aux États-Unis (165 milliards de dollars)
+- lien entre intérêts économiques et tensions géopolitiques
+- AMD, challenger de Nvidia
+- diversification des fournisseurs de puces par les grandes entreprises
+- partenariats stratégiques d'AMD
+- disclaimer d'investissement personnel (Nvidia, AMD, TSMC)
+- introduction d'Oracle (Larry Ellison)
+- recentrage d'IBM et Microsoft sur l'entreprise
+- échec des Windows Phone
+- Oracle, fournisseur d'architectures serveur pour entreprises
+- Larry Ellison vs Elon Musk (homme le plus riche)
+- contrat Oracle-OpenAI de 300 milliards de dollars sur 5 ans
+- métaphore de la ruée vers l'or : Nvidia vend les pioches
+- Oracle, infrastructure fondamentale de l'IA
+- Mistral, « IA à la française », survendue médiatiquement
+- levée de fonds Mistral (1,7 milliard, valorisation 11,7 milliards, revenus ~60 millions)
+- écart d'échelle avec le deal Oracle-OpenAI (300 milliards)
+- souveraineté numérique européenne
+- positionnement conseil et intégration individualisée de Mistral
+- stratégie de souveraineté européenne
+- Hugging Face, « GitHub de l'IA », approche communautaire
+- Hugging Face : plus de 1,7 million de modèles et 400 000 bases de données
+- 70 millions de revenus récurrents pour une valorisation de 4,5 milliards
+- positionnement neutre et communautaire de Hugging Face
+- Eleven Labs : clonage vocal, valorisation 3,3 milliards
+- performance de Eleven Labs meilleure en anglais qu'en français
+- Midjourney : 130 employés, 500 millions de revenus annuels (~3,8M/employé)
+- focalisation de Midjourney sur l'image/vidéo
+- autofinancement et indépendance (comparaison avec Telegram)
+- introduction des outils « Builder » et de n8n
+- croissance de la valorisation de n8n (250 millions à 2,3 milliards en un an)
+- modèle open source avec majorité d'utilisateurs non-payants
+- intégrations n8n (Gmail, Google, Airtable, Slack)
+- LangChain, structure technique sous-jacente à n8n
+- blocs de construction d'un agent IA (nœud agent, nœud mémoire, session ID, vectorisation)
+- n8n : 28 millions de téléchargements/mois, valorisation d'1 milliard
+- Open Router : agrégateur d'accès aux LLM via une seule clé API
+- changement de modèle en un clic
+
+## Outils mentionnes
+- GPT
+- Claude
+- OpenAI
+- Copilot
+- Nvidia
+- GPT-5
+- ChatGPT
+- GPT-4
+- Microsoft
+- Google
+- Gemini
+- Google Workspace
+- VO3
+- Genie
+- Opal
+- Nanobanana
+- Chrome
+- TPU
+- Meta
+- Yann LeCun
+- WhatsApp
+- Facebook
+- Instagram
+- Llama
+- Azure
+- Anthropic
+- Cursor
+- Amazon
+- Alexa
+- TSMC
+- Samsung
+- Taïwan
+- AMD
+- Oracle
+- IBM
+- Mistral
+- Hugging Face
+- Eleven Labs
+- Midjourney
+- Telegram
+- n8n
+- Zapier
+- Gmail
+- Airtable
+- Slack
+- LangChain
+- GitHub
+- Open Router
+- GPT-6
+
+## Tips techniques
+- Faire de la veille uniquement sur les innovations majeures des acteurs IA (changement de génération de modèle), pas sur chaque petite mise à jour
+- un agent IA pertinent a besoin de mémoire, d'un raisonnement en plusieurs étapes et d'un identifiant de session pour se souvenir du contexte
+- centraliser ses accès LLM via un outil comme Open Router évite de gérer plusieurs abonnements/clés API séparés
+
+## Cas d'usage reels
+- [[]]

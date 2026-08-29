@@ -1,0 +1,244 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Agents de Prospection"
+source_transcript: "9.01 Agent de Prospection avec Claude Code  Tom.txt"
+---
+
+# 9.01 Agent de Prospection avec Claude Code | Tom
+
+## Resume
+- Plan de la leçon Agent de Prospection avec Claude Code par Tom : outils/setup, configuration API, stratégie de pipeline, intégration d'automatisation, exécution et environnement GitHub.
+- Introduction de Tom, fondateur d'Automai, agence aidant les entreprises à intégrer IA et automatisations, présentant un workflow quotidien de prospection avec Claude Code.
+- Annonce de l'objectif de la vidéo : construire un pipeline d'outreach complet pour générer ses premiers leads et deals, applicable aux débutants comme aux pipelines existants.
+- Chiffre clé du coût de scraping (4$ pour 1000 leads via Apify), avec plan gratuit suffisant pour commencer et création d'une clé API dans Settings.
+- Mention des règles définies dans les prompts et le fichier Claude.md, partagé publiquement sur GitHub, l'occasion d'utiliser cet outil s'il n'est pas déjà adopté.
+- Présentation de l'étape de rédaction d'emails basée sur des principes personnels extraits de l'expérience business (règle du 80-20), avec génération de 4 emails de campagne.
+- Description du pipeline complet construit avec Claude Code : scraping, enrichissement, création d'emails personnalisés, stockage Google Sheet, envoi via l'API Instantly.
+- Choix pédagogique d'utiliser une instance vierge sans biaiser avec ses propres systèmes personnalisés, pour représenter au mieux l'expérience d'un utilisateur débutant.
+- Description du processus initial de vérification des prérequis et installation automatique des dépendances Python, avec création d'un fichier .env.
+- Conseil de communication avec l'agent : apprendre à lui parler de manière plus robotique et concise, avec des prompts courts pour maximiser l'efficacité.
+- Explication de la convention .env pour stocker les clés API sensibles localement, sans qu'elles soient poussées sur GitHub, une pratique de sécurité essentielle.
+- Habitude personnelle de faire des audits réguliers et de s'inspirer d'autres développeurs meilleurs pour apprendre en continu, avec récupération des clés HappyFile et Anthropic.
+- Configuration du nombre de leads souhaité (50) avec des réponses volontairement courtes pour économiser contexte et tokens, avant création automatique du premier skill de scraping.
+- Explication de la transformation d'un simple chat IA en véritable agent capable d'agir, via la création d'un script Python exécutant des actions concrètes.
+- Présentation des skills créés selon les meilleures pratiques et la règle du 80-20 : une structure suffisante pour l'essentiel du résultat, sans viser la perfection.
+- Conseil de garder un rôle d'architecte et de vérificateur plutôt que de tout comprendre en détail le langage markdown généré par l'IA pour les skills.
+- Suivi du processus de scraping sur Apify (My Actors) avec observation du coût réel (15 centimes pour environ 38 leads en cours), jugé très abordable.
+- Vérification manuelle de la pertinence d'un lead scrapé (salle de sport), avec constat que le scraper couvre par défaut toute la France et non une seule ville.
+- Passage à l'étape 2 : création du skill de recherche d'emails spécialisé dans le web scraping et la récupération d'informations pour les 50 leads obtenus.
+- Observation de la création du fichier Python pour le skill de recherche d'emails, un langage largement utilisé par l'IA pour automatiser des tâches concrètes.
+- Avantage des skills Claude Code : création de workflows prévisibles, répétables et réutilisables à l'infini selon les besoins et le budget de tokens disponible.
+- Constat d'un processus trop lent signalant un manque d'optimisation, avec astuce clé de demander explicitement à l'agent de paralléliser pour accélérer.
+- Reconnaissance transparente que le processus n'est jamais parfait, l'objectif étant l'amélioration continue plutôt que la recherche de perfection absolue.
+- Observation de l'agent mettant à jour le scraper après avoir détecté deux bugs, dont un exemple d'email fictif générique (exemple.domaine) récupéré à tort.
+- Principe d'amélioration itérative continue : demander systématiquement à l'agent de trouver ses failles, faux positifs et points de rupture potentiels.
+- Observation du re-lancement en parallèle avec 20 sous-agents (workers), l'agent affirmant avoir déjà parallélisé le traitement en amont.
+- Configuration de filtres de mots-clés pour identifier les bons emails (contact, info, hello) et exclure les emails indésirables (no-reply, RGPD, cookie).
+- Explication que Claude Code mémorise les corrections apportées à un skill pour ne plus reproduire la même erreur, une caractéristique d'amélioration continue à préciser dans le cloud.md.
+- Résultat concret de l'optimisation : identification du goulot d'étranglement ramenant le temps d'exécution à 38 secondes, soit 2,5 fois plus rapide qu'au départ.
+- Explication de l'origine du prompt de rédaction d'emails : principes appris d'entrepreneurs reconnus, affinés par de nombreuses itérations et revues successives.
+- Configuration du contexte de l'offre personnelle et de la langue par défaut, permettant de générer des icebreakers pertinents et contextualisés dans les emails.
+- Confirmation du très bon retour sur investissement de la solution, avec des frais d'API très faibles ne devant pas être un frein malgré des prompts volumineux.
+- Mention de l'existence d'un skill review dans le fichier CloudMD global de l'auteur, une pratique recommandée mais secondaire pour cette démonstration.
+- Résultat concret : 11 icebreakers de qualité générés sur 20 emails trouvés, avec choix pragmatique de s'arrêter au ratio 80-20 plutôt que de creuser davantage.
+- Présentation de l'intérêt de connecter Google Sheet pour centraliser les leads sur le drive, permettre de fusionner des feuilles et organiser des dossiers de leads.
+- Démonstration étape par étape de création d'un projet Google Cloud, première étape nécessaire pour connecter Google Sheet à l'agent.
+- Activation de l'API Google Sheet dans la console Google Cloud, une étape technique nécessaire pour permettre l'intégration avec l'agent.
+- Activation complémentaire de l'API Google Drive, puis création d'un compte de service via la section IAM et administration de Google Cloud.
+- Mise en garde de vérifier que l'on reste bien sur le bon projet Google Cloud avant de créer le compte de service, une erreur fréquente signalée.
+- Démonstration de la création d'une clé JSON pour le compte de service, une étape technique nécessaire pour l'authentification de l'application.
+- Rencontre d'un bug résolu en passant par une configuration OAuth desktop app, une solution partagée pour aider ceux rencontrant le même souci.
+- Navigation corrective vers l'écran de consentement OAuth via la section APIs et Services, après s'être perdu dans la bibliothèque d'API par erreur.
+- Reconnaissance que cette étape de configuration OAuth est la partie la plus pénible du processus, mais qu'elle n'est à faire qu'une seule fois.
+- Configuration de l'écran de consentement OAuth avec adresse email, sélection du type Externe et acceptation des conditions requises.
+- Appréciation du guidage automatique de Claude Code à travers les étapes de configuration, sans nécessiter une connaissance préalable complète du processus.
+- Création de l'identifiant client OAuth de type Application de bureau, nécessaire pour l'authentification desktop de l'application Outreach.
+- Téléchargement du fichier JSON d'identifiants OAuth et configuration du chemin d'accès à ce fichier pour l'application.
+- Confirmation que la partie la plus fastidieuse de la configuration est terminée, avec explication du rôle du fichier Gitignore pour protéger les clés sensibles.
+- Authentification finale avec l'application créée, autorisation d'accès à Google Drive et Google Sheet via la bonne adresse email configurée.
+- Confirmation de l'authentification complète et réussie, avec préparation de la suite du pipeline (Email Finder, Email Writer) aux deux tiers du processus global.
+- Réflexion pédagogique sur l'apprentissage par la confrontation aux erreurs lors de la création de skills, un setup unique qui n'a pas besoin d'être refait ensuite.
+- Point d'étape temporel à 42 minutes de démonstration, avec objectif visé d'une heure totale, tout en soulignant l'apprentissage déjà accumulé.
+- Vérification de l'activation de l'API Google Drive en cas d'étape manquée, avec confirmation de la création réussie de la Google Sheet.
+- Observation des données générées dans le Google Sheet : noms personnalisés améliorés (Casual Names), avec une erreur d'analyse de formule et champ téléphone manquant.
+- Constat de plusieurs erreurs à corriger, notamment liées aux accents dans le texte généré, signalées directement à l'agent.
+- Rappel du principe clé : rien n'est parfait du premier coup, l'itération et la vérification continue étant la clé du succès avec Claude Code, illustré par l'envoi d'un screenshot d'erreur.
+- Construction du cinquième skill (email writer) nécessitant cinq informations de configuration, avec redéfinition du contexte de niche (salle de sport) dans un nouveau chat.
+- Configuration des informations personnelles (prénom, langue FR) et d'une preuve sociale réelle (agence de marketing scalée de 10k à 55k en 5 mois) pour l'email writer.
+- Recommandation de personnaliser sa propre voix à partir des bonnes pratiques fournies, Claude Code servant de base à adapter plutôt que de solution figée.
+- Génération réussie d'un email en moins de deux minutes par le nouveau skill, intégrant la personnalisation et l'icebreaker générés précédemment.
+- Évaluation positive de la qualité de copie générée malgré l'absence de signature, avec structure combinant point de douleur, preuve sociale et réduction de friction.
+- Appréciation du format concis en trois lignes efficaces du deuxième email de la séquence, avec proposition claire de rendez-vous sans friction.
+- Confirmation de la satisfaction générale (règle du 80-20 atteinte), avec possibilité d'ajuster la séquence d'emails et d'améliorer le skill pour les prochaines générations.
+- Information sur les limites d'abonnement (1000 leads inclus) avec recommandation de monter en gamme progressivement à mesure que la conversion augmente.
+- Démonstration de création d'une clé API Instantly via Settings et Integration, avec définition des scopes nécessaires avant intégration dans le .env.
+- Conseil de compacter régulièrement le contexte de la conversation, car un contexte trop rempli dégrade la pertinence des réponses de l'IA.
+- Observation qu'un message peut être envoyé pendant le compactage, l'agent traitant la demande uniquement une fois le compact terminé, pendant la création du sixième skill.
+- Philosophie personnelle de ne pas trop se prendre la tête sur le choix des outils : privilégier un outil recommandé et fonctionnel plutôt que de sur-optimiser ce choix.
+- Explication de la pratique du warm-up (chauffe) pour augmenter la délivrabilité et éviter les spams, avec limite recommandée de 20-30 emails par jour par adresse.
+- Mention d'un compte d'envoi déjà en warm-up depuis 14 jours (WarmDuct) et résolution progressive des problèmes d'accents restants dans le texte.
+- Vérification du sixième skill du pipeline (push instantly), avec satisfaction sur la construction d'un système qui tourne ensuite de manière autonome.
+- Présentation de la fonctionnalité unibox d'Instantly catégorisant automatiquement les réponses (Interested, Meeting Booked) en un pipeline consultable, y compris sur mobile.
+- Consultation de la campagne créée (salle de sport démo) dans Instantly, avec KPIs normalement vides puisqu'aucun email n'a encore été envoyé.
+- Débogage d'un oubli : l'agent avait bien importé les séquences d'emails mais pas les leads eux-mêmes dans la campagne Instantly.
+- Résolution du problème en signalant explicitement à l'agent l'absence de leads, qui a alors corrigé automatiquement l'import manquant.
+- Identification d'une limite du scraping Google Maps : l'absence de prénoms, résolue en utilisant des acteurs Apify complémentaires (Shopify) ou des MCP gouvernementaux.
+- Confirmation qu'il suffit de signaler à Claude Code un manque de données (prénoms) pour qu'il gère la solution, avec mise à jour partielle constatée (Google Sheet mais pas encore Instantly).
+- Évaluation honnête du premier jet comme solide mais perfectible, avec engagement d'amélioration continue après la démonstration pour un meilleur résultat.
+- Rappel important de bien vérifier le fuseau horaire (timezone) configuré pour la planification d'envoi des emails, une erreur facilement commise.
+- Recommandation de cibler les jours de semaine plutôt que le week-end, et suggestion de tests A/B (tracking d'ouverture vs emails texte seul) pour optimiser la délivrabilité.
+- Conseil final avant envoi : relire les séquences à voix haute puis valider avec résumé de campagne, ou déléguer directement l'envoi à Claude Code.
+- Décision stratégique d'exclure les grandes franchises de salles de sport de la prospection, l'offre n'étant pas adaptée, privilégiant une donnée de meilleure qualité à un volume plus large.
+- Audit des problèmes principaux identifiés (bug d'import de leads, absence de confirmation de campagne) avant de poursuivre l'amélioration itérative du skill.
+- Envoi du septième prompt incluant une étape où l'IA relit ses propres icebreakers générés pour s'auto-évaluer et s'améliorer.
+- Incident technique où tous les skills individuels ont été supprimés par erreur, un problème mineur lié à la synchronisation GitHub personnelle de l'auteur.
+- Explication que la suppression faisait en réalité partie intégrante du septième prompt : fusionner tous les skills individuels en un seul skill master.
+- Nécessité de redémarrer Claude Code après la création de nouveaux skills pour pouvoir les utiliser en tant que commandes slash.
+- Structure finale du skill master : un script Python global appelant tous les scripts individuels, avec possibilité d'exécuter une seule étape via une commande slash spécifique.
+- Test réussi du skill master Outreach Master, reconnaissant automatiquement l'état d'avancement (50 leads déjà obtenus) et proposant l'étape suivante (push).
+- Test en direct du pipeline complet redémarré depuis zéro, réutilisant toutes les améliorations apportées précédemment aux scripts individuels.
+- Présentation de l'usage quotidien recommandé : lancer la commande Outreach Master chaque matin pour gérer tout ou partie du pipeline selon le besoin.
+- Conclusion de la vidéo présentant ce workflow comme un cas d'usage parmi des dizaines de milliers d'autres, effectivement utilisé par l'auteur dans son business et celui de ses clients.
+
+## Concepts cles
+- plan de la leçon Agent de Prospection avec Claude Code par Tom
+- introduction de Tom, fondateur d'Automai, présentant son workflow quotidien
+- annonce de l'objectif de construction d'un pipeline d'outreach complet
+- chiffre clé du coût de scraping Apify (4$/1000 leads, plan gratuit suffisant)
+- mention du fichier Claude.md partagé sur GitHub public
+- présentation de l'étape de rédaction d'emails basée sur des principes personnels (règle 80-20)
+- description du pipeline complet (scraping, enrichissement, emails, Instantly)
+- choix pédagogique d'une instance vierge représentative d'un débutant
+- description de la vérification des prérequis et installation des dépendances Python
+- conseil de communication robotique et concise avec l'agent pour plus d'efficacité
+- explication de la convention .env pour sécuriser les clés API sensibles
+- habitude personnelle d'audits réguliers pour apprendre en continu
+- configuration du nombre de leads avec réponses courtes économisant le contexte
+- explication de la transformation d'un chat IA en agent via script Python
+- présentation des skills créés selon la règle du 80-20
+- conseil de garder un rôle d'architecte-vérificateur plutôt que de tout comprendre en détail
+- suivi du coût réel du scraping sur Apify (15 centimes pour 38 leads)
+- vérification manuelle de la pertinence d'un lead scrapé (comportement par défaut national)
+- passage à l'étape de création du skill de recherche d'emails (find email)
+- observation de la création du fichier Python pour le skill de recherche d'emails
+- avantage des skills Claude Code : workflows prévisibles, répétables, réutilisables à l'infini
+- astuce clé de demander explicitement à l'agent de paralléliser pour accélérer
+- reconnaissance transparente : viser l'amélioration continue plutôt que la perfection
+- observation de deux bugs détectés dans le scraper (email fictif générique)
+- principe d'amélioration itérative en demandant à l'agent de trouver ses propres failles
+- observation du relancement en parallèle avec 20 sous-agents (workers)
+- configuration de filtres de mots-clés pour identifier et exclure les emails indésirables
+- explication de la mémorisation des corrections d'un skill par Claude Code
+- résultat concret de l'optimisation (38 secondes, 2,5x plus rapide)
+- explication de l'origine du prompt de rédaction (principes d'entrepreneurs reconnus)
+- configuration du contexte de l'offre et de la langue pour générer des icebreakers pertinents
+- confirmation du bon ROI avec frais d'API très faibles malgré des prompts volumineux
+- mention d'un skill review recommandé dans le CloudMD global
+- résultat concret : 11 icebreakers de qualité sur 20 (choix pragmatique du 80-20)
+- présentation de l'intérêt de centraliser les leads via Google Sheet
+- démonstration de création d'un projet Google Cloud pour connecter Google Sheet
+- activation de l'API Google Sheet dans Google Cloud
+- activation de l'API Google Drive et création d'un compte de service via IAM
+- mise en garde de vérifier le bon projet Google Cloud avant de créer le compte de service
+- démonstration de création d'une clé JSON pour le compte de service
+- rencontre et résolution d'un bug via configuration OAuth desktop app
+- navigation corrective vers l'écran de consentement OAuth (APIs et Services)
+- reconnaissance que la configuration OAuth est pénible mais unique
+- configuration de l'écran de consentement OAuth (type Externe)
+- appréciation du guidage automatique de Claude Code à travers la configuration
+- création de l'identifiant client OAuth de type Application de bureau
+- téléchargement et configuration du fichier JSON d'identifiants OAuth
+- explication du rôle de Gitignore pour protéger les clés sensibles
+- authentification finale avec autorisation d'accès Google Drive et Sheet
+- confirmation de l'authentification réussie aux deux tiers du pipeline
+- réflexion pédagogique : apprendre par la confrontation aux erreurs (setup unique)
+- point d'étape temporel de la démonstration (42 minutes, objectif une heure)
+- vérification de l'activation de l'API Google Drive et création réussie du Sheet
+- observation des données générées dans le Sheet avec erreur de formule et champ manquant
+- constat d'erreurs d'accents signalées directement à l'agent
+- rappel du principe clé d'itération continue illustré par un screenshot d'erreur
+- construction du cinquième skill (email writer) nécessitant cinq informations
+- configuration d'une preuve sociale réelle concrète pour l'email writer
+- recommandation de personnaliser sa voix à partir des bonnes pratiques fournies
+- génération réussie d'un email en moins de deux minutes par le nouveau skill
+- évaluation positive de la copie (point de douleur, preuve sociale, réduction de friction)
+- appréciation du format concis en trois lignes du deuxième email de séquence
+- confirmation de la satisfaction générale et possibilité d'amélioration continue du skill
+- information sur les limites d'abonnement et montée en gamme progressive
+- démonstration de création d'une clé API Instantly avec scopes
+- conseil de compacter régulièrement le contexte pour préserver la pertinence des réponses
+- observation : un message peut être envoyé pendant le compactage en cours
+- philosophie personnelle de simplicité dans le choix des outils
+- explication du warm-up email et limite recommandée (20-30 emails/jour)
+- mention d'un compte en warm-up depuis 14 jours et résolution des accents restants
+- vérification du sixième skill (push instantly) tournant de manière autonome
+- présentation de la fonctionnalité unibox d'Instantly catégorisant les réponses
+- consultation de la campagne créée dans Instantly avec KPIs vides
+- débogage d'un oubli : leads non importés malgré séquences correctement configurées
+- résolution du problème en signalant explicitement l'absence de leads à l'agent
+- identification de la limite du scraping Google Maps (absence de prénoms) et solutions complémentaires
+- confirmation que signaler un manque de données à Claude Code suffit à le résoudre
+- évaluation honnête du premier jet comme solide mais perfectible
+- rappel important de vérifier le fuseau horaire de planification d'envoi
+- recommandation de cibler la semaine et de tester A/B pour la délivrabilité
+- conseil de relire les séquences à voix haute avant validation finale d'envoi
+- décision stratégique de privilégier la qualité des données au volume (exclusion des franchises)
+- audit des problèmes principaux identifiés avant amélioration itérative
+- envoi du septième prompt incluant une auto-relecture des icebreakers par l'IA
+- incident technique de suppression accidentelle des skills individuels
+- explication : la fusion des skills en un skill master fait partie du septième prompt
+- nécessité de redémarrer Claude Code pour utiliser les nouveaux skills en commandes
+- structure finale du skill master appelant les scripts individuels ou une seule étape
+- test réussi du skill master reconnaissant automatiquement l'état d'avancement
+- test en direct du pipeline complet réutilisant toutes les améliorations précédentes
+- présentation de l'usage quotidien recommandé via la commande Outreach Master
+- conclusion présentant le workflow comme un cas d'usage réel et éprouvé
+
+## Outils mentionnes
+- Claude Code
+- GitHub
+- Apify
+- Claude
+- Google Sheets
+- Instantly
+- Python
+- Anthropic
+- Google Cloud
+- Google Drive
+- Google Maps
+- Shopify
+
+## Tips techniques
+- Communiquer avec l'agent de manière concise et directe (style robotique) plutôt qu'en langage naturel humain complexe, pour maximiser l'efficacité
+- Stocker systématiquement les clés API et données sensibles dans un fichier .env non versionné, pour éviter de les exposer publiquement sur GitHub
+- Donner des réponses courtes et directes à l'agent plutôt que des explications détaillées, pour économiser le contexte et les tokens utilisés
+- Adopter un rôle d'architecte et de vérificateur du résultat produit par l'IA, plutôt que de chercher à comprendre chaque détail technique généré
+- Demander explicitement à l'agent de paralléliser son traitement lorsqu'un processus est trop lent, plutôt que d'attendre passivement
+- Demander explicitement à l'agent d'auditer son propre code pour identifier failles, faux positifs et points de rupture, en itération continue
+- Configurer des listes de mots-clés positifs (contact, info) et négatifs (no-reply, RGPD, cookie) pour filtrer automatiquement la qualité des emails collectés
+- Documenter dans le fichier de configuration (cloud.md) les corrections apportées à un skill, pour que l'agent ne reproduise pas la même erreur ultérieurement
+- Fournir le contexte de sa propre offre et sa langue par défaut à l'agent, pour qu'il génère des icebreakers d'email réellement pertinents et contextualisés
+- Créer un skill review dédié pour auditer et améliorer les autres skills, une bonne pratique complémentaire à mettre en place
+- Vérifier systématiquement qu'on reste sur le bon projet Google Cloud avant chaque étape de configuration, une confusion fréquente entre projets
+- Utiliser un fichier Gitignore pour empêcher tout commit accidentel de fichiers sensibles contenant des clés API ou identifiants OAuth
+- Envoyer un screenshot direct d'une erreur visuelle à l'agent plutôt que de la décrire textuellement, pour une correction plus rapide et précise
+- Fournir une preuve sociale réelle et chiffrée (résultat concret obtenu pour un client) à l'agent rédacteur d'emails, plutôt qu'une affirmation vague
+- Structurer un email de prospection autour de trois éléments clés : point de douleur, preuve sociale, et réduction de la friction pour répondre
+- Rédiger des emails de relance très courts (trois lignes) avec proposition de rendez-vous claire et sans friction
+- Compacter régulièrement le contexte d'une session Claude Code longue, un contexte trop rempli dégradant progressivement la pertinence des réponses
+- Limiter l'envoi à 20-30 emails par jour par adresse et pratiquer le warm-up (chauffe) pour éviter d'être flaggé comme spam et préserver la délivrabilité
+- Signaler explicitement à l'agent un résultat manquant ou incomplet (ex : leads non importés) plutôt que de corriger manuellement, pour qu'il ajuste son propre code
+- Combiner plusieurs acteurs de scraping complémentaires pour compenser les limites de chacun (ex : prénoms manquants sur Google Maps)
+- Toujours vérifier attentivement le fuseau horaire configuré pour la planification d'envoi d'emails, une source d'erreur fréquente et discrète
+- Réaliser des tests A/B entre tracking d'ouverture activé et emails en texte seul, pour identifier l'option optimisant le mieux la délivrabilité
+- Relire systématiquement une séquence d'emails à voix haute avant l'envoi final, pour détecter les tournures maladroites ou erreurs manquées
+- Privilégier une liste de prospection plus restreinte mais qualifiée (exclusion des cibles non pertinentes comme les grandes franchises) plutôt qu'un volume brut plus large
+- Demander à l'IA de relire et auto-évaluer ses propres productions (icebreakers) comme étape de contrôle qualité intégrée au pipeline
+- Fusionner plusieurs skills individuels en un skill master unique une fois le pipeline stabilisé, pour simplifier l'utilisation quotidienne
+- Redémarrer Claude Code après la création d'un nouveau skill pour qu'il devienne disponible en tant que commande slash utilisable
+- Structurer un skill master appelant des scripts individuels, tout en gardant la possibilité d'exécuter une seule étape isolée via une commande dédiée
+- Utiliser une commande unique quotidienne (skill master) pour gérer flexiblement tout ou partie d'un pipeline d'outreach selon le besoin du jour
+
+## Cas d'usage reels
+- [[]]

@@ -276,15 +276,24 @@ tips techniques, patterns). C'est une base volumineuse (des centaines de chunks)
 **elle ne doit jamais être copiée telle quelle dans ce vault** (c'est exactement le
 piège "tout-RAG" que la masterclass déconseille : ça ferait exploser le contexte).
 
-Deux ponts possibles, à construire progressivement :
-1. **Synthèses statiques** (léger, prioritaire) : exporter une note markdown par
-   module/thème de formation (pas par chunk) vers `04_personal/formation-millenium/`
-   ou `03_knowledge/formations/` selon que c'est du perso ou du réutilisable client.
-2. **Requête à la demande** (avancé, si besoin plus tard) : un petit script consultant
-   `chunks_db.sqlite` directement, invoqué seulement quand une synthèse statique ne
-   suffit pas — jamais chargé en bloc dans le contexte.
+Deux ponts, l'un construit, l'autre pas encore :
 
-Statut : pas encore construit — à faire au prochain passage sur le vault.
+1. **Synthèses statiques (fait, 2026-08-29)** : `C:\Users\LENOVO\Documents\Millenium\export_millenium_notes.py`
+   exporte une note markdown **par leçon** (270 leçons, pas par chunk — 6605 chunks
+   seraient beaucoup trop) vers `03_knowledge/formations/<module>/`, groupées par
+   module (`formation-ia`, `formation-productivite`, `formation-vente`,
+   `masterclass`). Chaque note contient resume/concepts/outils/tips_techniques
+   agrégés, jamais le `texte_brut` brut ni les embeddings. Un `_index.md` par module
+   liste toutes les leçons avec un résumé d'une ligne — sert d'index léger pour que
+   Claude n'ouvre que les leçons pertinentes plutôt que de tout parcourir. Le script
+   est idempotent (relançable) et normalise les variantes d'accents dans les noms de
+   module (ex. bug source "Productivite"/"Productivité" corrigé côté export, pas
+   dans la base). À relancer après un nouveau lot d'enrichissement côté Millenium
+   pour resynchroniser.
+2. **Requête à la demande (pas construit)** : un petit script consultant
+   `chunks_db.sqlite` directement pour des recherches plus fines que les synthèses
+   statiques (ex. recherche plein texte dans `texte_brut`) — à faire si le besoin se
+   présente. Jamais chargé en bloc dans le contexte.
 
 ---
 

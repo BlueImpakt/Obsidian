@@ -1,0 +1,201 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Devenir un pro de n8n"
+source_transcript: "3.29 Masterclass Apify.txt"
+---
+
+# 3.29 Masterclass Apify
+
+## Resume
+- Introduction à Apify, présenté comme la porte d'entrée essentielle vers le monde réel des plateformes en ligne, et pierre angulaire du fonctionnement des agents IA via le scraping.
+- Explication du modèle économique des grandes plateformes (X, YouTube, LinkedIn) : cloisonner leurs données dans un écosystème fermé pour faire payer cher l'accès, notamment LinkedIn connu pour son répertoire B2B monétisé.
+- Approfondissement du business model basé sur la détention de données : LinkedIn perd des revenus (InMails payants) si les utilisateurs peuvent contourner la plateforme pour se contacter directement.
+- Présentation du concept d'Actors sur Apify : des templates de scraping créés par des développeurs, utilisables à faible coût pour scraper pratiquement n'importe quel site web, dans une logique no-code.
+- Explication de la gestion automatique et fiable des CAPTCHA par Apify, un système bien plus fiable et économique qu'un processus manuel fastidieux de résolution de CAPTCHA.
+- Comparaison entre Apify et le scraping manuel : la vitesse du scraping manuel est bien plus faible, un avantage décisif en faveur de l'automatisation via une plateforme dédiée.
+- Présentation de fonctionnalités avancées d'Apify : gestion automatique des proxys et monitoring en temps réel des actions effectuées, permettant de suivre précisément le déroulement du scraping.
+- Nuance importante sur la maintenance : si un développeur crée un scraper personnalisé, c'est la responsabilité de l'utilisateur de maintenir les changements en cas d'évolution de la structure du site cible (exemple : Instagram).
+- Avantage des Actors Apify déjà résolus : déploiement rapide, testés et maintenus régulièrement par une communauté de développeurs, contrairement à un scraper personnalisé nécessitant une maintenance individuelle.
+- Explication de l'incitation économique pour les développeurs : créer des Actors sur Apify génère un revenu quasi passif mensuel, expliquant l'engouement de la communauté à en produire davantage.
+- Avantage majeur d'extraction massive de données à faible coût, avec gestion automatique des proxys et des serveurs pour éviter le blocage d'adresse IP, entièrement gérée par la plateforme.
+- Présentation de la standardisation d'Apify : l'input et l'output sont uniformisés pour tous les Actors, garantissant une cohérence quel que soit le scraper utilisé pour la récupération de données.
+- Précision sur le format de données structuré : toutes les données récupérées sont formatées en JSON parfaitement structuré, optimisé pour être envoyé à un LLM en vue d'une analyse approfondie.
+- Présentation de la scalabilité extrême d'Apify : possibilité d'enchaîner plusieurs Actors en séquence (un Actor déclenchant un autre), permettant théoriquement de scraper la terre entière selon le budget disponible.
+- Présentation de l'écosystème Apify : le Store d'Actors (scripts de scraping prêts à l'emploi) et la Console permettant de suivre les processus de scraping en cours d'exécution.
+- Présentation des SDK pour développeurs, permettant de créer des Actors personnalisés lorsqu'aucun script existant ne convient, offrant une flexibilité totale pour des besoins spécifiques.
+- Exemple concret de cas d'usage : veille concurrentielle automatique en monitorant régulièrement les pages de prix des concurrents (exemple ClickUp surveillant un concurrent) à intervalle défini.
+- Bénéfice concret de l'automatisation de veille : détection instantanée des changements de prix concurrents, une tâche qui prendrait manuellement des heures pour une personne effectuant ce suivi régulièrement.
+- Précision sur l'intelligence du système d'alerte : capable de discerner si un changement est réellement significatif avant d'alerter, plutôt qu'un simple déclenchement sur toute variation mineure. Introduction du cas d'usage lead generation.
+- Présentation du cas d'usage lead generation : extraire des profils depuis des bases de données existantes comme Apollo ou LinkedIn, puis enrichir ces données pour alimenter une machine de prospection.
+- Mise en garde importante sur la juridiction applicable : le niveau de risque de ce type de scraping de leads varie selon les pays, une approche anglo-saxonne étant plus tolérante qu'une approche européenne plus stricte.
+- Confirmation que le niveau de risque accepté dépend de chacun, avec mention de réglementations en place notamment le RGPD, un contexte juridique complexe à considérer avant de se lancer.
+- Reconnaissance de la multiplicité des interprétations juridiques, avec invitation à approfondir soi-même via des articles dédiés, l'auteur précisant se concentrer sur des cas d'usage cible anglophone.
+- Exemple de cas d'usage éducatif : créer un agent capable de répondre aux questions des élèves sur un outil spécifique (Bubble) en extrayant automatiquement le manuel via crawling de tous les liens d'une documentation.
+- Dernier cas d'usage présenté : le e-commerce, où surveiller manuellement les prix de quelques abonnements est faisable, mais devient impraticable avec un grand catalogue de produits à monitorer.
+- Suggestion de déléguer l'analyse comparative de prix à un agent IA capable de traiter et comparer automatiquement ses propres articles face à la concurrence sur des produits similaires.
+- Conclusion sur les atouts d'Apify : grande évolutivité et communauté importante, avec système de validation communautaire permettant aux utilisateurs d'apprécier ou non chaque Actor disponible.
+- Démonstration pratique de tarification d'un Actor : paiement au résultat (3€ pour 1000), un tarif jugé relativement élevé, illustrant la variabilité des coûts selon les Actors choisis.
+- Conseil important : toujours comparer plusieurs Actors similaires (exemple TikTok Scraper) plutôt que de prendre le premier proposé, avec exemple d'alternative moins chère (API Dojo, 30€ pour 1000 posts).
+- Présentation des options de ciblage pour un scraper TikTok : recherche par localisation, profils, vidéos spécifiques, ou mots-clés (exemple : « AI » et « podcast »), une flexibilité de configuration appréciable.
+- Exemple concret d'application : créer une app pour le TDAH en scrapant les TikToks les plus likés sur ce sujet durant la dernière semaine, illustrant un cas d'usage de veille de contenu thématique.
+- Suite de l'exemple TDAH : obtenir les 10 meilleurs posts de la semaine automatiquement, une tâche qui prendrait des heures manuellement, permettant d'identifier des tendances autour de sujets ciblés.
+- Explication de la dynamisation des mots-clés : plutôt qu'un mot-clé fixe, un agent IA peut lui-même identifier les mots-clés pertinents en scrapant des sources comme Twitter et les comptes officiels au préalable.
+- Souligne la puissance de ce système pour suivre en temps réel ce qui se passe sur les réseaux sociaux et Internet en général. Présentation des différents types de tarification par abonnement pour un Actor.
+- Présentation des options de filtrage disponibles avant de lancer un Actor, avec démonstration étape par étape à venir des différentes options de configuration.
+- Importance de comprendre précisément quelles informations chaque Actor va extraire (certains incluent des statistiques, d'autres non), une vérification essentielle avant de choisir un Actor spécifique.
+- Préférence personnelle affirmée pour les Actors du développeur API Dojo, jugés parmi les meilleurs disponibles. Présentation des query parameters en input, définissant les critères de filtrage possibles.
+- Démonstration des options de filtrage géographique pour TikTok : possibilité de cibler des vidéos provenant d'un endroit spécifique (exemple : Saint-Tropez), une granularité de ciblage très fine.
+- Présentation du ciblage par pays (code FR pour France), définition du nombre maximum d'items à récupérer, et option d'inclusion de mots-clés de recherche supplémentaires.
+- Présentation des métriques de qualité d'un Actor : nombre d'utilisateurs mensuels, bookmarks, et surtout le taux de succès des runs (« run succeeded »), un indicateur clé de fiabilité.
+- Recommandation pratique : utiliser Claude ou ChatGPT pour aider à choisir le meilleur Actor parmi plusieurs candidats présélectionnés, en soumettant les options à l'IA pour arbitrage.
+- Présentation de la section Builds : historique des mises à jour effectuées par le développeur sur un Actor, permettant de consulter l'évolution et la maintenance du code au fil du temps.
+- Présentation des intégrations directes disponibles sans passer par N8n : envoi direct vers Airtable ou upload du résultat sous forme de dataset directement sur Google Drive.
+- Présentation de la section Monitoring : statistiques des différents runs effectués, résultats jour par jour, alertes et durée des exécutions, un tableau de bord de suivi complet.
+- Utilité pratique du monitoring de durée : permet d'alerter sur des problèmes de timeout, c'est-à-dire le temps qu'une requête N8n va attendre avant d'arrêter d'attendre une réponse.
+- Présentation des métriques techniques avancées : champs du dataset, requêtes effectuées, consommation CPU (puissance de calcul) et mémoire utilisée, des données utiles pour optimiser les coûts.
+- Présentation de la section Problèmes, comparable à un mini GitHub de tracking d'issues intégré à Apify, permettant au créateur (exemple API Dojo) de répondre aux problèmes signalés par les utilisateurs.
+- Démonstration de la sauvegarde de tâches (configurations réutilisables comme des templates) : exemple de sauvegarde d'une configuration spécifique pour la réutiliser facilement plus tard.
+- Présentation des options de déclenchement : exécution depuis un client/terminal, ou accès direct aux endpoints API pour modifier un Actor, obtenir des webhooks, ou déclencher son exécution.
+- Présentation de la fonctionnalité de scheduling native d'Apify : possibilité de programmer un déclenchement à horaire fixe directement sans passer par N8n, une alternative pratique de planification.
+- Présentation du tableau de bord récapitulatif : plateformes utilisées (YouTube, LinkedIn), historique des Actors utilisés avec statut de réussite, durée et accès aux tâches sauvegardées.
+- Présentation de la partie développement, pertinente uniquement pour ceux souhaitant créer leurs propres scrapers, permettant de publier son propre code sur la plateforme Apify.
+- Présentation des options de démarrage pour créer un Actor personnalisé : chargement depuis une bibliothèque de code en ligne, publication directe, ou utilisation de templates avec tutoriel intégré pour apprendre.
+- Introduction aux trois types de proxys disponibles (data center, résidentiel, spécial) : par défaut, les requêtes proviennent d'un data center car c'est la solution la plus simple à mettre en place.
+- Explication de la stratégie de variation des proxys data center pour limiter le risque de bannissement et d'adresse IP flaggée par des plateformes comme Instagram ou LinkedIn. Introduction des proxys résidentiels.
+- Explication de l'intérêt des proxys résidentiels : contrairement aux data centers identifiables, les IP résidentielles peuvent appartenir à n'importe qui, rendant le scraping moins détectable via le réseau propriétaire d'Apify.
+- Renvoi vers la documentation Apify pour approfondir la compréhension des différents types de proxys disponibles, avec explications détaillées fournies directement par la plateforme.
+- Présentation du proxy spécial Google SERP, dédié spécifiquement aux recherches sur Google et au scraping de sites web associés, un type de proxy à part entière optimisé pour cet usage.
+- Tarification des proxys résidentiels : 8 dollars par giga de données, un coût qui peut rapidement augmenter avec un volume important de scraping, contrairement aux data centers facturés différemment.
+- Comparaison de coût entre data center (combinaison de Compute Units et coût par IP) et résidentiel (8$/giga) : le data center s'avère nettement plus économique dans la majorité des cas d'usage.
+- Présentation du quatrième type de proxy spécialisé (Google Search Result Page), permettant de récupérer le classement de pages en fonction de mots-clés spécifiques recherchés.
+- Présentation de la tarification du stockage de données (dataset) : 1$ pour 1000 gigas par heure de stockage, un coût structuré séparément des coûts de proxys ou de compute.
+- Détail du coût de lecture (read) : 0,00004 centime pour 1000 lectures, soit 0,004 centime pour 10 000 éléments consultés, un coût minime rendant l'accès aux données très abordable.
+- Détail du coût d'écriture (write) : 0,05 centime pour 1000 écritures sur 10 000 éléments extraits, confirmant un modèle de tarification globalement basé sur l'usage réel plutôt qu'un prix fixe.
+- Démonstration de recherche d'un Actor spécifique utilisant des proxys configurables, avec exploration de plusieurs options avant d'en identifier un correspondant au besoin.
+- Découverte de la Proxy Configuration disponible sur un Actor (Search Creeper) : choix entre Data Center et Résidentiel, avec sélection possible d'un pays spécifique pour ce dernier.
+- Cas d'usage du proxy résidentiel géolocalisé : utile quand un service limite strictement l'accès à un pays spécifique (exemple France), à un coût de 8$/giga. Présentation du proxy spécial pour recherches Google localisées.
+- Retour sur l'exemple TikTok en cours, avec recommandation pratique de mettre en favori (bookmark) les Actors utiles fréquemment pour les retrouver facilement sans avoir à les rechercher à chaque fois.
+- Découverte en direct de la fonctionnalité de favoris (bookmarks) permettant de conserver ses Actors préférés facilement accessibles, en préparation de la requête finale de démonstration.
+- Configuration finale de la requête de démonstration : ciblage des États-Unis, plage de dates de la semaine en cours, tri par Most Liked, et récupération des 10 principaux résultats, puis lancement.
+- Résultat de la requête après environ une minute de traitement : récupération des meilleurs posts avec des chiffres impressionnants de vues (6 millions, 3 millions, 1,3 million), confirmant le succès du scraping.
+- Renvoi vers un futur module sur un agent TikTok, l'objectif étant d'identifier des contenus performants pour en tirer profit via l'identification de patterns de performance reproductibles.
+- Explication de la structure visuelle des données : quand un champ compte 7 sous-éléments, cela signifie que la propriété est un objet complexe, le JSON étant simplement représenté visuellement comme une base de données.
+- Présentation d'une fonctionnalité pratique évitant de devoir télécharger le fichier vidéo complet pour en récupérer le contenu, avec possibilité de prévisualiser directement au format JSON.
+- Présentation de la section Log (historique complet du processus), Input (ce qui a été envoyé), et Storage (le dataset généré), avec un ID unique de dataset important à conserver.
+- Conseil pratique : renommer explicitement son dataset (même petit, ex: 29 kb) pour indiquer à Apify de le conserver durablement plutôt que de le laisser expirer automatiquement.
+- Distinction entre Summary Data (champs essentiels) et All Fields (tous les champs disponibles), avec avertissement sur les difficultés potentielles d'usage avec un grand nombre de propriétés dans Google Sheets.
+- Présentation des options de partage d'équipe et de reprise après échec : Resurrect (reprendre depuis la dernière étape scrapée) ou Rerun (tout recommencer depuis le début).
+
+## Concepts cles
+- Apify comme pierre angulaire des agents IA (porte d'entrée via scraping)
+- modèle économique de cloisonnement des données des grandes plateformes
+- business model de détention de données (exemple InMails LinkedIn)
+- concept d'Actors Apify (templates de scraping à faible coût)
+- résolution automatique et fiable des CAPTCHA par Apify
+- comparaison de vitesse : Apify vs scraping manuel
+- gestion automatique des proxys et monitoring en temps réel
+- responsabilité de maintenance des scrapers personnalisés face aux changements de site
+- avantage des Actors préexistants et maintenus par la communauté
+- incitation économique des développeurs (revenu passif mensuel)
+- extraction massive à faible coût avec gestion automatique des proxys
+- standardisation de l'input/output pour tous les Actors Apify
+- format JSON structuré optimisé pour l'analyse LLM
+- scalabilité extrême et enchaînement d'Actors (Apify)
+- écosystème Apify (Store d'Actors et Console)
+- SDK Apify pour développeurs (création d'Actors personnalisés)
+- cas d'usage : veille concurrentielle automatique des prix
+- bénéfice temps : détection instantanée vs suivi manuel chronophage
+- alerte intelligente sur changements significatifs, introduction du lead gen
+- cas d'usage lead generation via Apollo/LinkedIn
+- mise en garde juridictionnelle sur le risque du scraping de leads
+- niveau de risque personnel et cadre du RGPD
+- diversité des interprétations juridiques, focus sur cible anglophone
+- cas d'usage : agent de support éducatif via crawling de documentation
+- cas d'usage e-commerce (limite du suivi manuel avec grand catalogue)
+- délégation de comparaison de prix concurrentiels à un agent IA
+- évolutivité, communauté et système de validation des Actors
+- exemple de tarification d'un Actor (3€/1000 résultats)
+- comparaison d'Actors similaires avant de choisir (exemple TikTok Scraper)
+- options de ciblage variées pour un scraper TikTok
+- exemple concret : veille de contenu TikTok thématique (TDAH)
+- automatisation de veille de tendances (exemple TDAH)
+- dynamisation des mots-clés via un agent IA identifiant les tendances
+- puissance du suivi temps réel et tarification par abonnement
+- options de filtrage avant lancement d'un Actor
+- vérification des informations extraites par chaque Actor avant choix
+- préférence pour les Actors API Dojo
+- query parameters en input
+- ciblage géographique précis pour scraper TikTok (exemple Saint-Tropez)
+- ciblage par pays et limitation du nombre d'items
+- métriques de qualité d'un Actor (utilisateurs, taux de succès)
+- recommandation d'utiliser Claude/ChatGPT pour arbitrer le choix d'un Actor
+- section Builds pour l'historique des mises à jour d'un Actor
+- intégrations directes vers Airtable/Google Drive sans N8n
+- section Monitoring (stats, alertes, durée des runs)
+- monitoring de durée pour anticiper les problèmes de timeout
+- métriques techniques avancées (CPU, mémoire, dataset fields)
+- section Problèmes (tracking d'issues type mini GitHub)
+- sauvegarde de tâches réutilisables (templates de configuration)
+- options de déclenchement (client, endpoints API)
+- scheduling natif Apify (sans passer par N8n)
+- tableau de bord récapitulatif des Actors et runs utilisés
+- partie développement pour créer ses propres scrapers
+- options de démarrage pour créer un Actor personnalisé (templates, tutoriel)
+- trois types de proxys (data center, résidentiel, spécial)
+- variation des proxys pour limiter le risque de bannissement
+- avantage des proxys résidentiels (IP moins identifiables que data center)
+- renvoi à la documentation Apify sur les types de proxys
+- proxy spécial Google SERP pour recherches Google
+- tarification des proxys résidentiels (8$/giga)
+- comparaison de coût data center vs résidentiel (data center plus économique)
+- proxy Google Search Result Page pour classement de mots-clés
+- tarification du stockage de dataset (1$/1000Go/heure)
+- coût de lecture (read) quasi négligeable
+- coût d'écriture (write) et modèle de tarification à l'usage
+- recherche pratique d'un Actor avec configuration de proxy
+- Proxy Configuration d'un Actor (Data Center vs Résidentiel par pays)
+- cas d'usage de géolocalisation de proxy pour contourner des restrictions
+- recommandation de bookmarker les Actors fréquemment utilisés
+- localisation de la fonctionnalité de favoris (bookmarks)
+- configuration finale complète de la requête de démonstration
+- résultats chiffrés de vues massives (6M, 3M, 1.3M)
+- renvoi vers un futur agent TikTok pour identifier des patterns de performance
+- compréhension de la structure visuelle JSON (objets imbriqués)
+- prévisualisation directe au format JSON (évite le téléchargement complet)
+- sections Log, Input et Storage avec ID de dataset unique
+- conseil de renommer un dataset pour éviter son expiration automatique
+- distinction Summary Data vs All Fields (limite pour Google Sheets)
+- options Resurrect (reprise) vs Rerun (redémarrage complet)
+
+## Outils mentionnes
+- Apify
+- LinkedIn
+- ClickUp
+- Apollo
+- Bubble
+- Claude
+- ChatGPT
+- Airtable
+- Google Drive
+- n8n
+- YouTube
+- Instagram
+- Google Sheets
+
+## Tips techniques
+- Évaluer le niveau de risque juridique du scraping de leads selon sa juridiction (approche anglo-saxonne plus tolérante qu'européenne)
+- Toujours comparer plusieurs Actors similaires sur Apify avant de choisir, les tarifs pouvant varier significativement pour une même fonction
+- Toujours vérifier précisément quelles données un Actor extrait effectivement avant de le sélectionner, car cela varie fortement
+- Soumettre plusieurs Actors présélectionnés à Claude ou ChatGPT pour obtenir une recommandation éclairée sur le meilleur choix
+- Sauvegarder les configurations d'Actor fréquemment utilisées comme des tâches réutilisables plutôt que de tout reconfigurer
+- Utiliser le scheduling natif d'Apify plutôt que N8n quand on n'a besoin que d'une exécution récurrente simple à horaire fixe
+- Varier les proxys data center pour réduire le risque de bannissement d'IP par des plateformes comme Instagram ou LinkedIn
+- Privilégier les proxys data center plutôt que résidentiels sauf nécessité spécifique, le coût étant nettement plus avantageux
+- Utiliser un proxy résidentiel géolocalisé pour accéder à des services limitant strictement l'accès à un pays spécifique
+- Bookmarker les Actors utilisés régulièrement sur Apify pour les retrouver facilement sans recherche répétée
+- Renommer explicitement un dataset Apify pour signaler qu'il doit être conservé durablement et éviter son expiration automatique
+- Utiliser Resurrect plutôt que Rerun après un échec pour reprendre depuis la dernière donnée scrapée plutôt que tout recommencer
+
+## Cas d'usage reels
+- [[]]

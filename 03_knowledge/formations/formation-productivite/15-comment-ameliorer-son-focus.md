@@ -1,0 +1,300 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Ameliorer son focus"
+source_transcript: "15. Comment ameliorer son focus.txt"
+---
+
+# 15. Comment ameliorer son focus ?
+
+## Resume
+- Introduction à l'amélioration du focus par élimination des distractions, une vidéo particulièrement complète sur ce sujet central de la productivité.
+- Référence au concept du flow théorisé par le psychologue Csikszentmihalyi, décrivant l'état de concentration complète sur une tâche.
+- Description de l'état de flow : concentration complète ignorant toutes les distractions externes, même sur une tâche ennuyante, permettant d'enchaîner les actions.
+- Anecdote personnelle d'un état de flow intense lors d'un projet universitaire en binôme, sous la pression d'une deadline le jour même du rendu.
+- Détail de l'anecdote : session de travail continue de 18h à 4h du matin, produisant 20 pages de rapport en une seule soirée grâce à l'état de flow.
+- Transition vers la description structurée des différentes étapes du flow, au-delà de la simple image intuitive présentée jusqu'ici.
+- Première étape essentielle avant d'atteindre le flow : éliminer les distractions internes, celles provenant de soi-même plutôt que de l'environnement.
+- Recommandation de créer de l'engagement le plus vite possible via la méthode Pomodoro, pour limiter la recherche de dopamine facile (réseaux sociaux).
+- Chiffre clé : il faut généralement 10 à 20 minutes pour atteindre l'état de flow, remettant en question la pertinence du Pomodoro classique de 25 minutes.
+- Critique du timing du Pomodoro : la pause intervient juste au moment où le flow commence, gâchant potentiellement l'état de concentration en construction.
+- Insistance sur l'importance de plonger rapidement dans une tâche exigeante, même sans flow immédiat, celui-ci pouvant survenir 20 minutes ou plus après.
+- Précision qu'il existe une phase de lutte préalable au flow, nécessitant plus de temps que le reste de la journée pour véritablement s'installer.
+- Premier hack pour maintenir le flow : suivre son temps de manière visible via l'application Slash, peu coûteuse et efficace pour l'engagement.
+- Démonstration de sélection de tâches depuis Notion, copiées puis collées dans Slash pour démarrer facilement le suivi d'engagement.
+- Confirmation que le déclenchement du compteur Slash incite concrètement à rester sur la tâche engagée plutôt que de dériver.
+- Témoignage personnel du rôle du compteur visible comme rappel constant contre la dérive vers des distractions annexes non liées à la tâche en cours.
+- Comparaison avec le compteur natif d'Akiflow jugé moins efficace, précision que ce type d'outil sert avant tout à l'engagement plutôt qu'au véritable time tracking.
+- Présentation des statistiques de concentration disponibles, de la progression visible sur la journée, et de l'option Pomodoro personnalisable sans interruption forcée.
+- Présentation des raccourcis clavier et fonctionnalités (break timer) de l'application, avec début de mention du prix mensuel.
+- Recommandation d'abonnement à Slash (7,95€/mois) pour ceux ayant du mal à s'engager vers le flow, un investissement jugé utile, avant retour à la mind map.
+- Présentation des sons binauraux (binaural beats) comme aide sonore scientifiquement validée pour favoriser la concentration.
+- Confirmation que les sons binauraux aident de manière significative le cerveau à se concentrer, contrairement à d'autres idées reçues sur les sons d'ambiance.
+- Démystification des idées reçues : les sons de nature (gouttes d'eau) n'ont pas d'efficacité prouvée sur la concentration, voire l'inverse, contrairement aux sons à 40 hertz.
+- Recommandation pratique de rechercher des playlists de sons binauraux à 40 hertz sur Spotify, jugés les plus efficaces selon le type de travail.
+- Précision sur la diversité des fréquences binaurales, chacune ayant un impact légèrement différent, une pratique scientifiquement documentée.
+- Précision importante : l'effet des sons binauraux n'est pas instantané, avec un délai de 40 à 50 minutes observé dans les études, augmentant la dopamine.
+- Introduction du concept de triggers internes, ceux provenant de soi-même (ex : ouvrir son téléphone par réflexe), distincts des triggers externes comme les notifications.
+- Exercice d'auto-évaluation du nombre de consultations du téléphone par jour, avec exemple personnel autour de 70 fois par jour jugé déjà élevé.
+- Exemple personnel d'identification de l'application la plus consultée par réflexe (LinkedIn, 20 fois/jour) sans notification, uniquement par habitude cérébrale.
+- Recommandation d'agir sur les applications identifiées comme triggers en les bloquant ou réduisant le temps d'écran, après avoir établi cet état des lieux.
+- Exemple personnel de pare-feu appliqués : Instagram quasiment abandonné, LinkedIn restant le dernier combat en cours face aux triggers identifiés.
+- Présentation de l'application Rise (time tracker à environ 10€) pour visualiser précisément les actions effectuées pendant les heures de travail.
+- Description du suivi automatique de tous les sites et activités pendant les heures de travail, nécessitant un travail de catégorisation en fin de journée.
+- Fonctionnalité de catégorisation des activités par projet, permettant de les aligner avec les événements du calendrier pour une analyse fine.
+- Démonstration d'association d'une activité (tournage) à un projet spécifique, un usage principalement orienté vers l'identification des triggers via l'Activity Log.
+- Insistance sur l'importance cruciale d'identifier ses triggers, beaucoup de gens n'en ayant même pas conscience et ne pouvant donc pas agir dessus.
+- Conseil de noter systématiquement chaque occurrence de trigger observée, avec sa fréquence et son pattern, seule condition pour pouvoir réellement changer.
+- Méthode de suivi rétrospectif : dès qu'on se rend compte d'une dérive, noter le point d'atterrissage puis analyser rétroactivement quel trigger l'a causée.
+- Exemple personnel de mise en place de rappels et minuteurs pour limiter le temps passé sur YouTube, un trigger identifié à surveiller activement.
+- Présentation de trois applications de blocage selon la plateforme : Cold Turkey pour Mac, Opal pour iPhone, Freedom pour Android et iPhone.
+- Présentation de la fonctionnalité de listes prédéfinies importables dans Cold Turkey (sites adultes, vidéos) et de blocage d'applications spécifiques.
+- Configuration d'un blocage selon un emploi du temps précis : exemple de LinkedIn bloqué de minuit à 8h30 puis débloqué une heure pour publier.
+- Explication du choix entre blocage continu ou basé sur un emploi du temps, avec activation nécessaire de l'option de démarrage automatique du blocage.
+- Présentation de l'option de déblocage exigeant la saisie d'un texte long (30-50 caractères), un frein volontaire empêchant le déblocage impulsif.
+- Explication de l'intention derrière cette friction volontaire, avant présentation de l'option time range, un emploi du temps différent du blocage simple.
+- Présentation de l'option restart (blocage jusqu'au redémarrage complet de l'appareil) et de l'option mot de passe confié à un tiers.
+- Confirmation de la robustesse extrême du blocage : impossible à contourner en fermant l'app, éteignant l'ordinateur, ou changeant de navigateur.
+- Présentation de l'option extrême Frozen Turkey bloquant totalement l'ordinateur avec un écran bleu, pour les cas nécessitant une coupure radicale.
+- Démonstration de configuration d'un site jugé distractif dans Cold Turkey, avec ajout ciblé uniquement des sites réellement problématiques.
+- Présentation d'Opal comme alternative minimaliste sur téléphone, plus stricte que les limites d'application natives iOS qui ne sont qu'informatives.
+- Présentation des sessions de travail configurables dans Opal avec système de score quotidien de qualité du focus.
+- Exemple de score de focus variable selon les jours (bon vendredi, faible dimanche à 5,2), et présentation de Freedom comme alternative équivalente.
+- Recommandation forte d'éviter les outils de communication instantanée type Slack, pensés pour un échange continu qui rend son temps disponible en permanence pour les autres.
+- Illustration du principe de sollicitation visuelle constante (notifications) incitant à l'interaction même sans intention initiale.
+- Présentation de Twist comme alternative à Slack fonctionnant en mode forum asynchrone, respectant davantage le focus des utilisateurs.
+- Reconnaissance d'une approche personnelle extrême de gestion des interruptions, adaptée au profil solopreneur ou entrepreneur individuel.
+- Pratique personnelle de ne jamais répondre au téléphone au premier appel, la plupart des appels non planifiés étant de la prospection non désirée.
+- Recommandation d'utiliser le mode avion ou ne pas déranger pour minimiser radicalement les interruptions, y compris les appels FaceTime sur Mac.
+- Introduction du combat contre les forces contraires structurelles (consumérisme, perte de sens) alimentant l'addiction généralisée aux écrans.
+- Reconnaissance universelle que tout le monde est addict à quelque chose à des degrés divers, avec méthode recommandée de mesure du temps d'écran par application pour identifier objectivement les principaux consommateurs (ex : Instagram, largement réduit depuis).
+- Distinction entre réseaux sociaux à algorithme non choisi (Instagram, Facebook, LinkedIn) où le contenu est imposé plutôt que sélectionné activement par l'utilisateur.
+- Nuance entre plateformes à choix moyen (YouTube, offrant un minimum de sélection) versus TikTok, où le contenu est directement imposé sans aucun choix actif.
+- Constat que l'entraînement par les algorithmes courts (TikTok) altère la capacité de décision, illustré par le paradoxe de choisir un film sur Netflix (plus de temps à choisir qu'à regarder).
+- Pratique personnelle de privilégier des activités de choix actif au maximum à la maison, avec avertissement que ces forces contraires mènent progressivement à une addiction forte et une perte de sens.
+- Recommandation de privilégier des contenus à ambiance positive, les fils algorithmiques ayant tendance à dériver progressivement vers des sujets tendancieux ; la lecture reste un choix actif qui fait travailler un muscle cognitif.
+- Conseil important : lire plutôt que consulter son smartphone au réveil, une pratique réactivant un muscle cognitif de concentration peu sollicité.
+- Présentation des deux écoles (lecture matin/sport soir ou inverse) avec préférence personnelle assumée pour le sport le matin.
+- Explication que lecture et sport activent tous deux favorablement le cerveau et préparent à l'état de flow, notamment via la libération d'endorphines pour le sport.
+- Explication de l'effet de la douche froide sur la dopamine, comparable en intensité à la cocaïne mais sans le craving addictif associé.
+- Mise en garde contre le self-talk négatif qui mine le moral et pousse à quitter sa zone de focus, avec conseil de dédramatiser une matinée de concentration difficile.
+- Rappel que la difficulté de concentration ponctuelle ne fait pas de soi un problème intrinsèque, mais résulte de facteurs externes (sollicitations) et internes (dopamine facile) identifiables.
+- Recommandation de noter par écrit ou verbaliser ce qui a fait sortir de sa zone de focus dans la journée, une pratique de prise de conscience essentielle des triggers.
+- Rappel de comprendre le problème plutôt que de s'autoflageller, la formation existant précisément pour aider à travailler ces deux dimensions (soi et l'environnement).
+- Critique des créateurs de contenu suivant les mécanismes addictifs des réseaux sociaux, illustrée par l'exemple d'une vidéo de Mister Beast jugée sur-stimulante.
+- Routine personnelle de coupure d'écran après 22h et d'éviter le smartphone les deux premières heures après le réveil, avant de commencer à 8h30.
+- Introduction du concept de cultiver l'ennui volontairement, à contre-courant d'une société qui pousse à rester constamment stimulé et occupé.
+- Exemple concret d'occasion manquée de cultiver l'ennui : la douche, souvent comblée par podcast, radio ou musique au lieu d'être un moment sans stimulation.
+- Extension du concept aux transports (avec nuance sur les distractions inévitables) et suggestion de 20 minutes de respiration proche de la méditation.
+- Exercice pratique de ne rien faire volontairement, une capacité rare aujourd'hui qui constitue un véritable avantage compétitif pour ceux qui la cultivent.
+- Rappel de la technique Pomodoro appliquée seulement au démarrage (clic sur le minuteur), puis introduction du concept de bloqueurs de flow à éviter.
+- Métaphore de l'avion traversant des turbulences au décollage avant d'atteindre un ciel dégagé, illustrant la phase de lutte précédant le flow.
+- Introduction de la nécessité de cultiver activement la motivation en restant aligné avec ce que l'on fait, face au manque de motivation naturel.
+- Recommandation de cultiver la motivation via le self-talk et la réflexion sur les raisons profondes derrière un projet ou une tâche.
+- Conseil contre-intuitif important : visualiser l'action à entreprendre plutôt que la récompense finale, cette dernière générant une dopamine contre-productive.
+- Précision de la méthode : se concentrer sur la toute première mini-tâche cochable, qui amorce la progression vers l'état de flow, avant présentation du cycle en quatre étapes.
+- Présentation de la deuxième étape du cycle de flow : l'abandon, moment critique où la majorité des gens abandonnent plutôt que de continuer à travers la turbulence.
+- Bénéfice de la lecture sur le muscle de la concentration, aidant à mieux lutter et persévérer lors de la phase de lutte précédant le flow.
+- Constat que quasiment personne ne lit aujourd'hui, la sur-consommation d'écran fatiguant mathématiquement la capacité de concentration.
+- Comparaison chiffrée : huit secondes entre chaque contenu court versus des heures sur un livre, un effort cognitif radicalement différent pour le cerveau.
+- Conclusion que TikTok, ne demandant aucun effort cognitif, fragilise directement la capacité de concentration de l'utilisateur.
+- Introduction de la méditation comme pratique proche de l'ennui volontaire, à aborder sans pression de performance ni objectif de vide mental forcé.
+- Témoignage personnel d'un scepticisme initial envers la méditation, jugée ridicule au départ, avant d'en comprendre les avantages ; explication du bénéfice neurochimique : une production de dopamine plus stable et étalée, plutôt que des pics suivis d'un craving intense.
+- Recommandation de s'attaquer directement à des tâches exigeantes pour travailler la phase de lutte, combinées aux bloqueurs présentés précédemment, avant introduction de l'étape abandon (le crash) du cycle de flow.
+- Conseil clé pour éviter l'abandon : démarrer le flow avec une tâche plaisante et bien définie, permettant de cocher rapidement une première sous-tâche pour ressentir la progression.
+- Recommandation de découper les gros projets en nombreuses petites tâches, l'effet montagne insurmontable étant évité en cochant des mini-tâches successives.
+- Explication du lien entre l'état de flow et la libération de dopamine et noradrénaline, avec référence à la réponse de relaxation théorisée par Herbert Benson.
+- Précision de l'effet physiologique du flow sur le rythme cardiaque et la pression sanguine, un état de relaxation bénéfique pour le corps malgré l'effort mental.
+- Recommandation d'espacer les sessions de flow avec de vrais temps de récupération sans écran, à l'image d'un sportif de haut niveau évitant la blessure.
+- Introduction du café comme stimulant cérébral, la deuxième commodité la plus échangée au monde, consommée sous de nombreuses formes différentes.
+- Mise en garde sur l'impact du café sur l'adénosine favorisant le sommeil, recommandant d'attendre au moins 1h30 après le réveil avant d'en consommer.
+- Nuance que les méfaits de la caféine surviennent surtout en cas de consommation excessive, la caféine agissant globalement comme un stimulant cognitif comparable à une drogue douce.
+- Chiffres précis de dosage recommandé de caféine : ne jamais dépasser 200 à 300mg par jour selon les personnes, et jamais après 14 heures.
+- Recommandation d'éviter l'alcool en semaine, avant introduction du sujet du contrôle et de l'orientation de la dopamine face à l'addiction généralisée.
+- Recommandation clé de cultiver l'attente et l'ennui volontaire (sans téléphone, avec un livre) pour réduire la surexposition aux stimuli et préserver le focus.
+- Technique de retardement de la gratification dopaminergique : attendre avant d'acheter, éliminer les tentations faciles pour équilibrer la dopamine.
+- Conseil de commencer petit et augmenter progressivement sa résistance à la dopamine, avec mention de la stratégie de Seinfeld pour atteindre de gros objectifs.
+- Anecdote personnelle de prise de photos quotidiennes d'encouragement pendant un programme de fitness intensif (Insanity) au Brésil en 2017.
+- Suite de l'anecdote : le rituel de prendre des photos est progressivement devenu une nouvelle source de motivation remplaçant la dureté perçue de l'exercice, renforcée par la pratique à deux.
+- Généralisation du principe : voir des résultats concrets sur son contenu (LinkedIn, YouTube) crée un pic de motivation qui pousse à la discipline continue.
+- Conclusion de la vidéo, présentée comme très complète, avec conviction personnelle que ces stratégies fonctionnent et invitation à les essayer pour des résultats rapides.
+
+## Concepts cles
+- introduction à l'amélioration du focus par élimination des distractions
+- référence au concept du flow théorisé par Csikszentmihalyi
+- description de l'état de flow ignorant toutes les distractions externes
+- anecdote personnelle d'un état de flow intense sous pression de deadline
+- détail de l'anecdote : 20 pages produites en une session continue de 10 heures
+- transition vers la description structurée des étapes du flow
+- première étape : éliminer les distractions internes provenant de soi-même
+- recommandation de créer un engagement rapide via Pomodoro pour limiter la dopamine facile
+- chiffre clé : 10-20 minutes nécessaires pour atteindre le flow
+- critique du timing du Pomodoro coupant le flow en construction
+- insistance sur le fait de plonger rapidement même sans flow immédiat
+- précision de la phase de lutte préalable nécessaire avant le flow
+- premier hack pour maintenir le flow : suivi visible du temps via Slash
+- démonstration de sélection de tâches Notion copiées dans Slash
+- confirmation que le compteur Slash incite à rester sur la tâche engagée
+- témoignage du rôle du compteur comme rappel constant contre la dérive
+- comparaison avec Akiflow et précision : engagement plutôt que time tracking
+- présentation des statistiques de concentration et Pomodoro personnalisable
+- présentation des raccourcis clavier et fonctionnalités (break timer)
+- recommandation d'abonnement à Slash pour faciliter l'engagement vers le flow
+- présentation des sons binauraux scientifiquement validés pour la concentration
+- confirmation de l'efficacité significative des sons binauraux sur la concentration
+- démystification : les sons de nature n'ont pas d'efficacité prouvée (contrairement au 40 hertz)
+- recommandation de playlists de sons binauraux à 40 hertz sur Spotify
+- précision sur la diversité des fréquences binaurales aux impacts différents
+- précision : effet des sons binauraux différé de 40-50 minutes (augmente la dopamine)
+- introduction du concept de triggers internes distincts des triggers externes
+- exercice d'auto-évaluation du nombre de consultations téléphone (70/jour)
+- exemple d'identification de l'application la plus consultée par réflexe (LinkedIn)
+- recommandation d'agir sur les triggers identifiés (blocage, réduction d'écran)
+- exemple personnel de pare-feu appliqués (Instagram abandonné, LinkedIn en cours)
+- présentation de Rise (time tracker à ~10€) pour visualiser les actions de travail
+- description du suivi automatique nécessitant une catégorisation en fin de journée
+- fonctionnalité de catégorisation des activités par projet alignée au calendrier
+- démonstration d'association d'une activité à un projet spécifique (Activity Log)
+- insistance sur l'importance cruciale de la conscience des triggers (souvent inconsciente)
+- conseil de noter systématiquement chaque occurrence de trigger avec fréquence
+- méthode de suivi rétrospectif du point d'atterrissage et du trigger causal
+- exemple personnel de rappels et minuteurs pour limiter YouTube
+- présentation de trois applications de blocage selon la plateforme (Cold Turkey, Opal, Freedom)
+- présentation des listes prédéfinies importables dans Cold Turkey
+- configuration d'un blocage selon un emploi du temps précis (LinkedIn)
+- explication du choix entre blocage continu et blocage programmé
+- présentation de l'option de déblocage par saisie d'un texte long (frein volontaire)
+- explication de l'intention de la friction volontaire et de l'option time range
+- présentation de l'option restart et de l'option mot de passe confié à un tiers
+- confirmation de la robustesse extrême et incontournable du blocage
+- présentation de l'option extrême Frozen Turkey (écran bleu total)
+- démonstration de configuration ciblée de sites réellement distractifs
+- présentation d'Opal comme alternative téléphone plus stricte qu'iOS natif
+- présentation des sessions configurables Opal avec score quotidien de focus
+- exemple de score de focus variable et présentation de Freedom équivalente
+- recommandation forte d'éviter Slack pour préserver le focus
+- illustration du principe de sollicitation visuelle constante incitant à l'interaction
+- présentation de Twist comme alternative asynchrone respectant le focus
+- reconnaissance d'une approche extrême adaptée au profil solopreneur
+- pratique de ne jamais répondre au premier appel téléphonique non planifié
+- recommandation du mode avion/ne pas déranger pour minimiser les interruptions
+- introduction du combat contre les forces structurelles d'addiction aux écrans
+- reconnaissance universelle de l'addiction et méthode de mesure du temps d'écran (Instagram)
+- distinction des réseaux sociaux à algorithme non choisi (contenu imposé)
+- nuance entre YouTube (choix moyen) et TikTok (contenu totalement imposé)
+- constat de l'altération de la capacité de décision par les algorithmes courts (paradoxe Netflix)
+- pratique personnelle et avertissement sur l'addiction forte et la perte de sens progressive
+- recommandation de privilégier des contenus positifs (dérive algorithmique vers le tendancieux)
+- conseil : lire plutôt que consulter son smartphone au réveil
+- présentation de deux écoles routine matin (lecture ou sport)
+- explication : lecture et sport préparent tous deux à l'état de flow
+- explication de l'effet de la douche froide sur la dopamine (comparable à la cocaïne sans craving)
+- mise en garde contre le self-talk négatif faisant quitter la zone de focus
+- rappel : la difficulté de concentration résulte de facteurs identifiables, pas d'un défaut personnel
+- recommandation d'écrire ou verbaliser les triggers de perte de focus
+- rappel de comprendre le problème plutôt que s'autoflageller
+- critique des créateurs suivant les mécanismes addictifs (exemple Mister Beast)
+- routine personnelle de coupure d'écran (après 22h, deux heures après réveil)
+- introduction du concept de cultiver l'ennui volontairement à contre-courant
+- exemple concret de la douche comme occasion manquée de cultiver l'ennui
+- extension du concept aux transports avec 20 minutes de respiration
+- exercice pratique de ne rien faire volontairement comme avantage compétitif
+- rappel du Pomodoro au démarrage et introduction des bloqueurs de flow
+- métaphore de l'avion en turbulence illustrant la phase de lutte avant le flow
+- introduction de la nécessité de cultiver activement la motivation
+- recommandation du self-talk et de la réflexion sur les raisons profondes du projet
+- conseil important : visualiser l'action plutôt que la récompense finale
+- précision méthode : se concentrer sur la première mini-tâche cochable
+- présentation de l'étape abandon du cycle de flow (majorité abandonne)
+- bénéfice de la lecture sur le muscle de la concentration pour mieux lutter
+- constat de la fatigue de concentration causée par la sur-consommation d'écran
+- comparaison chiffrée : 8 secondes par contenu court vs heures sur un livre
+- conclusion : TikTok fragilise la capacité de concentration (zéro effort cognitif)
+- introduction de la méditation sans pression de performance
+- témoignage de scepticisme initial et bénéfice neurochimique de la méditation (dopamine stable vs pics)
+- recommandation de s'attaquer à des tâches exigeantes combinées aux bloqueurs et introduction de l'abandon
+- conseil clé pour éviter l'abandon : démarrer par une tâche plaisante bien définie
+- recommandation de découper les projets en petites tâches pour éviter l'effet montagne
+- explication du lien flow-dopamine-noradrénaline (réponse de relaxation de Herbert Benson)
+- précision de l'effet physiologique bénéfique du flow (rythme cardiaque, pression sanguine)
+- recommandation d'espacer les sessions de flow avec récupération sans écran
+- introduction du café comme stimulant cérébral (2e commodité mondiale)
+- mise en garde : attendre 1h30 après le réveil avant de consommer du café
+- nuance : les méfaits de la caféine surviennent en cas de consommation excessive
+- chiffres précis de dosage caféine (200-300mg max, jamais après 14h)
+- recommandation d'éviter l'alcool en semaine et introduction du contrôle de la dopamine
+- recommandation clé de cultiver l'attente volontaire pour préserver le focus
+- technique de retardement de la gratification dopaminergique (attendre avant d'acheter)
+- conseil de progression graduelle et mention de la stratégie de Seinfeld
+- anecdote personnelle de photos quotidiennes d'encouragement (programme Insanity, Brésil 2017)
+- suite de l'anecdote : le rituel photo devient source de motivation (pratique à deux)
+- généralisation : voir des résultats concrets crée un pic de motivation discipliné
+- conclusion de la vidéo avec conviction personnelle sur l'efficacité des stratégies
+
+## Outils mentionnes
+- Slash
+- Notion
+- Akiflow
+- Spotify
+- LinkedIn
+- Instagram
+- Rise
+- YouTube
+- Cold Turkey
+- Opal
+- Freedom
+- Slack
+- Twist
+- Facebook
+- TikTok
+- Netflix
+
+## Tips techniques
+- Créer un engagement immédiat (déclencher un minuteur) dès le début d'une session, pour couper court à la tentation de dopamine facile
+- Suivre visiblement son temps engagé sur une tâche via une application dédiée, pour renforcer l'engagement et maintenir le flow
+- Utiliser des sons binauraux (deux tonalités différentes en cycle) pour favoriser la concentration, une aide sonore scientifiquement validée
+- Privilégier les sons binauraux à 40 hertz spécifiquement, disponibles en playlists dédiées sur Spotify, jugés les plus efficaces pour la concentration
+- Compter son propre nombre de consultations quotidiennes du téléphone comme premier exercice de prise de conscience des triggers internes
+- Réaliser un état des lieux précis de ses triggers internes avant d'agir dessus, l'identification précédant systématiquement l'action corrective
+- Noter systématiquement chaque occurrence de trigger repérée avec sa fréquence et son pattern, condition nécessaire pour espérer le changer
+- Dès la prise de conscience d'une dérive d'attention, noter le point d'atterrissage puis remonter au trigger causal pour construire un historique de patterns
+- Configurer un blocage d'application selon un emploi du temps précis avec fenêtres de déblocage ciblées, plutôt qu'un blocage total permanent
+- Configurer une exigence de saisie d'un texte long pour débloquer une application, créant un frein volontaire contre le déblocage impulsif
+- Confier le mot de passe de déblocage à un tiers de confiance pour un blocage total impossible à contourner soi-même
+- Cibler précisément dans un bloqueur uniquement les sites réellement distractifs identifiés, plutôt qu'une liste générique excessive
+- Éviter les outils de messagerie instantanée continue (type Slack) qui rendent implicitement son temps disponible en permanence pour les collègues
+- Privilégier des outils de communication asynchrone en mode forum (Twist) plutôt que des messageries instantanées, pour préserver le focus de l'équipe
+- Ne jamais répondre au premier appel téléphonique non planifié, la majorité étant de la prospection non sollicitée sans réelle urgence
+- Utiliser le mode avion ou ne pas déranger de manière systématique pour couper radicalement toutes les interruptions, y compris cross-device (FaceTime sur Mac)
+- Mesurer objectivement le temps d'écran par application pour identifier les principaux consommateurs de temps, avant d'agir dessus spécifiquement
+- Privilégier les plateformes laissant un minimum de choix actif de contenu (YouTube) plutôt que celles imposant totalement le flux (TikTok)
+- Appliquer autant que possible ses bonnes pratiques de consommation de contenu à la maison, en acceptant que ce soit plus difficile en sortie sociale
+- Privilégier la lecture, un choix de contenu actif et non algorithmique, plutôt que des fils dérivant progressivement vers des sujets tendancieux
+- Lire au réveil plutôt que de consulter immédiatement son smartphone, pour réactiver un muscle cognitif de concentration peu sollicité par le défilement
+- Pratiquer lecture ou sport en début de journée pour préparer activement le cerveau à entrer plus facilement dans l'état de flow ensuite
+- Prendre une douche froide pour bénéficier d'un pic de dopamine comparable à un stimulant puissant, sans le craving addictif associé
+- Noter ou verbaliser systématiquement les triggers ayant fait perdre le focus au cours de la journée, pour une prise de conscience durable
+- Instaurer une coupure d'écran stricte le soir (après 22h) et éviter le smartphone dans les deux heures suivant le réveil
+- Cultiver volontairement des moments d'ennui plutôt que de chercher à combler chaque instant par une stimulation constante
+- Profiter de moments quotidiens comme la douche pour cultiver l'ennui volontaire, sans podcast ni musique en fond
+- Consacrer environ 20 minutes dans un moment calme à respirer et laisser vagabonder ses pensées, une pratique proche de la méditation
+- S'entraîner délibérément à ne rien faire et laisser vagabonder ses pensées, une capacité rare devenue un avantage compétitif
+- Réfléchir explicitement aux raisons profondes motivant un projet (le pourquoi) pour cultiver activement la motivation avant de s'y attaquer
+- Visualiser mentalement l'action concrète à accomplir plutôt que la récompense finale, cette dernière générant une dopamine qui nuit à l'engagement réel
+- Se concentrer sur la toute première mini-tâche facilement cochable plutôt que sur l'ampleur du projet global, pour amorcer la progression vers le flow
+- Aborder la méditation en accueillant simplement les pensées qui viennent, sans se forcer à atteindre un vide mental parfait
+- Combiner l'entraînement volontaire sur des tâches exigeantes (phase de lutte) avec les bloqueurs de distraction, pour un effet optimal sur le flow
+- Démarrer systématiquement une session de flow par une tâche plaisante et bien définie, facilement cochable, pour éviter l'abandon précoce
+- Découper systématiquement un projet imposant en de nombreuses petites tâches cochables, pour éviter l'effet décourageant de la montagne insurmontable
+- Espacer les sessions de flow intense par de véritables temps de récupération sans écran, à l'image d'un sportif de haut niveau évitant le surentraînement
+- Attendre au minimum 1h30 après le réveil avant de consommer du café, pour éviter d'endommager l'adénosine favorisant le sommeil
+- Ne jamais dépasser 200 à 300mg de caféine par jour et éviter toute consommation après 14 heures, pour préserver la qualité du sommeil
+- Éviter la consommation d'alcool en semaine, pour préserver la qualité du sommeil et de la récupération nécessaire au focus
+- Cultiver volontairement l'attente sans téléphone (avec un livre par exemple), pour réduire la surexposition chronique aux stimuli
+- Retarder volontairement la gratification (attendre avant un achat impulsif) pour rééquilibrer la dopamine et réduire la dépendance aux tentations faciles
+- Augmenter progressivement sa résistance à la gratification immédiate en commençant petit, puis utiliser la stratégie de Seinfeld (chaîne de jours) pour les gros objectifs
+- Transformer une contrainte difficile en rituel motivant (ex : documenter sa progression par photo), particulièrement renforcé en pratiquant à plusieurs
+- Suivre et marquer sa progression concrète (résultats de contenu) pour générer un pic de motivation renforçant naturellement la discipline
+
+## Cas d'usage reels
+- [[]]

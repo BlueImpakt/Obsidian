@@ -1,0 +1,181 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Optimiser"
+source_transcript: "18. Comment optimiser son environnement.txt"
+---
+
+# 18. Comment optimiser son environnement ?
+
+## Resume
+- Introduction du sujet de l'environnement physique, expliquant à quel point il nous guide inconsciemment dans de nombreux comportements quotidiens.
+- Explication de l'impact de l'environnement sur la communication, illustrée par l'exemple des open spaces dont l'agencement peut fluidifier ou freiner les échanges.
+- Présentation de l'influence du type d'environnement sur les capacités cognitives : créativité, esprit analytique ou productivité varient selon le contexte spatial.
+- Exemple de personnes travaillant dans des tours de bureaux (La Défense) qu'elles détestent, illustrant l'impact émotionnel négatif d'un environnement inadapté.
+- Contre-exemple positif de bureaux agréables en petit comité avec bonne atmosphère, illustrant l'impact émotionnel positif possible d'un environnement adapté.
+- Premier hack important : toujours avoir une source de lumière, le cerveau ayant besoin de lumière naturelle, avec recommandation de se placer près d'une fenêtre.
+- Explication du lien entre exposition lumineuse et concentration/alerte, avec recommandation de certains chercheurs d'éviter les lunettes de soleil qui faussent la perception.
+- Précision que les yeux servent d'indicateur au cerveau du niveau d'exposition solaire, justifiant l'importance de ne pas trop se protéger de la lumière naturelle légère.
+- Astuce hivernale : utiliser des lampes projetant de la lumière blanche sur les paupières pour aider à sortir de la phase de sommeil au réveil.
+- Conseil pratique de positionnement du bureau (de trois quarts ou face à la fenêtre) selon la sensibilité à l'éblouissement, pour optimiser l'exposition lumineuse.
+- Confirmation des bénéfices multiples de la lumière naturelle : amélioration de la concentration, réduction du stress général et amélioration de l'état émotionnel.
+- Aveu personnel contradictoire assumé : travailler soi-même dans un environnement sombre et fermé, une contrainte propre aux créateurs de contenu vidéo.
+- Explication de la contrainte technique des créateurs vidéo : la lumière naturelle changeante nuit à la cohérence de l'éclairage au montage, d'où l'usage de rideaux et lumière artificielle.
+- Introduction de la posture physique à adopter, avec mise en garde explicite contre une posture penchée qui endommage la nuque.
+- Explication neurologique que se tenir droit rend le cerveau plus actif et prêt à l'action, contrairement à une posture penchée associée au repos passif.
+- Conseil complémentaire de posture : ne pas replier les jambes sous soi en position assise, les maintenir droites pour préserver l'alignement corporel global.
+- Précision que maintenir les jambes à angle droit facilite naturellement le maintien d'un dos droit, un principe issu de recherches sur la posture assise.
+- Mise en garde contre les jambes croisées qui provoquent naturellement un affaissement vers l'avant, avec recommandation de position type chaise.
+- Recommandation matérielle d'une chaise ergonomique (marque HBADA, environ 150€) comme option abordable en attendant l'achat futur d'une Herman Miller.
+- Recommandation forte de la chaise Herman Miller Aeron, jugée la meilleure du marché, permettant de rester assis toute la journée sans mal de dos.
+- Conseil pratique de réglage du soutien lombaire au plus haut possible pour maintenir le dos droit avec les jambes vers l'avant.
+- Recommandation d'un écran unique plutôt qu'une configuration à quatre écrans, pour préserver le focus, avec un écran réglable en hauteur.
+- Précision du réglage idéal d'écran légèrement au-dessus du champ de vision, avec mise en garde contre la posture penchée vers le bas fréquente sur ordinateur portable.
+- Résumé des avantages de la bonne posture : limiter le temps nécessaire pour atteindre la concentration et rester en situation d'effort actif.
+- Introduction de l'importance du mouvement régulier, comme faire un tour d'open space entre les tâches pour se réactiver physiquement.
+- Recommandation de prendre ses appels téléphoniques en marchant, le mouvement occupant l'esprit moteur pendant que l'attention reste concentrée sur la conversation.
+- Présentation des tapis de marche sous le bureau (treadmill desk) permettant de marcher légèrement pendant le travail, améliorant fonctions cognitives et attention.
+- Nuance importante : le mouvement en marchant est déconseillé pour les tâches créatives, la motricité occupée limitant la disponibilité mentale nécessaire à la créativité.
+- Description du fonctionnement du tapis de marche glissé sous le bureau, permettant de travailler en marchant pour un effort physique minimal continu.
+- Recommandation ciblée : utiliser le tapis de marche notamment pour les réunions à la maison, mais rester assis pour les tâches créatives.
+- Présentation d'une recherche scientifique prouvant que les tâches analytiques (ex : Excel) sont plus performantes dans un espace confiné et restreint.
+- Explication inverse pour la créativité : elle nécessite un maximum de stimuli variés pour permettre au cerveau de vagabonder et créer de nouvelles connexions.
+- Suggestions de lieux stimulant la créativité : la nature, une grande bibliothèque, un coworking, ou une gare pour observer du mouvement humain.
+- Précision personnelle : l'auteur privilégie généralement la concentration à la recherche de créativité, cette dernière n'étant pas son point faible.
+- Question du silence versus bruit selon les personnes, avec recommandation générale du silence sauf pour les tâches créatives qui bénéficient d'un peu de bruit.
+- Recommandation de musique sans paroles (peu importe le style) pour atteindre le flow créatif, en évitant les paroles qui distraient l'attention verbale.
+- Dernière technique : changer de lieu régulièrement pour tromper la fatigue cognitive, celle-ci augmentant plus on reste statique au même endroit.
+- Exemple personnel d'alternance entre bureau et canapé selon la lassitude, avec recommandation de multiplier également les positions corporelles.
+- Confirmation que bouger fréquemment de position réinitialise le focus et trompe la fatigue, avec bénéfice additionnel pour la santé du dos.
+- Recommandation forte d'investissement dans un bureau assis-debout (standing desk), avec mise en garde que la plupart des gens ne l'utilisent pas réellement.
+- Conseil de ne pas rester assis pendant la digestion, une pratique scientifiquement prouvée bénéfique, combinée aux bienfaits pour concentration, dos et nuque.
+- Introduction d'un accessoire complémentaire : la planche d'équilibre (balance board), démonstration en cours de son fonctionnement.
+- Présentation de la planche d'équilibre comme complément parfait au standing desk, résolvant l'ennui et l'inconfort de rester debout statiquement.
+- Explication du bénéfice de la planche : recentrer le focus corporel sur l'équilibre plutôt que sur la fatigue du dos, permettant de tenir plus longtemps debout.
+- Témoignage personnel fort : la planche d'équilibre a été un véritable game changer pour la productivité, permettant de tenir debout bien plus longtemps.
+- Recommandation de combiner planche d'équilibre et position assise (pour les tâches créatives), sans rester debout toute la journée, avec fourchette de prix du standing desk.
+- Confirmation que rester assis pendant la digestion est particulièrement néfaste, avec recommandation d'utiliser la planche d'équilibre ou le tapis de marche.
+- Bénéfices de la position debout : amélioration du dos et de la tension, meilleurs résultats sur les tâches, et évitement du coup de barre post-digestion (afternoon slump).
+- Début de la présentation du setup matériel complet de bureau, en commençant par l'écran monté sur bras flexible et le standing desk.
+- Présentation du standing desk utilisé, un des modèles disponibles sur le marché pour le bureau assis-debout.
+- Confirmation qu'il existe désormais des standing desks moins chers sur le marché, présenté comme un très bon investissement à condition de l'utiliser réellement.
+- Présentation de la chaise actuelle, une option abordable de bonne qualité pour ceux ne voulant pas investir dans une chaise haut de gamme.
+- Comparaison avec un modèle inspiré de la Herman Miller Aeron en version économique, avec intention d'acheter la véritable Aeron prochainement.
+- Présentation de l'écran Huawei utilisé, un choix personnel apprécié pour ce setup de bureau.
+- Recommandation forte de l'écran Huawei MateView 28, le meilleur essayé jusqu'ici après des expériences décevantes avec d'autres modèles.
+- Confirmation de la recommandation du Huawei MateView 28, jugé un peu cher mais qui en vaut la peine, avec le Samsung M8 comme alternative.
+- Mention de l'Apple Studio Display comme option haut de gamme pour un budget plus élevé, jugée pas nécessairement supérieure à l'alternative choisie.
+- Présentation du micro Logitech Blue Sona, un équipement spécifique aux créateurs de contenu, non indispensable pour tous.
+- Retour d'expérience positif sur le changement de micro, jugé dix fois meilleur en praticité, connecté à une carte son Behringer abordable.
+- Précision du modèle de carte son Behringer UM2 et présentation d'un casque Behringer très abordable (26€) jugé incroyable pour son prix.
+- Explication du choix d'un casque simple pour le monitoring, avec alternative plus premium recommandée pour le montage vidéo (Beyerdynamic DT770).
+- Présentation du bras de micro Elgato Low Profile, complétant l'inventaire du setup matériel de bureau.
+- Recommandation finale du bras de micro discret posé latéralement sur le bureau, moins gênant visuellement, concluant le tour du setup productivité.
+
+## Concepts cles
+- introduction de l'environnement physique comme guide inconscient du comportement
+- explication de l'impact de l'agencement des open spaces sur la communication
+- présentation de l'influence du type d'environnement sur les capacités cognitives
+- exemple négatif de bureaux en tour détestés (impact émotionnel)
+- contre-exemple positif de bureaux agréables en petit comité
+- premier hack : avoir une source de lumière naturelle (se placer près d'une fenêtre)
+- explication du lien lumière-concentration et mise en garde sur les lunettes de soleil
+- précision : les yeux indiquent au cerveau le niveau d'exposition solaire
+- astuce hivernale de lampe de réveil à lumière blanche
+- conseil de positionnement du bureau selon la sensibilité à l'éblouissement
+- confirmation des bénéfices multiples de la lumière naturelle (concentration, stress, émotions)
+- aveu personnel de contradiction : environnement sombre fermé (contrainte des créateurs vidéo)
+- explication de la contrainte technique vidéo (rideaux et lumière artificielle contrôlée)
+- mise en garde contre une posture penchée endommageant la nuque
+- explication neurologique : posture droite associée à l'activation cérébrale
+- conseil de posture : maintenir les jambes droites plutôt que repliées
+- précision : l'angle droit des jambes facilite le maintien du dos droit
+- mise en garde contre les jambes croisées provoquant l'affaissement
+- recommandation d'une chaise ergonomique HBADA à ~150€ comme option abordable
+- recommandation forte de la chaise Herman Miller Aeron (meilleure du marché)
+- conseil pratique de réglage du soutien lombaire au maximum
+- recommandation d'un écran unique réglable en hauteur plutôt que multi-écrans
+- précision du réglage d'écran légèrement au-dessus du champ de vision
+- résumé des avantages de la bonne posture (concentration rapide, effort actif)
+- introduction de l'importance du mouvement régulier (tour d'open space)
+- recommandation de prendre ses appels en marchant (mouvement occupant le moteur)
+- présentation des tapis de marche sous le bureau améliorant les fonctions cognitives
+- nuance : le mouvement est déconseillé pour les tâches créatives
+- description du fonctionnement du tapis de marche sous bureau
+- recommandation ciblée : tapis de marche pour réunions, assis pour créativité
+- présentation d'une recherche : tâches analytiques plus performantes en espace confiné
+- explication inverse : la créativité nécessite un maximum de stimuli variés
+- suggestions de lieux stimulant la créativité (nature, bibliothèque, gare)
+- précision personnelle de préférence pour la concentration plutôt que la créativité
+- nuance silence vs bruit selon le type de tâche (créative bénéficie de bruit)
+- recommandation de musique sans paroles pour le flow créatif
+- dernière technique : changer de lieu régulièrement pour tromper la fatigue cognitive
+- exemple personnel d'alternance de lieux et recommandation de varier les positions
+- confirmation que bouger fréquemment réinitialise le focus et préserve le dos
+- recommandation d'un standing desk avec mise en garde sur la sous-utilisation fréquente
+- conseil de ne pas rester assis pendant la digestion (prouvé scientifiquement)
+- introduction de la planche d'équilibre (balance board) comme accessoire complémentaire
+- présentation de la planche d'équilibre comme complément résolvant l'inconfort statique
+- explication du bénéfice de la planche d'équilibre : recentrer le focus corporel
+- témoignage personnel : la planche d'équilibre comme game changer de productivité
+- recommandation de combiner planche d'équilibre et position assise avec fourchette de prix
+- confirmation : rester assis pendant la digestion est particulièrement néfaste
+- bénéfices de la position debout évitant le coup de barre post-digestion (afternoon slump)
+- début de la présentation du setup matériel complet (écran flexible, standing desk)
+- présentation du modèle de standing desk utilisé
+- confirmation de standing desks moins chers disponibles, bon investissement si utilisé
+- présentation d'une chaise abordable de bonne qualité
+- comparaison avec une version économique inspirée de la Herman Miller Aeron
+- présentation de l'écran Huawei utilisé dans le setup
+- recommandation forte de l'écran Huawei MateView 28
+- confirmation de la recommandation du Huawei MateView 28 (alternative Samsung M8)
+- mention de l'Apple Studio Display comme option haut de gamme non indispensable
+- présentation du micro Logitech Blue Sona pour créateurs de contenu
+- retour d'expérience positif sur le changement de micro et carte son Behringer
+- précision de la carte son Behringer UM2 et casque abordable à 26€
+- explication du choix de casque et alternative premium Beyerdynamic DT770
+- présentation du bras de micro Elgato Low Profile
+- recommandation finale du bras de micro discret concluant le tour du setup
+
+## Outils mentionnes
+- Excel
+- Huawei
+- Samsung
+- Apple
+- Logitech
+- Behringer
+- Beyerdynamic
+- Elgato
+
+## Tips techniques
+- Se placer systématiquement à proximité d'une source de lumière naturelle (fenêtre) pour bénéficier de son effet positif sur la concentration
+- Utiliser une lampe de réveil projetant de la lumière blanche sur les paupières en hiver, pour faciliter la sortie de la phase de sommeil
+- Positionner son bureau de trois quarts par rapport à la fenêtre (ou face à elle si peu sensible à l'éblouissement) pour optimiser l'exposition lumineuse
+- Pour un tournage vidéo régulier, préférer une lumière artificielle contrôlée et constante à la lumière naturelle changeante, pour garantir la cohérence au montage
+- Éviter absolument une posture penchée devant l'écran, néfaste pour la nuque et pour l'activation cérébrale
+- Maintenir une posture droite plutôt que penchée pour signaler au cerveau un état d'activation et de préparation à l'action
+- Maintenir les jambes en angle droit sans les replier sous soi en position assise, la posture corporelle formant une chaîne interconnectée
+- Éviter de croiser les jambes en position assise, cette posture provoquant naturellement un affaissement progressif du haut du corps vers l'avant
+- Régler le soutien lombaire de sa chaise au plus haut réglage disponible pour maintenir naturellement un dos droit
+- Privilégier un écran unique réglable en hauteur plutôt qu'une configuration multi-écrans, pour préserver le focus et l'ergonomie posturale
+- Régler la hauteur de l'écran légèrement au-dessus du champ de vision naturel, pour éviter la posture penchée vers le bas typique du travail sur ordinateur portable
+- Faire un tour physique régulier de son espace de travail pour se réactiver, plutôt que de rester statique toute la journée
+- Prendre systématiquement ses appels téléphoniques en marchant, le mouvement physique occupant l'esprit moteur sans nuire à la concentration verbale
+- Utiliser un tapis de marche sous le bureau pendant les appels ou tâches simples, pour améliorer les fonctions cognitives et l'attention par l'activité motrice légère
+- Éviter de marcher pendant les tâches nécessitant de la créativité, la motricité occupée limitant la disponibilité mentale nécessaire à l'idéation
+- Réserver le tapis de marche spécifiquement aux réunions et appels, en restant assis pour toute tâche nécessitant de la créativité
+- Effectuer les tâches analytiques (tableurs, calculs) dans un espace physique confiné et restreint, scientifiquement plus propice à ce type de concentration
+- Rechercher un environnement riche en stimuli variés (coworking, lieux publics) pour stimuler la créativité, à l'opposé des tâches analytiques
+- Écouter de la musique instrumentale (sans paroles) pour favoriser le flow créatif, les paroles interférant avec le traitement verbal du cerveau
+- Changer physiquement de lieu de travail plusieurs fois dans la journée pour tromper la fatigue cognitive liée à la monotonie spatiale
+- Alterner régulièrement entre plusieurs positions corporelles (assis, debout) plutôt qu'une seule position fixe toute la journée
+- Investir dans un bureau assis-debout mais s'engager activement à l'utiliser réellement, la plupart des acheteurs ne l'exploitant jamais concrètement
+- Rester debout plutôt qu'assis pendant la période de digestion après un repas, une pratique scientifiquement démontrée comme bénéfique
+- Combiner planche d'équilibre et standing desk pour éviter l'inconfort et l'ennui de la position debout statique prolongée
+- Combiner position debout (avec planche d'équilibre) et position assise (pour la créativité) plutôt que de choisir une seule position exclusive toute la journée
+- Éviter absolument de rester assis pendant la digestion, en utilisant plutôt la planche d'équilibre ou le tapis de marche à ce moment précis
+- Adopter la position debout après un repas pour éviter le coup de barre post-digestion (afternoon slump) et maintenir un meilleur niveau de performance
+- Choisir un support de micro discret et bas plutôt qu'un bras encombrant, pour ne pas gêner visuellement le champ de vision au bureau
+
+## Cas d'usage reels
+- [[]]

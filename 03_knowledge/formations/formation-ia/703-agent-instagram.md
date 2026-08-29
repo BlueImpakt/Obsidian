@@ -1,0 +1,304 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Agents de Contenu"
+source_transcript: "7.03 Agent Instagram.txt"
+---
+
+# 7.03 Agent Instagram
+
+## Resume
+- Introduction du nouvel agent de création de shorts viraux, capable d'identifier des thématiques et mots-clés pertinents à partir de la niche d'un client potentiel.
+- Présentation des sources possibles pour la phase de recherche : Grok connecté à X, TikTok via Happify, ou base de données de contenus personnels ou concurrents ayant bien fonctionné.
+- Encouragement à ne pas se restreindre à la niche IA pour cet agent, l'approche étant applicable à n'importe quelle passion ou domaine (foot, etc.) pour trouver des idées de shorts.
+- Confirmation de la large applicabilité du système (marketing, vente B2B, closing), l'objectif étant de densifier une idée simple en script de short déjà prêt.
+- Réflexion sur la commercialisation de l'agent à des entreprises, en se mettant à la place du client ayant du mal à obtenir des scripts vraiment adaptés à sa marque.
+- Description du processus de tri rapide des scripts générés (pré-sélection puis élimination), permettant à l'utilisateur de tourner cinq scripts en une heure seulement.
+- Nuance sur la qualité de l'audience TikTok (jugée globalement faible malgré quelques utilisateurs avertis) comparée à Instagram, jugée en devenir plus qualitative.
+- Explication du choix stratégique entre service customisé (plus cher, plus chronophage) et service productisé simple, selon la stratégie de vente adoptée.
+- Démonstration de l'outil ClickUp comme gestionnaire de projet, avec présentation de l'onglet Shorts contenant les idées ajoutées manuellement ou par d'autres agents.
+- Précision que l'outil de gestion (ClickUp, Notion, Asana, Trello) est interchangeable selon les préférences, l'important étant la structuration en idées et étapes de process.
+- Démonstration de renvoi de contexte à partir d'un élément déjà envoyé, avec exemple de sortie généré sur Genie 3 de DeepMind (Google), outil de création d'environnements générés.
+- Présentation du hook principal généré sur Genie 3, mettant en avant une percée non soulignée par DeepMind, avec indications visuelles de positionnement caméra.
+- Explication du déclencheur du workflow : l'ajout d'un commentaire sur ClickUp lance automatiquement tout l'agent de création de shorts.
+- Configuration du filtrage sur le contenu du commentaire (mot-clé IA/AI) pour déclencher sélectivement l'agent, avec vue d'ensemble avant reconstruction détaillée.
+- Observation du déclenchement effectif de l'agent à l'étape de recherche, avec suppression prévue d'un nœud Merge redondant lors de la reconstruction complète.
+- Explication de l'usage du nœud Get a Task pour récupérer la description complète de la tâche ClickUp, un commentaire seul n'envoyant pas tout le contexte nécessaire.
+- Présentation de l'architecture multi-agents : un agent manager de création de Reel, un agent de recherche, un agent de hook, et d'autres sous-agents spécialisés.
+- Explication du choix du modèle Gemini plutôt qu'Anthropic pour l'agent de recherche, plus performant pour traiter un grand volume de vidéos et reels lors des requêtes.
+- Présentation du résultat déjà obtenu (audience cible identifiée : entrepreneurs) avant de reconstruire l'agent Zer0 de zéro pour la démonstration pédagogique complète.
+- Analyse d'un hook jugé particulièrement performant utilisant un axe contrarien (contredire une croyance commune sur l'apprentissage du code en 2025) et une validation via Google.
+- Comparaison de plusieurs hooks générés, avec préférence marquée pour ceux exploitant une opportunité claire, et rejet de ceux jugés trop complexes ou confus pour l'audience.
+- Discussion sur l'ajout possible d'un filtre qualité (audience, ton clickbait) pour ne retenir que les meilleurs hooks, tout en laissant parfois le choix final au lecteur humain.
+- Démonstration impressionnante de Google Opal (gratuit) créant instantanément une application transformant une vidéo YouTube en quiz, à partir d'une simple instruction textuelle.
+- Précision que Google Opal est gratuit en bêta mais limité géographiquement aux US, nécessitant un VPN, avec construction complète en seulement 30 secondes.
+- Conclusion de l'interlude : le script présenté reste excellent, une compétence que 95% des gens ne maîtrisent pas, avant reprise de la construction de l'agent.
+- Annonce de la reconstruction complète étape par étape du multi-agent, avec engagement de transparence totale pour éviter toute zone grise dans l'explication.
+- Présentation générale de ClickUp : gestion de vues multiples, tâches variées (y compris prospects), avec un email intégré à chaque tâche pour la communication.
+- Configuration du déclencheur task comment posted, avec filtrage possible par folder ID, list ID, space ID ou task ID ; choix du filtrage par List ID (liste des shorts).
+- Explication du choix de fixer certaines valeurs stables (List ID), avec astuce de créer des variables ou d'ancrer en dur les valeurs récurrentes plutôt que de les retaper.
+- Démonstration pratique de recréation d'un test sur Google Opal pour illustrer concrètement le fonctionnement du déclencheur par commentaire.
+- Test concret du déclencheur : ajout d'un commentaire ($AI) déclenchant immédiatement le workflow N8n, confirmé par l'observation en direct de l'activation.
+- Mise en garde sur la nécessité d'un garde-fou pour distinguer les commentaires destinés à l'automatisation de ceux destinés à une communication humaine normale (ex : avec un monteur).
+- Configuration du filtre startWith $AI comme condition de déclenchement, avec comparaison entre l'option Start With et l'option Contain selon le besoin de flexibilité.
+- Test démonstratif montrant qu'un simple mot-clé $AI seul ne suffit pas pour aller chercher le contenu complet de la tâche associée.
+- Explication que le commentaire envoyé contient uniquement le task ID associé, mais pas le contenu complet de la tâche, nécessitant une requête complémentaire.
+- Explication du principe de cloisonnement des données pour optimiser la performance : ne récupérer que l'ID nécessaire plutôt que de charger toutes les données à chaque appel, évitant des appels API lourds.
+- Présentation de ClickUp comme interface d'automatisation alternative à Slack ou Telegram, avec l'avantage de conserver le contexte complet de la tâche environnante.
+- Démonstration de filtrage par formule dans une base de données vidéo accumulée avec transcripts, permettant au modèle de rechercher directement dans ce corpus.
+- Suggestion d'améliorer davantage la qualité via un RAG plutôt qu'un simple filtrage, avec transition annoncée vers les éléments encore inédits de la démonstration.
+- Début de la construction de la structure initiale : l'agent principal défini sans prompt dynamique (define below, format JSON express), en l'absence de chat connecté.
+- Explication de l'intérêt de charger la mémoire avant de solliciter les agents : garantir que le contexte complet précédent soit disponible, économisant du retraitement.
+- Recommandation de limiter le nombre d'outils par agent pour réduire le risque d'erreurs et de défaillance dans une organisation multi-agents complexe.
+- Remarque sur la facilité et rapidité de mise en place technique, avec mise en garde sur les coûts financiers à surveiller avant qu'ils ne s'accumulent en usage réel.
+- Chiffre concret rassurant sur le coût réel des tests effectués (40 centimes), avant introduction du sous-agent de recherche partageant la même mémoire.
+- Configuration des deux outils du sous-agent de recherche, dont une requête HTTP vers Grok exploitée pour ses capacités de recherche en direct plutôt qu'en tant que LLM classique.
+- Configuration du sous-agent de hook (hook-agent) avec le modèle Anthropic et partage de la même mémoire que les autres sous-agents de l'architecture.
+- Astuce de collecte manuelle de hooks performants via la recherche par hashtag sur Instagram, stockés dans un Excel puis récupérés via un Google Sheets Tool.
+- Présentation du dernier agent de la structure : l'agent de writing (agent-script), utilisant le même modèle Anthropic, dont la mission est d'écrire le script final.
+- Description des deux options de sortie prévues : une option light publiant directement le script via update a task, et une autre option plus poussée.
+- Configuration du commentaire de texte en récupérant l'output de l'étape précédente, laissant l'IA générer directement le commentaire à poster.
+- Renommage des étapes en Steps Update (mise à jour des étapes), créant un log de progression permettant de suivre en temps réel ce que fait l'agent.
+- Explication du champ Query (requête additionnelle correspondant au commentaire) et démonstration de reproduction facile en relançant le trigger.
+- Configuration de la date du jour via l'expression $NOW sans formatage supplémentaire nécessaire, et récupération du titre de la tâche via l'étape Get a Task.
+- Récupération réussie des champs task title et custom fields via Get a Task Creator, avec identification du champ name pour le titre et text content pour le contenu.
+- Placeholder temporaire mis en place pour le commentaire associé en attendant la définition complète des variables, avant de passer à la configuration du prompt principal.
+- Configuration du rôle très précis de l'agent principal : meilleur orchestrateur de création de contenu viral, coordonnant des sous-agents spécialisés pour reels et vidéos courtes.
+- Instruction en majuscule pour souligner l'importance d'envoyer systématiquement le contenu produit après chaque phase vers l'outil de mise à jour des étapes.
+- Introduction du concept de SOP (Standard Operating Procedures) : une liste d'étapes ordonnées guidant l'agent pour obtenir le meilleur résultat possible.
+- Détail de l'étape 1 du SOP (phase de recherche) : collecter des renseignements complets sur le sujet et les tendances, et stocker les données en mémoire pour les itérations futures.
+- Détail de l'étape 3 du SOP (phase de construction d'accroche) : déterminer les meilleurs hooks une fois le script prêt, à partir du sujet et des insights de recherche.
+- Précision de la méthode de génération d'accroche : utilisation de six formats éprouvés et d'une formule en trois étapes, puis assemblage final de tous les éléments.
+- Instruction de gestion des itérations : si des retours sont fournis sur une génération précédente, appliquer les corrections uniquement à la dernière sortie produite.
+- Définition précise du format du package de livraison final : accroche sélectionnée avec type, suivie de quatre autres accroches alternatives proposées.
+- Poursuite de la définition du format : structure du cœur du script avec sauts de ligne, partie CTA distincte, et éléments visuels associés numérotés.
+- Explication du transfert des mots-clés depuis l'agent principal vers l'agent de recherche, un agent capable d'appeler d'autres outils via le prompt défini.
+- Conseil important sur la formulation du prompt de recherche : laisser l'IA formuler mais bien la guider, sans créer plus de contexte que celui initialement fourni.
+- Exemple concret d'un piège d'interprétation littérale : le mot-clé DreamFlow seul pourrait faire dériver l'agent vers une recherche non pertinente sur le rêve.
+- Itération corrective ajoutée pour forcer l'agent à consulter plusieurs sources (pas seulement X) via le mot obligatoire, l'agent ayant tendance à être paresseux sans cette contrainte.
+- Réflexion sur la nécessité de constamment ajuster la construction des agents, un petit changement de paramètre (ex : limite de mots-clés) pouvant tout faire évoluer.
+- Mention de la possibilité de connecter une base de données de reels et vidéos (Google Sheet) pour enrichir la recherche, sans que cela ne rende l'agent trop long à exécuter.
+- Configuration obligatoire de l'usage de TikTok avec des mots-clés et topics comme paramètres, en se concentrant sur l'innovation de format et les tendances émergentes.
+- Nettoyage des instructions inutiles du prompt et précision des outils restants nécessaires, en se concentrant sur les rapports de recherche du sujet.
+- Définition du format de sortie attendu du sous-workflow associé : recherche du sujet principal, sous-sujets tendance, meilleurs posts X, avec suppression des résultats de base vidéo non utilisés.
+- Conclusion de la configuration de l'agent de recherche, dont les données remontent vers l'agent manager, avant de passer à la suite pour ne pas surcharger l'explication.
+- Démonstration étape par étape de la configuration d'une requête HTTP vers X avec une URL cible et des propriétés envoyées au format JSON.
+- Recommandation de définir un credential type spécifique (ex : XAI) pour l'authentification, réutilisant le même compte connecté pour plusieurs usages.
+- Présentation du corps de requête (body) de l'appel SearchX, avec possibilité de copier-coller ou réécrire le JSON directement dans la configuration.
+- Explication de la conservation des deux prompts système et user, certains LLM nécessitant les deux, avec rappel de la différence conceptuelle entre les deux.
+- Configuration du prompt de recherche sur X et sites web basé sur le mot-clé (keyword) transmis par l'agent de recherche, avec question ciblée sur les tendances.
+- Démonstration de l'usage de l'expression fromAI pour injecter dynamiquement les mots-clés définis par le sous-agent dans la requête de recherche.
+- Démonstration d'utilisation de Claude pour générer une requête curl filtrant les posts X par seuil minimal de retweets et de likes, garantissant la qualité des résultats.
+- Configuration des seuils View Count et Favorite Count élevés (10 000 et 500 000) pour garantir de ne retenir que les contenus les plus performants (bangers).
+- Explication des paramètres de recherche : limite maximale de 10 résultats, avec définition des sources par type (Web, X avec likes et vues).
+- Retrait d'un mot-clé épinglé (utilisé pour éviter de payer une recherche inutilement) avant utilisation d'un scraper HappyFile pour cibler TikTok.
+- Lancement du scraper limité à 10 résultats pour récupérer les posts TikTok les plus performants correspondant au mot-clé défini.
+- Configuration d'un text classifier via Gemini comparant le titre et la caption de chaque vidéo TikTok au topic recherché, pour déterminer sa pertinence.
+- Débranchement temporaire du workflow pour tester isolément via un manual trigger, avec récupération de données brutes issues de Google Opal pour la démonstration.
+- Épinglage des données reçues pour pouvoir continuer à travailler sur le text classifier pendant que la génération se poursuit en parallèle, sans redéclencher depuis un autre workflow.
+- Démonstration de récupération des sous-titres (transcript) d'une vidéo TikTok via l'attribut Subtitle Information et exécution de l'étape de téléchargement.
+- Explication du choix de séparer les champs plutôt que d'agréger directement, permettant une petite modification ciblée sur le champ JSON data du transcript récupéré.
+- Finalisation de l'agent de recherche effectif, renommé Search TikTok pour plus de clarté dans l'architecture globale du workflow.
+- Proposition de tester isolément le fonctionnement de l'agent de recherche seul avant de poursuivre la construction des étapes suivantes de l'architecture.
+- Transition vers la configuration de l'agent de hook (agent de rédaction), en reprenant le brief initial préalablement défini pour ce sous-agent.
+- Configuration du message système de l'agent d'accroche virale, laissant l'IA gérer le prompt utilisateur mais définissant précisément le rôle dans le message système.
+- Précision que l'identification d'accroches performantes reste optionnelle (une base de données non indispensable), avant analyse de corrélation entre performance et éléments identifiés.
+- Présentation de différents archétypes de hook : expérimentateur (approche étudiant), enseignant (approche expert), magicien (élément visuel ou audio impressionnant).
+- Configuration du rôle de l'agent rédacteur de script viral, sous-agent créant des scripts complets basés sur les accroches et données de recherche, utilisant des frameworks viraux prouvés.
+- Configuration de la partie delivery : créer plusieurs variations de script avec variation de rythme, ajout d'invitations à l'engagement, de CTA et de marqueurs de preuve sociale.
+- Détail de la structure narrative du script : légitimité de l'auteur, cartes de curiosité créant une asymétrie d'information, puis livraison de la solution après exposition du problème.
+- Présentation de BrainMax de ClickUp, un outil d'IA combinant ChatGPT et l'accès à tous les outils connectés, illustré par un exemple de classement produit de la semaine.
+- Débogage d'une erreur de champ mal configuré : c'était la description de la tâche qui était nécessaire, et non le nom, une correction apportée en direct.
+- Renommage du modèle de chat Anthropic pour clarté et relance du test via un nouveau déclenchement par commentaire $AI pour observer le comportement.
+- Identification d'un problème sur l'agent manager, probablement lié à un souci de correspondance de nom personnalisé d'outil (Tools Custom Name).
+- Débogage supposant que le problème vient des noms d'outils ne respectant pas un pattern attendu (ShouldMatch Pattern), avec renommage en évitant les accents.
+- Transparence pédagogique : montrer aussi les tests qui échouent, pas seulement ceux qui fonctionnent, avec un nouveau problème identifié sur l'agent constructeur d'accroche.
+- Analyse des logs révélant qu'Anthropic se lance quatre fois à cause d'une duplication accidentelle, résolue par suppression des doublons.
+- Renommage des outils ambigus (Tools 2) en noms explicites (Hook Builder, Agent Script) pour résoudre le problème de correspondance, avec test itératif systématique.
+- Pause dans la démonstration en direct pour laisser le temps à la génération complète de se dérouler, avec promesse de montrer les erreurs éventuelles survenues.
+- Constat d'un échec initial (mauvais sujet traité, pas de livrable) corrigé grâce à la mémoire persistante de l'agent permettant de reprendre le contexte sans tout recommencer.
+- Appréciation positive du script généré (exemple ClickUp remplaçant 12 applications), avec constat qu'un outil spécifique (BrainMax) n'a pas encore été utilisé correctement.
+- Reformulation explicite de la demande pour préciser qu'il s'agit de ClickUp BrainMax et non de ClickUp seul, illustrant que l'IA n'est pas toujours bonne du premier coup.
+- Recherche ciblée et précise sur ClickUp BrainMax couvrant fonctionnalités, avantages, cas d'usage, témoignages, problèmes résolus et audience cible, avec recherche complémentaire sur TikTok.
+- Transmission des résultats précis de recherche vers l'agent de script, avec observation détaillée du prompt envoyé incluant le concept d'IA contextuelle.
+- Réflexion sur la valeur perçue élevée de ce système pour des dirigeants n'ayant pas d'idée de contenu mais disposant d'un sujet de prédilection à exploiter.
+- Résultat concret du script généré mentionnant l'utilisation de 7 outils IA différents avant de découvrir ClickUp BrainMax, un angle marketing efficace bien que promotionnel.
+- Conclusion très positive sur la qualité du script final généré (économie de 200$/mois), soulignant qu'un simple mot-clé a suffi à produire un résultat de cette qualité.
+
+## Concepts cles
+- introduction de l'agent de création de shorts viraux basé sur la niche client
+- présentation des sources de recherche possibles (Grok, TikTok, contenus concurrents)
+- encouragement à généraliser l'agent à n'importe quelle niche au-delà de l'IA
+- confirmation de la large applicabilité et objectif de densifier une idée en script
+- réflexion sur la commercialisation de l'agent en se mettant à la place du client
+- description du processus de tri rapide et pré-sélection des scripts générés
+- nuance sur la qualité comparée des audiences TikTok et Instagram
+- explication du choix stratégique entre service customisé et productisé
+- démonstration de ClickUp comme gestionnaire de projet avec l'onglet Shorts
+- précision : l'outil de gestion de projet est interchangeable (Notion, Asana, Trello)
+- démonstration de renvoi de contexte avec exemple de sortie sur Genie 3 (DeepMind)
+- présentation du hook généré sur Genie 3 mettant en avant une percée méconnue
+- explication du déclencheur workflow via ajout de commentaire ClickUp
+- configuration du filtrage par mot-clé (IA/AI) pour déclenchement sélectif
+- observation du déclenchement à l'étape de recherche et suppression d'un Merge redondant
+- explication de l'usage de Get a Task pour récupérer la description complète ClickUp
+- présentation de l'architecture multi-agents (manager, recherche, hook)
+- explication du choix de Gemini pour l'agent de recherche (volume de données)
+- présentation du résultat obtenu (audience cible entrepreneurs) avant reconstruction
+- analyse d'un hook performant utilisant un axe contrarien et validation Google
+- comparaison de hooks avec préférence pour la clarté et rejet de la complexité
+- discussion sur l'ajout d'un filtre qualité automatique vs choix humain final
+- démonstration de Google Opal créant une app de quiz depuis une simple instruction
+- précision sur la limitation géographique de Google Opal (VPN nécessaire)
+- conclusion soulignant la rareté de la compétence de scripting (95% des gens)
+- annonce de la reconstruction complète et transparente du multi-agent
+- présentation générale de ClickUp (vues, tâches, email intégré par tâche)
+- configuration du déclencheur task comment posted filtré par List ID
+- astuce de fixer en dur ou en variable les valeurs stables récurrentes
+- démonstration pratique de recréation d'un test sur Google Opal
+- test concret du déclencheur $AI activant immédiatement le workflow
+- mise en garde sur la nécessité d'un garde-fou pour distinguer commentaires humains et automatisés
+- configuration du filtre startWith $AI vs l'option Contain
+- test démonstratif : le mot-clé seul ne récupère pas le contenu complet de la tâche
+- explication : le commentaire contient le task ID mais pas le contenu complet
+- principe de cloisonnement des données pour optimiser la performance des appels API
+- présentation de ClickUp comme interface alternative conservant le contexte de tâche
+- démonstration de filtrage par formule dans une base de données vidéo avec transcripts
+- suggestion d'amélioration via RAG plutôt que simple filtrage
+- début de la construction avec définition statique du prompt de l'agent principal
+- explication de l'intérêt de charger la mémoire avant sollicitation des agents
+- recommandation de limiter le nombre d'outils par agent pour réduire les erreurs
+- mise en garde sur les coûts financiers à surveiller avant usage réel
+- chiffre concret du coût réel des tests (40 centimes) et introduction du sous-agent recherche
+- configuration de l'outil Grok exploité pour sa recherche en direct
+- configuration du sous-agent hook-agent avec modèle Anthropic et mémoire partagée
+- astuce de collecte manuelle de hooks via hashtag Instagram stockés dans Excel
+- présentation de l'agent de writing (agent-script) utilisant Anthropic
+- description des deux options de sortie (light via update a task et autre option)
+- configuration du commentaire de texte récupérant l'output de l'étape précédente
+- renommage en Steps Update créant un log de progression de l'agent
+- explication du champ Query correspondant au commentaire et reproduction du trigger
+- configuration de la date via $NOW et récupération du titre de tâche
+- récupération des champs task title, custom fields via Get a Task Creator
+- placeholder temporaire pour le commentaire associé avant configuration du prompt
+- configuration du rôle précis d'orchestrateur de contenu viral coordonnant les sous-agents
+- instruction en majuscule soulignant l'importance de la mise à jour systématique des étapes
+- introduction du concept de SOP guidant l'agent étape par étape
+- détail de l'étape 1 SOP (recherche) avec stockage en mémoire pour itérations futures
+- détail de l'étape 3 SOP (construction d'accroche/hook)
+- précision de la méthode d'accroche (six formats éprouvés, formule en trois étapes)
+- instruction de gestion des itérations appliquant les corrections à la dernière sortie
+- définition précise du format du package de livraison final (accroches multiples)
+- poursuite de la définition du format (cœur, CTA, éléments visuels numérotés)
+- explication du transfert de mots-clés de l'agent principal vers l'agent de recherche
+- conseil de guidage du prompt de recherche sans sur-contextualisation
+- exemple concret d'un piège d'interprétation littérale d'un mot-clé (DreamFlow)
+- itération corrective forçant la consultation de plusieurs sources via le mot obligatoire
+- réflexion sur l'ajustement constant nécessaire face à un changement de paramètre mineur
+- mention de la possibilité de connecter une base de données de reels via Google Sheet
+- configuration obligatoire de TikTok avec mots-clés et topics émergents
+- nettoyage des instructions inutiles et précision des outils restants
+- définition du format de sortie du sous-workflow (sujet, sous-sujets, posts X)
+- conclusion de la configuration de l'agent de recherche remontant vers l'agent manager
+- démonstration étape par étape de configuration d'une requête HTTP vers X
+- recommandation de définir un credential type spécifique pour l'authentification
+- présentation du corps de requête body de l'appel SearchX
+- explication de la conservation des prompts système et user pour certains LLM
+- configuration du prompt de recherche X et sites web basé sur le mot-clé transmis
+- démonstration de l'usage de fromAI pour injecter dynamiquement les mots-clés
+- démonstration d'utilisation de Claude pour générer une requête curl filtrée par engagement
+- configuration de seuils élevés de View Count et Favorite Count pour ne retenir que les meilleurs contenus
+- explication des paramètres de recherche (limite de 10, types Web et X)
+- retrait d'un mot-clé épinglé et utilisation d'un scraper HappyFile pour TikTok
+- lancement du scraper TikTok limité à 10 résultats les plus performants
+- configuration d'un text classifier Gemini comparant titre/caption au topic recherché
+- débranchement temporaire pour test isolé via manual trigger avec données Google Opal
+- épinglage des données reçues pour continuer à travailler en parallèle
+- démonstration de récupération du transcript via Subtitle Information
+- explication du choix de séparer les champs plutôt qu'agréger directement
+- finalisation et renommage de l'agent de recherche en Search TikTok
+- proposition de test isolé de l'agent de recherche avant la suite
+- transition vers la configuration de l'agent de hook (rédaction) reprenant le brief initial
+- configuration du message système précis de l'agent d'accroche virale
+- précision : la base d'accroches performantes reste optionnelle
+- présentation des archétypes de hook (expérimentateur, enseignant, magicien)
+- configuration du rôle de l'agent rédacteur de script viral (frameworks prouvés)
+- configuration de la partie delivery avec variations de script et marqueurs de preuve sociale
+- détail de la structure narrative (légitimité, curiosité, solution après problème)
+- présentation de BrainMax de ClickUp combinant ChatGPT et outils connectés
+- débogage d'une erreur de champ (description vs nom de tâche)
+- renommage du modèle Anthropic et relance de test via $AI
+- identification d'un problème sur l'agent manager lié au Custom Name des outils
+- débogage d'un problème de pattern de nommage d'outils, éviter les accents
+- transparence pédagogique montrant aussi les tests échoués (agent constructeur d'accroche)
+- analyse des logs révélant une duplication accidentelle causant des appels multiples
+- renommage des outils ambigus en noms explicites pour résoudre le problème
+- pause dans la démonstration pour laisser la génération se dérouler
+- constat d'un échec initial corrigé grâce à la mémoire persistante de l'agent
+- appréciation du script généré et constat d'un outil non encore utilisé (BrainMax)
+- reformulation explicite illustrant que l'IA n'est pas toujours bonne au premier essai
+- recherche ciblée et précise sur ClickUp BrainMax (fonctionnalités, témoignages, audience)
+- transmission des résultats de recherche précis vers l'agent de script
+- réflexion sur la valeur perçue élevée du système pour des dirigeants sans idée de contenu
+- résultat concret du script (7 outils IA différents avant ClickUp BrainMax)
+- conclusion positive sur la qualité du script final généré à partir d'un simple mot-clé
+
+## Outils mentionnes
+- Grok
+- TikTok
+- Instagram
+- ClickUp
+- Notion
+- Asana
+- Trello
+- Genie 3
+- DeepMind
+- Google
+- n8n
+- Anthropic
+- Gemini
+- Google Opal
+- YouTube
+- Slack
+- Telegram
+- RAG
+- Excel
+- Google Sheets
+- XAI
+- Claude
+- HappyFile
+- ChatGPT
+
+## Tips techniques
+- Pré-générer un batch de scripts pour permettre un tri rapide par élimination, maximisant le nombre de tournages réalisables en peu de temps
+- Choisir entre un service customisé (plus cher, plus de temps) et un service productisé simple selon la stratégie de vente visée, plutôt que de mélanger les deux
+- Utiliser un nœud dédié pour récupérer la description complète d'une tâche plutôt que de se limiter au seul contenu du commentaire déclencheur
+- Choisir un modèle spécifique (ex : Gemini) pour les tâches de recherche nécessitant le traitement d'un grand volume de données, différent du modèle par défaut utilisé ailleurs
+- Utiliser un axe contrarien (contredire une croyance commune largement partagée) comme technique de hook performante et accrocheuse
+- Éliminer systématiquement les hooks trop complexes ou confus qui perdent l'audience, même s'ils semblent techniquement intéressants
+- Créer des variables ou ancrer en dur les valeurs stables et récurrentes (ex : List ID) plutôt que de les ressaisir à chaque configuration
+- Ajouter un garde-fou (mot-clé déclencheur spécifique) pour distinguer les commentaires destinés à l'automatisation de la communication humaine normale sur le même canal
+- Cloisonner les données récupérées (ne charger que l'ID nécessaire) plutôt que de tout charger systématiquement, pour alléger les appels API et la charge serveur
+- Charger la mémoire de contexte avant de solliciter les sous-agents, pour éviter de leur faire refaire tout le raisonnement précédent
+- Limiter le nombre d'outils attribués à chaque agent dans une architecture multi-agents, un trop grand nombre augmentant le risque de défaillance globale
+- Collecter manuellement des hooks performants via la recherche par hashtag sur les réseaux sociaux et les stocker dans un tableur accessible à l'agent
+- Créer un log de progression explicite (Steps Update) permettant de suivre en temps réel les actions successives de l'agent
+- Définir un rôle d'agent extrêmement précis et spécifique (ex : orchestrateur de contenu viral) plutôt qu'une description générique
+- Mettre en majuscule les instructions critiques dans un prompt d'agent pour signaler leur importance absolue et réduire le risque d'oubli
+- Utiliser un ensemble restreint de formats d'accroche éprouvés (ex : six formats avec formule en trois étapes) plutôt que de laisser l'IA improviser librement
+- Instruire explicitement l'agent d'appliquer les corrections de feedback uniquement à la dernière génération, pas à l'historique complet
+- Ne pas créer plus de contexte que ce qui est initialement fourni dans un prompt de recherche, pour éviter que l'agent parte dans une mauvaise direction
+- Utiliser le mot 'obligatoire' dans un prompt pour forcer un agent paresseux à respecter une étape qu'il aurait tendance à sauter
+- Définir un credential type spécifique pour l'authentification API, réutilisable ensuite pour plusieurs configurations sans le ressaisir
+- Utiliser l'expression fromAI pour injecter dynamiquement une valeur définie par un sous-agent dans une requête suivante
+- Fixer des seuils minimaux d'engagement (retweets, likes) dans la requête de recherche pour filtrer et ne retenir que les contenus vraiment performants
+- Épingler une recherche déjà effectuée pendant les tests pour éviter de payer inutilement une nouvelle recherche à chaque itération
+- Utiliser des archétypes de hook variés (expérimentateur, enseignant, magicien) pour diversifier l'approche narrative selon le contenu
+- Créer une asymétrie d'information (cartes de curiosité) pour maintenir l'attention avant de livrer la solution au problème exposé
+- Éviter les accents et caractères spéciaux dans les noms d'outils d'un agent, certains systèmes ayant du mal à les gérer correctement
+- Renommer les outils avec des noms explicites et non ambigus plutôt que des noms génériques (Tools 2), pour faciliter le débogage de correspondance
+- S'appuyer sur la mémoire persistante d'un agent pour corriger un échec (mauvais sujet, livrable manquant) sans devoir tout recommencer depuis zéro
+- Reformuler explicitement une demande ambiguë (préciser le nom exact d'un produit) lorsque l'IA ne cible pas correctement le sujet au premier essai
+
+## Cas d'usage reels
+- [[]]

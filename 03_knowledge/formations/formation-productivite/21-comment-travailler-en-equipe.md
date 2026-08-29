@@ -1,0 +1,207 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Aller plus loin"
+source_transcript: "21. Comment travailler en equipe.txt"
+---
+
+# 21. Comment travailler en equipe ?
+
+## Resume
+- Introduction humoristique au sujet du travail en équipe, avec précision que l'auteur a une expérience réelle de collaboration (monteurs, etc.) malgré son statut de solopreneur.
+- Précision de l'expertise en structuration d'espaces de travail d'entreprise (ClickUp) malgré l'absence de travail d'équipe personnel, avant introduction du premier principe : l'asynchrone.
+- Clarification importante : l'asynchrone véritable ne se limite pas à activer 'ne pas déranger' sur Slack, mais nécessite un changement d'outil radical.
+- Recommandation de fonctionner uniquement via un outil de gestion de tâches avec commentaires liés, tout en reconnaissant le besoin réel de communication d'équipe.
+- Recommandation de l'application Twist comme meilleure alternative pour la communication d'équipe respectueuse du focus.
+- Explication du fonctionnement en threads de Twist, organisés en channels/silos, un changement structurel qui aide à rester focus et limiter le chit-chat inutile.
+- Confirmation que Twist est explicitement conçu contre le dérangement constant, un argument de vente central de l'application aidant à éviter les meetings.
+- Conseil d'utiliser Slack en mode forum plutôt qu'en mode chat continu, avec introduction de l'application Asyncap développée par un Français.
+- Présentation du fonctionnement d'Asyncap : envoyer une vidéo asynchrone avec transcript, pour éviter les appels en direct chronophages.
+- Exemple personnel d'usage d'une page de messages différés, répondant rapidement à certains messages sélectionnés plutôt qu'à tous, utile notamment pour les CEO.
+- Résumé de la stratégie : chat live (Twist) pour l'interne, outils asynchrones favorisant le focus pour la communication externe, évitant les dérangements dispersés toute la journée.
+- Bénéfice complémentaire de la vidéo asynchrone : possibilité d'utiliser l'IA pour résumer plutôt que d'écouter en entier, un outil ayant été Product of the Day.
+- Rappel de l'importance de limiter les meetings au maximum, ceux-ci augmentant le stress et diminuant la productivité globale, avec un chiffre marquant à rechercher.
+- Citation de Damien Morin : ce qui peut être dit en une heure peut être dit en quinze minutes, ce qui peut être dit en quinze minutes peut être dit en une minute.
+- Introduction de la troisième technique pour le travail en équipe : les OKR, définissant stratégie long terme et objectifs actionnables déclinés en équipe.
+- Exemple concret d'OKR d'entreprise : stratégie de développement du marché anglais déclinée en objectif actionnable chiffré (ouvrir 25 magasins).
+- Poursuite de l'exemple d'OKR en cascade : objectifs déclinés jusqu'au niveau opérationnel (fournisseur matériel, restaurant flagship rentable).
+- Explication de l'objectif des OKR en cascade : aligner les tâches individuelles avec les objectifs d'entreprise, évitant le décalage croissant en descendant la hiérarchie.
+- Introduction du quatrième point majeur : tout centraliser, en combattant activement le tool stacking (multiplication d'outils redondants dans une entreprise).
+- Précision du seuil de bascule : centraliser au maximum jusqu'à un besoin d'usage avancé (CRM spécialisé) ou d'intégrations tierces non supportées.
+- Recommandation peu appliquée en entreprise : avoir une vue d'ensemble claire de sa toolbox, sachant précisément quel outil sert à quelle fonction.
+- Principe de suppression des outils redondants : moins d'outils signifie plus de centralisation et moins de perte de focus sur la localisation de l'information.
+- Mise en garde contre les usines à gaz type Jira, trop complexes en manipulations, une limite reconnue même sur ClickUp jugé parfois trop click-intensif.
+- Reconnaissance de limite d'expertise sur RH/CRM, mais recommandation forte pour la gestion de projet avec choix entre Notion et Slab comme outils wiki.
+- Présentation de Slab, une knowledge base similaire à Notion mais avec un style se rapprochant davantage de Google Docs.
+- Positionnement de Slab à mi-chemin entre Google Docs et Notion, avant introduction de Coda comme troisième alternative de knowledge base.
+- Présentation de Coda comme concurrent de Notion basé sur des documents, avec structure plus proche de Google Docs mais intégrant bases de données.
+- Recommandation transparente et non sponsorisée de ClickUp, précisant l'absence de tout lien d'affiliation actuel, un outil jugé véritablement exceptionnel.
+- Présentation des fonctionnalités de ClickUp remplaçant d'autres outils : docs (façon Coda), whiteboards (remplaçant Miro), dashboards de suivi de projet.
+- Présentation des fonctionnalités avancées de ClickUp : diagrammes de Gantt, IA intégrée, templates et intégrations, en faisant l'outil le plus complet.
+- Recommandation d'avoir ClickUp ouvert en permanence pour les grosses équipes orientées projet, évitant la dispersion entre plusieurs applications.
+- Comparaison entre ClickUp (préféré, parfois usine à gaz) et Asana (plus cher, jugé moins complet), avec recommandation vers des alternatives minimalistes selon le profil.
+- Présentation de Linear, outil spécialisé pour le développement produit et le suivi de bugs, utilisé par des entreprises comme Alan et Raycast.
+- Précision que Linear n'est pas adapté à la création de contenu, Notion restant préférable pour ce cas d'usage spécifique.
+- Introduction de la standardisation des process récurrents, comparée à la méthode McDonald's, pour transformer des patterns de tâches en procédures fiables.
+- Présentation du concept de SOP (Standard Operating Procedure) comme mécanisme fiable de traitement des tâches, opposé au chaos organisationnel classique.
+- Critique de la mauvaise pratique de passation informelle (une semaine à refaire des documents), avec recommandation d'anticiper l'onboarding comme un développeur documente son code.
+- Recommandation d'outils pour créer des SOP : Notion pour la structuration, et Scribe pour générer automatiquement des guides étape par étape.
+- Description du fonctionnement de Scribe : il suffit d'effectuer l'action une fois pour que l'outil génère automatiquement un guide visuel complet et organisé.
+- Recommandation de centraliser tous les SOP dans une base de données unique (Notion ou ClickUp), sous forme textuelle avec liste d'étapes type tutoriel.
+- Distinction entre SOP en PDF avec étapes écrites et SOP vidéo pour les process plus complexes, avec recommandation de l'outil classique Loom.
+- Distinction d'usage entre Loom (interne) et Tella (davantage tourné vers l'externe), avec mention de Cleanshot comme outil d'enregistrement personnel actuel.
+- Confirmation que ces outils de SOP vidéo permettent aussi de former les employés à la démarche de standardisation des process.
+- Introduction de la compétence d'apprendre à refuser, particulièrement difficile en tant que freelance, une compétence développée avec l'expérience personnelle.
+- Constat personnel d'une dizaine de sollicitations quotidiennes, avec principe clé de penser en valeur primaire pour identifier ce qui compte réellement.
+- Exemple concret de la valeur primaire personnelle : enregistrer, monter et publier du contenu vidéo, le reste étant secondaire.
+- Explication de l'impact motivationnel de cette clarté : sans cette valeur primaire accomplie, la journée entière est considérée comme inutile.
+- Précision des outils supports de la valeur primaire (Notion, OBS, Pixelmator) qui ne servent à rien sans l'accomplissement effectif de la mission du jour.
+- Présentation des valeurs secondaires comme traiter les emails, avec chiffre concret personnel : environ 10 emails à traiter par jour (70/semaine).
+- Recommandation de déléguer les valeurs secondaires n'ayant aucun impact personnel direct, notamment le traitement massif des emails.
+- Extension du principe de délégation aux services de prospection et gestion des publicités, ainsi qu'aux valeurs secondaires personnelles comme les rendez-vous.
+- Constat que dire oui à toutes les sollicitations rendrait le travail impossible, malgré le fait que certaines personnes acceptent systématiquement tout.
+- Conseil d'apprendre à dire non le plus tôt possible, particulièrement important dès l'arrivée dans une nouvelle entreprise pour poser les limites.
+- Explication de la posture idéale : rester ferme mais sympathique dès le début pour établir clairement les règles de disponibilité sans conflit ultérieur.
+- Confirmation que la fermeté initiale évite les sollicitations répétées, avec introduction de l'exemple de Xavier Niel répondant à tous ses emails.
+- Explication de la méthode réelle de Xavier Niel : un raccourci clavier (text expander) envoyant automatiquement un email de refus type.
+- Démonstration pratique de configuration d'un text expander avec le raccourci @no générant automatiquement un message de refus poli.
+- Poursuite de la démonstration avec correction d'une inversion de raccourci, illustrant le processus réel de configuration des snippets.
+- Finalisation de la démonstration du raccourci @no fonctionnant rapidement en combinaison avec le raccourci de réponse (R) pour répondre en quelques secondes.
+- Recommandation forte d'adopter ce réflexe de text expander pour gagner énormément de temps, avant conseil d'expliquer son refus de manière positive.
+- Conseil de rester ferme dès le début plutôt que de laisser une réponse en suspens, une requête non traitée continuant à occuper l'esprit.
+- Nuance que cette technique de refus ferme s'applique différemment selon l'importance relationnelle de la personne (collègues proches vs sollicitations externes).
+- Technique alternative au refus sec : proposer systématiquement une solution alternative (autre date) pour guider positivement la personne vers un choix.
+- Reconnaissance que dire non demande un travail quotidien constant, avant introduction du principe de penser en termes d'argent pour les freelances.
+- Exemple personnel extrême de refus systématique des conférences devant peu de personnes, jugées peu rentables en termes de réutilisation de contenu.
+- Explication de la réaction épidermique face aux sollicitations non scalables, avec précision de refuser spécifiquement ce qui n'est pas à l'échelle.
+- Explication du calcul rémunération vs dépense de temps, notamment pour évaluer l'impact réel d'une action sur les clients et son activité.
+- Exemple concret d'une mission freelance au forfait : tout temps passé bloqué sur un bug représente une perte d'argent, d'où l'intérêt de prendre un coaching pour débloquer rapidement.
+- Exemple personnel de calcul de rentabilité : déléguer les miniatures à 15€ est toujours rentabilisé par les revenus générés par n'importe quelle vidéo.
+- Conclusion sur le refus systématique des conférences et salons, avant transition vers le choix de ce qu'il faut réellement faire au quotidien.
+
+## Concepts cles
+- introduction au travail en équipe malgré le statut principal de solopreneur
+- précision de l'expertise en structuration ClickUp et introduction du principe asynchrone
+- clarification : l'asynchrone véritable dépasse le simple 'ne pas déranger'
+- recommandation de fonctionner via commentaires sur outil de gestion de tâches
+- recommandation de Twist comme meilleure alternative de communication d'équipe
+- explication du fonctionnement en threads/channels de Twist limitant le chit-chat
+- confirmation que Twist est conçu contre le dérangement constant (argument de vente)
+- conseil d'utiliser Slack en mode forum et introduction d'Asyncap
+- présentation du fonctionnement d'Asyncap (vidéo asynchrone avec transcript)
+- exemple personnel de page de messages différés (usage sélectif)
+- résumé de la stratégie interne (Twist) vs externe (asynchrone)
+- bénéfice de l'IA pour résumer une vidéo asynchrone (Product of the Day)
+- rappel de l'importance de limiter les meetings (stress et productivité)
+- citation de Damien Morin sur la compression du temps de communication
+- introduction de la troisième technique : les OKR (objectifs actionnables)
+- exemple concret d'OKR (développement marché anglais, 25 magasins)
+- poursuite de l'exemple d'OKR en cascade jusqu'au niveau opérationnel
+- explication de l'alignement des OKR pour éviter le décalage hiérarchique
+- introduction du combat contre le tool stacking (multiplication d'outils redondants)
+- précision du seuil de bascule vers un outil spécialisé (CRM, intégrations)
+- recommandation d'avoir une vue d'ensemble claire de sa toolbox
+- principe : moins d'outils égale plus de centralisation et moins de perte de focus
+- mise en garde contre les usines à gaz type Jira (trop de manipulations)
+- recommandation de Notion et Slab comme outils wiki pour la gestion de projet
+- présentation de Slab comme knowledge base proche de Google Docs
+- positionnement de Slab et introduction de Coda comme alternative
+- présentation de Coda (concurrent de Notion basé sur des documents)
+- recommandation transparente et non sponsorisée de ClickUp
+- présentation des fonctionnalités de ClickUp remplaçant Coda et Miro
+- présentation des fonctionnalités avancées de ClickUp (Gantt, IA, templates)
+- recommandation d'avoir ClickUp ouvert en permanence pour éviter la dispersion
+- comparaison ClickUp vs Asana (plus cher, moins complet)
+- présentation de Linear spécialisé pour le développement produit (Alan, Raycast)
+- précision : Linear n'est pas adapté au contenu, préférer Notion
+- introduction de la standardisation des process récurrents (méthode McDonald's)
+- présentation du concept de SOP comme mécanisme fiable de traitement
+- critique de la passation informelle et recommandation d'anticiper l'onboarding
+- recommandation de Notion et Scribe pour créer des SOP étape par étape
+- description du fonctionnement automatique de Scribe (guide généré en une action)
+- recommandation de centraliser tous les SOP dans une base de données unique
+- distinction entre SOP écrit et vidéo (recommandation Loom)
+- distinction d'usage entre Loom (interne) et Tella (externe), mention de Cleanshot
+- confirmation : les outils SOP forment aussi les employés à la standardisation
+- introduction de la compétence d'apprendre à refuser (difficile en freelance)
+- constat personnel de sollicitations quotidiennes et principe de valeur primaire
+- exemple concret de valeur primaire personnelle (enregistrer, monter, publier)
+- explication de l'impact motivationnel de la clarté sur la valeur primaire
+- précision des outils supports non suffisants sans l'accomplissement de la mission
+- présentation des valeurs secondaires (emails) avec chiffre personnel (10/jour)
+- recommandation de déléguer les valeurs secondaires sans impact direct
+- extension de la délégation à la prospection, aux publicités et aux rendez-vous
+- constat que dire oui systématiquement rendrait le travail impossible
+- conseil d'apprendre à dire non tôt, particulièrement à l'arrivée en entreprise
+- explication de la posture idéale : ferme mais sympathique dès le début
+- confirmation de l'effet dissuasif de la fermeté et exemple de Xavier Niel
+- explication de la méthode de Xavier Niel : text expander pour refus automatique
+- démonstration pratique de configuration d'un text expander (@no)
+- poursuite de la démonstration avec correction d'une inversion de raccourci
+- finalisation de la démonstration du raccourci @no combiné à la réponse rapide
+- recommandation du réflexe text expander et conseil d'expliquer le refus positivement
+- conseil de fermeté immédiate plutôt qu'une réponse en suspens
+- nuance : adapter la fermeté du refus selon l'importance relationnelle
+- technique alternative : proposer une solution alternative plutôt qu'un refus sec
+- introduction du principe de penser en termes d'argent pour les freelances
+- exemple personnel de refus systématique des conférences peu rentables
+- explication du refus des sollicitations non scalables (pas à l'échelle)
+- explication du calcul rémunération vs dépense de temps pour évaluer l'impact
+- exemple concret d'une mission au forfait (temps bloqué égale perte d'argent)
+- exemple personnel de calcul de rentabilité de la délégation des miniatures (15€)
+- conclusion sur le refus des conférences et transition vers le choix des priorités
+
+## Outils mentionnes
+- ClickUp
+- Slack
+- Twist
+- Asyncap
+- Notion
+- Jira
+- Slab
+- Google Docs
+- Coda
+- Miro
+- Asana
+- Linear
+- Alan
+- Raycast
+- Scribe
+- Loom
+- Tella
+- Cleanshot
+- YouTube
+- OBS
+- Pixelmator
+
+## Tips techniques
+- Privilégier les commentaires directement liés aux tâches dans l'outil de gestion de projet plutôt qu'un canal de discussion séparé, pour garder le contexte
+- Structurer la communication d'équipe en threads liés à des sujets précis (channels), plutôt qu'un flux continu type chat, pour limiter le bavardage inutile
+- Utiliser Slack en mode forum discipliné (pas de discussion toutes les 20 secondes) plutôt que comme une messagerie instantanée continue
+- Utiliser des vidéos asynchrones avec transcript automatique pour communiquer une information complexe, plutôt qu'organiser un appel en direct
+- Utiliser un résumé généré par IA d'une vidéo asynchrone reçue, plutôt que de l'écouter intégralement si le temps manque
+- Appliquer le principe de compression radicale du temps de communication : ce qui prend une heure peut souvent être dit en quinze minutes, voire une minute
+- Décliner les OKR en cascade du niveau stratégique jusqu'au niveau opérationnel individuel, chaque échelon alignant ses objectifs sur le suivant
+- Combattre activement le tool stacking en limitant le nombre d'outils différents utilisés pour une même fonction au sein d'une entreprise
+- Maintenir une vue d'ensemble documentée de tous les outils utilisés en entreprise et de leur fonction précise, pour identifier les doublons à éliminer
+- Supprimer systématiquement tout outil faisant doublon avec un autre déjà utilisé, la dispersion de l'information étant la cause première de perte de productivité en équipe
+- Maintenir l'outil de gestion de projet central ouvert en permanence pour toute l'équipe, plutôt que de naviguer constamment entre plusieurs applications
+- Identifier les patterns de tâches récurrentes pour les standardiser en procédures reproductibles, à l'image de la méthode McDonald's
+- Anticiper systématiquement la documentation d'un process comme un développeur documente son code, pour éviter les passations chaotiques de dernière minute
+- Utiliser Scribe pour générer automatiquement un guide étape par étape en effectuant simplement l'action une fois, sans rédaction manuelle
+- Centraliser tous les SOP dans une seule base de données (Notion ou ClickUp), plutôt que de les disperser entre plusieurs documents ou emplacements
+- Choisir le format SOP (écrit ou vidéo) selon la complexité du process : PDF avec étapes pour le simple, vidéo (Loom) pour ce qui mérite une démonstration
+- Identifier explicitement sa valeur primaire quotidienne (la tâche sans laquelle la journée ne sert à rien), pour prioriser face aux nombreuses sollicitations
+- Déléguer systématiquement les valeurs secondaires n'ayant aucun impact personnel direct (traitement d'emails de masse), pour se concentrer sur l'essentiel
+- Poser ses limites de disponibilité dès l'arrivée dans une nouvelle entreprise, plutôt que d'attendre et de devoir se rétracter plus tard
+- Adopter une posture ferme mais sympathique dès le premier contact avec des collègues, plutôt que d'être trop accommodant puis devoir se rétracter
+- Utiliser un text expander configuré avec un raccourci simple pour envoyer rapidement un email de refus poli standardisé, sans rédiger à chaque fois
+- Formuler tout refus de manière positive plutôt que sèche, pour préserver la relation tout en maintenant sa limite
+- Répondre fermement et immédiatement à une sollicitation plutôt que de la laisser en suspens, une requête non traitée continuant à occuper l'esprit mentalement
+- Proposer systématiquement une alternative concrète (autre date, autre solution) plutôt qu'un simple refus, pour guider positivement l'interlocuteur
+- Refuser systématiquement les opportunités qui ne sont pas à l'échelle de son activité, même si elles semblent ponctuellement intéressantes
+- Sur une mission freelance au forfait, prendre un coaching payant pour se débloquer rapidement plutôt que de perdre un temps disproportionné à chercher seul
+- Calculer systématiquement le seuil de rentabilité d'une délégation (ex : miniature à 15€) par rapport au revenu minimum généré, pour objectiver la décision
+
+## Cas d'usage reels
+- [[]]

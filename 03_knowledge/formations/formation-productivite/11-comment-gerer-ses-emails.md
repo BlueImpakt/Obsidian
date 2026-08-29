@@ -1,0 +1,208 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Mieux executer"
+source_transcript: "11. Comment gerer ses emails.txt"
+---
+
+# 11. Comment gerer ses emails ?
+
+## Resume
+- Introduction à la gestion des emails avec chiffres clés impressionnants : 209 minutes par jour sur les emails pro (3h30), 352 minutes au total pro+perso.
+- Chiffres complémentaires impressionnants : 121 emails par jour en moyenne, représentant 6 heures quotidiennes, soit quasiment tout le temps de travail disponible.
+- Introduction de la technique Inbox Zero, méthode reconnue de productivité visant à organiser les emails pour ne plus rien oublier et éviter la pollution mentale.
+- Annonce de la mise en place pas à pas de la stratégie Inbox Zero sur Gmail, l'outil de référence choisi pour la démonstration.
+- Précision que les principes appliqués sur Gmail sont transposables à d'autres outils emails (Superhuman, Spark), Gmail servant simplement de référence pédagogique.
+- Conseil de choisir un jour fixe de traitement des emails en attente (mercredi/vendredi/dimanche) selon son statut (salarié ou non).
+- Présentation des catégories de tri Inbox Zero dans Gmail : choses à faire, choses en attente de réponse, choses à lire.
+- Introduction de la technique des multi-inbox comme élément clé changeant la perspective de gestion des emails.
+- Plan d'archivage systématique des emails sans action requise et présentation de filtres utiles pour les acceptations de meeting et les newsletters.
+- Annonce des sujets suivants : raccourcis clavier Gmail, option auto advance, et création d'un pipeline email vers Notion pour les newsletters.
+- Démonstration sur une boîte mail volontairement désorganisée et inutilisée depuis des années, représentative d'une boîte mal gérée à assainir.
+- Activation du mode conversation dans les paramètres Gmail, une option très importante pour regrouper les échanges en fils de discussion.
+- Configuration de l'icône de suivi personnalisée et désactivation des notifications dérangeantes, avec réponse suggérée automatique laissée activée.
+- Activation de la fonctionnalité plusieurs boîtes de réception dans les paramètres avancés, première étape vers la création des sections personnalisées.
+- Configuration de nouvelles boîtes de réception secondaires positionnées à droite, permettant de trier visuellement les emails à traiter.
+- Rappel du principe des trois catégories (à faire, en attente, à lire) et suppression préalable des libellés Gmail par défaut jugés inutiles.
+- Décision de masquer les libellés par défaut peu utiles (envoyé, planifier, brouillon) selon les préférences personnelles.
+- Création des trois nouveaux libellés personnalisés : à faire, en attente, à lire, structure centrale du système Inbox Zero.
+- Convention de couleur pour les libellés : rouge pour à faire, vert pour à lire, jaune pour en attente, facilitant l'identification visuelle rapide.
+- Configuration des sections associées à chaque libellé dans la structure des boîtes de réception multiples nommées section à faire, à lire, en attente.
+- Confirmation de l'enregistrement des modifications, avec visualisation immédiate des sections en attente et à lire correctement affichées.
+- Activation de l'option avance automatique dans les paramètres avancés, permettant de passer directement au message suivant après traitement.
+- Démonstration de traitement rapide via icônes d'archivage sur chaque email, illustrant une boîte de réception nettement plus propre.
+- Préférence personnelle de traiter les emails un par un pour rester focus, avec alternative de sélection multiple pour ceux préférant le traitement par lot.
+- Exemple de tri d'un email nécessitant une action différée dans 30 jours, plutôt qu'immédiate, illustrant le besoin de la fonction snooze.
+- Démonstration du raccourci clavier B pour mettre en snooze un email nécessitant une action future plutôt qu'immédiate, avec choix de la date de rappel.
+- Confirmation de la disparition de l'email snoozé de la vue, avec introduction d'un nouvel exemple concret de conversation d'équipe à traiter.
+- Astuce pour gérer les emails en copie (CC) de longues chaînes de discussion à plusieurs destinataires, source de pollution répétée de la boîte.
+- Explication de la fonction Mute Gmail : les réponses futures d'un fil de discussion collectif n'apparaîtront plus dans la boîte de réception, car considérées non adressées personnellement.
+- Démonstration du raccourci E pour appliquer le libellé à lire à un email d'intérêt secondaire à consulter plus tard.
+- Démonstration du raccourci puissant V permettant simultanément de déplacer/archiver un email et de lui attribuer un label en une seule action.
+- Exemple d'application du raccourci V pour labelliser un email en à faire, avec archivage systématique des emails sans intérêt plutôt que suppression.
+- Règle importante : ne jamais supprimer un email par précaution, l'espace de stockage étant un faux problème comparé au regret de perdre une information utile.
+- Présentation de la prochaine étape : créer une règle de filtrage pour les emails en attente, illustrée par un cas d'usage concret d'envoi d'email.
+- Technique du plus-adressing Gmail : ajouter '+wait' à sa propre adresse email pour créer une variante identifiable et filtrable automatiquement.
+- Démonstration d'envoi d'un email test à l'adresse plus-wait avec le raccourci commande+entrée, illustrant le principe pratique du plus-adressing.
+- Annonce du filtrage à venir pour faire disparaître automatiquement l'email de la boîte de réception, avec ajustement préalable du libellé à faire.
+- Configuration alternative liant l'étoile Gmail (star) au libellé à faire, pour marquer rapidement un email d'importance sans passer par les menus.
+- Explication de l'intérêt de dupliquer les éléments à faire à la fois dans Gmail et dans l'application de to-do list pour une double visibilité pratique.
+- Confirmation de l'usage combiné Gmail et to-do list externe pour les éléments à traiter, une approche personnelle assumée par l'auteur.
+- Création du filtre Gmail associant l'adresse plus-wait au libellé en attente, avec masquage de la boîte de réception et marquage comme lu.
+- Test du filtre nouvellement créé en s'envoyant un email de démonstration pour vérifier son bon fonctionnement en conditions réelles.
+- Explication cruciale que les règles de filtrage Gmail ne sont pas rétroactives, d'où l'importance de créer la règle avant l'envoi de l'email concerné.
+- Confirmation visuelle que l'email test a bien disparu de la boîte de réception après envoi, prouvant l'efficacité du filtre créé.
+- Vérification finale que les trois catégories (en attente, à faire, à lire) fonctionnent correctement malgré un léger délai de traitement Gmail.
+- Création d'une règle de filtrage supplémentaire ciblant les emails contenant le mot 'unsubscribe', marqués comme lus et masqués automatiquement.
+- Justification de ce filtre : cibler spécifiquement les emails marketing (avec lien de désabonnement), distincts des emails de prospection ou entre collègues.
+- Résultat attendu du nettoyage automatique : ne conserver dans la boîte de réception que les emails réellement utiles au quotidien.
+- Création d'une troisième règle de filtrage ciblant les fichiers de type invite.ics, présents dans tous les emails d'invitation à des événements.
+- Filtrage spécifique des confirmations d'acceptation d'invitation, jugées comme information inutile une fois que le participant a confirmé sa présence.
+- Transition vers la dernière partie du système, rappelant l'usage personnel d'Akiflow et son intégration déjà présentée dans la vidéo précédente.
+- Présentation de la liste complète des raccourcis clavier Gmail, personnalisables, pour accélérer significativement le traitement des emails.
+- Démonstration du raccourci X pour sélectionner plusieurs emails simultanément avant traitement par lot (archivage groupé).
+- Démonstration en rythme rapide de l'enchaînement des raccourcis (X, E) pour traiter et archiver un grand nombre d'emails très rapidement.
+- Démonstration du processus de tri décisionnel rapide email par email : évaluation d'intérêt immédiate suivie de l'action appropriée (lire, archiver).
+- Démonstration de création d'une règle de filtrage dédiée aux factures, basée sur la présence d'un mot-clé spécifique dans le contenu de l'email.
+- Configuration du filtre factures bilingue (français/anglais) avec création d'un nouveau libellé dédié, centralisant le suivi de toutes les factures reçues.
+- Utilisation de la recherche combinée (facture OR invoice) pour retrouver et traiter rétroactivement toutes les factures déjà présentes dans la boîte.
+- Explication du fonctionnement automatique du système une fois configuré : retirer un label après lecture et déplacer l'email vers la destination souhaitée.
+- Bilan de complétion du système Inbox Zero : toutes les catégories (à faire, en attente, à lire, mute, snooze, archives, factures) sont opérationnelles.
+- Transition vers la dernière fonctionnalité : la création d'un pipeline email vers Notion via Make, avec mention complémentaire de l'outil Compose AI.
+- Présentation de l'extension Chrome Compose AI, utilisable au quotidien pour répondre aux emails via un déclencheur double slash.
+- Présentation de la fonctionnalité de suggestions et autocomplétion de Compose AI, aidant à la rédaction fluide des réponses email.
+- Démonstration de génération d'une réponse email personnalisée par Compose AI reprenant fidèlement le contenu du message reçu.
+- Évaluation honnête de la qualité de Compose AI : pas toujours excellente mais utile dans de nombreuses situations, recommandation de l'essayer.
+- Configuration d'un Mailhook dans Make, générant automatiquement une adresse email dédiée pour déclencher le transfert automatique vers Notion.
+- Connexion de l'intégration Notion dans Make, permettant de recevoir automatiquement dans Notion les emails transférés vers l'adresse Mailhook.
+- Configuration du module de transfert vers Notion et test d'exécution du scénario, envoyant l'email transféré vers l'adresse générée par Make.
+- Configuration du module create database items dans Notion, ciblant la base de données de notes personnelles pour y stocker les emails transférés.
+- Configuration du nom et de l'étiquette email pour chaque nouvelle entrée créée dans la base de données de notes Notion à partir d'un email transféré.
+- Configuration de l'ajout du contenu de l'email en tant que paragraphe (append database item content) dans la nouvelle page Notion créée.
+- Insertion du contenu texte de l'email dans le paragraphe Notion, avec mention de l'outil optionnel de conversion HTML vers texte brut disponible.
+- Sauvegarde du scénario Make configuré pour le pipeline email vers Notion, prêt à être renommé et activé pour usage réel.
+- Renommage du scénario en Mail to Notion et activation, rendant le pipeline opérationnel pour tout email transféré désormais.
+- Test réel du pipeline complet en transférant un nouvel email vers l'adresse Notion configurée pour vérifier son bon déclenchement.
+- Édition du scénario Make sauvegardée, avec lancement du test pour vérifier le bon passage du contenu vers Notion.
+- Observation du temps de traitement plus long dû au volume important de contenu de l'email transféré, un délai normal pour ce type de contenu.
+- Confirmation de l'arrivée réussie du contenu dans Notion après quelques secondes, l'outil étant particulièrement pratique pour sauvegarder des newsletters.
+
+## Concepts cles
+- introduction avec chiffres clés du temps passé sur les emails (209 min pro, 352 min total)
+- chiffres complémentaires : 121 emails/jour représentant 6 heures quotidiennes
+- introduction de la technique Inbox Zero pour organiser les emails
+- annonce de la mise en place de la stratégie Inbox Zero sur Gmail
+- précision : les principes sont transposables à d'autres outils email (Superhuman, Spark)
+- conseil de choisir un jour fixe de traitement des emails selon son statut
+- présentation des catégories de tri Inbox Zero (à faire, en attente, à lire)
+- introduction de la technique des multi-inbox pour changer la perspective email
+- plan d'archivage systématique et filtres pour meetings/newsletters
+- annonce des raccourcis clavier, auto advance, et pipeline email vers Notion
+- démonstration sur une boîte mail désorganisée représentative à assainir
+- activation du mode conversation Gmail pour regrouper les échanges
+- configuration de l'icône de suivi et désactivation des notifications dérangeantes
+- activation de la fonctionnalité plusieurs boîtes de réception
+- configuration de nouvelles boîtes de réception secondaires positionnées à droite
+- suppression préalable des libellés Gmail par défaut inutiles
+- décision de masquer les libellés par défaut peu utiles
+- création des trois nouveaux libellés personnalisés (à faire, en attente, à lire)
+- convention de couleur des libellés (rouge/vert/jaune) pour identification rapide
+- configuration des sections associées à chaque libellé dans les boîtes multiples
+- confirmation de l'enregistrement avec visualisation des sections affichées
+- activation de l'option avance automatique passant directement au message suivant
+- démonstration de traitement rapide via icônes d'archivage
+- préférence de traitement un par un vs sélection multiple par lot
+- exemple de tri d'un email nécessitant une action différée (snooze)
+- démonstration du raccourci B pour mettre un email en snooze
+- confirmation de la disparition de l'email snoozé et introduction d'un nouvel exemple
+- astuce pour gérer les emails en copie de longues chaînes de discussion
+- explication de la fonction Mute Gmail pour les fils de discussion collectifs
+- démonstration du raccourci E pour appliquer le libellé à lire
+- démonstration du raccourci V combinant déplacement, archivage et labellisation
+- exemple d'application du raccourci V pour labelliser en à faire
+- règle importante : ne jamais supprimer un email par précaution
+- présentation de la création d'une règle de filtrage pour les emails en attente
+- technique du plus-adressing Gmail (+wait) pour créer une variante filtrable
+- démonstration d'envoi test avec le raccourci commande+entrée
+- annonce du filtrage automatique à venir avec ajustement du libellé à faire
+- configuration liant l'étoile Gmail au libellé à faire
+- explication de l'intérêt de dupliquer les tâches entre Gmail et la to-do list
+- confirmation de l'usage combiné Gmail et to-do list externe
+- création du filtre associant l'adresse plus-wait au libellé en attente
+- test du filtre nouvellement créé en conditions réelles
+- explication cruciale : les règles de filtrage Gmail ne sont pas rétroactives
+- confirmation visuelle de la disparition de l'email test après filtrage
+- vérification finale du bon fonctionnement des trois catégories
+- création d'une règle de filtrage ciblant le mot unsubscribe
+- justification du filtre ciblant spécifiquement les emails marketing
+- résultat attendu du nettoyage automatique : uniquement les emails utiles
+- création d'une règle de filtrage ciblant les fichiers invite.ics
+- filtrage spécifique des confirmations d'acceptation d'invitation jugées inutiles
+- transition vers la dernière partie rappelant l'intégration Akiflow
+- présentation des raccourcis clavier Gmail personnalisables
+- démonstration du raccourci X pour sélection multiple avant traitement par lot
+- démonstration en rythme rapide de l'enchaînement de raccourcis pour traiter en masse
+- démonstration du processus de tri décisionnel rapide email par email
+- démonstration de création d'une règle de filtrage dédiée aux factures
+- configuration du filtre factures bilingue avec libellé dédié centralisé
+- utilisation de la recherche combinée (facture OR invoice) pour traitement rétroactif
+- explication du fonctionnement automatique après lecture (retrait de label)
+- bilan de complétion du système Inbox Zero (toutes catégories opérationnelles)
+- transition vers le pipeline email vers Notion via Make et mention de Compose AI
+- présentation de l'extension Chrome Compose AI (déclencheur double slash)
+- présentation de la fonctionnalité de suggestions et autocomplétion de Compose AI
+- démonstration de génération d'une réponse personnalisée reprenant le contenu reçu
+- évaluation honnête de la qualité variable de Compose AI
+- configuration d'un Mailhook Make générant une adresse email dédiée
+- connexion de l'intégration Notion dans Make pour recevoir les emails transférés
+- configuration du module de transfert et test d'exécution du scénario
+- configuration du module create database items ciblant la base de notes
+- configuration du nom et de l'étiquette email pour chaque nouvelle entrée Notion
+- configuration de l'ajout du contenu email en tant que paragraphe Notion
+- insertion du contenu email dans Notion avec conversion HTML vers texte brut optionnelle
+- sauvegarde du scénario Make configuré pour le pipeline email vers Notion
+- renommage et activation du scénario Mail to Notion opérationnel
+- test réel du pipeline complet vérifiant le bon déclenchement
+- édition du scénario sauvegardée avec lancement du test de passage
+- observation du temps de traitement plus long dû au volume de contenu
+- confirmation de l'arrivée réussie dans Notion pour sauvegarder des newsletters
+
+## Outils mentionnes
+- Gmail
+- Superhuman
+- Spark
+- Notion
+- Akiflow
+- Make
+- Compose AI
+
+## Tips techniques
+- Appliquer la méthode Inbox Zero pour organiser systématiquement les emails et éviter l'oubli ou la pollution mentale liée à une boîte mail encombrée
+- Fixer un jour récurrent dédié au traitement des emails en attente, adapté à son statut professionnel (éviter le dimanche soir pour un salarié)
+- Utiliser la technique des multi-inbox Gmail pour visualiser simultanément plusieurs catégories d'emails sans naviguer entre plusieurs onglets
+- Archiver systématiquement tout email ne nécessitant aucune action, et créer des filtres dédiés pour les acceptations de meeting et newsletters
+- Activer le mode conversation dans Gmail pour regrouper automatiquement les échanges liés en fils de discussion lisibles
+- Supprimer les libellés Gmail par défaut non pertinents avant de créer sa propre structure de tri personnalisée
+- Attribuer un code couleur cohérent aux libellés email (rouge=urgent, vert=à lire, jaune=en attente) pour une identification visuelle instantanée
+- Activer l'avance automatique dans Gmail pour enchaîner directement sur le message suivant après traitement, sans retour à la liste
+- Utiliser le raccourci clavier B pour mettre un email en snooze lorsque l'action requise est différée dans le temps, plutôt que de le laisser encombrer la boîte
+- Utiliser la fonction Mute sur les longs fils de discussion collectifs en copie, pour éviter que chaque réponse ne pollue la boîte de réception
+- Utiliser le raccourci V pour archiver un email tout en lui attribuant un label en une seule action combinée, plus rapide que deux étapes séparées
+- Ne jamais supprimer un email par précaution même s'il semble inutile, le coût du stockage étant négligeable face au risque de perdre une information utile
+- Utiliser le plus-adressing Gmail (ajouter +motclé à sa propre adresse) pour créer une variante d'adresse identifiable et filtrable automatiquement
+- Utiliser le raccourci commande+entrée pour envoyer rapidement un email sans passer par la souris
+- Lier la fonction étoile (star) native de Gmail à son propre libellé à faire, pour marquer rapidement un email important en un clic
+- Configurer un filtre Gmail masquant l'email de la boîte de réception et le marquant comme lu automatiquement dès réception, pour un tri totalement silencieux
+- Créer systématiquement une règle de filtrage avant d'envoyer l'email concerné, les règles Gmail n'étant jamais rétroactives sur les emails déjà reçus
+- Créer un filtre ciblant le mot-clé 'unsubscribe' présent dans le corps de l'email pour identifier et masquer automatiquement les emails marketing
+- Filtrer les emails contenant un fichier invite.ics (invitation calendrier) pour automatiser leur traitement plutôt que de les gérer manuellement
+- Filtrer automatiquement les confirmations d'acceptation d'invitation, une information généralement inutile une fois la présence confirmée
+- Utiliser le raccourci X pour sélectionner plusieurs emails simultanément et les archiver en une seule action groupée
+- Adopter un processus de décision binaire rapide pour chaque email (intéressant ou non) suivi immédiatement de l'action correspondante, sans hésitation
+- Créer un filtre bilingue (mots-clés français et anglais) pour capturer toutes les factures quelle que soit la langue de l'expéditeur
+- Combiner une recherche par opérateur OR (facture OR invoice) pour retrouver rétroactivement tous les emails correspondant à une catégorie multilingue
+- Installer l'extension Compose AI et utiliser le déclencheur double slash dans un email pour obtenir une aide à la rédaction assistée par IA
+- Utiliser le pipeline email vers Notion en priorité pour sauvegarder des newsletters riches en contenu, plus pratique qu'un simple archivage email
+
+## Cas d'usage reels
+- [[]]

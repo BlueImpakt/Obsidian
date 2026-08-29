@@ -1,0 +1,191 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Construire ses connaissances"
+source_transcript: "19. Comment organiser ses idees.txt"
+---
+
+# 19. Comment organiser ses idees ?
+
+## Resume
+- Introduction du mind mapping comme outil favori pour organiser ses idées, une nouvelle partie de la formation dédiée à l'organisation des idées.
+- Explication scientifique que le modèle du mind mapping réplique la structure naturelle du cerveau, facilitant l'approfondissement d'une pensée spécifique.
+- Premier bénéfice du mind mapping : organiser des projets de manière libre, avec de nombreuses applications disponibles pour le faire.
+- Bénéfice pour l'apprentissage : les fiches en mind mapping améliorent la rétention grâce à la visualisation des liens entre les idées.
+- Présentation d'un outil de visualisation de notes permettant de faire des liens entre elles, utile dans le cadre du système de second cerveau.
+- Comparaison entre outil de visualisation de notes et mind map : la mind map est préférée pour la phase de production car elle permet de creuser chaque sujet.
+- Distinction d'usage entre un outil pour trouver de nouvelles idées et la mind map pour creuser et approfondir la production, avec plusieurs façons de l'utiliser.
+- Présentation de l'option de vue verticale des mind maps, avec mention de l'application MindNode (exclusive Mac) utilisée longtemps avant un récent changement.
+- Préférence de centraliser certaines informations dans Notion par sécurité, avant retour sur les avantages du mind mapping : rétention et créativité par connexions.
+- Exemples d'application concrète du mind mapping : écriture de vidéo, plan, publicités Facebook Ads, définition de persona, tous facilités par l'approfondissement structuré.
+- Application à l'écriture d'un livre : la mind map devient directement la structure du livre, avec possibilité de visualisation en mode outliner (plan hiérarchique).
+- Deuxième bénéfice majeur : l'amélioration de la compréhension grâce à l'architecture visuelle, particulièrement utile pour les personnes à mémoire visuelle développée.
+- Explication que la structure visuelle avec liens et sous-parties est plus puissante que de simples fiches pour la mémorisation à long terme.
+- Présentation de la fonctionnalité de zoom permettant de voir la vue d'ensemble (big picture) ou de descendre dans les détails en masquant/affichant les branches.
+- Suggestion d'utiliser une mind map pour structurer sa to-do list, orientant directement vers l'action avec une architecture claire des priorités.
+- Conseil de code couleur à trois niveaux pour de bonnes mind maps : niveau thématique, idées principales, puis arguments détaillés.
+- Astuce d'ajout d'images par simple glisser-déposer depuis Google Images, utilisées avec parcimonie aux moments pertinents dans la mind map.
+- Démonstration de structuration par questions : formuler des sous-branches comme des questions (quelles études le montrent, quelles alternatives) pour guider l'approfondissement.
+- Méthode habituelle de l'auteur : se poser des questions puis y répondre, avec conseil de garder chaque nœud concis, idéalement une phrase courte.
+- Illustration de l'importance de la précision des nœuds : un intitulé vague rend difficile l'approfondissement, contrairement à un intitulé précis et actionnable.
+- Comparaison avec des outils collaboratifs type Miro : la force du mind mapping réside dans la rapidité permise par les raccourcis clavier.
+- Précision que l'objectif du mind mapping n'est pas l'esthétique mais l'organisation efficace des idées, les outils trop visuels ralentissant le processus.
+- Recommandation complémentaire sous-exploitée en entreprise : faire des dessins simples pour visualiser des idées et créer des liens entre différents éléments.
+- Confirmation que la visualisation par dessins aide à mieux organiser, clarifier et transmettre les idées, malgré une perception parfois jugée vieillotte.
+- Préférence personnelle pour le dessin papier lors du brainstorming, offrant moins de contraintes que les outils numériques structurés.
+- Nuance sur les limites du papier pour la planification stratégique, où le besoin de créer des liens entre éléments favorise les outils numériques.
+- Démonstration de la fonctionnalité insert link permettant de créer des liens entre différents topics d'une mind map, bien que perfectible comparée aux flèches visuelles.
+- Message clé sur l'organisation visuelle : représenter les idées sous forme de graphique ou de timeline selon leur nature, comme un plan visualisé directement.
+- Exemple de calendrier annuel dessiné à l'ancienne (mois par mois avec numérotation des jours) pour avoir une vue d'ensemble de l'année.
+- Poursuite de la démonstration du calendrier manuscrit couvrant toute l'année sur deux pages, un bon moyen de visualiser les données malgré l'écriture imparfaite.
+- Recommandation de ne pas hésiter à dupliquer un système sur plusieurs supports, par exemple utiliser un support analogique en complément de la to-do list numérique.
+- Recommandation de matérialiser visuellement les tâches du jour, avec suggestion complémentaire pour les profils à mode de fonctionnement plutôt auditif.
+- Présentation de l'outil Braindump pour stocker des enregistrements audio (notes vocales) partageables, adapté aux profils auditifs.
+- Précision que cet outil peut faire doublon avec Notion selon l'usage, mais permet spécifiquement de stocker et labelliser des fichiers audio variés.
+- Présentation des boards (canevas) sur Obsidian, un outil de notes personnelles qui sera approfondi dans la partie sur le second cerveau.
+- Démonstration d'un canevas Obsidian existant, illustrant la capacité de l'outil à intégrer directement des notes dans une structure visuelle.
+- Exemple concret d'une note avec fichier audio intégré (extrait de Naval Ravikant) reliée à d'autres éléments du canevas Obsidian.
+- Nuance sur Obsidian : moins recommandé pour le mind mapping pur (absence de raccourcis clavier) mais excellent pour créer des liens entre notes, cartes et images.
+- Présentation d'une méthode physique alternative pour ceux moins à l'aise avec la technologie : organiser ses idées sur un mur.
+- Description concrète de la méthode du mur divisé en trois avec du scotch, offrant une concrétisation physique de la progression particulièrement motivante.
+- Principe clé : visualiser la même donnée sous différentes formes (écrit, audio, board) à différents endroits peut débloquer des insights différents.
+- Pratique personnelle de lire et écouter simultanément un livre pour varier les inputs, ces deux modalités activant des zones cérébrales différentes.
+- Introduction de l'écriture comme méthode de structuration des idées, avec premier conseil d'écrire même quand tout va bien pour partager ses émotions positives.
+- Chiffre clé rappelé : environ 20 000 pensées quotidiennes dont 80% négatives, d'où l'importance d'écrire pour garder une trace des émotions négatives.
+- Conseil d'écrire aussi les moments positifs pour cultiver la gratitude et mieux mémoriser ses ambitions écrites noir sur blanc.
+- Précision que cette pratique d'écriture n'est pas un journal intime classique, mais un outil personnel de trace et de recul sur les moments difficiles.
+- Recommandation de pratiquer la gratitude en notant trois choses positives, une pratique initialement perçue comme du bullshit mais efficace avec le temps.
+- Confirmation que l'écriture manuscrite sur papier active des parties du cerveau différentes de la saisie numérique, avec conseil de s'éloigner des écrans.
+- Conseil de séparer l'écriture de l'édition : ne pas s'arrêter pour corriger les fautes en plein flow, continuer d'écrire pour préserver le processus créatif.
+- Confirmation que écriture et édition mobilisent deux parties cérébrales différentes, avec transition vers la présentation du système personnel de journaling.
+- Présentation du système de journaling personnel hébergé dans Notion, avec exemple concret d'entrée journalière incluant un bilan sportif.
+- Exemple d'entrée de gratitude quotidienne, illustrant comment se rappeler positivement d'une journée même en cas d'appréhension initiale.
+- Exemple d'entrée de bilan d'accomplissement quotidien (3 leçons tournées sur 5 prévues), avec sentiment global positif malgré l'objectif non atteint intégralement.
+- Exemple concret de l'effet dédramatisant de l'écriture : un incident négatif (contenu copié) mis par écrit devient moins obsédant que gardé dans la tête.
+- Transition vers la présentation de l'outil XMind utilisé pour les mind maps, après conclusion de la section sur l'écriture personnelle.
+- Démonstration de deux méthodes différentes pour creuser dans les différents topics d'une mind map, selon la préférence de structuration.
+- Présentation des raccourcis clavier XMind : Tab pour créer une sous-branche, Entrée pour une nouvelle branche, et commande+option+flèche pour réorganiser.
+- Présentation du choix de structure d'arbre disponible (mode mind map classique ou structure logique), avec préférence personnelle pour l'approche logique.
+- Démonstration pratique de construction d'une structure simple avec intro et première idée, illustrant le processus de base pas à pas.
+- Explication de la navigation entre niveaux avec Tab dans les deux sens, permettant de continuer à structurer les sujets et sous-idées de manière fluide.
+- Exemple concret complet d'utilisation du format préféré pour structurer une formation sur l'arrêt du tabac, illustrant la méthode en conditions réelles.
+- Poursuite de l'exemple avec structuration des questions clés : quels sont les risques, quels sont les moyens et médicaments qui peuvent aider.
+- Approfondissement de la branche risques avec exemple concret de sous-catégories (types de cancer liés au tabac), illustrant le creusement en cascade.
+- Invitation à s'exercer avec un sujet personnel d'intérêt (foot, MMA) pour pratiquer la technique de creusement par questions successives.
+- Confirmation que cette technique de plan par questions aide grandement, avant transition vers l'usage principal d'Obsidian pour l'organisation des idées.
+- Exemple d'usage professionnel : un board (non mind map) utilisé pour driver une session de coaching client d'une heure grâce à une organisation préalable claire.
+
+## Concepts cles
+- introduction du mind mapping comme outil d'organisation des idées
+- explication scientifique : le mind mapping réplique la structure du cerveau
+- premier bénéfice du mind mapping : organiser des projets de manière libre
+- bénéfice pour l'apprentissage : amélioration de la rétention via visualisation des liens
+- présentation d'un outil de visualisation de notes liées (second cerveau)
+- comparaison : mind map préférée pour la production (creuser chaque sujet)
+- distinction d'usage entre outil de découverte d'idées et mind map de production
+- présentation de MindNode (exclusif Mac) et de la vue verticale
+- préférence de centraliser dans Notion par sécurité et rappel des avantages du mind mapping
+- exemples concrets d'application (script vidéo, Facebook Ads, persona)
+- application à l'écriture d'un livre en mode outliner
+- deuxième bénéfice : amélioration de la compréhension via l'architecture visuelle
+- explication : la structure visuelle est plus puissante que les fiches pour mémoriser
+- présentation de la fonctionnalité de zoom (vue d'ensemble vs détails)
+- suggestion d'utiliser une mind map pour structurer une to-do list orientée action
+- conseil de code couleur à trois niveaux (thématique, idées, arguments)
+- astuce d'ajout d'images par glisser-déposer depuis Google Images
+- démonstration de structuration par questions guidant l'approfondissement
+- conseil de concision : une phrase courte par nœud de mind map
+- illustration de l'importance de la précision des nœuds pour faciliter l'approfondissement
+- comparaison avec Miro : force du mind mapping dans la rapidité des raccourcis clavier
+- précision : l'objectif est l'organisation efficace, pas l'esthétique
+- recommandation sous-exploitée en entreprise : faire des dessins simples
+- confirmation des bénéfices de la visualisation par dessins malgré une perception vieillotte
+- préférence personnelle pour le dessin papier lors du brainstorming (moins de contraintes)
+- nuance sur les limites du papier pour la planification stratégique nécessitant des liens
+- démonstration de la fonctionnalité insert link entre topics de mind map
+- message clé : représenter les idées en graphique ou timeline selon leur nature
+- exemple de calendrier annuel dessiné à l'ancienne pour vue d'ensemble
+- poursuite de la démonstration du calendrier manuscrit sur deux pages
+- recommandation de dupliquer un système sur plusieurs supports (numérique et analogique)
+- recommandation de matérialisation visuelle et adaptation aux profils auditifs
+- présentation de l'outil Braindump pour stocker des notes vocales
+- précision sur le doublon possible avec Notion et le labellisage audio
+- présentation des boards/canevas sur Obsidian
+- démonstration d'un canevas Obsidian existant avec notes intégrées
+- exemple concret de note avec fichier audio intégré (Naval Ravikant)
+- nuance sur Obsidian : peu adapté au mind mapping pur mais excellent pour les liens
+- présentation d'une méthode physique alternative sur un mur
+- description concrète du mur divisé en trois sections avec du scotch
+- principe clé : visualiser la même donnée sous différentes formes peut débloquer des insights
+- pratique personnelle de lecture et écoute simultanées pour varier les inputs cérébraux
+- introduction de l'écriture et conseil d'écrire même quand tout va bien
+- chiffre clé : 20 000 pensées quotidiennes dont 80% négatives
+- conseil d'écrire les moments positifs pour cultiver la gratitude
+- précision : ce n'est pas un journal intime mais un outil de trace et de recul
+- recommandation de noter trois choses de gratitude, efficace malgré le scepticisme initial
+- confirmation de l'activation cérébrale différente de l'écriture manuscrite vs numérique
+- conseil de séparer l'écriture de l'édition (ne pas corriger en plein flow)
+- confirmation de la distinction cérébrale écriture/édition et transition vers le système personnel
+- présentation du système de journaling personnel dans Notion
+- exemple d'entrée de gratitude quotidienne recadrant l'appréhension initiale
+- exemple d'entrée de bilan d'accomplissement quotidien (3/5 leçons)
+- exemple concret de l'effet dédramatisant de l'écriture sur un incident négatif
+- transition vers la présentation de l'outil XMind pour les mind maps
+- démonstration de deux méthodes de creusement des topics
+- présentation des raccourcis clavier XMind (Tab, Entrée, réorganisation)
+- présentation du choix de structure (mind map classique vs logique)
+- démonstration pratique de construction d'une structure simple (intro, idée)
+- explication de la navigation Tab bidirectionnelle entre niveaux
+- exemple concret complet d'une formation sur l'arrêt du tabac
+- poursuite de l'exemple avec questions structurantes (risques, moyens, médicaments)
+- approfondissement en cascade de la branche risques (types de cancer)
+- invitation à s'exercer avec un sujet personnel d'intérêt
+- confirmation de l'efficacité et transition vers Obsidian
+- exemple d'usage professionnel d'un board pour driver une session de coaching
+
+## Outils mentionnes
+- MindNode
+- Notion
+- Facebook Ads
+- Google
+- Miro
+- Braindump
+- Obsidian
+- XMind
+
+## Tips techniques
+- Utiliser le mind mapping pour les fiches de révision, la visualisation des liens entre idées améliorant significativement la rétention mémorielle
+- Utiliser le mind mapping pour structurer des tâches créatives variées (script vidéo, publicité, persona), la méthode aidant systématiquement à approfondir chaque sujet
+- Utiliser la mind map pour structurer directement un livre, avec bascule possible en mode outliner (plan hiérarchique textuel) pour voir la structure globale
+- Privilégier une structure visuelle en mind map plutôt que de simples fiches linéaires, pour une mémorisation nettement plus efficace
+- Utiliser la fonctionnalité de zoom d'une mind map pour alterner entre vue d'ensemble globale et approfondissement ciblé d'une branche spécifique
+- Utiliser une mind map pour structurer une to-do list complexe, l'architecture visuelle orientant naturellement vers l'ordre des actions à entreprendre
+- Structurer une mind map avec un code couleur à trois niveaux (thématique, idées principales, arguments) pour une lisibilité hiérarchique immédiate
+- Ajouter des images par simple glisser-déposer depuis une recherche Google, utilisées avec parcimonie uniquement aux moments visuellement pertinents
+- Formuler les branches d'une mind map sous forme de questions (quelles études, quelles alternatives) pour guider naturellement l'approfondissement du sujet
+- Garder chaque nœud de mind map concis (une phrase courte maximum), un nœud trop long limitant les possibilités de ramification claire
+- Formuler chaque nœud de manière précise et spécifique plutôt que vague, pour faciliter grandement son approfondissement ultérieur
+- Privilégier un outil de mind mapping optimisé aux raccourcis clavier plutôt qu'un outil collaboratif visuel plus lent comme Miro pour la vitesse de production
+- Faire des dessins simples à main levée pour visualiser des concepts, une pratique très sous-exploitée en entreprise malgré son efficacité
+- Privilégier le dessin papier libre pour les phases de brainstorming, moins contraignant qu'un outil numérique structuré
+- Adapter le format de représentation visuelle (graphique, timeline) à la nature du contenu, plutôt que d'utiliser systématiquement le même format
+- Dessiner un calendrier annuel simplifié à la main (mois et jours numérotés) pour obtenir une vue d'ensemble compacte de l'année sur une ou deux pages
+- Dupliquer volontairement un système d'organisation sur plusieurs supports (numérique et analogique) plutôt que de se limiter à un seul canal
+- Utiliser un outil dédié au stockage de notes vocales pour les profils à fonctionnement auditif, en complément des méthodes visuelles classiques
+- Utiliser un mur physique divisé en sections comme méthode d'organisation visuelle, particulièrement adaptée aux personnes moins à l'aise avec le numérique
+- Diviser physiquement un mur en trois sections avec du scotch pour visualiser concrètement la progression d'un projet, plus motivant qu'une tâche numérique abstraite
+- Visualiser une même information sous plusieurs formats (écrit, audio, visuel) à différents endroits, chaque format pouvant débloquer une compréhension différente
+- Combiner lecture et écoute simultanées d'un même contenu (livre audio + livre papier) pour activer des zones cérébrales complémentaires et diversifier l'apprentissage
+- Écrire ses émotions même dans les moments positifs, et pas seulement en cas de difficulté, pour ne pas perdre la trace de ces états favorables avec le temps
+- Écrire ses ambitions noir sur blanc pour mieux les mémoriser, les visualiser, et augmenter les actions concrètes qui en découlent
+- Noter systématiquement trois éléments de gratitude, une pratique souvent jugée bullshit au départ mais dont l'efficacité se révèle avec la régularité
+- Écrire à la main sur papier plutôt qu'au clavier pour cette pratique réflexive, activant des zones cérébrales différentes et plus bénéfiques
+- Séparer strictement la phase d'écriture de celle d'édition, continuer à écrire sans corriger les fautes pour préserver l'état de flow créatif
+- Établir un bilan quotidien objectif prévu vs réalisé, en gardant un sentiment positif même en cas d'objectif partiellement atteint
+- Écrire un incident négatif dès qu'il survient plutôt que de le laisser tourner en boucle mentalement, l'écriture ayant un effet dédramatisant démontré
+- Maîtriser les raccourcis clavier de base d'un outil de mind mapping (Tab pour sous-branche, Entrée pour nouvelle branche) pour une production très rapide
+- S'exercer à la technique de creusement de mind map sur un sujet personnel qui passionne, pour ancrer durablement la méthode par la pratique
+- Préparer un board d'organisation avant une session professionnelle importante (coaching, réunion), pour la driver efficacement grâce à une pensée pré-structurée
+
+## Cas d'usage reels
+- [[]]

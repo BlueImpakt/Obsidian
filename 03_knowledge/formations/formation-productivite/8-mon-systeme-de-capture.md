@@ -1,0 +1,166 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Mieux executer"
+source_transcript: "8. Mon systeme de capture.txt"
+---
+
+# 8. Mon systeme de capture
+
+## Resume
+- Introduction au système de capture personnel, avec présentation du bouton capture central déclenchant un menu contextuel.
+- Présentation des catégories de capture (newsletter, formation) déclenchant un trigger vers Make (Integromat) pour lancer une série d'actions automatisées.
+- Démonstration pratique du bouton capture appliqué à une idée YouTube : saisie du titre et d'une description optionnelle pour préciser des détails (ex : parler des plugins).
+- Confirmation visuelle de l'envoi (check) déclenchant une automatisation Make nommée capture, dont la structure va être détaillée à l'écran.
+- Présentation de Make comme outil d'automatisation permettant d'envoyer des données vers Notion, avec usage d'un webhook comme point d'entrée.
+- Explication du fonctionnement du webhook comme URL générée par Make à laquelle envoyer des données depuis une autre application.
+- Présentation de l'application Shortcuts sur iOS, une automatisation locale à l'iPhone (non hébergée sur internet), pour créer un élément de liste déclencheur.
+- Détail des catégories de capture définies dans le shortcut : tâche, note, idée vidéo YouTube, idée post LinkedIn, idée short/TikTok/réel Instagram, idée newsletter.
+- Étape pratique de récupération de l'URL webhook proposée par Make, à copier via l'action 'obtenir des contenus depuis l'URL' dans Shortcuts.
+- Précision technique sur le choix de la méthode POST (envoi de données) plutôt que GET (réception) lors de la configuration de la requête webhook.
+- Configuration des trois champs envoyés (nom, description, type) dans Shortcuts en sélectionnant précisément le champ value de chaque variable.
+- Sélection précise de la variable titre issue de l'action générée pour chaque champ, répétée à l'identique pour la description et le type.
+- Confirmation que les trois éléments (nom, description, type) sont envoyés à l'URL Make dès l'appui sur le bouton capture.
+- Ajout d'un routeur dans Make orientant l'information selon son type : les tâches sont dirigées vers IFTTT, utilisé car Akiflow (to-do list) ne s'intègre que via Zapier ou IFTTT.
+- Préférence personnelle pour Make plutôt que Zapier pour sa plus grande flexibilité, malgré l'usage nécessaire d'IFTTT en complément pour Akiflow.
+- Création d'une connexion IFTTT utilisant un second webhook Make pour transmettre l'information de capture de type tâche.
+- Démonstration de création d'une applet IFTTT : sélection du déclencheur webhook ('if this') recevant le nom d'événement défini dans Make.
+- Configuration du nom d'événement (ex : nouvelle tâche) à conserver précisément pour le réutiliser à l'étape suivante côté Make.
+- Sélection de l'action 'create task' dans IFTTT avec mapping du titre sur les valeurs d'ingrédients disponibles (valeur un, valeur deux).
+- Précision que la connexion des comptes reste à finaliser, l'action IFTTT créée permettant ensuite l'envoi effectif depuis Make.
+- Retour dans Make pour ajouter le module IFTTT existant sans avoir à renseigner le webhook, la connexion étant créée automatiquement.
+- Sélection de l'event name correspondant (nouvelle tâche) puis mapping des valeurs un et deux avec les données issues du webhook d'origine (nom, type, description).
+- Choix personnel de n'utiliser que le nom et la description parmi les trois informations disponibles, le type n'étant pas nécessaire ici.
+- Confirmation du nom d'event name réutilisé (New Task) collé dans le champ correspondant pour finaliser le lien entre les deux modules.
+- Test en direct du système complet : capture d'une tâche 'arroser les plantes' avec description, déclenchant l'envoi effectif via le flow configuré.
+- Vérification dans Make du bon déroulement du flow (réception webhook, passage par le routeur, envoi vers IFTTT) confirmant l'arrivée prochaine dans Akiflow après synchronisation.
+- Présentation d'un filtre customisable dans Make, activable par clic droit au milieu du flow pour ajouter une condition de routage.
+- Configuration du filtre pour les tâches : condition que le champ type soit égal à 'tâche' parmi les trois données envoyées (nom, description, type).
+- Transition vers la configuration de la branche Notion : présentation des deux bases de données personnelles, une pour les notes et une pour les contenus.
+- Description de la structure des tâches en base : état d'avancement, date prévue, deadline, et zone (aria) spécifique comme YouTube ou newsletter.
+- Étape de connexion Notion à Make via une intégration : recherche de la base de données, création de la connexion via une pop-up de sélection.
+- Sélection de l'action Notion 'create database item' dans Make pour créer une nouvelle ligne dans la base de données ciblée.
+- Explication du concept d'ID de base de données dans Notion, identifiant unique permettant à Make de cibler précisément la bonne base à modifier.
+- Sélection de la base de données des tâches (nommée db_tâches) dans Make, permettant de récupérer tous ses éléments existants.
+- Distinction entre la base tâches et la base notes (appelée 'no leg', le cerveau externe) : mapping minimal du nom en titre uniquement.
+- Explication du fonctionnement en cascade : la création d'une nouvelle ligne (database item) permet ensuite d'ajouter du contenu sur la page correspondante, chaque ligne étant une page Notion.
+- Ajout d'un élément de type paragraphe sur la page nouvellement créée, avec sélection du texte à insérer comme contenu.
+- Simplification en ne gardant qu'un seul item, avec passage obligatoire du database item ID listant toutes les propriétés de la ligne créée.
+- Précision que le database item ID sert à identifier précisément sur quelle ligne/page ajouter l'élément de contenu créé à l'étape précédente.
+- Reconnaissance de la complexité de la structure avec proposition d'aide en cas de blocage, résumant le principe : créer rapidement des éléments sur simple déclencheur.
+- Récapitulatif des bases de données liées : notes, LinkedIn, YouTube, newsletter, shorts, chacune liée à des tâches et à différentes zones (arias).
+- Explication du mécanisme d'ajout automatique de la zone (aria) correspondante directement sur la tâche créée.
+- Démonstration que la zone (aria) peut être récupérée automatiquement sans passer par l'ID, simplifiant la configuration du mapping.
+- Illustration du choix automatique parmi les zones existantes (YouTube, newsletter, podcast) cochant automatiquement le bon item lors de l'ajout en base.
+- Distinction entre notes, contenus (factory) et idées de formation, ces dernières ne nécessitant aucun champ supplémentaire après création.
+- Cas des tâches non liées à un contenu ou une formation, ajoutées directement, avec mention d'une erreur de configuration à corriger.
+- Vérification finale de la connexion via un test manuel (check now), confirmant que le flow fonctionne et que la tâche va bientôt arriver, avec transition vers la capture depuis ordinateur.
+- Présentation de la capture sur ordinateur via raccourci clavier, avec avantage du langage naturel pour définir une date (ex : 'today at 5pm').
+- Précision d'usage : capture par raccourci clavier privilégiée sur ordinateur pour son gain de temps, capture par bouton privilégiée en mobilité (absence de saisie rapide sur téléphone).
+- Justification du choix d'un gros bouton de capture activable par triple tap sur iPhone, pour éviter la perte de temps à ouvrir manuellement une application.
+- Synthèse du principe de réduction des frictions : capturer une idée immédiatement via le bouton, le téléphone ou le raccourci clavier selon le contexte.
+- Transition vers la capture des emails via Akiflow, présentée comme une fonctionnalité importante de l'application au-delà des tâches classiques.
+- Démonstration de l'intégration Gmail d'Akiflow : le fait d'épingler (pin) un email dans son application mail (ici Spark) déclenche sa remontée automatique.
+- Précision que l'email épinglé arrive automatiquement dans l'inbox d'Akiflow, consultable directement depuis l'application.
+- Démonstration de la synchronisation manuelle (normalement automatique toutes les cinq minutes) permettant de cliquer sur l'élément pour retourner directement à l'email d'origine.
+- Présentation de ce dernier pilier du système de capture comme fonctionnant aussi bien sur Mac que sur iPhone via l'application Spark disponible sur les deux.
+- Bilan des outils centraux du système : Google Calendar pour le calendrier, Gmail pour les emails, Notion pour les tâches, avec préférence pour un minimum d'applications plutôt que Todoist.
+- Précision qu'Akiflow permet de centraliser automatiquement les tâches issues de nombreux outils tiers (Microsoft To Do, Linear, zooms) en un seul endroit.
+- Conclusion sur Akiflow comme outil concentrant tout ce qu'une bonne to-do list doit offrir, incluant l'intégration de messages Slack et GitHub.
+
+## Concepts cles
+- introduction du système de capture personnel (bouton capture central)
+- présentation des catégories de capture déclenchant un trigger Make (Integromat)
+- démonstration pratique du bouton capture appliqué à une idée YouTube
+- confirmation de l'envoi déclenchant l'automatisation Make nommée capture
+- présentation de Make pour envoyer des données vers Notion via webhook
+- explication du fonctionnement du webhook comme URL générée par Make
+- présentation de Shortcuts iOS comme automatisation locale non hébergée
+- détail des catégories de capture définies dans le shortcut
+- étape pratique de récupération de l'URL webhook dans Shortcuts
+- précision technique sur le choix de la méthode POST plutôt que GET
+- configuration des trois champs envoyés via sélection du champ value
+- sélection précise des variables titre, description et type
+- confirmation de l'envoi des trois éléments à l'URL Make au clic capture
+- ajout d'un routeur Make orientant les tâches vers IFTTT (limite d'intégration Akiflow)
+- préférence personnelle pour Make plutôt que Zapier (plus de flexibilité)
+- création d'une connexion IFTTT via un second webhook Make
+- démonstration de création d'une applet IFTTT (déclencheur webhook)
+- configuration du nom d'événement à conserver pour l'étape suivante
+- sélection de l'action create task avec mapping des valeurs d'ingrédients
+- précision : la connexion des comptes reste à finaliser après la création de l'action
+- ajout du module IFTTT dans Make sans configuration manuelle du webhook
+- mapping des valeurs un et deux avec les données du webhook d'origine
+- choix personnel de n'utiliser que le nom et la description parmi les trois champs
+- confirmation du nom d'event name réutilisé pour finaliser le lien entre modules
+- test en direct du système complet avec une tâche exemple (arroser les plantes)
+- vérification du bon déroulement du flow (webhook, routeur, IFTTT, Akiflow)
+- présentation d'un filtre customisable dans Make (clic droit pour ajouter)
+- configuration du filtre : condition type égal à tâche
+- présentation des deux bases de données Notion (notes et contenus)
+- description de la structure des tâches (avancement, dates, zone aria)
+- étape de connexion Notion-Make via création d'une intégration
+- sélection de l'action create database item dans Make
+- explication du concept d'ID de base de données Notion
+- sélection de la base de données des tâches (db_tâches) dans Make
+- distinction entre base tâches et base notes (cerveau externe), mapping minimal
+- explication : chaque ligne créée dans Notion est une page pouvant recevoir du contenu
+- ajout d'un élément de type paragraphe sur la page créée
+- passage obligatoire du database item ID listant les propriétés de la ligne
+- précision : le database item ID identifie la page cible pour l'ajout de contenu
+- reconnaissance de la complexité de la structure avec proposition d'aide
+- récapitulatif des bases de données liées par zone (aria)
+- explication de l'ajout automatique de la zone (aria) sur la tâche
+- démonstration : la zone (aria) récupérée automatiquement sans passer par l'ID
+- illustration du choix automatique parmi les zones existantes
+- distinction entre notes, contenus (factory) et idées de formation
+- cas des tâches non liées à un contenu ou une formation (erreur de configuration constatée)
+- vérification finale du flow (check now) et transition vers la capture ordinateur
+- présentation de la capture ordinateur avec reconnaissance du langage naturel pour les dates
+- précision d'usage : raccourci clavier sur ordinateur vs bouton en mobilité
+- justification du bouton de capture activable par triple tap iPhone
+- synthèse du principe de réduction des frictions à la capture
+- transition vers la capture des emails via Akiflow
+- démonstration de l'intégration Gmail via le pin d'email dans Spark
+- précision : l'email épinglé arrive automatiquement dans l'inbox Akiflow
+- démonstration de la synchronisation Akiflow (automatique toutes les 5 minutes)
+- présentation du dernier pilier de capture fonctionnant sur Mac et iPhone
+- bilan des outils centraux (Google Calendar, Gmail, Notion) et préférence minimaliste
+- précision : Akiflow centralise les tâches de nombreux outils tiers
+- conclusion : Akiflow concentre tout ce qu'une bonne to-do list doit offrir
+
+## Outils mentionnes
+- Make
+- YouTube
+- Notion
+- Shortcuts (iOS)
+- LinkedIn
+- IFTTT
+- Akiflow
+- Zapier
+- Gmail
+- Spark
+- Google Calendar
+- Todoist
+- Microsoft To Do
+- Linear
+- Slack
+- GitHub
+
+## Tips techniques
+- Utiliser un webhook Make comme point d'entrée générique pour recevoir des données envoyées depuis n'importe quelle application externe
+- Adapter la liste des catégories de capture à ses propres canaux de contenu, pour router automatiquement chaque idée vers le bon système
+- Toujours sélectionner la méthode POST (et non GET) lors de l'envoi de données vers un webhook, GET étant réservé à la réception
+- Utiliser un routeur dans Make pour orienter chaque type de capture vers l'outil final adapté, en contournant les limites d'intégration natives (ex : Akiflow via IFTTT)
+- Toujours conserver et réutiliser à l'identique le nom d'événement défini côté IFTTT lors de la configuration du module Make correspondant
+- Filtrer chaque branche du routeur Make sur le champ type reçu, pour n'exécuter l'action que si la donnée correspond à la catégorie ciblée
+- Ne mapper que le strict nécessaire (ex : le titre) lors de la création d'un item Notion via Make, pour garder le système le plus simple possible
+- Tester manuellement chaque connexion via un déclenchement 'check now' avant de considérer un flow d'automatisation comme opérationnel
+- Utiliser la saisie en langage naturel (ex : 'today at 5pm') pour définir rapidement une date lors de la capture, plutôt qu'un sélecteur de calendrier manuel
+- Adapter la méthode de capture au contexte : raccourci clavier rapide sur ordinateur, bouton dédié en mobilité où la saisie rapide n'existe pas
+- Configurer un déclencheur physique rapide (ex : triple tap iPhone) pour la capture mobile, afin d'éliminer la friction d'ouverture manuelle d'une application
+- Multiplier les points d'entrée de capture (bouton, téléphone, raccourci) adaptés à chaque contexte, pour réduire au minimum la friction entre l'idée et sa capture
+- Privilégier un minimum d'applications interconnectées plutôt que multiplier les outils, même si cela demande un montage d'automatisation plus complexe (IFTTT)
+
+## Cas d'usage reels
+- [[]]

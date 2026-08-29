@@ -1,0 +1,324 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Les Fondamentaux IA"
+source_transcript: "0.12 Les LLM.txt"
+---
+
+# 0.12 Les LLM
+
+## Resume
+- Introduction à la leçon sur les concepts fondamentaux de l'IA générative et des LLM, avec l'objectif de rendre concret l'usage quotidien d'outils comme ChatGPT, Claude ou Gemini. Rappel de la définition philosophique de l'intelligence artificielle par John McCarthy (1956) : faire faire à des machines ce qui nécessiterait de l'intelligence si c'était fait par des humains. L'auteur nuance : ce n'est pas une intelligence cognitive capable de penser comme un humain.
+- L'IA donne l'illusion d'une intelligence grâce à l'entraînement massif et aux innovations technologiques, sans qu'il s'agisse d'une vraie intelligence cognitive. Exemple cité : ChatGPT capable de détecter un cancer de la peau sur une photo, une performance qui égale ou dépasse une expertise humaine, qu'on l'appelle ou non intelligence artificielle.
+- L'auteur explique pourquoi il accepte l'abus de langage autour de l'IA : peu importe que ce ne soit pas une vraie intelligence, ce qui compte c'est que ces technologies permettent de grandes avancées. Derrière ChatGPT, Claude ou Gemini se cache en réalité un empilement de nombreuses innovations technologiques accumulées au fil du temps, pas une invention soudaine.
+- Les LLM reposent fondamentalement sur des probabilités et des scénarios de probabilité, appliqués à très grande vitesse sur des données préentraînées, ce qui donne une impression quasi humaine. Le débat reste ouvert : pour certains ce n'est que des maths et des algorithmes, pour d'autres si ça résout des problèmes réels, c'est suffisant pour être qualifié d'intelligence.
+- Définition pragmatique retenue : on appelle IA tout système qui automatise des tâches cognitives normalement réservées aux humains, même sans intelligence réelle derrière. Introduction de la distinction entre IA traditionnelle (dite discriminative), qui existait déjà avant 2022, et IA générative, plus récente.
+- L'IA discriminative existe depuis longtemps mais restait peu visible car mêlée à des algorithmes classiques. Elle est présente dans les recommandations Spotify, les algorithmes YouTube, la publicité en ligne sur Meta, les moteurs de recherche et la classification de données, en s'appuyant sur du machine learning et les choix des utilisateurs.
+- L'IA générative se distingue de l'IA discriminative par sa capacité à concevoir du contenu inédit, jamais créé auparavant, contrairement à un système de recommandation (comme Netflix) qui se contente de sélectionner parmi de l'existant. Elle peut ainsi écrire un scénario de film entier, dialogues et scènes inclus, puis générer images, vidéos ou musiques. Exemples cités : Suno et Eleven Labs pour créer de la musique sans être musicien, à condition de bien prompter et de persévérer.
+- La génération vidéo (par exemple avec VO3) n'est pas encore à la hauteur mais progresse très vite ; l'auteur prédit qu'un film long-métrage 100% réalisé par IA pourrait recevoir une récompense aux Oscars d'ici 5 à 10 ans. Il souligne l'accélération continue des progrès sur l'image et la vidéo, et introduit la génération de texte comme principe fondamental de tous les outils connus.
+- L'IA générative permet de produire du texte, des images et potentiellement de la musique sur tout ce qui est créable. Chiffres clés du marché : estimé à 132 milliards de dollars en 2024, avec une projection à 1000 milliards en 2030, soit environ la moitié du PIB de la France.
+- Les investissements massifs expliquent la croissance du marché de l'IA : Microsoft a investi 10 milliards dans OpenAI, Google dépense 20 milliards par an en IA, Amazon a investi 4 milliards dans Anthropic, et Meta investit massivement notamment via son modèle open source Llama. L'auteur compare cette transformation à l'arrivée d'Internet dans les années 90, mais estime qu'elle sera radicalement plus puissante.
+- L'auteur argumente que l'IA aura un impact plus large qu'Internet car elle touchera absolument tous les secteurs, y compris ceux non concernés par la révolution numérique (comme l'agriculture). Exemple : un ouvrier agricole pourrait bénéficier de caméras filmant son champ pour obtenir des recommandations en temps réel basées sur la météo et l'état des cultures. Il annonce que la médecine et d'autres domaines seront pareillement transformés.
+- Aucun métier n'échappera au changement induit par l'IA, y compris via la reconnaissance d'images et l'automatisation des process (exemple : recommandation automatique de stocks pour une petite épicerie). Cette transformation entraînera une destruction d'emplois importante sur les métiers à faible valeur ajoutée, les traducteurs étant cités comme l'un des premiers métiers menacés.
+- Exemple concret de disruption : la traduction multilingue en temps réel lors d'interviews ou conférences de presse (comme un joueur de foot interviewé après un match), remplaçant le besoin de plusieurs interprètes pour chaque langue de diffusion. Transition vers les trois architectures dominantes de l'IA générative : les transformers, les modèles de diffusion (génération d'images) et les modèles autorégressifs spécialisés (musique, audio).
+- Explication du fonctionnement des modèles de diffusion : ils partent d'un bruit aléatoire et nettoient progressivement l'image jusqu'à obtenir un résultat net, comme observé au tout début de Midjourney. Le processus se déroule en quatre étapes, commençant par un bruit initial totalement aléatoire, puis guidé par la description textuelle fournie par l'utilisateur (exemple : « chat astronaute pizza espace »).
+- Détail du processus de débruitage : le modèle garde la description du prompt et guide chaque étape, avec une couche successive de traitement répétée entre 20 et 50 fois pour prédire et supprimer petit à petit le bruit, jusqu'à obtenir une image cohérente alignée avec la description textuelle. Ce raffinement progressif explique pourquoi la génération d'image semble instantanée alors qu'il s'agit d'un processus en plusieurs étapes, utilisé par des outils comme Dall-E ou Midjourney.
+- Transition vers les modèles autorégressifs spécialisés, illustrés par la génération musicale. Exemple avec un prompt « ballade rock années 80 » : le modèle choisit d'abord une note de départ (DO), puis en déduit la note suivante la plus probable en fonction de ce qui la suit statistiquement souvent (MI).
+- Le modèle autorégressif musical continue de générer note par note en gardant en mémoire le contexte du prompt initial et de tout ce qui a déjà été généré, ce qui permet d'obtenir une mélodie cohérente sur toute sa longueur. C'est ce maintien du contexte des notes précédentes qui rend la musique générée crédible.
+- Les outils comme Sora ou VO3 combinent diffusion d'images et génération image par image, en assurant une continuité de mouvement entre les frames (exemple : la tête d'un chien qui tourne progressivement). C'est cette contrainte de génération image par image qui explique pourquoi les séquences vidéo restent courtes, sans pouvoir atteindre 2-3 minutes sans dégradation.
+- La génération vidéo est un processus long et coûteux car chaque image doit être générée séquentiellement à partir de ce qui a déjà été créé (le modèle ne peut pas prédire le futur). Même Google, qui a une stratégie d'ouverture de son écosystème et des prix plus abordables, reste cher sur la génération vidéo avec VO3, car chaque étape repose sur un calcul de probabilité de la suite la plus plausible.
+- Présentation de l'architecture Transformer, née en 2017 avec le papier « Attention is all you need » de Noam Shazeer, une innovation révolutionnaire car elle permet de traiter les données en parallèle plutôt que mot par mot de façon séquentielle. Analogie : avant, c'était comme un musicien jouant note par note, avec Transformer il voit toute la partition en même temps et peut coordonner l'ensemble en temps réel.
+- Chiffres clés sur l'ampleur des modèles : GPT-4 est estimé à environ 1,7 trillion de paramètres, et Gemini 2.5 Pro peut traiter jusqu'à 10 millions de tokens de contexte. Introduction des quatre étapes du traitement d'une requête par ChatGPT, la première étant la tokenisation, qui découpe le texte en mots ou bouts de mots avant tout traitement.
+- Explication du principe de l'embedding : une fois les mots découpés et numérotés, ils sont classifiés en vecteurs dispersés dans un espace pouvant compter jusqu'à 4000 dimensions différentes. Chaque mot devient un point flottant dans cet espace, et le modèle regarde ensuite quels sont les mots les plus proches de lui.
+- Détail de l'étape de tokenisation : elle transforme le langage humain en nombres compréhensibles par les LLM, chaque mot ou sous-mot recevant un numéro unique dans un dictionnaire géant. Les mots longs comme « incontestablement » sont divisés en plusieurs bouts (par exemple quatre).
+- La tokenisation est plus rentable dans les langues utilisant peu de caractères, comme l'anglais, ce qui rend le traitement du français plus coûteux en tokens. Exemple chiffré : « hello » compte pour un token contre deux tokens pour « bonjour », ce qui signifie qu'on paie plus cher pour une même conversation en français, un facteur d'autant plus important à grande échelle (intégration de LLM dans des applications).
+- Présentation du Byte Pair Encoding (BPE), la méthode de tokenisation qui commence par les caractères individuels puis fusionne progressivement les paires les plus fréquentes (exemple : E et R deviennent un seul token car « ER » est fréquent). Ce processus se répète jusqu'à obtenir au moins 50 000 tokens, voire plus, afin d'être plus rapide et efficace.
+- Comparaison du BPE avec deux approches naïves : la tokenisation par caractère (ex : « bonjour » = 7 tokens, difficile de capturer le sens) et par mot entier (vocabulaire gigantesque, problème avec les mots rares). Le BPE est présenté comme le bon compromis entre longueur et couverture, efficace à la fois pour les mots fréquents et les mots rares. Mention de l'outil Tokenizer d'OpenAI pour visualiser le découpage d'un texte.
+- Démonstration pratique de l'outil Tokenizer d'OpenAI avec la phrase « le chat attrape la souris », découpée en six tokens visibles avec leurs identifiants numériques associés. L'auteur montre comment certains mots comme « le » ont un identifiant plus petit que « souris ».
+- Suite de la démonstration avec la phrase « la pomme est mangée par l'oiseau », montrant que la tokenisation ne suit pas toujours une logique intuitive (par exemple on pourrait s'attendre à ce que « l' » et l'apostrophe soient regroupés d'une certaine façon).
+- Suite de la démonstration : « l'apostrophe » se regroupe avec le « o » et non l'inverse, confirmant l'absence de logique intuitive du découpage. L'auteur note qu'un meilleur découpage et un plus grand vocabulaire peuvent réduire le nombre de tokens nécessaires, mais qu'un modèle plus lourd peut être plus lent à entraîner ; il recommande de tester des prompts pour comprendre la tokenisation, tout en rassurant que les prompts longs restent aujourd'hui bien gérés.
+- Introduction à l'embedding, deuxième étape après la tokenisation : il s'agit de disposer les nombres obtenus dans un espace multidimensionnel où les mots proches en sens sont proches dans l'espace (exemples : « chat » et « chien », « roi » et « reine », « Paris » et « Londres » en tant que capitales). Cet espace peut compter jusqu'à mille dimensions différentes, chacune capturant un sens différent.
+- Illustration des dimensions de l'espace vectoriel par des questions possibles : est-ce un animal ? est-ce positif ? est-ce abstrait ? est-ce une action ? Chaque dimension permet de situer un mot par rapport à ces critères.
+- L'embedding reste fondamentalement mathématique : l'exemple classique « roi - homme + femme = reine » illustre ces relations vectorielles. L'auteur relie ce concept à la vectorisation utilisée dans les RAG : le pre-training des LLM constitue leur base de connaissances, tandis qu'un RAG permet d'ajouter ses propres données spécifiques dans un vector store consulté à la demande. Ce processus d'embedding est également central dans la création d'agents.
+- Introduction à l'architecture Transformer et à la multi-head self-attention à travers l'exemple de la phrase « la poste ferme à midi parce que l'employé est malade ». Analogie : douze personnes recevant la même phrase, chacune avec un rôle différent (trouver le rôle de l'employé, faire le lien avec « malade », etc.), qui travaillent toutes en simultané sur la même phrase.
+- Le traitement parallèle en multi-head self-attention permet de comprendre en un millième de seconde toutes les relations entre les mots d'une phrase. Exemple détaillé avec plusieurs têtes d'attention : tête 1 pour les relations sujet-verbe, tête 2 pour les relations sémantiques, tête 3 pour les références pronoms-noms, et d'autres têtes pour le contexte et les lieux.
+- L'avantage majeur de l'architecture Transformer est de traiter tous les mots simultanément, contrairement aux anciens modèles qui traitaient les mots un par un de façon séquentielle (ce qui prenait trop de temps et manquait de contexte). Introduction de la deuxième brique importante : les feed-forward networks, qui synthétisent les analyses de chaque « employé » (tête d'attention) en une représentation lisible globale.
+- Détail du fonctionnement du feed-forward network : chaque token découpé (directrice, ferme, poste...) subit une phase d'expansion où l'on va chercher des vecteurs proches (ex : directrice évoque rôle, autorité), puis des fonctions mathématiques réorganisent l'information en activant certaines dimensions pertinentes (ex : midi active les dimensions horaires).
+- Suite du feed-forward network : après l'expansion, l'information enrichie est recompressée à une dimension plus faible avec de nouveaux patterns ajoutés. Exemple : « directrice » devient l'acteur principal de l'action, « midi » devient un signal horaire confirmé, « malade » devient la cause d'une action, ce qui enrichit le contexte de la conclusion.
+- Dernière étape du Transformer : la layer normalisation, qui résout le problème de perte d'information au fil des nombreuses couches de traitement grâce aux connexions résiduelles. Plutôt que chaque couche remplace totalement la précédente, elle s'appuie dessus en ajoutant des améliorations, ce qui permet de conserver l'information originale même après 80 couches (exemple : « directrice » reste identifiable tout en accumulant du contexte). La layer normalisation agit comme un contrôle qualité final du travail effectué.
+- Évolution du nombre de paramètres des modèles : GPT-1 avait 117 millions de paramètres, GPT-2 (2019) 1,5 milliard, GPT-3 (2020) 175 milliards, et GPT-4 est estimé à 1,76 trillion de paramètres, entraînant des coûts de calcul (compute) de plus en plus élevés. Une fois le contexte assimilé, le modèle génère sa réponse par prédiction parmi 50 000 à 200 000 possibilités (voire plus), chacune associée à une probabilité : exemple pour « la capitale de la France est... », 89% de probabilité pour « Paris », 3,2% pour « situé », 2,1% pour « Lyon » et 1,8% pour « belle ».
+- Explication des réponses alternatives possibles moins probables mais plausibles (« Lyon » car grande ville, « est située » car grammaticalement correct, « belle » de façon poétique). Chaque token généré coûte en ressources, et la créativité du résultat est influencée par deux paramètres clés : la température et le top P, présentés comme prochain sujet.
+- Présentation du greedy sampling, première des trois stratégies de génération probabiliste : il maximise toujours la probabilité la plus haute sans créativité. Exemple : pour « il était une fois », il y a 45% de chances que ce soit toujours suivi par le même mot, rendant la sortie très reproductible (idéal pour cohérence maximale : traduction, résumés factuels, analyses techniques), mais très limité pour la créativité.
+- Complément sur le greedy sampling : si on l'activait sur ChatGPT, il produirait toujours la même formule stéréotypée (« il était une fois un roi... ») car statistiquement c'est le résultat le plus probable après analyse de millions d'exemples. Introduction du random sampling, un choix totalement aléatoire pouvant produire des résultats chaotiques y compris en sélectionnant des mots à très faible probabilité.
+- Le random sampling, choix totalement aléatoire, peut produire des résultats absurdes (exemple : « il était une fois jedi chaussures deux mains »), utile pour du brainstorming très créatif s'il est bien dosé, mais inutilisable pour un travail sérieux. Le nucleus sampling, troisième stratégie et équilibre parfait le plus proche de ce qu'utilisent les LLM aujourd'hui, élimine d'abord les mots à très faible probabilité et ne conserve que ceux qui totalisent 90% des probabilités, puis tire au sort parmi cette liste restreinte, évitant ainsi les mots farfelus tout en conservant de la variété.
+- Le nucleus sampling exclut les mots trop improbables (jamais « il était une fois Cheda »). Les paramètres température et top P permettent à l'utilisateur d'orienter le comportement du modèle : température à zéro se rapproche du greedy sampling, température élevée se rapproche du random sampling, et une combinaison modérée de température et top P à 0,9 se rapproche du nucleus sampling.
+- Les paramètres température et top P peuvent être manipulés sur la plateforme OpenAI, dans le Playground : absents sur les modèles récents avec reasoning intégré (le grand public ne connaît pas le top P), ils restent disponibles sur les modèles plus anciens comme GPT-4, où la température va de 0 à 2 et le top P de 0 à 1 pour ajuster la créativité. La température est présentée comme un modificateur d'audace de l'IA, via l'analogie d'un débat à plusieurs voix : à température 0, seule la voix la plus forte (la plus probable) s'exprime ; à température 1, chaque voix parle de manière proportionnelle à sa probabilité.
+- Suite de l'analogie du débat politique pour illustrer la température : à température 1 on écoute des voix plus variées, à température 2 on donne un mégaphone même aux voix les plus faibles et farfelues, ce qui permet d'entendre des visions jamais exprimées à basse température.
+- Le top P est comparé au videur d'une boîte de nuit : il classe tous les mots possibles par probabilité et ne laisse entrer que les plus probables (par exemple les 90 premiers), excluant les mots jugés trop improbables ou décalés par rapport au contexte, la sélection s'adaptant ainsi à ce contexte. Exemple : sans top P, un modèle pourrait générer « Paris est la capitale de la saucisse » (probabilité infime de 0,0001%), mais avec un top P élevé, la sélection reste crédible. Premier réglage recommandé pour le support client : température 0.2, pour privilégier des réponses factuelles plutôt que créatives.
+- Suite des recommandations de réglages selon le cas d'usage : support client (top P 0.8), écriture créative (top P 0.9, température 0.9), code informatique (température 0.1, top P 0.5), et brainstorming (température 1.2 à 1.5, top P 0.95) pour obtenir des idées plus originales.
+- Introduction du pre-training, la phase d'entraînement préalable des modèles avant leur mise à disposition (GPT-4, GPT-5...). Les coûts d'entraînement sont extrêmement élevés : environ 100 millions de dollars pour GPT-4. Évolution du volume de données : 985 millions de tokens pour GPT-1 (l'équivalent de 5000 à 7000 livres), puis 300 milliards de tokens pour GPT-3 (600 000 livres), et l'équivalent de 100 000 ans de lecture pour Llama 3.
+- Les coûts d'entraînement élevés s'expliquent par l'ingestion massive de données scrapées sur tout Internet (YouTube, articles de blog, etc.), y compris du contenu copyrighté sans autorisation explicite. L'auteur souligne l'hypocrisie du secteur sur ce sujet (exemple des images style Pixar générées facilement). Cette masse de données constitue une « superbibliothèque universelle » incluant livres numérisés, articles de presse et code GitHub, ce qui explique pourquoi des modèles comme Claude sont particulièrement forts en code.
+- L'ingestion de publications scientifiques et de toutes les ressources numérisées disponibles est comparée à un étudiant prodige ayant tout lu avant de pouvoir parler. Cette abondance de données en ligne a favorisé l'essor de l'IA, mais l'auteur pointe qu'elle a aussi un côté négatif qui sera abordé plus tard.
+- Chiffres comparatifs : 300 milliards de tokens pour GPT-3 contre 15 trillions de tokens pour Llama 3. Détail des étapes du pipeline de données : scraping (robots parcourant le web 24h/24, téléchargeant des térabytes par jour), puis filtrage/nettoyage (contenu adulte ou toxique écarté, doublons éliminés, qualité vérifiée), tokenisation et création du vocabulaire optimisé pour la langue, avant l'entraînement autorégressif.
+- Clarification sur l'entraînement autorégressif utilisé par les modèles de type GPT (post-architecture Transformer), différent de l'ancien modèle BERT : le modèle prédit le mot suivant à partir du contexte (« Paris est la... ») et apprend sur des milliards d'exemples similaires. Ce processus coûte énormément en investissements hardware, notamment en location de GPU, ce qui explique la valorisation de Nvidia, acteur central de l'infrastructure IA malgré les tentatives d'OpenAI et Google de créer leurs propres puces.
+- Les ingénieurs en machine learning comptent parmi les emplois les mieux payés au monde, ce qui rend le pre-training extrêmement coûteux en ressources humaines. L'entraînement des modèles consomme aussi beaucoup d'énergie et émet une quantité significative de CO2, un coût distinct de celui de l'usage courant. Transition vers le fine-tuning, permettant de personnaliser un LLM pour un secteur d'activité spécifique.
+- Présentation du fine-tuning global, premier des trois types de fine-tuning : il consiste à entraîner l'intégralité des paramètres du modèle sur un cas très spécifique, par exemple 10 000 exemples de questions-réponses de support client. Analogie : un médecin généraliste qui se spécialise en cardiologie en apprenant tout sur ce domaine (exemple illustré avec Mistral, mais applicable aussi à GPT).
+- Le fine-tuning global coûte très cher et n'est pas accessible à tout le monde, ce qui a motivé le développement de techniques plus efficaces comme LoRA (Low Rank Adaptation) : le modèle de base est gelé et de petites matrices (« adaptateurs ») de quelques millions de paramètres sont ajoutées pour ajuster les sorties, à l'image de porter des lunettes plutôt que de subir une opération laser des yeux. LoRA offre des performances proches d'un vrai fine-tuning pour un coût nettement inférieur (entre 300 et 3000 dollars, soit jusqu'à 90% moins cher). Introduction du RLHF (Reinforcement Learning with Human Feedback), technique d'alignement qui utilise des humains comme validateurs de bonnes réponses.
+- Le RLHF est illustré par l'exemple de ChatGPT demandant de choisir entre deux images ou de valider si une réponse est bonne. Le modèle apprend grâce aux préférences humaines exprimées, en générant par exemple quatre réponses à une même question que des humains classent ensuite. Des startups lèvent des centaines de millions de dollars en recrutant des experts pointus (cardiologues, marketeurs, créateurs de contenu) payés pour donner du feedback qualifié aux LLM, car l'expertise de niche manque davantage que le volume de données déjà scrapées. Anecdote : Dario Amodei, créateur de Claude, était VP of Research chez OpenAI où il avait créé InstructGPT, prouvant l'efficacité du reinforcement learning, ce qui a contribué à l'émergence de GPT-3, puis GPT-3.5, puis ChatGPT.
+- Anecdote sur Dario et Daniela Amodei, qui ont quitté OpenAI par désaccord sur la vitesse de développement et le manque de précautions sécuritaires. Dario a créé Claude avec le modèle Constitutional AI, où le modèle suit des principes constitutionnels (honnêteté, éviter les biais) plutôt que de simplement écouter les préférences humaines, via une version auto-supervisée du RLHF où le modèle critique lui-même ses réponses. Cela explique pourquoi Claude est perçu comme plus prudent mais parfois plus verbeux/créatif que ChatGPT. Le nom Claude rend hommage à Claude Shannon, père de la théorie de l'information.
+- Cas d'usage pertinents pour le fine-tuning ou LoRA : jargons spécifiques (juridique, médical, finance), style de communication précis, tâches répétitives avec patterns clairs, conformité et sécurité. À l'inverse, le fine-tuning est déconseillé pour des tâches générales, en l'absence de données suffisantes, ou avec un budget serré. Transition vers la multimodalité des LLM.
+- La compréhension d'image par un LLM combine plusieurs éléments, à commencer par l'encodeur d'images appelé CNN (Convolutional Neural Networks), base de la vision par ordinateur. Les CNN ne voient pas directement des images : elles procèdent en plusieurs étapes, reconnaissant d'abord les contours, puis les formes, puis les objets complets (chaque couche identifiant un niveau de détail supérieur, jusqu'à reconnaître un visage ou une voiture grâce à ses roues). Des modèles comme GPT-5 ou Gemini utilisent des CNN pour voir les images. Les LLM modernes sont pour la plupart multimodaux (texte, image, audio, vidéo) car ils combinent le NLP (compréhension des mots, dont les LLM sont une sous-catégorie) et le CNN (côté vision). Au fond, un LLM reste une machine à prédire le mot suivant dans une phrase.
+- Techniquement, pour qu'un LLM « comprenne » une image, celle-ci est transformée en mots visuels traités comme du texte normal : l'image est découpée en petits carrés de 16x16 pixels appelés patchs (une image standard de 224x224 donne 196 patchs), chaque patch étant ensuite passé dans un vision transformer, un réseau de neurones qui convertit les pixels en embeddings (par exemple, un patch de ciel bleu devient une valeur comme 0.2, 0.5, 0.8). Ces embeddings sont ensuite ajoutés à l'espace vectoriel, où l'on regarde les éléments les plus proches pour déterminer ce que contient l'image. En réalité, quand on a l'impression d'uploader une image, celle-ci n'est jamais directement analysée : elle est transformée en texte et en petits éléments vectorisés.
+- Aujourd'hui, Gemini comme GPT sont tous deux multimodaux. Transition vers le reasoning, ou chain of thoughts, une capacité relativement récente : l'intervenant raconte avoir utilisé GPT dès 2021, avant l'apparition du chain of thoughts, à une époque où GPT était beaucoup plus limité et loin des performances actuelles. Entre-temps, plusieurs recherches, principalement chez Google mais rapidement mises en application par OpenAI, ont fait évoluer les modèles vers ce raisonnement plus poussé.
+- Le chain of thought consiste à donner trois à cinq exemples montrant un raisonnement étape par étape, que le modèle apprend à imiter : cela force à se poser sur les étapes intermédiaires plutôt que de répondre directement, en se posant des questions intermédiaires plutôt qu'en traitant le prompt d'un bloc. Le Tree of Thoughts va plus loin : un contrôleur, sorte de manager, gère plusieurs pensées en parallèle pour visualiser le raisonnement dans l'espace. Ces approches reposent sur du reinforcement learning : plutôt que d'entraîner le modèle sur des réponses attendues, on l'entraîne à raisonner par lui-même, avec une récompense uniquement si la réponse finale est correcte.
+- Le reinforcement learning appliqué au chain of thought a été mis en application par OpenAI sur le modèle O1, ce qui a permis d'améliorer progressivement le processus jusqu'aux agents autonomes. La deep research fonctionne ainsi : à partir d'une entrée (par exemple « planifie une stratégie marketing pour une app fitness »), le raisonnement s'étend en plusieurs pensées candidates, c'est-à-dire plusieurs hypothèses (par exemple une dizaine), qui posent chacune des questions comme : est-ce une app web ou mobile ? Pour qui la stratégie est-elle définie ?
+- Chaque hypothèse constitue une branche différente de l'arbre de raisonnement : on développe ensuite chaque branche pour pousser le raisonnement plus loin, en générant des sous-nœuds et de nouvelles idées, un peu comme une mind map, l'arbre croissant en largeur avec un maximum d'options. À chaque étape, les branches sont évaluées, souvent par le LLM lui-même qui discrédite certaines options. Une fois cette présélection faite, une stratégie de recherche est appliquée : la Depth First Search (explorer une branche en profondeur), la Breadth First Search (explorer très large puis affiner), ou le Beam Search (ne garder que les meilleures branches à chaque étape), afin d'obtenir la réponse la plus fiable.
+- L'arbre de raisonnement fonctionne comme un tournoi à élimination (tennis, football) : chaque branche gagnante avance jusqu'à la finale. Concrètement, la Deep Research repose sur une architecture multi-agents enrichie par plusieurs API disponibles en live : la question est découpée en plusieurs branches hiérarchisées, avec des agents travaillant en parallèle (agent web, agent de recherche interne dans les documents, agent de vérification croisée des sources, agent de synthèse final). Avec Claude par exemple, le processus se déroule en quatre étapes : analyse du prompt et génération d'un plan de recherche visible, utilisation des transformers pour identifier différents angles d'approche, appels API en parallèle avec scraping web intelligent (parfois 400 à 500 pages), puis embedding dans l'espace vectoriel de Claude pour identifier les résultats les plus proches, fact-checking et recoupement des sources, avant de produire une synthèse digeste avec citations automatiques et une structure logique fidèle au prompt d'origine.
+
+## Concepts cles
+- définition de l'IA selon John McCarthy (1956)
+- débat sur la nature réelle de l'intelligence artificielle
+- abus de langage autour du terme intelligence artificielle
+- illusion d'intelligence par l'entraînement
+- substitution de l'IA à l'expertise humaine
+- détection de cancer de la peau par IA
+- accumulation d'innovations technologiques
+- produits grand public comme façade d'un empilement technique
+- LLM comme moteurs de probabilités
+- données préentraînées
+- pragmatisme sur la définition de l'IA
+- définition pragmatique de l'IA
+- IA discriminative vs IA générative
+- antériorité de l'IA discriminative avant 2022
+- IA discriminative
+- recommandations basées sur les choix utilisateurs
+- machine learning appliqué aux algorithmes de contenu
+- contenu inédit généré par l'IA générative
+- changement de paradigme entre IA discriminative et générative
+- génération musicale accessible aux non-musiciens
+- accélération rapide des progrès en génération vidéo
+- prédiction d'un film 100% généré par IA
+- génération de texte comme socle des outils IA
+- polyvalence de l'IA générative (texte, image, musique)
+- croissance du marché de l'IA générative
+- investissements massifs des géants tech en IA
+- course à l'armement autour de l'IA open source
+- comparaison avec l'arrivée d'Internet
+- IA impactant tous les secteurs contrairement à Internet
+- cas d'usage agricole avec caméras et recommandations météo
+- transformation de la médecine par l'IA
+- automatisation des process par reconnaissance d'images
+- recommandation de stocks automatisée
+- destruction d'emplois à faible valeur ajoutée
+- menace sur le métier de traducteur
+- traduction multilingue automatique en temps réel
+- architecture transformeur
+- modèles de diffusion
+- modèles autorégressifs spécialisés
+- fonctionnement des modèles de diffusion
+- débruitage progressif d'image
+- guidage par description textuelle (prompt)
+- débruitage progressif en 20 à 50 itérations
+- raffinement progressif invisible pour l'utilisateur
+- génération musicale par modèle autorégressif
+- prédiction de note suivante par probabilité
+- maintien du contexte tout au long de la génération
+- cohérence musicale via le contexte cumulé
+- continuité de mouvement entre frames
+- limitation de durée des vidéos générées
+- génération image par image pour la vidéo
+- coût et lenteur de la génération vidéo
+- génération séquentielle basée sur ce qui existe déjà
+- calcul de probabilité pour chaque frame suivante
+- architecture Transformer (2017)
+- attention is all you need
+- traitement parallèle vs séquentiel
+- analogie du musicien et de la partition
+- nombre de paramètres de GPT-4
+- fenêtre de contexte de Gemini 2.5 Pro
+- les quatre étapes de traitement d'une requête
+- tokenisation
+- embedding et vectorisation des mots
+- espace multidimensionnel (jusqu'à 4000 dimensions)
+- proximité vectorielle entre mots
+- tokenisation du langage humain en nombres
+- découpage en sous-mots pour les mots longs
+- coût de tokenisation selon la langue
+- désavantage du français et des langues complexes (chinois, japonais) par rapport à l'anglais
+- Byte Pair Encoding (BPE)
+- fusion progressive des paires de caractères fréquentes
+- vocabulaire d'au moins 50 000 tokens
+- comparaison tokenisation par caractère vs par mot vs BPE
+- compromis longueur/couverture du BPE
+- visualisation de la tokenisation en direct
+- absence de logique intuitive dans le découpage des tokens
+- taille de vocabulaire et impact sur le nombre de tokens
+- compromis taille du modèle / vitesse d'entraînement
+- embedding et disposition spatiale des mots
+- proximité sémantique dans l'espace vectoriel
+- dimensions multiples capturant des sens différents
+- dimensions sémantiques de l'espace vectoriel (animal, positif, abstrait, action)
+- opérations vectorielles sur les mots (roi-homme+femme=reine)
+- lien entre embedding, pre-training et RAG
+- vector store pour connaissances spécifiques à l'entreprise
+- embedding utilisé dans la création d'agents
+- multi-head self-attention
+- analogie des douze employés analysant la même phrase
+- traitement parallèle des relations entre mots
+- têtes d'attention spécialisées (sujet-verbe, sémantique, pronoms-noms, contexte)
+- rapidité du calcul parallèle
+- limites des anciens modèles séquentiels
+- feed-forward networks
+- synthèse des analyses en une conclusion globale
+- phase d'expansion des tokens vers des vecteurs proches
+- activation de dimensions pertinentes selon le contexte
+- compression après expansion
+- enrichissement contextuel des tokens
+- layer normalisation
+- connexions résiduelles
+- conservation de l'information originale à travers les couches
+- évolution du nombre de paramètres (GPT-1 à GPT-4)
+- coûts de calcul croissants
+- génération de réponse par prédiction probabiliste
+- exemple de distribution de probabilités (capitale de la France)
+- réponses alternatives moins probables mais plausibles
+- coût en ressources par token
+- température et top P comme leviers de créativité
+- greedy sampling
+- reproductibilité maximale (45% du même résultat)
+- cas d'usage : traduction, résumés factuels, analyses techniques
+- prévisibilité du greedy sampling sur ChatGPT
+- random sampling et son caractère chaotique
+- limites du random sampling (résultats absurdes)
+- nucleus sampling : équilibre entre créativité et cohérence
+- sélection des mots totalisant 90% des probabilités
+- contrôle utilisateur via température et top P
+- correspondance température/top P avec les trois stratégies de sampling
+- accès aux paramètres température/top P via le Playground OpenAI
+- disponibilité limitée aux modèles plus anciens (GPT-4)
+- température comme modificateur d'audace
+- analogie du débat à plusieurs voix
+- température 2 et amplification des voix faibles/farfelues
+- analogie politique de la température (partis dominants vs marginaux)
+- top P comme filtre des mots les plus probables
+- exemple d'exclusion des mots improbables (capitale de la saucisse)
+- réglage recommandé pour le support client (température basse)
+- tableau de réglages température/top P par cas d'usage
+- pre-training des LLM
+- coût d'entraînement de GPT-4 (100 millions de dollars)
+- évolution du volume de données d'entraînement (GPT-1, GPT-3, Llama 3)
+- scraping massif de données copyrightées
+- superbibliothèque universelle de connaissances
+- force de Claude sur le code liée à la disponibilité du code en ligne
+- analogie de l'étudiant prodige ayant tout lu
+- abondance de données comme moteur de l'essor de l'IA
+- comparaison de volumes de tokens (GPT-3 vs Llama 3)
+- pipeline de données : scraping, filtrage, tokenisation, vocabulaire
+- entraînement autorégressif
+- entraînement autorégressif de type GPT vs BERT
+- coût en infrastructure hardware et GPU
+- position dominante de Nvidia dans l'écosystème IA
+- coût élevé des ingénieurs en machine learning
+- impact environnemental du pre-training (émissions de CO2)
+- fine-tuning pour personnalisation sectorielle
+- fine-tuning global sur l'intégralité des paramètres
+- analogie du médecin généraliste devenant spécialiste
+- LoRA (Low Rank Adaptation) : fine-tuning léger via adaptateurs
+- coût de LoRA (300-3000$, jusqu'à 90% moins cher)
+- introduction du RLHF (validateurs humains)
+- RLHF illustré par l'exemple ChatGPT (choix entre réponses)
+- startups spécialisées dans le feedback humain qualifié
+- anecdote InstructGPT et Dario Amodei
+- Constitutional AI
+- principes constitutionnels (honnêteté, éviter les biais)
+- RLHF auto-supervisé
+- origine du nom Claude (Claude Shannon)
+- personnalité perçue de Claude vs ChatGPT
+- cas d'usage pertinents du fine-tuning/LoRA
+- cas où le fine-tuning est déconseillé
+- multimodalité des LLM
+- CNN (Convolutional Neural Networks), base de la vision par ordinateur
+- traitement en couches : contours, formes, objets complets
+- multimodalité = NLP + CNN + autres techniques
+- un LLM reste fondamentalement une machine à prédire le mot suivant
+- découpage de l'image en patchs (16x16 pixels)
+- vision transformer : conversion des pixels en embeddings
+- ajout des embeddings à l'espace vectoriel
+- une image est en réalité transformée en texte vectorisé
+- Gemini et GPT, tous deux multimodaux
+- apparition récente du reasoning / chain of thoughts
+- recherches Google mises en application par OpenAI
+- chain of thought : exemples de raisonnement étape par étape
+- Tree of Thoughts : contrôleur gérant plusieurs pensées en parallèle
+- entraînement par reinforcement learning au raisonnement plutôt qu'aux réponses
+- O1 : première application du reinforcement learning sur chain of thought
+- évolution vers les agents autonomes
+- deep research : génération de pensées candidates/hypothèses à partir d'une entrée
+- arbre de raisonnement : branches, sous-nœuds, mind map
+- évaluation et présélection des branches par le LLM
+- stratégies de recherche : Depth First Search, Breadth First Search, Beam Search
+- architecture multi-agents de la Deep Research
+- agents spécialisés : web, interne, vérification, synthèse
+- quatre étapes du processus Claude Deep Research
+- fact-checking et citations automatiques dans la synthèse finale
+
+## Outils mentionnes
+- ChatGPT
+- Claude
+- Gemini
+- OpenAI
+- Spotify
+- YouTube
+- Meta
+- Netflix
+- Suno
+- Eleven Labs
+- VO3
+- Google
+- Amazon
+- Anthropic
+- Llama
+- Midjourney
+- Dall-E
+- Sora
+- GPT-4
+- Gemini 2.5 Pro
+- OpenAI (Tokenizer)
+- GPT-1
+- GPT-2
+- GPT-3
+- OpenAI Playground
+- GPT-5
+- Llama 3
+- GitHub
+- BERT
+- GPT
+- Nvidia
+- Mistral
+- LoRA
+- InstructGPT
+- CNN
+- vision transformer
+- O1
+- Depth First Search
+- Breadth First Search
+- Beam Search
+- Deep Research
+
+## Tips techniques
+- Pour bien utiliser les outils de génération musicale comme Suno, il faut savoir bien prompter son idée et avoir la résilience de réessayer jusqu'à obtenir un bon résultat
+- À grand volume d'utilisation de LLM dans des applications, privilégier l'anglais ou être conscient que le français coûte plus cher en tokens (ex : hello = 1 token vs bonjour = 2 tokens)
+- Tester ses prompts dans un tokenizer pour comprendre le découpage et potentiellement optimiser l'efficacité, même si aujourd'hui les prompts longs sont largement supportés
+- le nucleus sampling est la stratégie la plus proche de ce qu'utilisent les LLM aujourd'hui pour équilibrer créativité et cohérence
+- pour retrouver les réglages de température et top P, utiliser un modèle plus ancien comme GPT-4 dans le Playground OpenAI plutôt qu'un modèle récent avec reasoning intégré
+- pour du support client, utiliser une température basse (0.2) afin de privilégier des réponses factuelles plutôt que créatives
+- Support client : top P 0.8 combiné à une température basse pour des réponses factuelles
+- Écriture créative : top P 0.9 et température 0.9
+- Code informatique : température 0.1 et top P 0.5 pour rester précis
+- Brainstorming : température entre 1.2 et 1.5 et top P 0.95 pour des idées originales
+- LoRA permet un fine-tuning à moindre coût (jusqu'à 90% moins cher) avec des performances proches d'un fine-tuning complet
+- Utiliser le fine-tuning ou LoRA pour des jargons spécifiques (juridique, médical, finance), un style de communication précis ou des tâches répétitives avec patterns clairs ; l'éviter pour des tâches générales, un manque de données ou un budget serré
+- donner 3 à 5 exemples de raisonnement étape par étape (chain of thought) force le modèle à traiter les étapes intermédiaires plutôt que de répondre directement
+
+## Cas d'usage reels
+- [[]]

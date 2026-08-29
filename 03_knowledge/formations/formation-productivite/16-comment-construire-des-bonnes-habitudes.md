@@ -1,0 +1,230 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Optimiser"
+source_transcript: "16. Comment construire des bonnes habitudes.txt"
+---
+
+# 16. Comment construire des bonnes habitudes ?
+
+## Resume
+- Introduction à la construction de bonnes habitudes : commencer par supprimer les mauvaises, celles-ci formant un tissu interconnecté (ex : alcool lié à d'autres mauvaises habitudes).
+- Explication de l'effet de chaîne des mauvaises habitudes, avec reconnaissance de la difficulté réelle pour des addictions ancrées depuis des décennies (ex : tabac).
+- Première règle pour intégrer une nouvelle habitude : ne jamais se dire je le ferai plus tard, une excuse qui retarde indéfiniment le changement.
+- Argument contre-intuitif : plus on est occupé, mieux c'est pour intégrer une nouvelle habitude, car attendre un moment moins chargé n'arrive jamais.
+- Confirmation qu'attendre d'être moins occupé pour changer ne fonctionne jamais, puisqu'on reste occupé quasiment tout le temps ; introduction du livre Atomic Habits comme référence.
+- Premier enseignement d'Atomic Habits : changer son identité avant de changer ses habitudes, illustré par l'exemple du fumeur se définissant différemment.
+- Exemple concret de reformulation identitaire : dire non mais occasionnellement plutôt que oui mais j'essaye d'arrêter, une nuance de langage qui change l'identité perçue.
+- Exemple personnel de personnes très sportives (courses avec dossards) illustrant comment une identité forte se construit autour d'une pratique régulière.
+- Observation que le fait de se créer une identité de sportif (ex : courses à venir) diminue naturellement l'envie de boire, une bonne habitude remplaçant une mauvaise.
+- Confirmation que remplacer une mauvaise habitude par une identité positive (ne pas vouloir mal performer à une course) est le meilleur moyen de la supprimer.
+- Anecdote personnelle de rugby de haut niveau où l'impact direct et tangible d'une mauvaise alimentation sur la performance sportive a été un moteur de changement.
+- Réflexion sur la différence entre un impact tangible et immédiat (sport) et un impact plus diffus et difficile à percevoir (alcool), rendant le changement plus ardu.
+- Stratégie clé face à une habitude difficile à supprimer : la remplacer plutôt que de tenter de la supprimer directement (ex : trouver une alternative sociale à l'alcool).
+- Exemples concrets d'alternatives sociales pour remplacer l'alcool, comme les jeux de société, illustrant la diversité des options possibles.
+- Confirmation que le changement d'identité reste la clé, avec conseil de modifier son environnement social (préférer les événements de jour) pour arrêter alcool ou tabac.
+- Principe d'incompatibilité : un sportif de haut niveau ne peut pas sortir en boîte tous les soirs et fumer, il faut choisir entre les identités contradictoires.
+- Synthèse sur le changement d'identité : se dire et penser comme un sportif induit progressivement de meilleures habitudes qui se consolident dans la durée.
+- Exemple concret de cercle vertueux : ne pas boire la veille d'une course parce qu'on se pense sportif, illustrant l'auto-renforcement de l'identité choisie.
+- Introduction de la deuxième technique : optimiser son environnement pour qu'il soutienne activement les nouvelles habitudes plutôt que de les saboter.
+- Astuce d'optimisation physique de l'environnement : placer ses affaires de sport à un endroit spécifique dédié, avec possibilité de poser son réveil dessus.
+- Explication du mécanisme d'efficacité : préparer son sac de sport avec le réveil dedans la veille, rendant l'habitude facile et la mission claire pour le cerveau.
+- Explication du réveil comme trigger physique forçant à se lever pour l'éteindre, révélant un vrai problème de motivation si l'on se rendort malgré tout.
+- Témoignage personnel du réflexe naturel d'éloigner les amis proches ou lointains tombés dans des addictions problématiques, une décision instinctive.
+- Conseil de changer consciemment ses fréquentations si le réflexe naturel n'est pas là, car les mauvaises fréquentations tirent inévitablement vers des habitudes négatives.
+- Recommandation de changer progressivement de groupe d'amis en rejoignant des communautés plus saines, comme un cours de sport ou de crossfit.
+- Synthèse de la logique du changement : de l'intérieur en changeant son identité, et de l'extérieur en changeant son environnement (appartement, objets).
+- Introduction du hack de l'intention d'implémentation : formuler précisément quoi faire, quand et où, une technique puissante liée au self-talk.
+- Recommandation d'abuser de cette technique en l'écrivant dans son agenda, créant un engagement écrit envers soi-même pour chaque action planifiée.
+- Technique de boucle conditionnelle positive : conditionner une récompense plaisante (cinéma) à l'accomplissement préalable d'une tâche exigeante (séance de sport).
+- Mise en garde de ne pas abuser de cette technique de conditionnement, au risque de conséquences négatives comme l'autoflagellation en cas d'échec.
+- Introduction du concept de habit stacking (empilement d'habitudes), plus facile à maintenir que des habitudes isolées, illustré par un exemple de séance de sport.
+- Exemple concret d'empilement d'habitudes vertueux : sport puis douche froide, la séquence rendant ensuite naturellement moins tentant de manger un fast-food.
+- Explication de la logique de compatibilité entre habitudes empilées, facilitées lorsqu'elles fonctionnent naturellement bien ensemble.
+- Autre exemple d'empilement d'habitudes compatibles : lecture et méditation, deux activités calmes se complétant naturellement dans une même séquence.
+- Introduction du concept d'aimant à habitude, rendre l'habitude attractive en liant une anticipation positive à l'action à accomplir.
+- Mise en garde contre la visualisation passive des bénéfices, qui génère une dopamine immédiate trompant le cerveau en signal de relaxation prématuré.
+- Réflexe à travailler : dès l'apparition d'une image positive du résultat visé, se demander immédiatement quelle est la première action concrète à entreprendre.
+- Conseil de faire confiance à son organisation planifiée à l'avance : ce qui est dans l'agenda a été pensé rationnellement (cortex préfrontal), pas sous le coup de l'émotion.
+- Recommandation de toujours se référer à une logique plus fiable que ses émotions du moment, l'agenda et le calendrier étant essentiels pour ancrer les habitudes.
+- Introduction du concept de friction comme cause principale d'abandon des habitudes, illustré par une salle de sport éloignée de 35 minutes.
+- Précision que cette méthodologie de réduction de friction s'applique à tout domaine, pas seulement au sport, avec objectif de rendre le non impossible.
+- Premier moyen concret de réduire la friction : choisir une salle de sport très proche (dans sa rue), rendant l'excuse de la distance impossible à invoquer.
+- Deuxième moyen : rejoindre une salle avec une communauté engagée qui exerce une pression sociale positive rendant l'absence difficile à justifier.
+- Transition vers un exemple concret de réduction de friction pour le tournage vidéo, via un setup studio personnel optimisé.
+- Anecdote personnelle de studio externe compliquant l'accès malgré son cadre agréable, contrairement à la solution actuelle intégrée à l'appartement.
+- Description du problème d'allers-retours créant tant de friction que l'envie de tourner disparaissait, résolu en intégrant le studio directement chez soi.
+- Chiffre clé impressionnant : le passage à l'action est passé de 30 minutes à littéralement 5 secondes grâce à la réduction radicale de friction.
+- Exemple du sport au poids de corps depuis des années, éliminant toute excuse liée à la disponibilité du matériel de musculation.
+- Introduction du concept de récompense (le bonbon) comme mécanisme fondamental de fonctionnement du cerveau, comparé à un rat de laboratoire.
+- Recommandation de trouver des récompenses positives et immédiates plutôt que négatives, illustrée par un exemple de session de sport intense type HIIT.
+- Dernière recommandation : chercher continuellement à s'améliorer et affiner son habitude, avec exemple de progression sur l'arrêt du tabac.
+- Exemple concret de progression graduelle d'une habitude sportive (une fois/semaine puis deux, puis trois), en s'assurant de ne jamais régresser.
+- Introduction de la théorie de Skinner pour construire une discipline durable : comportement négatif associé à une punition, positif à une récompense.
+- Nuance sur la complexité humaine nécessitant une introspection personnelle pour comprendre ses réelles motivations, au-delà du simple schéma de récompense.
+- Importance de la clarté des intentions pour que le cerveau distingue clairement le positif du négatif, sans quoi tout se mélange confusément.
+- Recommandation de rechercher les bienfaits neuroscientifiques concrets d'une bonne habitude, pour renforcer la compréhension de son impact réel.
+- Technique plus puissante que l'injonction : se demander ce qui va concrètement se passer si l'on ne change pas, plutôt que se dire simplement qu'il le faut.
+- Exemple d'approfondissement du raisonnement négatif : au-delà de perdre des années de vie, imaginer concrètement l'impact sur des moments précieux futurs (voir ses enfants).
+- Poursuite de l'exemple avec le risque de mourir juste après la retraite sans en profiter, un raisonnement à creuser sans pour autant chercher à déprimer.
+- Distinction importante entre négativité motrice utile (visualiser le risque) et négativité toxique (autoflagellation après un échec), le self-talk aidant sur ce second point.
+- Introduction d'une étude scientifique comparant deux groupes cherchant une banane sur une feuille, l'un répétant le mot à voix haute en boucle.
+- Résultat de l'étude : le groupe répétant le mot banane en boucle trouvait significativement plus vite l'objet, prouvant l'impact réel du self-talk répété.
+- Confirmation des bénéfices scientifiques réels de se parler à soi-même, une pratique qui devient naturelle et confortable avec l'habitude.
+- Présentation de la technique la plus puissante : avoir un partenaire de challenge, illustrée par l'exemple de partager des défis entre créateurs YouTube.
+- Explication du rôle du partenaire lors des baisses de motivation, avec anecdote personnelle d'un ami rencontré au Brésil, Jules.
+- Détail de l'anecdote : programme Insanity de 6 mois réalisé avec Jules, où la compétition amicale et les moqueries mutuelles tiraient les deux vers le haut.
+- Conseil de bien aborder psychologiquement les habitudes sans culpabilité excessive en cas d'échec ponctuel, l'objectif n'étant pas de devenir une machine parfaite.
+- Rappel de garder un mindset positif face aux échecs occasionnels, avec conseil clé de ne pas empiler trop d'habitudes simultanément.
+- Recommandation de se limiter aux trois habitudes les plus importantes de sa vie, plutôt que de copier des listes virales de dizaines d'habitudes vues sur les réseaux.
+- Justification par la capacité mentale limitée quotidienne (enfants, animaux, obligations), avec exemple personnel des trois habitudes prioritaires : sport, lecture, douche froide.
+- Reconnaissance de l'imperfection assumée avec attitude positive : en cas d'échec, se dire simplement qu'on recommencera le lendemain sans dramatiser.
+- Introduction de la théorie des 66 jours : le temps minimum nécessaire (deux mois) pour qu'une habitude devienne réellement ancrée.
+- Témoignage personnel : premiers résultats perçus vers 30 jours encourageant à continuer, habitude devenue totalement mécanique après 66 jours (comme se brosser les dents).
+- Chiffre clé alarmant : 80% des gens abandonnent une nouvelle habitude avant les 66 jours, d'où l'importance de se fixer un challenge de deux mois minimum.
+- Exemple de challenge structuré (60 TikTok) créant un engagement personnel fort, avant introduction de la théorie des deux jours popularisée par Matt D'Avella.
+- Explication de la théorie des deux jours : on a le droit de manquer un jour mais jamais deux jours consécutifs, matérialisée par un calendrier à croix.
+- Application concrète : durant les 66 jours, respecter au minimum un jour sur deux, une approche plus réaliste qu'une semaine intense suivie d'un abandon.
+- Introduction de l'effet cumulé exponentiel des habitudes, invisible longtemps avant d'apparaître brutalement, via la réduction du nombre de choix quotidiens.
+- Recommandation de rendre une habitude non négociable plutôt que de se reposer la question chaque jour, réduisant la fenêtre de choix qui mène à l'abandon.
+- Exemple personnel de réduction des choix vestimentaires (un seul t-shirt, premier de la pile) pour illustrer le principe de minimisation de la charge décisionnelle.
+- Description du moment de bascule (momentum) où l'on réalise avoir réellement changé (résultats physiques visibles, arrêt du tabac réussi).
+- Conclusion de la vidéo sur les habitudes avec recommandation du livre Atomic Habits de James Clear pour approfondir le sujet.
+
+## Concepts cles
+- introduction : les mauvaises habitudes forment un tissu interconnecté à casser
+- explication de l'effet de chaîne des mauvaises habitudes et difficulté des addictions ancrées
+- première règle : ne jamais reporter une nouvelle habitude à plus tard
+- argument contre-intuitif : intégrer une habitude quand on est occupé, pas en attendant un moment calme
+- confirmation de ne jamais attendre et introduction du livre Atomic Habits
+- premier enseignement d'Atomic Habits : changer son identité avant ses habitudes
+- exemple concret de reformulation identitaire (non occasionnellement vs oui mais j'essaie)
+- exemple personnel de personnes très sportives illustrant l'identité forte
+- observation : l'identité de sportif diminue naturellement l'envie de boire
+- confirmation : remplacer par une identité positive est le meilleur moyen de supprimer une mauvaise habitude
+- anecdote personnelle de rugby où l'impact tangible sur la performance a motivé le changement
+- réflexion sur la différence entre impact tangible immédiat et impact diffus (alcool)
+- stratégie clé : remplacer une habitude difficile plutôt que la supprimer directement
+- exemples concrets d'alternatives sociales pour remplacer l'alcool (jeux de société)
+- confirmation du changement d'identité et conseil de modifier l'environnement social (événements de jour)
+- principe d'incompatibilité entre identités contradictoires (sportif vs vie nocturne)
+- synthèse : penser comme un sportif induit progressivement de meilleures habitudes
+- exemple de cercle vertueux d'auto-renforcement de l'identité choisie
+- introduction de la deuxième technique : optimiser son environnement pour les habitudes
+- astuce de placement physique des affaires de sport avec réveil dessus
+- explication du mécanisme d'efficacité de la préparation la veille
+- explication du réveil comme trigger physique forçant le lever
+- témoignage personnel du réflexe naturel d'éloigner les amis en difficulté d'addiction
+- conseil de changer consciemment ses fréquentations négatives
+- recommandation de rejoindre progressivement des communautés plus saines (crossfit)
+- synthèse de la logique du changement (identité intérieure + environnement extérieur)
+- introduction du hack de l'intention d'implémentation (quoi, quand, où)
+- recommandation d'écrire l'intention dans l'agenda comme engagement envers soi-même
+- technique de boucle conditionnelle liant récompense plaisante à tâche préalable
+- mise en garde contre l'abus du conditionnement (risque d'autoflagellation)
+- introduction du habit stacking (empilement d'habitudes) plus facile à maintenir
+- exemple concret d'empilement vertueux (sport, douche froide, évite le fast-food)
+- explication de la logique de compatibilité entre habitudes empilées
+- autre exemple d'empilement compatible : lecture et méditation
+- introduction du concept d'aimant à habitude (anticipation liée à l'action)
+- mise en garde contre la visualisation passive des bénéfices (dopamine trompeuse)
+- réflexe à travailler : transformer immédiatement une vision positive en première action
+- conseil de faire confiance à son agenda planifié rationnellement à l'avance
+- recommandation de se référer à une logique fiable plutôt qu'aux émotions du moment
+- introduction du concept de friction comme cause principale d'abandon (exemple distance salle)
+- précision : la méthodologie de réduction de friction s'applique à tout domaine
+- premier moyen concret : choisir une salle de sport très proche de chez soi
+- deuxième moyen : rejoindre une communauté exerçant une pression sociale positive
+- transition vers l'exemple de réduction de friction pour le tournage vidéo
+- anecdote personnelle du studio externe compliquant l'accès (make it easy)
+- description du problème d'allers-retours créant de la friction résolu par l'intégration
+- chiffre clé : passage à l'action réduit de 30 minutes à 5 secondes
+- exemple du sport au poids de corps éliminant les excuses liées au matériel
+- introduction du concept de récompense comme mécanisme fondamental du cerveau
+- recommandation de récompenses positives et immédiates (exemple HIIT)
+- recommandation de s'améliorer continuellement et affiner son habitude
+- exemple concret de progression graduelle d'une habitude sportive
+- introduction de la théorie de Skinner (comportement-punition/récompense)
+- nuance sur la complexité humaine nécessitant une introspection sur ses motivations
+- importance de la clarté des intentions pour distinguer positif et négatif
+- recommandation de rechercher les bienfaits neuroscientifiques concrets d'une habitude
+- technique de visualisation des conséquences négatives plutôt que l'injonction simple
+- exemple d'approfondissement du raisonnement négatif vers des conséquences concrètes précieuses
+- poursuite de l'exemple : risque de ne pas profiter de la retraite
+- distinction entre négativité motrice utile et négativité toxique d'autoflagellation
+- introduction d'une étude scientifique comparative (recherche de banane, répétition verbale)
+- résultat de l'étude prouvant l'impact réel du self-talk répété (recherche plus rapide)
+- confirmation des bénéfices scientifiques du self-talk devenant naturel avec la pratique
+- présentation de la technique la plus puissante : le partenaire de challenge
+- explication du rôle du partenaire lors des baisses de motivation (anecdote Jules)
+- détail de l'anecdote : compétition amicale tirant les deux partenaires vers le haut
+- conseil de bien aborder les habitudes sans culpabilité excessive en cas d'échec
+- rappel du mindset positif et conseil de ne pas empiler trop d'habitudes
+- recommandation de se limiter aux trois habitudes les plus importantes
+- justification par la capacité mentale limitée (exemple personnel : sport, lecture, douche froide)
+- reconnaissance de l'imperfection assumée avec attitude positive de reprise
+- introduction de la théorie des 66 jours (deux mois minimum pour ancrer une habitude)
+- témoignage personnel de la progression vers l'automatisme (30 jours puis 66 jours)
+- chiffre clé : 80% des gens abandonnent avant 66 jours
+- exemple de challenge structuré et introduction de la théorie des deux jours (Matt D'Avella)
+- explication de la théorie des deux jours (jamais deux jours consécutifs manqués)
+- application concrète de la règle un jour sur deux pendant les 66 jours
+- introduction de l'effet cumulé exponentiel des habitudes et réduction des choix
+- recommandation de rendre une habitude non négociable pour réduire la fenêtre de choix
+- exemple personnel de réduction des choix vestimentaires (charge décisionnelle minimisée)
+- description du moment de bascule (momentum) où le changement devient visible
+- conclusion avec recommandation du livre Atomic Habits de James Clear
+
+## Outils mentionnes
+- YouTube
+- TikTok
+
+## Tips techniques
+- Casser une chaîne de mauvaises habitudes interconnectées plutôt que de traiter chaque habitude isolément, pour un effet systémique plus durable
+- Ne jamais reporter l'intégration d'une nouvelle habitude à plus tard sous prétexte d'être occupé, ce report devenant systématiquement permanent
+- Intégrer une nouvelle habitude précisément pendant les périodes chargées plutôt que d'attendre un moment de calme qui n'arrivera jamais
+- Changer d'abord son identité perçue (se définir autrement) avant de tenter de changer une habitude concrète, selon le principe d'Atomic Habits
+- Reformuler son discours identitaire (dire 'non, occasionnellement' plutôt que 'oui mais j'essaye d'arrêter') pour ancrer une nouvelle identité
+- Construire une identité positive forte (ex : sportif avec des courses prévues) pour remplacer naturellement l'envie liée à une mauvaise habitude
+- Remplacer une mauvaise habitude ancrée par une alternative répondant au même besoin (ex : activité sociale sans alcool), plutôt que de tenter une suppression pure
+- Préférer les événements sociaux de jour plutôt que nocturnes pour faciliter l'arrêt de l'alcool ou du tabac, l'environnement nocturne favorisant les mauvaises habitudes
+- Adopter mentalement l'identité voulue (se penser comme un sportif) avant même d'avoir tous les résultats, pour induire progressivement les bonnes habitudes
+- Optimiser activement son environnement (social, physique) pour qu'il soutienne les nouvelles habitudes plutôt que de les saboter
+- Placer physiquement le réveil sur ses affaires de sport préparées la veille, pour forcer un contact visuel immédiat au réveil
+- Préparer son sac de sport la veille en y plaçant le réveil, pour rendre la mission du lendemain évidente et sans réflexion nécessaire
+- Changer consciemment de fréquentations lorsque celles-ci tirent vers des habitudes négatives, même sans réflexe naturel initial pour le faire
+- Rejoindre progressivement une nouvelle communauté saine (cours de sport, crossfit) pour remplacer naturellement un groupe d'amis toxique
+- Formuler des intentions d'implémentation précises (je vais faire X au moment Y à l'endroit Z) pour maximiser la probabilité de réaliser une action prévue
+- Écrire systématiquement dans son agenda l'intention précise (action, moment, lieu) pour créer un engagement formel envers soi-même
+- Conditionner explicitement une activité plaisante (cinéma) à l'accomplissement préalable d'une tâche exigeante (sport), créant une boucle de motivation
+- Empiler plusieurs habitudes positives entre elles (habit stacking) plutôt que de les traiter isolément, pour faciliter grandement leur maintien
+- Enchaîner des habitudes positives complémentaires (sport puis douche froide) pour créer un effet d'engagement dissuadant naturellement les écarts suivants
+- Lier une anticipation positive concrète à l'action d'une habitude, plutôt que de se contenter de visualiser passivement les bénéfices finaux
+- S'entraîner au réflexe de transformer immédiatement une vision positive du résultat en question d'action concrète immédiate à entreprendre
+- Faire confiance à son agenda planifié à l'avance plutôt qu'à une impulsion émotionnelle du moment, l'agenda ayant été pensé rationnellement en amont
+- Appliquer le principe de réduction de friction et de rendre le refus impossible à n'importe quel domaine, pas seulement au sport
+- Choisir une salle de sport située au plus près de son domicile pour éliminer l'excuse de la distance et rendre le refus difficile à justifier
+- Rejoindre une communauté sociale engagée (salle de sport avec groupe) exerçant une pression sociale positive rendant l'absence difficile à justifier
+- Réduire radicalement le temps de passage à l'action en éliminant physiquement toute étape intermédiaire entre l'intention et le début de la tâche
+- Pratiquer une activité ne nécessitant aucun matériel (sport au poids de corps) pour éliminer toute excuse liée à la disponibilité d'équipement
+- Associer une récompense positive et immédiate à une habitude difficile, plutôt qu'une récompense qui renforce une mauvaise habitude parallèle
+- Augmenter progressivement la fréquence d'une nouvelle habitude (1x/semaine puis 2x puis 3x) plutôt que de viser l'intensité maximale d'emblée
+- Clarifier explicitement ses intentions pour que le cerveau distingue nettement le comportement positif du négatif, évitant toute confusion
+- Rechercher activement la littérature neuroscientifique documentant les bienfaits concrets d'une habitude, pour renforcer sa motivation par la compréhension
+- Visualiser précisément les conséquences négatives concrètes de l'inaction, plutôt que de se contenter d'une injonction vague à changer
+- Creuser en profondeur les conséquences négatives concrètes d'une mauvaise habitude, sans pour autant sombrer dans une négativité déprimante
+- S'appuyer sur la répétition verbale ciblée (self-talk) pour améliorer concrètement la performance cognitive, un effet scientifiquement mesuré
+- Trouver un partenaire de challenge dans son domaine (autre créateur, collègue) pour partager des défis et se motiver mutuellement
+- Instaurer une compétition amicale légère avec son partenaire de challenge (moqueries bienveillantes) pour renforcer mutuellement la motivation
+- Accepter les échecs ponctuels dans la construction d'habitudes sans culpabilité excessive, l'objectif n'étant pas une perfection robotique
+- Ne jamais empiler un trop grand nombre d'habitudes simultanément, au risque de dépasser sa capacité réelle et d'abandonner
+- Se limiter aux trois habitudes réellement les plus importantes pour sa vie, plutôt que de copier des listes virales de dizaines d'habitudes vues en ligne
+- Accepter qu'une habitude nécessite au minimum 66 jours (deux mois) de pratique pour devenir réellement automatique et ancrée
+- Se fixer un challenge explicite de deux mois minimum pour une nouvelle habitude, sachant que 80% des gens abandonnent avant ce cap
+- Se fixer un challenge chiffré et engageant (ex : 60 vidéos) pour créer un engagement personnel fort envers une nouvelle habitude
+- Suivre la règle des deux jours : autoriser un jour manqué mais jamais deux consécutifs, visualisé sur un calendrier à croix pour maintenir la continuité
+- Rendre une habitude non négociable et automatique plutôt que de se reposer la question chaque jour, réduisant ainsi la fenêtre de choix menant à l'abandon
+- Réduire délibérément des choix quotidiens mineurs (vêtements) pour préserver sa charge décisionnelle pour les décisions réellement importantes
+
+## Cas d'usage reels
+- [[]]

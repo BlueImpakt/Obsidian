@@ -1,0 +1,182 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Maîtriser la suite Google AI"
+source_transcript: "0.42 Notebook LM 101.txt"
+---
+
+# 0.42 Notebook LM 101
+
+## Resume
+- Sommaire de la présentation Notebook LM 101 : présentation générale, Notebook LM comme outil RAG, ajout de sources multiples, utilisation pour l'apprentissage via des livres, plans et limites, méthodes d'ajout de sources, sauvegarde de liens (comparaison avec Readwise), types de fichiers supportés et structure de l'interface.
+- L'auteur explique que Notebook LM, initialement un simple essai interne chez Google, a connu un succès inattendu grâce à sa forte résonance pour l'étude et l'apprentissage. Il précise que Notebook LM n'a pas vocation à remplacer Gemini ou ChatGPT, son usage principal étant différent.
+- Présentation de la capacité de Notebook LM à agréger des sources multiples et variées : podcasts, interviews, articles, livres, permettant une approche très pluraliste du type de contenu source à intégrer dans une même base de connaissance.
+- Présentation des différents plans Notebook LM et de leurs limites en nombre de sources : 50 sources pour le plan gratuit, 100 pour le plan Plus, et davantage pour le plan Pro, l'accès aux fonctionnalités restant identique entre les plans.
+- L'auteur souligne l'intérêt de créer un carnet de notes (notebook) spécifique à chaque projet ou type de recherche, en combinant plusieurs types de données. Il introduit une fonctionnalité sous-cotée et peu visible : la capacité à sauvegarder des liens directement.
+- Comparaison avec Readwise (agrégateur façon lecteur RSS pour blogs, chaînes YouTube, threads Twitter, newsletters) : l'auteur explique que Notebook LM peut remplir une fonction similaire de centralisation de contenu, avec certaines nuances par rapport à Readwise.
+- L'auteur insiste sur l'usage proactif recommandé de Notebook LM : poser des questions, creuser des sujets plutôt que consulter passivement les sources. Il décrit le cœur du système comme un RAG chatbot permettant une interaction efficace avec l'ensemble des sources intégrées.
+- Limite technique identifiée : sur des tâches très créatives portant sur une grosse quantité de données, les résultats peuvent être légèrement inférieurs à ceux obtenus avec des prompts plus simples, car un RAG embarque énormément de contexte qui peut nuire à la créativité pure du modèle.
+- Introduction aux deux modes de recherche de sources dans Notebook LM : Fast Research (recherche rapide) et Deep Research (recherche en profondeur), avec la possibilité de chercher directement dans un Drive d'entreprise ou d'autres sources externes.
+- Démonstration de la génération automatique du prompt de Deep Research à partir de sources variées (podcasts, YouTube) pour obtenir la recherche la plus précise possible. Le système exécute ensuite les étapes successives de sa recherche, avec parfois une ambiguïté sur le niveau de profondeur réellement nécessaire.
+- L'auteur propose un test comparatif amusant : lancer la même recherche en Fast Research et en Deep Research avec le prompt généré, pour observer concrètement la différence de qualité entre les deux modes.
+- Résultat du test : la première recherche (rapide) donne des résultats intéressants mais limités, ce que l'auteur identifie comme un problème. Il relance ensuite une Fast Research avec le prompt spécifiquement généré pour Deep Research, obtenant un résultat nettement plus complet.
+- L'auteur rencontre une limite probable liée à la taille du compte ou du volume de texte traité, et doit ajuster plusieurs fois sa requête en Fast Research, suspectant que le volume de texte source est trop important pour être traité efficacement d'un coup.
+- Confirmation d'une limite en nombre de mots rencontrée. L'auteur relance une Fast Research avec un prompt différent, qui déclenche un crawling de différents sites web, révélant des différences notables selon les sources utilisées.
+- Conclusion méthodologique clé : toujours procéder en deux étapes, d'abord poser les fondamentaux de la recherche avec le meilleur modèle disponible, puis lancer la recherche approfondie une fois cette base solide établie. L'auteur recommande ensuite de tester le Deep Research pour voir s'il diffère réellement du résultat précédent.
+- Démonstration de l'ajout de sources vidéo YouTube dans Notebook LM par recherche directe et copie d'URL, en reprenant des vidéos déjà présentées sur le TDAH lors du module Gemini précédent, illustrant la portabilité des sources entre les différents outils.
+- Poursuite de l'ajout de sources vidéo pertinentes sur le TDAH. L'auteur détecte et supprime une source vide (échec de récupération de contenu), illustrant la nécessité de vérifier la validité de chaque source ajoutée au notebook.
+- Exemple d'apprentissage extrait par Notebook LM : la nature « tout ou rien » du TDAH, où la personne est soit hyperfocalisée, soit totalement dispersée. L'auteur souligne que le système indique le moment précis du transcript où l'information est mentionnée, facilitant la vérification de la source.
+- L'auteur relance une question quasi identique sur les apprentissages d'une autre vidéo sélectionnée dans le notebook, pour illustrer la répétabilité du processus d'extraction d'apprentissages à partir de différentes sources ciblées.
+- L'auteur explique que le système parcourt systématiquement les sources sélectionnées pour construire sa réponse, ce qui en fait un excellent moyen d'apprentissage rapide et catégorisé sur un sujet précis comme le TDAH.
+- Détail d'un apprentissage clé sur le TDAH : le principe de rétro-ingénierie des délais (partir de la deadline pour remonter le planning plutôt que l'inverse, car les personnes TDAH ont un mauvais rapport au temps) et la nécessité de créer un état d'urgence permanent via des alertes multiples.
+- Présentation de la fonction Save to Note : sauvegarder une réponse jugée particulièrement bien construite pour l'exporter ensuite au format Google Docs ou Google Sheets, avec la possibilité de convertir plusieurs notes en nouvelle source réutilisable.
+- L'auteur précise clairement qu'il ne recommande jamais le piratage de livres, puis évoque une nostalgie : auparavant, les livres Kindle achetés pouvaient être exportés, une fonctionnalité qu'Amazon a depuis supprimée, ce qui a beaucoup déçu l'auteur.
+- Mention d'une bibliothèque open source en constante évolution (« Anna's Archive »), décrite comme une base de données de 53 téraoctets de livres. L'auteur précise utiliser cette ressource uniquement pour des livres déjà achetés légalement, comme prétexte pour montrer la suite de la démonstration.
+- L'auteur montre l'utilisation d'un livre déjà possédé légalement sur Apple Books, qu'il souhaite intégrer directement dans son Notebook LM pour pouvoir le consulter et l'exploiter dans ses recherches.
+- Astuce technique : comme le format EPUB n'est pas supporté par Notebook LM, l'auteur utilise l'outil en ligne Convertio pour convertir le fichier EPUB en PDF avant de pouvoir l'ajouter comme source.
+- Présentation d'un cas d'usage avancé : transformer un schéma de pensée théorique en connaissance applicable concrètement, en demandant explicitement d'identifier les applications pratiques validées scientifiquement à partir des sources intégrées.
+- Extraction d'un fait scientifique précis du Dr Russell Barkley : le TDAH entraîne un retard de développement des fonctions exécutives d'environ 30% par rapport à l'âge chronologique, avec un calcul d'« âge exécutif » à titre d'exemple, nuancé par l'auteur qui indique que cela varie selon les personnes.
+- Exemple d'application pratique extraite : la règle des 500 mots (autorisation de manger seulement après avoir écrit 500 mots), illustrant le principe de conditionner une récompense dopaminergique à l'accomplissement d'une tâche moins agréable.
+- Introduction aux fonctionnalités de restitution avancées de Notebook LM, dont l'Audio Overview, que l'auteur recommande particulièrement pour traiter des livres entiers plutôt que de courtes sources.
+- Justification de la recommandation Audio Overview pour les livres : les ouvrages de non-fiction contiennent souvent beaucoup de contenu superflu autour de trois idées centrales, et l'Audio Overview permet d'obtenir un aperçu rapide pour juger si le livre mérite une lecture complète.
+- Présentation des formats disponibles pour l'Audio Overview : Deep Dive (conversation complète), Brief (version courte avec les meilleures idées), et Critique (analyse constructive jugeant la qualité des sources intégrées).
+- Présentation des styles visuels disponibles pour les vidéos générées : whiteboard, kawaii/animé pastel, rétro print, papier craft, ou style personnalisé (custom), avec l'exemple d'un style inspiré de Kurzgesagt, chaîne reconnue pour ses vidéos explicatives.
+- Lancement de la génération vidéo (processus qui prend du temps) et présentation d'une autre fonctionnalité : la mindmap, permettant de structurer visuellement un livre ou un ensemble de sources sous forme de carte mentale, également générée après un certain délai.
+- Présentation de la fonctionnalité Flashcards : cartes à deux faces (façon Anki) permettant de vérifier sa compréhension, avec un choix du nombre de cartes générées (peu, normal, beaucoup) selon le besoin.
+- Précision sur les réglages communs aux flashcards et quiz : nombre de questions et niveau de difficulté paramétrables. Distinction claire : les flashcards affichent la réponse au retournement de la carte, tandis que le quiz suit un format de questions-réponses classique.
+- Présentation de la fonctionnalité Infographies, comparable aux visuels détaillés souvent partagés sur LinkedIn. Paramètres disponibles : niveau de détail (standard, concis, détaillé — l'auteur recommandant détaillé) et orientation (paysage ou portrait).
+- Pour affiner le design d'une infographie, l'auteur recommande d'utiliser Claude ou Gemini pour générer un bon prompt en amont, illustré par un exemple de prompt demandé à Claude définissant un rôle d'expert en infographie.
+- Présentation de la fonctionnalité de génération de présentation (slides) : choix entre un deck détaillé complet ou des slides épurées pour un présentateur en direct, selon l'usage prévu. L'auteur utilise Claude en complément pour préparer le contenu.
+- Principe méthodologique rappelé fréquemment par l'auteur dans tous les modules : réfléchir en deux temps avec l'IA. Il ne s'agit pas d'obtenir directement ce qu'on veut, mais de réfléchir d'abord au prompt lui-même pour qu'il corresponde réellement aux attentes.
+- Suite de la génération de slide deck depuis Notebook LM, puis introduction de la fonctionnalité Data Table, qui permet de créer un tableau de données structuré exportable vers d'autres outils.
+- L'auteur navigue entre plusieurs Notebook LM pendant qu'une génération est en cours (celui avec 59 sources par exemple), illustrant la possibilité de travailler en parallèle sur différents carnets pendant qu'un traitement long s'exécute en arrière-plan.
+- Conseil d'usage pour tirer le maximum de potentiel de l'outil : une fois les sources bien claires, agrandir la fenêtre de chat plutôt que de la garder réduite, pour mieux visualiser les résultats comme ici la dérégulation de la dopamine et les difficultés d'attention liées au TDAH.
+- Limite technique de l'export de mindmap : le fichier image téléchargé ne reflète que l'état actuellement déplié à l'écran, sans déplier automatiquement toutes les branches. Il faut donc déplier manuellement l'ensemble de l'arborescence avant d'exporter pour obtenir une mindmap complète.
+- Présentation du Study Guide : un guide d'étude condensant les sources, incluant un quiz avec des questions ciblées, par exemple sur le fonctionnement tout-ou-rien du cerveau TDAH ou l'importance de poursuivre la facilité pour une personne atteinte de TDAH.
+- Détail du Study Guide : après le quiz d'évaluation, on trouve le corrigé en scrollant, ainsi qu'un glossaire des termes clés abordés. Le prompt utilisé pour générer ce guide est également visible et copiable pour être conservé ailleurs.
+- L'auteur note que ces fonctionnalités permettent de créer facilement de petites infographies, et mentionne que des membres de la communauté en produisent abondamment, invitant à s'en inspirer. Transition vers la visualisation du fameux Deep Dive audio généré précédemment.
+- L'auteur souligne l'aspect pratique de la visualisation pour l'apprentissage, particulièrement utile avec des livres volumineux. Il retrouve le livre TDAH 2.0 entièrement traité, illustrant l'intérêt de l'outil pour digérer un contenu dense.
+- L'auteur explique l'avantage de créer un résumé de livre puis de creuser des points spécifiques en désélectionnant toutes les autres sources pour ne garder que celle du livre, permettant une conversation focalisée exclusivement avec ce contenu.
+- Présentation du rendu vidéo façon YouTube préfaite : explication visuelle du fonctionnement technique, à savoir une succession d'images générées par NanoBanana (modèle utilisé en arrière-plan) combinée à une synthèse vocale pour créer l'effet d'animation.
+- Petit aparté personnel : l'auteur recommande la L-théanine pour contrer les effets excitants du café et stabiliser l'énergie, notant une différence nette avant/après en avoir pris, en lien avec un contenu généré sur le cadre Focus.
+- Retour sur les flashcards et le quiz (non encore généré à ce stade) : exemple de question flashcard sur le comportement tout-ou-rien des personnes TDAH, expliqué par une dérégulation de la dopamine entraînant des fluctuations extrêmes de motivation.
+
+## Concepts cles
+- plan de présentation Notebook LM 101
+- origine de Notebook LM comme essai interne
+- vocation distincte de Notebook LM (étude/apprentissage)
+- pluralité des types de sources supportées
+- plans Notebook LM et limites de sources (gratuit 50, Plus 100)
+- notebook dédié par projet/recherche
+- fonctionnalité sous-cotée : sauvegarde de liens
+- comparaison avec Readwise comme agrégateur de contenu
+- usage proactif recommandé (poser des questions, creuser)
+- Notebook LM comme RAG chatbot central
+- limite créative des tâches RAG à forte volumétrie
+- compromis entre contexte riche et créativité
+- Fast Research vs Deep Research
+- recherche dans un Drive d'entreprise
+- génération automatique du prompt de Deep Research
+- étapes successives de la recherche automatisée
+- test comparatif Fast Research vs Deep Research
+- résultat limité de la recherche rapide simple
+- amélioration en réutilisant le prompt généré pour Deep Research
+- limite probable liée au volume de texte source
+- limite de mots confirmée
+- crawling de sites web variable selon les sources
+- méthode en deux étapes : fondamentaux puis recherche approfondie
+- ajout de sources YouTube par recherche et copie d'URL
+- réutilisation de sources entre modules
+- vérification et suppression des sources invalides
+- nature tout ou rien du TDAH (insight extrait)
+- horodatage des sources pour vérification
+- répétabilité de la requête sur différentes sources sélectionnées
+- apprentissage rapide et catégorisé via sélection de sources
+- rétro-ingénierie des délais
+- état d'urgence via alertes multiples
+- fonction Save to Note
+- export vers Google Docs/Sheets
+- conversion de notes en nouvelle source
+- disclaimer contre le piratage
+- suppression par Amazon de l'export Kindle
+- bibliothèque open source massive (mention contextuelle)
+- intégration d'un livre depuis Apple Books
+- conversion EPUB vers PDF via Convertio
+- limite de format de Notebook LM
+- transformation de connaissance théorique en application concrète
+- recherche d'applications pratiques validées scientifiquement
+- retard des fonctions exécutives de 30% (Dr Russell Barkley)
+- notion d'âge exécutif
+- règle des 500 mots comme conditionnement dopaminergique
+- principe récompense conditionnée à l'effort
+- Audio Overview recommandé pour les livres
+- contenu superflu typique des livres de non-fiction
+- Audio Overview comme filtre de pré-lecture
+- formats Audio Overview (Deep Dive, Brief, Critique)
+- styles visuels de génération vidéo
+- référence au style Kurzgesagt
+- génération de mindmap à partir des sources
+- temps de traitement des générations avancées
+- flashcards façon Anki
+- réglage du nombre de cartes générées
+- distinction flashcards vs quiz
+- paramétrage du nombre et de la difficulté
+- infographies générées automatiquement
+- paramètres de détail et d'orientation
+- utilisation de Claude/Gemini pour générer le prompt de design
+- génération de slides (deck détaillé vs présentateur)
+- principe de réflexion en deux temps avec l'IA
+- génération de slide deck
+- fonctionnalité Data Table exportable
+- gestion parallèle de plusieurs notebooks pendant un traitement long
+- agrandir la fenêtre de chat pour mieux visualiser les résultats
+- limite de l'export mindmap (nécessité de tout déplier manuellement)
+- Study Guide avec quiz intégré
+- corrigé et glossaire dans le Study Guide
+- prompt visible et copiable
+- inspiration communautaire pour les infographies
+- écoute du Deep Dive généré
+- intérêt pour digérer un livre volumineux
+- exemple concret : livre TDAH 2.0
+- conversation focalisée en désélectionnant les autres sources
+- résumé de livre puis approfondissement ciblé
+- mécanisme technique de la vidéo générée (NanoBanana + synthèse vocale)
+- recommandation personnelle : L-théanine contre les effets du café
+- exemple de flashcard sur le TDAH
+- dérégulation de la dopamine et fluctuations de motivation
+
+## Outils mentionnes
+- Notebook LM
+- Gemini
+- ChatGPT
+- Readwise
+- Google Docs
+- Google Sheets
+- Amazon Kindle
+- Apple Books
+- Convertio
+- Claude
+- NanoBanana
+
+## Tips techniques
+- Créer un notebook distinct pour chaque projet ou axe de recherche plutôt qu'un notebook générique
+- Utiliser Notebook LM de façon proactive en posant des questions plutôt qu'en consultant passivement les sources
+- Tester systématiquement Fast Research vs Deep Research avec le même prompt pour juger si la profondeur supplémentaire est nécessaire
+- Réutiliser un prompt conçu pour Deep Research même en mode Fast Research améliore sensiblement la qualité du résultat
+- Toujours poser les fondamentaux de la recherche avec le meilleur modèle avant de lancer une recherche approfondie complète
+- Vérifier systématiquement que chaque source ajoutée contient du contenu et supprimer les sources vides
+- Planifier en partant de la deadline finale et en remontant, plutôt qu'en avançant depuis le début du projet
+- Convertir les fichiers EPUB en PDF via Convertio avant de les ajouter à Notebook LM, qui ne supporte pas l'EPUB
+- Demander explicitement les applications pratiques concrètes validées par les sources plutôt que de rester sur la théorie
+- Conditionner une petite récompense agréable à l'accomplissement préalable d'une tâche moins plaisante mais nécessaire
+- Utiliser l'Audio Overview d'un livre pour juger rapidement s'il mérite une lecture complète avant de s'investir
+- Privilégier le niveau de détail 'détaillé' pour les infographies générées automatiquement
+- Demander à Claude ou Gemini de générer un prompt expert en amont pour améliorer le design d'une infographie
+- Toujours réfléchir en deux temps : d'abord concevoir le bon prompt, puis seulement obtenir le résultat souhaité
+- Agrandir la fenêtre de chat une fois les sources bien définies pour une meilleure lisibilité des résultats
+- Déplier manuellement toutes les branches de la mindmap avant export, car l'image ne capture que l'état affiché
+- Désélectionner toutes les sources sauf une pour avoir une conversation focalisée exclusivement sur ce contenu précis
+- Prendre de la L-théanine avec le café pour contrer ses effets excitants et stabiliser l'énergie
+
+## Cas d'usage reels
+- [[]]

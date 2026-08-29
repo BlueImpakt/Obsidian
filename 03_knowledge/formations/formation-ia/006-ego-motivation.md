@@ -1,0 +1,222 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Développer son Mindset"
+source_transcript: "0.06 Ego & Motivation.txt"
+---
+
+# 0.06 Ego & Motivation
+
+## Resume
+- Introduction au thème de l'ego, présenté comme un élément fondamental du mindset entrepreneurial qui peut jouer de mauvais tours. Les apprentissages partagés viennent principalement du livre "Ego is the Enemy" (L'Ego est l'ennemi) de Ryan Holiday. L'idée centrale : l'ego peut à la fois aider à accomplir de grandes choses et être un ennemi selon les situations.
+- L'ego est nécessaire à la réussite (exemple du champion sûr de lui) mais son point faible est qu'il préfère avoir raison plutôt que réussir. Un ego trop présent pousse à prendre des décisions qui donnent raison plutôt que des décisions qui mènent au succès.
+- Exemple concret d'un différend avec un prestataire : la réussite voudrait qu'on lâche l'affaire et passe à autre chose, mais l'ego pousse à réagir pour garder la face et débattre. Introduction de l'effet Dunning-Kruger (courbe de confiance en apprentissage) : on se sent nul au début, puis on croit devenir expert trop vite, avant de retomber dans un creux au moment où l'on découvre le vrai niveau requis — c'est à ce moment précis que la plupart des gens abandonnent.
+- Illustration de l'effet Dunning-Kruger observée sur les élèves du programme lors des bases no-code : ils se sentent experts sur les petites applications, mais beaucoup abandonnent dès qu'il faut construire de vraies applications d'entreprise. La solution est de se considérer comme un étudiant éternel, une posture apprise notamment auprès d'un mentor nommé Mathia, un CEO à la tête d'une entreprise de plusieurs millions.
+- Le mentor Mathia, malgré son succès, restait la personne qui écoutait le plus. Les gens qui réussissent et sont intéressants sont rarement ceux qui parlent le plus mais ceux qui écoutent et posent des questions ; ceux qui se mettent trop en avant pour impressionner se font dépasser par leur ego. L'humilité et la remise en question permanente sont présentées comme essentielles en entrepreneuriat, illustrées par l'auteur qui observe des créateurs IA avec un contenu qu'il juge de moindre qualité mais qui génère beaucoup de vues.
+- L'auteur raconte comment il a dû accepter que des créateurs avec un contenu qu'il juge moins soigné obtiennent de meilleurs résultats (chaîne plus grosse), ce qui l'a forcé à recentrer son ego et accepter davantage l'imperfection pour produire plus, quitte à être plus clickbait, même si ce n'est pas son style naturel.
+- Plutôt que de juger le contenu d'un concurrent comme mauvais, l'attitude recommandée est de chercher humblement ce qu'il fait de mieux (prospection, process, recrutement, délégation) pour en tirer des enseignements. Ce faible ego est facile à avoir en début de parcours mais revient vite dès les premiers accomplissements.
+- On n'a jamais vraiment maîtrisé un sujet : il faut toujours se remettre en question et orienter son ego vers les meilleurs résultats. Arrêter d'apprendre équivaut à avoir perdu ; l'auteur espère garder cette philosophie même à l'approche de la retraite.
+- Préférence pour travailler avec des jeunes qui apportent des codes différents. Les entrepreneurs qui échouent ont un point commun : ils écoutent leurs propres idées plutôt que le marché. Il faut écouter ce que le marché demande plutôt que de s'accrocher à sa vision personnelle. Renvoi au livre Ego is the Enemy comme lecture recommandée.
+- Introduction du concept "Happy to be shameful" (heureux d'être honteux), illustré par la célèbre phrase de Reid Hoffman (fondateur de LinkedIn) : si on n'est pas embarrassé par la première version de son produit, on l'a sorti trop tard. Il faut sortir un projet même imparfait puis itérer, car la honte de l'imperfection (feedback immédiat) vaut mieux que la honte de l'inaction (feedback qui arrive des années plus tard).
+- Exemples chiffrés : sur 100 vidéos YouTube ou 100 messages de prospection, si seulement deux fonctionnent extraordinairement bien, cela valait le coup. Il faut être fier d'être un novice et d'arriver avec innocence, à l'image des jeunes footballeurs de 17-18 ans qui innovent car ils ne sont pas encore bridés par les règles tactiques et la peur du jugement.
+- Soyez heureux d'être honteux, de faire les choses différemment et d'avoir un feedback en direct — mieux vaut un feedback rapide qui dit que c'est mauvais qu'un feedback dans deux ans faute d'avoir agi. Il faut 'embrace l'embarras' (Happy to be shameful). Introduction d'un nouveau concept de Nassim Taleb : l'antifragilité.
+- Explication du concept d'antifragilité : la fragilité se casse, la robustesse résiste sans s'améliorer, mais l'antifragilité progresse à mesure qu'elle est mise à l'épreuve et stressée. Il faut voir les échecs et faillites professionnelles comme de futurs avantages compétitifs, illustré par l'exemple d'un mauvais investissement dans un programme de coaching qui n'apprend finalement qu'à coacher.
+- Un échec doit être vu comme un apprentissage qui évite de reproduire la même erreur, rendant plus intelligent plutôt que simplement plus fort. Introduction de l'idée d'AB tester sa vie, en s'inspirant du concept marketing d'AB testing (comparer deux versions d'une page pour identifier ce qui fonctionne mieux).
+- Récit du parcours entrepreneurial de l'auteur par tâtonnements successifs : un premier job en marketing salarié vécu comme abominable, puis une expérience en entreprise traditionnelle jugée trop process et ennuyeuse, puis une expérience en start-up plaisante mais insuffisante, ce qui lui a fait comprendre qu'il était entrepreneur.
+- Après avoir identifié sa fibre entrepreneuriale, l'auteur teste le modèle start-up mais ne l'aime pas : recrutement, dépendance aux investisseurs et manque de liberté lui donnent une impression de prison, un étau autour de lui.
+- L'auteur s'oriente vers l'entrepreneuriat indépendant, crée des jeux de société qui fonctionnent bien puis s'effondrent à cause du Covid, avant de se réorienter vers le digital où il trouve enfin sa voie. Sans tester ces échecs successifs, on n'apprend rien et on reste soit robuste soit fragile plutôt que de devenir antifragile.
+- Métaphore du combattant de MMA qui encaisse des coups : le premier fait mal, les suivants font partie du jeu et endurcissent. Ne pas prendre un échec personnellement (ce serait de l'ego). Aux États-Unis, on valorise le nombre d'entreprises échouées plutôt que réussies, car la résilience prouve la capacité à réussir plus tard. Dernier point : être un étudiant éternel dans une économie de la connaissance où le contenu créé n'a jamais été aussi abondant.
+- Dans un monde qui évolue très vite, les diplômes deviennent rapidement obsolètes car le savoir doit s'apprendre en direct (live). La vélocité d'apprentissage — la rapidité à apprendre du nouveau — est présentée comme l'une des meilleures capacités à développer, plus importante que les acquis figés. Il faut garder une mentalité de débutant même au niveau expert pour cultiver la curiosité, qualité clé pour repérer les vraies opportunités dans le bruit ambiant de l'ère de l'IA.
+- Introduction du concept 'failure is data' (l'échec est une donnée) : un échec n'est pas une atteinte à l'identité mais une hypothèse incorrecte et une collecte de données sur un marché. Chaque échec analysé permet de prendre de meilleures décisions, à condition de regarder la vérité en face sur les causes réelles.
+- Liste de questions à se poser pour analyser un échec : était-ce sa propre faute, un problème de recrutement, de process, de clients, d'approche, ou une dispersion excessive.
+- Il faut extraire des échecs les données essentielles pour identifier des patterns de performance et des guidelines évitant de répéter les erreurs — c'est le principe 'failure is data'. Introduction du principe 'fail fast' : échouer souvent et rapidement permet d'apprendre plus vite que de rester dans une situation de mort lente d'entreprise. Les succès comme les échecs sont des données, pas des étiquettes permanentes ; mieux vaut réussir plus grand plus tard que petit tout de suite.
+- Transition vers le thème de la motivation. Première étape : se programmer pour surperformer (outperformer), ce qui nécessite de l'auto-réflexion et une honnêteté dure envers soi-même, en regardant la vérité en face sans se mentir ni s'inventer d'excuses. Ceux qui réussissent ont une capacité inébranlable à se remettre en question.
+- Idée forte : on n'obtient pas ce qu'on veut dans la vie, on obtient ce qu'on est. Illustré par l'exemple de quelqu'un qui veut devenir milliardaire mais qui boit le week-end et manque de consistance en semaine : cette personne n'y arrivera jamais.
+- Il faut se construire soi-même pour atteindre les résultats voulus, sachant que la réussite n'a pas de définition universelle : chacun a la sienne. Exemple des profs de surf, plus heureux dans leur métier peu rémunérateur que certains financiers qui travaillent jusqu'à deux heures du matin. La réussite est un accomplissement personnel aligné sur ses propres ambitions, pas celles dictées par la société.
+- La vraie formule pour réussir : la delivery (capacité à exécuter) plus la consistance dans le temps, notamment la capacité de concentration quotidienne (deux heures de focus contre six-sept heures pour les plus performants). Les philosophes business comme Naval situent la capacité de production maximale entre 25 et 32 ans, période de plus grande liberté avant que la famille et les enfants ne prennent le pas sur le temps disponible.
+- La combinaison des trois facteurs — capacité d'exécution, consistance et focus — répétée sur 365 jours produit d'énormes résultats ; retirer l'un des trois dégrade fortement les résultats. Conseil de mindset : formuler ses objectifs en termes d'identité ('je suis quelqu'un qui...') plutôt qu'en termes de désir ('je veux X'), en s'appuyant sur le livre Atomic Habits de James Clear.
+- Exemple du surfeur dont l'identité et le rythme de vie déterminent naturellement sa forme physique. Conseil de fréquenter des gens qui réussissent et de remplacer les podcasts de divertissement (foot, MMA) et les news par des contenus fondateurs (livres, audiobooks) qui font réfléchir sur le long terme. L'identité détermine les actions : il est plus difficile de faire des choix contraires à l'identité qu'on s'est donnée.
+- Illustration de l'identité qui détermine les actions avec l'exemple du Kinder Bueno dans le panier de courses : si l'identité est 'je suis quelqu'un qui mange sainement', le cerveau a du mal à justifier l'écart, contrairement à un simple objectif de perte de poids. Introduction du concept de self-talk (façon de se parler à soi-même) comme révélateur et déterminant de la personnalité, notamment évoqué pour les Francophones (France, Belgique, Suisse) par opposition aux Canadiens plus enclins au self-talk positif à l'américaine.
+- Le dialogue interne (self-talk) est aussi déterminant pour la réussite que la façon dont les autres nous parlent, car il détermine la self-performance : la perception de sa propre capacité à atteindre ses objectifs. Un dialogue interne dévalorisant et répété rend la réussite quasiment impossible, illustré par l'exemple de personnes qui se dénigraient déjà à l'école ou en club de sport et se retrouvent aujourd'hui dans une vie subie.
+- Les grands sportifs pratiquent la visualisation pour se projeter et identifier les actions à mener. Un hack proposé : utiliser l'IA pour renforcer le self-talk une fois qu'on connaît ses propres patterns de motivation — certains sont stimulés par l'adversité et la fermeté, mais la majorité répond mieux à la bienveillance et l'encouragement.
+- L'auteur évoque son projet d'ajouter un module dédié au self-talk assisté par IA, inspiré par un ancien client qui avait développé une application de self-talk. Il était initialement très sceptique face à ce concept.
+- L'auteur raconte avoir changé d'avis sur le self-talk positif à l'américaine ('Yes, let's go, t'es le meilleur') après avoir constaté que cela fonctionnait très bien. Il recommande d'utiliser Eleven Labs pour générer des mini-podcasts d'encouragement personnalisés à écouter le matin, une forme de visualisation rendue accessible par l'IA. Il évoque aussi la technique de se parler à la troisième personne pour créer un détachement émotionnel.
+- Se parler à la troisième personne ('Théo va faire ça aujourd'hui') permet de moins mobiliser les émotions et davantage le cortex préfrontal lié à la planification. Dernier point : la qualité des pensées détermine la qualité de vie perçue — des pensées dominées par la peur (manque d'argent, tromperie, engagement) mènent à une perception négative de l'existence, indépendamment des circonstances objectives réelles.
+- Deux personnes vivant dans la même ville, entourées des mêmes gens, peuvent avoir des expériences de vie radicalement opposées selon leur seule perception. Transition vers le thème de la difficulté entrepreneuriale : l'auteur préfère la difficulté qu'il choisit lui-même à celle qui lui est imposée, ce qui explique son mal-être en tant que salarié où l'incertitude (supérieur hostile, grille de salaire injuste) était subie plutôt que choisie.
+- L'entrepreneuriat est décrit comme une guerre psychologique contre soi-même, source de doutes fréquents surtout en solo. L'objectif du programme est de réduire ce doute via des hacks et retours d'expérience partagés. Point clé : le doute et la difficulté sont normaux et communs à tous les entrepreneurs, ce qui constitue déjà la moitié du chemin pour les surmonter — le cerveau étant programmé pour éviter l'incertitude, et l'entrepreneuriat n'étant que de l'incertitude.
+- Savoir que l'incertitude et le doute sont universels (même chez les entrepreneurs à succès, juste à des échelles différentes) aide à ne pas paniquer. Conseil concret face au doute : respirer profondément, noter ce qui encombre l'esprit, avancer par la logique plutôt que par les émotions. Réconfort : la barre du niveau minimum requis pour réussir est plus basse qu'on ne le pense, car la plupart des gens font semblant, ne font pas, ou font mal.
+- Introduction du concept d'excellence relative : être bon sur la forme (fiabilité, ponctualité, communication, rigueur administrative) de façon constante, plutôt que viser une excellence absolue ponctuelle suivie d'un retour aux mauvaises habitudes. Il vaut mieux être excellent dans la relation client autant que dans la technique, plutôt qu'expert technique mais méprisant envers ses clients — un travers plus répandu qu'on ne le pense.
+- L'auteur raconte avoir été l'un des premiers, dès 2019, à utiliser Loom pour informer ses clients de ses avancées, à une époque où l'outil était peu répandu, ce qui lui a permis de se démarquer par l'expérience client offerte plutôt que par la seule technique. Il souligne l'importance de la relation humaine, souvent négligée, qui facilite la résolution des problèmes techniques inévitables. Enfin, il insiste sur l'importance de croire au système/process mis en place, même en période de doute ou de perte de motivation.
+- Conseil méthodologique : appliquer le raisonnement en 'First Principles' pour diagnostiquer ce qui ne fonctionne pas, en décomposant chaque maillon de la chaîne et en se demandant pourquoi il échoue à cet endroit précis.
+- Se focaliser sur la réparation du système plutôt que sur soi-même est plus facile émotionnellement, car se remettre personnellement en question implique doute et émotions. Les résultats mettent du temps à venir avant d'augmenter rapidement une fois le déclic obtenu.
+- L'objectif est de raccourcir la période creuse initiale pour éviter l'abandon au moment du 'this is pointless'. Il faut se concentrer sur la progression et l'apprentissage plutôt que sur le résultat immédiat, et croire en l'effet cumulé : même de petits efforts, comme le contenu gratuit publié sur YouTube par pur partage, finissent par générer des résultats disproportionnés, comme l'auteur l'a constaté avec les clients gagnés grâce à d'anciennes vidéos.
+
+## Concepts cles
+- l'ego comme double tranchant
+- livre Ego is the Enemy de Ryan Holiday
+- maîtrise de l'ego
+- ego du champion
+- préférer avoir raison plutôt que réussir
+- mauvaises décisions dictées par l'ego
+- différend avec un prestataire
+- garder la face vs passer à autre chose
+- effet Dunning-Kruger
+- creux d'apprentissage où les gens abandonnent
+- Dunning-Kruger appliqué au no-code
+- abandon face à la difficulté des applications entreprise
+- posture d'étudiant éternel
+- mentor Mathia
+- écoute plutôt que prise de parole chez les gens qui réussissent
+- humilité entrepreneuriale
+- remise en question permanente
+- comparaison avec des créateurs à contenu moins soigné mais plus performant
+- accepter l'imperfection pour produire plus
+- résultats vs perfectionnisme
+- recentrer son ego face aux résultats d'autrui
+- analyser les succès des concurrents avec humilité au lieu de les juger
+- retour de l'ego après les premiers succès
+- on ne maîtrise jamais totalement un sujet
+- arrêter d'apprendre = avoir perdu
+- travailler avec des générations différentes
+- écouter le marché plutôt que ses propres idées
+- point commun des entrepreneurs qui échouent
+- Happy to be shameful
+- citation de Reid Hoffman sur le lancement produit
+- itération après lancement
+- honte de l'imperfection vs honte de l'inaction
+- ratio de réussite sur volume (2 succès sur 100 tentatives)
+- innocence des jeunes joueurs de foot comme métaphore
+- fierté d'être novice
+- feedback immédiat vs différé
+- embrasser l'embarras (Happy to be shameful)
+- antifragilité de Nassim Taleb
+- fragilité vs robustesse vs antifragilité
+- échecs comme futurs avantages compétitifs
+- exemple du mauvais investissement en formation coaching
+- échec comme apprentissage évitant la répétition d'erreurs
+- AB tester sa vie
+- AB testing marketing
+- tâtonnement par expériences successives
+- job marketing salarié vécu négativement
+- expérience en entreprise traditionnelle
+- expérience en start-up qui révèle la fibre entrepreneuriale
+- rejet du modèle start-up classique
+- dépendance aux investisseurs comme contrainte
+- recherche de liberté entrepreneuriale
+- entrepreneuriat indépendant
+- création de jeux de société stoppée par le Covid
+- réorientation vers le digital
+- accumulation d'échecs qui rend antifragile
+- métaphore du combattant de MMA
+- ne pas personnaliser l'échec
+- culture américaine valorisant le nombre d'échecs entrepreneuriaux
+- économie de la connaissance
+- étudiant éternel
+- obsolescence rapide des diplômes
+- apprentissage en live
+- vélocité d'apprentissage
+- mentalité de débutant dans un jeu d'expert
+- curiosité pour repérer les opportunités
+- failure is data
+- échec comme hypothèse incorrecte plutôt qu'atteinte à l'identité
+- regarder la vérité en face
+- grille de questions pour diagnostiquer un échec
+- extraction de patterns à partir des échecs
+- fail fast
+- succès et échecs comme données non permanentes
+- réussir grand plus tard vs petit tout de suite
+- se programmer pour surperformer
+- auto-réflexion dure et honnête
+- ne pas se mentir à soi-même
+- capacité à se remettre en question
+- on obtient ce qu'on est, pas ce qu'on veut
+- consistance comme condition de réussite
+- définition personnelle de la réussite
+- exemple des profs de surf vs financiers
+- accomplissement personnel plutôt que réussite financière
+- ambitions propres vs ambitions dictées par la société
+- formule delivery x consistance
+- capacité de concentration quotidienne (2h vs 6-7h)
+- période de production maximale entre 25 et 32 ans
+- impact de la famille sur la disponibilité entrepreneuriale
+- formule exécution x consistance x focus sur 365 jours
+- identité vs désir dans la formulation des objectifs
+- livre Atomic Habits de James Clear
+- exemple du surfeur et son identité
+- fréquenter des gens qui réussissent
+- remplacer contenus de divertissement par contenus fondateurs
+- identité qui détermine les actions
+- exemple du Kinder Bueno et l'identité alimentaire
+- self-talk et dialogue interne
+- différence culturelle francophone vs nord-américaine sur le self-talk
+- self-talk et self-performance
+- impact du dialogue interne négatif sur la réussite
+- exemple des personnes qui se dénigraient déjà jeunes
+- visualisation chez les grands sportifs
+- utiliser l'IA pour renforcer le self-talk
+- profils motivés par l'adversité vs par la bienveillance
+- projet de module dédié au self-talk avec IA
+- scepticisme initial envers le self-talk
+- client ayant développé une app de self-talk
+- conversion au self-talk positif à l'américaine
+- mini-podcasts d'encouragement générés par IA
+- se parler à la troisième personne pour se détacher émotionnellement
+- troisième personne et cortex préfrontal
+- qualité des pensées et qualité de vie perçue
+- pensées dominées par la peur
+- perception qui détermine la qualité de vie
+- difficulté choisie vs difficulté imposée
+- mal-être du salariat lié à l'incertitude subie
+- grille de salaire injuste (exemple Corinne/Albert)
+- entrepreneuriat comme guerre psychologique contre soi-même
+- normalité du doute chez tous les entrepreneurs
+- cerveau programmé pour éviter l'incertitude
+- doute universel chez tous les entrepreneurs à toute échelle
+- barre de niveau minimum requis plus basse qu'on ne pense
+- médiocrité généralisée de la concurrence
+- excellence relative constante vs excellence absolue ponctuelle
+- fiabilité, ponctualité, communication comme composantes de l'excellence relative
+- excellence technique insuffisante sans qualité relationnelle
+- utilisation précoce de Loom en 2019 pour l'expérience client
+- importance de la relation humaine dans le service
+- croire en son système même en période de doute
+- raisonnement en First Principles
+- décomposition d'un problème maillon par maillon
+- difficulté de se remettre soi-même en question vs remettre en question le système
+- courbe de croissance avec période creuse initiale puis accélération
+- abandon au moment du 'this is pointless'
+- focus sur la progression plutôt que le résultat
+- effet cumulé des petits efforts (contenu YouTube gratuit)
+
+## Outils mentionnes
+- Eleven Labs
+- Loom
+- YouTube
+
+## Tips techniques
+- Face à un conflit où l'ego est en jeu, privilégier ce qui mène à la réussite (lâcher l'affaire) plutôt que ce qui donne raison (débattre pour garder la face)
+- Accepter de sacrifier un peu de perfectionnisme (être plus clickbait, produire plus vite) si cela améliore les résultats mesurables
+- Face à un concurrent qui réussit mieux avec un contenu jugé inférieur, analyser pourquoi (prospection, process, recrutement, délégation) plutôt que de se contenter de le déprécier
+- Écouter ce que le marché demande plutôt que de s'accrocher à sa propre vision, sous peine d'échouer comme la majorité des entrepreneurs
+- Sortir un projet même imparfait plutôt que d'attendre qu'il soit parfait, puis itérer dessus grâce au feedback du public
+- Produire en volume (vidéos, messages de prospection) en acceptant qu'une minorité seulement fonctionne vraiment bien, plutôt que de viser la perfection sur peu de tentatives
+- Considérer chaque échec comme une donnée d'apprentissage à analyser plutôt que comme un simple raté à oublier
+- Après un échec, analyser objectivement pourquoi cela n'a pas marché plutôt que de le vivre comme une atteinte personnelle
+- Se poser une série de questions ciblées après un échec (faute personnelle, recrutement, process, clients, approche, dispersion) pour en identifier la vraie cause
+- Appliquer le principe fail fast : échouer souvent et rapidement plutôt que de s'enliser lentement dans une situation qui ne fonctionne pas
+- Formuler ses objectifs en termes d'identité ("je suis quelqu'un qui mange sainement") plutôt qu'en termes de désir ("je veux perdre du poids") pour faciliter le changement de comportement
+- Remplacer les podcasts de divertissement (sport, actualités) par des podcasts, livres ou audiobooks fondateurs qui nourrissent la réflexion à long terme
+- Identifier son propre pattern de motivation (adversité/fermeté ou bienveillance/encouragement) pour ensuite utiliser l'IA de façon adaptée à ce profil
+- Utiliser Eleven Labs pour générer un mini-podcast d'encouragement personnalisé à écouter chaque matin comme forme de visualisation positive
+- Se parler à la troisième personne pour prendre de la distance émotionnelle et mobiliser davantage la planification rationnelle
+- Se parler à la troisième personne pour mobiliser le cortex préfrontal (planification rationnelle) plutôt que les émotions
+- Face au doute : prendre une grande respiration, noter ce qui encombre l'esprit, et avancer par la logique plutôt que par les émotions
+- Viser une excellence relative constante (fiabilité, ponctualité, communication) plutôt qu'une excellence absolue ponctuelle suivie d'un relâchement
+- Utiliser des vidéos (type Loom) pour tenir les clients informés des avancées plutôt que des appels chronophages, afin d'améliorer l'expérience client
+- Se fier à son système et aux chiffres plutôt qu'à sa motivation du moment, notamment en période de prospection sans résultats immédiats
+- Décomposer son processus en maillons distincts et appliquer un raisonnement First Principles pour identifier précisément où et pourquoi cela ne fonctionne pas
+- Se concentrer sur la réparation du système plutôt que sur l'autocritique personnelle, car c'est émotionnellement plus soutenable et productif
+- Se focaliser sur la progression et l'apprentissage plutôt que sur le résultat immédiat pour tenir dans la durée avant le déclic de croissance
+
+## Cas d'usage reels
+- [[]]

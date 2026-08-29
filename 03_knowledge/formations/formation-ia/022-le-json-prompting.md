@@ -1,0 +1,166 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Comprendre le Prompt Engineering"
+source_transcript: "0.22 Le JSON Prompting.txt"
+---
+
+# 0.22 Le JSON Prompting
+
+## Resume
+- Introduction au JSON prompting, présenté comme extrêmement important pour les agents IA mais aussi pour la façon d'interagir avec les LLM en général. Pour donner envie, l'auteur montre d'abord un résultat impressionnant : une mini-publicité Coca-Cola (logo, boisson, bouteille) générée en un seul prompt, un rendu qui aurait demandé des semaines de motion design, rendu possible grâce au JSON prompting.
+- L'auteur précise que le résultat de la pub Coca est déjà très proche du réel et perfectible en deux-trois prompts, le tout grâce au JSON prompting. Il définit ensuite le JSON (JavaScript Object Notation) et affirme que c'est le seul langage de code que l'on devrait apprendre, promettant une présentation pédagogique et renvoyant à une vidéo complémentaire.
+- L'auteur rassure sur la difficulté apparente du JSON : ayant lui-même débuté, il estime qu'avec la bonne approche pédagogique, ce n'est pas si compliqué. Tout est une question de construction et surtout de savoir lire le JSON ; il annonce qu'un objet JSON ressemble toujours à la même chose et va montrer comment l'identifier.
+- Explication de la structure de base : un objet JSON commence et se termine par une accolade. À l'intérieur, il contient des éléments composés d'une propriété (aussi appelée clé/key, mise entre guillemets) et d'une valeur. Les guillemets autour de la clé sont une façon de codifier l'information.
+- L'auteur explique pourquoi les guillemets sont nécessaires : sans eux, impossible de distinguer un texte isolé d'une structure. Ils encapsulent les valeurs. À gauche des deux-points se trouve la clé (ce qu'on définit), à droite la valeur effective. Exemple : la clé « nom » entre guillemets a pour valeur « Théo ».
+- L'auteur pose les principes fondamentaux : toute accolade ouvre un objet contenant des clés et valeurs, et surtout on peut imbriquer de manière quasi illimitée. Un objet peut contenir un nom, une liste et un autre objet imbriqué. C'est là la richesse du JSON : autant d'objets imbriqués que nécessaire, ce qui permet de créer une structure réutilisable comme base d'un prompt beaucoup plus structuré que du langage naturel.
+- Décomposition d'un objet exemple contenant trois propriétés (nom, liste, objet imbriqué), directement liées à l'objet parent. L'auteur explique que ces propriétés peuvent porter différents types de valeurs : un texte est appelé « string », tandis que les chiffres n'ont pas de guillemets.
+- Explication des types de valeurs en JSON. Les nombres n'ont pas de guillemets afin de les distinguer d'un nombre inclus dans un texte (ex: « age »: 28 vs « Théo a 28 ans »), ce qui permet ensuite de faire des calculs. L'auteur détaille trois types : le texte (entre guillemets), les nombres (sans guillemets) et les booléens (True/False), ces derniers servant aux états binaires comme une tâche terminée ou non.
+- Approfondissement des booléens : une propriété vraie ou fausse, utilisée en permanence dans les outils du web. Exemple concret : sur Instagram, un booléen « utilisateur connecté » vrai/faux détermine si l'application propose de se connecter ou renvoie au feed.
+- Présentation des listes en JSON (ex: une propriété « hobby » contenant foot, MMA, technologie, IA). Ce langage sert à communiquer avec une base de données et à afficher plusieurs éléments. Le JSON permet de structurer et transférer des données d'une application A vers une application B, ce qui en fait un pilier de l'univers technologique. L'auteur enchaîne sur la structuration d'un prompt en JSON, plus efficace qu'un prompt flou en langage naturel.
+- Suite de la comparaison : en structurant (tâche, sujet, format exact avec nombre de paragraphes, ton impactant, points détaillés et conclusion), on laisse beaucoup moins de choix au LLM et le résultat colle davantage à l'attente. L'auteur illustre par l'analogie du moule à gâteau : des madeleines formées à la main auront des formes disparates, alors qu'un moule leur donne à toutes la même forme.
+- L'auteur résume l'objectif recherché avec le JSON prompting : forcer le LLM à répondre au maximum de ses capacités par rapport à la structure voulue. C'est plus efficace pour de nombreux cas (rédaction, présentations PowerPoint, traitement Excel) car cela oblige à réfléchir au format de sortie exact. Il annonce décomposer ensemble la structure du prompt et recommande un outil pour l'illustrer.
+- L'auteur recommande des outils pour visualiser un JSON et en voir la structure : JSON Pathfinder et JSON Crack. En collant le JSON dans l'éditeur, on obtient une représentation visuelle de la structure, même si l'outil réagit parfois mal au moment du collage.
+- L'auteur valide le JSON dans l'outil (qui s'avère valide), nettoie le formatting en supprimant les espaces superflus pour garder la présentation voulue, puis annonce zoomer sur le JSON afin de le décomposer visuellement à l'écran.
+- Décomposition visuelle d'un JSON : on peut refermer les objets pour mieux voir la structure. L'objet principal contient trois propriétés, dont l'une (« structure ») est elle-même un objet, reconnaissable à son accolade. À l'intérieur, « introduction » est un autre objet contenant deux propriétés portant chacune une valeur.
+- L'auteur distingue objet et array. Un objet, entre accolades courbes, est une accumulation de propriétés ; un array, entre crochets droits, est une liste. Dans l'exemple, « structure » contient une introduction (objet), trois main points (array) et une conclusion. Il récapitule les notions de propriété simple et d'objet.
+- L'auteur creuse l'objet « structure » : il contient une introduction (objet à deux propriétés), un main points (array de trois objets) et une conclusion (deux propriétés). Il illustre un point subtil : « longueur »: « 2 paragraphes » est entre guillemets car c'est du texte, alors qu'une simple longueur numérique s'écrirait 2 sans guillemets.
+- L'auteur explique le rôle des virgules qui séparent les objets et propriétés (ex: séparer introduction et main points au sein de structure), et la nécessité d'équilibrer les crochets : chaque crochet ouvrant doit avoir un crochet fermant correspondant. Pour fermer « structure », il faudrait donc ajouter le crochet de fermeture adéquat.
+- L'auteur conclut sur la structuration : bien fermer « structure » suppose d'y intégrer main points, sinon il manquerait. Structurer ainsi crée un cadre qui concentre l'énergie du LLM sur l'attendu. Il enchaîne sur la raison pour laquelle les LLM adorent le JSON : ils se sont entraînés sur le scraping massif de données, dont du langage textuel mais surtout du code.
+- Les LLM connaissent parfaitement le JSON car ils ont été entraînés sur des milliards de lignes de code ; c'est la base même des agents IA à venir. Le JSON permet aussi de limiter le nombre de tokens à consignes identiques, car on écrit moins de caractères qu'en phrases complètes, tout en donnant une structure claire.
+- L'auteur montre qu'exprimer une consigne en phrases (« crée trois main points avec un titre, un point, un détail, deux exemples, plus une conclusion ») est plus long qu'en structure JSON. Le LLM reconnaît la structure JSON et sait qu'il doit modifier le modèle fourni en entrée pour y faire rentrer l'attendu. Il donne l'exemple d'un post LinkedIn où l'on codifie précisément hook, body et CTA (280 caractères, ton expert, 3 hashtags) plutôt que des consignes floues.
+- Le JSON prompting s'applique à de nombreux cas de structuration, comme un article de blog (optimisation, intégration de mots-clés). Il ouvre aussi la voie à l'automatisation : lorsqu'on abordera les agents, insérer des données dynamiques (par exemple des mots-clés définis par un premier agent) dans une structure de prompt JSON sera bien plus efficace que de les glisser au milieu d'un prompt en langage classique.
+- L'auteur invite à raisonner en JSON car son usage sera fréquent : génération de contenu, mais aussi analyse de données (scoring de 1 à 10, résumés en bullet points, analyse de champs précis). Formater les noms de colonnes en JSON rend l'input bien plus lisible qu'une demande en langage naturel. Il annonce que c'est surtout crucial pour la création de code et de contenus visuels.
+- L'auteur explique que le JSON est crucial non seulement pour le code mais aussi pour les contenus visuels (images, vidéos), dont la création est une succession de mini-instructions (scène, durée, voice-over, visuels, plan de caméra, scénographie, lumières). Structurer tout cela laisse moins de place à l'interprétation ; c'est ce niveau de détail qui permet d'obtenir une publicité quasi parfaite pour Coca-Cola, là où un prompt en langage texte donnerait un résultat inférieur.
+- L'auteur détaille l'intérêt du scène par scène en JSON, en laissant au modèle la structure qu'il attend. Il étend le JSON prompting au développement d'applications (avec des outils comme Bolt ou Lovable, pour préciser ce que chaque fonctionnalité doit faire) et insiste sur un bénéfice indirect : structurer ses prompts en JSON pousse l'utilisateur lui-même à être plus clair, car un LLM exige des efforts explicites pour être bien compris.
+- Décryptage du prompt Coca-Cola en JSON : éclairage (warm natural lighting, lumière chaude avec reflets doux évoquant une vitre en fond), description, style (cinématique, nostalgique), caméra (plan fixe large / fixed wide angle), environnement (fond de studio blanc / white studio backdrop) et éléments (logo Coca, transformation de liquide). L'auteur précise avoir trouvé ce prompt et promet des recettes pour en dénicher.
+- L'auteur note qu'avec une marque inconnue (« la plomberie de Michel ») le rendu serait moins bon qu'avec Coca-Cola. Il décrypte la clé motion (Logo to Liquid to Object : le logo se fond en liquide puis en objet), la clé audio possible sur VO3 (musique acoustique et SFX : bruit de liquide, bulles, pop de capsule), des mots-clés de contexte (Coca-Cola, transformation, nostalgie) et le format 16:9. Il explique enfin pourquoi le JSON est si important pour les agents, qui communiquent entre eux principalement en JSON.
+- Après les fondamentaux, l'auteur oriente vers des sources pour progresser : les subreddits N8N et Prompt Engineering, mais surtout X (Twitter) où les créatifs partagent les meilleurs exemples. Il fournit un template prêt à l'emploi avec la vidéo et montre qu'en cherchant « JSON Prompting VO3 » sur X, on trouve de nombreux prompts à réadapter.
+- L'auteur montre un exemple de prompt trouvé sur X, celui d'une voiture Tesla dans un garage, qu'il juge extraordinaire. Il précise que ces prompts JSON s'appliquent à VO3 mais aussi à Midjourney, en repérant les mentions « this prompt for mid-journey ».
+- L'auteur observe que beaucoup de gens partagent des prompts pour VO3 et un peu moins pour Midjourney, mais qu'un peu de recherche suffit à en trouver. Il fait défiler d'autres exemples bluffants : AG1, Smeg, un restaurant (en imaginant une pub de restaurant de sushis) et une Jeep dans le désert.
+- L'auteur conclut en montrant encore des exemples qu'il trouve fous (un aigle, un billboard) et rappelle que ce qui exigeait auparavant beaucoup de motion design se réalise désormais en deux prompts. Il invite surtout à comprendre le fonctionnement du JSON pour l'adapter non seulement aux vidéos mais à tous ses prompts, ses agents et son travail quotidien.
+
+## Concepts cles
+- introduction au JSON prompting
+- importance pour les agents IA
+- démonstration d'une pub générée en un prompt
+- JSON = JavaScript Object Notation
+- le seul langage de code à apprendre
+- perfectionnement en quelques prompts
+- dédramatisation du JSON
+- importance de savoir lire la structure
+- notion d'objet JSON
+- accolades délimitant un objet
+- couple propriété (clé) / valeur
+- rôle des guillemets pour la clé
+- encapsulation des valeurs par guillemets
+- structure clé : valeur autour des deux-points
+- exemple nom / valeur
+- imbrication illimitée d'objets
+- richesse structurelle du JSON
+- JSON comme base d'un prompt structuré
+- propriétés liées à l'objet parent
+- types de valeurs (string vs nombre)
+- notion de string = texte
+- distinction nombre / texte par les guillemets
+- trois types de valeurs (string, number, boolean)
+- booléens True/False pour états binaires
+- propriété booléenne vraie/fausse
+- usage omniprésent sur le web
+- exemple connexion Instagram
+- listes de valeurs
+- structuration et transfert de données entre applications
+- transition vers le prompt structuré en JSON
+- structuration réduisant la liberté du LLM
+- format exact (paragraphes, ton, détails)
+- analogie du moule à madeleines
+- forcer le LLM au maximum de ses capacités
+- cas d'usage rédaction / PowerPoint / Excel
+- réflexion sur le format de sortie exact
+- outils de visualisation de JSON
+- représentation visuelle de la structure
+- validation du JSON dans l'outil
+- nettoyage du formatting
+- préparation à la décomposition visuelle
+- repli des objets pour visualiser
+- objet imbriqué reconnaissable à l'accolade
+- hiérarchie propriétés/valeurs
+- distinction objet vs array
+- accolades courbes vs crochets droits
+- array = liste, objet = accumulation de propriétés
+- exploration d'un objet imbriqué
+- array de plusieurs objets
+- nombre au format texte vs nombre pur
+- virgule comme séparateur
+- équilibrage crochets ouvrants/fermants
+- fermeture correcte d'un objet
+- cadre structurel concentrant le LLM
+- entraînement des LLM par scraping
+- prépondérance du code dans les données
+- maîtrise native du JSON par les LLM
+- JSON comme fondation des agents IA
+- économie de tokens à consignes égales
+- concision du JSON vs phrases
+- le LLM adapte le template fourni
+- codification précise (LinkedIn : hook/body/CTA, 280 caractères, 3 hashtags)
+- structuration d'articles de blog
+- automatisation via données dynamiques
+- insertion de données dans un prompt JSON
+- raisonner en JSON par habitude
+- analyse de données (scoring, résumés, colonnes)
+- lisibilité accrue des inputs
+- JSON pour le code et les contenus visuels
+- création visuelle = succession de mini-instructions
+- niveau de détail permettant une pub quasi parfaite
+- scène par scène en JSON
+- développement d'applications (Bolt, Lovable)
+- structurer en JSON rend l'utilisateur plus clair
+- décryptage d'un prompt vidéo JSON
+- clés style / caméra / éclairage / environnement
+- clé éléments (logo, liquide)
+- rendu moindre pour une marque inconnue
+- clés motion et audio (SFX) sur VO3
+- agents communiquant en JSON
+- sources d'apprentissage (Reddit, X)
+- X comme meilleure source d'exemples créatifs
+- template prêt à l'emploi
+- exemple Tesla dans un garage
+- prompts applicables à VO3 et Midjourney
+- abondance de prompts VO3 vs Midjourney
+- exemples AG1, Smeg, restaurant, Jeep
+- exemples aigle et billboard
+- démocratisation du motion design
+- comprendre le JSON pour l'appliquer partout
+
+## Outils mentionnes
+- PowerPoint
+- Excel
+- JSON Pathfinder
+- JSON Crack
+- Bolt
+- Lovable
+- VO3
+- Reddit
+- X (Twitter)
+- Midjourney
+
+## Tips techniques
+- Reconnaître un objet JSON à ses accolades ouvrante et fermante
+- Ne pas mettre de guillemets aux nombres pour les rendre exploitables en calcul
+- Définir en JSON le format exact attendu (paragraphes, ton, détails) pour cadrer le résultat
+- Utiliser le JSON prompting dès qu'on veut définir précisément la structure d'une sortie
+- Coller son JSON dans un visualiseur (JSON Crack, JSON Pathfinder) pour vérifier et comprendre sa structure
+- Refermer les accolades d'un objet pour visualiser rapidement les niveaux d'imbrication
+- Retenir : crochets droits = liste (array), accolades courbes = objet
+- Vérifier que chaque crochet ouvrant possède son crochet fermant correspondant
+- Codifier des limites précises (nombre de caractères, hashtags) plutôt que des consignes floues comme « pas trop long »
+- Insérer les données dynamiques produites par un agent dans une structure JSON plutôt que dans un prompt en langage libre
+- Formater les données à analyser (ex: noms de colonnes) en JSON pour un input plus clair et exploitable
+- Structurer un prompt vidéo scène par scène en JSON (durée, voix, visuels, caméra, lumières) plutôt qu'en bloc
+- Utiliser le JSON prompting aussi pour le développement d'applications afin de préciser fonctionnalités et contraintes
+- Détailler chaque paramètre visuel dans des clés dédiées (style, caméra, éclairage, environnement, éléments)
+- Chercher « JSON Prompting VO3 » sur X pour récupérer et réadapter des prompts partagés
+- Chercher à comprendre le fonctionnement du JSON pour l'adapter à ses propres prompts, agents et tâches quotidiennes
+
+## Cas d'usage reels
+- [[]]

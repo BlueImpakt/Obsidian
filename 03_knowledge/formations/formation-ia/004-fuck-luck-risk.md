@@ -1,0 +1,167 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Développer son Mindset"
+source_transcript: "0.04 Fuck luck, risk.txt"
+---
+
+# 0.04 Fuck luck, risk
+
+## Resume
+- Introduction à la partie mindset de la formation, divisée en plusieurs sous-parties. L'objectif n'est pas d'imposer un modèle de pensée unique mais de transmettre les apprentissages accumulés au fil du parcours entrepreneurial (freelance, agence, création de contenu), sachant que chacun part avec un mindset différent façonné par son vécu.
+- Les conseils partagés sont des modèles mentaux issus d'expériences personnelles, de rencontres et de lectures, à prendre sans les suivre aveuglément. Le passage souligne l'importance d'écouter ces idées surtout pour ceux dont l'entourage familial est hostile à l'entrepreneuriat, et rappelle que de nombreux entrepreneurs existent et partagent des points communs.
+- Introduction du concept central du module, la phrase « fuck luck, risk » transmise par un mentor devenu ami, ancien CEO lors d'un stage à Barcelone. Face au bruit ambiant autour de l'IA et du business en ligne où tout le monde se prétend expert, l'auteur insiste sur l'importance de suivre son intuition entrepreneuriale.
+- L'intuition est décrite comme une forme de data inconsciente, le résultat d'un traitement en arrière-plan des expériences et discussions passées. L'auteur cite Naval qui la définit comme un inconscient ayant traité des millions de points inaccessibles au conscient, permettant de détecter des patterns et opportunités réelles. Beaucoup de gens ignorent leur intuition au profit d'une logique rassurante.
+- Les personnes qui ignorent leur intuition se réfugient dans des croyances limitantes imposées par la société. La deuxième idée clé développée est de savoir trier le signal du bruit, particulièrement crucial à l'ère de l'IA où le contenu généré en masse (y compris du contenu fake) explose. L'auteur recommande de privilégier la qualité à la quantité dans les lectures.
+- Pour trouver le signal, il faut s'identifier à des contenus authentiques qui résonnent personnellement, même générés par IA, sans les rejeter en bloc. L'exemple du bruit donné est celui des posts LinkedIn sur des automatisations ou agents IA à l'usage discutable qui génèrent de l'engagement sans réelle application en entreprise.
+- Le signal, souvent noyé dans un amas de bruit, est là où se trouvent les meilleures opportunités business. L'auteur recommande d'entraîner son cerveau à détecter des patterns invisibles aux autres, en réfléchissant systématiquement à comment aider une personne qui exprime un problème avec les compétences dont on dispose.
+- Illustration concrète de la connexion d'opportunité : relier une compétence personnelle (créer des apps) à un problème observé chez d'autres (créateurs en manque d'inspiration pour leurs scripts) pour en faire une solution. L'auteur invite aussi à analyser pourquoi certains contenus fonctionnent très bien (effet wow, solution à un problème spécifique).
+- Nouvelle idée clé : la vitesse bat toujours l'équilibre. L'auteur recommande de préférer des périodes intenses et courtes (90 jours à fond, 12h par jour) plutôt qu'un effort dilué sur plusieurs années, un principe qu'il nomme le « growth leap », une avancée significative à capitaliser.
+- Référence à la citation de Nassim Taleb sur les trois drogues de la vie (héroïne, sucre, salaire fixe) pour illustrer le danger du confort qui piège dans l'inaction. Le programme de 100 jours est justifié par cette logique de sprint intense plutôt que d'attendre passivement pendant des années, avec des sprints modulables selon l'ambition (90 jours, 1-2 semaines).
+- La vitesse bat l'équilibre mais l'inverse est vrai si l'on ne fait que du sprint permanent : il faut alterner. Analogie avec les combattants de MMA qui s'entraînent toute l'année puis intensifient leur préparation avant un combat (diète, focus total) pendant 1-2 mois, un rythme que l'auteur transpose au travail entrepreneurial.
+- Troisième conseil : définir des « cut time », c'est-à-dire découper son temps de manière structurée pour ne pas le laisser filer. Exemple concret : diviser 8h de travail en 4 blocs de 2h (4x2), eux-mêmes subdivisés en sessions de 30 minutes, pour maximiser l'efficacité sans viser à travailler sans interruption du matin au soir.
+- Mise en garde contre la culpabilité de ne pas être assez productif, qui pousse à travailler encore plus sans laisser au cerveau le temps de réguler cortisol et dopamine. L'auteur recommande de prendre du temps pour soi (marche, sport) pour régénérer la dopamine et gérer le stress, condition nécessaire pour de bons résultats.
+- Transition vers le thème des croyances limitantes chez les entrepreneurs débutants. Première croyance limitante identifiée : « je ne suis pas assez qualifié », contrée par l'idée que tout le monde commence quelque part, y compris des figures comme Elon Musk.
+- Métaphore du surf pour illustrer la gestion de la concurrence : sur un spot très fréquenté aux heures de pointe, il ne faut pas se priver de saisir les vagues (opportunités) sous prétexte qu'il y a du monde, mais rester respectueux et trouver son couloir. La concurrence n'est donc pas un problème mais un signe de dynamisme du marché.
+- Suite de la métaphore du surf : mieux vaut être sur un spot fréquenté avec des vagues (marché actif) que seul sur un spot sans vagues (marché sans opportunités). Troisième croyance limitante introduite : « je n'ai pas assez de contacts », reconnue comme utile mais pas indispensable aujourd'hui.
+- L'auteur affirme qu'il n'y a jamais eu de meilleur moment pour ne pas avoir de contacts, car il est désormais possible de s'exprimer au monde entier sans réseau. Il illustre par son propre parcours : il a monté son entreprise sans demander de permission, sans aide, sans jamais solliciter les alumni de ses écoles de commerce, juste en prenant sa caméra et en publiant sur Internet.
+- Le manque de contacts n'est plus une excuse valable car chacun peut s'exposer en ligne pour générer des résultats. Introduction de l'idée centrale que les croyances définissent le plafond de verre de chacun, illustrée par l'exemple d'un joueur de foot qui se fixe pour objectif réaliste la Ligue 2 et s'y arrête dès qu'il l'atteint.
+- Contraste avec un joueur de foot qui vise directement l'équipe nationale et la Ligue des champions : son objectif élevé le pousse à tout mettre en œuvre pour l'atteindre. L'auteur insiste sur l'importance d'avoir des croyances élevées, par exemple croire qu'on peut créer l'une des agences IA les plus profitables de France, d'Europe ou du monde.
+- L'auteur souhaite au spectateur d'aller le plus loin possible et de créer des solutions qui aident réellement les gens, en insistant à nouveau sur la nécessité de croyances élevées sans pour autant être aveugle sur ses capacités actuelles. Il partage sa propre croyance profonde : aider un jour un million de personnes à apprendre l'IA et le no-code, alors qu'il n'a pas encore atteint 100 000 abonnés YouTube.
+- L'auteur affirme ne pas se soucier du temps que prendra la réalisation de sa croyance car il considère avoir tout son temps. Dernière idée du passage : on trouve toujours un raisonnement logique pour justifier ses peurs, par exemple en attribuant un blocage actuel à un événement de l'enfance.
+- Les croyances sont présentées comme des programmes mentaux installés par l'éducation, l'entourage, les échecs, le passé et la culture. L'auteur propose un exercice concret : écrire ses croyances limitantes perçues comme des limites au succès, puis chercher à comprendre leur origine (difficulté passée, etc.).
+- Introduction du concept de « positivisme contrarien » : ne pas accepter aveuglément une évidence non testée, sans pour autant devenir systématiquement contrariant. L'auteur cite une phrase d'Orelsan sur le fait de ne pas trop écouter ses parents, et l'applique aux politiques, journalistes et experts médiatiques dont l'avis est parfois dicté par l'ego plutôt que par la compétence, citant Luc Julia comme exemple de faux expert de l'IA médiatisé à tort.
+- L'auteur invite à toujours questionner les intérêts derrière un discours pour distinguer le factuel de ce que la personne a intérêt à faire croire, sans jamais rien prendre pour argent comptant, y compris ses propres propos. Il affirme que les plus grandes opportunités se trouvent là où peu de gens regardent, contrastant un post viral sur NanoBanana (des milliers de likes) avec l'automatisation de flux financiers pour des investisseurs en due diligence, un sujet à fort potentiel mais délaissé.
+- Les gens négligent les vraies opportunités par méconnaissance, peur ou flemme face à la complexité apparente. L'auteur pose que tout consensus non validé par des faits (simple opinion collective, matraquage médiatique) tend vers la médiocrité, tandis que remettre les choses en perspective de façon intelligente permet de trouver les meilleures opportunités : c'est la philosophie du positivisme contrarien.
+- Explication de l'origine de la phrase « fuck luck, risk » : il faut laisser de côté la chance et privilégier la prise de risque, car compter sur la chance revient à abandonner le contrôle de son destin. Pour l'auteur, le vrai risque est de ne pas prendre de risque calculé, sous peine de stagnation, condition selon lui incompatible avec l'entrepreneuriat moderne.
+- Exemple chiffré : embaucher quelqu'un peut représenter 30% de la trésorerie mais doubler l'output, illustrant qu'il faut orienter la chance plutôt que la subir passivement. L'auteur oppose deux stratégies pour signer un client CAC 40 (publier des vidéos quotidiennement de façon répétée et prédictive, versus compter sur une rencontre fortuite au restaurant) et affirme qu'aujourd'hui avoir un job est plus risqué qu'être entrepreneur, car un job sécurisé peut disparaître dès que l'IA permet de le remplacer à moindre coût. Il souligne qu'il est désormais possible de démarrer une idée avec 100 euros et de la valider en moins de 48 heures, contrairement à l'époque où il fallait usines, bureaux et recrutement coûteux ; l'entrepreneuriat permettrait aussi un meilleur contrôle des revenus face à une inflation qui dépasse la hausse des salaires.
+- Un job sécurisé peut disparaître du jour au lendemain si l'IA permet à l'entreprise de le remplacer 20 fois moins cher, alors que l'entrepreneuriat force à développer continuellement de nouvelles compétences. Aujourd'hui, il est possible de démarrer une idée avec seulement 100 euros et de la valider en moins de 48 heures (prospection, tests), contrairement à l'époque où il fallait usines, bureaux et recrutements coûteux ; une simple connexion internet et de la créativité suffisent désormais. L'entrepreneuriat permet aussi de mieux contrôler ses revenus qu'un salariat soumis aux grilles salariales et aux décisions d'autrui, d'autant que l'inflation dépasse aujourd'hui la hausse des salaires.
+
+## Concepts cles
+- mindset entrepreneurial
+- diversité des vécus personnels
+- partage d'expérience plutôt qu'imposition d'un modèle
+- modèles mentaux issus de lectures et de rencontres
+- cadre familial défavorable à l'entrepreneuriat
+- points communs entre entrepreneurs à succès
+- phrase 'fuck luck, risk' d'un mentor
+- bruit informationnel autour de l'IA et du business en ligne
+- suivre son intuition entrepreneuriale
+- intuition comme data inconsciente
+- détection de patterns par le cerveau
+- logique rassurante vs intuition
+- citation de Naval
+- croyances limitantes imposées par la société
+- trier le signal du bruit
+- explosion du contenu généré par IA
+- qualité plutôt que quantité de lecture
+- identifier des contenus authentiques dans le bruit
+- posts LinkedIn sur l'IA à faible valeur réelle
+- distinction entre engagement et applicabilité réelle
+- signal caché dans le bruit comme source d'opportunités
+- entraînement du cerveau à détecter des patterns
+- réflexe 'comment puis-je aider X'
+- connexion compétence-problème comme opportunité
+- exemple : app de génération de scripts pour créateurs
+- analyse du 'wow effect' derrière un contenu viral
+- concept problème = solution
+- vitesse contre équilibre
+- growth leap (avancée significative)
+- intensité concentrée vs effort dilué dans le temps
+- citation de Nassim Taleb sur les trois drogues de la vie
+- confort du salaire fixe comme piège
+- programme structuré en sprints de 100 jours
+- modularité de la durée des sprints
+- alternance vitesse/équilibre
+- analogie avec la préparation des combattants de MMA
+- camp d'entraînement comme métaphore de la phase de sprint
+- cut time (découpage structuré du temps)
+- découpage en blocs 4x2
+- sessions de travail de 30 minutes
+- efficacité plutôt que quantité d'heures
+- culpabilité de productivité
+- régulation du cortisol et de la dopamine
+- récupération par des activités hors travail (marche, sport)
+- équilibre vitesse/repos pour la performance
+- croyances limitantes des débutants
+- croyance 'je ne suis pas assez qualifié'
+- tout le monde commence quelque part
+- métaphore du spot de surf fréquenté
+- trouver son couloir malgré la concurrence
+- saisir l'opportunité dès qu'elle se présente
+- spot fréquenté avec opportunités vs spot désert sans opportunités
+- croyance 'je n'ai pas assez de contacts'
+- utilité relative du réseau
+- absence de contacts n'est plus un frein grâce à Internet
+- s'exprimer au monde entier sans réseau
+- parcours personnel sans réseau ni permission
+- s'exposer en ligne plutôt que compter sur un réseau
+- croyances comme plafond de verre
+- exemple du joueur de foot visant la Ligue 2
+- viser haut pour se donner les moyens d'y arriver
+- exemple du joueur de foot visant la Ligue des champions
+- croyance élevée appliquée à une agence IA
+- croyances élevées sans déni des capacités actuelles
+- objectif personnel : aider un million de personnes à l'IA et au no-code
+- chiffre d'abonnés YouTube actuel de l'auteur
+- détachement du temps nécessaire pour atteindre son objectif
+- rationalisation logique des peurs
+- attribution des blocages à des événements passés
+- croyances comme programmes mentaux issus de l'éducation et du passé
+- exercice d'identification des croyances limitantes
+- recherche de l'origine d'une croyance
+- positivisme contrarien
+- citation d'Orelsan sur l'autorité parentale
+- avis d'experts biaisé par l'ego et la validation sociale
+- exemple de Luc Julia comme faux expert IA
+- questionner les intérêts derrière un discours
+- opportunités là où personne ne regarde
+- exemple contrasté : post viral sur NanoBanana vs automatisation de due diligence financière
+- négligence des opportunités par peur ou flemme
+- consensus non factuel menant à la médiocrité
+- remise en perspective intelligente comme source d'opportunités
+- origine de la phrase 'fuck luck, risk'
+- chance vs contrôle du destin
+- risque calculé
+- stagnation comme véritable risque
+- exemple chiffré d'embauche représentant 30% de trésorerie
+- orienter la chance plutôt que la subir
+- publication de contenu répétée et prédictive vs rencontre fortuite
+- job jugé plus risqué que l'entrepreneuriat
+- faible barrière à l'entrée entrepreneuriale actuelle
+- contrôle de ses revenus en tant qu'entrepreneur
+- inflation dépassant la hausse des salaires
+- risque de disparition d'un job remplacé par l'IA à moindre coût
+- démarrer une idée avec 100 euros et la valider en 48h
+- simplicité actuelle de l'entrepreneuriat (connexion internet + créativité)
+- meilleur contrôle des revenus en tant qu'entrepreneur
+
+## Outils mentionnes
+- LinkedIn
+- YouTube
+- NanoBanana
+
+## Tips techniques
+- Suivre son intuition entrepreneuriale plutôt que le bruit ambiant des soi-disant experts en IA et business en ligne
+- Écouter son intuition même quand elle va à contre-courant de l'avis général, si elle ne nuit à personne
+- Il vaut mieux relire 5 fois les 5 meilleurs livres plutôt que de lire 25 livres dont la majorité sont médiocres
+- S'entraîner à toujours penser 'comment je pourrais aider cette personne avec ce que je sais faire' dès qu'un problème est exprimé, pour repérer des opportunités invisibles aux autres
+- Faire systématiquement le lien entre ses propres compétences et les problèmes exprimés par d'autres pour identifier des opportunités business concrètes
+- Préférer 90 jours de travail intensif (12h/jour) plutôt que 4 années de travail dilué pour créer un 'growth leap'
+- Planifier des sprints intensifs (90 jours, ou 1-2 semaines pour plus court) tous les 6 mois à un an, puis revenir en vitesse de croisière entre deux sprints
+- Alterner entre phases d'entraînement régulier et phases de préparation intensive (comme un combattant de MMA avant un combat) plutôt que de sprinter en permanence
+- Découper une journée de 8h de travail en 4 blocs de 2h (4x2), puis en sessions de 30 minutes, pour maximiser l'efficacité de chaque plage de temps
+- Prendre du temps pour soi (marche, activités sportives) pour régénérer la dopamine et gérer le stress lié au cortisol, sous peine de contre-productivité
+- Ne pas se priver d'une opportunité sous prétexte qu'il y a de la concurrence : rester respectueux, trouver son propre 'couloir' et saisir l'opportunité dès qu'elle se présente
+- Se fixer des croyances et objectifs très élevés (plutôt que 'réalistes') car le plafond de ses résultats est défini par le plafond de ses croyances
+- Exercice pratique : écrire par écrit ses croyances limitantes perçues comme des freins au succès, puis chercher à en identifier l'origine (éducation, échec passé, entourage)
+- Adopter un 'positivisme contrarien' : quand tout le monde affirme qu'une chose n'est pas possible, creuser plus profondément avant d'accepter cette évidence non testée
+- Toujours se demander quels intérêts sert une affirmation avant de la prendre pour argent comptant
+- Chercher les opportunités business dans les sujets délaissés par la majorité plutôt que dans les tendances virales
+- Privilégier la prise de risques calculés plutôt que de compter sur la chance, car la stagnation est le vrai risque en entrepreneuriat
+- Maximiser ses chances de signer de gros clients en publiant du contenu de manière répétée et prédictive plutôt que de compter sur des rencontres fortuites
+- Démarrer et valider une idée business avec seulement 100 euros et en moins de 48 heures grâce à une connexion Internet et un peu de créativité
+- valider une idée d'entreprise avec un budget de 100 euros et un test de 48 heures avant de s'engager davantage
+
+## Cas d'usage reels
+- [[]]

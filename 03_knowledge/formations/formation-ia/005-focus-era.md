@@ -1,0 +1,172 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Développer son Mindset"
+source_transcript: "0.05 Focus era.txt"
+---
+
+# 0.05 Focus era
+
+## Resume
+- Introduction au focus comme compétence essentielle à l'ère de la distraction généralisée : capacité à rester fixé sur peu de choses et à être acteur plutôt que consommateur. Le formateur décrit cette lutte contre les mécanismes d'addiction conçus par les meilleurs ingénieurs, nécessitant une résistance construite par un travail répété. Exemple personnel introductif : il ne va plus sur Facebook et n'a pas lu ses messages Messenger depuis 3-4 ans.
+- L'auteur explique concrètement sa méthode : un bloqueur d'application limite son accès à Instagram à une seule plage horaire quotidienne (19h-22h), le reste du temps étant totalement bloqué.
+- Même logique appliquée à YouTube (supprimé) tandis que LinkedIn est conservé car utilisé pour publier. L'auteur assume une approche radicale, illustrée par une anecdote d'une personne l'ayant critiqué sur LinkedIn pour son manque supposé de résistance, alors qu'il utilise simplement des outils pour limiter les distractions face aux meilleurs ingénieurs du monde.
+- Présentation du concept 'The One Thing' de Gary Keller : se focaliser sur une seule chose à la fois (un projet, un objectif, une phase de vie), sans mélanger les moments, par exemple ne pas être sur son téléphone en vacances. L'idée est d'identifier le 'gros domino' qui va faire avancer tout le reste, en évitant le multitasking.
+- Exemple appliqué à la création de contenu : il est rare de performer simultanément en format long, court et LinkedIn car ce sont des usages différents, sauf à avoir une équipe dédiée. L'auteur a choisi YouTube comme canal dominant car le contenu y compound dans le temps, contrairement aux posts LinkedIn ou Reels qui tombent vite dans l'oubli.
+- Méthode pour choisir sa priorité : identifier l'action qui rapportera le plus de résultats, pas nécessairement le projet le plus long ou le plus impressionnant. Exemple chiffré : plutôt que de lancer un deuxième produit e-commerce, augmenter le budget publicitaire peut être plus rentable (doubler un budget de 50 000 euros ayant généré 100 000 euros de revenus pourrait générer 200 000 euros).
+- Insistance sur le fait qu'il faut se focaliser sur les actions à plus fort impact plutôt que sur les plus gros projets apparents, souvent en faisant à plus grande échelle ce qui fonctionne déjà. Le multitasking (fenêtres multiples ou dispersion du contenu sur plusieurs canaux) réduit l'impact par rapport à la concentration sur un seul canal. La clé est d'être excellent sur une petite partie et d'itérer continuellement.
+- Application au service d'automatisation IA pour entreprises : identifier une dominante précise (ex: améliorer la performance publicitaire en analysant les publicités du client et de ses concurrents) et créer une machine réplicable étape par étape sur plusieurs clients, qui devient plus facile à mesure que le nombre de clients augmente. Le multitasking diminue la performance car le cerveau fonctionne sur une seule chose à la fois, contrairement à un processeur.
+- Suite des exemples d'obsessions d'entrepreneurs célèbres : Bezos est obsédé par l'expérience consommateur et la qualité de livraison chez Amazon, Musk par le raisonnement en 'first principles', opposé au raisonnement par analogie qui mélange les opinions et expériences passées pour tirer des conclusions.
+- Explication détaillée du raisonnement First Principles à travers l'exemple des batteries Tesla : décomposer un problème étape par étape (pourquoi la batterie ne fonctionne pas, quels composants la constituent comme le lithium) pour comprendre les causes profondes d'un échec ou d'un succès plutôt que de raisonner par analogie.
+- L'auteur insiste : même si une activité annexe semble prometteuse (ex: une agence de miniatures qui envisagerait d'ajouter le montage vidéo), il vaut mieux rester spécialisé et devenir le meilleur sur ce service unique, car un service simple se scale plus facilement. Il faut avoir une 'one thing' qui guide ses décisions, que ce soit la tâche du jour ou la mission globale de l'entreprise.
+- Introduction du concept de 'loi du tunnel' à travers l'image du train : quand on entre dans un tunnel, on perd le réseau et la vue extérieure, ce qui force une concentration totale sur soi-même et l'instant présent — un état comparable au mode avion.
+- Application concrète de la loi du tunnel : se mettre en mode tunnel pendant 90 jours lors d'un apprentissage important, en supprimant LinkedIn, YouTube, les podcasts et toute autre source de distraction.
+- Alternative au mode tunnel strict : ne consommer que du contenu adjacent au sujet travaillé, ou créer un décalage horaire mental en vivant à l'heure de Tokyo (+8h). L'auteur témoigne que cette expérience vécue personnellement a été l'une des périodes les plus productives de sa vie, car de 8h à 16h il n'y avait aucune notification ni actualité de France.
+- Méthode concrète pour reproduire cet effet de coupure : utiliser des applications de blocage (CultureKey sur Mac/PC, Opal sur iPhone, Freedom sur Android) qui bloquent certaines applications. Recommandation de créer un second numéro WhatsApp Business réservé aux proches très proches pour ne pas être dérangé pendant le travail, et de mettre en silencieux les groupes WhatsApp et notifications secondaires ; les emails ne doivent être consultés que deux fois par jour.
+- L'isolement, même géographique, peut devenir un super pouvoir. L'auteur, de nature introvertie, précise que les profils très extravertis ont plus de mal à refuser les sollicitations sociales (aller boire un verre, musée, concert).
+- Accepter les sollicitations sociales en permanence empêche d'avancer, car progresser dans un nouveau domaine demande du temps et parfois un rythme de vie déstructuré et déséquilibré. L'auteur rappelle que beaucoup de gens réussissent sans jamais utiliser les réseaux sociaux, contrairement à ce que laissent penser les 'gourous' de LinkedIn, Instagram et YouTube.
+- Mise en garde contre le FOMO généré par les réseaux sociaux : Instagram doit être utilisé seulement s'il sert l'activité (création de contenu), sinon le scroll passif est une perte de temps sans bénéfice réel. Recommandation de supprimer l'application pendant la période de tunnel (90 jours ou deux mois) si elle n'est pas utilisée pour créer du contenu.
+- Introduction de la 'loi du pilote' : il suffit d'un tout petit changement de trajectoire — une rencontre, un changement de lieu, se lancer sur les réseaux — pour changer totalement de destination finale, comme en aviation où un léger changement de degré peut mener de Hawaii à Tahiti au lieu de la destination prévue.
+- Conseils pour changer d'environnement afin de révéler son talent entrepreneurial : fréquenter des espaces de co-working, WeWork, la CCI ou des réunions locales, ou partir dans des lieux à fort brassage entrepreneurial (Chiang Mai, Dubaï, Lisbonne). Ce changement aide à faire évoluer son identité vers celle d'un créateur visible pour les entreprises. Introduit aussi l'impact des remarques moqueuses de l'entourage sur ceux qui se lancent en entrepreneuriat.
+- L'environnement peut être supérieur à la détermination personnelle : même la personne la plus déterminée sera tirée vers le bas par un entourage toxique (sorties incessantes, drogue). L'auteur recommande de préférer fréquenter des entrepreneurs qui réussissent (image des entrepreneurs de Dubaï avec des Rolex) plutôt que des personnes destructrices, et de changer d'environnement si l'on se sent freiné.
+- L'auteur doute de la valeur de son master coûteux mais en retient un principe clé : seule l'exécution compte. Une idée moyenne parfaitement exécutée bat toujours une idée parfaite mal exécutée, ce qui explique pourquoi, parmi des startups lancées avec la même idée au même moment et des levées de fonds similaires, l'une finit par racheter l'autre pour une somme dérisoire quelques années plus tard.
+- Illustration du principe d'exécution dans le secteur des apps d'email : certains outils ont pris de bonnes décisions stratégiques, d'autres de mauvaises. Exemple de bonne décision : Beehiiv, qui a choisi de se concentrer uniquement sur les newsletters plutôt que de proposer aussi emails et automatisations.
+- Beehiiv, parti de rien et très en retard sur Substack (newsletters illimitées et gratuites), a fini par dépasser ce dernier car l'écosystème fermé de Substack l'a fait passer au second plan — preuve qu'on peut toujours reprendre une idée existante et l'emporter par l'exécution. Autres exemples de succès basés sur l'exécution plutôt que l'idée : Pet Rock (15 millions de dollars pour un simple caillou vendu comme animal de compagnie), la Million Dollar Homepage (vente de pixels, 1 million de dollars), et Cal AI, une app de scan de calories ayant généré 34 millions de dollars pour son créateur de 17 ans grâce à sa maîtrise de TikTok.
+- Derrière Cal AI se trouve simplement l'API ChatGPT (JPT) — la vraie clé du succès, au-delà de l'exécution, est de plus en plus la distribution (se faire connaître, trouver des clients), qui peut compenser un produit médiocre. Conclusion du principe 'Only Execution Matters'. Introduction d'un nouveau concept, le 'Millionnaire Club' (plutôt un 'Anti-Millionnaire Club' selon l'auteur) : la réussite affichée cache souvent une longue période de galère, comme l'auteur en témoigne personnellement (nuits blanches à finir des projets).
+- La difficulté de gagner de l'argent en entrepreneuriat n'est pas un problème mais fait partie du jeu et sert de filtre naturel face à la concurrence — beaucoup abandonnent dès que ça devient compliqué (comparaison avec la salle de sport, bondée le 1er janvier et vide le 31, ou le nombre de coureurs de marathon). L'auteur invite à considérer l'entrepreneuriat comme un jeu vidéo en mode difficile : on recommence parfois à zéro, mais on devient de plus en plus fort jusqu'à réussir.
+- Réflexion sur le risque et la chance en entrepreneuriat : embaucher quelqu'un malgré un budget serré peut doubler l'output mais représenter 30% de trésorerie engagée. L'auteur défend l'idée qu'il faut provoquer la chance plutôt que l'attendre, en donnant l'exemple de publier des vidéos quotidiennement plutôt que de compter sur une rencontre fortuite pour signer un client CAC 40.
+- L'auteur affirme qu'aujourd'hui l'entrepreneuriat est moins risqué que le salariat : un job sécurisé peut disparaître dès qu'une entreprise trouve comment le remplacer par l'IA à moindre coût, tandis qu'un entrepreneur développe en permanence de nouvelles compétences. Il note qu'il est possible de démarrer une idée avec 100€ et de la valider en moins de 48 heures, contrairement à l'ère industrielle nécessitant usines et capitaux lourds.
+
+## Concepts cles
+- focus comme capacité à rester fixé sur peu de choses
+- être acteur plutôt que consommateur
+- résistance aux mécanismes d'addiction des réseaux sociaux
+- abandon volontaire de Facebook/Messenger
+- blocage d'accès aux réseaux sociaux par plage horaire
+- ère du focus
+- limitation du nombre de sources d'information
+- suppression sélective des réseaux selon leur utilité réelle
+- radicalité assumée dans la gestion des distractions
+- outils de limitation des distractions
+- The One Thing (Gary Keller)
+- focalisation sur un seul objectif à la fois
+- séparation des phases de vie (travail vs vacances)
+- notion de gros domino
+- éviter le multitasking
+- difficulté de performer sur plusieurs formats de contenu simultanément
+- choix d'un canal dominant
+- effet de compounding du contenu long format (YouTube) vs contenu éphémère (Reels, posts)
+- identifier l'action à plus fort impact plutôt que le plus gros projet
+- scaling du budget publicitaire vs lancement d'un nouveau produit
+- identifier les actions à plus fort impact plutôt que les plus gros projets
+- dispersion de l'effort sur plusieurs canaux = moins de résultats
+- excellence sur un périmètre restreint et itération continue
+- The One Thing appliqué à la nature de l'activité elle-même
+- création d'une machine réplicable étape par étape pour plusieurs clients
+- le cerveau ne peut faire qu'une chose à la fois (contrairement à un processeur)
+- obsession majeure des grands entrepreneurs
+- Steve Jobs obsédé par l'usage du produit
+- Bezos et l'obsession de l'expérience consommateur/livraison
+- raisonnement first principles vs raisonnement par analogie
+- mentalité pragmatique et logique de Musk
+- raisonnement First Principles appliqué aux batteries Tesla
+- décomposition étape par étape d'un problème
+- ne pas diversifier son offre pour pouvoir scaler
+- être le meilleur sur un service simple
+- one thing appliqué à la mission d'entreprise
+- exemple de l'agence de miniatures YouTube
+- loi du tunnel : image du train pour illustrer la concentration forcée
+- mode avion comme équivalent numérique du tunnel
+- mode tunnel appliqué à une formation ou un apprentissage
+- période de 90 jours sans distractions
+- consommer uniquement du contenu adjacent au sujet travaillé
+- décalage horaire mental comme technique de productivité
+- expérience personnelle du décalage Tokyo (+8h)
+- applications de blocage de distractions
+- WhatsApp Business avec numéro dédié aux proches
+- mise en silencieux des notifications secondaires
+- isolement géographique comme super pouvoir
+- difficulté des profils extravertis à dire non aux sollicitations sociales
+- accepter un rythme de vie déstructuré pour progresser
+- possibilité de réussir sans utiliser les réseaux sociaux
+- relativiser le discours des 'gourous' des réseaux sociaux
+- FOMO généré par les réseaux sociaux
+- réseaux sociaux comme machine à comparaison
+- loi du pilote : petit changement de trajectoire, grand impact final
+- analogie aviation (léger changement de degré = destination totalement différente)
+- fréquentation d'écosystèmes entrepreneuriaux (co-working, WeWork, CCI)
+- destinations à fort brassage entrepreneurial (Chiang Mai, Dubaï, Lisbonne)
+- changement d'identité par changement d'environnement
+- remarques moqueuses de l'entourage
+- environnement plus fort que la détermination personnelle
+- entourage toxique tirant vers le bas
+- comparaison entrepreneurs de Dubaï (Rolex) vs personnes destructrices
+- changer d'environnement si on se sent freiné
+- seule l'exécution compte
+- idée moyenne bien exécutée bat idée parfaite mal exécutée
+- startups concurrentes aux destins divergents malgré des conditions de départ similaires
+- exécution appliquée aux apps d'email
+- spécialisation stratégique comme différenciateur d'exécution
+- Beehiiv se concentrant uniquement sur les newsletters
+- Beehiiv dépassant Substack malgré un retard initial grâce à l'exécution
+- écosystème fermé de Substack ayant nui à sa croissance
+- Pet Rock : succès improbable basé sur l'exécution (15 millions de dollars)
+- Million Dollar Homepage : vente de pixels ayant généré un million de dollars
+- Cal AI : succès généré par la maîtrise de TikTok (34 millions de dollars)
+- distribution comme facteur clé de succès au-delà de l'exécution
+- conclusion du principe Only Execution Matters
+- Millionnaire Club / Anti-Millionnaire Club
+- la réussite visible cache une période de galère
+- difficulté comme filtre naturel de la concurrence
+- analogie salle de sport (1er vs 31 janvier)
+- analogie coureurs de marathon
+- entrepreneuriat comme jeu vidéo en mode difficile
+- provoquer la chance plutôt que l'attendre
+- risque calculé de l'embauche
+- publication de contenu répétée et prédictive
+- entrepreneuriat moins risqué que le salariat
+- validation d'idée à faible coût et rapide
+- menace de substitution IA sur les emplois salariés
+
+## Outils mentionnes
+- Facebook
+- Messenger
+- Instagram
+- YouTube
+- LinkedIn
+- CultureKey
+- Opal
+- Freedom
+- WhatsApp Business
+- WeWork
+- Beehiiv
+- Substack
+- Cal AI
+- TikTok
+- ChatGPT
+
+## Tips techniques
+- Utiliser un bloqueur d'application pour restreindre l'accès à Instagram à une plage horaire fixe (ex: 19h-22h) plutôt que d'y avoir accès toute la journée
+- Supprimer les réseaux sociaux qui ne servent pas directement l'activité (ex: YouTube) mais garder ceux utilisés pour publier du contenu (ex: LinkedIn)
+- Se focaliser sur une seule chose à la fois (un projet, un objectif ou une phase de vie) plutôt que de faire du multitasking
+- Choisir un canal de contenu dominant plutôt que de disperser ses efforts sur plusieurs formats simultanément, sauf si on dispose d'une équipe dédiée
+- Avant de lancer un nouveau projet, évaluer si simplement augmenter l'investissement sur ce qui fonctionne déjà (ex: budget publicitaire) ne serait pas plus rentable
+- Concentrer son effort de création de contenu sur un seul canal plutôt que de le disperser sur plusieurs pour maximiser l'impact
+- Pour un service d'automatisation IA, identifier une seule dominante claire (ex: performance publicitaire) et construire un processus réplicable étape par étape sur chaque nouveau client
+- Rester concentré sur un seul service simple plutôt que d'en ajouter un nouveau, même s'il semble complémentaire, car cela facilite le scaling
+- Se mettre en mode tunnel pendant 90 jours lors d'un apprentissage important : supprimer LinkedIn, YouTube, podcasts et toute distraction non essentielle
+- Créer un décalage horaire mental (ex: caler son rythme sur celui de Tokyo, +8h) pour bénéficier de plages de plusieurs heures sans sollicitations extérieures
+- Utiliser CultureKey (Mac/PC), Opal (iPhone) ou Freedom (Android) pour bloquer les applications distrayantes
+- Créer un second numéro WhatsApp Business réservé aux proches essentiels pour ne pas être dérangé pendant le travail
+- Ne consulter ses emails que deux fois par jour, pas en continu
+- Supprimer l'application Instagram pendant 90 jours ou deux mois si elle n'est pas utilisée pour créer du contenu, plutôt que de scroller passivement
+- Fréquenter des espaces de co-working, WeWork, la CCI ou des réunions d'acteurs économiques locaux, ou partir dans des destinations à fort brassage entrepreneurial (Chiang Mai, Dubaï, Lisbonne) pour changer d'identité et devenir visible
+- Si l'entourage tire vers le bas (personnes destructrices), chercher à fréquenter plutôt des gens qui réussissent et progressent, quitte à changer de cercle social
+- Privilégier une exécution parfaite d'une idée moyenne plutôt qu'une exécution moyenne d'une idée parfaite
+- Investir dans la distribution (visibilité, communication, acquisition de clients) peut compenser un produit moyen
+- Considérer la difficulté entrepreneuriale comme un filtre naturel et un jeu à progression plutôt qu'un obstacle à éviter
+- Maximiser ses chances de succès par une action répétée et prédictive plutôt que par le hasard
+- Valider une idée d'entreprise avec un budget minimal (~100€) en moins de 48 heures avant d'investir davantage
+
+## Cas d'usage reels
+- [[]]

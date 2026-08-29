@@ -1,0 +1,282 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Agents Marketing"
+source_transcript: "8.01 Agent Analyste Publicitaire.txt"
+---
+
+# 8.01 Agent Analyste Publicitaire
+
+## Resume
+- Introduction à la création d'un agent espion publicitaire, avec positionnement différenciant de l'auteur combinant expertise technique et entrepreneuriale plus large.
+- Précision que cet agent a été construit pour Meta spécifiquement, avec logique différente d'autres plateformes, dans le but d'aider un média buyer partenaire.
+- Présentation de la roadmap et de la cible de cet agent : soi-même, l'équipe marketing, ou principalement les agences Facebook Ads et média buyers.
+- Explication de la nécessité de comprendre les mécanismes de la publicité en ligne pour maintenir une performance stable, plutôt que de la traiter comme une boîte noire magique.
+- Explication du fonctionnement des algorithmes publicitaires (Facebook, Meta, Google) qui ciblent d'abord les audiences les plus proches du profil supposé de la publicité.
+- Présentation de l'usage de l'IA comme levier pour comprendre ce qui rend une publicité concurrente réussie, et identifier rapidement les campagnes à écarter.
+- Explication du modèle économique des agences : meilleure est la performance délivrée aux clients, meilleure est la rétention et la croissance de l'agence.
+- Présentation de la structure générale du processus : identifier 3-4 concurrents, analyser leurs actions, puis examiner les performances de leurs publicités une par une.
+- Explication de l'importance d'analyser conjointement le volume global et la longévité de chaque publicité, pour éviter de dépenser énormément sur peu de publicités (risque élevé).
+- Présentation des trois types de contenu à analyser au niveau publicitaire, avec objectif pédagogique de partager un maximum de savoir sur la création d'agents IA applicable à une agence.
+- Explication de la double dimension d'une vidéo publicitaire à analyser : le contenu visuel (décor, personnes) via Gemini, et séparément le script parlé.
+- Précision que le script publicitaire est souvent calculé au millimètre pour convertir, avec stockage des analyses dans un fichier Excel et création d'une matrice d'analyse.
+- Explication que le vrai facteur différenciant chez les gros annonceurs (IA de ciblage avancée) est la créative publicitaire elle-même et la compréhension du persona client visé.
+- Introduction à la navigation dans l'Ad Library de Meta, une bibliothèque consignant toutes les publicités diffusées sur la plateforme, probablement imposée par régulation européenne.
+- Démonstration avec l'exemple concret de la marque Habit (outil de comptabilité/facturation pour indépendants) pour illustrer l'accès à l'historique publicitaire complet.
+- Présentation de l'objectif de scraper toutes les publicités disponibles d'un concurrent, actives et passées, pour constituer une base d'analyse complète.
+- Exemple de données récupérées via la transparence européenne : dates de diffusion précises et plateformes ciblées (Facebook, Instagram, Audience Network, Messenger, Threads).
+- Mise en garde sur les coûts croissants du scraping à grande échelle, avec objectif de rentabilité maximale dans le choix des publicités à analyser.
+- Recommandation de se fier au prix et aux commentaires récents plutôt qu'anciens pour choisir un acteur de scraping, avec exemple de coût à 0,75 centime pour 1000 ads scrapées.
+- Conseil de se concentrer sur l'information réellement obtenue en sortie plutôt que sur les promesses marketing des différents acteurs de scraping concurrents.
+- Recommandation cruciale de toujours tester en premier avec un nombre limité de publicités (4-5) avant de scraper à grande échelle, pour valider le résultat en sortie.
+- Démonstration de configuration directe sur Apify (sans passer par N8n) en collant l'URL de la page Ads Library, prête à être scrapée.
+- Rappel de la méthode de déclenchement de l'acteur puis récupération du dataset, recommandée pour un usage récurrent sur de petites quantités de données.
+- Configuration du body de la requête en réutilisant un template fourni, en changeant uniquement l'ID de la page cible, avec options count et période ajustables.
+- Débogage en direct : après déclenchement de l'action sans réponse retour, décision d'annuler (abort) le run en cours et de recommencer.
+- Recommandation de prévoir un temps d'attente généreux (ex : 8 minutes) pour les gros volumes de scraping, surtout en exécution non surveillée.
+- Explication de la distinction entre exécution synchrone (moins de 5 minutes) et asynchrone (plus de 5 minutes, avec re-demande différée des données).
+- Transition vers la création de la base de données Airtable pendant l'attente du scraping, avec explication préalable du fonctionnement des bases Airtable.
+- Explication du choix d'Airtable plutôt que Google Sheets : un tableur ne constitue pas une vraie base de données, avec exemple concret de limite (téléchargement d'image Facebook).
+- Précision technique sur la différence de formatage des dates entre Google Sheets (mise en forme visuelle) et une vraie colonne de type date structurée.
+- Explication de la vraie différence entre tableur et base de données : Airtable permet de créer des bases de données relationnelles avec de vrais composants structurés.
+- Justification finale du choix d'Airtable : formatage correct des dates, structure, stockage de fichiers, typage des champs (nombre) et fonctionnalités avancées.
+- Vérification que l'obtention des données précédemment lancée s'est bien terminée, avant de relancer l'étape suivante du processus.
+- Configuration de l'étape suivante pour tenter d'obtenir les données du dataset généré précédemment.
+- Observation d'un léger délai entre téléchargement et obtention, avec récupération d'un payload dense contenant de nombreuses données à filtrer pour ne garder l'essentiel.
+- Décision d'ignorer les données démographiques détaillées (âge, sexe) pour se concentrer sur l'essentiel, notamment la récupération automatique des vidéos publicitaires.
+- Rencontre d'un bug de l'acteur de scraping, résolu en retestant avec un run précédemment réussi plutôt que d'attendre la résolution du bug.
+- Décision de continuer à avancer avec les données déjà récupérées pendant que le run buggé continue en arrière-plan, sans attendre sa résolution.
+- Utilisation d'un nœud Loop Over Items pour traiter les 632 données récupérées une par une, avec possibilité de filtrage préalable par type de publicité.
+- Répartition des données en 143 vidéos et 11 images, avec configuration de deux nœuds Loop Over Items distincts pour traiter séparément chaque type de média.
+- Explication de la nécessité d'un Code Node pour reformater les fichiers avant leur intégration dans Airtable, qui exige un format spécifique pour les pièces jointes.
+- Sollicitation de Claude pour reformater l'array de vidéos au format attendu par Airtable, à partir des données brutes contenant catégories et impressions.
+- Recherche itérative dans la documentation Airtable du bon format de champ pour les pièces jointes (attachments), en visant l'option Upload Attachments.
+- Instruction précise donnée à l'IA d'extraire images et vidéos du payload et de les formater en Array compatible avec l'API Airtable, en collant la documentation attendue.
+- Demande de génération d'un Code Node N8n complet à l'IA pour effectuer le reformatage, en attendant sa réflexion avant de poursuivre le processus.
+- Ajustement du code node généré pour ignorer les thumbnails inutiles, en gardant uniquement l'array des attachments via l'option run once for each item.
+- Débogage d'une erreur due à un manque de précision dans le prompt initial : la propriété exacte à extraire n'avait pas été indiquée avec un exemple concret.
+- Correction en collant directement le JSON réel reçu plutôt qu'un exemple générique, améliorant significativement la compréhension du modèle.
+- Simplification du code généré en retirant un élément non nécessaire, avant de passer au traitement effectif de la vidéo via un nœud dédié.
+- Test en direct confirmant le bon fonctionnement de l'extraction du fichier audio à partir de la vidéo publicitaire scrapée.
+- Résultat de la transcription audio avec timestamps bien formatés, extrayant le contenu réellement dit dans la vidéo publicitaire.
+- Configuration d'un prompt de nettoyage du transcript retirant les valeurs de timestamp brutes (millisecondes) et retournant un format structuré propre.
+- Finalisation du format de sortie attendu du transcript nettoyé : balises de temps au format minutes.secondes (mm.ss) dans un array structuré.
+- Recommandation d'épingler l'étape de retranscription audio déjà réussie pour éviter de la refaire inutilement, confirmation du bon nettoyage du texte.
+- Configuration d'une expression pour récupérer dynamiquement la vidéo en qualité SD depuis les données du Loop Over Items, avec débogage d'un souci d'accès à la valeur.
+- Ajout d'une étape de téléchargement de la vidéo via requête HTTP, en utilisant l'URL SD récupérée à l'étape précédente du code node.
+- Récupération de l'analyse visuelle de la vidéo, avec ajout de la consigne de répondre en français dans le prompt de l'agent d'analyse.
+- Affinement du prompt pour ne retourner que les éléments d'analyse purs sans reformulation superflue, avant intégration des résultats dans Airtable via create a record.
+- Démonstration de création d'un jeton d'accès (token) Airtable avec les trois portées nécessaires (data, etc.) via l'espace constructeur du compte.
+- Début de l'explication détaillée de chaque champ à mapper vers Airtable, en commençant par l'Add Archive ID, identifiant unique de la publicité.
+- Mapping des champs Archive ID et Page ID depuis les données scrapées via Loop Over Items vers les colonnes correspondantes d'Airtable.
+- Conversion des dates au format Unix (Start Date, End Date) via l'expression To Date Time pour un formatage correct dans Airtable.
+- Localisation dans le payload du champ REACH (dans AAAINFO, IUTOTALREACH) et du champ SPEND, à partir de la connaissance préalable de la structure des données.
+- Recherche manuelle du champ spend directement dans le payload brut, révélant qu'il se trouve au premier niveau de la structure de données.
+- Explication du mapping du champ plateformes en type sélection multiple (Array), compatible directement avec le format envoyé et compris par Airtable.
+- Mapping des textes extraits de la publicité via Loop Over Items, en localisant leur emplacement dans la structure de données (GSON).
+- Mapping du titre et du body de la publicité en ouvrant l'objet texte correspondant, avec décision de laisser la colonne annonceurs de côté pour l'instant.
+- Constat qu'il manque encore les colonnes correspondant à tout le travail effectué depuis le début (transcript vidéo notamment), avec ajout prévu de nouvelles colonnes.
+- Ajout des colonnes texte long pour le transcript horodaté (timestamped transcript) et la description vidéo sur plusieurs lignes dans Airtable.
+- Finalisation des colonnes texte (transcript, description vidéo, timestamp transcript) et ajout d'une dernière colonne pour les descriptions d'images.
+- Débogage d'une erreur de requête invalide liée à un format d'attachment incorrect, probablement causée par les miniatures incluses par erreur.
+- Désépinglage de plusieurs nœuds précédemment figés pour relancer le processus complet depuis le début et vérifier la correction.
+- Exécution de l'étape la plus longue du processus (analyse vidéo) avant création finale de l'enregistrement dans la base de données.
+- Correction du format des attachments confirmée (url et filename attendus), avec décision de relancer une dernière fois le processus complet.
+- Confirmation du succès après plusieurs répétitions du processus pour s'assurer que toutes les valeurs rentrent correctement dans la base de données.
+- Vérification que les champs de base (page ID, dates, reach, vidéos, textes) sont bien réceptionnés, avec constat qu'il manque encore les champs texte suivants.
+- Démonstration de test avec un texte au format brut, exécution de l'étape et réception automatique de deux éléments au format JSON.
+- Nettoyage des enregistrements de test précédents pour repartir de zéro, avec observation du remplissage automatique fluide des champs comme par magie.
+- Explication de la nécessité de fournir un exemple concret des données images reçues à Claude, pour générer le code de reformatage équivalent à celui des vidéos.
+- Configuration du modèle Gemini 2.5 Flash pour l'analyse d'images, avec duplication de l'étape create a record précédemment configurée pour les vidéos.
+- Récupération réussie des pièces jointes images, avec choix de n'en garder qu'une seule car souvent identique en deux formats différents, et sauvegarde régulière du travail.
+- Observation de ralentissements de l'instance N8n cloud, potentiellement liés à l'enregistrement simultané de la session, avec configuration de l'analyse d'image exhaustive en français.
+- Passage à un déclenchement automatique via manual trigger connecté, pour extraire l'ensemble des données de manière autonome sans intervention manuelle répétée.
+- Mention d'un sujet complémentaire possiblement traité dans une autre partie : comment analyser les scripts pour réutiliser les publicités stockées dans Airtable.
+- Confirmation du résultat final complet avec tous les résultats ajoutés à la base de données, incluant l'observation que plusieurs publicités partagent le même script.
+- Transition vers la partie la plus intéressante du processus : utiliser un agent expert en script pour aller chercher et exploiter les données rassemblées.
+- Configuration d'un agent IA avec un schedule trigger (ou chat trigger alternatif), dont la mission est de rediriger vers plusieurs sous-agents spécialisés.
+- Configuration d'une mémoire simple pour l'agent (avec possibilité de mémoire Postgres avancée) et présentation des outils sous forme de sub-workflows appelant d'autres agents IA.
+- Recommandation de créer des sub-workflows (Call Another Workflow) pour structurer l'accès aux sous-agents spécialisés comme le Text Classifier.
+- Présentation d'un nouveau sous-agent ad writer, un agent rédigeant des publicités avec accès aux outils de la base Airtable.
+- Configuration du prompt du nouvel agent via define below, avec précision que l'usage d'un message système dans le chat aurait donné un résultat équivalent.
+- Recommandation de créer un prompt d'agent analysant les publicités d'une base Airtable, avec sous-agents analyseur de script (Information Extractor) et writer de script.
+- Constat d'un oubli de filtrage par type de contenu (image/vidéo), corrigé manuellement mais qui aurait pu être automatisé via une nouvelle colonne enrichie programmatiquement avec N8n.
+- Réutilisation directe d'un prompt généré comme prompt de l'agent responsable, avec configuration de la variable d'entrée dynamique correspondant à la demande utilisateur.
+- Création d'un nouveau sub-workflow nommé Add Agent pour l'agent analyste, suivant une convention de nommage cohérente déjà établie pour les autres sous-agents.
+- Simplification du formatage reçu par l'agent parent en nommant le champ simplement 'query', facilitant la vie de l'agent orchestrateur en amont.
+- Explication de la méthode de construction du prompt de l'analyste via Claude, en se basant sur trois vidéos transcrites de scripts publicitaires réussis.
+- Astuce d'utilisation d'un outil de résumé de vidéos YouTube pour extraire les transcripts de vidéos de référence, enrichissant ainsi le prompt de l'agent analyste.
+- Adaptation du prompt généré pour l'agent analyste chargé d'analyser tous les critères reçus ainsi que les données Airtable transmises par l'agent principal.
+- Configuration d'une expression passant la valeur query reçue via when executed by another workflow, item json, entre l'agent principal et le sous-agent analyste.
+- Recommandation de laisser l'IA gérer l'envoi de la donnée query, avec test via Execute Previous Node révélant une valeur vide en l'absence de donnée réelle.
+- Sauvegarde du sous-agent analyste sans nécessité de l'activer séparément (déclenché par un autre agent), avant ajout du sous-agent Writer de script.
+- Configuration croisée des prompts entre l'agent writer et l'agent analyste, chacun recevant le prompt approprié à sa fonction respective.
+- Premier test de l'agent complet avec une demande concrète : créer un script basé sur les meilleurs scripts d'Habit pour un ICP de chef de PME industrielle en format viral TikTok.
+- Description du processus complet en plusieurs étapes : analyse des données par l'analyste, remontée à l'agent principal, puis rédaction du script par le writer.
+- Observation du modèle Anthropic sollicitant l'Agent Writer avec un travail d'analyse détaillé (reach, revenu) avant transmission des données pour rédaction du script.
+- Résultat impressionnant du script viral généré par l'Agent Writer, ciblant un chef d'usine perdant du temps en comptabilité, avec accroche directe et énergique.
+- Analyse du script généré révélant qu'il a repris le hook et le format de la publicité la plus performante identifiée dans la base Airtable (343 000 de reach).
+- Test d'itération demandant à l'agent de créer une mise en scène de dialogue similaire à celle de la publicité Abi, avec observation d'une incompréhension initiale.
+- Résultat impressionnant d'un script de 28 secondes en dialogue entre deux chefs d'entreprise abordant le problème concret de la comptabilité coûteuse et incomprise.
+- Comparaison de la qualité obtenue avec un système d'agents structuré face à une simple demande basique sur ChatGPT, avec mise en avant de l'automatisation possible pour les agences.
+- Explication de la possibilité de réutiliser et mélanger les structures de publicités stockées pour ses propres besoins et réimaginer des mises en scène différentes.
+- Observation du fonctionnement interne du flux : l'agent analyste consulte les données Airtable (ID, URL, scripts) avant de transmettre le résultat au writer.
+
+## Concepts cles
+- introduction à l'agent espion publicitaire avec positionnement différenciant de l'auteur
+- précision : agent construit pour Meta spécifiquement (logique différente des autres plateformes)
+- présentation de la roadmap et cible de l'agent (agences Facebook Ads, média buyers)
+- explication de la nécessité de comprendre les mécanismes de la publicité en ligne
+- explication du fonctionnement des algorithmes publicitaires (ciblage par proximité de profil)
+- présentation de l'usage de l'IA pour analyser les publicités concurrentes réussies
+- explication du modèle économique des agences lié à la rétention client
+- présentation de la structure générale (identification concurrents, analyse publicités une par une)
+- explication de l'importance de croiser volume global et longévité des publicités
+- présentation des trois types de contenu à analyser (applicable à la création d'agence)
+- explication de la double dimension d'analyse vidéo (visuel via Gemini + script)
+- précision sur le script calculé pour convertir, stockage Excel et matrice d'analyse
+- explication : le facteur différenciant est la créative et le persona client visé
+- introduction à la navigation dans l'Ad Library de Meta (régulation européenne)
+- démonstration avec l'exemple concret de la marque Habit dans l'Ad Library
+- présentation de l'objectif de scraper toutes les publicités actives et passées d'un concurrent
+- exemple de données récupérées via la transparence européenne (dates, plateformes)
+- mise en garde sur les coûts croissants du scraping à grande échelle
+- recommandation de choix d'acteur de scraping basé sur prix et commentaires récents
+- conseil de se concentrer sur l'information réelle en sortie plutôt que le marketing des acteurs
+- recommandation cruciale de tester à petite échelle (4-5) avant le scraping massif
+- démonstration de configuration directe sur Apify sans passer par N8n
+- rappel de la méthode de déclenchement recommandée pour petites quantités récurrentes
+- configuration du body de requête réutilisable (ID page, count, période)
+- débogage en direct avec annulation (abort) et relance du run
+- recommandation d'un temps d'attente généreux pour les gros volumes de scraping
+- explication de la distinction entre exécution synchrone et asynchrone (seuil 5 minutes)
+- transition vers la création de la base Airtable pendant l'attente
+- explication du choix d'Airtable vs Google Sheets (limite concrète des tableurs)
+- précision technique sur la différence de formatage des dates (Google Sheets vs vraie colonne date)
+- explication de la différence tableur vs base de données relationnelle Airtable
+- justification finale du choix d'Airtable (formatage, stockage fichiers, typage)
+- vérification de la bonne terminaison de l'obtention des données
+- configuration de l'étape d'obtention des données du dataset
+- observation d'un payload dense nécessitant un filtrage des données essentielles
+- décision de se concentrer sur les vidéos plutôt que les données démographiques détaillées
+- rencontre d'un bug de l'acteur résolu en réutilisant un run précédent
+- décision de continuer à avancer sans attendre la résolution du bug
+- utilisation de Loop Over Items pour traiter 632 données récupérées
+- répartition en 143 vidéos et 11 images avec deux boucles distinctes
+- explication de la nécessité d'un Code Node pour reformater les fichiers pour Airtable
+- sollicitation de Claude pour reformater l'array de vidéos au format Airtable
+- recherche itérative du bon format Airtable pour les pièces jointes (Upload Attachments)
+- instruction précise à l'IA de formater en Array compatible avec l'API Airtable
+- demande de génération d'un Code Node N8n complet à l'IA
+- ajustement du code node pour ignorer les thumbnails et garder l'array attachments
+- débogage d'une erreur due à un manque d'exemple concret dans le prompt
+- correction : coller le JSON réel reçu plutôt qu'un exemple générique
+- simplification du code généré avant traitement de la vidéo
+- test en direct confirmant l'extraction du fichier audio d'une vidéo
+- résultat de la transcription audio avec timestamps bien formatés
+- configuration d'un prompt de nettoyage du transcript retirant les millisecondes brutes
+- finalisation du format de sortie du transcript (balises mm.ss)
+- recommandation d'épingler l'étape de retranscription déjà réussie
+- configuration d'une expression pour récupérer dynamiquement la vidéo en qualité SD
+- ajout d'une étape de téléchargement de la vidéo via requête HTTP (URL SD)
+- récupération de l'analyse visuelle avec consigne de réponse en français
+- affinement du prompt pour ne retourner que les éléments d'analyse purs
+- démonstration de création d'un jeton d'accès Airtable avec portées nécessaires
+- début de l'explication des champs à mapper (Add Archive ID)
+- mapping des champs Archive ID et Page ID vers Airtable
+- conversion des dates Unix via l'expression To Date Time
+- localisation des champs REACH et SPEND dans le payload
+- recherche manuelle du champ spend révélant sa position au premier niveau
+- explication du mapping du champ plateformes en sélection multiple (Array)
+- mapping des textes extraits de la publicité via Loop Over Items
+- mapping du titre et body de la publicité (colonne annonceurs laissée de côté)
+- constat qu'il manque les colonnes du transcript vidéo, ajout prévu
+- ajout des colonnes texte long pour transcript horodaté et description vidéo
+- finalisation des colonnes texte et ajout de la colonne descriptions d'images
+- débogage d'une erreur de format d'attachment causée par des miniatures incluses
+- désépinglage de nœuds figés pour relancer le processus complet
+- exécution de l'étape d'analyse vidéo (la plus longue) avant création de l'enregistrement
+- correction confirmée du format des attachments (url, filename)
+- confirmation du succès après plusieurs répétitions pour valider toutes les valeurs
+- vérification des champs de base réceptionnés et constat de champs manquants
+- démonstration de test avec réception automatique de deux éléments JSON
+- nettoyage des tests précédents et observation du remplissage automatique fluide
+- explication de la nécessité de fournir un exemple concret des données images à Claude
+- configuration de Gemini 2.5 Flash pour l'analyse d'images (duplication de l'étape)
+- récupération des pièces jointes images (une seule conservée, sauvegarde régulière)
+- observation de ralentissements N8n cloud et configuration de l'analyse d'image en français
+- passage à un déclenchement automatique via manual trigger connecté
+- mention d'un sujet complémentaire : réutiliser les scripts stockés pour analyse
+- confirmation du résultat final complet avec observation de scripts partagés
+- transition vers l'utilisation d'un agent expert en script pour exploiter les données
+- configuration d'un agent IA orchestrateur redirigeant vers plusieurs sous-agents
+- configuration de mémoire simple et outils sous forme de sub-workflows
+- recommandation de créer des sub-workflows pour structurer les sous-agents
+- présentation du sous-agent ad writer avec accès à la base Airtable
+- configuration du prompt de l'agent via define below (équivalent au message système)
+- recommandation de prompt d'agent avec sous-agents analyseur de script et writer
+- constat d'un oubli de filtrage par type corrigé manuellement (aurait pu être automatisé)
+- réutilisation d'un prompt généré avec variable d'entrée dynamique
+- création du sub-workflow Add Agent pour l'agent analyste (convention de nommage)
+- simplification du formatage via nommage simple du champ query
+- explication de la méthode de construction du prompt via Claude et vidéos transcrites
+- astuce d'utilisation d'un outil de résumé YouTube pour enrichir le prompt
+- adaptation du prompt de l'agent analyste (critères et données Airtable)
+- configuration d'une expression de passage de valeur query entre agents
+- recommandation de laisser l'IA gérer l'envoi de la donnée query
+- sauvegarde du sous-agent sans activation séparée (déclenché par un autre agent)
+- configuration croisée des prompts entre agent writer et agent analyste
+- premier test complet avec demande concrète (ICP chef de PME, format TikTok)
+- description du processus complet en plusieurs étapes (analyste puis writer)
+- observation du travail d'analyse détaillé transmis à l'Agent Writer
+- résultat impressionnant du script viral généré (chef d'usine, comptabilité)
+- analyse révélant la reprise du hook de la publicité la plus performante (343K reach)
+- test d'itération sur une mise en scène de dialogue (incompréhension initiale)
+- résultat impressionnant d'un script en dialogue de 28 secondes (problème comptabilité)
+- comparaison qualité agents structurés vs demande basique ChatGPT
+- explication de la réutilisation et du mélange de structures de publicités stockées
+- observation du fonctionnement interne du flux agent analyste-Airtable
+
+## Outils mentionnes
+- Meta
+- Facebook Ads
+- Facebook
+- Google
+- Gemini
+- Excel
+- Instagram
+- Apify
+- Airtable
+- Google Sheets
+- n8n
+- Claude
+- Postgres
+- YouTube
+- TikTok
+- Anthropic
+- ChatGPT
+
+## Tips techniques
+- Utiliser l'IA pour analyser les publicités concurrentes ayant échoué chez d'autres, afin d'éliminer rapidement des pistes non pertinentes
+- Analyser conjointement le volume global de dépense et la longévité de chaque publicité, plutôt qu'isolément, pour évaluer sa vraie performance
+- Se fier aux commentaires les plus récents plutôt qu'anciens pour évaluer la fiabilité actuelle d'un acteur de scraping avant de le choisir
+- Évaluer un acteur de scraping sur les données réellement obtenues en sortie, pas sur les promesses marketing comparatives entre concurrents
+- Toujours tester un scraping à petite échelle (4-5 éléments) avant de lancer une extraction massive, pour valider la qualité du résultat en sortie
+- Prévoir un délai d'attente généreux (ex : 8 minutes) pour un scraping de gros volume exécuté sans surveillance directe
+- Séparer le traitement par type de média (vidéos vs images) dans des boucles Loop Over Items distinctes plutôt qu'une boucle unique mixte
+- Coller directement la documentation attendue par l'API cible dans le prompt donné à l'IA pour garantir un formatage exact et conforme
+- Toujours fournir un exemple concret des données réelles dans un prompt de génération de code, sans quoi l'IA ne peut pas deviner la structure exacte attendue
+- Coller le JSON réel effectivement reçu plutôt qu'un exemple générique approximatif, pour que le modèle comprenne exactement la structure à traiter
+- Épingler une étape de traitement déjà réussie et coûteuse (retranscription audio) pour éviter de la relancer inutilement à chaque test
+- Convertir systématiquement les dates au format Unix via une expression dédiée (To Date Time) avant de les envoyer vers un champ date structuré
+- Rechercher directement un champ dans le payload brut par mot-clé lorsque sa position n'est pas connue à l'avance, plutôt que de deviner
+- Répéter plusieurs fois un processus de test complet pour s'assurer que toutes les valeurs rentrent correctement avant de le considérer stable
+- Sauvegarder régulièrement son travail (Save) en cours de construction de workflow pour éviter de perdre la progression en cas de bug
+- Créer des sub-workflows dédiés (Call Another Workflow) pour chaque sous-agent spécialisé plutôt que de tout imbriquer dans un seul flux complexe
+- Anticiper l'ajout d'une colonne de classification (type de contenu) enrichie programmatiquement, plutôt que de filtrer manuellement après coup
+- Nommer simplement les champs de passage de données entre agents (ex : 'query') pour simplifier le formatage reçu par l'agent parent
+- Utiliser un outil de résumé/transcription de vidéos YouTube pour extraire du contenu de référence enrichissant le prompt d'un agent spécialisé
+- Réutiliser et recombiner les structures de publicités performantes stockées en base pour générer de nouvelles variantes toujours plus ciblées
+
+## Cas d'usage reels
+- [[]]

@@ -1,0 +1,215 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Mieux planifier"
+source_transcript: "12. Comment gerer son temps  Partie 1.txt"
+---
+
+# 12. Comment gerer son temps ? Partie 1
+
+## Resume
+- Introduction à la gestion du temps en s'appuyant sur la mind map, en commençant par la compréhension du rythme circadien.
+- Chiffres clés sur les profils énergétiques : 40% des gens ont leur pic d'énergie le matin, 30% le soir, et 30% entre les deux.
+- Explication de l'influence du chronotype sur le moment de productivité maximale, illustrée par l'exemple personnel du pic entre 10h et 14h de l'auteur.
+- Constat que les horaires de travail classiques favorisent structurellement les chronotypes matinaux, désavantageant les profils nocturnes.
+- Explication du fonctionnement de l'horloge biologique influençant température corporelle, sommeil et éveil, sans jugement de valeur entre chronotypes.
+- Observation que les chronotypes du soir auraient statistiquement plus de succès en business, un avantage reconnu même si l'auteur n'en fait pas partie.
+- Présentation des quatre chronotypes : lions (lève-tôt), ours (cycle régulier 10h-15h, majorité des gens), à suivre avec loups et dauphins.
+- Présentation des chronotypes loups (couche-tard productifs le soir) et dauphins (sommeil instable, dormeurs légers ayant du mal à se concentrer).
+- Importance d'avoir une vue globale sur 6-8 mois en complément de la vue hebdomadaire, pour ne pas perdre de vue les objectifs à long terme.
+- Encouragement à définir ses objectifs personnels même en entreprise, qu'il s'agisse de prouver sa valeur, finir un projet, ou objectifs freelance.
+- Démonstration de la timeline d'objectifs dans Notion, permettant de planifier à 6 mois d'avance sans aller trop loin (planification à 2 ans jugée trop longue).
+- Critique du système de plans à 90 jours (trimestriels) : tendance à être relâché les deux premiers mois puis à se précipiter le dernier mois.
+- Préférence pour des cycles de refocus tous les deux mois (8 semaines), un mois étant trop court et permettant déjà de voir des résultats de stratégie.
+- Première recommandation concrète pour gérer son temps : créer un bloc de focus de 60 minutes en début de journée, plus court que le deep work classique de 2h.
+- Justification du choix de 60 minutes : suffisant pour créer une intention de départ, même sans atteindre le flow maximal théorique.
+- Conseil pratique d'arriver plus tôt au travail pour garantir ce bloc de focus minimal d'une heure avant le premier meeting de la journée.
+- Recommandation d'utiliser un outil d'engagement (application Pomodoro ou équivalent) pour protéger activement ce bloc de focus contre les interruptions.
+- Présentation de l'application Slash, décrite comme Ultimate App for Doers, affichant un compteur de temps passé sur une tâche pour inciter à l'engagement.
+- Point négatif identifié : l'application Slash ne s'intègre pas avec tous les outils comme Akiflow, une limitation contournable via des alarmes.
+- Description du bénéfice principal de l'outil : rester focus sur une seule tâche à la fois avec rappel visuel constant limitant la procrastination.
+- Explication de la préférence pour cet outil de time tracking par engagement plutôt que la technique Pomodoro classique, jugée plus efficace personnellement.
+- Explication du principe Pomodoro (sessions de 25 minutes), avec précision scientifique que cette durée est insuffisante pour atteindre l'état de flow.
+- Explication du mécanisme de la pause Pomodoro de 5 minutes libérant de la dopamine, créant une satisfaction prématurée du travail accompli.
+- Mise en garde que la dopamine libérée après 25 minutes rouvre une fenêtre de vulnérabilité aux distractions, un inconvénient du système Pomodoro classique.
+- Confirmation que le Deep Work reste un bon moyen de s'engager, avec l'application Slash List présentée comme très utile pour atteindre cet état de flow.
+- Recommandation de réduire les meetings au strict minimum et leur durée, en osant s'opposer à une culture d'entreprise abusant des réunions considérées comme une perte de temps.
+- Recommandation de compresser ses heures de travail au maximum, une pratique favorisant la priorisation et la récupération, avec un hack à venir pour faciliter cela.
+- Concept clé de l'anti-time : les marqueurs externes (sport, enfants à récupérer) forcent l'arrêt du travail, sans quoi le travail s'étend indéfiniment.
+- Conseil de planifier explicitement dans l'agenda les activités personnelles (sport, amis, enfants) pour éviter d'être pris de court par le travail.
+- Principe fondamental : dédier un temps de non-travail planifié est plus important encore que de créer des blocs de focus, pour réduire au minimum le temps total travaillé.
+- Critique des to-do lists sans estimation de temps (simples cases à cocher Notion) qui peuvent faire dilater artificiellement la durée réelle des tâches faciles.
+- Recommandation de la technique du time blocking : placer directement les tâches dans le calendrier plutôt que de le laisser dirigé uniquement par les meetings.
+- Démonstration concrète du calendrier organisé par blocs de tâches similaires, actuellement concentré sur le tournage de la formation en cours.
+- Exemple de batching illustré : concentrer toutes les étapes de production YouTube (script, tournage) le matin plutôt que de les disperser dans la journée.
+- Recommandation générale du batching pour les tâches similaires (emails, création de contenu), sauf pour les tâches très créatives ou très répétitives.
+- Explication du coût cognitif spécifique de la créativité, qui fatigue rapidement le cerveau contrairement à des tâches répétitives comme l'enregistrement.
+- Reconnaissance personnelle que certaines tâches longues (montage) ne se prêtent pas bien au batching selon les préférences individuelles, sans règle universelle.
+- Conseil important de préserver du plaisir dans sa productivité : mieux vaut faire une tâche lentement sans forcer un batching contraignant qui gâche l'humeur.
+- Introduction du concept de time reset : diviser la journée en sessions de deux heures avec un feedback régulier via une alarme.
+- Exemple concret d'analyse rétrospective d'une session moins productive (9h-11h) causée par un démarrage tardif dû à des imprévus.
+- Analyse d'une session productive (11h-13h) où le travail préparatoire antérieur a permis un enregistrement efficace, malgré un léger décalage.
+- Explication du réveil en mode vibreur comme marqueur temporel discret, permettant de considérer la journée en plusieurs chances plutôt qu'en tout ou rien.
+- Exemple de rythme quotidien avec pause repas et promenade du chien, puis rappels à 16h et 19h les jours de forte charge de travail.
+- Confirmation de la règle stricte d'anti-time après 19h : arrêt total du travail jusqu'au lendemain, une méthode personnelle d'équilibre.
+- Récapitulatif du système de quatre sessions avec réveils dédiés (matin, session 1-4, fin de journée) permettant un rééquilibrage continu de la journée.
+- Pratique du journal Notion pour noter son ressenti après chaque session, permettant une réinitialisation mentale régulière tout au long de la journée.
+- Analogie du tennis en sets : perdre les deux premiers sets n'empêche pas de gagner les deux suivants, une façon de relativiser une mauvaise session.
+- Exemple concret de notation de session (mauvaise, moyenne) reflétant l'humeur du jour, avec système d'auto-évaluation numérique par session.
+- Exemple d'un rebond réussi : partir d'une notation basse (6/6) puis se reprendre consciemment pour finir sur une notation élevée (9/7).
+- Résumé du système time reset : feedback toutes les deux heures offrant quatre cartouches pour rattraper et améliorer sa journée globale.
+- Recommandation d'utiliser massivement les rappels pour toute tâche, même simple, le cerveau n'étant pas infaillible pour se souvenir de tout.
+- Introduction du concept d'équilibre entre capacité et challenge : une tâche doit être suffisamment stimulante sans être trop facile pour maintenir l'engagement.
+- Explication du lien entre gestion du temps et choix des tâches selon le niveau de motivation et de challenge disponible à un moment donné.
+- Hack ultime recommandé : éviter les meetings le matin (période de focus maximal) et les placer plutôt l'après-midi après le repas, période plus propice.
+- Précision d'usage : le créneau post-repas convient mieux aux feedbacks et discussions qu'au travail créatif nécessitant une forte concentration.
+- Rappel que le meeting sert surtout à la transmission d'informations et non à la création, l'objectif prioritaire devant rester de maximiser la création.
+- Présentation de la fonctionnalité de calendrier fermé Akiflow, permettant de générer en un clic un lien de réservation type Calendly directement partageable.
+- Avantage de consolidation d'outils : la fonctionnalité de créneaux récurrents remplace un outil externe type Calendly, tout restant dans la même application.
+- Présentation des options de configuration avancées des créneaux (nom, localisation, usage multiple) centralisant tous les paramètres de réservation.
+- Confirmation de la praticité extrême de cette fonctionnalité pour proposer directement des créneaux de meeting à quelqu'un sans outil tiers.
+- Retour au thème du suivi du temps avec présentation de l'application Slash (multi-plateforme Mac/Windows) et méthode manuelle alternative de copier-coller.
+- Aveu personnel de ne pas utiliser cet outil par discipline suffisante, tout en soulignant son importance pour ceux qui en ont besoin, avec deux méthodes de suivi possibles.
+- Présentation de l'application Rise, un outil de suivi de temps passif calculant automatiquement l'activité sans intervention manuelle.
+- Explication du système de score de focus algorithmique de Rise, attribué automatiquement à chaque application utilisée et ajustable manuellement.
+- Utilité clé de Rise : identifier ses propres portes de sortie (sources de distraction récurrentes comme YouTube) causant les pertes de focus.
+- Distinction claire entre Slash (suivi actif volontaire) et Rise (suivi passif automatique), deux approches complémentaires du tracking de temps.
+- Précision de l'objectif réel du suivi du temps : non pas cumuler des heures de focus par vanité, mais calibrer précisément la durée réelle des tâches récurrentes pour mieux planifier.
+- Dernière recommandation : créer dans le calendrier une représentation visuelle de toutes les activités de la journée, calendrier affiché en page d'accueil.
+- Transition vers Make pour présenter un flux d'automatisation avec routeur basé sur la base de données projets, déclenché lors d'une assignation.
+- Démonstration du déclenchement d'automatisation Make lors de l'assignation d'une date sur un projet Notion, initiant la synchronisation vers Google Calendar.
+- Configuration du filtre limitant l'automatisation à un élément à la fois, vérifiant les conditions de la base de données lors de chaque mise à jour.
+- Ajout d'une condition vérifiant l'existence de la date de départ du projet avant de poursuivre le flux d'automatisation.
+- Vérification combinée des deux dates (départ et fin) comme condition de poursuite du flux, avant une seconde condition sur le champ Calendar ID.
+- Explication du champ Calendar ID vide comme indicateur qu'un événement Google Calendar doit encore être créé pour ce projet.
+- Configuration de la création d'événement Google Calendar avec récupération dynamique du nom du projet Notion comme titre de l'événement.
+- Configuration cruciale de l'option Hold Day Event pour éviter que l'événement ne prenne toute la journée dans le calendrier, préservant la lisibilité.
+- Configuration du renvoi de l'ID de l'événement créé vers Notion, en récupérant le database item ID correspondant.
+- Configuration de la branche alternative du routeur : si le Calendar ID existe déjà, mettre à jour l'événement existant plutôt que d'en créer un nouveau.
+- Confirmation que le système fonctionne également avec le calendrier Apple sur iPhone, illustrant la portabilité de la synchronisation multi-appareils.
+- Conclusion sur l'utilité de visualiser en un coup d'œil le gros projet dominant la semaine, pour orienter clairement son focus et son énergie.
+
+## Concepts cles
+- introduction à la gestion du temps via la compréhension du rythme circadien
+- chiffres clés sur la répartition des profils énergétiques (40%/30%/30%)
+- explication de l'influence du chronotype sur le pic de productivité personnel
+- constat que les horaires de travail classiques favorisent les chronotypes matinaux
+- explication du fonctionnement de l'horloge biologique (température, sommeil, éveil)
+- observation statistique du succès business associé aux chronotypes du soir
+- présentation des chronotypes lions et ours (majorité des gens)
+- présentation des chronotypes loups et dauphins (sommeil instable)
+- importance d'une vue globale à 6-8 mois en complément de la vue hebdomadaire
+- encouragement à définir des objectifs personnels même en entreprise
+- démonstration de la timeline d'objectifs Notion planifiée à 6 mois
+- critique du système de plans trimestriels à 90 jours (relâchement puis précipitation)
+- préférence pour des cycles de refocus bimestriels (8 semaines)
+- recommandation d'un bloc de focus de 60 minutes en début de journée
+- justification du choix de 60 minutes comme intention de départ suffisante
+- conseil pratique d'arriver plus tôt pour garantir le bloc de focus
+- recommandation d'un outil d'engagement pour protéger le bloc de focus
+- présentation de l'application Slash (Ultimate App for Doers) avec compteur de temps
+- point négatif de Slash : absence d'intégration avec Akiflow
+- description du bénéfice de focus sur une seule tâche limitant la procrastination
+- préférence pour le time tracking par engagement plutôt que la technique Pomodoro
+- explication du Pomodoro et sa limite scientifique pour atteindre le flow
+- explication du mécanisme dopaminergique de la pause Pomodoro
+- mise en garde : la dopamine rouvre une fenêtre de vulnérabilité aux distractions
+- confirmation du Deep Work comme moyen d'engagement clé pour le flow
+- recommandation de réduire drastiquement les meetings (perte de temps)
+- recommandation de compresser les heures de travail au maximum
+- concept clé de l'anti-time : marqueurs externes forçant l'arrêt du travail
+- conseil de planifier explicitement les activités personnelles dans l'agenda
+- principe fondamental : l'anti-time planifié prime sur le focus block lui-même
+- critique des to-do lists sans estimation de temps (dilatation des tâches faciles)
+- recommandation de la technique du time blocking dans le calendrier
+- démonstration concrète du calendrier organisé par blocs de tâches similaires
+- exemple de batching des étapes de production YouTube concentrées le matin
+- recommandation générale du batching sauf tâches très créatives ou répétitives
+- explication du coût cognitif spécifique de la créativité fatiguant le cerveau
+- reconnaissance qu'il n'y a pas de règle universelle de batching (montage)
+- conseil de préserver le plaisir plutôt qu'un batching contraignant
+- introduction du concept de time reset (sessions de deux heures avec alarme)
+- exemple concret d'analyse rétrospective d'une session moins productive
+- analyse d'une session productive grâce au travail préparatoire antérieur
+- explication du réveil vibreur comme marqueur temporel discret et rassurant
+- exemple de rythme quotidien avec pauses et rappels à 16h et 19h
+- confirmation de la règle stricte d'anti-time après 19h pour l'équilibre
+- récapitulatif du système de quatre sessions avec réveils dédiés pour rééquilibrage
+- pratique du journal Notion pour réinitialisation mentale après chaque session
+- analogie du tennis en sets pour relativiser une mauvaise session
+- exemple concret de système d'auto-évaluation numérique par session
+- exemple d'un rebond réussi entre deux sessions notées
+- résumé du système time reset offrant quatre cartouches par journée
+- recommandation d'utiliser massivement les rappels pour toute tâche
+- introduction de l'équilibre entre capacité et challenge (lié au flow)
+- explication du lien entre gestion du temps et choix des tâches selon motivation
+- hack ultime : éviter les meetings le matin, les placer l'après-midi
+- précision d'usage du créneau post-repas pour feedbacks plutôt que création
+- rappel : le meeting sert à la transmission, pas à la création (priorité)
+- présentation du calendrier fermé Akiflow (lien type Calendly intégré)
+- avantage de consolidation d'outils remplaçant Calendly dans la même app
+- présentation des options avancées de configuration des créneaux de réservation
+- confirmation de la praticité pour proposer des créneaux sans outil tiers
+- présentation de Slash multi-plateforme et méthode manuelle alternative
+- distinction entre suivi actif et suivi passif du temps
+- présentation de l'application Rise (suivi de temps passif automatique)
+- explication du système de score de focus algorithmique ajustable de Rise
+- utilité clé de Rise : identifier ses propres portes de sortie de focus
+- distinction claire entre suivi actif (Slash) et suivi passif (Rise)
+- précision de l'objectif réel du suivi : calibrer la durée des tâches récurrentes
+- recommandation de représentation visuelle complète en page d'accueil calendrier
+- transition vers un flux d'automatisation Make avec routeur sur les projets
+- démonstration du déclenchement d'automatisation Make via assignation de date
+- configuration du filtre limitant l'automatisation à un élément à la fois
+- ajout d'une condition vérifiant l'existence de la date de départ
+- vérification combinée des deux dates comme condition de poursuite
+- explication du champ Calendar ID vide comme indicateur de création nécessaire
+- configuration de la création d'événement Google Calendar avec titre dynamique
+- configuration cruciale de l'option Hold Day Event pour préserver la lisibilité
+- configuration du renvoi de l'ID de l'événement créé vers Notion
+- configuration de la branche de mise à jour pour un Calendar ID déjà existant
+- confirmation de la compatibilité avec le calendrier Apple iPhone
+- conclusion sur l'utilité de visualiser le projet dominant de la semaine
+
+## Outils mentionnes
+- Notion
+- Slash
+- Akiflow
+- YouTube
+- Rise
+- Make
+- Google Calendar
+- Apple
+
+## Tips techniques
+- Maintenir à la fois une vue hebdomadaire opérationnelle et une vue globale à 6-8 mois, pour ne jamais perdre de vue les objectifs de fond
+- Préférer des cycles de refocus de 8 semaines (bimestriels) aux cycles trimestriels classiques, pour éviter le relâchement puis la précipitation
+- Créer un bloc de focus de 60 minutes en début de journée plutôt que viser directement 2h de deep work, plus réaliste et accessible
+- Arriver plus tôt au travail pour garantir un bloc de focus minimal d'une heure avant le premier meeting planifié de la journée
+- Réduire systématiquement le nombre et la durée des meetings, quitte à s'opposer à une culture d'entreprise qui en abuse, les réunions étant une perte de temps majeure
+- Compresser volontairement ses heures de travail disponibles pour forcer une meilleure priorisation naturelle des tâches
+- Créer des marqueurs externes fixes (sport, activités familiales) forçant l'arrêt du travail, sans quoi la journée de travail tend à s'étendre indéfiniment
+- Planifier explicitement les activités personnelles dans l'agenda comme de véritables rendez-vous, pour éviter que le travail n'empiète systématiquement dessus
+- Éviter les to-do lists en simples cases à cocher sans estimation de temps, qui laissent les tâches faciles s'étirer inutilement sur toute la journée
+- Pratiquer le time blocking en plaçant directement les tâches dans le calendrier, pour reprendre le contrôle plutôt que de le laisser dicté par les meetings
+- Regrouper (batcher) toutes les étapes similaires d'une production de contenu sur une même plage horaire, plutôt que de les disperser dans la journée
+- Batcher les tâches similaires et rapides (emails, petites créations), mais éviter de batcher les tâches très créatives ou très répétitives sur de longues durées
+- Préserver le plaisir et le bien-être dans l'organisation de son travail, quitte à renoncer à un batching théoriquement optimal mais démotivant
+- Diviser la journée en sessions de deux heures avec une alarme de feedback régulier (time reset), pour garder conscience de la progression
+- Utiliser un réveil en mode vibreur discret comme marqueur temporel régulier, pour percevoir la journée en plusieurs chances plutôt qu'en tout-ou-rien
+- Fixer une heure de coupure stricte et non négociable en soirée (anti-time total), pour garantir un véritable équilibre vie professionnelle-personnelle
+- Tenir un journal noté après chaque session de travail dans Notion, pour se réinitialiser mentalement et objectiver son ressenti
+- Adopter la mentalité d'un match de tennis en sets : une mauvaise session (set perdu) n'empêche pas de bien performer sur les suivantes
+- Utiliser massivement les rappels programmés pour toute tâche, même simple, plutôt que de compter sur sa mémoire pour ne rien oublier
+- Réserver systématiquement les créneaux matinaux (focus maximal) aux tâches créatives, et placer les meetings l'après-midi, période naturellement moins productive
+- Utiliser un lien de réservation intégré directement dans son outil de calendrier (type Calendly natif), pour centraliser sans multiplier les applications
+- Utiliser un outil de suivi passif comme Rise pour identifier ses propres 'portes de sortie' récurrentes causant la perte de focus
+- Suivre son temps dans le but précis de calibrer la durée réelle de tâches récurrentes (ex : production vidéo), pour affiner la planification future
+- Afficher son calendrier complet en page d'accueil de son outil de gestion du temps, pour visualiser d'un coup d'œil l'ensemble de sa journée
+- Utiliser un champ ID vide comme indicateur booléen pour déclencher conditionnellement la création d'une ressource externe, plutôt qu'un statut séparé
+- Activer l'option Hold Day Event lors de la création automatisée d'événements de projet, pour éviter qu'ils n'occupent visuellement toute la journée du calendrier
+- Structurer une automatisation avec deux branches (création si absent, mise à jour si existant) pour éviter la duplication d'événements calendrier
+- Visualiser visuellement le projet dominant occupant la majeure partie du calendrier de la semaine, pour orienter clairement le focus et l'énergie
+
+## Cas d'usage reels
+- [[]]

@@ -1,0 +1,189 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Agents de Productivité"
+source_transcript: "6.08 Agent de recrutement • Partie 1.txt"
+---
+
+# 6.08 Agent de recrutement • Partie 1
+
+## Resume
+- Introduction à la construction complète de l'agent de recrutement, destiné à faire gagner du temps aux PME n'ayant pas les moyens d'un service RH dédié.
+- Présentation de la phase de screening : collecte des données de profil LinkedIn des candidats, comparaison de leur historique professionnel avec l'offre, extraction des informations clés.
+- Justification de l'usage de la vidéo pour l'entretien préalable : une pratique désormais courante, avec recommandation d'une structure claire de questions plutôt qu'un format libre.
+- Concept de comparaison incrémentale des candidats en temps réel : chaque nouveau candidat est comparé aux précédents pour construire un classement dynamique au fil des candidatures.
+- Objectif du processus automatisé : déterminer rapidement si un candidat se positionne dans le top 10, en comparant ses réponses à des questions spécifiques prédéfinies.
+- Description de la troisième étape du processus : l'appel avec le manager, l'étape RH étant complètement automatisée avec une simple validation humaine finale sur un mini-classement.
+- Objectif d'automatisation du travail manuel chronophage de recrutement, avec soumission d'un résumé des meilleurs profils dégagés par les critères définis.
+- Argument économique fort : le gain permet potentiellement d'économiser jusqu'à un demi-salaire RH, en remplaçant un poste à temps plein par un freelance à mi-temps pour la validation finale.
+- Démonstration de création d'un tableau structuré via IA, avec définition des champs d'informations de base (nom, email, téléphone, LinkedIn, date de candidature, CV).
+- Configuration d'un système de scoring qualitatif (Good, Strong, No Match) et introduction de VideoASK pour récupérer les réponses aux questions d'entretien vidéo.
+- Observation du gain de temps significatif obtenu grâce à l'IA pour générer automatiquement la structure du tableau (15 secondes contre un temps manuel bien plus long).
+- Démonstration de configuration d'une fiche de poste (exemple Content Manager) avec lien vers un Google Doc décrivant l'offre, un effort de francisation du vocabulaire.
+- Mention de la possibilité future de créer un agent générant automatiquement des offres d'emploi, avec configuration de filtrage des candidats par poste concerné.
+- Renommage de la table pour plus de clarté (Candidat plutôt que BasicInfo), facilitant l'organisation des données recueillies via le formulaire de candidature.
+- Configuration des champs requis du formulaire de candidature : CV, URL LinkedIn, téléphone, email et nom, tous marqués comme obligatoires pour garantir des données complètes.
+- Recommandation incitative dans le formulaire : encourager fortement à fournir un profil LinkedIn complet pour maximiser ses chances, avec case à cocher pour l'autorisation d'usage des données.
+- Finalisation du formulaire de candidature (prénom, nom, email, upload CV) avec test d'ouverture pour vérifier le rendu final avant utilisation réelle.
+- Transition vers N8n pour construire le workflow d'extraction et d'analyse du CV et du profil LinkedIn, s'appuyant sur les deux sources de données collectées.
+- Test pratique de soumission du formulaire de candidature (informations personnelles, URL LinkedIn, CV uploadé) pour observer le comportement du workflow d'analyse.
+- Démonstration de configuration Airtable avec récupération de l'App ID, sélection de la table (préfixe tbl) et configuration du TriggerField pour déclencher le workflow.
+- Démonstration d'extraction du CV via requête HTTP GET à partir de l'URL du fichier stocké dans Airtable, récupérant le fichier binaire pour traitement ultérieur.
+- Configuration de HappyFile (Apify) pour scraper le profil LinkedIn, avec recherche de l'acteur approprié parmi les options disponibles (exemple Google Maps Scraper).
+- Comparaison de coûts entre acteurs de scraping (25€ jugé trop cher vs API Maestro à 5€ pour 1000 résultats), avec choix de la solution facturée au résultat.
+- Configuration technique de sélection de l'acteur en mode Fix pour choisir précisément l'ID dans la liste plutôt qu'une valeur dynamique non encore disponible.
+- Sélection définitive de l'acteur de scraping bien noté, avec configuration du JSON pour récupérer les données du profil LinkedIn ciblé.
+- Configuration de l'option Wait For Finish pour l'acteur de scraping, avec test d'exécution pour observer le comportement de sortie du processus.
+- Configuration d'une étape d'attente de 15 secondes suivie de la récupération du dataset via getDatasetItems, une étape technique nécessaire pour laisser le scraping se terminer.
+- Confirmation de récupération complète des données LinkedIn (expérience, éducation, langue) au format JSON, prêtes pour l'étape suivante d'analyse.
+- Utilisation d'un nœud Merge (Combine, All Possible Combinations) pour fusionner les données du CV et du profil LinkedIn en une seule structure exploitable.
+- Recommandation de nettoyer les métadonnées inutiles via un Set Fields avant la fusion, pour ne conserver que les données pertinentes du CV et du profil.
+- Explication de l'objectif final de la fusion des données : permettre à un agent IA d'analyser conjointement toutes les informations du CV et du profil LinkedIn.
+- Configuration du prompt d'extraction spécialisé en analyse RH, définissant les attributs à extraire correspondant aux colonnes de la base de données de candidats.
+- Configuration de l'attribut de localisation identifiée (ville, pays), illustrée par l'exemple personnel de l'auteur basé à Porto, Portugal.
+- Configuration de l'attribut nombre d'années d'expérience, avec incertitude sur la capacité du modèle à effectuer ce calcul automatiquement à tester.
+- Configuration des attributs compétences (skills), résumé LinkedIn (section About), et extraction possible de l'image de profil de la personne.
+- Finalisation de la configuration des attributs d'extraction (expérience professionnelle, langue parlée avec niveau) pour le prompt de l'agent d'analyse RH.
+- Test de l'agent d'extraction avec le modèle Gemini choisi, après épinglage des données pour éviter de refaire tout le processus en amont à chaque test.
+- Résultat concret de l'extraction : poste actuel, entreprise (deux entités identifiées), calcul précis de l'expérience (8 ans 3 mois), localisation et compétences correctement extraites.
+- Confirmation de la facilité d'identification des données, avec plan d'enrichir automatiquement Airtable puis de faire passer ces données à un second agent IA d'évaluation.
+- Configuration d'un outil complémentaire pour l'agent : récupération d'un Google Doc contenant la fiche de poste, une source pouvant aussi être n'importe quelle page web.
+- Description des critères culturels recherchés dans le document de valeurs : discipline rigoureuse, autonomie radicale, et obsession passionnée du candidat.
+- Présentation de la structure des deux documents liés à l'agent : Core Values (valeurs clés de l'agence) et description du profil/avantages recherchés.
+- Démonstration d'extraction du contenu du document Core Values, avec introduction de l'usage d'un second Google Doc complémentaire pour enrichir le contexte de l'agent.
+- Explication de la nécessité d'une relation entre deux tables (candidats et offres d'emploi) pour récupérer correctement la fiche de poste associée à chaque candidature.
+- Configuration de la recherche Airtable (Rtable search) dans la base de formation pour retrouver l'offre d'emploi correspondante en fonction du trigger déclenché.
+- Résolution d'un problème de récupération de ressource en basculant vers un filtrage par ID, avec extraction de la partie pertinente de l'URL via Extract URL Path.
+- Configuration du rôle de l'agent évaluateur : recruteur senior de 15 ans d'expérience, spécialisé en analyse comportementale, chargé de comparer le CV/LinkedIn aux valeurs et à la fiche de poste.
+- Passage structuré des données extraites (position actuelle) vers le prompt d'évaluation, avec effort particulier de structuration pour ne pas surcharger l'agent d'informations brutes.
+- Poursuite de la structuration des données passées à l'agent (années d'expérience vérifiées sur LinkedIn, skills identifiés, hobbies, expériences).
+- Configuration de la conversion du contenu LinkedIn en chaîne de caractères lisible (toDescentString) avant mise en place d'un Structured Output Parser pour formater la réponse.
+- Construction progressive du schéma de sortie structuré : ajout des champs AnalyseValues et AnalysePost au format string pour capturer l'évaluation détaillée.
+- Poursuite de la construction du schéma avec ajout des champs point positif et point négatif, structurant l'évaluation qualitative du candidat.
+- Ajout des champs finaux du schéma de sortie : score total et analyse globale, complétant la structure d'évaluation quantitative et qualitative.
+- Finalisation du schéma avec exemple de valeur de score (85) pour l'analyse globale, complétant la structure de l'output parser.
+- Ajout d'un mécanisme d'autofix avec Gemini pour corriger automatiquement le format en cas d'échec de parsing, avant déclenchement complet de l'agent d'évaluation.
+- Résultat concret de l'évaluation avec scores multiples : score global 90, score valeurs 88, score post (fiche de poste) 69, illustrant une granularité fine de l'analyse.
+- Analyse critique et honnête du résultat par l'auteur lui-même, reconnaissant la pertinence des points négatifs identifiés (maîtrise non démontrée sur LinkedIn) malgré une compétence réelle.
+- Structuration finale des champs de résultat de l'analyse : Job Match Analysis, Values Match Analysis, avec nommage clair pour chaque type d'évaluation retournée.
+- Finalisation de la liste des champs de résultat : données LinkedIn brutes, points forts (Key Strength), doutes potentiels, analyse globale du profil.
+- Ajout optionnel d'un champ éducation pour ceux souhaitant inclure ce critère dans l'évaluation, une modification facultative selon les priorités de chacun.
+- Position personnelle affirmée sur la faible importance accordée aux études dans l'évaluation, cohérente avec la philosophie générale de méritocratie pratique exprimée précédemment.
+- Vérification et nettoyage des champs redondants (suppression de LinkedIn Score non utilisé) pour ne conserver que les champs réellement exploités dans le résultat final.
+- Récapitulatif final des champs mappés (Job Match, Values Match, Key Strength, Potential Concerns) avant mise à jour du statut du candidat en « Profile Analyzed ».
+- Configuration de l'envoi des données vers Airtable en utilisant l'ID du candidat récupéré depuis le trigger, avec rencontre d'une erreur à déboguer.
+- Confirmation de la mise à jour réussie du profil dans Airtable avec toutes les données d'analyse (score, années d'expérience, données LinkedIn brutes).
+- Vision du système complet : tous les candidats remplissent automatiquement cette base enrichie, avec plan de créer des résumés automatisés quotidiens pour le manager en charge du recrutement.
+- Démonstration de configuration de recherche filtrée par formation spécifique, avec possibilité de dupliquer une vue pré-filtrée nommée « Candidats du jour » pour faciliter le suivi quotidien.
+- Recommandation clé face à un grand nombre de candidats : utiliser une boucle (loop over items) pour traiter les candidatures par lots plutôt qu'une seule analyse massive, évitant la surcharge du modèle.
+- Configuration du prompt système pour un agent de synthèse générant un résumé global des candidats, en réutilisant les analyses déjà effectuées précédemment.
+- Démonstration d'agrégation des données en liste simple avec exclusion des champs non pertinents (ID, created time, téléphone, LinkedIn URL) via l'option all fields except.
+- Débogage mineur d'un nom de champ (RawLinkedInData) avant fusion des données agrégées en un seul élément superposé pour le traitement final.
+- Définition de l'objectif du résumé final : inclure nom, prénom, expérience, lien LinkedIn, poste, entreprise, skills, analyse du profil avec scores associés pour chaque candidat.
+- Spécification du format email attendu pour le résumé des candidats du jour, avec exécution du prompt traitant un volume important de données (deux profils complets).
+- Résultat concret du résumé généré : analyse détaillée avec adéquation au poste, points forts/faibles, adéquation aux valeurs, et recommandation finale pour chaque candidat comparé.
+- Conclusion démontrant la puissance du système : identification précise des points forts (maîtrise technique non affichée sur LinkedIn) et formulation automatique d'un email de synthèse professionnel.
+
+## Concepts cles
+- introduction à l'agent de recrutement pour PME sans service RH
+- présentation de la phase de screening (collecte LinkedIn, comparaison offre)
+- justification de l'entretien vidéo avec structure de questions claire
+- concept de comparaison incrémentale des candidats en temps réel
+- objectif : déterminer rapidement le positionnement d'un candidat dans le top 10
+- description de la troisième étape (appel manager) et automatisation complète du tri RH
+- objectif d'automatisation du travail manuel chronophage de recrutement
+- argument économique : gain potentiel d'un demi-salaire RH
+- démonstration de création de tableau structuré via IA avec champs d'information de base
+- configuration d'un scoring qualitatif et introduction de VideoASK pour l'entretien
+- observation du gain de temps significatif via génération automatique de tableau (15 secondes)
+- démonstration de configuration de fiche de poste avec francisation du vocabulaire
+- mention future d'un agent générateur d'offres d'emploi et filtrage par poste
+- renommage de table pour clarté organisationnelle (Candidat)
+- configuration des champs requis du formulaire de candidature (CV, LinkedIn, contact)
+- recommandation incitative de profil LinkedIn complet et case d'autorisation RGPD
+- finalisation et test d'ouverture du formulaire de candidature
+- transition vers N8n pour l'extraction et l'analyse du CV et LinkedIn
+- test pratique de soumission complète du formulaire de candidature
+- démonstration de configuration Airtable (App ID, table, TriggerField)
+- démonstration d'extraction du CV via requête HTTP GET depuis Airtable
+- configuration de HappyFile/Apify pour scraper un profil LinkedIn
+- comparaison de coûts de scraping (5€/1000 résultats vs 25€)
+- configuration technique de sélection d'acteur en mode Fix
+- sélection définitive de l'acteur de scraping et configuration JSON
+- configuration de Wait For Finish et test d'exécution du scraping
+- configuration d'une étape d'attente de 15 secondes avant récupération du dataset
+- confirmation de récupération complète des données LinkedIn structurées
+- utilisation d'un nœud Merge pour fusionner données CV et LinkedIn
+- recommandation de nettoyage des métadonnées inutiles avant fusion
+- objectif de la fusion : analyse conjointe par un agent IA de toutes les sources
+- configuration du prompt d'extraction spécialisé en analyse RH
+- configuration de l'attribut de localisation (ville, pays)
+- configuration de l'attribut années d'expérience (incertitude sur le calcul automatique)
+- configuration des attributs skills, résumé LinkedIn et image de profil
+- finalisation des attributs d'extraction (expérience, langue avec niveau)
+- test de l'agent d'extraction avec Gemini (données épinglées)
+- résultat concret d'extraction précise (8 ans 3 mois d'expérience, compétences)
+- confirmation de facilité d'extraction et plan d'enrichissement Airtable
+- configuration d'un outil de récupération de fiche de poste via Google Doc
+- description des critères culturels recherchés (discipline, autonomie, passion)
+- présentation de la structure des deux documents liés à l'agent (Core Values)
+- démonstration d'extraction du document Core Values et introduction d'un second document
+- explication de la relation entre tables candidats et offres d'emploi
+- configuration de recherche Airtable pour retrouver l'offre correspondante
+- résolution par filtrage ID et extraction de partie d'URL pertinente
+- configuration du rôle d'agent évaluateur (recruteur senior expérimenté)
+- passage structuré des données extraites vers le prompt d'évaluation
+- poursuite de la structuration des données (expérience, skills, hobbies)
+- configuration de conversion en string et Structured Output Parser
+- construction progressive du schéma de sortie (AnalyseValues, AnalysePost)
+- poursuite de la construction du schéma (points positifs/négatifs)
+- ajout des champs finaux (score total, analyse globale)
+- finalisation du schéma avec exemple de score (85)
+- ajout d'un mécanisme d'autofix Gemini pour le format de sortie
+- résultat concret avec scores multiples différenciés (90, 88, 69)
+- analyse critique honnête reconnaissant la pertinence des points négatifs
+- structuration finale des champs de résultat (Job Match, Values Match)
+- finalisation des champs de résultat (Key Strength, données brutes, doutes)
+- ajout optionnel d'un champ éducation dans l'évaluation
+- position personnelle : faible importance accordée aux études (cohérence philosophique)
+- vérification et suppression de champs redondants non utilisés
+- récapitulatif final des champs mappés et mise à jour du statut candidat
+- configuration de l'envoi vers Airtable via ID candidat (erreur rencontrée)
+- confirmation de mise à jour réussie du profil dans Airtable
+- vision du système complet avec résumés automatisés quotidiens pour le manager
+- démonstration de vue pré-filtrée dupliquée pour le suivi quotidien des candidats
+- recommandation d'utiliser une boucle pour traiter les candidatures par lots
+- configuration du prompt système pour la synthèse globale des candidats
+- démonstration d'agrégation avec exclusion de champs non pertinents
+- débogage mineur de nom de champ avant fusion finale des données
+- définition de l'objectif du résumé final structuré multi-critères
+- spécification du format email pour le résumé des candidats du jour
+- résultat concret du résumé comparatif détaillé multi-candidats
+- conclusion démontrant la puissance du système de synthèse automatique
+
+## Outils mentionnes
+- n8n
+- LinkedIn
+- VideoASK
+- Google Doc
+- Airtable
+- HappyFile
+- Apify
+- Gemini
+
+## Tips techniques
+- Structurer un entretien vidéo préalable avec des questions précises plutôt qu'un format libre, pour faciliter l'analyse comparative automatisée
+- Comparer chaque nouveau candidat aux précédents de façon incrémentale plutôt qu'attendre la fin de la période de candidature pour classer
+- Rendre obligatoires tous les champs essentiels d'un formulaire de candidature (CV, LinkedIn, contact) pour garantir des données complètes exploitables
+- Comparer systématiquement les coûts entre plusieurs acteurs de scraping avant de choisir, privilégier la facturation au résultat
+- Prévoir un délai d'attente explicite (ex : 15 secondes) avant de récupérer les résultats d'un scraping asynchrone, pour éviter les données incomplètes
+- Nettoyer les métadonnées superflues via Set Fields avant de fusionner plusieurs sources de données, pour alléger le traitement en aval
+- Structurer soigneusement le passage de données extraites vers un agent évaluateur plutôt que de lui fournir des données brutes non organisées
+- Ajouter un mécanisme d'autofix (modèle de secours) pour corriger automatiquement un format de sortie mal structuré, améliorant la robustesse du pipeline
+- Nettoyer régulièrement les champs configurés mais finalement non utilisés dans un schéma de données, pour garder une structure claire
+- Créer une vue dupliquée pré-filtrée (ex : 'Candidats du jour') dans Airtable pour faciliter le suivi quotidien sans reconfigurer le filtre à chaque fois
+- Utiliser une boucle (loop over items) pour traiter un grand volume de candidatures par petits lots plutôt qu'une analyse massive unique, évitant de surcharger le modèle
+- Utiliser l'option 'all fields except' pour exclure explicitement les champs non pertinents lors de l'agrégation, plutôt que de sélectionner un par un les champs à garder
+
+## Cas d'usage reels
+- [[]]

@@ -1,0 +1,163 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Mises a jour"
+source_transcript: "Integration Notion avec Ticktick (alternative Akiflow).txt"
+---
+
+# Integration Notion avec Ticktick (alternative Akiflow)
+
+## Resume
+- Introduction à une alternative au système Akiflow + Notion, motivée par des retours d'utilisateurs passant trop de temps dans Notion.
+- Objectif de la vidéo : trouver comment réduire le temps passé dans Notion en le gardant comme simple hub de vue d'ensemble.
+- Mise en garde contre la sur-optimisation de Notion, avec idée de faire de TickTick un complément structurant : Notion pour le long terme, TickTick pour l'exécution.
+- Présentation de la landing page de TickTick, un outil accessible pour peu d'argent, avant de détailler ses fonctionnalités.
+- Précision que TickTick convient surtout aux petites équipes ou indépendants, ClickUp devenant plus pertinent à mesure que l'équipe grandit.
+- Confirmation que TickTick est une super alternative pour les petites équipes ou indépendants, grâce à la combinaison de sa puissance avec Notion.
+- Mention du concept d'accountability (responsabilisation face à son travail) et de la note exceptionnelle de TickTick (4.9 sur l'App Store).
+- Présentation du prix (3€/mois) et des fonctionnalités complètes de TickTick : tâches filtrables, calendrier, suivi du temps, gestion d'habitudes, visualisations multiples.
+- Explication du sentiment d'accountability généré par le minimalisme de TickTick, qui évite la sur-optimisation et permet une capture rapide.
+- Annonce de l'ajout récent d'une intégration Notion à TickTick, Notion étant présenté comme l'outil le plus flexible malgré son risque de sur-optimisation.
+- Objectif de la démonstration : utiliser TickTick pour l'exécution du travail et Notion pour la planification, jamais l'inverse.
+- Mention rapide d'alternatives existantes comme Notion Calendar, sans s'y attarder davantage.
+- Affirmation que TickTick reste la meilleure option trouvée pour un usage personnel ou en petite équipe, avec promesse d'une vidéo dédiée plus détaillée à venir.
+- Début de la démonstration pratique de l'intégration : accès aux paramètres TickTick pour ajouter une intégration et partager les bases de données Notion.
+- Précision que l'intégration native TickTick-Notion est mal conçue, avec annonce d'une méthode personnelle pour l'exploiter au mieux et récupérer toutes les données nécessaires.
+- Rappel de la structure Notion (tâches, aria, projets) et identification du problème : TickTick n'a pas de vrai concept de projet avec deadline structurée.
+- Étape pratique de partage des bases de données tâches et projets depuis Notion, donnant à TickTick l'accès à toutes les tâches.
+- Choix de créer très peu de listes plutôt que de multiplier les listes manuelles, pour préparer l'affichage synchronisé des différentes zones (aria).
+- Constat général que de nombreux outils, TickTick inclus, gèrent mal les bases de données relationnelles lors d'intégrations avec Notion.
+- Explication du problème des liens entre deux bases de données distinctes (projet et tâche) lors de la synchronisation, avec accès limité à la base projet.
+- Présentation de la base de données projet construite avec statut, nom, priorité, aria et étiquettes (qui reflètent les aria).
+- Configuration d'un champ résumé automatique de la tâche via une fonction 'fill with key info' générant les points principaux de la page.
+- Sauvegarde des modifications avec option d'auto-datation à chaque édition de page, ainsi que suivi de complétion dépendant des tâches liées.
+- Conseil de supprimer les éléments non nécessaires de la structure, avec démonstration des différentes tâches et étiquettes associées à un projet.
+- Règle de base pour distinguer projet et tâche : une tâche se fait en quelques minutes immédiatement, un projet se compose de plusieurs tâches et prend du temps.
+- Configuration du mapping du statut de tâche : valeur par défaut 'backlog' pour une case décochée dans TickTick, changement d'état une fois terminée.
+- Configuration du mapping de la priorité avec trois valeurs (low, medium, high) correspondant aux équivalents français (bas, moyen, élevé), puis finalisation de la connexion via les étiquettes.
+- Chargement effectif de tous les projets (environ 180 cas) après rafraîchissement, avec mention du risque de duplication à corriger manuellement si besoin.
+- Constat que les tags chargés ne correspondent pas aux tags souhaités, avec proposition de solution simple via des automatisations Notion.
+- Précision que la fonctionnalité d'automatisation Notion (changer l'étiquette selon l'aria) nécessite un abonnement Notion payant.
+- Justification de l'automatisation par étiquette : les aria changent rarement (une fois par an maximum), rendant l'automatisation rentable à long terme.
+- Démonstration de l'automatisation en action : sélection d'une aria (YouTube) ajoutant automatiquement l'étiquette correspondante.
+- Poursuite de la démonstration avec l'aria formation, puis méthode de duplication de l'automatisation pour créer rapidement les règles suivantes.
+- Constat qu'il n'est pas possible de créer une étiquette à la volée, nécessitant de créer d'abord la nouvelle étiquette avant de nettoyer les étiquettes inutiles.
+- Confirmation de la création des automatisations pour chaque tag, reflétant automatiquement chaque aria ajoutée dans Notion vers l'étiquette correspondante.
+- Vérification qu'une étiquette YouTube précédemment créée est correctement retrouvée et connectée dans le système.
+- Rechargement complet des données pour valider visuellement que tous les tags sont désormais parfaitement synchronisés après la configuration en 7 étapes.
+- Constat que seules deux listes basiques (projets, tâches) existent après la synchronisation, insuffisant par rapport à l'objectif de reproduire exactement la structure des deux côtés.
+- Démonstration de création de listes filtrées personnalisées combinant type (projet) et étiquette, ex : filtrer les projets YouTube.
+- Ajout de filtres avancés supplémentaires (ex : priorité élevée) puis sauvegarde de la liste filtrée, désormais liée directement à Notion.
+- Possibilité d'ouvrir directement le projet correspondant dans Notion avec ses tâches, depuis la vue filtrée TickTick, puis transition vers la partie tâche.
+- Configuration d'une automatisation Notion créant automatiquement plusieurs sous-tâches (ex : trois) dès la création d'un nouveau projet.
+- Précision de la configuration des propriétés des sous-tâches créées, avec possibilité d'utiliser des étiquettes spécifiques (ex : YouTube, montage).
+- Suite de la configuration de l'automatisation : nommage de la sous-tâche (ex : enregistrement) et déclenchement en cascade pour créer toutes les sous-tâches liées au projet.
+- Confirmation que les sous-tâches créées dans Notion apparaissent aussi automatiquement dans TickTick, les rendant visibles des deux côtés.
+- Identification d'une limitation : le lien entre tâche et tâche parente n'est pas automatisé dans TickTick, contrairement à Notion.
+- Relativisation de la limitation : l'essentiel est de pouvoir se repérer par catégories plutôt que d'avoir un système parfaitement complet d'emblée.
+- Conclusion que cette méthode reste une bonne alternative pour un horizon de planification pas trop long terme, tout en gardant Notion pour la planification globale.
+- Démonstration de filtres combinés (tag YouTube présent mais absent des projets) pour distinguer facilement tâches et projets d'une même zone.
+- Mention de fonctionnalités complémentaires : accès direct au script depuis la tâche, et suivi du temps (time tracking) pour rester concentré.
+- Précision personnelle que le time tracking a été peu utilisé récemment (325 heures cumulées au total) en raison d'une structure personnelle plus lourde.
+- Explication de la synchronisation bidirectionnelle (two-way sync) : toute modification faite dans TickTick se reflète automatiquement dans Notion.
+- Démonstration de la mise à jour automatique après modification, puis récupération de la tâche directement sur le calendrier TickTick avec filtres personnalisés.
+- Présentation de la coloration des tâches par tag et de l'option d'afficher plus de détails en cochant une case, pour une vue plus lisible.
+- Conclusion de la démonstration avec proposition de créer du contenu supplémentaire sur TickTick selon l'intérêt des spectateurs.
+- Annonce d'une seconde alternative plus manuelle, produisant globalement le même résultat mais avec moins d'intégration.
+- Explication des limites de cette alternative manuelle : impossible de voir l'étape ou le propriétaire directement dans Notion depuis TickTick, car native à TickTick.
+- Identification du problème majeur de cette alternative : la synchronisation ne fonctionne que dans un seul sens, empêchant la réception de données.
+- Recommandation de garder l'intégration simple pour la plupart des utilisateurs, avec promesse d'une vidéo future pour une version customisée plus avancée.
+- Rappel du principe clé de garder tâches et projets bien séparés, avec mention d'un petit défaut de TickTick sur l'interprétation du mot 'mon'.
+- Astuce pour contourner un bug de reconnaissance du langage naturel en français (le mot 'mon' interprété comme 'lundi') : utiliser le français cohérent ou l'anglais selon la langue de l'outil.
+- Démonstration de recherche de toutes les tâches liées à un projet (ex : second cerveau IA) via une recherche par nom de liste ou de projet.
+- Test de recherche avec un nom de projet différent (my second cerveau avec l'IA) montrant que la reconnaissance nécessite d'être moins restrictive pour bien fonctionner.
+- Conclusion de la vidéo confirmant TickTick comme outil puissant, bonne alternative au module précédent basé sur Akiflow.
+
+## Concepts cles
+- introduction à une alternative Akiflow+Notion (retours d'utilisateurs)
+- objectif : réduire le temps dans Notion en le gardant comme hub de vue d'ensemble
+- idée : TickTick en complément de Notion (long terme vs exécution)
+- présentation de la landing page de TickTick (outil accessible)
+- précision : TickTick adapté aux petites équipes, ClickUp au-delà
+- confirmation : TickTick super alternative pour petites équipes/indépendants
+- mention du concept d'accountability et de la note 4.9 de TickTick
+- présentation du prix (3€/mois) et des fonctionnalités complètes de TickTick
+- explication du sentiment d'accountability généré par le minimalisme de TickTick
+- annonce de l'intégration récente Notion-TickTick
+- objectif : TickTick pour exécuter, Notion pour planifier, jamais l'inverse
+- mention rapide d'alternatives comme Notion Calendar
+- affirmation : TickTick meilleure option pour usage perso/petite équipe
+- début de la démonstration pratique de l'intégration (paramètres TickTick)
+- précision : intégration native mal conçue, méthode personnelle pour l'optimiser
+- problème identifié : TickTick n'a pas de vrai concept de projet structuré
+- étape pratique de partage des bases tâches et projets depuis Notion
+- choix de créer très peu de listes pour l'affichage synchronisé des zones
+- constat général : mauvaise gestion des bases de données relationnelles par les outils tiers
+- explication du problème des liens entre bases projet et tâche à la synchronisation
+- présentation de la base de données projet (statut, priorité, aria, étiquettes)
+- configuration d'un champ résumé automatique via fill with key info
+- sauvegarde avec auto-datation et suivi de complétion dépendant des tâches liées
+- conseil de supprimer les éléments non nécessaires de la structure
+- règle de base pour distinguer projet (composé de tâches) et tâche (immédiate)
+- configuration du mapping du statut de tâche (backlog par défaut)
+- configuration du mapping de la priorité (low/medium/high) et finalisation via étiquettes
+- chargement des projets (environ 180 cas) avec risque de duplication
+- constat de tags incorrects et proposition de solution via automatisations Notion
+- précision : les automatisations Notion nécessitent un abonnement payant
+- justification de l'automatisation par étiquette (aria changent rarement)
+- démonstration de l'automatisation en action (aria YouTube vers étiquette)
+- méthode de duplication de l'automatisation pour créer rapidement les règles suivantes
+- constat : impossibilité de créer une étiquette à la volée
+- confirmation de la création des automatisations pour chaque tag (aria vers étiquette)
+- vérification de la connexion correcte d'une étiquette YouTube existante
+- validation visuelle finale de la synchronisation des tags (7 étapes)
+- constat : deux listes basiques insuffisantes, besoin de reproduire la structure exacte
+- démonstration de création de listes filtrées par type et étiquette (projets YouTube)
+- ajout de filtres avancés supplémentaires et sauvegarde liée à Notion
+- ouverture directe du projet Notion depuis la vue filtrée TickTick
+- configuration d'une automatisation créant automatiquement des sous-tâches à la création d'un projet
+- configuration des propriétés des sous-tâches avec étiquettes spécifiques
+- nommage des sous-tâches et déclenchement en cascade de l'automatisation
+- confirmation : les sous-tâches Notion apparaissent automatiquement dans TickTick
+- identification d'une limitation : lien tâche-tâche parente non automatisé dans TickTick
+- relativisation : l'essentiel est de se repérer par catégories, pas la perfection
+- conclusion : bonne alternative pour un horizon pas trop long terme
+- démonstration de filtres combinés pour distinguer tâches et projets d'une zone
+- mention du time tracking pour rester concentré sur la tâche en cours
+- précision : time tracking peu utilisé récemment (325h cumulées)
+- explication de la synchronisation bidirectionnelle (two-way sync)
+- démonstration de la mise à jour automatique et récupération sur le calendrier
+- présentation de la coloration des tâches par tag et l'affichage détaillé
+- conclusion de la démonstration avec proposition de contenu supplémentaire sur demande
+- annonce d'une seconde alternative plus manuelle mais moins intégrée
+- explication des limites de l'alternative manuelle (pas de vue Notion depuis TickTick)
+- identification du problème majeur : synchronisation à sens unique
+- recommandation de garder l'intégration simple (vidéo future pour version avancée)
+- rappel du principe de séparation tâches/projets et défaut d'interprétation de TickTick
+- astuce pour contourner un bug de reconnaissance du langage naturel français dans TickTick
+- démonstration de recherche des tâches liées à un projet par son nom
+- test de recherche montrant les limites de reconnaissance stricte du nom de projet
+- conclusion : TickTick comme alternative puissante à Akiflow
+
+## Outils mentionnes
+- Akiflow
+- Notion
+- TickTick
+- ClickUp
+- Notion Calendar
+
+## Tips techniques
+- Réserver Notion à la structuration long terme et TickTick à l'exécution quotidienne, pour éviter la sur-optimisation chronophage de Notion
+- Toujours utiliser TickTick pour exécuter le travail et réserver Notion à la planification, jamais l'inverse, pour éviter la dispersion cognitive
+- Utiliser une fonction de résumé automatique (fill with key info) pour générer les points principaux d'une page, plutôt que de les rédiger manuellement
+- Supprimer systématiquement tout champ ou élément de structure non utilisé, pour garder le système allégé et compréhensible
+- Appliquer la règle simple : une tâche se fait immédiatement en quelques minutes, un projet se compose de plusieurs tâches et prend du temps, pour structurer sa base de données
+- Automatiser le mapping entre aria et étiquettes malgré la rareté des changements, car cette configuration ponctuelle évite un travail manuel répété
+- Dupliquer une automatisation existante et modifier seulement les valeurs changeantes, plutôt que de recréer chaque règle depuis zéro
+- Combiner plusieurs critères de filtre (type, étiquette) pour créer des listes personnalisées ciblées, plutôt que de naviguer dans l'ensemble des tâches
+- Automatiser la création de sous-tâches standard dès la création d'un projet dans Notion, pour éviter de les recréer manuellement à chaque fois
+- Garder l'intégration simple par défaut pour la majorité des cas d'usage, réservant la personnalisation avancée à ceux prêts à approfondir techniquement
+- Éviter d'utiliser le mot 'mon' en début de titre en français dans TickTick, l'outil l'interprétant à tort comme 'lundi' (bug de NLP)
+
+## Cas d'usage reels
+- [[]]

@@ -1,0 +1,205 @@
+---
+tags: [formation, millenium]
+module: Formation Vente
+section: "Prospection 101"
+source_transcript: "Masterclass  La méthode Pipeline avec Louis Deslus.txt"
+---
+
+# Masterclass : La méthode Pipeline avec Louis Deslus
+
+## Resume
+- Introduction de la masterclass sur la méthode Pipeline de Louis Deslus, promettant des dizaines de rendez-vous qualifiés par mois via la prospection automatisée B2B.
+- Description du problème cible : directeurs marketing/commerciaux ou dirigeants souffrant d'une acquisition imprévisible en yo-yo, dépendante du bouche-à-oreille.
+- Présentation de la crédibilité de l'intervenant : sélectionné par Eric Larchevêque comme speaker sur la prospection, présent dans des médias (Les Echos, BSmart).
+- Affirmation que la méthode fonctionne dans tous les secteurs (industrie, collectivités, logiciels, services, freelances, grandes entreprises).
+- Mise en garde contre les outils de prospection tout-en-un utilisant des bases de données généralistes, jugés peu fiables comparés à une suite d'outils dédiés.
+- Principe fondamental que la prospection sert à tester et itérer, pas à prédire l'avenir ; critique des agences promettant des résultats garantis.
+- Critère de rentabilité : au moins 2000€ de marge par client nécessaire pour justifier l'investissement en prospection, sinon chercher d'autres canaux.
+- Mise en garde que la méthode n'est pas magique et exige volonté d'apprendre, de tester les messages et d'itérer, pas un simple bouton automatique.
+- Principe clé : la prospection sert à créer des conversations, pas à vendre directement ; nécessité d'itérer la stratégie toutes les deux semaines.
+- Critique des campagnes multi-étapes trop longues (15000 étapes sur trois mois) rendant impossible d'identifier ce qui fonctionne réellement.
+- Recommandation de commencer par l'email avec des campagnes lancées tous les deux mois, pour atterrir en boîte principale si bien paramétré.
+- Justification de la durée de deux mois par campagne : nécessaire pour obtenir un échantillon représentatif avant de juger cible et message.
+- Introduction du concept multi-omnicanal étape par étape, avec conseil fondamental de 'passer la douane' (Gmail, Outlook, LinkedIn) sans se faire bannir ou finir en spam.
+- Rappel des deux principes clés de la méthode Pipeline : passer la douane des messageries et paraître humain même en automatisant.
+- Exemple chiffré de délivrabilité dégradée : sur 1000 emails envoyés, 600 tombent en spam et perdent 30 réponses potentielles à un taux de réponse de 5%.
+- Extrapolation du calcul à 5000 emails/mois : perte estimée à 1,2 million par an, avec question sur la difficulté croissante de la délivrabilité.
+- Transition vers l'explication de l'infrastructure, élément clé permettant de prospecter sans se faire bannir sur LinkedIn ou tomber en spam.
+- Calcul du besoin en infrastructure à partir d'un objectif concret : 5 ventes/mois avec 30% de closing nécessite 17 rendez-vous par mois.
+- Recommandation d'une marge de sécurité (buffer) de 25% sur le nombre d'adresses mail, avec 3 à 5 adresses par domaine pour diversifier et éviter le repérage.
+- Recommandation de Google Workspace ou Microsoft 365 en IP partagée dans 99,9% des cas, l'IP dédiée en SMTP étant réservée aux experts en raison des risques élevés.
+- Recommandation d'un mix Gmail/Outlook, avec nécessité d'étudier la cible pour déterminer la bonne répartition entre les deux types d'adresses.
+- Présentation de deux approches pour créer l'infrastructure : configuration manuelle (DNS, connexion domaines) prenant 2-3 jours, ou outil dédié automatisant l'achat de domaines et adresses.
+- Présentation de MailPool comme solution recommandée pour acheter domaines et adresses mail jusqu'à deux fois moins cher que G Suite (environ 7€ par adresse).
+- Synthèse sur l'infrastructure : calculer sa taille et son buffer, puis déléguer le paramétrage technique à un outil comme MailPool, avant transition vers le warm-up.
+- Explication du besoin de warm-up (2-3 semaines) : un envoi massif immédiat sans historique alarme les ESP (Gmail, Outlook) et paraît non-humain.
+- Distinction entre outils d'envoi intégrant le warm-up et outils dédiés seed-based (Folderly, Warmbox) plutôt réservés à la récupération de réputation après erreurs.
+- Recommandation de l'outil Lemwarm/Waalaxy (Plus Vibes) utilisé en interne, avec règle d'or du ramp-up : semaine 1 à 3-10 mails de warm-up et 0 mail de prospection.
+- Progression du ramp-up aux semaines 5-7 : infrastructure chaude permettant 10-15 emails de warm-up et 20 emails de prospection par jour, avec variation quotidienne.
+- Précision du volume total quotidien final (30-35 emails, dont 10-15 warm-up et 20 prospection), avec conseil de varier le montant total pour rester naturel mais constant.
+- Explication de l'intérêt du warm-up pour contrebalancer le faible taux de réponse en prospection (environ 10%), le warm-up générant un taux de réponse artificiellement élevé.
+- Recommandation de consulter une vidéo YouTube dédiée à l'optimisation de profil LinkedIn (avec un directeur d'agence comme cobaye), assimilée à passer la douane LinkedIn.
+- Chiffres théoriques de la douane LinkedIn : 10-60 messages max par jour et 5-40 ajouts max par jour, en augmentant progressivement du minimum, jamais du maximum.
+- Mise en garde sur le risque de salir l'image de marque personnelle d'un commercial via un copywriting trop poussé, et respect de son refus éventuel d'un message imposé.
+- Recommandation du service Fred de Miro Profile (avec accès prioritaire via recommandation), puis transition vers l'étape 2 : ciblage et qualité de la data.
+- Introduction du ciblage chirurgical nécessaire une fois la délivrabilité assurée, critique du ciblage classique par secteur/géographie/poste/taille jugé trop générique.
+- Explication du problème des datasets obsolètes chez les fournisseurs de data, coûteux à mettre à jour, menant à prospecter des personnes ayant quitté leur poste.
+- Présentation de signaux de ciblage avancés : recrutements en cours, scraping d'événements/webinars LinkedIn, détection de changements de poste récents via Pronto HQ.
+- Transition vers la data quality : recommandation d'utiliser une cascade de fournisseurs d'enrichissement email pour maximiser les chances de trouver une adresse valide.
+- Explication du seuil de bounce rate acceptable : rester sous 2% d'emails invalides pour ne pas se faire repérer par les ESP.
+- Détail des seuils d'alerte de bounce rate : 2-3% nécessite une investigation, 3-5% impose une mise en pause immédiate de la campagne pour éviter le danger.
+- Explication des emails catch-all (vérification impossible à 100%), à prospecter uniquement si le marché adressable est très restreint (ex : 200 entreprises).
+- Introduction de l'étape 3, le message : problème principal identifié, 80% des messages reçus sont perçus comme de la vente déguisée.
+- Critique des messages centrés sur soi plutôt que sur le problème du prospect, ne créant pas de discussion et cherchant à vendre directement.
+- Méthode du travail de projection : lire son message à voix haute et se demander si on l'assumerait dans une interaction en face à face.
+- Règles de rédaction des messages : viser environ 100 mots maximum, éviter les grands pavés, diviser en messages courts notamment sur LinkedIn.
+- Technique du signal comme accroche (mention d'une connexion commune ou d'une association suivie) pour créer de la curiosité via le FOMO (fear of missing out).
+- Technique du premier mail sans lien direct : proposer un déjeuner, une visite ou une invitation à un événement, en demandant s'il souhaite le lien plutôt que de l'envoyer directement.
+- Règles de style des messages : courts, sans signature, avec variation des formats sur email incluant un premier message et une relance dans le même thread.
+- Conseil d'éviter la note personnalisée sur LinkedIn (meilleur taux d'acceptation sans note), et d'espacer les relances de 6-15 jours, voire 30-60 jours pour un nouvel email.
+- Techniques pour susciter la curiosité dans l'objet du mail : mentionner le nom d'un collègue ou citer deux concurrents directement dans l'objet.
+- Confirmation que ces techniques d'objet s'automatisent facilement pour susciter la curiosité et le clic, transition vers la question de l'évitement du spam.
+- Présentation des trois filtres des ESP (Gmail, Outlook) : le poids du mail (léger, moins coûteux pour eux), la sécurité, et l'apparence humaine.
+- Explication du risque des liens : un même lien répété dans des emails envoyés depuis différentes adresses crée un pattern détectable par Gmail/Outlook, compromettant toute l'infrastructure.
+- Recommandation d'utiliser des listes de spamming words disponibles en ligne et le spintask (variation du contenu), avec renvoi vers une vidéo YouTube dédiée détaillée.
+- Exemple concret de phrase illégale à éviter (annonce de relance dans 15 jours avec option de retrait), une alternative au lien de désinscription jugé nuisible.
+- Validation de la méthode par le volume de tests réalisés : 30000 tests de délivrabilité par mois chez Rabbit2B, plus de 300000 chez des partenaires internationaux.
+- Recommandation de bannir le HTML dans les campagnes : lourd, risqué (potentiel vecteur de virus), et facilement reconnaissable comme template non-humain.
+- Mise en garde contre l'obsession des métriques de vanité (80% ouverture, 50% clic), rappel qu'un lien dans le message empêche justement tout tracking de clic fiable.
+- Révélation que 79% des ouvertures de mail proviennent de robots ESP et outils de protection, rendant le taux d'ouverture peu fiable ; le taux de réponse est la vraie métrique à suivre.
+- Explication du danger du tracking d'ouverture selon les règles Outlook : le code de tracking dans le mail peut directement déclencher un classement en spam.
+- Précision que la majorité des chiffres et cadences sont gérés automatiquement par l'outil, sauf le quota d'envoi et le warm-up nécessitant un paramétrage manuel initial.
+- Liste des métriques business à suivre : nombre de réponses, réponses positives, rendez-vous fixés/qualifiés, deals ouverts et clos, taux de closing, panier moyen.
+- Distinction entre lead chaud (réponse intéressée sans engagement ferme, ex : personne à recontacter plus tard) et rendez-vous fixé réellement dans l'agenda.
+- Technique de gestion des objections : toujours creuser pour obtenir l'objection réelle avant de la contrer, et enrichir le contact par téléphone via des outils comme Full Enrich en cas de silence (ghosting).
+- Méthode de contrôle de la délivrabilité : surveiller les variations fortes du taux de réponse sur 7 jours glissants et écarter d'abord les faux positifs (nouveau ciblage).
+- Plan d'action en cas d'alerte de délivrabilité : vérifier les erreurs de message, réduire le volume et augmenter le warm-up pour laisser le temps à la réputation de remonter.
+- Conclusion de la masterclass : en cas de dégradation irréversible, abandonner le domaine et recréer, d'où l'importance du buffer d'adresses de secours conservées au repos.
+
+## Concepts cles
+- introduction de la méthode Pipeline (prospection automatisée B2B)
+- description du problème cible : acquisition imprévisible dépendante du bouche-à-oreille
+- présentation de la crédibilité de l'intervenant (sélection Eric Larchevêque, médias)
+- affirmation d'universalité sectorielle de la méthode
+- mise en garde contre les outils tout-en-un aux bases de données généralistes
+- principe fondamental : la prospection sert à tester et itérer, pas à prédire
+- critère de rentabilité : minimum 2000€ de marge par client
+- mise en garde : la méthode exige volonté d'itération, pas un bouton magique
+- principe clé : la prospection crée des conversations, itération toutes les deux semaines
+- critique des campagnes multi-étapes trop longues (impossible d'isoler ce qui marche)
+- recommandation de commencer par l'email avec campagnes bimestrielles
+- justification de la durée de deux mois pour un échantillon représentatif
+- conseil fondamental de passer la douane (Gmail, Outlook, LinkedIn) sans bannissement
+- rappel des deux principes clés : passer la douane et paraître humain
+- exemple chiffré de perte de réponses due à une mauvaise délivrabilité
+- extrapolation chiffrée : perte de 1,2 million par an à grande échelle
+- transition vers l'explication de l'infrastructure de prospection
+- calcul du besoin en infrastructure à partir d'un objectif de ventes
+- recommandation d'un buffer de 25% et de 3 à 5 adresses mail par domaine
+- recommandation de Google Workspace/Microsoft 365 en IP partagée (IP dédiée réservée aux experts)
+- recommandation d'un mix Gmail/Outlook selon l'étude de la cible
+- présentation des deux approches de création d'infrastructure (manuelle vs outil dédié)
+- présentation de MailPool (achat domaines/adresses moins cher que G Suite)
+- synthèse : calculer infrastructure et buffer, déléguer le paramétrage
+- explication du besoin de warm-up de 2-3 semaines (alerte des ESP)
+- distinction outils d'envoi intégrés vs outils seed-based dédiés à la récupération
+- règle d'or du ramp-up progressif : semaine 1 = 3-10 warm-up, 0 prospection
+- progression du ramp-up semaines 5-7 : 10-15 warm-up + 20 prospection/jour
+- précision du volume quotidien final (30-35 emails combinés) et variation naturelle
+- explication : le warm-up contrebalance le faible taux de réponse en prospection (10%)
+- recommandation d'une vidéo dédiée à l'optimisation du profil LinkedIn (douane LinkedIn)
+- chiffres de la douane LinkedIn (10-60 messages, 5-40 ajouts par jour, progressif)
+- mise en garde sur le risque d'image de marque lié au copywriting trop poussé
+- transition vers l'étape 2 : ciblage et qualité de la data
+- critique du ciblage classique généraliste, nécessité d'un ciblage chirurgical
+- explication du problème des datasets obsolètes (personnes ayant quitté leur poste)
+- présentation de signaux avancés de ciblage (recrutements, scraping, changements de poste)
+- recommandation d'une cascade de fournisseurs d'enrichissement email
+- seuil de bounce rate acceptable : rester sous 2% d'emails invalides
+- détail des seuils d'alerte de bounce rate (2-3% investiguer, 3-5% pause)
+- explication des emails catch-all, à utiliser seulement sur marché très restreint
+- introduction de l'étape 3 (le message) : 80% perçus comme vente déguisée
+- critique des messages centrés sur soi plutôt que sur le problème du prospect
+- méthode du travail de projection : lire son message à voix haute (test du face à face)
+- règles de rédaction : environ 100 mots max, messages courts sur LinkedIn
+- technique du signal comme accroche créant la curiosité (FOMO)
+- technique du premier mail sans lien direct (proposition d'événement, demande d'intérêt)
+- règles de style : messages courts sans signature, relance dans le même thread
+- conseil d'espacement des relances (6-15 jours LinkedIn, 30-60 jours email) sans note LinkedIn
+- techniques d'objet de mail suscitant la curiosité (nom de collègue, concurrents cités)
+- confirmation : les techniques d'objet s'automatisent facilement, transition vers l'anti-spam
+- présentation des trois filtres des ESP : poids, sécurité, apparence humaine
+- explication du risque de pattern détectable via un lien répété sur toute l'infrastructure
+- recommandation des spamming words et du spintask (variation de contenu)
+- exemple de phrase alternative au lien de désinscription (jugée illégale mais efficace)
+- validation par le volume de tests de délivrabilité (30000/mois chez Rabbit2B)
+- recommandation de bannir le HTML dans les campagnes (lourd, risqué, non-humain)
+- mise en garde contre les métriques de vanité (taux d'ouverture et de clic trompeurs)
+- révélation : 79% des ouvertures proviennent de robots, taux de réponse = vraie métrique
+- danger du tracking d'ouverture selon les règles Outlook (déclenche le spam)
+- précision : cadences gérées automatiquement sauf quota d'envoi et warm-up
+- liste des métriques business à suivre (réponses, rendez-vous, deals, closing)
+- distinction entre lead chaud (réponse intéressée) et rendez-vous fixé dans l'agenda
+- technique de gestion des objections et enrichissement téléphonique en cas de ghosting
+- méthode de contrôle de la délivrabilité via le suivi du taux de réponse sur 7 jours
+- plan d'action en cas d'alerte de délivrabilité (réduire volume, augmenter warm-up)
+- conclusion : abandonner un domaine dégradé et recréer, importance du buffer de secours
+
+## Outils mentionnes
+- Gmail
+- Outlook
+- LinkedIn
+- Google Workspace
+- Microsoft 365
+- MailPool
+- G Suite
+- Folderly
+- Warmbox
+- YouTube
+- Mantix
+- Pronto HQ
+- Full Enrich
+
+## Tips techniques
+- Privilégier une suite d'outils spécialisés plutôt qu'un outil tout-en-un généraliste basé sur des bases de contacts peu fiables
+- Itérer sa stratégie de prospection toutes les deux semaines plutôt que de s'entêter sur une même approche pendant plusieurs semaines
+- Lancer les campagnes de prospection par email tous les deux mois plutôt qu'en continu, pour permettre une évaluation fiable des résultats
+- Simuler systématiquement une action humaine sur mesure, même lors de l'automatisation, pour éviter la détection par les filtres anti-spam
+- Partir d'un objectif chiffré de ventes et d'un taux de closing pour calculer précisément le nombre de rendez-vous et d'adresses mail nécessaires
+- Prévoir systématiquement un buffer de 25% sur le nombre d'adresses mail calculé, et limiter à 3-5 adresses par domaine pour éviter le repérage par Gmail/Outlook
+- Utiliser Google Workspace ou Microsoft 365 en IP partagée par défaut, réserver l'IP dédiée en SMTP aux experts en raison du warm-up long et du risque élevé
+- Étudier le profil de sa cible pour déterminer la répartition optimale entre adresses Gmail (G Suite) et Outlook (Microsoft Office)
+- Utiliser un outil dédié à l'achat automatisé de domaines et adresses mail plutôt que la configuration manuelle des DNS, pour gagner plusieurs jours de travail
+- Utiliser MailPool pour acheter domaines et adresses mail à moindre coût plutôt que directement via G Suite ou Google Workspace
+- Toujours effectuer un warm-up de 2 à 3 semaines sur une nouvelle adresse mail avant tout envoi de prospection massif, pour ne pas alerter les ESP
+- Suivre un ramp-up strict : commencer par 3 à 10 mails de warm-up en semaine 1 sans aucun mail de prospection, puis augmenter progressivement
+- Faire varier légèrement le nombre d'emails envoyés chaque jour une fois l'infrastructure chaude, pour ne pas paraître robotique
+- Toujours faire varier le volume total d'envoi quotidien tout en restant globalement constant sur la durée, pour paraître naturel
+- Toujours commencer par le volume minimum sur LinkedIn (messages et ajouts) et augmenter progressivement, jamais démarrer au maximum autorisé
+- Aller au-delà du ciblage classique (secteur, géographie, poste, taille) utilisé par tout le monde, pour un ciblage chirurgical différenciant
+- Cibler les signaux faibles (recrutements en cours, changements de poste récents, participation à des webinars) plutôt que les critères démographiques classiques
+- Utiliser une cascade de plusieurs fournisseurs d'enrichissement email successifs, pour maximiser le taux de découverte d'adresses valides
+- Maintenir un taux de bounce (emails invalides) en dessous de 2% pour éviter d'être repéré par les filtres anti-spam des ESP
+- Investiguer la cause d'un bounce rate entre 2 et 3%, et mettre en pause immédiatement une campagne dépassant 3 à 5% de bounce
+- Ne prospecter les adresses catch-all non vérifiables que si le marché adressable total est très restreint (quelques centaines d'entreprises maximum)
+- Toujours centrer le message de prospection sur le problème du prospect plutôt que sur soi-même, pour engager une discussion plutôt que de vendre directement
+- Lire systématiquement son message de prospection à voix haute et se demander si on l'assumerait en face à face, pour éviter les messages malaisants
+- Limiter chaque message de prospection à environ 100 mots maximum, en évitant les grands pavés de texte, particulièrement sur LinkedIn
+- Utiliser un signal contextuel précis (connexion commune, association suivie) en accroche du message pour créer de la curiosité via le FOMO
+- Ne jamais envoyer de lien dans le premier mail : demander plutôt si le prospect souhaite recevoir le lien, pour engager la discussion avant de convertir
+- Ne pas signer les messages de prospection courts, et regrouper la relance dans le même thread email plutôt qu'un nouveau message séparé
+- Éviter la note personnalisée lors d'une demande de connexion LinkedIn, et espacer les relances de 6 à 15 jours (LinkedIn) ou 30 à 60 jours (nouvel email)
+- Mentionner un nom de collègue ou citer des concurrents directement dans l'objet du mail pour susciter la curiosité et augmenter le taux d'ouverture
+- Éviter de réutiliser le même lien dans les emails de prospection envoyés depuis plusieurs adresses, ce pattern de reconnaissance pouvant compromettre toute l'infrastructure
+- Utiliser le spintask pour faire varier automatiquement le contenu des messages envoyés, en évitant les mots identifiés comme spamming words
+- Ne jamais utiliser de HTML dans les emails de prospection, ce format étant lourd, risqué et immédiatement reconnaissable comme non-humain par les ESP
+- Ignorer le taux d'ouverture (majoritairement généré par des robots) et se concentrer sur le taux de réponse comme métrique fiable de performance
+- Désactiver tout tracking d'ouverture ou de clic dans les campagnes email, Outlook classant explicitement en spam les mails contenant du code de tracking
+- Suivre les métriques business réelles (réponses positives, rendez-vous qualifiés, taux de closing) plutôt que les métriques de vanité (ouverture, clic)
+- Toujours chercher à faire émerger l'objection réelle du prospect avant de tenter de la contrer, plutôt que de relancer sans savoir pourquoi il ne répond pas
+- Surveiller les variations du taux de réponse sur une fenêtre de 7 jours glissants pour détecter précocement un problème de délivrabilité, après avoir écarté les faux positifs
+- En cas d'alerte de délivrabilité, réduire immédiatement le volume d'envoi et augmenter le warm-up pour laisser le temps à la réputation de récupérer
+- Conserver un buffer d'adresses mail de secours inutilisées, permettant d'abandonner rapidement un domaine dégradé irrécupérable sans interrompre la prospection
+
+## Cas d'usage reels
+- [[]]

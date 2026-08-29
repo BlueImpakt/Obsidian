@@ -1,0 +1,200 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Les Fondamentaux IA"
+source_transcript: "0.16 Comment choisir le LLM parfait.txt"
+---
+
+# 0.16 Comment choisir le LLM parfait ?
+
+## Resume
+- Introduction à la question du choix du LLM : plutôt que de désigner LE meilleur LLM (jugement qui deviendrait vite obsolète), l'objectif est de transmettre les outils et critères pour choisir soi-même. Distinction fondamentale à faire entre deux évaluations séparées : quel est le meilleur produit (fonctionnalités, intégration, plaisir d'usage) versus quel est le meilleur LLM en tant que tel (le modèle brut).
+- Annonce du plan de la partie : passer en revue les principaux LLM du marché, puis fournir des grilles d'évaluation réutilisables dans la durée pour juger de leur pertinence. Premier modèle abordé : ChatGPT.
+- ChatGPT a pour force principale son écosystème, construit grâce à son antériorité sur le marché et à l'effet de communauté ('notion effect') qui renforce sa réputation. GPT-5 est présenté comme potentiellement le meilleur LLM sur le papier mais pas la meilleure intégration produit, car lent et moins fluide que d'autres. ChatGPT innove beaucoup en termes de produit (connecteurs Canva, mode Study and Learn, Deep Research) et de LLM sous-jacent.
+- ChatGPT n'est pas le meilleur choix pour l'automatisation et les agents. Gemini est introduit comme 'bon partout mais n'excellant nulle part', notamment pas dans l'écriture, la création et le code, tâches pour lesquelles l'intervenant utilise Claude. Conseil : tester plusieurs abonnements LLM ou utiliser l'API pour ne payer qu'à l'usage. GPT-5 domine les benchmarks mais ne satisfait pas le plus en usage réel.
+- Gemini se distingue par des capacités très fortes en Deep Research (grâce à l'appui du moteur de recherche Google et de YouTube), en génération vidéo et en édition d'image (conservation fidèle de la photo en ne modifiant que l'arrière-plan). En créativité graphique pure (prompt to image), GPT Image est jugé supérieur. Gemini bénéficie aussi d'une très large fenêtre contextuelle pour traiter beaucoup de données.
+- Bilan mitigé sur Gemini : bon écosystème Google mais parfois manque de créativité ou décevant sur certains points. Claude (Anthropic) est présenté comme le modèle préféré et le plus utilisé au quotidien par l'intervenant, au point d'atteindre régulièrement les limites du plan Pro sans vouloir passer au plan Max à 100$. Claude Sonnet 4 est le modèle utilisé en priorité pour ne pas épuiser trop vite le quota. Claude est jugé comme ayant la meilleure intégration d'outils, car à l'origine du MCP.
+- Claude est loué pour son mode Deep Research exceptionnel, sa recherche web fiable, son mode Thinking et ses capacités de code, offrant les résultats les plus satisfaisants même s'il n'est pas premier sur les benchmarks d'AGI. Limite importante soulevée : en usage API (côté serveur, paiement à l'usage) avec un fort volume d'utilisateurs, Claude peut devenir cher, contrairement à l'usage client classique par abonnement.
+- Claude excelle dans la compréhension des processus agentiques et des connexions API/outils, mais coûte cher à volume de données important en usage API. Recommandation forte : privilégier un abonnement Claude plutôt que ChatGPT pour un usage de builder/professionnel, ChatGPT étant plus adapté au grand public. Avec Claude et Gemini (via Google Business), ChatGPT peut devenir superflu ; l'intervenant le garde pour son activité de créateur de contenu suivant l'actualité IA.
+- L'intervenant anticipe que le classement relatif des acteurs devrait rester stable dans les prochains mois, faute de 'breakthrough' technologique majeur, à l'exception possible de Google (masse financière) et xAI/Grok (investissements agressifs d'Elon Musk). La spécialité de Grok est sa connexion à l'écosystème X, utile pour suivre les tendances en temps réel grâce à une modélisation qui catégorise et fiabilise les tweets.
+- Grok est jugé surévalué aujourd'hui, misant sur des effets d'annonce et des benchmarks plutôt qu'une utilité pratique quotidienne réelle. Mistral est présenté comme ayant de bonnes idées mais une stratégie de suiveur plutôt que de leader, faute de moyens financiers suffisants face au coût de la puissance de calcul nécessaire ; il reprend souvent des fonctionnalités déjà lancées par Claude ou ChatGPT (Deep Research, Think, MCP) avec du retard. L'intervenant dit utiliser Mistral quasiment jamais.
+- Confirmation que Claude reste le cas d'usage préféré de l'intervenant, tout en invitant chacun à faire ses propres tests. Transition vers une deuxième partie consacrée aux leaderboards, outils permettant de suivre l'évolution des performances des modèles dans le temps ; il est conseillé de recouper plusieurs leaderboards car chacun a une méthodologie et des conclusions différentes.
+- Présentation des principales plateformes de leaderboards et places de marché de modèles : Scale.ai, LMArena, OpenRouter, Hugging Face (marketplace de modèles avec classement par popularité/likes), et des providers d'infrastructure spécialisés comme Ollama, Fal AI et Cohere. Sur Scale.ai, deux typologies existent : le Showdown et le Frontier Leaderboard, ce dernier reposant sur des benchmarks/challenges variés (vision : Gemini en tête ; énigmes : O3 d'avril 2025 en tête).
+- Tour d'horizon de plusieurs benchmarks spécialisés de Scale.ai avec leurs leaders respectifs à la date d'enregistrement : TutorBench (apprentissage niveau lycée, Gemini en tête), MultiChallenge (O3 Pro, juin 2025), Frontier Risk Evaluation for National Security (GPT-OSS, modèle tournant en local chez OpenAI), Mask (honnêteté du modèle sous pression, Claude Sonnet), et Humanity Last Exam (benchmark de référence, GPT-5 en tête suivi de Gemini 2.5). Le MCP (Model Context Protocole) est mentionné comme la technologie interfaçant un LLM avec des outils externes.
+- Sur les classements de capacités agentiques, Opus 4 et GPT-5 se détachent nettement. GPT-5 domine aussi le classement multilingue. Cependant l'intervenant met en garde contre une lecture trop rapide des benchmarks : sur le Showdown, GPT-5 reste devant mais de peu face à Claude Opus, et Gemini Pro se distingue par sa popularité. Le classement varie aussi selon l'âge des utilisateurs (les 50 ans et plus utilisent davantage Gemini), preuve que les votes ne reflètent pas forcément un usage professionnel.
+- Analyse des classements par zone géographique : en Amérique du Nord, GPT et Claude Opus dominent ; en Europe, GPT-4 est en tête et Gemini est loin derrière ; en Asie, Claude devance nettement Gemini, ce qui est jugé un bon indicateur ; en Afrique, les scores sont relativement proches entre modèles.
+- Suite du classement par type de tâche : Gemini et ChatGPT devant en Content Analysis, GPT devant en Open QA, Claude devant en Reasoning (capacité importante pour les agents IA), et quasi-égalité entre les modèles pour l'écriture. Introduction de LM Arena comme autre leaderboard basé sur des votes de comparaison directe entre réponses.
+- Explication du fonctionnement de LM Arena : une arène compare deux réponses côte à côte et l'utilisateur vote pour la meilleure, générant un classement. Résultats par catégorie : en texte, Gemini 2.5 Pro devance Claude Opus 4.1 et O3, tandis que GPT-5 est étonnamment bas ; en développement web, GPT-5 devance de peu Opus et Gemini 2.5 ; en vision, Gemini 2.5 est devant (Claude n'ayant pas la vision) ; en text-to-image, Seadream devance Gemini 2.5 et Imagen 4.
+- L'intervenant nuance les scores de benchmark par sa propre expérience : il juge GPT Image supérieur à Gemini 2.5 dans certains cas malgré le classement, insistant sur l'importance de tester en application réelle. Sur la génération d'image pure, il préfère GPT Image ; SeaDream serait théoriquement meilleure selon les scores.
+- Sur l'édition d'image, un modèle domine très largement (8 millions de votes, score largement supérieur), sans nom explicitement précisé dans ce passage. Sur la recherche, Grok se distingue légèrement grâce à l'intégration directe de la base de données Twitter/X, lui permettant d'obtenir des informations live sans dépendre du browsing classique comme ChatGPT ou Google.
+- En texte-to-vidéo et image-to-vidéo, VO3 domine très largement sans contestation. Sur le leaderboard cumulé (Elo/copilot), Claude Opus 4.1 ressort globalement meilleur tous critères confondus, confirmant le ressenti de l'intervenant, bien qu'il préfère utiliser Sonnet au quotidien, positionné plus bas dans le classement.
+- Claude est jugé globalement le meilleur tous usages confondus, suivi de Gemini (bon mais avec de gros défauts en coding), puis GPT-5 jugé moyen sur les benchmarks d'usage réel mais bien meilleur sur les benchmarks de preuve sociale. Introduction d'ArcPrize.org, évaluateur de score visant à mesurer la propension des modèles à se rapprocher de l'AGI (intelligence artificielle générale) : Grok s'y classe étonnamment bien, alors qu'il est rarement le plus utile en pratique ; certains modèles OpenAI non publics (O3 Pro, O4 Mini, O3, O3 Preview) surpassent GPT-5 sur ce classement.
+- Mise en garde : un score élevé sur l'échelle AGI (ArcPrize) ne garantit pas une meilleure réponse perçue, car les benchmarks servent aussi à se positionner. Le critère du coût par tâche est essentiel : il faut chercher le meilleur compromis entre coût faible et marge/performance élevée. GPT-5 se positionne étonnamment bien sur ce ratio, proche de Grok, mais reste cher en usage réel, ce qui pousse les utilisateurs vers GPT-5 mini. OpenRouter est recommandé pour suivre facilement les prix par token de tous les LLM.
+- OpenRouter permet de changer de modèle en un clic, y compris dynamiquement selon le contexte (sera détaillé avec n8n), et affiche le prix par million de tokens en entrée et en sortie pour chaque modèle. Exemple chiffré : GPT-5 est relativement abordable mais 5 fois plus cher que GPT-5 mini.
+- Détail des prix par million de tokens : Claude Opus à 15$ en entrée / 75$ en sortie (cher), Claude Sonnet à 3$/15$ avec un contexte de 1 million de tokens (utilisé au quotidien par l'intervenant) ; Gemini Flash et Pro restent globalement accessibles (environ 0,30€/2,50€) mais Gemini Pro devient plus cher, comparable à GPT ; Grok propose Grok Code Fast gratuit (2 millions de tokens, usage limité dans le temps) et Grok Code reste abordable, mais Grok 4 souffre d'une fenêtre contextuelle plus limitée. Mistral Medium est jugé honnête à environ 0,40€/2€. Conclusion : pour un usage professionnel et surtout pour construire des agents IA, il vaut mieux privilégier la performance et la fiabilité plutôt que minimiser le coût, sauf pour du customer facing (chatbots) où réduire les coûts peut se justifier ; le bon modèle doit être choisi selon le bon usage.
+- L'analyse de prix peut se faire sur tous les modèles, par exemple Qwen 3 ou Mistral Medium (environ 0,40€/2€ pour un million de tokens), un tarif jugé honnête. Conclusion : le prix doit rester secondaire par rapport à la capacité du modèle à bien fonctionner, surtout pour construire des agents IA, où il vaut mieux maximiser la fiabilité plutôt que minimiser le coût ; réduire la voilure sur le coût peut en revanche se justifier pour du customer facing (chatbots). L'intervenant précise choisir le bon modèle selon le bon usage dans son agence, et prendra souvent Claude en exemple par préférence personnelle, tout en encourageant à switcher vers le LLM de son choix.
+
+## Concepts cles
+- distinction meilleur produit vs meilleur LLM
+- évolution rapide du marché des LLM rendant un classement figé obsolète
+- choisir l'outil adapté à la tâche (rôle de builder)
+- présentation des principaux LLM du marché
+- matrices d'évaluation réutilisables dans le temps
+- notion effect (réputation liée à la communauté)
+- écosystème et ancienneté comme avantage concurrentiel
+- lenteur de GPT-5 en usage
+- innovation produit vs innovation modèle
+- ChatGPT limité pour automatisation et agents
+- Gemini polyvalent mais sans excellence spécifique
+- écart entre performance benchmark et satisfaction d'usage
+- distinction édition d'image vs créativité graphique
+- fenêtre contextuelle large de Gemini
+- avantage de Google via son moteur de recherche et YouTube pour le Deep Research
+- écosystème Google jugé inégal
+- Claude comme modèle de prédilection quotidien
+- gestion du quota via choix du modèle (Sonnet vs plus gourmand)
+- Claude créateur du MCP
+- fiabilité perçue supérieure aux benchmarks bruts
+- distinction usage client (abonnement) vs usage API (paiement à l'usage)
+- coût API élevé à fort volume
+- Claude adapté aux process agentiques et connexions API
+- ChatGPT positionné pour le grand public
+- abandon d'abonnement ChatGPT par des utilisateurs avancés
+- stabilité anticipée du classement des LLM à court terme
+- avantage financier de Google et xAI
+- Grok connecté à l'écosystème X pour l'information en temps réel
+- prise de risque et innovation de rupture (parallèle Cybertruck)
+- Grok surévalué par effets d'annonce
+- Mistral en position de suiveur faute de moyens financiers
+- coût de la puissance de calcul comme frein pour les petits acteurs
+- reprise tardive de fonctionnalités déjà existantes chez les leaders
+- nécessité de recouper plusieurs leaderboards
+- leaderboards comme classements de performance par modèle
+- marketplace de modèles vs leaderboard de performance
+- Frontier Leaderboard basé sur des benchmarks par catégorie
+- classement par popularité (likes) sur Hugging Face
+- benchmarks spécialisés (apprentissage, honnêteté sous pression, sécurité nationale)
+- Humanity Last Exam comme benchmark de référence
+- MCP comme interface LLM-outils
+- Opus 4 et GPT-5 en tête sur les capacités agentiques
+- biais des benchmarks selon la démographie des votants
+- écart benchmark vs usage réel
+- classement par continent (Amérique du Nord, Europe, Asie, Afrique)
+- Claude dominant en Asie comme indicateur de qualité
+- classement par type de tâche (analyse de contenu, question ouverte, reasoning, écriture)
+- reasoning comme capacité clé pour les agents IA
+- LM Arena comme leaderboard par vote comparatif
+- fonctionnement de l'arène de vote comparatif
+- classement par catégorie (texte, dev web, vision, text-to-image)
+- absence de capacité vision chez Claude à l'époque
+- écart entre score de benchmark et perception personnelle
+- importance de tester en application réelle
+- domination écrasante sur l'édition d'image (8M votes)
+- avantage de Grok en recherche grâce à l'accès direct aux données X
+- browsing classique (ChatGPT) vs accès direct aux données (Grok)
+- domination de VO3 en génération vidéo
+- Claude Opus 4.1 meilleur au classement cumulé
+- préférence pour Sonnet en usage quotidien malgré un classement inférieur à Opus
+- classement global : Claude en tête, puis Gemini, puis GPT-5
+- ArcPrize.org comme mesure de proximité à l'AGI
+- écart entre score AGI et utilité pratique de Grok
+- modèles OpenAI non publics plus performants que GPT-5 sur l'AGI
+- score AGI ne garantit pas la satisfaction perçue
+- coût par tâche comme critère de choix essentiel
+- compromis coût faible / marge haute
+- OpenRouter comme clé API universelle multi-LLM
+- changement dynamique de modèle via OpenRouter
+- prix au million de tokens en entrée/sortie
+- écart de prix x5 entre GPT-5 et GPT-5 mini
+- comparaison de prix par million de tokens entre Claude, Gemini, Grok, Mistral
+- fenêtre contextuelle limitée de Grok 4
+- priorité à la performance sur le coût pour les agents IA
+- réduction de coût justifiée en cas de customer facing (chatbots)
+- comparaison de prix Qwen 3 et Mistral Medium
+- le prix comme critère secondaire face à la fiabilité
+- privilégier la performance pour les agents IA
+- réduire les coûts pour le customer facing (chatbots)
+- choisir le bon modèle selon le bon usage
+
+## Outils mentionnes
+- ChatGPT
+- GPT-5
+- Canva
+- Deep Research
+- Study and Learn
+- Gemini
+- Claude
+- GPT Image
+- YouTube
+- Google
+- Claude Sonnet 4
+- MCP
+- Google Business
+- Grok
+- XAI
+- X (Twitter)
+- Mistral
+- Scale.ai
+- LMArena
+- OpenRouter
+- Hugging Face
+- Ollama
+- Fal AI
+- Cohere
+- O3
+- O3 Pro
+- GPT-OSS
+- OpenAI
+- Claude Sonnet
+- Gemini 2.5
+- TutorBench
+- MultiChallenge
+- Humanity Last Exam
+- Opus 4
+- Claude Opus
+- Gemini Pro
+- GPT-4
+- LM Arena
+- Gemini 2.5 Pro
+- Claude Opus 4.1
+- Seadream
+- Imagen 4
+- Twitter (X)
+- VO3
+- ArcPrize.org
+- O4 Mini
+- O3 Preview
+- GPT-5 mini
+- ArcPrize
+- n8n
+- Gemini Flash
+- GPT
+- Grok Code Fast
+- Grok Code
+- Grok 4
+- Mistral Medium
+- Quen 3
+- Qwen 3
+
+## Tips techniques
+- Avoir un à deux abonnements LLM différents pour comparer selon les usages
+- Privilégier l'API si l'usage est variable, car la dépense suit la consommation réelle
+- Utiliser Claude Sonnet plutôt qu'un modèle plus lourd au quotidien pour ne pas consommer trop vite le quota d'abonnement
+- Pour un usage professionnel/builder, privilégier un abonnement Claude plutôt que ChatGPT
+- Un abonnement Claude + Gemini (via Google Business) peut suffire, rendant ChatGPT superflu selon l'usage
+- Utiliser Grok si le besoin est d'obtenir des informations tendances/actualités en temps réel via X
+- Ne pas se fier à un seul leaderboard : recouper plusieurs classements et leurs angles d'évaluation avant de choisir un modèle
+- Faire ses propres tests plutôt que de se reposer uniquement sur l'avis d'un tiers
+- Ne pas se fier uniquement au score global d'un leaderboard : vérifier aussi le nombre de votes et le profil démographique des votants avant de conclure
+- Toujours valider les benchmarks par une mise en application réelle plutôt que de se fier uniquement aux scores
+- Toujours évaluer le coût par tâche, pas seulement le score de performance, pour choisir un modèle en production
+- Utiliser OpenRouter pour comparer facilement les prix par token entre tous les fournisseurs de LLM
+- Utiliser OpenRouter pour changer de modèle en un clic, voire de façon dynamique selon la réponse attendue
+- Pour construire des agents IA, prioriser la capacité et la fiabilité du modèle plutôt que le coût
+- Pour du customer facing (chatbots), il peut être pertinent de réduire les coûts en choisissant un modèle moins cher
+- Choisir le bon modèle en fonction du bon usage plutôt que d'utiliser systématiquement le même partout
+- pour construire des agents IA, mieux vaut maximiser la fiabilité et la performance que minimiser le coût
+- pour du customer facing (chatbots), réduire les coûts en choisissant un modèle moins cher peut se justifier
+
+## Cas d'usage reels
+- [[]]

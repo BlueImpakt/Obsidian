@@ -1,0 +1,166 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Comprendre le Prompt Engineering"
+source_transcript: "0.20 Les bases du Prompt Engineering.txt"
+---
+
+# 0.20 Les bases du Prompt Engineering
+
+## Resume
+- Le prompt engineering est présenté comme la compétence numéro un à développer pour maîtriser l'intelligence artificielle, car il constitue la langue de communication avec un LLM. Sans savoir prompter, tous les efforts fournis donneront de mauvais résultats. L'auteur reconnaît qu'il n'existe pas de formule magique, mais que la compétence demande exercice, expérience et méthodologie.
+- L'auteur propose non pas la formule magique mais la formule la plus simple à retenir pour obtenir des résultats suffisamment bons, et met en garde contre les personnes vendant des méthodes de prompting universelles. Il souligne que la complexité d'un prompt doit varier selon le cas d'usage : très précis et technique pour le code ou la génération d'images/vidéos, mais simple pour les questions du quotidien.
+- L'auteur annonce s'appuyer sur un document de référence intitulé 'Prompt Engineering' qui concentre l'essentiel à savoir pour bien prompter. Le document étant en anglais, il prévoit de le traduire en temps réel et suggère des outils de traduction en ligne (comme Canva avec un plan pro) pour ceux qui veulent le document en français.
+- Présentation du LLM Output Configuration, qui inclut les contrôles d'échantillonnage : température, Top K et Top P. La température détermine le niveau de créativité et d'aléatoire des réponses : une température élevée favorise la créativité, une température basse favorise des réponses factuelles.
+- Explication du Top P (nucleus sampling), une méthode flexible de sélection des tokens, et du Top K sampling, qui définit les probabilités des tokens et ne conserve que les plus probables selon un seuil fixe. Le Top K réduit l'aléatoire des réponses en restreignant le choix au pool des tokens les plus probables.
+- Comparaison entre Top K et Top P : le Top K évite les non-sens mais peut être restrictif car il fixe un nombre défini de tokens, tandis que le Top P est plus flexible car le nombre de tokens retenus varie selon le modèle, permettant plus d'exploration et d'aléatoire contrôlé. Le Top K restreint les choix au K token les plus probables tandis que le Top P s'adapte à la taille du vocabulaire selon la confiance du modèle.
+- Les LLM ne sont pas parfaits et nécessitent des instructions détaillées, à l'image d'un stagiaire : sans indications, les résultats seront médiocres, mais avec un processus détaillé étape par étape, les résultats peuvent dépasser les attentes. L'auteur souligne que les mauvais résultats sont généralement la faute de l'utilisateur (mauvais prompt) et non de l'outil, sauf en cas de bug technique.
+- L'auteur partage une anecdote personnelle sur la frustration ressentie après de longues heures de travail avec un LLM, tout en déconseillant cette réaction. Il rappelle que plus un prompt est clair, plus le LLM le comprend facilement, car derrière son apparence quasi humaine, un LLM reste fondé sur des probabilités mathématiques. Introduction du Zero-Shot Prompting, la méthode la plus utilisée par la majorité des utilisateurs de LLM.
+- Définition du Zero-Shot Prompting comme la forme la plus simple de prompt, sans fourniture d'exemple : une simple description de la tâche (question, début d'histoire, instructions). Ce nom vient du fait qu'il n'y a zéro exemple fourni au modèle.
+- Présentation de Vertex AI Studio comme playground pour tester des prompts, avec sa Prompt Gallery offrant de nombreux exemples de prompts et de résultats pour comprendre leur construction et les réutiliser. Illustration du Zero-Shot Prompting avec un exemple concret : classifier des avis de films en positif, neutre ou négatif à partir d'une simple description sans exemple.
+- Introduction du One-Shot et Few-Shot Prompting : le One-Shot fournit un exemple que le modèle va imiter pour mieux accomplir la tâche demandée, à utiliser quand le Zero-Shot ne donne pas satisfaction. Illustration avec un exemple de Few-Shot Prompt visant à extraire une commande de pizza au format JSON à partir d'un exemple fourni.
+- Suite de l'exemple Few-Shot avec extraction de commande de pizza en JSON (type, taille, ingrédients en Array), puis un second exemple fourni pour former un vrai Few-Shot (deux exemples). Les exemples sont présentés comme extrêmement importants et sous-cotés pour obtenir de bons résultats : plus il y en a, mieux le modèle comprend la structure attendue, mais un excès de focalisation sur la verbosité des exemples peut faire perdre le modèle dans le style plutôt que le format.
+- Exemple concret d'application du Few-Shot Prompting à la création de posts LinkedIn : identifier des templates de posts viraux existants, demander à ChatGPT ou Claude d'en extraire un template, puis réutiliser ce template avec n'importe quelle nouvelle idée pour obtenir de bons résultats, car un post viral correspond généralement aux attentes des lecteurs.
+- Introduction du système prompting, qui consiste à définir un contexte global et un objectif pour le LLM, spécifier un format de sortie, établir des contraintes et définir un rôle. Cette approche pose les bases de la structure de prompt personnelle que l'auteur va présenter par la suite.
+- Le système prompting définit le contexte global et l'objectif du LLM (ex: traduire, classifier), servant de base fondamentale, contrairement au contextual prompting qui donne des détails sur une conversation spécifique en cours. Introduction du role prompting, une troisième approche consistant à assigner un rôle ou une identité forte au LLM.
+- Le rôle assigné à un LLM peut prendre la forme d'une identité de personne/public, mais surtout, dans un usage professionnel, celle d'un métier ou d'un individu spécifique à impersonner. Ce role prompting est présenté comme fondateur de la formule de prompt parfait que l'auteur va révéler. Récapitulatif : le système prompt définit les principes fondamentaux, le contexte donne une information immédiate sur la tâche, et le rôle oriente la typologie de réponse.
+- Présentation des différents types de rôles utilisables dans un prompt : des tons (contrarien, confrontationnel, descriptif, direct, formel, humoristique, influent), des métiers, ou des styles, ainsi qu'une certaine expertise (ex: expert en sciences de la vie, en copywriting, en rédaction de scripts YouTube).
+- Sans rôle défini, le LLM répond selon ce qu'il estime être la réponse attendue par la majorité. Pour obtenir une expertise bien définie, il est recommandé de demander explicitement un rôle spécifique. Introduction du prompting contextuel, qui consiste à fournir du contexte (ex: 'tu écris pour un blog sur les jeux d'arcade') pour orienter l'objectif de la tâche, sans être ni un principe fondamental ni un objectif en soi.
+- Rappel du prompting contextuel puis introduction du step-back prompting : une technique qui améliore la performance en posant d'abord une question générale liée à la tâche, puis en utilisant la réponse à cette question générale pour construire un prompt plus précis pour la tâche spécifique. Exemple : plutôt que de demander directement d'écrire le paragraphe d'un niveau de FPS (ce qui, avec une température à 1, donne un résultat créatif mais générique), on prend d'abord du recul en demandant quels sont les cinq principes fondamentaux qui rendent un FPS populaire challengeant et engageant, ce qui fait ressortir des thèmes concrets (base militaire abandonnée, ville cyberpunk, vaisseau alien, ville de zombies).
+- Suite du step-back prompting : les thèmes obtenus (base militaire abandonnée, ville cyberpunk, etc.) sont jugés pertinents pour un FPS, puis on revient au prompt original enrichi de ce contexte pour écrire un paragraphe de niveau. Le même principe est appliqué à un exemple de post LinkedIn viral (demander d'abord ce qui rend un post viral sans tomber dans le pathos ou les emojis/hashtags, puis générer le post à partir des réponses). Introduction du chain of thought avec un exemple d'erreur de calcul typique d'un LLM sur un problème d'âge relatif.
+- Les LLM ont des difficultés avec les tâches mathématiques ; la meilleure approche consiste à découper le raisonnement en plusieurs étapes. L'exemple du problème d'âge (partenaire ayant trois fois l'âge à 3 ans, puis l'utilisateur ayant 20 ans) est repris pour illustrer cette technique de décomposition, en soulignant que le prompt lui-même change très peu.
+- Démonstration du chain of thought : en ajoutant simplement 'pense étape par étape' au même prompt sur le problème d'âge, le LLM détaille son raisonnement (âge à 3 ans, écart de 17 ans, âge final de la partenaire à 26 ans) et arrive à la bonne réponse, contrairement à la tentative précédente sans cette instruction.
+- Confirmation que l'ajout de 'pense étape par étape' change peu le prompt mais transforme significativement les résultats sur des raisonnements complexes ou mathématiques, d'où la recommandation de toujours déclencher le chain of thought dans ces cas. Introduction d'un nouvel exemple en direct sur Claude : demander le nombre de buts de Mbappé pour la saison 2025-2026.
+- Démonstration en direct sur Claude montrant que sans activation de la recherche web, le LLM peut inventer des chiffres factuels récents (ex: statistiques sportives) faute d'accès à l'information à jour, alors qu'avec la recherche activée, il trouve les bons chiffres. Le choix d'activer ou non la recherche web dépend de si l'on souhaite une réponse ancrée dans l'actualité ou basée sur la réflexion globale du modèle. L'auteur rappelle aussi que la pratique reste indispensable pour progresser en prompting, au-delà de la théorie, et transitionne vers le self-consistency prompting.
+- Introduction du self-consistency prompting : envoyer plusieurs fois le même prompt avec une température élevée, récupérer chaque réponse, et choisir la réponse la plus fréquente, ce qui améliore l'auto-correction, la cohérence et la gestion de l'incertitude du modèle, au prix d'un coût plus élevé. Exemple d'application à la classification d'un email en important/pas important avec chain of thought ('pense étape par étape et explique pourquoi'), première tentative détaillée en 3 étapes de raisonnement.
+- Suite de l'exemple de self-consistency sur la classification d'email : deuxième tentative concluant 'pas important', troisième tentative concluant 'important', résultats incohérents entre eux. Il est recommandé de modifier le prompt jusqu'à obtenir une conclusion consistante et répétable sur plusieurs tentatives. Introduction rapide du raisonnement Tree of Thoughts, qui crée des branches et cherche le scénario le plus plausible pour chacune.
+- Détail du raisonnement Tree of Thoughts : le modèle crée plusieurs branches de raisonnement et élimine progressivement celles qui sont les moins plausibles jusqu'à converger vers le scénario le plus adapté, une approche très utilisée dans les processus agentiques. Introduction du ReAct prompting, qui combine reasoning et actions en boucle : le LLM identifie les causes du problème, génère un plan d'action, l'exécute via des outils (recherche, interpréteur de code, API) et évalue les résultats, imitant ainsi le fonctionnement humain dans le monde réel.
+- L'auteur clôt la revue du document de référence sur le prompt engineering, invitant les spectateurs à approfondir par eux-mêmes les techniques non couvertes en détail. Il annonce que la suite se concentrera sur un framework de prompt pratique, présenté comme l'élément essentiel et prioritaire à retenir : la capacité à créer le 'prompt parfait'.
+
+## Concepts cles
+- prompt engineering comme compétence fondamentale
+- transposer une intention en langage compris par un LLM
+- absence de formule magique
+- adapter la complexité du prompt au cas d'usage
+- précision technique pour code/génération d'images/vidéos
+- simplicité pour les prompts du quotidien
+- méfiance envers les formules de prompting universelles
+- document de référence 'Prompt Engineering'
+- traduction de documents techniques
+- LLM Output Configuration
+- température
+- Top K
+- Top P
+- prompting techniques
+- Top P (nucleus sampling)
+- Top K sampling
+- réduction de l'aléatoire des réponses
+- Top K vs Top P
+- flexibilité du Top P
+- restriction du Top K
+- importance du prompting pour guider les LLM
+- analogie du stagiaire pour illustrer le besoin d'instructions détaillées
+- responsabilité de l'utilisateur dans la qualité des résultats
+- bugs techniques vs mauvais prompt
+- frustration face aux résultats d'un LLM
+- clarté du prompt pour faciliter la compréhension
+- LLM basé sur des probabilités mathématiques
+- Zero-Shot Prompting
+- description de tâche sans exemple
+- Vertex AI Studio comme environnement de test
+- Prompt Gallery
+- exemple de classification de sentiment (avis de films)
+- One-Shot Prompting
+- Few-Shot Prompting
+- définir un format de sortie attendu
+- extraction de commande de pizza en JSON
+- JSON comme format de sortie structuré
+- Array en JSON
+- importance sous-estimée des exemples
+- risque de sur-focalisation sur le style vs le format
+- création de posts LinkedIn via template
+- identification de templates à partir de posts viraux
+- système prompting
+- contexte global et objectif
+- format de sortie
+- contraintes
+- établissement d'un rôle
+- différence entre système prompting et contextual prompting
+- role prompting
+- identité/rôle assigné au LLM
+- rôle comme identité professionnelle/métier à impersonner
+- articulation système/contexte/rôle
+- formule du prompt parfait
+- types de rôles : tons, métiers, styles, expertise
+- exemples de tons (contrarien, formel, humoristique)
+- exemples d'expertise (copywriting, scripts YouTube)
+- comportement par défaut du LLM sans rôle défini
+- prompting contextuel
+- combinaison système + contexte + rôle
+- step-back prompting : poser d'abord une question générale avant la question spécifique
+- température élevée = résultat créatif mais générique
+- prendre du recul pour obtenir des thèmes concrets et réutilisables
+- application du step-back au post LinkedIn viral
+- chain of thought
+- erreur de calcul typique des LLM sur les mathématiques
+- difficulté des LLM avec les tâches mathématiques
+- décomposition d'un problème en étapes
+- chain of thought appliqué
+- instruction 'pense étape par étape'
+- correction du raisonnement mathématique
+- impact minime du prompt mais majeur sur le résultat
+- déclenchement systématique du chain of thought pour le raisonnement complexe
+- question factuelle récente comme test
+- recherche web activée vs désactivée
+- risque d'invention de chiffres sans accès à l'information à jour
+- arbitrage entre réponse actuelle et réflexion globale du modèle
+- primauté de la pratique sur la théorie
+- self-consistency prompting
+- envoi répété du même prompt avec température élevée
+- coût de la répétition de requêtes
+- cohérence et gestion de l'incertitude du modèle
+- classification d'email important/pas important
+- incohérence entre plusieurs tentatives du même prompt
+- recherche de consistance répétable
+- introduction du Tree of Thoughts
+- Tree of Thoughts
+- élimination progressive de branches de raisonnement
+- processus agentiques
+- ReAct prompting
+- boucle reasoning + action
+- exécution de code et interaction avec des API
+- transition vers un framework de prompt pratique
+- annonce du 'prompt parfait'
+
+## Outils mentionnes
+- Canva
+- Claude
+- GPT
+- Vertex AI Studio
+- ChatGPT
+- LinkedIn
+
+## Tips techniques
+- Être le plus précis possible, même en termes techniques, pour les prompts liés au code, à la génération d'images ou de vidéos
+- Ne pas complexifier inutilement un prompt simple (ex: demander la météo) avec des étapes et bullet points superflus
+- Utiliser un outil de traduction en ligne comme Canva (plan pro) pour traduire un document technique en anglais vers le français
+- Utiliser une température haute pour une écriture créative, une température basse pour des réponses factuelles
+- Détailler le processus étape par étape dans le prompt pour obtenir des résultats qui dépassent les attentes, comme on formerait un stagiaire
+- Plus le prompt est clair, plus il est facile à comprendre pour le LLM
+- Utiliser la Prompt Gallery de Vertex AI Studio pour s'inspirer d'exemples de prompts existants et comprendre leur construction
+- Utiliser le One-Shot Prompting quand le Zero-Shot ne fonctionne pas, en fournissant un exemple qui sert de point d'ancrage pour l'output désiré
+- Fournir plusieurs exemples de sortie attendue augmente la compréhension de la structure par le modèle
+- Se focaliser sur le format de sortie plutôt que sur la verbosité/style des exemples pour éviter que le modèle ne se perde dans le style d'écriture
+- Repérer des posts LinkedIn viraux, demander à l'IA d'en extraire le template, puis réutiliser ce template pour de nouvelles idées de post
+- Définir un rôle spécifique dans le prompt si une expertise précise est recherchée, sinon le LLM répondra de façon générique
+- pour un résultat moins générique, poser d'abord une question générale liée à la tâche (step-back), puis construire le prompt final à partir de la réponse obtenue
+- Découper les tâches mathématiques ou de raisonnement complexe en plusieurs étapes pour améliorer la fiabilité du LLM
+- Ajouter l'instruction 'pense étape par étape' au prompt pour déclencher un raisonnement chain of thought et améliorer la justesse des réponses sur des problèmes complexes
+- Toujours déclencher le chain of thought ('pense étape par étape') dès que le raisonnement demandé est complexe ou mathématique
+- Activer la recherche web quand une réponse factuelle et actuelle est nécessaire, sinon le LLM risque d'inventer des chiffres
+- Désactiver la recherche web si l'on préfère une réponse basée sur la réflexion globale du modèle plutôt que sur des données trouvées en ligne
+- Pour le self-consistency, envoyer plusieurs fois le même prompt avec une température élevée et retenir la réponse la plus fréquente parmi les résultats obtenus
+- Faire varier le prompt jusqu'à obtenir une conclusion consistante et répétable sur plusieurs tentatives avant de considérer le prompt comme fiable
+
+## Cas d'usage reels
+- [[]]

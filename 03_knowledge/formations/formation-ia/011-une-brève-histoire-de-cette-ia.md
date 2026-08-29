@@ -1,0 +1,252 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Les Fondamentaux IA"
+source_transcript: "0.11 Une brève histoire de cette IA.txt"
+---
+
+# 0.11 Une brève histoire de "cette" IA
+
+## Resume
+- Introduction à une brève histoire de l'IA générative actuelle, sans remonter à l'antiquité mais en démarrant vers 2015, période où apparaissent les premiers signes de ce qui deviendra l'IA générique connue aujourd'hui. La vraie révolution a lieu à partir de 2022-2023.
+- Les premières intentions concrètes vers l'IA générative démarrent entre 2010 (premiers papiers de recherche) et 2015 (création d'OpenAI, sections de recherche chez Google). L'IA générative actuelle découle de l'architecture Transformer, créée chez Google par une équipe dirigée par Noam Shazeer. Trois piliers expliquent le succès de l'IA moderne : avancées d'architecture, investissements massifs en compute, et acteurs logiciels/matériels distincts.
+- Les avancées en architecture, issues de nombreux travaux de recherche, ont créé un écart technologique majeur, notamment avec l'architecture Transformer. Avant cette architecture, la génération de texte se faisait de façon séquentielle : chaque mot d'une phrase (ex. "le chat veut manger la souris") était traité un par un dans l'ordre.
+- Le traitement séquentiel des mots impliquait une mémoire courte : le système se souvenait des mots précédents proches, mais dès qu'il y avait beaucoup de contexte, il devenait incapable de tout retenir pour produire une phrase pertinente et cohérente.
+- L'architecture Transformer a permis d'effectuer les calculs sur de nombreux mots en parallèle plutôt que séquentiellement. Elle repose aussi sur les mécanismes d'attention, qui permettent de pondérer l'importance relative des mots dans une phrase (ex. "chat" et "souris" plus importants que les autres mots dans "le chat mange la souris").
+- Les mécanismes d'attention calculent en permanence les relations de probabilité entre les mots d'une phrase pour déterminer la suite la plus probable. D'autres innovations, portées par des investissements massifs en recherche, ont permis une avancée rapide aboutissant à la création des premiers chatbots.
+- À l'origine, cette technologie était destinée à un usage de recherche interne, aussi bien chez Google que chez OpenAI. Google aurait pu sortir un produit équivalent à ChatGPT avant OpenAI, mais l'innovation est restée cantonnée à une unité de recherche académique.
+- Le deuxième pilier de la course à l'IA est l'investissement massif dans le compute : les calculs sont extrêmement énergivores et nécessitent des infrastructures et des puces GPU puissantes. Le troisième pilier est constitué des techniques d'alignement, comme le Constitutional AI d'Anthropic, qui fixe des garde-fous au modèle pour éviter des comportements dangereux ou contraires à la morale.
+- Le RLHF (Reinforcement Learning from Human Feedback) consiste à utiliser les retours des utilisateurs (bon/mauvais) pour enrichir les modèles, une pratique très présente aux débuts de ChatGPT. Le fine-tuning permet de peaufiner un LLM pour le rendre performant sur une tâche spécifique. Les deux acteurs principaux du secteur sont Google (avec DeepMind) et OpenAI (fondée et financée par Elon Musk, dirigée par Sam Altman), avec Nvidia comme acteur clé du compute, d'où sa valorisation exceptionnelle.
+- Départ de Dario Amodei d'OpenAI, en désaccord avec sa vision, pour fonder Anthropic, dont le LLM Claude est particulièrement fort en écriture créative et surtout en code. Grâce à la valeur du logiciel aujourd'hui, Anthropic a attiré des investissements massifs : 4 milliards de dollars d'Amazon puis un investissement de Google. Panorama des grands acteurs de l'IA, financés par les GAFAM, avant de passer à l'histoire pré-Transformer.
+- Rupture technologique à partir de 2017 grâce à l'injection massive d'argent dans la recherche. Origine historique : le Perceptron, créé par Rosenblatt pour la Navy en pleine tension géopolitique (guerre froide), une machine physique dotée d'un capteur optique capable d'analyser des formes sur des images, avec un apprentissage basé sur le poids synaptique. Cette représentation physique évolue ensuite vers une approche mathématique (fin des années 1950-1960), donnant naissance au réseau de neurones artificiel, précurseur du réseau de neurones récurrent.
+- Différence entre réseau de neurones artificiel et réseau de neurones récurrent (RNN) : le premier analyse une image (ex. reconnaître un chat ou un chien), le second ajoute une boucle où la sortie d'une analyse ré-alimente le calcul suivant, en plus de la nouvelle entrée. C'est l'un des fondements de base de ce qui deviendra les LLM.
+- Les premiers RNN souffraient d'un syndrome similaire aux tout premiers chatbots avant ChatGPT : capables de formuler des phrases mais perdant le fil dès qu'on donnait trop de contexte, la mémoire étant trop courte pour un langage complexe. Premières applications pratiques dans les années 90 (reconnaissance vocale basique, prévision de séries temporelles). En 1997, le LSTM (Long Short-Term Memory) apporte une avancée majeure en conservant mieux la mémoire longue, permettant de garder de bonnes performances sur de longues distances de contexte. Il est à la base d'outils comme Google Translate ou Siri.
+- À partir de 2014, le GRU (Gated Recurrent Unit), créé par Yoshua Bengio, l'un des pères fondateurs de l'IA, simplifie l'architecture LSTM jugée trop complexe : moins de paramètres, moins de calculs, plus rapide, tout en gardant l'essentiel de la capacité de gestion de la mémoire. Le GRU donne naissance aux premiers chatbots simples et améliore la reconnaissance vocale, notamment via les assistants vocaux comme Google Assistant ou Alexa. Tout s'accélère ensuite entre 2013 et 2014, jusqu'à la vraie rupture apportée par l'architecture Transformer.
+- L'architecture Transformer abandonne la lecture séquentielle mot par mot au profit d'un calcul parallèle de toute l'information, ce qui permet d'avoir plus de contexte et des réponses plus rapides sur les LLM actuels (ChatGPT, Bard, Claude), avec un gap technologique visible par exemple entre la traduction approximative de Google Translate en 2013 et sa qualité actuelle. L'architecture a été créée par une équipe de chercheurs chez Google, notamment Noam Shazeer et son collaborateur De Freitas, répartis entre Google DeepMind (recherche) et Google Brain (produit), à partir d'un outil interne nommé Mina. Google, comme toute grande entreprise, devient prudent car la moindre décision peut avoir de lourds impacts.
+- Google s'abstient de lancer le projet, jugé trop risqué (crainte d'usages illégaux ou incorrects). Face à ce refus, Noam Shazeer et De Freitas quittent directement Google.
+- Anecdote caricaturale du refus de Google face à l'enthousiasme des chercheurs pour leur découverte. Noam Shazeer et De Freitas partent fonder une nouvelle startup, Character AI, spécialisée notamment sur l'image. Quelques années plus tard, en 2024, Google rachète Character AI pour 2,7 milliards de dollars alors qu'ils avaient les bons éléments en interne, preuve de l'importance stratégique de ces avancées pour la survie des grandes entreprises dans la course à l'IA. Transition vers la présentation de l'architecture Transformer, née le 12 juin 2017.
+- Le 12 juin 2017, l'équipe de recherche de Google publie le papier « Attention is all you need », qui remplace les architectures précédentes (réseaux de neurones artificiels et récurrents) en permettant une parallélisation massive des calculs, grâce au concept de self-attention multihead où chaque token d'une séquence interagit en parallèle avec tous les autres. C'est le précurseur de l'ère actuelle de l'IA : tous les LLM modernes (GPT, BERT, Claude d'Anthropic, Llama de Meta, Gemini de Google) utilisent l'architecture Transformer comme base, ce qui en fait l'une des publications les plus influentes de l'histoire de l'IA. Transition vers la présentation d'OpenAI, fondée en décembre 2015 par Sam Altman, Elon Musk et Ilya Sutskever.
+- Face au refus de Google de développer leur innovation, l'équipe de chercheurs a quitté l'entreprise pour créer Character AI, spécialisée notamment sur les images. OpenAI, elle, avait pour but initial de développer l'IA générative via un pré-entraînement massif sur des données existantes disponibles sur Internet, suivi de fine-tuning pour améliorer les réponses ; elle a été fondée en décembre 2015 par Sam Altman, Elon Musk et Ilya Sutskever.
+- Anecdote personnelle : le narrateur a découvert GPT-3 fin 2021 et le juge très limité comparé aux standards actuels, bien qu'extraordinaire pour l'époque. La démocratisation grand public avec ChatGPT en décembre 2022 fait d'OpenAI l'entreprise qu'elle est aujourd'hui.
+- Elon Musk reste amer du virage commercial pris par Sam Altman avec OpenAI (rapprochement avec Microsoft) alors qu'il visait une philosophie open source. La révolution ChatGPT repose sur le RLHF (Reinforcement Learning from Human Feedback), les retours des utilisateurs permettant d'améliorer le modèle en validant ou infirmant ses réponses.
+- Le RLHF se déroule en trois étapes : Supervised Fine Tuning, Reward Model Training, et Optimisation PPO, qui ont permis de transformer GPT-3.5 en modèle grand public. La distribution grand public a permis de maximiser les retours utilisateurs : 100 millions d'utilisateurs en deux mois, plus de 800 millions aujourd'hui.
+- Google est l'architecte fondateur de l'architecture Transformer. Ses modèles ont évolué avec BERT (2018, ébauche d'un LLM), puis Lambda et Palm (modèles conversationnels basiques), jusqu'à BARD renommé Gemini en 2023, format multimodal (image, texte, audio, vidéo). L'avantage de Google réside dans sa maîtrise de toute la chaîne de valeur : distribution (smartphones Pixel, Chromebooks, Gmail, Google Workspace) et large base d'utilisateurs.
+- Google maîtrise toute sa chaîne de valeur et n'est pas dépendant d'un tiers pour sa puissance de calcul, contrairement à OpenAI (lié à Nvidia et Microsoft). Nvidia est centrale car ses GPU, historiquement conçus pour le gaming, se sont révélés excellents pour les calculs matriciels parallèles nécessaires au deep learning.
+- Les GPU Nvidia sont au cœur de l'architecture Transformer et du Deep Learning, ce qui explique la course à l'armement en IA et la valorisation exceptionnelle de Nvidia. Les puces GPU deviennent de plus en plus puissantes, positionnant l'entreprise à la pointe technologique mondiale du fait de la demande extrêmement forte que génère cette course.
+- Meta est un acteur historique de l'IA, porté dès le départ par le FAIR (Facebook AI Research), avec notamment le Français Yann LeCun, sur une vision open source fondamentale de l'IA appuyée sur les meilleurs chercheurs en deep learning. Face à la fermeture progressive d'OpenAI, Meta évolue vers une stratégie plus commerciale, illustrée par Llama 1 (février 2023, deux mois après ChatGPT) puis Llama 2 (juillet 2023). Meta se retrouve pénalisé d'avoir joué le jeu de l'ouverture pendant que d'autres acteurs (OpenAI, Microsoft, Anthropic) récoltaient des résultats financiers grâce à des investissements massifs.
+- Meta prend du retard commercial malgré des talents et une recherche solides. Mark Zuckerberg lance une chasse aux talents coûtant des millions, voire des milliards, pour recruter les meilleurs chercheurs en IA. Présentation d'Anthropic, fondée en 2021 par Dario Amodei et sa sœur Daniela Amodei, tous deux anciens d'OpenAI, qui développent le concept de Constitutional AI : une constitution de principes éthiques qui remplace la supervision humaine et permet à l'IA de s'autocorriger elle-même, complétée par d'autres innovations comme les serveurs MCP.
+- La Constitutional AI d'Anthropic repose sur du reinforcement learning où le feedback vient de l'IA elle-même plutôt que d'humains (RLHF) : l'IA critique automatiquement ses propres productions, ce qui pose des « rails » comportementaux comparables à un circuit de kart. C'est une avancée notable en matière d'éthique de l'IA. Sur le plan commercial, si ChatGPT domine le grand public, Claude/Anthropic domine le marché entreprise, notamment grâce à sa force sur le code ; de nombreux outils utilisent Claude comme moteur (wrapper), ce qu'Anthropic a exploité en lançant Claude Code pour interagir directement avec Claude depuis un terminal.
+- Chronologie de Claude : lancement en mars 2023 (quatre mois après ChatGPT), avancée notable en juillet 2023, puis véritable accélération à partir de mars 2024. Des investissements massifs d'Amazon et de Google confirment le potentiel énorme de Claude, jugé par le formateur comme le meilleur LLM tous usages confondus.
+- Microsoft est un acteur important, encore dépendant d'OpenAI mais en train de se renforcer et de se déployer dans tous ses services. Microsoft investit d'abord 1 milliard de dollars dans OpenAI en 2019, bien avant ChatGPT, puis ajoute 13 milliards de dollars une fois le potentiel commercial de ChatGPT confirmé, soit environ le double de l'investissement combiné d'Amazon et Google dans Anthropic. Microsoft mise sur la transformation de son écosystème entreprise (Microsoft 365, Windows, Azure).
+- L'architecture Transformer déclenche d'autres avancées, notamment chez OpenAI et chez DeepMind/Google, la recherche en IA ne s'arrêtant jamais. L'IA devient une priorité mondiale à partir de deux déclencheurs majeurs : l'architecture Transformer et le déploiement commercial de ChatGPT, une mobilisation comparée à celle autour du vaccin pendant le Covid, portée par les opportunités financières qu'elle représente, dans une véritable « course à l'armement ».
+- Les investissements en recherche IA créent un cercle vertueux (recherche avancée entraîne plus d'investissements, qui entraînent plus de résultats), avec un risque de bulle, vers une possible intelligence artificielle générale largement supérieure à l'humain. La question des coûts d'entraînement se pose : environ 1 million de dollars pour GPT-1, 4,6 millions pour GPT-3, plus de 100 millions pour GPT-4, et environ 700 millions de dollars pour Llama 3.1 (2024). Plus les modèles sont performants, plus le coût en ressources de calcul augmente. Transition vers le sujet de la multimodalité.
+- La multimodalité désigne la capacité d'une IA à comprendre et produire aussi bien du texte que des images, de la vidéo et du son, alors que l'IA était historiquement centrée sur la sémantique. CLIP, d'OpenAI, a révolutionné la compréhension vision-langage et a mené à DALL-E, première génération d'images convaincante à partir d'un simple prompt, puis démocratisée par Stable Diffusion et Midjourney. GPT-4o (2023) intègre nativement vision, langage, audio et vidéo, posant les bases du raisonnement agentique (navigation web, compréhension du contexte). L'écosystème s'élargit ensuite avec d'autres acteurs comme Mistral.
+- Hugging Face est décrit comme le "GitHub de l'IA" : une plateforme communautaire hébergeant plus d'un million de modèles, avec sa bibliothèque Transformers qui standardise l'utilisation des architectures modernes, et un rôle clé dans l'open source. Stability AI, avec Stable Diffusion, a été pionnier du texte-vers-image en open source, contrairement à DALL-E resté propriétaire chez OpenAI, permettant à d'autres de fine-tuner le modèle pour des rendus spécialisés.
+- Cohere est spécialisé dans le re-ranking pour les RAG (Retrieval Augmented Generation), utilisé notamment dans les automatisations et agents sur n8n : cette technique permet de créer des chatbots plus spécialisés en s'appuyant sur des bases documentaires vectorisées plutôt que sur la seule connaissance générale du LLM. Le re-ranking consiste à sélectionner un plus grand nombre de résultats candidats (ex. dix) puis à filtrer et trier pour déterminer les réponses les plus pertinentes. Plusieurs défis émergent aussi pour l'IA : la consommation énergétique massive des data centers et la guerre des talents, comparée au marché des transferts sportifs.
+- La multiplication de contenu généré par IA pourrait dégrader la qualité générale des données d'entraînement, un phénomène déjà observé par certains experts qui déplorent un ralentissement des avancées sur les derniers modèles GPT d'OpenAI. Le défi majeur est de maintenir une qualité de données constante face à un enrichissement des LLM largement basé sur le scraping du web, en évitant les boucles de contenu généré par IA qui se nourrit de lui-même.
+- Plus les avancées progressent, plus les barrières à l'entrée deviennent élevées en raison des coûts, ce qui rend les acteurs en place difficiles à déloger et alimente les débats sur le maintien de l'open source pour une IA accessible à tous, avec en perspective les agents IA autonomes. Conclusion : malgré l'incertitude sur la suite du déploiement, la révolution IA repose sur des fondations techniques solides, un écosystème puissant et une vraie base économique, avec des investissements massifs qui transformeront l'ensemble des entreprises, celles adoptant l'IA prenant une avance décisive.
+
+## Concepts cles
+- cadrage temporel de l'histoire de l'IA
+- 2015 comme point de départ
+- 2022-2023 comme rupture
+- origine de l'architecture Transformer
+- Noam Shazeer
+- les trois piliers de la course à l'IA (architecture, compute, alignement)
+- séparation acteurs logiciels vs compute
+- traitement séquentiel mot par mot avant Transformer
+- limite de l'approche séquentielle
+- exemple de phrase traitée séquentiellement
+- limite de mémoire courte
+- perte de pertinence avec beaucoup de contexte
+- calcul en parallèle des mots
+- mécanismes d'attention
+- pondération de l'importance des mots dans une phrase
+- calcul des relations entre mots
+- investissement en recherche comme accélérateur
+- apparition des premiers chatbots
+- usage interne initial de la technologie
+- opportunité manquée de Google
+- caractère académique de la recherche initiale
+- investissement massif en compute
+- puces GPU et hardware
+- techniques d'alignement
+- Constitutional AI comme garde-fou moral
+- RLHF (feedback utilisateur)
+- fine-tuning pour tâches spécifiques
+- acteurs principaux : Google/DeepMind et OpenAI
+- rôle de Nvidia dans le compute
+- départ de Dario Amodei d'OpenAI
+- fondation d'Anthropic
+- force de Claude en écriture créative et en code
+- investissement Amazon (4 milliards) puis Google dans Anthropic
+- paysage des acteurs IA financés par les GAFAM
+- rupture technologique à partir de 2017 (investissements massifs)
+- Perceptron de Rosenblatt (US Navy, contexte guerre froide)
+- machine physique à capteur optique
+- apprentissage par poids synaptique
+- passage à l'approche mathématique du réseau de neurones artificiel
+- réseau de neurones artificiel (classification d'image)
+- réseau de neurones récurrent (boucle de rétroaction)
+- fondement historique des LLM
+- syndrome de mémoire courte des premiers RNN
+- applications années 90 (reconnaissance vocale, séries temporelles)
+- LSTM (1997), avancée sur la mémoire longue
+- fondement de Google Translate et Siri
+- GRU (2014, Yoshua Bengio)
+- simplification du LSTM (moins de paramètres et de calculs)
+- assistants vocaux (Google Assistant, Alexa)
+- accélération 2013-2014 avant le Transformer
+- architecture Transformer : calcul parallèle vs lecture séquentielle
+- gain de contexte et de vitesse pour les LLM
+- comparaison traduction Google Translate 2013 vs aujourd'hui
+- création par une équipe Google (Noam Shazeer, De Freitas)
+- Google DeepMind (recherche) vs Google Brain (produit)
+- prudence des grandes entreprises face au risque
+- refus de Google par aversion au risque
+- départ de Noam Shazeer et De Freitas de Google
+- fondation de Character AI par Noam Shazeer et De Freitas
+- rachat de Character AI par Google en 2024 (2,7 milliards de dollars)
+- enjeu stratégique des architectures IA pour la survie des grandes entreprises
+- papier « Attention is all you need » (12 juin 2017)
+- self-attention multihead
+- parallélisation massive des calculs
+- base de tous les LLM modernes (GPT, BERT, Claude, Llama, Gemini)
+- fondation d'OpenAI (décembre 2015, Sam Altman, Elon Musk, Ilya Sutskever)
+- départ de l'équipe de Google vers Character AI
+- pré-entraînement massif suivi de fine-tuning
+- fondation d'OpenAI en décembre 2015
+- découverte personnelle de GPT-3
+- démocratisation grand public via ChatGPT (décembre 2022)
+- frustration d'Elon Musk face au virage commercial
+- rapprochement Sam Altman-Microsoft
+- RLHF comme moteur d'amélioration
+- les trois étapes du RLHF (SFT, Reward Model Training, PPO)
+- GPT-3.5 rendu grand public
+- croissance fulgurante des utilisateurs de ChatGPT
+- Google architecte de Transformer
+- évolution BERT, Lambda, Palm vers Gemini
+- multimodalité de Gemini
+- maîtrise de la chaîne de valeur par Google
+- défi d'appliquer l'IA aux verticales métiers
+- indépendance de Google vs dépendance d'OpenAI à Nvidia/Microsoft
+- origine gaming des GPU Nvidia
+- calculs matriciels parallèles pour le deep learning
+- course à l'armement en IA
+- GPU de plus en plus puissants
+- position de pointe technologique de Nvidia
+- FAIR (Facebook AI Research, Yann LeCun)
+- vision open source de Meta
+- dérive vers une stratégie commerciale
+- Llama 1 (février 2023) et Llama 2 (juillet 2023)
+- retard commercial de Meta face aux autres acteurs
+- chasse aux talents de Meta (Mark Zuckerberg)
+- fondation d'Anthropic en 2021 (Dario et Daniela Amodei)
+- Constitutional AI (principes éthiques d'autocorrection)
+- serveurs MCP
+- reinforcement learning avec feedback généré par l'IA elle-même
+- auto-critique et « rails » comportementaux
+- positionnement entreprise d'Anthropic vs grand public pour OpenAI
+- force de Claude sur le code
+- Claude Code (interaction en terminal)
+- chronologie de Claude (mars 2023, juillet 2023, mars 2024)
+- investissements d'Amazon et de Google dans Anthropic
+- investissement Microsoft dans OpenAI (1 milliard en 2019, puis 13 milliards)
+- comparaison avec l'investissement Amazon/Google dans Anthropic
+- stratégie entreprise de Microsoft (Microsoft 365, Windows, Azure)
+- Transformer comme déclencheur d'avancées chez OpenAI et DeepMind
+- déploiement de ChatGPT comme second déclencheur
+- comparaison avec la mobilisation Covid-vaccin
+- course à l'armement autour de l'IA
+- cercle vertueux des investissements en IA et risque de bulle
+- intelligence artificielle générale (AGI)
+- coûts d'entraînement croissants (GPT-1 ~1M$, GPT-3 ~4,6M$, GPT-4 >100M$, Llama 3.1 ~700M$)
+- multimodalité (texte, image, vidéo, son)
+- CLIP et DALL-E d'OpenAI
+- démocratisation via Stable Diffusion et Midjourney
+- intégration native multimodale de GPT-4o (2023)
+- lien entre multimodalité et raisonnement agentique
+- écosystème élargi (Mistral et autres)
+- Hugging Face comme GitHub de l'IA
+- bibliothèque Transformers
+- Stability AI et Stable Diffusion en open source
+- opposition open source (Stable Diffusion) vs propriétaire (DALL-E)
+- Cohere et re-ranking
+- RAG (Retrieval Augmented Generation)
+- vectorisation de bases documentaires
+- processus de re-ranking (sélection élargie puis filtrage)
+- consommation énergétique des data centers
+- guerre des talents (comparaison marché des transferts sportifs)
+- dégradation de la qualité des données par le contenu généré par IA
+- ralentissement perçu des avancées GPT
+- scraping comme source d'enrichissement des LLM
+- boucles de contenu IA généré par IA
+- barrières à l'entrée croissantes
+- débat sur le maintien de l'open source
+- agents IA autonomes comme perspective future
+- incertitude sur l'avenir malgré la conviction des chercheurs
+- fondations techniques et écosystème solides
+- avantage compétitif des entreprises adoptant l'IA
+
+## Outils mentionnes
+- ChatGPT
+- OpenAI
+- Google
+- Anthropic
+- DeepMind
+- Nvidia
+- Claude
+- Amazon
+- Apple
+- Perceptron
+- LSTM
+- Google Translate
+- Siri
+- GRU
+- Google Assistant
+- Alexa
+- Transformer
+- Google DeepMind
+- Google Brain
+- Character AI
+- GPT
+- BERT
+- Llama
+- Meta
+- Gemini
+- GPT-3
+- Microsoft
+- GPT-3.5
+- Lambda
+- Palm
+- BARD
+- Pixel
+- Chromebook
+- Gmail
+- Google Workspace
+- FAIR
+- Constitutional AI
+- MCP
+- Claude Code
+- Microsoft 365
+- Windows
+- Azure
+- GPT-1
+- GPT-4
+- Llama 3.1
+- CLIP
+- DALL-E
+- Stable Diffusion
+- Midjourney
+- GPT-4o
+- Mistral
+- Hugging Face
+- Stability AI
+- Cohere
+- n8n
+
+## Tips techniques
+-
+
+## Cas d'usage reels
+- [[]]

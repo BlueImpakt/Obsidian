@@ -1,0 +1,189 @@
+---
+tags: [formation, millenium]
+module: Formation IA
+section: "Développer son Mindset"
+source_transcript: "0.07 Construis, Vends et Délivre.txt"
+---
+
+# 0.07 Construis, Vends et Délivre
+
+## Resume
+- Présentation du concept central de la leçon : « Learn to build, learn to sell, and you'll be unstoppable », phrase de Naval Ravikant tirée de The Almanac of Naval Ravikant. Construire signifie développer une compétence qui permet de créer à l'échelle, via deux mécanismes principaux : le code (distribuable massivement à faible coût) et le média (une vidéo peut toucher des millions de personnes). L'association de cette capacité à construire avec une capacité à vendre rend « inarrêtable ».
+- Les compétences de construction (technique) et de vente ont longtemps été opposées : un développeur est rarement un bon vendeur, et vice-versa ; réunir les deux rend inarrêtable. Construire implique un coût de reproduction quasi nul, que ce soit en code, no-code ou contenu. Exemple de Julien Cohen dont les reels sur le piano atteignent 200 millions de vues, illustrant le potentiel de diffusion du contenu.
+- Maîtriser les bases de la création de contenu ou de code à l'échelle est essentiel pour la visibilité et la diffusion. La formation enseigne l'usage d'outils no-code pour déployer des workflows chez plusieurs clients en répliquant la même structure avec de petits ajustements. Exemple donné : l'agent « espion publicitaire », reproductible auprès de n'importe quelle agence de social ads.
+- Distinction entre les « builders » (constructeurs) et les consommateurs dans l'économie digitale : les consommateurs subissent leur addiction aux réseaux sociaux tandis que les créateurs de contenu viral en récoltent les bénéfices. L'important est de maximiser l'output (diffusion large) par rapport à l'input (effort fourni), par exemple en dupliquant un même agent IA pour plusieurs clients plutôt que d'en créer un différent pour chacun. Citation complète de Naval : « learn to build or learn to sell, if you can do both ».
+- Après « apprendre à construire », vient « apprendre à vendre ». Il existe de nombreux canaux de diffusion (contenu evergreen, articles SEO, contenu viral, TikTok, Instagram, LinkedIn, publicité payante Meta/Google, outreach direct par email ou LinkedIn) et il ne faut pas hésiter à tous les utiliser pour diffuser une offre.
+- L'IA facilite aujourd'hui grandement la vente, qui reste un art à développer : comprendre les problèmes du client, identifier la valeur générée par l'offre, et maximiser le gap entre les deux. Il faut se focaliser sur la valeur et la douleur du client plutôt que sur le produit, en insistant particulièrement sur le coût humain (recrutement) qui est très cher et donc facile à valoriser commercialement.
+- Illustration chiffrée : un salarié junior en France coûte environ 100K€ par an (50K€ de salaire + charges patronales), ce qui rend une solution permettant d'éviter un recrutement facile à vendre. La vente englobe bien plus que le closing : le branding, le positionnement marché, le marketing, les offres et l'emailing en font partie intégrante. L'intervenant annonce qu'il enseignera les fondamentaux de la vente et le mindset « le monde est un terrain de jeu ».
+- Exemple de chaîne mondiale de production (chaussures fabriquées en Chine avec du caoutchouc brésilien, vendues à des Américains via un armateur français) pour illustrer qu'on peut vendre à n'importe qui dans le monde. Les entrepreneurs débutants pensent trop souvent de façon régionale : mieux vaut avoir une niche géographiquement large, car les entreprises américaines ont plus de moyens et une tolérance au risque plus élevée que les entreprises françaises.
+- Encouragement à viser au-delà de sa région ou de son pays, même sans être bilingue en anglais : la Suisse, le Canada (Québec) et la Belgique offrent de nombreuses opportunités pour les francophones.
+- L'intervenant balaie l'excuse de la peur de l'accent en anglais : aux États-Unis, la diversité des accents (grecs, allemands, français) est la norme, y compris chez les top entrepreneurs français de la Silicon Valley ou de New York. Il encourage fortement à dépasser les frontières dès qu'on a un niveau d'anglais minimal, plutôt que de se limiter à un petit marché national jugé peu propice au business.
+- Recommandation directe de cibler en priorité le Royaume-Uni, les États-Unis (marché numéro 1) ou le Canada, pays reconnus comme très orientés business, tout en rappelant qu'il y a largement de quoi faire en France si l'international n'est pas accessible.
+- Conseil pour ceux qui parlent anglais : proposer voire offrir gratuitement son service au début à des clients étrangers pour constituer une étude de cas prouvant sa valeur, avant de vendre à plus gros tarif. Grâce aux plateformes et au scraping, il n'y a plus d'excuse pour ne pas viser un mindset mondial, sauf la barrière de la langue pour les non-anglophones, qui doivent alors viser le haut du marché français.
+- Pour ceux qui ne parlent aucune langue étrangère, il faut viser le top du marché français plutôt que des petites cibles faciles comme un boulanger local. Transition vers le principe « problème égale solution » : le piège des entrepreneurs débutants est de tomber amoureux de leur solution plutôt que du problème qu'ils résolvent, ce qui explique l'échec de nombreuses startups.
+- Exemple de bon positionnement : un fondateur qui dit « j'aide les entrepreneurs à mieux gérer leurs finances perso » applique correctement la formule problème-solution (« J'aide les ___ à faire X »).
+- Plus un problème est grand, douloureux et inaccessible, plus l'opportunité commerciale est importante, car cela élimine des concurrents non qualifiés (exemple : maîtrise des flux financiers). Analogie chiffrée : un doliprane pour un mal de tête coûte 2€, une chimiothérapie contre un cancer peut coûter 50 000 à 100 000€, illustrant que le prix qu'on peut facturer est proportionnel à la douleur du problème résolu.
+- C'est le marché qui définit les problèmes, pas les solutions : une solution non alignée avec les besoins réels du marché sera ignorée. Exemple des Google Glass (2011-2013), en avance sur leur temps faute d'infrastructure et d'usages IA adaptés à l'époque, contrairement aux smart glasses actuelles (Meta, potentiellement Apple) qui intègrent transparence, éléments contextuels et traduction instantanée.
+- Les nouveaux produits résolvent souvent plusieurs problèmes à la fois : les lunettes connectées répondent par exemple à la dépendance au téléphone tout en permettant de nouveaux usages comme la traduction en temps réel grâce à l'IA.
+- Exemple de Laurent Baffie, humoriste ayant relancé sa carrière grâce aux lunettes connectées Meta pour filmer des caméras cachées en suivant son regard, un usage impossible à reproduire avec une caméra embarquée classique. Introduction du principe : le niveau de douleur multiplié par l'argent disponible dans un secteur définit le prix de vente possible, illustré par l'exemple d'une due diligence facturée 5% d'une levée de fonds de 5 millions d'euros.
+- Conseil pour maximiser les revenus : chercher des niches où l'on a une expertise adjacente, viser des problèmes qui touchent un grand nombre de personnes, coûtent cher ou ruinent leur business, et cibler en priorité les entreprises (où l'argent est vu comme un investissement) plutôt que le B2C (où l'argent est une dépense limitée).
+- Conclusion du principe problème-solution : viser les cibles où se trouvent les vrais problèmes. Recommandation de progresser quotidiennement soit dans la case « Build » (nouvel agent, workflow ou produit), soit dans la case « Sell » (marketing, vente, closing), en suivant ses progrès par exemple via un Google Sheets, et en se focalisant sur les inputs (efforts fournis) plutôt que sur les résultats attendus, sous peine de régresser dans un marché qui accélère.
+- Exemple personnel : atteindre 200 000 abonnés YouTube ne se fait pas en visualisant l'objectif mais en postant 200 vidéos en un an avec engagement total — l'input est ce sur quoi il faut se concentrer. Chiffre clé : être 1% meilleur chaque jour pendant 365 jours rend 37 fois meilleur en un an, référence au livre L'Effet Cumulé de Darren Hardy sur la discipline quotidienne. La consistance prime sur l'intensité en régime de croisière, sauf pour accélérer temporairement.
+- Transition vers « Learn to Deliver » : il faut être un « Giroud » et non un « Neymar ». Olivier Giroud a surperformé son talent de base grâce à la discipline et la constance sur 15 ans, tandis que Neymar, malgré un talent exceptionnel, a sous-performé à cause des drames, blessures, de l'omniprésence de son père et de son inconsistance, ayant finalement une carrière collective moins remplie en trophées que Giroud.
+- Conclusion de la métaphore footballistique : tout le monde admire Giroud car il incarne la surperformance par le travail, alors que Neymar laisse un sentiment d'inachevé malgré son talent. Message clé : la discipline et l'éthique de travail battent toujours l'intelligence ou le talent brut, même pour la personne la plus intelligente du monde.
+- Introduction du reverse engineering : adopter une approche pragmatique en s'inspirant de la pensée first principles d'Elon Musk pour décomposer les schémas de marketing et de vente des acteurs qui fonctionnent dans sa niche. L'intervenant annonce qu'il dévoilera ouvertement son propre modèle pour être reverse engineeré, et encourage à étudier ses concurrents (communication, acquisition clients, produits, prix), y compris en se faisant passer pour un faux client afin de récolter un maximum d'informations.
+- Après avoir reverse engineeré et adapté un modèle existant, il faut y apporter sa touche personnelle. Sur l'IA, il est crucial de verticaliser sa compétence : personne ne peut être le meilleur sur l'IA en général (comme personne n'est « le meilleur sur Windows »), mais on peut devenir le meilleur sur une niche très précise (ex : le meilleur pour aider les agences publicitaires à réduire leurs coûts grâce à des agents IA), avant d'élargir progressivement.
+- La verticalisation facilite l'identification des problèmes et permet de vendre une solution à l'échelle sans faire de sur-mesure client par client. Il faut répéter cette approche de nombreuses fois pour espérer devenir excellent, que ce soit en technique ou en business.
+- La répétition doit être intelligente : ne pas se contenter de copier-coller mais répéter des actions qui mettent légèrement en difficulté et intègrent une variation à chaque fois. On ne peut pas optimiser ce qu'on ne maîtrise pas soi-même : l'intervenant explique avoir fait lui-même ses montages vidéo avant de déléguer, pour pouvoir donner des instructions techniques précises aux monteurs. Introduction de l'importance d'être obsédé par l'expérience globale, pas seulement le produit.
+- Être obsédé par l'expérience client signifie s'intéresser à comment le client se sent avant, pendant et après l'expérience : qualité et personnalisation de l'onboarding, fiabilité des process.
+- Il faut identifier ce qui ne fonctionne pas dans l'expérience client, suivre des chiffres pour mesurer la qualité, et surtout créer des mini surprises inattendues, car les clients ont tendance à considérer le travail livré comme acquis.
+- Inspiration d'Amazon et des meilleurs acteurs pour améliorer continuellement le produit via des surprises. Il vaut mieux avoir un bon design de l'expérience globale qu'un bon design de produit seul, le produit n'étant qu'une partie de l'emballage global — analogie avec les codes du luxe. Une qualité de service exceptionnelle (plutôt que simplement correcte) est ce qui déclenche un bouche-à-oreille fort.
+- Une qualité de service exceptionnelle élimine toute hésitation du client à recommander : c'est ce changement de paradigme qui fait toute la différence dans le bouche-à-oreille. Transition vers le sujet de l'argent : il faut être obsédé par l'argent, contrairement aux diktats culturels français, car un business qui n'y pense pas est une ONG.
+- Nuance importante : c'est le business qui doit être obsédé par l'argent, pas nécessairement la personne elle-même. Il vaut mieux être obsédé par la génération d'argent que par l'argent en tant que tel.
+- Il ne faut pas être obnubilé par des signes extérieurs de richesse (comme une Rolex d'influenceur), qui relèvent de l'ego, mais être passionné par la capacité à générer de l'argent, comme un jeu. L'intervenant compare l'entrepreneuriat à un jeu vidéo de la vie réelle : ceux qui jouent avec autant de passion à « jouer leur vie » qu'à un jeu vidéo gagneraient beaucoup plus et s'amuseraient davantage, malgré les responsabilités plus lourdes de l'entrepreneuriat.
+- Conclusion : voir son entreprise comme un jeu de gestion (référence à Roller Coaster Tycoon, Football Manager), avec un budget à allouer pour améliorer chaque levier, ce qui permet de prendre les meilleures décisions en se passionnant pour le jeu réel. Cela conduit à être obsédé par la génération d'argent plutôt que par ses bénéfices personnels, ce qui apporte de la rentabilité à l'entreprise.
+
+## Concepts cles
+- Learn to build, learn to sell
+- Naval Ravikant et The Almanac of Naval Ravikant
+- construire à l'échelle
+- code et média comme mécanismes de génération de revenus
+- opposition historique entre profil technique et profil commercial
+- coût de reproduction quasi nul (code, no-code, contenu)
+- viralité du contenu
+- exemple de reels viraux (Julien Cohen)
+- réplication d'un workflow chez plusieurs clients
+- agent espion publicitaire
+- agences de social ads comme cible
+- builders vs consommateurs
+- attention comme ressource rare
+- ratio input/effort vs output/résultat
+- dupliquer un agent IA plutôt que multiplier les agents spécifiques
+- canaux de diffusion multiples
+- contenu evergreen
+- outreach direct
+- publicité payante
+- focalisation sur la valeur et la douleur du client
+- gap entre valeur perçue et coût
+- coût humain comme argument de vente
+- coût salarial junior en France (~100K€/an)
+- vente comme discipline globale (branding, marketing, offres)
+- le monde comme terrain de jeu
+- chaîne de valeur mondiale
+- niche géographiquement large
+- différence de rapport au risque France vs États-Unis
+- élargissement géographique de la cible
+- pays francophones à fort potentiel (Suisse, Québec, Belgique)
+- complexe de l'accent en anglais
+- diversité des accents aux États-Unis
+- entrepreneurs français réussissant à l'international
+- hiérarchie des marchés cibles à l'international
+- États-Unis comme marché prioritaire
+- étude de cas gratuite pour prouver sa valeur
+- mindset mondial vs régional
+- scraping pour prospecter à l'international
+- viser haut même sur le marché local
+- tomber amoureux du problème plutôt que de la solution
+- échec des startups par excès de focalisation sur le produit
+- formule de positionnement 'j'aide les ___ à faire X'
+- problème douloureux = opportunité plus grande
+- corrélation entre douleur du problème et prix acceptable
+- analogie doliprane vs chimiothérapie
+- le marché définit les problèmes, pas l'inverse
+- Google Glass en avance sur son temps
+- smart glasses modernes et cas d'usage IA
+- produit résolvant plusieurs problèmes simultanément
+- traduction en temps réel via IA
+- Laurent Baffie et les lunettes connectées Meta
+- douleur x argent disponible = prix de vente possible
+- due diligence facturée en pourcentage d'une levée de fonds
+- niches à expertise adjacente
+- problèmes coûteux et généralisés comme cibles prioritaires
+- B2B vs B2C : argent investissement vs dépense
+- progression quotidienne alternée Build/Sell
+- suivi des accomplissements
+- focalisation sur les inputs plutôt que les résultats
+- exemple des 200 vidéos pour atteindre 200 000 abonnés
+- règle des 1% par jour = x37 en un an
+- consistance vs intensité
+- Learn to Deliver
+- Giroud vs Neymar comme métaphore discipline vs talent
+- surperformance par la constance
+- discipline et éthique de travail supérieures au talent
+- identification du public à la surperformance
+- reverse engineering des concurrents
+- pensée first principles (référence à Musk)
+- étude concurrentielle sur communication, prix et acquisition
+- verticalisation de la compétence en IA
+- impossibilité d'être le meilleur généraliste en IA
+- exemple de niche verticalisée : réduction de coûts pub pour agences
+- vente à l'échelle sans customisation individuelle
+- répétition nécessaire pour l'excellence
+- répétition intelligente avec variation
+- maîtriser soi-même avant de déléguer et d'optimiser
+- expérience globale vs produit seul
+- expérience client avant/pendant/après
+- qualité de l'onboarding
+- suivi de métriques de qualité de service
+- création de surprises inattendues pour le client
+- inspiration Amazon pour l'amélioration produit
+- design de l'expérience globale vs design produit
+- codes du luxe appliqués à la qualité de service
+- bouche-à-oreille déclenché par l'excellence
+- bouche-à-oreille par l'excellence de service
+- obsession de l'argent en entreprise
+- opposition business vs ONG
+- distinction entre obsession personnelle et obsession du business pour l'argent
+- génération d'argent vs possession d'argent
+- signes extérieurs de richesse liés à l'ego
+- entrepreneuriat comme jeu vidéo de la vraie vie
+- passion pour la génération d'argent plutôt que pour l'argent lui-même
+- entreprise vue comme un jeu de gestion
+- allocation de budget pour optimiser des leviers
+- obsession de la génération d'argent comme moteur de rentabilité
+
+## Outils mentionnes
+- TikTok
+- Instagram
+- LinkedIn
+- Meta Ads
+- Google Ads
+- Google Glass
+- Meta (lunettes connectées)
+- lunettes connectées Meta (Ray-Ban Meta)
+- Google Sheets
+- Amazon (référence)
+- Roller Coaster Tycoon (référence)
+- Football Manager (référence)
+
+## Tips techniques
+- Une fois un workflow mis en place chez un client, le répliquer avec de petits ajustements chez d'autres clients ou entreprises plutôt que de repartir de zéro
+- Privilégier la duplication d'un même agent/workflow sur plusieurs clients (X, Y, Z) plutôt que de créer un agent différent pour chaque cas, afin de multiplier le revenu sans multiplier l'effort
+- Ne pas se limiter à un seul canal pour diffuser une offre : combiner contenu evergreen, SEO, contenu viral, réseaux sociaux, publicité payante et outreach direct
+- Se concentrer sur la valeur apportée et la douleur du client plutôt que sur les caractéristiques du produit pour faciliter la vente
+- Avoir une niche la plus large possible géographiquement plutôt que de se cantonner à sa région
+- Cibler la Suisse, le Québec ou la Belgique si l'on ne parle pas anglais, pour élargir son marché sans barrière de langue
+- Ne pas laisser un accent en anglais freiner la prospection à l'international
+- Prioriser Royaume-Uni, États-Unis ou Canada comme marchés cibles avant de se rabattre sur la France
+- Offrir son service gratuitement au début à un client étranger pour créer une étude de cas prouvant sa valeur, puis vendre plus cher ensuite
+- Utiliser le scraping et les plateformes pour prospecter au-delà de sa région sans excuse
+- Se méfier d'un discours commercial qui commence par vanter la solution avant d'avoir présenté le problème
+- Formuler son positionnement selon le modèle 'J'aide les [cible] à faire [résultat]' pour bien articuler problème et solution
+- Cibler les entreprises plutôt que les particuliers B2C, car pour elles l'argent dépensé est perçu comme un investissement et non une simple dépense
+- Progresser chaque jour soit en Build soit en Sell, et suivre ses accomplissements dans un tableau (type Google Sheets) pour éviter la stagnation
+- Se focaliser sur les inputs (efforts mis en œuvre) plutôt que sur les résultats attendus
+- Se concentrer sur l'input mesurable (ex : nombre de vidéos postées) plutôt que sur l'objectif final pour progresser efficacement
+- Privilégier la consistance quotidienne à l'intensité ponctuelle, sauf besoin ponctuel d'accélération
+- Étudier en détail ses concurrents (communication, canaux, offres, prix) et ne pas hésiter à se faire passer pour un faux client pour obtenir des informations complètes
+- Copier un système qui fonctionne déjà puis l'améliorer, plutôt que de repartir de zéro
+- Verticaliser sa compétence sur une niche très précise plutôt que de viser une expertise générale en IA, puis élargir progressivement une fois la niche maîtrisée
+- Répéter des tâches en y ajoutant à chaque fois une légère difficulté ou variation plutôt que de faire du copier-coller
+- Maîtriser soi-même une compétence (ex : montage vidéo) avant de la déléguer, pour pouvoir donner des instructions précises et l'optimiser efficacement
+- Évaluer son onboarding selon des critères précis : personnalisation, humanité, fiabilité
+- Créer des mini surprises inattendues dans l'expérience client pour dépasser le simple travail attendu
+- S'inspirer des codes du secteur du luxe pour soigner la qualité de service globale, pas seulement le produit lui-même
+- Se concentrer sur quel levier actionner pour augmenter ses revenus ou sa marge, plutôt que sur les signes extérieurs de richesse
+- Penser la gestion de son entreprise comme un jeu de gestion (type Football Manager) : allouer un budget et identifier quels leviers actionner pour améliorer chaque aspect
+
+## Cas d'usage reels
+- [[]]

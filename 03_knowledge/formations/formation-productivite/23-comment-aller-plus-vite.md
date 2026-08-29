@@ -1,0 +1,190 @@
+---
+tags: [formation, millenium]
+module: Formation Productivite
+section: "Aller plus loin"
+source_transcript: "23. Comment aller plus vite.txt"
+---
+
+# 23. Comment aller plus vite ?
+
+## Resume
+- Introduction à l'accélération de l'utilisation de l'ordinateur (Mac ou PC), en commençant par la présentation du concept de launcher.
+- Présentation de Wox, l'unique launcher open source et gratuit disponible sur Windows, une alternative aux options Mac.
+- Description des capacités générales d'un launcher : interagir avec l'ordinateur, applications externes, systèmes de recherche, calculs, lancement d'apps.
+- Présentation de Raycast comme launcher principal démontré, transposable à d'autres outils équivalents comme Alfred, l'ancêtre historique.
+- Comparaison entre Alfred (approche no-code puissante) et Raycast, avec préférence personnelle pour un usage plus léger de ces outils.
+- Détail tarifaire d'Alfred Power Pack (environ 40€/an), présenté comme un outil pouvant transformer en profondeur la productivité quotidienne.
+- Explication de la création de raccourcis personnalisés type interaction humain-ordinateur, avec avantage d'Alfred pour des workflows plus complexes sans code.
+- Nuance que Raycast nécessite de toucher au code pour personnaliser mais offre plus d'extensions et un potentiel à long terme jugé supérieur.
+- Démonstration pratique des paramètres Raycast, avec présentation de la barre de recherche centrale et de la possibilité d'ajouter des extensions et une fonction IA.
+- Confirmation d'un usage gratuit satisfaisant de Raycast, avec démonstration de l'extension Cal donnant accès instantané au planning de la journée.
+- Démonstration de navigation rapide dans le calendrier avec reconnaissance automatique des liens Zoom associés aux événements.
+- Présentation de l'extension Arc permettant de naviguer directement dans les onglets du navigateur via la recherche de tabs.
+- Présentation de l'extension GPT Tab permettant de poser directement des questions à ChatGPT sans quitter le launcher.
+- Configuration de la clé API via commande K pour connecter l'extension ChatGPT et accéder à l'historique de ses conversations.
+- Confirmation de l'intérêt de l'extension pour contourner l'interface jugée moins pratique de ChatGPT natif, avec accès rapide aux réponses.
+- Démonstration en direct d'une question posée via l'extension, avec réponse instantanée affichée sans quitter le launcher.
+- Présentation des actions disponibles sur une conversation générée : possibilité d'épingler ou de retirer une conversation selon le besoin.
+- Mention de la possibilité de changer de modèle IA (GPT-3.5 Turbo par défaut) selon l'abonnement disponible, avant transition vers d'autres extensions.
+- Présentation de l'historique de presse-papier remontant jusqu'à trois mois en arrière, une fonctionnalité jugée incroyable pour gagner du temps.
+- Présentation de Cleanshot, application Mac d'enregistrement d'écran avec configuration de hotkeys personnalisables permettant un gain de temps considérable.
+- Explication du système de déclenchement par alias (2-3 lettres) ou hotkey, avec exemple de recherche d'adresse autour de son domicile via Google Maps.
+- Démonstration de l'alias travel qui génère automatiquement un itinéraire Google Maps depuis l'adresse du domicile enregistrée.
+- Présentation de la fonctionnalité floating note pour des notes persistantes, et de kill process pour forcer la fermeture rapide d'applications buggées.
+- Présentation de l'extension Iconify permettant de rechercher et copier des icônes au format SVG directement utilisables (notamment sur Figma).
+- Démonstration d'accès direct au contenu d'une page Notion via le launcher, sans besoin d'ouvrir l'application Notion elle-même.
+- Confirmation du gain de temps de cette fonctionnalité, disponible également pour Obsidian et pratiquement tous les autres outils imaginables.
+- Démonstration de l'extension Numi pour effectuer des calculs et conversions rapides directement dans le launcher (exemple d'heure à San Francisco).
+- Présentation de la reconnaissance de langage naturel de Numi pour les calculs (ex : dans 15 jours plus 3 heures), une calculette intelligente avancée.
+- Confirmation que cette calculette intelligente peut être déclenchée à tout moment, avec exemple supplémentaire de recherche de date (Next Tuesday).
+- Démonstration de conversion de devises instantanée (euros vers dollars, yens) et présentation d'un quick calendar pour se repérer dans les jours.
+- Démonstration de création de quick links personnalisés (ex : LK pour LinkedIn) permettant d'accéder instantanément à n'importe quel lien fréquent.
+- Configuration avancée d'un quick link s'ouvrant directement dans l'application Notion plutôt que dans le navigateur, un détail très apprécié.
+- Présentation de la recherche YouTube directement dans le launcher via clé API, affichant le nombre de vues sans quitter l'interface.
+- Démonstration de shortcuts personnels lançant automatiquement des actions de capture sans passer par l'interface classique de l'application.
+- Exemple d'intégration Spotify permettant de passer à la chanson suivante par simple raccourci, sans ouvrir l'application musicale.
+- Présentation de la fonctionnalité de gestion des fenêtres (window management) intégrée, permettant d'organiser l'écran par raccourcis clavier personnalisables.
+- Démonstration détaillée des raccourcis de positionnement de fenêtre : centrage, division en tiers ou en deux tiers selon la combinaison de touches.
+- Mention des scripts avancés (non utilisés personnellement, plus techniques) et rappel des fonctionnalités de lancement d'applications et quick links.
+- Présentation de la gestion des snippets (ex : description YouTube) et d'un speed test intégré pour vérifier la vitesse de connexion internet.
+- Exploration du store d'extensions avec présentation de Prompt Lab, un outil aidant à créer et réutiliser des prompts.
+- Présentation d'un color picker intégré et de l'intégration Google Translate, alternative à ChatGPT pour la traduction rapide.
+- Comparaison avec un store type ChatGPT, avec double avantage : accessibilité directe depuis la barre et interaction avec les éléments locaux du Mac.
+- Reconnaissance que l'écosystème Windows est plus limité pour ce type d'outil, avec engagement de mettre à jour si une alternative équivalente est trouvée.
+- Introduction de Keyboard Maestro, utilisé principalement pour ajouter des raccourcis clavier manquants dans certaines applications.
+- Démonstration d'enregistrement d'une macro combinant plusieurs actions (copier, coller, déplacement) pour automatiser une séquence répétitive.
+- Configuration de la répétition automatique d'une macro (repeat macro), avec mise en garde de ne pas toucher le clavier pendant l'exécution.
+- Explication du schéma de macro répétitive (copier-coller alterné gauche-droite) utilisé principalement pour compenser les raccourcis clavier manquants dans Notion.
+- Exemple concret d'usage : un raccourci Keyboard Maestro permettant de revenir automatiquement à un emplacement précis (Factory) dans Notion.
+- Confirmation que Keyboard Maestro fonctionne dans n'importe quelle application pour automatiser n'importe quelle séquence d'actions via raccourci.
+- Précision tarifaire : cinq macros gratuites suffisantes pour l'usage personnel, avec transition vers d'autres outils utiles (limités à Mac).
+- Présentation d'un outil de command palette universelle (commande+shift+P) similaire à celle de Notion, mais applicable à tout le système.
+- Mise en garde sur le risque de surcharge : cet outil liste tous les raccourcis clavier par application, utile seulement si on en oublie beaucoup.
+- Présentation d'un outil intégrant ChatGPT directement dans n'importe quelle application, avec fonction inline reply pour générer une réponse par défaut.
+- Recommandation forte de cet outil récent permettant d'ajouter l'IA à des logiciels archaïques comme Word, utilisable universellement.
+- Introduction de Hazel, un outil rangeant automatiquement les fichiers selon des règles conditionnelles configurées à l'avance.
+- Exemple concret de règle Hazel : ranger automatiquement dans le dossier miniatures tout fichier téléchargé provenant de PixelMator.
+- Autre exemple de règle Hazel pour les factures rangées automatiquement, avec recommandation alternative de Make ou des filtres Gmail pour l'automatisation.
+- Introduction d'outils de type Keybr/Typing Tutor pour améliorer la vitesse de frappe, nécessitant un investissement personnel en entraînement.
+- Contexte d'usage passé de ces outils de frappe, avec réflexion personnelle sur le niveau de vitesse jugé désormais suffisant.
+- Précision que la frappe sans regarder le clavier est acquise, avec recommandation générale de tout faire au clavier pour ceux visant plus de vitesse.
+- Anecdote d'un ami en finance au Canada dont le maître de stage lui a retiré la souris dès le premier jour pour le forcer à utiliser le clavier.
+- Recommandation d'explorer le menu File de chaque application pour découvrir et apprendre progressivement tous les raccourcis clavier disponibles.
+- Suggestion d'utiliser une command palette (Raycast) pour apprendre progressivement les raccourcis, notamment sur les outils de montage vidéo et d'édition.
+- Explication ergonomique du problème du va-et-vient clavier-souris causant une tension au poignet, avec recommandation de garder la main à plat.
+- Précision de la position ergonomique optimale selon la dominance manuelle, avec constat que la plupart des outils modernes intègrent désormais des raccourcis clavier.
+
+## Concepts cles
+- introduction à l'accélération de l'ordinateur via un launcher
+- présentation de Wox, launcher open source gratuit sur Windows
+- description des capacités générales d'un launcher (recherche, calculs, apps)
+- présentation de Raycast comme launcher principal (transposable à Alfred)
+- comparaison Alfred (no-code puissant) vs usage léger préféré
+- détail tarifaire d'Alfred Power Pack (~40€/an)
+- explication de la création de raccourcis complexes sans code (avantage Alfred)
+- nuance : Raycast nécessite du code mais offre plus d'extensions à long terme
+- démonstration pratique des paramètres Raycast (barre de recherche, fonction IA)
+- confirmation d'usage gratuit satisfaisant et démonstration de l'extension Cal
+- démonstration de navigation calendrier avec reconnaissance automatique de liens Zoom
+- présentation de l'extension Arc pour naviguer dans les onglets du navigateur
+- présentation de l'extension GPT Tab pour interroger ChatGPT sans quitter le launcher
+- configuration de la clé API pour connecter l'extension ChatGPT
+- confirmation de l'intérêt de contourner l'interface ChatGPT native
+- démonstration en direct d'une question avec réponse instantanée
+- présentation des actions disponibles (épingler, retirer une conversation)
+- mention de la possibilité de changer de modèle IA selon l'abonnement
+- présentation de l'historique de presse-papier sur trois mois
+- présentation de Cleanshot avec hotkeys personnalisables
+- explication du déclenchement par alias ou hotkey (exemple Google Maps)
+- démonstration de l'alias travel générant un itinéraire automatique
+- présentation de floating note et kill process (fermeture rapide d'apps buggées)
+- présentation d'Iconify pour rechercher et copier des icônes SVG
+- démonstration d'accès direct au contenu Notion sans ouvrir l'application
+- confirmation de la disponibilité de cette fonctionnalité pour Obsidian et d'autres outils
+- démonstration de Numi pour calculs et conversions rapides
+- présentation de la reconnaissance de langage naturel de Numi pour les calculs
+- confirmation du déclenchement à tout moment avec exemple de recherche de date
+- démonstration de conversion de devises instantanée et quick calendar
+- démonstration de création de quick links personnalisés (raccourcis vers des liens fréquents)
+- configuration avancée d'un quick link s'ouvrant directement dans l'application Notion
+- présentation de la recherche YouTube directement dans le launcher avec vues affichées
+- démonstration de shortcuts lançant des actions de capture automatiques
+- exemple d'intégration Spotify pour changer de chanson par raccourci
+- présentation de la gestion des fenêtres intégrée par raccourcis clavier
+- démonstration détaillée des raccourcis de positionnement de fenêtre
+- mention des scripts avancés et rappel du lancement d'applications
+- présentation des snippets et du speed test intégré
+- présentation de Prompt Lab pour créer et réutiliser des prompts
+- présentation d'un color picker intégré et de Google Translate
+- comparaison avec un store type ChatGPT (accessibilité et interaction locale)
+- reconnaissance de la limitation de l'écosystème Windows pour ce type d'outil
+- introduction de Keyboard Maestro pour ajouter des raccourcis manquants
+- démonstration d'enregistrement d'une macro combinant plusieurs actions
+- configuration de la répétition automatique de macro avec mise en garde
+- explication de l'usage principal pour compenser les raccourcis manquants dans Notion
+- exemple concret d'usage pour revenir à un emplacement précis dans Notion
+- confirmation de l'universalité de Keyboard Maestro (toute application)
+- précision tarifaire : cinq macros gratuites suffisantes (transition vers Mac uniquement)
+- présentation d'une command palette universelle (commande+shift+P)
+- mise en garde sur le risque de surcharge d'information (trop de raccourcis listés)
+- présentation d'un outil intégrant ChatGPT partout (inline reply)
+- recommandation forte d'un outil ajoutant l'IA aux logiciels archaïques (Word)
+- introduction de Hazel pour ranger automatiquement les fichiers par règles
+- exemple concret de règle Hazel pour ranger automatiquement les miniatures
+- exemple de règle Hazel pour les factures et alternative Make/filtres Gmail
+- introduction d'outils d'entraînement à la vitesse de frappe (Keybr)
+- réflexion personnelle sur le niveau de vitesse de frappe jugé suffisant
+- recommandation générale de tout faire au clavier pour plus de vitesse
+- anecdote d'un maître de stage retirant la souris pour forcer le clavier
+- recommandation d'explorer le menu File pour apprendre les raccourcis disponibles
+- suggestion d'utiliser une command palette pour apprendre progressivement les raccourcis
+- explication ergonomique du problème de tension au poignet (va-et-vient souris)
+- précision de la position ergonomique optimale et constat de l'intégration générale des raccourcis
+
+## Outils mentionnes
+- Wox
+- Raycast
+- Alfred
+- Zoom
+- Arc
+- ChatGPT
+- Cleanshot
+- Google Maps
+- Figma
+- Notion
+- Obsidian
+- Numi
+- LinkedIn
+- YouTube
+- Spotify
+- Google Translate
+- Keyboard Maestro
+- Word
+- Hazel
+- PixelMator
+- Make
+- Gmail
+
+## Tips techniques
+- Utiliser une extension de launcher connectée à ChatGPT pour poser des questions instantanément sans changer de fenêtre ni ouvrir de navigateur
+- Utiliser un historique de presse-papier étendu (plusieurs mois) pour retrouver rapidement n'importe quel élément copié précédemment
+- Configurer des alias courts (2-3 lettres) pour déclencher instantanément des actions fréquentes, plutôt que de naviguer manuellement dans les menus
+- Utiliser une fonction kill process pour fermer instantanément une application buguée, plutôt que d'attendre indéfiniment sa réponse
+- Accéder directement au contenu d'une page depuis le launcher plutôt que d'ouvrir l'application complète, pour un gain de temps considérable
+- Utiliser une calculette en langage naturel (ex : Numi) pour des calculs de dates ou durées, plutôt qu'une calculatrice classique nécessitant une syntaxe rigide
+- Utiliser la conversion de devises instantanée intégrée au launcher plutôt qu'un site web dédié, pour des conversions rapides en cours de frappe
+- Créer des quick links personnalisés avec des alias courts et mémorables pour accéder instantanément aux liens et vues consultés fréquemment
+- Configurer un quick link pour qu'il s'ouvre directement dans l'application native (Notion) plutôt que dans un onglet de navigateur, pour une expérience plus fluide
+- Configurer une recherche YouTube directement intégrée au launcher (via clé API) pour consulter rapidement des statistiques comme le nombre de vues
+- Utiliser la gestion de fenêtres intégrée au launcher pour organiser rapidement son écran par raccourcis clavier, sans glisser-déposer manuel
+- Configurer une macro en répétition automatique pour des actions répétitives au pattern identique, en évitant toute interaction clavier pendant l'exécution
+- Utiliser une command palette universelle accessible par raccourci (commande+shift+P) pour retrouver n'importe quelle action système, comme dans Notion
+- Utiliser un outil d'IA universel injectable dans n'importe quelle application, même les plus archaïques (Word), pour bénéficier de l'assistance IA partout
+- Configurer un outil de rangement automatique de fichiers (Hazel) basé sur des règles conditionnelles, pour éliminer le tri manuel répétitif
+- Utiliser Make ou les filtres Gmail comme alternative à un outil de rangement local pour automatiser le classement des documents reçus par email
+- S'imposer une contrainte radicale (se priver de souris) pour forcer l'apprentissage accéléré des raccourcis clavier, une méthode brutale mais efficace
+- Explorer systématiquement le menu File de chaque application pour découvrir la liste complète de ses raccourcis clavier disponibles
+- Limiter les allers-retours clavier-souris pour réduire la tension ergonomique au poignet, en gardant la main à plat sur le clavier autant que possible
+
+## Cas d'usage reels
+- [[]]
