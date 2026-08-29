@@ -276,7 +276,7 @@ tips techniques, patterns). C'est une base volumineuse (des centaines de chunks)
 **elle ne doit jamais être copiée telle quelle dans ce vault** (c'est exactement le
 piège "tout-RAG" que la masterclass déconseille : ça ferait exploser le contexte).
 
-Deux ponts, l'un construit, l'autre pas encore :
+Trois ponts, tous construits et opérationnels :
 
 1. **Synthèses statiques (fait, 2026-08-29)** : `C:\Users\LENOVO\Documents\Millenium\export_millenium_notes.py`
    exporte une note markdown **par leçon** (270 leçons, pas par chunk — 6605 chunks
@@ -306,6 +306,12 @@ Deux ponts, l'un construit, l'autre pas encore :
    l'enregistrement, ou corpus insuffisant). Distingue toujours clairement dans
    la réponse ce qui vient de la formation vs du web. À utiliser plutôt que
    `millenium-rag` quand une info a des chances d'être périmée.
+
+**Ajouter une nouvelle leçon au RAG** (masterclass, replay, cours) : suivre
+[[ajouter-lecon-au-rag-millenium]] — processus en 9 étapes battle-tested (chunking,
+enrichissement avec méthode anti-décalage d'ID, vérification obligatoire, export
+vers ce vault), écrit à partir de l'ajout réel de la masterclass Claude Code +
+Obsidian d'Alexis Buhaj.
 
 ---
 
