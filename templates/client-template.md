@@ -5,6 +5,8 @@ statut: lead
 priorite: p2
 secteur:
 localisation:
+origine_lead:
+tjm:
 ---
 
 # <% tp.file.title %>
@@ -21,8 +23,12 @@ localisation:
 ## Besoins identifiés
 -
 
-## Devis / propositions
--
+## Commercial
+- **Origine du lead** :
+- **TJM / tarif pratiqué** :
+- **Devis en cours** :
+- **Facturé à ce jour** :
+- **Prochaine échéance** :
 
 ## Next actions
 - [ ]
@@ -31,5 +37,5 @@ localisation:
 -
 
 ## Liens
-- Projets : [[]]
-- Patterns utilisés : [[]]
+- Projets :
+- Patterns utilisés :

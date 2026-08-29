@@ -4,18 +4,18 @@ tags: [dashboard]
 
 # Dashboard Blue Impakt
 
-> Vue vivante générée par Dataview/Tasks. Rien n'est écrit à la main ici — tout est recalculé à l'ouverture. Nécessite les plugins **Dataview** et **Tasks** (voir CLAUDE.md).
+> Vue vivante générée par Dataview/Tasks. Rien n'est écrit à la main ici — tout est recalculé à l'ouverture.
 
-## Clients P1 actifs
+## Clients par priorité
 ```dataview
-TABLE statut, secteur, localisation
+TABLE statut, priorite, secteur, localisation
 FROM "01_clients"
-WHERE contains(tags, "p1")
+SORT priorite ASC
 ```
 
 ## Clients par statut
 ```dataview
-TABLE statut
+TABLE rows.file.link AS Clients
 FROM "01_clients"
 GROUP BY statut
 ```
@@ -46,5 +46,6 @@ LIMIT 10
 ## Toutes les actions ouvertes
 ```tasks
 not done
-path includes 01_clients OR path includes 02_projects OR path includes 00_inbox
+(path includes 01_clients) OR (path includes 02_projects) OR (path includes 00_inbox)
+description regex matches /\S/
 ```

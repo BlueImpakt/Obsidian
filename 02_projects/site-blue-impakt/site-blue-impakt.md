@@ -33,5 +33,5 @@ client: blue-impakt
 
 ## Liens
 - Client : [[blue-impakt]]
-- Patterns utilisés : [[]]
+- Patterns utilisés :
 - Repo / deployment : https://github.com/BlueImpakt/Site-web (Cloudflare Pages, projet `blue-impakt`)

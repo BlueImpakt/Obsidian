@@ -1,5 +1,5 @@
 ---
-tags: [project, actif, naeco]
+tags: [project, encours, naeco]
 created: 2026-08-29
 statut: encours
 client: naeco
@@ -40,5 +40,5 @@ client: naeco
 
 ## Liens
 - Client : [[naeco]]
-- Patterns utilisés : [[]]
+- Patterns utilisés : [[jsonbin-source-de-verite]]
 - Repo / deployment : https://github.com/NAECOEXPEDITION/naeco-carte

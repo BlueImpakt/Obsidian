@@ -1,5 +1,5 @@
 ---
-tags: [project, actif, esprit-docker]
+tags: [project, encours, esprit-docker]
 created: 2026-08-29
 statut: encours
 client: esprit-docker
@@ -38,5 +38,5 @@ client: esprit-docker
 
 ## Liens
 - Client : [[esprit-docker]]
-- Patterns utilisés : [[]]
+- Patterns utilisés : [[pipeline-assets-produit-ecommerce]]
 - Repo / deployment : https://github.com/espritdocker/esprit-docker (Cloudflare Pages, R2, Neon)

@@ -38,4 +38,4 @@ client: blue-impakt
 
 ## Liens
 - Repo / deployment : https://github.com/BlueImpakt/KM0 (backend NestJS + frontend Vite/Vercel)
-- Patterns utilisés : [[]]
+- Patterns utilisés :

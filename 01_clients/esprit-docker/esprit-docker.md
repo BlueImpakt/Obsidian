@@ -35,4 +35,4 @@ localisation: france
 
 ## Liens
 - Projets : [[esprit-docker-site]]
-- Patterns utilisés : [[]]
+- Patterns utilisés : [[pipeline-assets-produit-ecommerce]]

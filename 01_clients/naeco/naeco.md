@@ -34,4 +34,4 @@ localisation: france
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
-- Patterns utilisés : [[]]
+- Patterns utilisés : [[jsonbin-source-de-verite]]

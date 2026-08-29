@@ -29,6 +29,6 @@ client:
 -
 
 ## Liens
-- Client : [[]]
-- Patterns utilisés : [[]]
+- Client :
+- Patterns utilisés :
 - Repo / deployment : 

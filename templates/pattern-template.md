@@ -18,4 +18,4 @@ type:
 ```
 
 ## Cas d'usage réels
-- [[]]
+-
