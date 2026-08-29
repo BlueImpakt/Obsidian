@@ -1,0 +1,26 @@
+{
+  "data_version": 2,
+  "command_timeout": 5,
+  "templates_folder": "templates",
+  "templates_pairs": [],
+  "trigger_on_file_creation": true,
+  "trigger_on_file_creation_mode": "folder",
+  "auto_jump_to_cursor": false,
+  "jump_to_cursor_after_file_name": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "folder_templates": [
+    { "folder": "01_clients", "template": "templates/client-template.md" },
+    { "folder": "02_projects", "template": "templates/project-template.md" },
+    { "folder": "06_reunions/cr", "template": "templates/cr-reunion-template.md" },
+    { "folder": "06_reunions/prepa", "template": "templates/prepa-reunion-template.md" },
+    { "folder": "00_inbox", "template": "templates/daily-note-template.md" },
+    { "folder": "03_knowledge/patterns", "template": "templates/pattern-template.md" }
+  ],
+  "file_templates": [],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [],
+  "startup_templates": [],
+  "ignore_folders_on_creation": []
+}
