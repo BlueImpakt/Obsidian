@@ -24,7 +24,8 @@
 - Jargon marketing vide
 
 ### Brand voice Blue Impakt
-**"[YOUR_ONE_LINER_PITCH — à affiner une fois le positionnement stabilisé]"**
+**"L'IA au service de l'environnement et de l'humain"**
+→ Accompagnement associations environnementales et entreprises à impact : automatisations, agents IA, développement web, conseil stratégique
 → Credibilité terrain + expertise tech, ton direct façon Alexis (masterclass Millenium) : pas de storytelling creux, on montre ce qui marche
 
 ---
@@ -59,7 +60,7 @@
 
 **Priorités** : `#p1` / `#p2` / `#p3`
 
-**Secteurs** : à affiner au fil des clients (ex: `#tech`, `#artisanat`, `#commerce`, `#services`, `#coaching`) — pas de vertical figé pour l'instant, activité généraliste IA/automatisation/no-code
+**Secteurs** : `#environnement` `#impact` en priorité (positionnement du site) ; sinon au cas par cas (`#tech`, `#artisanat`, `#commerce`, `#services`)
 
 **Localisations** : `#france` `#remote` (zone de prospection : France entière / remote)
 
@@ -259,7 +260,7 @@ Quand je dis **"ingère"**, voici la séquence exacte :
 - **Content/Social** : LinkedIn (voir `content-feed.md` + workflow de syndication décrit dans la masterclass Alexis)
 
 ### Web & analytics
-- **Site** : pas encore de site Blue Impakt
+- **Site** : repo `github.com/BlueImpakt/Site-web` (statique, index.html), déployé via Cloudflare Pages/Wrangler (`wrangler.toml`, projet `blue-impakt`)
 - **DNS/Email** : à définir
 - **Analytics** : à définir
 
@@ -288,8 +289,8 @@ Statut : pas encore construit — à faire au prochain passage sur le vault.
 ## Contexte business actuel
 
 ### ICP (Ideal Customer Profile)
-- **Primary ICP** : indépendants/TPE en France/remote, cherchant à automatiser (agents IA, n8n) ou digitaliser (no-code/web) sans compétence technique interne
-- **Vertical strength** : polyvalence IA + no-code + consulting plutôt qu'un secteur unique — à resserrer une fois quelques missions faites
+- **Primary ICP** : associations environnementales et entreprises à impact, France/remote, cherchant à automatiser (agents IA, n8n) ou digitaliser (no-code/web) sans compétence technique interne
+- **Vertical strength** : secteur impact/environnement — positionnement affiché sur le site Blue Impakt, à faire vivre dans le choix des clients et le contenu LinkedIn
 - **Active outreach** : pas encore de campagne active
 
 ### Deals actifs (mis à jour 2026-08-29)
@@ -328,8 +329,8 @@ Une fois fait, cette section liste les clients actifs avec leur statut :
 `#client #[statut] #[priorité] #[secteur] #[localisation]`
 
 **Exemples** :
-- `#client #lead #p2 #artisanat #france`
-- `#client #actif #p1 #services #remote`
+- `#client #lead #p2 #environnement #france`
+- `#client #actif #p1 #impact #remote`
 
 ### Projets
 `#project #[statut] #[nom-client]`
