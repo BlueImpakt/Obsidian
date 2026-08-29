@@ -290,10 +290,16 @@ Deux ponts, l'un construit, l'autre pas encore :
    module (ex. bug source "Productivite"/"Productivité" corrigé côté export, pas
    dans la base). À relancer après un nouveau lot d'enrichissement côté Millenium
    pour resynchroniser.
-2. **Requête à la demande (pas construit)** : un petit script consultant
-   `chunks_db.sqlite` directement pour des recherches plus fines que les synthèses
-   statiques (ex. recherche plein texte dans `texte_brut`) — à faire si le besoin se
-   présente. Jamais chargé en bloc dans le contexte.
+2. **Requête à la demande (fait — déjà existant avant même ce vault, redécouvert le 2026-08-29)** :
+   `C:\Users\LENOVO\Documents\Millenium\query_rag.py` fait de la vraie recherche
+   sémantique (pas mot-clé) sur les 6605 chunks bruts — embedding
+   `intfloat/multilingual-e5-small` + re-ranking cross-encoder, **100% local et
+   gratuit**, aucun appel API payant. Emballé en skill Claude Code
+   (`~/.claude/skills/millenium-rag/`), invocable depuis n'importe quelle session
+   (vault ou autre projet) sans changer de dossier. À utiliser quand l'index léger
+   des notes de synthèse (`03_knowledge/formations/`) ne suffit pas — plus lent
+   mais plus précis, retrouve un passage même si la question est formulée
+   différemment du texte source.
 
 ---
 
