@@ -31,6 +31,7 @@ localisation: france
 
 ## Journal
 - 2026-08-29 : Repos identifiés (`NAECOEXPEDITION/naeco-site`, `NAECOEXPEDITION/naeco-carte`), fiche client créée
+- 2026-08-31 : Bug de race condition résolu sur [[naeco-carte]] (tracés d'expédition écrasés pendant l'édition), déployé. Détails dans la fiche projet et `03_knowledge/troubleshooting.md`.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

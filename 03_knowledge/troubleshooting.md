@@ -33,3 +33,13 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Contrepartie assumée** : un vrai `/clear` avec du travail neuf dans les 180 s suivant une ingestion est différé — mais le `/clear` qualifiant suivant ré-scanne **toutes** les sessions non ingérées (rien n'est perdu), et `/good-night` balaie le soir.
 
 **Vérif OK** = trace avec **1 seul** `LAUNCHED` puis des `SKIP (... < 180s)` / `SKIP (session issue de l ingestion)`, sans cascade.
+
+## [[naeco-carte]] — tracés d'expédition qui reviennent à leur position initiale en cours d'édition
+
+**Symptôme** : en mode éditeur, un tracé déplacé revient parfois tout seul à sa position d'avant, sans intervention.
+
+**Root cause** : race condition au chargement de la page. Le `fetch` JSONbin `/latest` (asynchrone, 2-10 s de latence typique sur l'offre gratuite) répond parfois **après** que l'utilisateur soit entré en mode édition et ait déjà modifié un tracé. Le `.then()` du fetch remplaçait alors `expeditions` **sans aucune condition**, écrasant la modif en cours à l'écran et dans le localStorage — indépendamment de toute action de l'utilisateur.
+
+**Fix** : flag `localDirty` passé à `true` dans l'intercepteur d'écriture locale (`ls_set`, `index.html:545-547`) ; garde ajoutée dans le `.then()` du chargement distant (`index.html:2620-2627`) qui ignore la réponse JSONbin si `localDirty` ou mode édition actif. Une fois qu'une modif locale a eu lieu, le chargement distant est volontairement sauté pour le reste de la session — recharger la page pour repartir de l'état JSONbin le plus récent.
+
+**À retenir** : tout site avec le pattern [[jsonbin-source-de-verite]] (fetch distant au chargement + édition en direct possible immédiatement) doit gérer explicitement le cas où le fetch répond en retard sur une action utilisateur déjà en cours — sinon la version distante écrase silencieusement la version locale.

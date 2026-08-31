@@ -33,10 +33,11 @@ client: naeco
 - `sync.sh` a un bug de path connu côté client — déploiement à faire manuellement (`git add/commit/push`)
 
 ## Next actions
-- [ ]
+- [ ] Vérifier si le commit `4bc0499` a bien été amendé (mauvaise adresse email) + force-pushé sur `main`
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche créée. Pattern "JSONbin comme source de vérité + garde-fous stricts anti-écrasement" à retenir — potentiellement réutilisable pour d'autres sites à contenu live-éditable.
+- 2026-08-31 : Bug résolu — tracés d'expédition qui revenaient à leur position initiale en cours d'édition (race condition entre le `fetch` JSONbin `/latest` au chargement et une édition démarrée avant sa réponse). Fix par flag `localDirty` (`index.html:545-547`, `index.html:2620-2627`), déployé (commit `4bc0499`). Voir [[jsonbin-source-de-verite]] et `03_knowledge/troubleshooting.md`. Identité git du repo corrigée (`melvin.perrottet@blue-impakt.org`) — à vérifier si l'amend+force-push du commit `4bc0499` (mauvaise adresse) a bien été fait.
 
 ## Liens
 - Client : [[naeco]]
