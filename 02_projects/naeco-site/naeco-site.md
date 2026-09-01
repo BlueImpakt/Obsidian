@@ -35,6 +35,7 @@ client: naeco
 ## Journal
 - 2026-08-29 : Repo analysé, fiche projet créée. Pattern JSONbin + éditeur live noté comme knowledge réutilisable.
 - 2026-09-01 : Guide de charte graphique complété (polices DM Sans/Inter/Space Mono/Caveat). Couleurs des 3 pages alignées sur la charte NAECO — Bleu Marine `#142A4A` / Ivoire `#F4EEE4`, ratio 60‑30‑10 strict (fond ivoire, cartes+header blancs, accent de pôle par page). Commit+push demandé en fin de session — à confirmer que le check-remote.sh a bien été respecté (voir Next actions daily note du jour).
+- 2026-09-01 : Nouvelle page `/expeditions` créée à partir du contenu Notion « Présentation Expédition Point Zéro » (+ sous-page Planning). Contenu : Point Zéro 2026 en page complète (accroche, manifeste, itinéraire, 3 piliers science/art/transmission, partenaires) + « Le sillage » (les 4 expéditions précédentes 2022-2025, vidéos reprises de [[naeco-carte]]). Section `#expedition` de la landing transformée en teaser vers cette page ; onglet menu « Expéditions » redirigé vers `/expeditions` sur les 3 pages du site. Bug de scroll cassé (`overflow-x:hidden` sur `<body>`) corrigé. Patch appliqué au JSONbin en suivant la procédure `CLAUDE.md` du repo (la landing rendait encore du contenu 2025 avant patch).
 
 ## Liens
 - Client : [[naeco]]

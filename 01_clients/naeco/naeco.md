@@ -32,6 +32,7 @@ localisation: france
 ## Journal
 - 2026-08-29 : Repos identifiés (`NAECOEXPEDITION/naeco-site`, `NAECOEXPEDITION/naeco-carte`), fiche client créée
 - 2026-08-31 : Bug de race condition résolu sur [[naeco-carte]] (tracés d'expédition écrasés pendant l'édition), déployé. Détails dans la fiche projet et `03_knowledge/troubleshooting.md`.
+- 2026-09-01 : Nouvelle page `/expeditions` livrée sur [[naeco-site]] (Point Zéro 2026 + les 4 expéditions précédentes), contenu extrait du Notion officiel de l'expédition. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

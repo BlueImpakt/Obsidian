@@ -46,6 +46,30 @@ hour Claude Code). Workflow associé : [[reverse-engineering-site-reference]].
   commercial libre pour un client ; compresser Draco avant intégration.
 - **Blender connector** (tuto Anthropic) — piloter Blender par le langage pour
   produire ses propres assets 3D.
+- **Étude de cas "Ramen" — Jesse Zhou**
+  (`jesse-zhou.medium.com/jesses-ramen-case-study-77bae77ab5f0`) — walkthrough
+  d'un portfolio 3D immersif (Three.js + GSAP + Lenis). Modèle de *structure de
+  projet* (organisation de scène, chargement, sync caméra/scroll) à lire avant de
+  chiffrer, pas du code à copier. Détail technique scrollpath :
+  [[animations-scroll-gsap]].
+
+**Pistes projet pour ces outils** (non validées — opportunités / upsells)
+- **[[naeco-carte]]** — *scrollpath* : mode cinématique, caméra qui survole le
+  tracé d'expédition (points de contrôle = escales Pelagos / sites STARESO),
+  progression = scroll dans le récit.
+- **[[naeco-site]]** — *scrollpath* + *Blender connector* + *Sketchfab* : hero
+  avec le voilier NAECO (modélisé sous Blender, spécifique donc absent de
+  Sketchfab) qui suit la route Pelagos au scroll ; scène peuplée d'assets CC0
+  (bouée, dauphin — travail cétacés). *Étude Ramen* = blueprint avant chiffrage.
+- **[[esprit-docker-site]]** — *Blender connector* + *Sketchfab* + *scrollpath* :
+  visualiseur 3D de chapeau (nettoyage/décimation de scans clients sous Blender,
+  tête de mannequin CC0 en placeholder), caméra qui orbite face → profil → dos au
+  scroll. *CodePen* : hover-zoom produit / spin 360°.
+- **[[site-blue-impakt]]** — *CodePen* : Pen de text/grid-reveal récupéré en View
+  Source, réadapté avec Motion sur la grille Müller-Brockmann (refonte en cours).
+  *Étude Ramen* = référence si page "démo capacité agence".
+- **[[km0-circuit-court]]** — *Sketchfab* : assets low-poly CC0 (cageots,
+  légumes, étal) pour les illustrations de la landing.
 
 **Récupération & analyse de vidéos**
 - **yt-dlp** — télécharge vidéos (YouTube + autres) : références, tutos, assets.
