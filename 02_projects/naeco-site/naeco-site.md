@@ -34,6 +34,7 @@ client: naeco
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche projet créée. Pattern JSONbin + éditeur live noté comme knowledge réutilisable.
+- 2026-09-01 : Guide de charte graphique complété (polices DM Sans/Inter/Space Mono/Caveat). Couleurs des 3 pages alignées sur la charte NAECO — Bleu Marine `#142A4A` / Ivoire `#F4EEE4`, ratio 60‑30‑10 strict (fond ivoire, cartes+header blancs, accent de pôle par page). Commit+push demandé en fin de session — à confirmer que le check-remote.sh a bien été respecté (voir Next actions daily note du jour).
 
 ## Liens
 - Client : [[naeco]]
