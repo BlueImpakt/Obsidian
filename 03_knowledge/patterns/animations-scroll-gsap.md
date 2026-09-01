@@ -47,6 +47,44 @@ lenis.on("scroll", ScrollTrigger.update);
 gsap.ticker.add((time) => lenis.raf(time * 1000)); // GSAP ticker pilote Lenis, PAS lenis.raf seul
 ```
 
+## Trajectoire caméra / objet au scroll (scrollpath)
+
+Pour un déplacement 3D fluide piloté au scroll (caméra qui serpente dans une
+scène, objet qui suit un chemin) — pas une simple translation linéaire :
+
+1. Poser des points de contrôle dans l'espace 3D (`THREE.Vector3`).
+2. Les relier par une courbe lisse :
+   - **Catmull-Rom** (`THREE.CatmullRomCurve3`) — passe par *tous* les points,
+     le plus simple à régler : on place les points là où la caméra doit passer.
+   - **Bézier** (`CubicBezierCurve3`) — la courbe ne touche que ses extrémités,
+     les points intermédiaires "tirent" la tangente ; plus de contrôle sur la
+     forme, moins intuitif.
+3. Mapper la progression de scroll `0→1` sur le paramètre `t` de la courbe :
+   `curve.getPointAt(t)` → position, `curve.getTangentAt(t)` → orientation
+   (`camera.lookAt`).
+4. GSAP ScrollTrigger pilote `t` : `scrub: true` pour coller au scroll,
+   `scrub: 1` pour un léger retard amorti.
+
+```js
+const curve = new THREE.CatmullRomCurve3([
+  new THREE.Vector3(0, 0, 10),
+  new THREE.Vector3(-4, 2, 4),
+  new THREE.Vector3(0, 1, -6),
+]);
+const state = { t: 0 };
+gsap.to(state, {
+  t: 1, ease: "none",
+  scrollTrigger: { trigger: ".scene", start: "top top", end: "bottom bottom", scrub: true },
+  onUpdate: () => {
+    camera.position.copy(curve.getPointAt(state.t));
+    camera.lookAt(curve.getPointAt(Math.min(state.t + 0.01, 1)));
+  },
+});
+```
+
+Pas encore utilisé dans le bac à sable (`Scrap landing page` = 2D/DOM only pour
+l'instant) — technique à valider sur un premier vrai projet 3D.
+
 ## Catalogue d'effets — cantor8.io
 
 Détail complet dans `sources/cantor8/SECTIONS.md` (chaque effet pointe vers sa
@@ -159,3 +197,18 @@ document.querySelectorAll("[data-words]").forEach((el) => {
   site client livré.**
 - Next action ouverte : décider si ClearPath sert de base à un prochain site
   client (cf. daily 2026-08-29).
+
+## Ressources de référence (3D / scroll)
+
+- **Étude de cas "Ramen" — Jesse Zhou**
+  (`jesse-zhou.medium.com/jesses-ramen-case-study-77bae77ab5f0`) — walkthrough
+  d'un portfolio 3D immersif (Three.js + GSAP + Lenis). À lire comme modèle de
+  *structure de projet* et de choix techniques (organisation de scène,
+  chargement, sync caméra/scroll), pas comme code à copier.
+- **Blender connector Anthropic**
+  (`claude.com/resources/tutorials/using-the-blender-connector-in-claude`) —
+  piloter Blender via MCP en langage naturel pour produire un asset 3D custom
+  quand Sketchfab ne suffit pas. Cf. [[outils]].
+- **CodePen** — démos isolées d'effets scroll/animation : point de départ
+  visuel, toujours récupérer via *View Source* (jamais "recrée ce que tu vois").
+  Cf. [[reverse-engineering-site-reference]] et [[outils]].

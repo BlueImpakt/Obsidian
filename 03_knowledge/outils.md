@@ -30,6 +30,9 @@ hour Claude Code). Workflow associé : [[reverse-engineering-site-reference]].
   DOM post-JS ; pour la logique d'animation, chercher le repo GitHub.
 - **`gh` CLI** — cloner/lire un repo, gérer PR/issues depuis le terminal.
   Claude Code s'en sert pour récupérer le code d'un template directement.
+- **CodePen** — démos HTML/CSS/JS isolées (effets scroll, layouts). Point de
+  départ visuel : récupérer le code via *View Source* / *Export*, jamais demander
+  à Claude de recréer d'après le rendu.
 
 **3D & scroll**
 - **react-three-fiber** (pmndrs) — wrapper React déclaratif pour Three.js.
