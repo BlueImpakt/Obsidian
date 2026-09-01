@@ -122,6 +122,7 @@
 **Format fichier** : `AAAA-MM-nom.md`
 **Contenu** : projets terminés, leads morts, notes obsolètes
 **Tags** : `#archive` + tags originaux conservés
+**`05_archive/daily/`** : daily notes passées, déplacées automatiquement de `00_inbox/` par `good-night` (étape 8), plafond 10. **Historique figé — ne jamais traiter comme état courant** : tâches, décisions et blocages qui y figurent sont ceux du jour concerné, pas de l'état actuel.
 
 ---
 
