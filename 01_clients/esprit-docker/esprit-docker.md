@@ -33,6 +33,7 @@ localisation: france
 ## Journal
 - 2026-08-29 : Repo identifié (`github.com/espritdocker/esprit-docker`), fiche client créée à partir des mentions légales/CGV du site
 - 2026-08-30 : Repo local resynchronisé (5 commits récupérés depuis un autre PC — série hash PBKDF2 sur l'auth admin tentée puis revertée, retour à `ADMIN_PASSWORD` en Secret Cloudflare). Recommandation en attente : ajouter `.claude/settings.local.json` au `.gitignore`
+- 2026-09-02 : Bug remonté — mail de suivi colis Sendcloud n'arrivait pas au client. Diagnostic : compte Sendcloud gratuit, email personnalisé de l'expéditeur bloqué derrière l'offre Premium → mails de suivi partent depuis l'adresse générique Sendcloud, réputation moyenne, tombent en spam côté client (ce qui arrivait sur `contact@esprit-docker.com` était en fait la notif de compte, pas le mail client). Palliatif implémenté : message "vérifiez vos spams" ajouté dans l'email de confirmation de commande et la page de confirmation post-paiement. Commit+push `944dca9`.
 
 ## Liens
 - Projets : [[esprit-docker-site]]
