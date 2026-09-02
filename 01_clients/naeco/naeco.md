@@ -34,6 +34,7 @@ localisation: france
 - 2026-08-31 : Bug de race condition résolu sur [[naeco-carte]] (tracés d'expédition écrasés pendant l'édition), déployé. Détails dans la fiche projet et `03_knowledge/troubleshooting.md`.
 - 2026-09-01 : Nouvelle page `/expeditions` livrée sur [[naeco-site]] (Point Zéro 2026 + les 4 expéditions précédentes), contenu extrait du Notion officiel de l'expédition. Détails dans la fiche projet.
 - 2026-09-02 : Grosse journée [[naeco-site]] — refonte animée Phases 1 (Hero + Manifeste) et 2 (Constat Méditerranée, Carnet de bord, 3 Piliers, Équipe en cartes flip) implémentées et mergées sur `master` (pas encore déployées). Nouvelle spec reçue pour refondre la section « Notre Approche ». Détails complets dans la fiche projet.
+- 2026-09-03 : Section « Notre Approche » de [[naeco-site]] refondue (composant sticky-scroll « Parcours à 3 temps ») et mergée sur `master`, Phase 1 migrée vers la lib Motion, transition sombre→clair du site étalée sur 4 zones. Ordre des sections verrouillé côté code (l'équipe ne peut plus le réorganiser via l'éditeur) et couleur source de la section Mission ajustée (`#102746`). Toujours pas déployé en prod. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
