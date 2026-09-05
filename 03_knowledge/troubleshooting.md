@@ -43,3 +43,23 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : flag `localDirty` passé à `true` dans l'intercepteur d'écriture locale (`ls_set`, `index.html:545-547`) ; garde ajoutée dans le `.then()` du chargement distant (`index.html:2620-2627`) qui ignore la réponse JSONbin si `localDirty` ou mode édition actif. Une fois qu'une modif locale a eu lieu, le chargement distant est volontairement sauté pour le reste de la session — recharger la page pour repartir de l'état JSONbin le plus récent.
 
 **À retenir** : tout site avec le pattern [[jsonbin-source-de-verite]] (fetch distant au chargement + édition en direct possible immédiatement) doit gérer explicitement le cas où le fetch répond en retard sur une action utilisateur déjà en cours — sinon la version distante écrase silencieusement la version locale.
+
+## [[naeco-site]] — vidéos Cloudinary tronquées à quelques secondes via URL de transformation à la volée
+
+**Symptôme** : un film de 23 min uploadé sur Cloudinary était livré à 4,5 secondes via une URL de transformation à la volée ; des vidéos d'ambiance de 8-12s ressortaient à moins d'1 seconde.
+
+**Root cause** : les URLs Cloudinary avec transformation à la volée (`f_auto,q_auto,w_...`) tronquent la durée de la vidéo livrée sur ce compte — comportement pas documenté nulle part côté projet, découvert en comparant la durée réelle du fichier source à la durée jouée en prod.
+
+**Fix** : ne plus utiliser de transformation à la volée pour les vidéos. Pré-encoder localement (ffmpeg) 2 résolutions (desktop/mobile), uploader les fichiers déjà à la bonne taille/bitrate tels quels sur Cloudinary, et les référencer sans paramètre de transformation dans l'URL.
+
+**À retenir** : sur Cloudinary, les transformations à la volée sont fiables pour les images mais pas garanties pour la durée d'une vidéo — pour tout fond vidéo responsive (voir aussi le pattern voile-vers-marine plus bas), pré-encoder et uploader les variantes desktop/mobile directement plutôt que de compter sur `w_`/`q_auto` à la livraison.
+
+## [[naeco-site]] — bande de vidéo brute visible entre deux sections à fond vidéo
+
+**Symptôme** : sur les sections courtes (à peine plus hautes qu'un écran — Mission, Constat, Piliers), une fine bande de vidéo non teintée apparaissait à la jonction avec la section suivante.
+
+**Root cause** : le calque vidéo était en `position: sticky`, ce qui le garde collé à l'écran même une fois la fin réelle (courte) de la section dépassée au scroll, alors que le voile de couleur qui doit le recouvrir (« voile-vers-marine ») s'arrête pile à la fin de la section — désalignement entre les deux bords.
+
+**Fix** : sur les sections dont la hauteur ne dépasse pas beaucoup un écran (Mission, Constat, Piliers), calque vidéo repassé en `position: absolute` calé exactement sur le voile. `sticky` réservé aux sections nettement plus hautes qu'un écran (ex. Expédition, gonflée par le scroll horizontal pinné du Carnet de bord), où le calque doit rester visible tout le temps du défilement interne.
+
+**À retenir** : un fond vidéo `sticky` + un voile de recouvrement séparé doivent partager exactement le même système de positionnement/bornage — sinon toute section dont la hauteur réelle est proche de 100vh peut laisser dépasser le calque `sticky` après la fin du voile.

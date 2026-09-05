@@ -87,3 +87,47 @@ hour Claude Code). Workflow associé : [[reverse-engineering-site-reference]].
   lecture/recherche unifié multi-plateformes (X, Reddit, YouTube, GitHub,
   Bilibili, XiaoHongShu) sans clés API ; route vers les bons outils existants,
   `agent-reach doctor` indique le chemin actif.
+
+## Graphify (Graphify-Labs)
+
+**Repo** : GitHub Graphify-Labs, Apache-2.0, package PyPI `graphifyy` (double-y).
+
+Parsing AST local via tree-sitter → construit un knowledge graph du code d'un
+projet ; Claude interroge le graphe (`graphify query`/`explain`/`path`) au lieu
+de grep/lire tous les fichiers. Parsing du code 100 % local et gratuit (rien ne
+sort de la machine — bon point pour la confidentialité des repos clients sous
+NDA) ; seul le traitement docs/PDF/images consomme des tokens de la session.
+
+**Installation** (portée globale, testée) : `winget install astral-sh.uv` →
+`uv tool install graphifyy` → `graphify install` (enregistre `/graphify`
+globalement) → `graphify claude install` (active le nudge souple par projet).
+Deux mécanismes distincts à ne pas confondre : construire/mettre à jour le
+graphe (`/graphify .`, une fois puis rebuild seulement si le code change —
+`graphify hook install` peut l'automatiser sur `commit`/`checkout`) vs.
+l'utiliser en session (automatique une fois `graphify claude install` fait sur
+le projet, hook `PreToolUse` qui suggère `graphify query` avant une lecture
+brute — mode souple, pas bloquant).
+
+**Décision d'usage (2026-09-04)** : le ROI dépend de la taille et surtout de la
+*durée de vie* du codebase — rentable seulement si le même projet est
+réinterrogé sur de nombreuses sessions. Retenu pour **[[km0-circuit-court]]**
+(produit propre, code qui vit des mois/années). Pas retenu pour les missions
+Blue Impakt courtes (sites vitrines, automatisations ponctuelles) : monter et
+maintenir le graphe coûte plus cher que ce qu'il économise. Risques notés :
+graphe périmé si pas remis à jour (`graphify update .`), `graphify-out/` à
+garder en `.gitignore` (pas d'intérêt à le committer en solo).
+
+**Installation réelle (2026-09-04)** : finalement étendue aux 5 repos de
+`C:\Users\LENOVO\Documents\GitHub` plutôt qu'à KM0 seul — **esprit-docker**
+(1108 nœuds, 1673 edges), **KM0** (1319 nœuds, 2761 edges), **naeco-carte** et
+**[[naeco-site]]** (4 nœuds chacun — repos quasi sans code réel, gain jugé
+négligeable mais nudge laissé actif sur demande). **Site-web** exclu : page
+statique sans JS, extraction à 0 nœud, nudge désinstallé après coup. Piège
+rencontré : `graphify claude uninstall` supprime le **skill global**
+(`/graphify`), pas seulement le nudge du projet visé, puisque l'install est
+globale et partagée — un seul fichier skill pour tous les projets. Fix
+appliqué en parallèle sur les 4 repos actifs : le hook `PreToolUse` que
+`graphify claude install` écrit dans `.claude/settings.json` contient un
+chemin absolu propre à la machine (`.../graphify.exe`) — renommé en
+`.claude/settings.local.json` (+ `.gitignore`) pour ne jamais le committer et
+casser le hook chez un collaborateur qui clone le repo.

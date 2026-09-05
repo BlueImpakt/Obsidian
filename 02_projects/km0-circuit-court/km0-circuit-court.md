@@ -35,6 +35,7 @@ client: blue-impakt
 
 ## Journal
 - 2026-08-29 : Repo identifié (`github.com/BlueImpakt/KM0`), fiche projet créée. Découverte importante : Blue Impakt n'est pas qu'une activité de service (auto/no-code/consulting) mais développe aussi son propre produit SaaS.
+- 2026-09-04 : Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1319 nœuds/2761 edges, nudge `/graphify` actif en session. C'était la cible initiale de l'outil (projet long-vivant, sessions répétées).
 
 ## Liens
 - Repo / deployment : https://github.com/BlueImpakt/KM0 (backend NestJS + frontend Vite/Vercel)
