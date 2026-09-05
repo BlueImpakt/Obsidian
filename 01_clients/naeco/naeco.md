@@ -39,6 +39,7 @@ localisation: france
 - 2026-09-04 : **Refonte animée de [[naeco-site]] déployée en production** sur naecoexpedition.org (39 commits), après sauvegarde de l'ancienne version sur une branche `backup/pre-refonte`. À confirmer côté Melvin : l'éditeur JSONbin fonctionne toujours en prod. Détails dans la fiche projet.
 - 2026-09-04 (suite) : Vidéos de fond « voile-vers-marine » posées sur [[naeco-site]] (Mission, Constat câblées avec de vraies vidéos ; Expédition/Piliers restent à faire). Deux bugs corrigés en cours de route : bande vidéo visible entre sections courtes (fix `sticky`→`absolute`) et vidéos tronquées par les transformations Cloudinary à la volée (fix : fichiers pré-encodés). Détails dans la fiche projet.
 - 2026-09-05 : Vidéos Expédition/Piliers câblées sur [[naeco-site]] (toutes les sections « cœur de plongée » ont désormais leur vidéo), cartes Piliers rendues translucides. Détails dans la fiche projet.
+- 2026-09-05 (suite) : Fond vidéo de la section Mission changé pour "Intro, baleine, solastalgie" sur [[naeco-site]], bloc citation retiré. Bug signalé (bande sans voile après "Notre approche") — fix tenté non concluant, toujours visible selon Melvin. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
