@@ -40,6 +40,7 @@ localisation: france
 - 2026-09-04 (suite) : Vidéos de fond « voile-vers-marine » posées sur [[naeco-site]] (Mission, Constat câblées avec de vraies vidéos ; Expédition/Piliers restent à faire). Deux bugs corrigés en cours de route : bande vidéo visible entre sections courtes (fix `sticky`→`absolute`) et vidéos tronquées par les transformations Cloudinary à la volée (fix : fichiers pré-encodés). Détails dans la fiche projet.
 - 2026-09-05 : Vidéos Expédition/Piliers câblées sur [[naeco-site]] (toutes les sections « cœur de plongée » ont désormais leur vidéo), cartes Piliers rendues translucides. Détails dans la fiche projet.
 - 2026-09-05 (suite) : Fond vidéo de la section Mission changé pour "Intro, baleine, solastalgie" sur [[naeco-site]], bloc citation retiré. Bug signalé (bande sans voile après "Notre approche") — fix tenté non concluant, toujours visible selon Melvin. Détails dans la fiche projet.
+- 2026-09-05 (suite) : Bug de la bande sans voile finalement résolu (vraie cause : bord de raccord entre deux dégradés CSS rastérisés séparément, pas la rampe du voile). Longue saga de repositionnement de la vidéo de fond Mission close (bug de débordement sticky sur la Stats bar résolu en l'absorbant dans la section + `overflow: clip`). Vidéo de fond ajoutée à la section Équipe (sticky, transparence, fix débordement). Restructuration des cartes Équipe démarrée (nouveau bloc Bureau), à finaliser par Melvin côté JSONbin. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

@@ -63,3 +63,23 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : sur les sections dont la hauteur ne dépasse pas beaucoup un écran (Mission, Constat, Piliers), calque vidéo repassé en `position: absolute` calé exactement sur le voile. `sticky` réservé aux sections nettement plus hautes qu'un écran (ex. Expédition, gonflée par le scroll horizontal pinné du Carnet de bord), où le calque doit rester visible tout le temps du défilement interne.
 
 **À retenir** : un fond vidéo `sticky` + un voile de recouvrement séparé doivent partager exactement le même système de positionnement/bornage — sinon toute section dont la hauteur réelle est proche de 100vh peut laisser dépasser le calque `sticky` après la fin du voile.
+
+## [[naeco-site]] — `overflow: hidden` empêche un enfant `position: sticky` de s'accrocher
+
+**Symptôme** : un calque vidéo en `position: sticky` à l'intérieur d'une section ne se figeait jamais au scroll — il défilait normalement, juste rogné aux bords de son conteneur.
+
+**Root cause** : `overflow: hidden` sur le conteneur parent en fait un **conteneur de défilement** (scroll container) au sens CSS. `position: sticky` se cale par rapport à l'ancêtre défilant le plus proche — or ce conteneur-là ne défile jamais lui-même (il grandit avec la page), donc l'enfant sticky ne s'accroche à rien.
+
+**Fix** : remplacer `overflow: hidden` par `overflow: clip` sur le conteneur. `clip` découpe le débordement visuel exactement comme `hidden`, mais ne crée **pas** de conteneur de défilement — le `position: sticky` de l'enfant redevient fonctionnel tout en restant borné à la boîte du conteneur (effet de bord utile : quand la section sort de l'écran, le sticky colle le bas du média au bas de la section, donc plus de "trou" en fin de section et plus de débordement possible sur la section suivante).
+
+**À retenir** : chaque fois qu'un `position: sticky` enfant ne s'accroche pas alors que le CSS a l'air correct, vérifier si un ancêtre a `overflow: hidden`/`auto`/`scroll` — et préférer `overflow: clip` dès qu'on veut à la fois clipper *et* garder un sticky interne fonctionnel.
+
+## [[naeco-site]] — filet de lumière d'1px au raccord de deux dégradés CSS voisins
+
+**Symptôme** : une fine ligne claire persistait à la jonction entre deux sections censées se raccorder sans couture, même après avoir renforcé le voile d'assombrissement de la première section.
+
+**Root cause** : ce n'était pas un problème d'opacité de voile, mais un problème de **rastérisation** : les deux sections utilisaient chacune un dégradé CSS qui "arrive"/"repart" de la même couleur pile à la frontière. À un DPR non-entier (ex. 1,5), le bord de chaque calque est arrondi indépendamment au pixel physique le plus proche — les deux arrondis ne tombent pas exactement au même endroit, laissant un filet d'1px non couvert par aucun des deux dégradés.
+
+**Fix** : ne pas compter sur deux dégradés qui se rejoignent pile à la frontière. Poser un aplat de couleur opaque en `::before`/`::after` sur l'une des deux sections, qui **déborde volontairement de quelques px** (2-3px) par-dessus la frontière avant de fondre dans le dégradé — un seul calque continu recouvre alors le bord des deux rendus, au lieu de deux bords indépendants qui doivent coïncider au pixel près.
+
+**À retenir** : à la jonction de deux dégradés voisins, ne jamais faire confiance à une coïncidence de couleur pile sur la ligne de partage — un pattern d'aplat qui déborde légèrement (déjà utilisé ailleurs sur ce site pour les jonctions vidéo, voir plus haut) est plus robuste qu'un alignement pixel-perfect entre deux calques rastérisés séparément.
