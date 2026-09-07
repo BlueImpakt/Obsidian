@@ -43,6 +43,7 @@ localisation: france
 - 2026-09-05 (suite) : Bug de la bande sans voile finalement résolu (vraie cause : bord de raccord entre deux dégradés CSS rastérisés séparément, pas la rampe du voile). Longue saga de repositionnement de la vidéo de fond Mission close (bug de débordement sticky sur la Stats bar résolu en l'absorbant dans la section + `overflow: clip`). Vidéo de fond ajoutée à la section Équipe (sticky, transparence, fix débordement). Restructuration des cartes Équipe démarrée (nouveau bloc Bureau), à finaliser par Melvin côté JSONbin. Détails dans la fiche projet.
 
 - 2026-09-07 : Tous les commits en attente poussés en remote — [[naeco-site]] (26 commits d'un coup, toute la saga vidéos de fond + restructuration Équipe du 05) et [[naeco-carte]] (`.gitignore`/`CLAUDE.md` graphify, `aa64cd8`). Vidéo source NAECO de 791 Mo exclue du versioning (`.gitignore`, trop lourde pour GitHub).
+- 2026-09-07 (suite) : Sur [[naeco-site]] — vidéo Mission remplacée (`teaser_mare_nostrum`) + bug de clic hors édition corrigé (commit `ff7178b`), couleur des titres de section ajustée (turquoise partout, vert foncé restauré sur fonds ivoire clairs pour le contraste), tentative de lissage de la bande ivoire visible section Équipe non concluante. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
