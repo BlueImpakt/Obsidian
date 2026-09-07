@@ -43,6 +43,7 @@ client: naeco
 - [ ] Jonction haute Piliers → Approche — appliquer la même technique d'aplat `#0f2536` que Hero → Mission (démarré en fin de session, à vérifier)
 - [ ] Pusher les commits locaux en attente (`22ce4a4` vidéo "posidonie poisson", `354fadd` Approche sticky/fondu/voile, `f523ddb`/`4a180f7`/`efcc2f2` jonctions) une fois validés par Melvin
 - [ ] Équipe — synchroniser/nettoyer la liste JSONbin `naeco_v5` (retirer le doublon "Marion Fritsch", ajouter le contenu réel du bloc Bureau) avant de considérer la restructuration des cartes Équipe terminée
+- [ ] Renommer la section "Constat" en "Contexte" ; section "Notre action" — au survol d'une carte elle passe en grand (existant, ne pas toucher), les 2 autres cartes passent à 75% de transparence
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche projet créée. Pattern JSONbin + éditeur live noté comme knowledge réutilisable.
@@ -102,6 +103,8 @@ client: naeco
 - 2026-09-07 (suite) : Titres de section (eyebrows) repassés en turquoise `#3DC1B3` (10 règles CSS), puis les sections à fond ivoire clair (Équipe, Co-fondateurs, Bureau, Équipe expédition 2025, Partenaires, Personnalités qui soutiennent) restaurées en vert foncé `#12796d` sur retour de Melvin pour garder le contraste — rien commité.
 - 2026-09-07 (suite) : Tentative de lissage de la bande ivoire visible entre la vidéo de fond et le fond clair de la section Équipe (voile `.equipe`/`::before` repassé en rampe continue) — retour de Melvin : la frontière reste visible, pas résolu.
 - 2026-09-07 (suite) : Nouvelle approche pour la bande de la section Équipe — fondu en alpha directement sur la vidéo (`mask-image`, `transparent`→opaque sur ~46vh) au lieu d'un simple voile ivoire par-dessus, supprime le bord net. Retour de Melvin : dégradé bon mais masque désormais le haut de la vidéo. Correctif (option retenue par Melvin) : `translateY` vidéo 14vh→26vh + `mask` raccourci 46vh→16vh + `::before` réduit 78vh→60vh. Rendu non capturé côté agent (preview gelée), à confirmer visuellement par Melvin.
+- 2026-09-07 (suite) : Section Constat — chiffres clés repositionnés en diagonale (1 % à gauche, 10 % au centre, +20 % à droite) via CSS (`align-items` par `.figure` + `padding-left/right`). Taille réduite en deux itérations (`clamp(72px,16vw,190px)` → `clamp(56px,10vw,120px)` → `clamp(44px,7.5vw,88px)`) et espacement vertical augmenté jusqu'à `44vh` desktop / `36vh` mobile, sur retours successifs de Melvin.
+- 2026-09-07 (suite) : Section Expédition 2026 compactée pour tenir sur un écran 1366×768 zoom 100% sans scroll (paddings/gaps réduits sur `.expedition`/`.exp-teaser`/`.exp-body`/`.exp-facts`/`.exp-chev`), libellé « Trois gestes, une même vague » retiré (liste Observer/Pister/Transmettre conservée sans intitulé). Vérifié : 815px/642px/640px de hauteur sur 1440×900, 1366×700, 1280×640. Nouvelle demande reçue en fin de session (pas encore traitée) : renommer la section « Constat » en « Contexte » et, sur « Notre action », faire passer les 2 cartes non survolées à 75% de transparence quand une carte est en grand au survol (mécanisme de survol existant, à ne pas toucher).
 
 ## Liens
 - Client : [[naeco]]
