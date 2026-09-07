@@ -39,6 +39,8 @@ client: naeco
 - 2026-08-29 : Repo analysé, fiche créée. Pattern "JSONbin comme source de vérité + garde-fous stricts anti-écrasement" à retenir — potentiellement réutilisable pour d'autres sites à contenu live-éditable.
 - 2026-08-31 : Bug résolu — tracés d'expédition qui revenaient à leur position initiale en cours d'édition (race condition entre le `fetch` JSONbin `/latest` au chargement et une édition démarrée avant sa réponse). Fix par flag `localDirty` (`index.html:545-547`, `index.html:2620-2627`), déployé (commit `4bc0499`). Voir [[jsonbin-source-de-verite]] et `03_knowledge/troubleshooting.md`. Identité git du repo corrigée (`melvin.perrottet@blue-impakt.org`) — à vérifier si l'amend+force-push du commit `4bc0499` (mauvaise adresse) a bien été fait.
 
+- 2026-09-07 : Commit `aa64cd8` poussé — `.gitignore` (ignore `graphify-out/` + `.claude/settings.local.json`) et `CLAUDE.md` (règles graphify).
+
 ## Liens
 - Client : [[naeco]]
 - Patterns utilisés : [[jsonbin-source-de-verite]]

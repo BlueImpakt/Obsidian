@@ -42,6 +42,8 @@ localisation: france
 - 2026-09-05 (suite) : Fond vidéo de la section Mission changé pour "Intro, baleine, solastalgie" sur [[naeco-site]], bloc citation retiré. Bug signalé (bande sans voile après "Notre approche") — fix tenté non concluant, toujours visible selon Melvin. Détails dans la fiche projet.
 - 2026-09-05 (suite) : Bug de la bande sans voile finalement résolu (vraie cause : bord de raccord entre deux dégradés CSS rastérisés séparément, pas la rampe du voile). Longue saga de repositionnement de la vidéo de fond Mission close (bug de débordement sticky sur la Stats bar résolu en l'absorbant dans la section + `overflow: clip`). Vidéo de fond ajoutée à la section Équipe (sticky, transparence, fix débordement). Restructuration des cartes Équipe démarrée (nouveau bloc Bureau), à finaliser par Melvin côté JSONbin. Détails dans la fiche projet.
 
+- 2026-09-07 : Tous les commits en attente poussés en remote — [[naeco-site]] (26 commits d'un coup, toute la saga vidéos de fond + restructuration Équipe du 05) et [[naeco-carte]] (`.gitignore`/`CLAUDE.md` graphify, `aa64cd8`). Vidéo source NAECO de 791 Mo exclue du versioning (`.gitignore`, trop lourde pour GitHub).
+
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
 - Patterns utilisés : [[jsonbin-source-de-verite]]
