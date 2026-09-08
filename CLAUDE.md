@@ -219,6 +219,9 @@ Quand je dis **"ingère"**, voici la séquence exacte :
 - Si contenu concerne un client/projet → mettre à jour la fiche correspondante
 - Ajouter tags appropriés si nécessaire
 - Créer liens vers notes connexes
+- **Journal** : une entrée = une décision, un résultat, ou un bug résolu — pas un compte-rendu pas-à-pas de la session. Le détail de debug (valeurs CSS exactes, essais ratés, itérations) vit dans l'historique git du repo client, pas dans le vault ; n'en garder que ce qui est réutilisable (→ `03_knowledge/troubleshooting.md` ou un pattern si généralisable à d'autres projets)
+- **Next actions** : la fiche client/projet est la seule source de vérité, la daily note n'en garde qu'un lien (`[[nom-projet]]`), jamais une recopie complète. Avant d'ajouter un item, vérifier qu'il n'existe pas déjà sous une autre formulation. Avant de clore une session/un `/good-night`, repasser sur les items existants à la lumière du Journal du jour et cocher/retirer ceux visiblement faits — ne jamais laisser un item déjà réglé traîner comme "à faire"
+- **Si le Journal d'une fiche dépasse ~15 entrées** : archiver les plus anciennes dans `<dossier-projet>/journal-archive-AAAA-MM.md` (note secondaire à la racine du dossier projet), condensées par jour (décisions/résultats, pas le pas-à-pas), avec un lien depuis le Journal principal. Ne jamais supprimer l'historique — l'archiver ; le détail fin reste de toute façon dans git
 
 ### 5. Nettoyer
 - **Supprimer** les daily notes et clippings traités
@@ -381,6 +384,8 @@ Une fois fait, cette section liste les clients actifs avec leur statut :
 **Exemples** :
 - `#project #encours #client-name`
 - `#project #terminé #another-client`
+
+**Projet interne Blue Impakt** (produit propre type KM0, site de l'agence — pas un client) : utiliser `#blue-impakt` comme 3e tag, même sans fiche `01_clients/blue-impakt` (il n'y en a volontairement pas — Blue Impakt n'est pas son propre client, voir section "Qui je suis").
 
 ### Knowledge
 `#pattern #[type] #validé`
