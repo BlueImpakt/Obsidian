@@ -41,9 +41,10 @@ client: naeco
 - [ ] Retirer `snapshots/naecoexpedition.org_2026-09-03.html` de `master` si préférence de le garder uniquement sur la branche `backup/pre-refonte` (actuellement accessible en prod, `noindex,nofollow`, inoffensif mais superflu)
 - [ ] Diagnostic jonctions Hero→Mission / Carnet→Expédition repris avec la technique d'aplat opaque (commits `f523ddb`, `4a180f7`) après échec du correctif root-cause `f719d3f` ; même technique étendue à Constat→Carnet et aux bandes latérales sans voile d'Expédition 2026 (commit `efcc2f2`) — non confirmé visuellement (preview gelée, fenêtre en arrière-plan), à valider par Melvin après hard-refresh
 - [ ] Jonction haute Piliers → Approche — appliquer la même technique d'aplat `#0f2536` que Hero → Mission (démarré en fin de session, à vérifier)
-- [ ] Pusher les commits locaux en attente (`22ce4a4` vidéo "posidonie poisson", `354fadd` Approche sticky/fondu/voile, `f523ddb`/`4a180f7`/`efcc2f2` jonctions) une fois validés par Melvin
 - [ ] Équipe — synchroniser/nettoyer la liste JSONbin `naeco_v5` (retirer le doublon "Marion Fritsch", ajouter le contenu réel du bloc Bureau) avant de considérer la restructuration des cartes Équipe terminée
-- [ ] Renommer la section "Constat" en "Contexte" ; section "Notre action" — au survol d'une carte elle passe en grand (existant, ne pas toucher), les 2 autres cartes passent à 75% de transparence
+- [ ] "Constat" renommé en "Contexte" et cartes "Notre action" (75% transparence au survol) faits côté code — reste le Save via l'éditeur JSONbin pour que ce soit visible en ligne
+- [ ] Cartes Équipe/Partenaires — reprendre la police et la couleur des anciennes cartes équipe pour les nouvelles, harmoniser l'espace réservé au nom entre toutes les cartes, rendre la partie basse (bandeau du nom) transparente à 50%
+- [ ] Regrouper « Notre manifeste » et « Suivre les aventures NAECO » dans une même section (design via skill ui-ux-pro-max, word reveal sur le texte du manifeste, vidéo "drone sunset" en fond) — devient la dernière section du site, retirer la section Contact
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche projet créée. Pattern JSONbin + éditeur live noté comme knowledge réutilisable.

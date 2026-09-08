@@ -43,7 +43,7 @@ Connecté à son Google Agenda et son CRM (Twenty, via MCP).
 
 **À faire si** : le volume de tâches déléguées à Claude devient assez important
 pour justifier ce niveau d'automatisation. Pour l'instant CRM = Notion
-([[project_multi_session_pipeline|contexte business]]), pas de CRM ouvert en MCP.
+([[CLAUDE.md|contexte business]]), pas de CRM ouvert en MCP.
 
 ## 4. Paperclip (orchestrateur multi-agents)
 

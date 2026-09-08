@@ -1,5 +1,5 @@
 ---
-tags: [client, lead]
+tags: [client, lead, p2]
 created: <% tp.date.now("YYYY-MM-DD") %>
 statut: lead
 priorite: p2
