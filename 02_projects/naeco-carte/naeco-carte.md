@@ -36,7 +36,7 @@ client: naeco
 - [ ] Vérifier si le commit `4bc0499` a bien été amendé (mauvaise adresse email) + force-pushé sur `main`
 - [ ] Custom domain `track.naecoexpedition.org` (optionnel) — la zone Cloudflare vue par `wrangler` ne correspond pas au bon compte, à refaire proprement si souhaité ; le Worker tourne déjà sur son URL `.workers.dev`, aucun impact fonctionnel
 - [ ] Pousser les 2 commits en attente (flash/saccade légende `8118cbd`, header mobile responsive `a75b2f2`)
-- [ ] Implémenter galerie multi-images (clic sur photo → fenêtre 80% écran, navigation flèches gauche/droite) pour sites d'étude/observations/escales
+- [ ] Implémenter marqueurs photo hors observations (icône pin goutte, nouvel onglet « Photo » dans l'éditeur — clic sur la carte pour placer, URL photo comme escales, plusieurs photos possibles, réutiliser la galerie plein écran des escales)
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche créée. Pattern "JSONbin comme source de vérité + garde-fous stricts anti-écrasement" à retenir — potentiellement réutilisable pour d'autres sites à contenu live-éditable.
@@ -67,6 +67,7 @@ client: naeco
 - 2026-09-11 (suite) : Bug photo escale Ajaccio (fenêtre noire) corrigé — le champ `photo` contenait un lien de partage Google Drive collé tel quel dans une balise `<img>` (échoue silencieusement). Fonction `gdriveImg()` ajoutée pour convertir ce format vers l'URL image directe `lh3.googleusercontent.com/d/ID`, appliquée partout où une photo est affichée (obs, escale, expédition, sites d'étude). Commit `b209418`, **pas encore poussé**.
 - 2026-09-11 (suite) : Nouveau site d'étude Point Zéro ajouté dans JSONbin (`sitesEtude`, 5ᵉ entrée) — « Prélèvement microplastique », au large de Galéria (42.12585, 8.60099), 11/09/2026 09:00 (position réelle 07:00:07 UTC), protocole filet Manta identique à l'entrée du 10/09 à Calcatoggio.
 - 2026-09-11 (suite) : Commit `b209418` (fix photo Google Drive escale Ajaccio) poussé sur `main`. Nouvelle demande client : galerie multi-images — possibilité d'ajouter plusieurs photos et d'ouvrir une fenêtre galerie (80% écran, navigation flèches gauche/droite) au clic sur une image.
+- 2026-09-11 (suite) : Galerie plein écran multi-photos implémentée — clic sur une photo (site d'étude/observation/escale) ouvre une visionneuse 80vw/80vh, navigation flèches gauche/droite + clavier, compteur ; champ `photo` unique des escales migré vers `media[]` (multi-photos, migration transparente à la sauvegarde). Poussé (`20cfcba`). Nouvelle demande client : marqueurs photo indépendants des observations — icône « pin goutte » retenue parmi 4 styles proposés en visuel ; reste à implémenter (onglet « Photo » dans l'éditeur, clic carte pour placer, URL comme escales, multi-photos, réutilisation de la galerie plein écran).
 
 ## Liens
 - Client : [[naeco]]
