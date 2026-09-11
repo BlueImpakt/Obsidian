@@ -59,6 +59,8 @@ localisation: france
 - 2026-09-10 (suite) : Sur [[naeco-carte]] — logo NAECO posé sur le splash de chargement (fond ivoire), 2 sites d'étude ADNe ajoutés et positionnés dans le tracé Point Zéro pré-tracker. Bug "trace disparaît à l'ouverture de l'éditeur" signalé de nouveau non résolu après un premier fix poussé — reste ouvert. Détails dans la fiche projet.
 - 2026-09-10/11 (suite) : Sur [[naeco-carte]] — bug éditeur reclassé faux positif de cache navigateur (fix confirmé fonctionnel). Décision : plus de tracé pour STARECORSICA (campagne sans navigation propre), retiré de la carte en gardant l'entrée en légende. Image de partage (og-image) et écran de chargement peaufinés (Corse + "EXPÉDITIONS"). Deux bugs réels trouvés et corrigés : flash/saccade à l'ouverture (repaint GPU de la légende, diagnostiqué depuis une vidéo client) et header mobile qui débordait à 320-375px (boutons de recentrage/présentation inatteignables) — les deux corrigés mais pas encore poussés. Nouveau bug signalé en fin de session : création de site d'étude cassée. Détails dans la fiche projet.
 
+- 2026-09-11 : Sur [[naeco-carte]] — bug "création de site d'étude cassée" (signalé en fin de session précédente) corrigé, ainsi qu'un bug photo d'escale invisible (lien Google Drive mal interprété). Nouveau site d'étude Point Zéro ajouté (Galéria). Détails dans la fiche projet.
+
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
 - Patterns utilisés : [[jsonbin-source-de-verite]]
