@@ -33,6 +33,7 @@ client: naeco
 - `sync.sh` a un bug de path connu côté client — déploiement à faire manuellement (`git add/commit/push`)
 
 ## Next actions
+- [ ] Bug "trace active disparaît à l'ouverture de l'éditeur" signalé à nouveau non résolu (le fix `c7cf398` n'a apparemment pas réglé le problème) — à investiguer
 - [ ] Vérifier si le commit `4bc0499` a bien été amendé (mauvaise adresse email) + force-pushé sur `main`
 - [ ] Custom domain `track.naecoexpedition.org` (optionnel) — la zone Cloudflare vue par `wrangler` ne correspond pas au bon compte, à refaire proprement si souhaité ; le Worker tourne déjà sur son URL `.workers.dev`, aucun impact fonctionnel
 - [ ] Dessiner le vrai tracé de STARECORSICA (2026-2029) via l'onglet Expéditions de l'éditeur (bouton « Tracer le tracé ») — actuellement un tracé placeholder (2 points)
@@ -59,6 +60,8 @@ client: naeco
 - 2026-09-10 (suite) : Les 18 observations + l'escale existantes (créées avant l'ajout du champ association) rattachées automatiquement à **STARECORSICA** via `normalizeAssoc()`. Poussé (`34c4a90`).
 - 2026-09-10 (suite) : Charte graphique NAECO appliquée à la carte — header clair `#f9fbfc`, logo NAECO à la place du titre texte, badges recolorés (Expéditions ivoire devenue non cliquable, Observations bleu marine, Escales corail, Sites d'étude turquoise), tous les tracés d'expédition en ivoire, champ "Couleur" retiré de l'éditeur Expéditions. Poussé (`34c4a90..35c046b`).
 - 2026-09-10 (suite) : Fix du bug qui faisait disparaître la trace Point Zéro en mode présentation (`togglePresMode()` appelait à tort `setLiveHidden`). Filtre "Expédition/campagne associée" ajouté en tête des onglets éditeur Observations/Escales/Sites d'étude (filtre d'affichage uniquement, défaut = trace active, option "Toutes"). Wording des menus aligné sur celui de la légende (`Nom (année)`). Trace Point Zéro alignée sur le design des traces d'expédition (pointillés + voile ivoire, après plusieurs itérations bicolores abandonnées). Couleurs fixées : AMP `#3D7F5F`, Sanctuaire PELAGOS `#142A4A`. Fenêtre légende recolorée (haut bleu marine, bas "Couches" en ivoire) ; noms des AMP en pastille ivoire à 50% de transparence, texte vert. Poussé (`35c046b..d7d908c`).
+- 2026-09-10 (suite) : Titre NAECO du splash de chargement remplacé par le logo (image Cloudinary) ; fond navy → ivoire (logo non visible sur navy) ; boutons zoom recolorés en bleu marine. Poussé (`482f968`). 2 sites d'étude "Prélèvement ADNe Sub-surface" ajoutés pour l'expédition Point Zéro (golfe d'Ajaccio, 18:11 et 11:00) via JSONbin + `DSTU`. Fix du bug "trace active disparaît à l'ouverture de l'éditeur" (`setLiveHidden` retirait `lyr.live` sans condition) poussé (`c7cf398`), mais **rapporté de nouveau non résolu en fin de session** (fix insuffisant ou autre chemin causant le même symptôme) — session interrompue avant reprise, à investiguer.
+- 2026-09-10 (suite) : Points "Prélèvement ADNe profondeur" et "Prélèvement ADNe Sub-surface" positionnés dans le tracé Point Zéro pré-tracker puis réordonnés (profondeur → sub-surface → ponton) pour coller aux marqueurs `sitesEtude` correspondants ; vitesses cohérentes, aucun point filtré par le Worker.
 
 ## Liens
 - Client : [[naeco]]
