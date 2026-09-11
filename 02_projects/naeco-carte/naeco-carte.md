@@ -36,7 +36,7 @@ client: naeco
 - [ ] Vérifier si le commit `4bc0499` a bien été amendé (mauvaise adresse email) + force-pushé sur `main`
 - [ ] Custom domain `track.naecoexpedition.org` (optionnel) — la zone Cloudflare vue par `wrangler` ne correspond pas au bon compte, à refaire proprement si souhaité ; le Worker tourne déjà sur son URL `.workers.dev`, aucun impact fonctionnel
 - [ ] Pousser les 2 commits en attente (flash/saccade légende `8118cbd`, header mobile responsive `a75b2f2`)
-- [ ] Pousser commit `b209418` (fix photo Google Drive escale Ajaccio, converties via `gdriveImg()`)
+- [ ] Implémenter galerie multi-images (clic sur photo → fenêtre 80% écran, navigation flèches gauche/droite) pour sites d'étude/observations/escales
 
 ## Journal
 - 2026-08-29 : Repo analysé, fiche créée. Pattern "JSONbin comme source de vérité + garde-fous stricts anti-écrasement" à retenir — potentiellement réutilisable pour d'autres sites à contenu live-éditable.
@@ -66,6 +66,7 @@ client: naeco
 - 2026-09-11 : Bug "création de site d'étude cassée" corrigé — cause : les polygones AMP/Pelagos et les markers Leaflet font `stopPropagation()` sur leur clic (pour ouvrir leur fiche), ce qui empêchait le clic de placement d'atteindre son handler. Fix : listener en phase de capture sur `document`, actif seulement pendant un placement réel. Poussé (`7bc57e6`). Effet de bord découvert : 16 sites d'étude vides dans le JSONbin (tentatives précédentes silencieusement ratées à cause du même bug) — supprimés, ne restent que les 4 vrais sites Point Zéro.
 - 2026-09-11 (suite) : Bug photo escale Ajaccio (fenêtre noire) corrigé — le champ `photo` contenait un lien de partage Google Drive collé tel quel dans une balise `<img>` (échoue silencieusement). Fonction `gdriveImg()` ajoutée pour convertir ce format vers l'URL image directe `lh3.googleusercontent.com/d/ID`, appliquée partout où une photo est affichée (obs, escale, expédition, sites d'étude). Commit `b209418`, **pas encore poussé**.
 - 2026-09-11 (suite) : Nouveau site d'étude Point Zéro ajouté dans JSONbin (`sitesEtude`, 5ᵉ entrée) — « Prélèvement microplastique », au large de Galéria (42.12585, 8.60099), 11/09/2026 09:00 (position réelle 07:00:07 UTC), protocole filet Manta identique à l'entrée du 10/09 à Calcatoggio.
+- 2026-09-11 (suite) : Commit `b209418` (fix photo Google Drive escale Ajaccio) poussé sur `main`. Nouvelle demande client : galerie multi-images — possibilité d'ajouter plusieurs photos et d'ouvrir une fenêtre galerie (80% écran, navigation flèches gauche/droite) au clic sur une image.
 
 ## Liens
 - Client : [[naeco]]
