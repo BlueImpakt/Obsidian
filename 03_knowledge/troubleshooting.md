@@ -74,6 +74,28 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 
 **À retenir** : chaque fois qu'un `position: sticky` enfant ne s'accroche pas alors que le CSS a l'air correct, vérifier si un ancêtre a `overflow: hidden`/`auto`/`scroll` — et préférer `overflow: clip` dès qu'on veut à la fois clipper *et* garder un sticky interne fonctionnel.
 
+## [[naeco-carte]] — flash visuel intermittent (légende puis carte) causé par une animation CSS morte forçant un repaint GPU continu
+
+**Symptôme** : un flash intermittent et non reproductible à volonté — d'abord vu sur la légende (bloc collapsé une frame sur ~5), puis, après un premier fix partiel, sur la carte elle-même (bande de tuiles pâles, sans le fill/les traces attendus, ~23% des frames).
+
+**Root cause** : une keyframe `dash-flow` animait `stroke-dashoffset` en continu sur un élément qui n'était **pas** un tracé SVG (une `<div>` de légende dessinée via `background-image`) — `stroke-dashoffset` n'a aucun effet sur une `<div>` mais **n'a pas de fast-path compositeur** : Chromium doit re-peindre et re-rastériser **toute la couche** à chaque frame, en continu, même si le rendu visuel ne change jamais. Les tuiles/calques qui ratent la deadline de composition sont présentés à leurs bornes périmées (état précédent, ex. panneau "vide" ou tuile sans son fill semi-transparent) → flash. Sur la carte, le même piège touchait un vrai tracé SVG (`.exp-dash`) qui partageait son unique `<svg>` avec un gros polygone (fill semi-transparent) — l'animation du tracé forçait donc aussi le re-rasterisage permanent du polygone voisin, alors qu'ils n'ont aucun lien logique.
+
+**Fix** : (1) supprimer les animations mortes qui n'ont plus d'effet sur l'élément qu'elles ciblent (identifiables via `getKeyframes()` dans les devtools — si les props animées ne s'appliquent pas au type d'élément, l'animation ne sert à rien mais coûte quand même) ; (2) pour l'animation réellement utile (le tracé pointillé), passer l'`easing` de `linear` à `steps(8)` — le rendu reste fluide à l'œil mais le nombre de repaints/s chute drastiquement (~60/s → ~5,7/s dans ce cas), suffisant pour ne plus rater les deadlines de composition.
+
+**Méthode de diagnostic qui a marché** : mesurer la coupe/le défaut sur plusieurs frames d'une vidéo (position en x/y constante ou variable ?) pour distinguer un vrai bug de layout (bordures/coins qui bougent) d'un artefact de composition GPU (coupe nette, sans bordure, toujours au même endroit) — puis chercher ce qui force un repaint permanent au repos plutôt que ce qui se déclenche une fois.
+
+**À retenir** : `stroke-dashoffset`, `filter`, `box-shadow` animés et quelques autres propriétés n'ont pas de fast-path compositeur — animées en `linear` et en continu, elles peuvent forcer un re-rasterisage permanent de toute la couche qui les contient, y compris des éléments visuellement indépendants qui partagent la même couche (ex. plusieurs formes dans un seul `<svg>`). Une animation qui semble inoffensive (elle ne fait "rien" à l'œil, ou anime un élément mineur) peut donc dégrader silencieusement le rendu d'éléments voisins sans lien apparent.
+
+## [[naeco-carte]] — mot de passe éditeur et clé API en clair dans un fichier HTML statique côté client
+
+**Contexte** : architecture "tout côté client, pas de backend" (HTML unique + JSONbin comme base de données) — le mot de passe qui protège le mode éditeur et la clé JSONbin (lecture **et** écriture complètes sur les données de production) sont tous deux écrits en clair dans le code source, visibles via "Afficher le code source" sans même avoir besoin des devtools.
+
+**Risque** : le mot de passe éditeur ne protège que l'UI — n'importe qui peut soit le lire et l'utiliser normalement, soit l'ignorer complètement et appeler l'API JSONbin directement avec la clé trouvée dans le code, en contournant le site entier.
+
+**Fix retenu (pas encore déployé)** : séparer la clé de **lecture** (restreinte en lecture seule côté JSONbin, sans danger si elle fuite) de la clé d'**écriture** (déplacée côté serveur, dans un petit proxy Cloudflare Worker qui vérifie une autorisation avant d'écrire). Le site public ne charge plus que la clé lecture-seule ; le bouton "Enregistrer" de l'éditeur appelle le Worker au lieu de JSONbin directement. Aucun changement pour l'utilisateur (même mot de passe, même UI).
+
+**À retenir** : pour tout site "HTML statique + BaaS" (JSONbin, Firebase, Supabase avec RLS mal configuré, etc.) sans étape de build/serveur, vérifier systématiquement si la clé embarquée dans le code source a des droits d'écriture — c'est un pattern qui revient dès qu'un site no-backend a besoin d'un mode édition en ligne, voir aussi [[jsonbin-source-de-verite]].
+
 ## [[naeco-site]] — filet de lumière d'1px au raccord de deux dégradés CSS voisins
 
 **Symptôme** : une fine ligne claire persistait à la jonction entre deux sections censées se raccorder sans couture, même après avoir renforcé le voile d'assombrissement de la première section.
