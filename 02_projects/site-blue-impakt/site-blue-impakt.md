@@ -1,5 +1,5 @@
 ---
-tags: [project, encours]
+tags: [project, encours, blue-impakt]
 created: 2026-08-29
 statut: encours
 client: blue-impakt
@@ -35,6 +35,6 @@ client: blue-impakt
 - 2026-08-31 : Refonte lancée — skills `muller-brockmann-grid-systems` + `motion` installés en global, brainstorming (4 maquettes : V2 Swiss pur, V3, V2b alternance sombre/clair, écartées), tranché sur V4 (charte d'origine + grille dessous). Spec (`docs/superpowers/specs/2026-08-31-refonte-grille-muller-brockmann-design.md`) et plan (`docs/superpowers/plans/2026-08-31-refonte-grille-muller-brockmann.md`) écrits et commités sur branche `refonte-swiss-grid` (repo local `C:\Users\LENOVO\Documents\GitHub\Site-web`), `main` intact. Exécution en 10 tâches (subagent-driven-development) lancée.
 
 ## Liens
-- Client : [[blue-impakt]]
+- Client : Blue Impakt (projet interne, pas un client externe)
 - Patterns utilisés : `muller-brockmann-grid-systems`, `motion`
 - Repo / deployment : https://github.com/BlueImpakt/Site-web (Cloudflare Pages, projet `blue-impakt`) — branche de travail `refonte-swiss-grid`
