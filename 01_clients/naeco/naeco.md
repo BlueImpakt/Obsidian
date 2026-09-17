@@ -30,7 +30,6 @@ localisation: france
 - [ ]
 
 ## Journal
-- 2026-09-10 (suite) : Sur [[naeco-carte]] — charte graphique NAECO appliquée à la carte (header clair, logo, badges recolorés, tracés ivoire), fix du bug de disparition de la trace Point Zéro en mode présentation, filtre "Expédition/campagne" ajouté dans l'éditeur, couleurs AMP/PELAGOS fixées, fenêtre légende bicolore. Détails dans la fiche projet.
 - 2026-09-10 (suite) : Sur [[naeco-carte]] — logo NAECO posé sur le splash de chargement (fond ivoire), 2 sites d'étude ADNe ajoutés et positionnés dans le tracé Point Zéro pré-tracker. Bug "trace disparaît à l'ouverture de l'éditeur" signalé de nouveau non résolu après un premier fix poussé — reste ouvert. Détails dans la fiche projet.
 - 2026-09-10/11 (suite) : Sur [[naeco-carte]] — bug éditeur reclassé faux positif de cache navigateur (fix confirmé fonctionnel). Décision : plus de tracé pour STARECORSICA (campagne sans navigation propre), retiré de la carte en gardant l'entrée en légende. Image de partage (og-image) et écran de chargement peaufinés (Corse + "EXPÉDITIONS"). Deux bugs réels trouvés et corrigés : flash/saccade à l'ouverture (repaint GPU de la légende, diagnostiqué depuis une vidéo client) et header mobile qui débordait à 320-375px (boutons de recentrage/présentation inatteignables) — les deux corrigés mais pas encore poussés. Nouveau bug signalé en fin de session : création de site d'étude cassée. Détails dans la fiche projet.
 - 2026-09-11 : Sur [[naeco-carte]] — bug "création de site d'étude cassée" (signalé en fin de session précédente) corrigé, ainsi qu'un bug photo d'escale invisible (lien Google Drive mal interprété). Nouveau site d'étude Point Zéro ajouté (Galéria). Détails dans la fiche projet.
@@ -45,6 +44,7 @@ localisation: france
 - 2026-09-16 (suite) : Sur [[naeco-site]] — bloc carte interactive fusionné dans la bande dégradée entre Expédition 2026 et Partenaires. Détails dans la fiche projet.
 - 2026-09-16 (suite) : Sur [[naeco-carte]] — régression `validateFix` corrigée (rejetait les fixes stationnaires légitimes au mouillage), déployé ; 157 points GPS parasites de Porto supprimés, 14 points supplémentaires (dérive à pied) identifiés en attente de suppression. Détails dans la fiche projet.
 - 2026-09-16 (suite) : Sur [[naeco-site]] — logo partenaire STARESO récupéré (Drive), recadré, intégré (Cloudinary) et vérifié en live ; rien commité. Liste des 5 prochains partenaires à intégrer transmise par le client (Agence de l'Eau, Le Fonds Vert, FDVA, Fonds HLD, La MAIF Ajaccio). Détails dans la fiche projet.
+- 2026-09-17 : Sur [[naeco-carte]] — migration des 43 images Drive vers Cloudinary lancée (risque de perte d'accès au Drive), 42/43 migrées, 1 lien cassé encore à trancher avant de patcher la carte. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
