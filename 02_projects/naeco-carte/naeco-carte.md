@@ -34,6 +34,7 @@ client: naeco
 - `sync.sh` a un bug de path connu côté client — déploiement à faire manuellement (`git add/commit/push`)
 
 ## Next actions
+- [ ] Vérifier sur le terrain (vidéo écran réelle) que le flash carte a bien disparu après l'isolation de la trace sur son propre calque SVG (`78f36e3`) — non vérifiable depuis l'environnement de dev
 - [ ] Activer le versioning JSONbin sur le bin naeco-carte (aucun retour arrière possible actuellement en cas d'écrasement)
 - [ ] Vérifier si le commit `4bc0499` a bien été amendé (mauvaise adresse email) + force-pushé sur `main`
 - [ ] Custom domain `track.naecoexpedition.org` (optionnel) — la zone Cloudflare vue par `wrangler` ne correspond pas au bon compte, à refaire proprement si souhaité ; le Worker tourne déjà sur son URL `.workers.dev`, aucun impact fonctionnel
