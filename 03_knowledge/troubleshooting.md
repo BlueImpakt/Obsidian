@@ -157,3 +157,13 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : pré-normaliser toutes les images à la même taille et au même format pixel (ex. 800×450, `yuvj444p`) avant l'assemblage par concat. Plus aucune reconfiguration en cours de route — vérifié par l'absence de `Reconfiguring filter graph` dans les logs ffmpeg et par un nombre de frames encodées exact (25fps × durée attendue).
 
 **À retenir** : pour tout montage ffmpeg par `concat` à partir d'une banque de photos hétérogènes (tailles/formats variables), toujours pré-normaliser (resize + format pixel uniforme) avant assemblage — sinon le filter graph se reconfigure à chaque changement de format et fait perdre des frames silencieusement, sans erreur bloquante. Vérifier après coup : grep `Reconfiguring filter graph` dans les logs (doit être absent) + nombre de frames encodées == fps × durée attendue.
+
+## [[naeco-carte]] — carte bloquée sur le splash screen à l'ouverture (Brave, navigation normale uniquement)
+
+**Symptôme** : après un déploiement, la carte restait figée sur le splash screen (logo + barres d'onde) à l'ouverture. Reproductible uniquement sur Brave en navigation normale — fonctionnait en navigation privée Brave et sur Google Chrome (normal et privé), et le site répondait sans erreur en testant fraîchement côté serveur (HTML à jour, aucune erreur console sur un navigateur automatisé).
+
+**Root cause** : `localStorage` (clé `nobs` notamment, via `ls_get('nobs', DOBS)`) garde une copie locale des observations/config côté client comme fallback. Une ancienne valeur mise en cache dans ce profil Brave précis (jamais réinitialisée) devenait incompatible avec le code déployé après une mise à jour — la navigation privée et un autre navigateur partent d'un `localStorage` vide donc ne reproduisent jamais le bug. Les Brave Shields ont été soupçonnés en premier (bloqueur de scripts par site) mais n'étaient pas en cause ici.
+
+**Fix** : vider le `localStorage` du site (DevTools → Application → Local Storage → clic droit → Clear, ou `localStorage.clear(); location.reload();` dans la console) puis recharger.
+
+**À retenir** : un bug qui ne reproduit que sur UN navigateur ET seulement en navigation normale (pas privée) pointe presque toujours vers du `localStorage`/`sessionStorage` obsolète propre à ce profil, pas vers un bug de déploiement — vérifier le HTML/JS servi côté serveur en premier (curl, ou navigateur frais) pour écarter un vrai problème de prod avant de chercher plus loin. Les extensions/Shields du navigateur (Brave, ad-blockers) sont une hypothèse plausible mais secondaire dans ce cas de figure exact.
