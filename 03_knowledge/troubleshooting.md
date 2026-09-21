@@ -147,3 +147,13 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : repointer `og:url`/`og:image`/`twitter:image` vers le domaine de prod effectivement partagé, et ajouter un paramètre de cache-bust (`?v=N`) sur l'image pour forcer les scrapers (WhatsApp/iMessage/Facebook/Slack…) à retélécharger plutôt que réutiliser un cache existant à la prochaine mise à jour.
 
 **À retenir** : si un site sert le même contenu depuis plusieurs hostnames (domaine custom + URL `.workers.dev`/`.pages.dev` par exemple), toujours vérifier que les balises `og:*`/`twitter:*` pointent vers le hostname **réellement partagé**, pas un hostname alternatif — un CDN comme Cloudflare cache par hostname, donc republier le contenu sur l'un ne rafraîchit jamais le cache de l'autre. Les aperçus déjà en cache chez des destinataires ayant partagé/reçu le lien avant le fix ne se corrigent pas rétroactivement (hors de contrôle, dépend du cache de chaque plateforme).
+
+## [[naeco-carte]] — images figées/défilement incohérent dans un concat vidéo ffmpeg à partir de photos hétérogènes
+
+**Symptôme** : une vidéo assemblée par concat ffmpeg à partir d'une banque de photos (animation son+image rorqual) affichait par moments une image figée bien plus longtemps que prévu, avec un défilement qui ne correspondait plus au minutage calculé — comportement en plus incohérent entre PC et téléphone.
+
+**Root cause** : les photos sources avaient des tailles/formats pixel différents (ex. 800×533 en 4:4:4, 800×366, 800×550, certaines en 4:2:0). Le filtre `scale+crop` de ffmpeg doit reconfigurer tout son pipeline vidéo (filter graph) à chaque changement de format d'image dans le flux — ça faisait perdre des frames massivement (12 frames encodées pour 5.4s de contenu attendu au lieu de ~135). Symptôme confirmé par le bitrate encodé anormalement bas (~20 kb/s, signe de frames quasi-identiques répétées).
+
+**Fix** : pré-normaliser toutes les images à la même taille et au même format pixel (ex. 800×450, `yuvj444p`) avant l'assemblage par concat. Plus aucune reconfiguration en cours de route — vérifié par l'absence de `Reconfiguring filter graph` dans les logs ffmpeg et par un nombre de frames encodées exact (25fps × durée attendue).
+
+**À retenir** : pour tout montage ffmpeg par `concat` à partir d'une banque de photos hétérogènes (tailles/formats variables), toujours pré-normaliser (resize + format pixel uniforme) avant assemblage — sinon le filter graph se reconfigure à chaque changement de format et fait perdre des frames silencieusement, sans erreur bloquante. Vérifier après coup : grep `Reconfiguring filter graph` dans les logs (doit être absent) + nombre de frames encodées == fps × durée attendue.
