@@ -171,3 +171,23 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **À retenir** :
 1. Un bug qui semble "résolu" par un cache-clear mais **qui revient** n'est presque jamais un vrai problème de cache — le clear ne fait souvent que réinitialiser un état qui redéclenche un vrai bug de code ailleurs. Ne pas s'arrêter au premier fix qui "marche", vérifier qu'il tient dans la durée avant de documenter la cause.
 2. Piège classique en JS non-modulaire (un seul fichier, `var` partout) : une fonction définie tôt peut référencer une variable déclarée plus loin dans le même fichier sans erreur de syntaxe (hoisting), mais plante à l'exécution si elle est **appelée** avant que cette variable ait été assignée. Symptôme fourbe : la fonction marche parfaitement quand on la teste à la main dans la console (après chargement complet), mais plante silencieusement quand un chemin d'exécution l'appelle plus tôt (ex. rendu initial des marqueurs). Toujours vérifier l'ORDRE D'EXÉCUTION réel (pas juste l'ordre syntaxique) d'une nouvelle variable globale référencée par du code qui peut tourner tôt.
+
+## [[naeco-carte]] — un bin JSONbin entièrement écrasé par un `PUT` brut suivant une doc de plan obsolète
+
+**Symptôme** : toutes les clés d'un bin JSONbin sauf `observations` (expeditions, escales, sitesEtude, photos, pelagosData, stats, general) disparues du jour au lendemain, sans action de suppression volontaire.
+
+**Root cause** : un plan d'implémentation écrit pour une fonctionnalité sans rapport (`docs/superpowers/plans/2026-09-20-rorqual-anim-player.md`, Task 6 Step 5) instruisait un `PUT` brut vers l'API JSONbin avec un corps `{"observations": [...]}`, en affirmant à tort que ça ne patchait que ce champ. JSONbin ne fait **aucune fusion partielle sur un `PUT`** — il remplace tout le contenu du bin par le corps envoyé, quel qu'il soit. Une session ayant suivi ce plan (ou une doc similaire restée dans le repo depuis avant la migration vers le Worker `/api/sync`, qui lui fait la fusion) a donc écrasé tout le bin avec un payload ne contenant que les observations.
+
+**Fix** : restauration depuis une sauvegarde antérieure (fusionnée avec les données récentes non couvertes par la sauvegarde) ; suppression de toute clé maître JSONbin encore en clair dans le repo (`check-remote.sh`) ; mise à jour de la doc obsolète qui prescrivait le PUT direct ; avertissement ajouté en tête du plan fautif pour qu'il ne soit plus jamais rejoué tel quel.
+
+**À retenir** : dès qu'un projet migre son écriture BaaS derrière un proxy qui fait de la fusion (voir [[jsonbin-source-de-verite]]), auditer et corriger/supprimer **toute** doc antérieure (scripts, `CLAUDE.md`, plans archivés) qui décrit encore l'ancien accès direct avec la clé maître — un plan écrit pour une tâche A, même sans rapport avec les données concernées, peut réintroduire silencieusement un pattern d'écriture dangereux abandonné ailleurs. Activer le versioning du BaaS dès la mise en prod limite les dégâts d'un futur écrasement.
+
+## Mot de passe API systématiquement refusé sous PowerShell : guillemets JSON corrompus par `curl.exe`, pas un problème de mot de passe
+
+**Symptôme** : un appel `curl.exe -X POST ... -d '{"password":"..."}'` renvoie `{"ok":false}` de façon stable, même après avoir revérifié à plusieurs reprises que le mot de passe est correct (confirmé fonctionnel ailleurs, ex. directement dans l'UI du site).
+
+**Root cause** : `curl.exe` (le binaire natif, pas un alias) mal interprété par PowerShell lors du passage d'un argument contenant des guillemets doubles imbriqués (payload JSON) — un bug connu de reconstruction d'arguments pour les programmes natifs sous PowerShell. Le JSON envoyé au serveur est corrompu à la frontière PowerShell → processus natif, indépendamment de la variable ou de la valeur réelle du mot de passe.
+
+**Fix** : remplacer `curl.exe` par `Invoke-RestMethod` (cmdlet PowerShell natif) pour tout appel avec payload JSON — `Invoke-RestMethod -Uri ... -Method Post -ContentType "application/json" -Body (@{password='...'} | ConvertTo-Json)` ne passe jamais par la couche de reconstruction d'arguments qui pose problème.
+
+**À retenir** : sous PowerShell, ne pas diagnostiquer un mot de passe/token/secret comme "faux" sur la seule base d'un appel `curl.exe` échoué avec un payload JSON — tester d'abord avec `Invoke-RestMethod` pour éliminer ce piège de raccord d'arguments avant de remettre en cause le secret lui-même.

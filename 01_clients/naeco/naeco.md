@@ -30,10 +30,6 @@ localisation: france
 - [ ]
 
 ## Journal
-- 2026-09-16 (suite) : Sur [[naeco-site]] — logo partenaire STARESO récupéré (Drive), recadré, intégré (Cloudinary) et vérifié en live ; rien commité. Liste des 5 prochains partenaires à intégrer transmise par le client (Agence de l'Eau, Le Fonds Vert, FDVA, Fonds HLD, La MAIF Ajaccio). Détails dans la fiche projet.
-- 2026-09-17 : Sur [[naeco-carte]] — migration des 43 images Drive vers Cloudinary lancée (risque de perte d'accès au Drive), 42/43 migrées, 1 lien cassé encore à trancher avant de patcher la carte. Détails dans la fiche projet.
-- 2026-09-17 (suite) : Sur [[naeco-carte]] — migration des 43 images Drive vers Cloudinary terminée et patchée en live (43/43, dernier lien cassé résolu, bug de saisie Galéria corrigé au passage). Détails dans la fiche projet.
-- 2026-09-17 (suite) : Sur [[naeco-carte]] — 9 nouvelles observations mégafaune Point Zéro extraites de 4 GPX client, payload de sync préparé (27 obs au total), publication en attente (client doit exécuter la commande lui-même, mot de passe non partagé). Détails dans la fiche projet.
 - 2026-09-17 (suite) : Sur [[naeco-carte]] — publication des 9 observations Point Zéro confirmée (27 au total), puis corrigée sur demande du client (espèces/nombre d'individus). Détails dans la fiche projet.
 - 2026-09-17 (suite) : Sur [[naeco-carte]] — 2 nouvelles photos ajoutées à l'escale Porto via Cloudinary (6 → 8 photos). Détails dans la fiche projet.
 - 2026-09-17 (suite) : Sur [[naeco-site]] — commit `d7254cd` poussé en prod (renommage « 3 gestes » + CTA déplacé, statsbar 4→5, refonte hero, reformulations de copie). Détails dans la fiche projet.
@@ -45,6 +41,9 @@ localisation: france
 - 2026-09-20 : Sur [[naeco-carte]] — conception et plan validés pour une animation son+image "rorqual" (lecteur plein écran synchronisé sur un extrait Woodkid, droits musicaux réglés côté client), spec et plan d'implémentation commités, exécution démarrée. Détails dans la fiche projet.
 - 2026-09-20 (suite) : Sur [[naeco-carte]] — Tasks 1-5 de l'animation rorqual implémentées et vérifiées (overlay, moteur audio, popup), motif rythmique corrigé (108,2s), audio réel Woodkid branché et testé, démo montrée au client. Reste en attente : ~100 photos rorqual et confirmation client pour la publication finale (Task 6). Détails dans la fiche projet.
 - 2026-09-20 (suite) : Sur [[naeco-carte]] — animation rorqual déployée en prod (Task 6 terminée, patch JSONbin appliqué), désync perçu diagnostiqué (contention navigateur au chargement, pas un bug audio), motif rythmique finalisé par exports vidéo ffmpeg (`(A,B,C,C,C)×3 + C`), 33 vraies photos intégrées, lecteur rendu responsive mobile. Détails dans la fiche projet.
+- 2026-09-23 : Sur [[naeco-carte]] — incident de perte de données JSONbin (cause : plan d'implémentation obsolète prescrivant un écrasement brut du bin), restauré et corrigé, sauvegarde committée. 6 nouveaux sites d'étude publiés. Sécurité : rotation de la clé maître JSONbin à faire (secret partagé avec [[naeco-site]]). Détails dans la fiche projet.
+- 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
+- 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
