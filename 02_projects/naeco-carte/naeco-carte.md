@@ -45,6 +45,8 @@ client: naeco
 - [ ] Ajouter un espace au-dessus du texte "VOIR LE FILM PHOTOGRAPHIQUE (2min)" de la vignette animation pour le décaler d'une ligne (demande client interrompue en fin de session du 2026-09-23, pas encore faite)
 - [ ] Décider du sort des 5 photos globicéphales encore en portrait non pivotées (P1033286, P1033357, P1033382, P1033393, P1033394)
 - [ ] Supprimer `naeco-carte-migration-test/` et `samples/` sur Cloudinary si confirmé inutile (proposé au client le 2026-09-23, pas encore confirmé)
+- [ ] Confirmer sur le terrain (vidéo écran réelle) que le fix du flash carte (isolation de la trace sur son propre pane SVG, commit `78f36e3`) tient dans la durée — preuve de l'absence de tearing GPU non vérifiable depuis l'environnement de dev (retrouvé dans `03_knowledge/troubleshooting.md`, jamais reporté ici)
+- [ ] Déployer l'extension "logo NAECO seul (Ammo Visuals masqué)" sur les catégories observations/escales/sites d'étude — implémentée et vérifiée en local depuis le 2026-09-12, jamais poussée en prod (pas de "déploie" reçu à l'époque, perdu de vue depuis)
 
 ## Journal
 - 2026-09-21 (suite) : Méthode de calage `librosa` documentée dans `03_knowledge/patterns/sync-image-audio-beat-detection-librosa.md` (détection tempo/beats, correction du décalage pic/attaque, piège ffmpeg filter graph, méthode de vérification par hash de frames) + CSV complet de la séquence (209 lignes) en pattern réutilisable, tags `#pattern #code #validé`.
