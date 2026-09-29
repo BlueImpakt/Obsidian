@@ -191,3 +191,23 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : remplacer `curl.exe` par `Invoke-RestMethod` (cmdlet PowerShell natif) pour tout appel avec payload JSON — `Invoke-RestMethod -Uri ... -Method Post -ContentType "application/json" -Body (@{password='...'} | ConvertTo-Json)` ne passe jamais par la couche de reconstruction d'arguments qui pose problème.
 
 **À retenir** : sous PowerShell, ne pas diagnostiquer un mot de passe/token/secret comme "faux" sur la seule base d'un appel `curl.exe` échoué avec un payload JSON — tester d'abord avec `Invoke-RestMethod` pour éliminer ce piège de raccord d'arguments avant de remettre en cause le secret lui-même.
+
+## `wrangler secret put` — coller la valeur du secret directement dans la commande la fait interpréter comme des variables PowerShell
+
+**Symptôme** ([[naeco-carte]], 2026-09-28) : `npx wrangler secret put $2a$10$d.RHrmq…` répond "Success! Uploaded secret …", mais le secret réel (`JB_MASTER_KEY`) ne change jamais de valeur — le Worker continue de fonctionner avec l'ancienne clé.
+
+**Root cause** : la valeur du secret a été collée directement après `wrangler secret put` au lieu du **nom** de la variable (`JB_MASTER_KEY`). Sous PowerShell, `$2a`, `$10`, `$d` etc. sont lus comme des variables (vides), donc le nom de secret réellement envoyé à Cloudflare devient tout ce qui reste après troncature (`.RHrmqWS12seroR5Qso2OjLs32d3ETIw1J7fz/hnxRdexE8efnoS`) — un nouveau secret parasite, sans rapport avec `JB_MASTER_KEY`. Le message "Success" est trompeur : la commande a bien réussi, juste pas comme prévu.
+
+**Fix** : ne jamais mettre la valeur du secret sur la ligne de commande. Toujours `npx wrangler secret put NOM_DE_LA_VARIABLE` seul, sans rien après — Wrangler ouvre alors un prompt masqué (`Enter a secret value:`) où coller la valeur en toute sécurité (et sans risque d'interprétation par le shell).
+
+**À retenir** : sous PowerShell, tout argument commençant par `$` collé dans une commande est un piège potentiel (interprété comme variable), pas seulement pour les secrets JSONbin — vérifier systématiquement qu'un `wrangler secret put`/`put`-like a bien pris effet (tester l'appel réel) plutôt que de se fier au message de succès de la CLI.
+
+## `wrangler deploy` publie `.dev.vars` comme fichier statique accessible publiquement si `.assetsignore` ne l'exclut pas
+
+**Symptôme** ([[naeco-site]], 2026-09-28) : après un `wrangler deploy` sur un Worker de type "assets" (site statique servi tel quel), le fichier `.dev.vars` (contenant `JB_MASTER_KEY` et `EDIT_ACCOUNTS` en clair) est devenu accessible en téléchargement direct sur l'URL de prod pendant plusieurs minutes.
+
+**Root cause** : Wrangler, en mode assets, upload **tous** les fichiers du dossier servi sauf ceux listés dans `.assetsignore` (équivalent de `.gitignore`, mais pour le déploiement — indépendant de ce qui est commité sur Git). `.dev.vars` n'y figurait pas : le fait qu'il soit dans `.gitignore` ne le protège pas du déploiement.
+
+**Fix** : ajouter `.dev.vars` (et tout fichier de secrets locaux) à `.assetsignore` à la racine du repo, en plus de `.gitignore`. Vérifier après coup que l'URL renvoie bien 404.
+
+**À retenir** : sur tout Worker Cloudflare de type assets (site statique), auditer `.assetsignore` dès la mise en place — `.gitignore` protège le repo, pas le déploiement. Traiter comme compromise toute valeur qui a pu transiter par un fichier exposé, même brièvement, et la régénérer.

@@ -44,6 +44,7 @@ localisation: france
 - 2026-09-23 : Sur [[naeco-carte]] — incident de perte de données JSONbin (cause : plan d'implémentation obsolète prescrivant un écrasement brut du bin), restauré et corrigé, sauvegarde committée. 6 nouveaux sites d'étude publiés. Sécurité : rotation de la clé maître JSONbin à faire (secret partagé avec [[naeco-site]]). Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
+- 2026-09-28 : Sur [[naeco-site]] — Plan 1 de l'éditeur v2 livré, testé et déployé en prod ; incident de sécurité JSONbin résolu (migration des bins vers le compte actuel, clé/mot de passe régénérés, anciens bins supprimés) ; incident de déploiement `.dev.vars` exposé puis corrigé. Sur [[naeco-carte]] — migré vers le nouveau bin, redéployé et vérifié en prod. Détails dans les fiches projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
