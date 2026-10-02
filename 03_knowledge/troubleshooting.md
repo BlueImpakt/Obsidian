@@ -147,3 +147,67 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 **Fix** : repointer `og:url`/`og:image`/`twitter:image` vers le domaine de prod effectivement partagé, et ajouter un paramètre de cache-bust (`?v=N`) sur l'image pour forcer les scrapers (WhatsApp/iMessage/Facebook/Slack…) à retélécharger plutôt que réutiliser un cache existant à la prochaine mise à jour.
 
 **À retenir** : si un site sert le même contenu depuis plusieurs hostnames (domaine custom + URL `.workers.dev`/`.pages.dev` par exemple), toujours vérifier que les balises `og:*`/`twitter:*` pointent vers le hostname **réellement partagé**, pas un hostname alternatif — un CDN comme Cloudflare cache par hostname, donc republier le contenu sur l'un ne rafraîchit jamais le cache de l'autre. Les aperçus déjà en cache chez des destinataires ayant partagé/reçu le lien avant le fix ne se corrigent pas rétroactivement (hors de contrôle, dépend du cache de chaque plateforme).
+
+## [[naeco-carte]] — images figées/défilement incohérent dans un concat vidéo ffmpeg à partir de photos hétérogènes
+
+**Symptôme** : une vidéo assemblée par concat ffmpeg à partir d'une banque de photos (animation son+image rorqual) affichait par moments une image figée bien plus longtemps que prévu, avec un défilement qui ne correspondait plus au minutage calculé — comportement en plus incohérent entre PC et téléphone.
+
+**Root cause** : les photos sources avaient des tailles/formats pixel différents (ex. 800×533 en 4:4:4, 800×366, 800×550, certaines en 4:2:0). Le filtre `scale+crop` de ffmpeg doit reconfigurer tout son pipeline vidéo (filter graph) à chaque changement de format d'image dans le flux — ça faisait perdre des frames massivement (12 frames encodées pour 5.4s de contenu attendu au lieu de ~135). Symptôme confirmé par le bitrate encodé anormalement bas (~20 kb/s, signe de frames quasi-identiques répétées).
+
+**Fix** : pré-normaliser toutes les images à la même taille et au même format pixel (ex. 800×450, `yuvj444p`) avant l'assemblage par concat. Plus aucune reconfiguration en cours de route — vérifié par l'absence de `Reconfiguring filter graph` dans les logs ffmpeg et par un nombre de frames encodées exact (25fps × durée attendue).
+
+**À retenir** : pour tout montage ffmpeg par `concat` à partir d'une banque de photos hétérogènes (tailles/formats variables), toujours pré-normaliser (resize + format pixel uniforme) avant assemblage — sinon le filter graph se reconfigure à chaque changement de format et fait perdre des frames silencieusement, sans erreur bloquante. Vérifier après coup : grep `Reconfiguring filter graph` dans les logs (doit être absent) + nombre de frames encodées == fps × durée attendue.
+
+## [[naeco-carte]] — carte bloquée sur le splash screen à l'ouverture (crash JS, pas un cache)
+
+**Symptôme** : après un déploiement, la carte restait figée sur le splash screen (logo + barres d'onde) à l'ouverture. Reproductible uniquement sur un profil Brave précis en navigation normale — fonctionnait en navigation privée et sur Google Chrome. `localStorage.clear()` débloquait temporairement, mais **le problème revenait**.
+
+**Fausse piste initiale** : `localStorage` obsolète (clé `nobs`, copie locale des observations comme fallback via `ls_get('nobs', DOBS)`) — un vrai écart existait (29 entrées en cache vs 18 dans le code actuel), mais ce n'était qu'un symptôme corrélé, pas la cause : vider le cache "marchait" seulement parce que ça réinitialisait aussi l'état qui déclenchait le vrai bug ci-dessous, qui revenait dès que cet état se recréait (ex. re-sélection de la même trace).
+
+**Root cause réelle** : `buildObsPopup()` référence `ANIM_BANKS` (pour la vignette du lecteur d'animation), mais `ANIM_BANKS` n'est déclaré que ~800 lignes plus loin dans `index.html`. Or `renderObservations()` — qui appelle `buildObsPopup()` pour chaque marqueur visible — s'exécute dès le chargement initial du script, **avant** que la ligne `var ANIM_BANKS = {...}` ait tourné. Si un marqueur avec `anim` défini (ex. l'observation rorqual) est visible dès cette première passe (trace par défaut mémorisée localement incluant cette observation), `ANIM_BANKS[o.anim]` plante sur `ANIM_BANKS` encore `undefined` — une exception non catchée à ce stade arrête tout le script derrière, y compris le code qui masque le splash. D'où le côté "aléatoire par navigateur/profil" : ça ne dépendait pas du navigateur en soi mais de quelle trace était sélectionnée par défaut à cet instant précis pour ce profil.
+
+**Fix** : garde defensive `typeof ANIM_BANKS!=='undefined'` avant toute lecture de `ANIM_BANKS` dans `buildObsPopup()`, pour dégrader proprement (pas de vignette) au lieu de planter sur ce premier rendu.
+
+**À retenir** :
+1. Un bug qui semble "résolu" par un cache-clear mais **qui revient** n'est presque jamais un vrai problème de cache — le clear ne fait souvent que réinitialiser un état qui redéclenche un vrai bug de code ailleurs. Ne pas s'arrêter au premier fix qui "marche", vérifier qu'il tient dans la durée avant de documenter la cause.
+2. Piège classique en JS non-modulaire (un seul fichier, `var` partout) : une fonction définie tôt peut référencer une variable déclarée plus loin dans le même fichier sans erreur de syntaxe (hoisting), mais plante à l'exécution si elle est **appelée** avant que cette variable ait été assignée. Symptôme fourbe : la fonction marche parfaitement quand on la teste à la main dans la console (après chargement complet), mais plante silencieusement quand un chemin d'exécution l'appelle plus tôt (ex. rendu initial des marqueurs). Toujours vérifier l'ORDRE D'EXÉCUTION réel (pas juste l'ordre syntaxique) d'une nouvelle variable globale référencée par du code qui peut tourner tôt.
+
+## [[naeco-carte]] — un bin JSONbin entièrement écrasé par un `PUT` brut suivant une doc de plan obsolète
+
+**Symptôme** : toutes les clés d'un bin JSONbin sauf `observations` (expeditions, escales, sitesEtude, photos, pelagosData, stats, general) disparues du jour au lendemain, sans action de suppression volontaire.
+
+**Root cause** : un plan d'implémentation écrit pour une fonctionnalité sans rapport (`docs/superpowers/plans/2026-09-20-rorqual-anim-player.md`, Task 6 Step 5) instruisait un `PUT` brut vers l'API JSONbin avec un corps `{"observations": [...]}`, en affirmant à tort que ça ne patchait que ce champ. JSONbin ne fait **aucune fusion partielle sur un `PUT`** — il remplace tout le contenu du bin par le corps envoyé, quel qu'il soit. Une session ayant suivi ce plan (ou une doc similaire restée dans le repo depuis avant la migration vers le Worker `/api/sync`, qui lui fait la fusion) a donc écrasé tout le bin avec un payload ne contenant que les observations.
+
+**Fix** : restauration depuis une sauvegarde antérieure (fusionnée avec les données récentes non couvertes par la sauvegarde) ; suppression de toute clé maître JSONbin encore en clair dans le repo (`check-remote.sh`) ; mise à jour de la doc obsolète qui prescrivait le PUT direct ; avertissement ajouté en tête du plan fautif pour qu'il ne soit plus jamais rejoué tel quel.
+
+**À retenir** : dès qu'un projet migre son écriture BaaS derrière un proxy qui fait de la fusion (voir [[jsonbin-source-de-verite]]), auditer et corriger/supprimer **toute** doc antérieure (scripts, `CLAUDE.md`, plans archivés) qui décrit encore l'ancien accès direct avec la clé maître — un plan écrit pour une tâche A, même sans rapport avec les données concernées, peut réintroduire silencieusement un pattern d'écriture dangereux abandonné ailleurs. Activer le versioning du BaaS dès la mise en prod limite les dégâts d'un futur écrasement.
+
+## Mot de passe API systématiquement refusé sous PowerShell : guillemets JSON corrompus par `curl.exe`, pas un problème de mot de passe
+
+**Symptôme** : un appel `curl.exe -X POST ... -d '{"password":"..."}'` renvoie `{"ok":false}` de façon stable, même après avoir revérifié à plusieurs reprises que le mot de passe est correct (confirmé fonctionnel ailleurs, ex. directement dans l'UI du site).
+
+**Root cause** : `curl.exe` (le binaire natif, pas un alias) mal interprété par PowerShell lors du passage d'un argument contenant des guillemets doubles imbriqués (payload JSON) — un bug connu de reconstruction d'arguments pour les programmes natifs sous PowerShell. Le JSON envoyé au serveur est corrompu à la frontière PowerShell → processus natif, indépendamment de la variable ou de la valeur réelle du mot de passe.
+
+**Fix** : remplacer `curl.exe` par `Invoke-RestMethod` (cmdlet PowerShell natif) pour tout appel avec payload JSON — `Invoke-RestMethod -Uri ... -Method Post -ContentType "application/json" -Body (@{password='...'} | ConvertTo-Json)` ne passe jamais par la couche de reconstruction d'arguments qui pose problème.
+
+**À retenir** : sous PowerShell, ne pas diagnostiquer un mot de passe/token/secret comme "faux" sur la seule base d'un appel `curl.exe` échoué avec un payload JSON — tester d'abord avec `Invoke-RestMethod` pour éliminer ce piège de raccord d'arguments avant de remettre en cause le secret lui-même.
+
+## `wrangler secret put` — coller la valeur du secret directement dans la commande la fait interpréter comme des variables PowerShell
+
+**Symptôme** ([[naeco-carte]], 2026-09-28) : `npx wrangler secret put $2a$10$d.RHrmq…` répond "Success! Uploaded secret …", mais le secret réel (`JB_MASTER_KEY`) ne change jamais de valeur — le Worker continue de fonctionner avec l'ancienne clé.
+
+**Root cause** : la valeur du secret a été collée directement après `wrangler secret put` au lieu du **nom** de la variable (`JB_MASTER_KEY`). Sous PowerShell, `$2a`, `$10`, `$d` etc. sont lus comme des variables (vides), donc le nom de secret réellement envoyé à Cloudflare devient tout ce qui reste après troncature (`.RHrmqWS12seroR5Qso2OjLs32d3ETIw1J7fz/hnxRdexE8efnoS`) — un nouveau secret parasite, sans rapport avec `JB_MASTER_KEY`. Le message "Success" est trompeur : la commande a bien réussi, juste pas comme prévu.
+
+**Fix** : ne jamais mettre la valeur du secret sur la ligne de commande. Toujours `npx wrangler secret put NOM_DE_LA_VARIABLE` seul, sans rien après — Wrangler ouvre alors un prompt masqué (`Enter a secret value:`) où coller la valeur en toute sécurité (et sans risque d'interprétation par le shell).
+
+**À retenir** : sous PowerShell, tout argument commençant par `$` collé dans une commande est un piège potentiel (interprété comme variable), pas seulement pour les secrets JSONbin — vérifier systématiquement qu'un `wrangler secret put`/`put`-like a bien pris effet (tester l'appel réel) plutôt que de se fier au message de succès de la CLI.
+
+## `wrangler deploy` publie `.dev.vars` comme fichier statique accessible publiquement si `.assetsignore` ne l'exclut pas
+
+**Symptôme** ([[naeco-site]], 2026-09-28) : après un `wrangler deploy` sur un Worker de type "assets" (site statique servi tel quel), le fichier `.dev.vars` (contenant `JB_MASTER_KEY` et `EDIT_ACCOUNTS` en clair) est devenu accessible en téléchargement direct sur l'URL de prod pendant plusieurs minutes.
+
+**Root cause** : Wrangler, en mode assets, upload **tous** les fichiers du dossier servi sauf ceux listés dans `.assetsignore` (équivalent de `.gitignore`, mais pour le déploiement — indépendant de ce qui est commité sur Git). `.dev.vars` n'y figurait pas : le fait qu'il soit dans `.gitignore` ne le protège pas du déploiement.
+
+**Fix** : ajouter `.dev.vars` (et tout fichier de secrets locaux) à `.assetsignore` à la racine du repo, en plus de `.gitignore`. Vérifier après coup que l'URL renvoie bien 404.
+
+**À retenir** : sur tout Worker Cloudflare de type assets (site statique), auditer `.assetsignore` dès la mise en place — `.gitignore` protège le repo, pas le déploiement. Traiter comme compromise toute valeur qui a pu transiter par un fichier exposé, même brièvement, et la régénérer.

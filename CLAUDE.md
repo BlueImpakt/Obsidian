@@ -220,6 +220,25 @@ Quand je dis **"ingère"**, voici la séquence exacte :
 - Ajouter tags appropriés si nécessaire
 - Créer liens vers notes connexes
 
+**Journal condensé** : une entrée de `## Journal` = une décision, un résultat
+livré, ou un bug résolu — jamais un compte-rendu pas-à-pas de session ("j'ai
+ouvert X, lu Y, essayé Z"). Si rien n'a changé pour le projet/client, pas
+d'entrée.
+
+**Next actions = source unique de vérité sur la fiche.** Les tâches liées à un
+client/projet précis vivent dans le `## Next actions` de sa fiche
+(`01_clients/…` ou `02_projects/…`) — **pas de recopie dans la daily note**. La
+daily note ne garde que ce qui n'est rattachable à aucune fiche existante
+(perso, admin, exploratoire). Après chaque ajout au `## Journal` d'une fiche,
+passage systématique sur son `## Next actions` : coche/retire tout item que le
+Journal du jour prouve terminé (même barre de preuve que pour la daily note :
+« probablement fait » ne suffit pas).
+
+**Seuil d'archivage** : si `## Journal` d'une fiche dépasse ~15 entrées, archive
+les plus anciennes dans `<dossier-fiche>/journal-archive-AAAA-MM.md` (AAAA-MM =
+mois de la plus ancienne entrée archivée), pour garder la fiche lisible. Ne
+garde que les ~15 entrées les plus récentes dans le corps de la fiche.
+
 ### 5. Nettoyer
 - **Supprimer** les daily notes et clippings traités
 - **Ne jamais supprimer** `content-feed.md` (votre système de syndication de contenu le vide après utilisation)
