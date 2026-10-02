@@ -158,7 +158,7 @@
 - **Dataview** — alimente `_dashboard.md` (voir plus bas). Ne pas dupliquer ses requêtes ailleurs.
 - **Tasks** — surface toutes les checklists non cochées du vault (section "Toutes les actions ouvertes" du dashboard). Pas de syntaxe spéciale requise, les `- [ ]` existants sont déjà indexés.
 - **Templater** — voir section `templates/` ci-dessus.
-- **Git** (backup auto vers GitHub privé, ajout optionnel) — auto-commit + push sur intervalle régulier. Voir `[[backup-obsidian-git]]` pour la config complète.
+- **Git** (backup auto vers GitHub privé, ajout optionnel) — auto-commit + push sur intervalle régulier. Config : plugin Obsidian Git (commit « vault backup » + push auto vers le repo GitHub privé `BlueImpakt/Obsidian`).
 
 ### `_dashboard.md` (racine du vault)
 Vue vivante générée par Dataview/Tasks : clients par statut, priorités P1, projets en cours/bloqués, patterns validés récents, réunions récentes, toutes les actions ouvertes. **Ce n'est pas un index de navigation** (la règle "pas d'INDEX.md" reste valable — rien n'y est écrit à la main, tout est recalculé à l'ouverture). Ne pas y ajouter de contenu statique.

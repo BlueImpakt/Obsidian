@@ -5,6 +5,8 @@ statut: actif
 priorite: p2
 secteur: environnement
 localisation: france
+origine_lead:
+tjm:
 ---
 
 # naeco
@@ -23,8 +25,12 @@ localisation: france
 - Site vitrine de l'association
 - Carte interactive des expéditions/observations/données scientifiques (Pelagos, escales, sites d'étude)
 
-## Devis / propositions
--
+## Commercial
+- **Origine du lead** :
+- **TJM / tarif pratiqué** :
+- **Devis en cours** :
+- **Facturé à ce jour** :
+- **Prochaine échéance** :
 
 ## Next actions
 - [ ]

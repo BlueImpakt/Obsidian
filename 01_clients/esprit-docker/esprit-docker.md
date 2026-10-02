@@ -5,6 +5,8 @@ statut: actif
 priorite: p2
 secteur: artisanat
 localisation: france
+origine_lead:
+tjm:
 ---
 
 # esprit-docker
@@ -24,8 +26,12 @@ localisation: france
 ## Besoins identifiés
 - Site e-commerce Next.js pour vente de chapeaux, avec gestion avancée de variantes produit (photos par face/profil, motifs, détourage)
 
-## Devis / propositions
--
+## Commercial
+- **Origine du lead** :
+- **TJM / tarif pratiqué** :
+- **Devis en cours** :
+- **Facturé à ce jour** :
+- **Prochaine échéance** :
 
 ## Next actions
 - [ ]

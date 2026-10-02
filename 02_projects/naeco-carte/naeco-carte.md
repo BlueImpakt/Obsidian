@@ -43,6 +43,8 @@ client: naeco
 - [ ] Déployer la migration du logo Ammo Visuals vers Cloudinary (changement local uniquement pour l'instant)
 - [ ] Ajouter un espace au-dessus du texte "VOIR LE FILM PHOTOGRAPHIQUE (2min)" de la vignette animation pour le décaler d'une ligne (demande client interrompue en fin de session du 2026-09-23, pas encore faite)
 - [ ] Décider du sort des 5 photos globicéphales encore en portrait non pivotées (P1033286, P1033357, P1033382, P1033393, P1033394)
+- [ ] Vérifier sur le terrain (vidéo écran réelle) que le flash carte a disparu après l'isolation de la trace sur son propre calque SVG (`78f36e3`) — non vérifiable depuis l'environnement de dev
+- [ ] Corriger l'URL de la photo du site d'étude « Prélèvement microplastique » (Galéria) — 4 liens Drive collés dans un seul champ au lieu de 4 objets séparés
 - [ ] Supprimer `naeco-carte-migration-test/` et `samples/` sur Cloudinary si confirmé inutile (proposé au client le 2026-09-23, pas encore confirmé)
 
 ## Journal
