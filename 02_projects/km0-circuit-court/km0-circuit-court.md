@@ -1,5 +1,5 @@
 ---
-tags: [project, encours]
+tags: [project, encours, blue-impakt]
 created: 2026-08-29
 statut: encours
 client: blue-impakt

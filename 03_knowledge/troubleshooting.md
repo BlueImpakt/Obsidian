@@ -194,13 +194,23 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 
 ## `wrangler secret put` — coller la valeur du secret directement dans la commande la fait interpréter comme des variables PowerShell
 
-**Symptôme** ([[naeco-carte]], 2026-09-28) : `npx wrangler secret put $2a$10$d.RHrmq…` répond "Success! Uploaded secret …", mais le secret réel (`JB_MASTER_KEY`) ne change jamais de valeur — le Worker continue de fonctionner avec l'ancienne clé.
+**Symptôme** ([[naeco-carte]], 2026-09-28) : `npx wrangler secret put <VALEUR-DU-SECRET>` répond "Success! Uploaded secret …", mais le secret réel (`JB_MASTER_KEY`) ne change jamais de valeur — le Worker continue de fonctionner avec l'ancienne clé.
 
 **Root cause** : la valeur du secret a été collée directement après `wrangler secret put` au lieu du **nom** de la variable (`JB_MASTER_KEY`). Sous PowerShell, `$2a`, `$10`, `$d` etc. sont lus comme des variables (vides), donc le nom de secret réellement envoyé à Cloudflare devient tout ce qui reste après troncature (`.RHrmqWS12seroR5Qso2OjLs32d3ETIw1J7fz/hnxRdexE8efnoS`) — un nouveau secret parasite, sans rapport avec `JB_MASTER_KEY`. Le message "Success" est trompeur : la commande a bien réussi, juste pas comme prévu.
 
 **Fix** : ne jamais mettre la valeur du secret sur la ligne de commande. Toujours `npx wrangler secret put NOM_DE_LA_VARIABLE` seul, sans rien après — Wrangler ouvre alors un prompt masqué (`Enter a secret value:`) où coller la valeur en toute sécurité (et sans risque d'interprétation par le shell).
 
 **À retenir** : sous PowerShell, tout argument commençant par `$` collé dans une commande est un piège potentiel (interprété comme variable), pas seulement pour les secrets JSONbin — vérifier systématiquement qu'un `wrangler secret put`/`put`-like a bien pris effet (tester l'appel réel) plutôt que de se fier au message de succès de la CLI.
+
+## [[naeco-site]] — fetch JSONbin obsolète écrase les catégories HTML migrées par l'ancien format plat
+
+**Symptôme** : la page Partenaires affichait des catégories vides (titre vide + aucune carte, juste des traits) à l'ouverture.
+
+**Root cause** : la migration du 2026-09-08 vers un contenu 100% servi depuis le HTML (JSONbin désactivé pour le contenu non éditable) n'avait été appliquée qu'à `index.html` — `partenaires.html` avait gardé son `fetch` JSONbin au chargement, qui écrasait les listes HTML par défaut (groupées par catégorie, format `{title, items}`) avec les données du bin — restées dans l'**ancien format plat** (`[{name: "..."}]`) utilisé par la landing pour ses 5 cartes partenaires avant la migration.
+
+**Fix** : suppression du fetch JSONbin obsolète et des fonctions `applyLogo`/`applyGlobalData` devenues mortes dans `partenaires.html`, pour que la page se comporte comme `index.html` (contenu 100% HTML). Déployé et vérifié (4 catégories, 14 cartes, aucune erreur console).
+
+**À retenir** : après une migration "JSONbin → HTML-only" sur un site multi-pages, vérifier **chaque page individuellement** — un fetch legacy oublié sur une seule page suffit à réintroduire le bug que la migration devait justement éliminer, et le symptôme (données vides) peut être trompeur si on ne connaît pas l'historique du format de données. Pages encore à auditer sur ce site : `agir-ensemble.html`, `campagne-oceanographique.html`, `expeditions.html`, `programme.html`.
 
 ## `wrangler deploy` publie `.dev.vars` comme fichier statique accessible publiquement si `.assetsignore` ne l'exclut pas
 

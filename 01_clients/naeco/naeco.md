@@ -30,10 +30,6 @@ localisation: france
 - [ ]
 
 ## Journal
-- 2026-09-17 (suite) : Sur [[naeco-carte]] — publication des 9 observations Point Zéro confirmée (27 au total), puis corrigée sur demande du client (espèces/nombre d'individus). Détails dans la fiche projet.
-- 2026-09-17 (suite) : Sur [[naeco-carte]] — 2 nouvelles photos ajoutées à l'escale Porto via Cloudinary (6 → 8 photos). Détails dans la fiche projet.
-- 2026-09-17 (suite) : Sur [[naeco-site]] — commit `d7254cd` poussé en prod (renommage « 3 gestes » + CTA déplacé, statsbar 4→5, refonte hero, reformulations de copie). Détails dans la fiche projet.
-- 2026-09-18 (suite) : Sur [[naeco-carte]] — 4 nouvelles icônes SVG espèces (raie, dauphin, baleine, tortue) dessinées et intégrées, bug du picker éditeur corrigé au passage, déployé ; photos ajoutées aux 2 observations « dauphins bleu et blanc » Point Zéro. Détails dans la fiche projet.
 - 2026-09-19 : Sur [[naeco-carte]] — blocage photos rorqual/globicéphale/plongée levé (fichiers fournis via dossiers locaux), photos assignées aux observations correspondantes et à la fiche « Plongée scientifique 30M », poussées en direct. Détails dans la fiche projet.
 - 2026-09-19 (suite) : Sur [[naeco-site]] — icône Instagram ajoutée au header (7 pages), header/logo uniformisé sur les 6 sous-pages, carte DRAJES supprimée (landing repassée à 5 partenaires), texte Vision NAECO intégré et nouvelle page "Programme & Projets" démarrée. Détails dans la fiche projet.
 - 2026-09-19 (suite) : Sur [[naeco-site]] — couleur STARESO reconfirmée, tortue HLD recolorée au survol, système hover 2 images ajouté sur le logo FDVA (rendu signalé "pas propre" par le client, non résolu). Détails dans la fiche projet.
@@ -45,6 +41,10 @@ localisation: france
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
 - 2026-09-28 : Sur [[naeco-site]] — Plan 1 de l'éditeur v2 livré, testé et déployé en prod ; incident de sécurité JSONbin résolu (migration des bins vers le compte actuel, clé/mot de passe régénérés, anciens bins supprimés) ; incident de déploiement `.dev.vars` exposé puis corrigé. Sur [[naeco-carte]] — migré vers le nouveau bin, redéployé et vérifié en prod. Détails dans les fiches projet.
+- 2026-09-29 : Sur [[naeco-site]] — page mobilité retravaillée (6 capsules Instagram, nouveau texte d'intro, design critique appliquée, remerciement DRAJES de Corse), déployé. Sur [[naeco-carte]] — animation rorqual reprise (version 45s en ligne pour rorqual et globicéphale, 48 nouvelles photos Cloudinary), et 90 points GPS parasites nettoyés sur le tracé live. Détails dans les fiches projet.
+- 2026-10-02 : Sur [[naeco-site]] — bug page Partenaires corrigé (fetch JSONbin obsolète écrasait les catégories), hauteur du voile hero réduite de 50%, texte abaissé, virgule retirée après "Méditerranée" dans le HTML, tout déployé. Détails dans la fiche projet.
+- 2026-10-02 (suite) : Sur [[naeco-site]] — lockup NAECO × STARESO ajouté sous l'eyebrow "Expédition 2026" (logo STARESO officiel, animation d'apparition échelonnée), déployé. Sur [[naeco-carte]] — recadrage mobile portrait de l'animation rorqual repris en méthode pixel-précise après échec du crop automatique, déployé ; déplacement d'une photo long→short en attente de déploiement. Détails dans les fiches projet.
+- 2026-10-02 (suite) : Sur [[naeco-site]] — lockup "NAECO × STARESO" ajouté et animé dans le teaser expédition, logo STARESO au repos corrigé, déployé. Sur [[naeco-carte]] — recadrage mobile portrait V24 finalisé (méthode documentée), pool rorqual ajusté (L06/S04), nouveau dossier Cloudinary V35 globicéphale créé en préparation d'une vidéo pas encore produite. Détails dans les fiches projet.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]
