@@ -30,8 +30,6 @@ localisation: france
 - [ ]
 
 ## Journal
-- 2026-09-19 : Sur [[naeco-carte]] — blocage photos rorqual/globicéphale/plongée levé (fichiers fournis via dossiers locaux), photos assignées aux observations correspondantes et à la fiche « Plongée scientifique 30M », poussées en direct. Détails dans la fiche projet.
-- 2026-09-19 (suite) : Sur [[naeco-site]] — icône Instagram ajoutée au header (7 pages), header/logo uniformisé sur les 6 sous-pages, carte DRAJES supprimée (landing repassée à 5 partenaires), texte Vision NAECO intégré et nouvelle page "Programme & Projets" démarrée. Détails dans la fiche projet.
 - 2026-09-19 (suite) : Sur [[naeco-site]] — couleur STARESO reconfirmée, tortue HLD recolorée au survol, système hover 2 images ajouté sur le logo FDVA (rendu signalé "pas propre" par le client, non résolu). Détails dans la fiche projet.
 - 2026-09-19 (suite) : Sur [[naeco-site]] — hover FDVA "pas propre" résolu (cache navigateur, fix cache-busting déployé, confirmation client en attente) ; page "Programme & Projets" finalisée (Vision en hero + CTA Expéditions/Mobilité) et déployée ; footer refondu sur les 8 pages (réseaux sociaux, nav, contact). Détails dans la fiche projet.
 - 2026-09-20 : Sur [[naeco-carte]] — conception et plan validés pour une animation son+image "rorqual" (lecteur plein écran synchronisé sur un extrait Woodkid, droits musicaux réglés côté client), spec et plan d'implémentation commités, exécution démarrée. Détails dans la fiche projet.
@@ -45,6 +43,8 @@ localisation: france
 - 2026-10-02 : Sur [[naeco-site]] — bug page Partenaires corrigé (fetch JSONbin obsolète écrasait les catégories), hauteur du voile hero réduite de 50%, texte abaissé, virgule retirée après "Méditerranée" dans le HTML, tout déployé. Détails dans la fiche projet.
 - 2026-10-02 (suite) : Sur [[naeco-site]] — lockup NAECO × STARESO ajouté sous l'eyebrow "Expédition 2026" (logo STARESO officiel, animation d'apparition échelonnée), déployé. Sur [[naeco-carte]] — recadrage mobile portrait de l'animation rorqual repris en méthode pixel-précise après échec du crop automatique, déployé ; déplacement d'une photo long→short en attente de déploiement. Détails dans les fiches projet.
 - 2026-10-02 (suite) : Sur [[naeco-site]] — lockup "NAECO × STARESO" ajouté et animé dans le teaser expédition, logo STARESO au repos corrigé, déployé. Sur [[naeco-carte]] — recadrage mobile portrait V24 finalisé (méthode documentée), pool rorqual ajusté (L06/S04), nouveau dossier Cloudinary V35 globicéphale créé en préparation d'une vidéo pas encore produite. Détails dans les fiches projet.
+- 2026-10-04 : Sur [[naeco-carte]] — banque V35 globicéphale branchée, animations rorqual (1min) et globi (1min20) ralenties de 25 % en ligne desktop + mobile (`40e2477`) ; nettoyage Cloudinary réversible (77 assets déplacés dans `_a_supprimer`).
+- 2026-10-05 : Sur [[naeco-carte]] — expédition point zéro terminée (badge live retiré, `99d7266`), bouton play des liens `?anim=` recentré (`85b8af0`). Sur [[naeco-site]] — bug « 2 vidéos seulement » sur Mobilité corrigé (état localStorage périmé, `59205fd`) puis même risque purgé sur index et l-association (`99aa007`).
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

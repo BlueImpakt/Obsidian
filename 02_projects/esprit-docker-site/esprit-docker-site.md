@@ -31,13 +31,16 @@ client: esprit-docker
 -
 
 ## Next actions
-- [ ]
+- [ ] Valider avec Morgane le texte du carousel « Composez votre docker » (8 slides, 1080x1350) avant construction des visuels
+- [ ] Appliquer les corrections du score `/ig-profile` (31/100) côté Instagram : champ nom, bio FR non tronquée, 3 posts épinglés, highlights, Stories
+- [ ] Remplir les 8 champs `À CONFIRMER` de `~/.claude/instagram/voice.md` (tutoiement/vouvoiement, mots interdits, ton, positions de marque) à partir des premiers Reels tournés
 
 ## Journal
 - 2026-08-29 : Repo identifié et analysé (`github.com/espritdocker/esprit-docker`), fiche projet créée
 - 2026-09-02 : Fix mail de suivi colis Sendcloud (voir [[esprit-docker]] pour le détail du diagnostic) — ajout d'une note "vérifiez vos spams" dans `emailCommande.ts` et `succes/page.tsx`. Commit `944dca9` sur `master`.
 - 2026-09-02 : Path B implémenté pour le mail "colis expédié" (voir [[esprit-docker]] pour le diagnostic complet) — `emailExpedition.ts` (envoi Brevo, même charte que la confirmation) + hook dans le webhook Sendcloud + colonne `commandes.suivi_email_envoye_at` (verrou anti-doublon). Migration exécutée et vérifiée sur Neon prod (projet `esprit-docker`, branche `production`). Commit+push `20a6fc6` sur `master`.
 - 2026-09-04 : Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1108 nœuds/1673 edges, nudge `/graphify` actif en session. `.claude/settings.json` renommé en `.claude/settings.local.json` + gitignored (le hook contient un chemin `graphify.exe` propre à la machine de Melvin, à ne jamais committer).
+- 2026-10-05 : voice.md des skills ig-* complété depuis le profil Instagram (lu dans Chrome, lecture seule) ; langue FR, CTA `DOCKER`. `/ig-profile` : 31/100. Carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction.
 
 ## Liens
 - Client : [[esprit-docker]]
