@@ -196,7 +196,7 @@ Bugs résolus et leur solution. Une section par bug, avec contexte + fix.
 
 **Symptôme** ([[naeco-carte]], 2026-09-28) : `npx wrangler secret put <VALEUR-DU-SECRET>` répond "Success! Uploaded secret …", mais le secret réel (`JB_MASTER_KEY`) ne change jamais de valeur — le Worker continue de fonctionner avec l'ancienne clé.
 
-**Root cause** : la valeur du secret a été collée directement après `wrangler secret put` au lieu du **nom** de la variable (`JB_MASTER_KEY`). Sous PowerShell, `$2a`, `$10`, `$d` etc. sont lus comme des variables (vides), donc le nom de secret réellement envoyé à Cloudflare devient tout ce qui reste après troncature (`.RHrmqWS12seroR5Qso2OjLs32d3ETIw1J7fz/hnxRdexE8efnoS`) — un nouveau secret parasite, sans rapport avec `JB_MASTER_KEY`. Le message "Success" est trompeur : la commande a bien réussi, juste pas comme prévu.
+**Root cause** : la valeur du secret a été collée directement après `wrangler secret put` au lieu du **nom** de la variable (`JB_MASTER_KEY`). Sous PowerShell, `$2a`, `$10`, `$d` etc. sont lus comme des variables (vides), donc le nom de secret réellement envoyé à Cloudflare devient tout ce qui reste après troncature (`<fin-de-la-valeur-tronquée>`) — un nouveau secret parasite, sans rapport avec `JB_MASTER_KEY`. Le message "Success" est trompeur : la commande a bien réussi, juste pas comme prévu.
 
 **Fix** : ne jamais mettre la valeur du secret sur la ligne de commande. Toujours `npx wrangler secret put NOM_DE_LA_VARIABLE` seul, sans rien après — Wrangler ouvre alors un prompt masqué (`Enter a secret value:`) où coller la valeur en toute sécurité (et sans risque d'interprétation par le shell).
 
