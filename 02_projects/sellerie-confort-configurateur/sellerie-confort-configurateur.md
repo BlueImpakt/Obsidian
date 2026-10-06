@@ -33,6 +33,9 @@ client: sellerie-confort
 - **Chiffres à ne pas citer** : colonne « Nb produits » du `structure_migration_catalog.xlsx` (35 749, fausse) ; Hyosung en trop (28 marques au lieu de 27) ; Payline/Monext non détecté (le site utilise Alma, Cofidis, DPD)
 - **Hors périmètre** : la recommandation Next.js + MedusaJS de `AUDIT_RAPPORT.md` et le plan de migration SEO/redirections 301 ne sont pas l'objectif. Le projet réel restructure le configurateur WooCommerce existant
 - **Cadre contractuel** : accès admin WP temporaire, nominatif, révocable ; clone local du site, tous les tests sur le clone, jamais sur la prod ; aucun accès direct à la base ni aux données clients/commandes/paiements ; plugin d'export/clone installé avec accord ; outils payants et API à la charge de Blue Impakt ; propriété des livrables au client après paiement ; résiliation préavis 5 j
+- **Décision (2026-10-06) : compositing déterministe en piste principale pour les matières**, IA en renfort. Les masques existent déjà (canal alpha des PNG actuels) ; Python (NumPy, OpenCV, pyvips), texture + ombrage de la photo de base, mesure SSIM/ΔE (`scikit-image`) contre les photos réelles. IA pour les masques de nouveaux modèles (SAM) et le retrait/ajout de logos (LaMa, FLUX Kontext). Matières brillantes/chromées : garder les photos. À valider en Phase 1, rien testé. Variante à chiffrer en Phase 2 : composer côté navigateur au lieu de stocker 83 000 fichiers (remplace le rendu du plugin, beaucoup plus lourd)
+- **Décisions de facturation (2026-10-06)** : Phase 2 en **forfait jour chiffré grâce à la Phase 1**, 1 600 € déduits. Clone **sélectif** sans clients ni commandes. Maquettes remontrées comme vision cible, hors Phase 1
+- **Contrat Phase 1 mis à jour le 2026-10-06** (Word + PDF dans le repo) : livrable défini, plugin d'export temporaire avec accord écrit, clone sélectif et destruction en fin de phase, nouvel article outils d'IA/services tiers, 4 j de travail sur 20 j calendaires, Phase 2 sur devis, signature datée en blanc. Reste à décider : taux de la Phase 2, remboursement en cas de résiliation après paiement
 - **Pistes IA pour les patchs/broderies** (recherche, **rien testé**) : Mira-Scene (3D depuis image unique) **écarté** (maillages trop approximatifs, pas de retexturage réaliste, lourd en GPU). Retenu à tester : segmentation (SAM / SAM 3) + retexturage 2D avec préservation des ombres et lumières, ou édition générative (FLUX.1 Kontext [pro] meilleur candidat, Nano Banana Pro/2 en face-à-face, GPT Image 2 plan B, Qwen-Image-Edit en local). Outils SaaS de recolor (Photoroom, Claid, GoStudio) : bons pour un prototype, peu contrôlables. Le rendu ne sera jamais identique à 100 % à une photo, l'étape 1 reste optionnelle et ne remplace pas les photos existantes
 
 ## Blocages / risques
@@ -44,7 +47,7 @@ client: sellerie-confort
 - Fichiers parasites du repo : `script_scraping_sellerie.py.py` (doublon) ; `index.html` des maquettes contient un extrait de JS affiché tel quel ; prix des maquettes fictifs (250 €, 285 €)
 
 ## Next actions
-- [ ] Réunion du 2026-10-07 avec Valérie Cenizo : convaincre, fixer la nouvelle période de Phase 1, décider quoi montrer des maquettes
+- [ ] Réunion du 2026-10-07 avec Valérie Cenizo ([[2026-10-07-sellerie-confort]]) : convaincre, fixer la nouvelle période de Phase 1, montrer les maquettes comme vision cible (traiter avant la remarque sur le beige et le bug JS de `index.html`)
 - [ ] Réécrire le contrat Phase 1 (dates, durée de 20 jours, congés) puis faire signer le devis I-26-08-1 à 1 600 € HT
 - [ ] Obtenir l'accès WordPress admin temporaire et démarrer le décompte de la période
 - [ ] Cloner le site en local (données + médias) et auditer le plugin `mkl_pc` et son stockage (fichiers JS + base)
@@ -55,7 +58,10 @@ client: sellerie-confort
 ## Journal
 - 2026-10-06 : Repo `BlueImpakt/sellerie-confort` cloné en local. Contexte consolidé dans `RAPPORT_CONTEXTE_PROJET.md` : audit externe passif du site (pile, structure du configurateur, volumes) et corrections des incohérences de `AUDIT_RAPPORT.md` et du `.xlsx`. Fiche projet créée, questions pour la réunion du 07/10 listées dans le rapport.
 
+- 2026-10-06 (suite) : Audit du configurateur public (fiche BMW GS LC + 45 fiches échantillon + poids de 60 images) : structure homogène (3 gabarits : 220 / 294 / cas particuliers), ≈ 240 images par fiche en moyenne, ≈ 83 000 images ≈ 35 Go ; matières sans identité globale (IDs différents selon la couche) ; broderies = champs de formulaire (plugin `wapf`), logo BMW incrusté dans la photo de fond ; l'hypothèse « fiches hétérogènes » du rapport est levée. Contrat Phase 1 mis à jour. Réunion du 07/10 préparée : [[2026-10-07-sellerie-confort]] + schéma Excalidraw.
+
 ## Liens
+- Réunion : [[2026-10-07-sellerie-confort]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
 - Client : [[sellerie-confort]]
 - Patterns utilisés :
 - Repo / deployment : https://github.com/BlueImpakt/sellerie-confort (local : `C:\Users\LENOVO\Documents\GitHub\sellerie-confort`) · site client : https://sellerieconfort.com
