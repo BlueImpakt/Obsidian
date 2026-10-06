@@ -29,10 +29,6 @@ client: sellerie-confort
 - La fiche phare BMW GS LC est une copie (`...-copie`) : illustration de la duplication manuelle
 - Le Carbone vient d'être supprimé : géré par une fenêtre d'information (plugin `sc-notice-carbone`), pas par le configurateur
 
-### À ne pas citer
-- Les chiffres du `.xlsx` (35 749 produits : faux) ; Payline (non détecté) ; migration headless Next.js/MedusaJS (hors sujet)
-- Aucun chiffre de Phase 2 demain (il vient du rapport)
-
 ## Points à aborder
 Ordre conseillé, avec le schéma Excalidraw :
 
