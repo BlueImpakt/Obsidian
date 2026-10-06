@@ -58,6 +58,37 @@ Ordre conseillé, avec le schéma Excalidraw :
 | « Combien pour la suite ? » | Forfait jour chiffré à l'issue de la Phase 1, pas avant |
 | « On pourrait tout refaire à neuf ? » | Possible plus tard, mais ce n'est pas l'objectif : on restructure le configurateur existant d'abord |
 
+### Ce qui peut coincer (pour moi, en simple)
+D'après l'audit du site public ; je n'ai pas vu l'admin. Les points « à vérifier » sont à trancher en Phase 1.
+
+**Phase 1 (les tests)**
+- **Copier le site :** il est très lourd (≈ 35 Go de photos). On n'en copie qu'une partie, assez pour tester
+- **Les logiciels payants (à vérifier) :** certains outils du site demandent une licence liée à son adresse. Sur ma copie, ils peuvent refuser de marcher
+- **Les matières brillantes ou pailletées :** plus difficiles à reproduire que les mates. Il faudra peut-être garder les photos
+- **Les broderies :** le plus dur. Il faut effacer le logo déjà présent sur la photo, puis en dessiner un autre qui suit les courbes de la selle, en plusieurs couleurs possibles
+- **Les tests ne prouvent pas tout :** ils disent « oui », « non » ou « oui avec des limites », mais ne livrent pas un système prêt à vendre
+
+**Phase 2 (la construction)**
+- **Le logiciel du configurateur n'est pas à moi :** s'il se met à jour, ce que j'ai ajouté peut ne plus marcher. Je travaille à côté de lui, sans le modifier, et je teste avant chaque mise à jour
+- **Les photos sont très nombreuses (≈ 83 000) :** le site grossit, les sauvegardes aussi. On les compresse
+- **Les anciennes commandes :** les couleurs choisies doivent garder les mêmes identifiants, sinon les anciens paniers et commandes s'embrouillent
+- **Les broderies sont dans un autre formulaire :** ce que la cliente voit sur la selle doit correspondre à ce qu'elle commande
+- **Le design :** les maquettes sont des pages à part. Il faudra les refaire à l'intérieur du site existant
+
+### Le prestataire de maintenance (VIMAWEB) et la mise en ligne
+- **Phase 1 : je n'ai pas besoin de lui.** Mais il surveille le site : un compte inconnu ou un nouvel outil peut déclencher une alerte. **Valérie le prévient avant** (article 2 du contrat)
+- **Phase 2 :** il gère probablement l'hébergement et les sauvegardes. Il peut me ralentir ou me bloquer (refuser un accès, dire que mon travail a cassé le site). Son contrat de maintenance exclut peut-être les interventions d'un tiers
+- **Le plus sûr :** que les accès à l'hébergement soient au nom de Valérie, pas au sien
+- **Mise en ligne : rien ne m'oblige à passer par lui** si Valérie m'autorise par écrit. Trois options : (1) moi, avec les accès qu'elle me donne ; (2) lui, avec ma livraison et ma procédure ; (3) les deux : je teste sur une copie chez l'hébergeur, puis on met en ligne ensemble. Mon avis : 1 ou 3, lui toujours prévenu, sauvegarde avant, plan de retour
+- **À redire autrement demain :** mon mail du 7 août promettait de ne pas toucher « à la logique technique du site ni aux outils de VIMAWEB ». Mettre en ligne le contredit. Dire : « je travaille sur une copie, et on décide ensemble de la mise en ligne »
+
+### Rester compatible avec l'existant
+- Ne rien modifier dans le logiciel du configurateur : je construis une pièce à côté qui s'y branche
+- Écrire dans son format : si ma pièce disparaît, le configurateur continue de marcher
+- Travailler dans les mêmes conditions que le vrai site (mêmes versions de PHP, WordPress, WooCommerce 11.1, Divi, plugins ; infos dans Outils > Santé du site)
+- Tester avant chaque mise à jour : quelques fiches, le panier, les prix barrés, le paiement
+- Ne pas changer les adresses des pages ni les identifiants des choix
+
 ## Questions à poser
 **Priorité 1 (changent le chiffrage)**
 - Combien de temps prend l'ajout d'**un nouveau modèle**, et d'**une nouvelle matière** ? À quelle fréquence ?
@@ -69,6 +100,9 @@ Ordre conseillé, avec le schéma Excalidraw :
 **Priorité 2 (cadre et démarrage)**
 - Quand les accès WordPress, et qui les crée ? Où est hébergé le site, qui valide une modification avant la mise en ligne ?
 - Quel est le rôle exact de VIMAWEB et d'ARTEO ? Qui a installé et paramétré le plugin de configuration (version Pro, import en masse) ? Qui a écrit `sc-notice-carbone` ?
+- **Les accès à l'hébergement et au nom de domaine sont-ils au nom de Valérie ?** Où est hébergé le site, y a-t-il un environnement de test ?
+- Quels plugins sont sous licence payante (configurateur, `wapf`, Divi) et au nom de qui ? Y a-t-il un contrat de maintenance avec VIMAWEB, et que prévoit-il en cas d'intervention d'un tiers ?
+- Accepte-t-elle que je déploie en production en Phase 2, avec VIMAWEB informé, ou préfère-t-elle qu'il le fasse ?
 - Quels modèles servent d'échantillon (BMW GS LC ?) ?
 - Qui tranche sur le niveau de réalisme d'un rendu ? Est-elle à l'aise avec des images générées par IA en vente ?
 - Les fiches `-copie` / `-2`, `-3` sont-elles à garder ? Des modèles obsolètes ?
@@ -83,7 +117,7 @@ Ordre conseillé, avec le schéma Excalidraw :
 - Schéma Excalidraw ouvert et zoomé sur le bloc 1
 - Capture médiathèque F 900 XR
 - Maquettes : `npx serve -l 5190 sellerieconfort-refonte` dans le repo `sellerie-confort` (page d'accueil, BMW, fiche produit, configurateur, matières, panier)
-- **Avant de montrer les maquettes** : traiter la remarque sur le beige, et corriger le bug de `index.html` (un extrait de JavaScript s'affiche tel quel)
+- Maquettes corrigées le 06/10 : fond beige passé en blanc (sections alternées en gris neutre `#F5F5F5`), extrait de JavaScript qui s'affichait sur `index.html` supprimé. Lancer le serveur : `python -m http.server 5190` dans `sellerieconfort-refonte`
 
 ## Sortie de réunion (ce qu'il faut avoir obtenu)
 - Contrat signé, ou date de signature fixée
