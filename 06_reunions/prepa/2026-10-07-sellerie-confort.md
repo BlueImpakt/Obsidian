@@ -99,6 +99,7 @@ D'après l'audit du site public ; je n'ai pas vu l'admin. Les points « à véri
 - **Les accès à l'hébergement et au nom de domaine sont-ils au nom de Valérie ?** Où est hébergé le site, y a-t-il un environnement de test ?
 - Quels plugins sont sous licence payante (configurateur, `wapf`, Divi) et au nom de qui ? Y a-t-il un contrat de maintenance avec VIMAWEB, et que prévoit-il en cas d'intervention d'un tiers ?
 - Accepte-t-elle que je déploie en production en Phase 2, avec VIMAWEB informé, ou préfère-t-elle qu'il le fasse ?
+- **Pour les maquettes :** avez-vous le logo en fichier vectoriel (SVG, AI ou PDF) et une version blanche ou en négatif pour fond sombre ? Avez-vous des photos de l'atelier (mains, cuir, coutures) ? Aujourd'hui le logo est un PNG et la photo d'accueil est une moto générique
 - Quels modèles servent d'échantillon (BMW GS LC ?) ?
 - Qui tranche sur le niveau de réalisme d'un rendu ? Est-elle à l'aise avec des images générées par IA en vente ?
 - Les fiches `-copie` / `-2`, `-3` sont-elles à garder ? Des modèles obsolètes ?
@@ -113,7 +114,7 @@ D'après l'audit du site public ; je n'ai pas vu l'admin. Les points « à véri
 - Schéma Excalidraw ouvert et zoomé sur le bloc 1
 - Capture médiathèque F 900 XR
 - Maquettes : `npx serve -l 5190 sellerieconfort-refonte` dans le repo `sellerie-confort` (page d'accueil, BMW, fiche produit, configurateur, matières, panier)
-- Maquettes corrigées le 06/10 : fond beige passé en blanc (sections alternées en gris neutre `#F5F5F5`), extrait de JavaScript qui s'affichait sur `index.html` supprimé. Lancer le serveur : `python -m http.server 5190` dans `sellerieconfort-refonte`
+- Maquettes corrigées le 06/10 : fond beige passé en blanc (sections alternées en gris neutre `#F5F5F5`), extrait de JavaScript qui s'affichait sur `index.html` supprimé. Maquettes refaites le 07/10 : double-clic sur `sellerieconfort-refonte/Maquette/lancer-maquettes.bat` (serveur local, fonctionne sans internet). Parcours à montrer : accueil → recherche « R6 » → fiche → configurateur (personnaliser les 8 zones) → ajouter au panier → panier
 
 ## Sortie de réunion (ce qu'il faut avoir obtenu)
 - Contrat signé, ou date de signature fixée
