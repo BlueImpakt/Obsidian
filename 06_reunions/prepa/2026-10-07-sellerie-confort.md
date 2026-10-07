@@ -46,13 +46,13 @@ Ordre conseillé, avec le schéma Excalidraw :
 - Étape 2 = couche sur-mesure autour du plugin tiers (aucun référentiel de matières global aujourd'hui : l'ID de « Gris tonnerre » change selon la couche), donc dépendance à VIMAWEB pour la mise en prod : à clarifier
 
 ### Objections probables
-| Objection | Réponse |
-|---|---|
+| Objection                                           | Réponse                                                                                                                  |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | « Pourquoi payer avant d'avoir le devis complet ? » | La Phase 1 est ce qui rend le devis ferme : on teste sur votre matière avant de s'engager. 1 600 € déduits de la Phase 2 |
-| « L'IA ne vaudra jamais une vraie photo » | Exact, on ne le promet pas. Photos actuelles conservées, étape 1 optionnelle, on mesure l'écart en Phase 1 |
-| « Et VIMAWEB ? » | Travail sur une copie locale, jamais en ligne. Il est informé. Qui met en prod en Phase 2 : à décider ensemble |
-| « Combien pour la suite ? » | Forfait jour chiffré à l'issue de la Phase 1, pas avant |
-| « On pourrait tout refaire à neuf ? » | Possible plus tard, mais ce n'est pas l'objectif : on restructure le configurateur existant d'abord |
+| « L'IA ne vaudra jamais une vraie photo »           | Exact, on ne le promet pas. Photos actuelles conservées, étape 1 optionnelle, on mesure l'écart en Phase 1               |
+| « Et VIMAWEB ? »                                    | Travail sur une copie locale, jamais en ligne. Il est informé. Qui met en prod en Phase 2 : à décider ensemble           |
+| « Combien pour la suite ? »                         | Forfait jour chiffré à l'issue de la Phase 1, pas avant                                                                  |
+| « On pourrait tout refaire à neuf ? »               | Possible plus tard, mais ce n'est pas l'objectif : on restructure le configurateur existant d'abord                      |
 
 ### Ce qui peut coincer (pour moi, en simple)
 D'après l'audit du site public ; je n'ai pas vu l'admin. Les points « à vérifier » sont à trancher en Phase 1.
