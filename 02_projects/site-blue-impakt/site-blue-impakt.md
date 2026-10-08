@@ -27,12 +27,12 @@ client: blue-impakt
 -
 
 ## Next actions
-- [ ] Exécuter le plan de refonte (10 tâches, subagent-driven-development) sur la branche `refonte-swiss-grid`
 - [ ] Trancher au merge : suppression ou archivage des fichiers `preview-v*.html` dans `docs/`
 
 ## Journal
 - 2026-08-29 : Repo identifié (`github.com/BlueImpakt/Site-web`), fiche projet créée dans le vault, positionnement ICP mis à jour dans CLAUDE.md à partir du contenu réel du site
 - 2026-08-31 : Refonte lancée — skills `muller-brockmann-grid-systems` + `motion` installés en global, brainstorming (4 maquettes : V2 Swiss pur, V3, V2b alternance sombre/clair, écartées), tranché sur V4 (charte d'origine + grille dessous). Spec (`docs/superpowers/specs/2026-08-31-refonte-grille-muller-brockmann-design.md`) et plan (`docs/superpowers/plans/2026-08-31-refonte-grille-muller-brockmann.md`) écrits et commités sur branche `refonte-swiss-grid` (repo local `C:\Users\LENOVO\Documents\GitHub\Site-web`), `main` intact. Exécution en 10 tâches (subagent-driven-development) lancée.
+- 2026-10-08 : Refonte Swiss-grid finalisée (29 commits, revue whole-branch OK avec follow-ups) puis mise de côté ; critique design de la version live et améliorations (contraste, libellés, a11y FAQ) appliquées sur `ameliorations-critique`, CTA hero retiré, déployé sur blue-impakt.org.
 
 ## Liens
 - Projet interne Blue Impakt (pas de fiche client — c'est notre propre site, pas un mandat client)

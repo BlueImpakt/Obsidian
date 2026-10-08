@@ -53,15 +53,13 @@ client: sellerie-confort
 - [ ] Obtenir l'accès WordPress admin temporaire et démarrer le décompte de la période
 - [ ] Cloner le site en local (données + médias) et auditer le plugin `mkl_pc` et son stockage (fichiers JS + base)
 - [ ] Choisir les modèles/coloris échantillons (BMW GS LC ?) et lancer les tests matières/couleurs puis broderies
-- [ ] Estimer la généralisation au catalogue à partir du volume réel (345 fiches configurables à vérifier)
 - [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 et le calendrier
 
 ## Journal
 - 2026-10-06 : Repo `BlueImpakt/sellerie-confort` cloné en local. Contexte consolidé dans `RAPPORT_CONTEXTE_PROJET.md` : audit externe passif du site (pile, structure du configurateur, volumes) et corrections des incohérences de `AUDIT_RAPPORT.md` et du `.xlsx`. Fiche projet créée, questions pour la réunion du 07/10 listées dans le rapport.
-
 - 2026-10-06 (suite) : Audit du configurateur public (fiche BMW GS LC + 45 fiches échantillon + poids de 60 images) : structure homogène (3 gabarits : 220 / 294 / cas particuliers), ≈ 240 images par fiche en moyenne, ≈ 83 000 images ≈ 35 Go ; matières sans identité globale (IDs différents selon la couche) ; broderies = champs de formulaire (plugin `wapf`), logo BMW incrusté dans la photo de fond ; l'hypothèse « fiches hétérogènes » du rapport est levée. Contrat Phase 1 mis à jour. Réunion du 07/10 préparée : [[2026-10-07-sellerie-confort]] + schéma Excalidraw.
-
 - 2026-10-07 : **Refonte complète des 6 maquettes** (`sellerieconfort-refonte/Maquette/`) : accueil, liste des selles (BMW), fiche produit, matières, configurateur, panier. Design commun (thème + en-tête/pied identiques, bleu du logo, fond blanc, Zilla Slab + Archivo, fil de couture), animations Motion 14 en local (hors ligne), vrai logo, données réelles (catalogue 27 marques / 441 modèles / 12 produits, 389 couches du configurateur R6). **Aucun texte inventé** : tout vient des anciens fichiers ou du site réel. **Parcours de démonstration** : accueil → recherche « R6 » → fiche Yamaha R6 → configurateur → panier. **Configurateur testé** : 8 zones personnalisables (249 tests automatiques + 39 tests de clics réels, et vérification manuelle), familles de matières, annuler/refaire, comparer, partage, broderies, options, ajout au panier. Valeurs alignées sur la page réelle de la R6 : réf. YAMAHAR6, « Délai de 1 mois », 225 € (265 € barré), uniquement « Modification ». Lancer : `Maquette/lancer-maquettes.bat`. Originaux rangés dans `Maquette/_originaux/`.
+- 2026-10-08 : Analyse du catalogue complet (345 fiches configurables) : 337 sur la même logique (3 jeux réutilisables : 37 matières, 44 liserés, 26 surpiqures), 8 fiches atypiques (dont CFMOTO 800 NK) ; ≈ 2 254 couches, ≈ 83 000 images. Maquettes, contrat et schéma Excalidraw commités/poussés (`fd2fdc7`).
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
