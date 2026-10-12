@@ -5,8 +5,6 @@ statut: lead
 priorite: p2
 secteur:
 localisation:
-origine_lead:
-tjm:
 ---
 
 # <% tp.file.title %>
@@ -23,12 +21,8 @@ tjm:
 ## Besoins identifiés
 -
 
-## Commercial
-- **Origine du lead** :
-- **TJM / tarif pratiqué** :
-- **Devis en cours** :
-- **Facturé à ce jour** :
-- **Prochaine échéance** :
+## Devis / propositions
+-
 
 ## Next actions
 - [ ]

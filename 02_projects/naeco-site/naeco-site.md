@@ -12,7 +12,7 @@ client: naeco
 - Présenter les expéditions à la voile, créations artistiques, actions de sensibilisation
 
 ## Livrables
-- Site public : https://naeco-site.naeco.workers.dev
+- Site public : https://naeco-site.contact-341.workers.dev
 - Pages : accueil, campagne océanographique, mobilité
 
 ## État actuel
@@ -26,13 +26,11 @@ client: naeco
 - **Règle de travail critique** : toujours lancer `check-remote.sh` en début de session pour récupérer l'état actuel du contenu depuis JSONbin avant toute modification — sinon risque d'écraser des changements faits par l'équipe via l'éditeur
 - **Déploiement** (corrigé 2026-09-18) : `sync.sh "description"` → commit + push, **puis** `npx wrangler deploy` séparé (repo = Cloudflare Worker, pas Pages — pas d'auto-déploiement au push)
 - **Règle de déclenchement** : ne lancer `wrangler deploy` que quand Melvin le demande explicitement ("déploie quand je dis déploie") — le classificateur auto mode bloque cette commande par défaut (catégorie "Production Deploy"), confirmation verbale seule ne suffit pas à la débloquer
-- ⚠️ Le repo client contient une clé maître JSONbin et un mot de passe éditeur en clair dans son propre `CLAUDE.md` — **volontairement non recopiés ici**, à récupérer directement depuis le repo/le client si besoin
 - **Ordre des sections verrouillé côté code** (2026-09-03) : l'équipe NAECO ne peut plus réorganiser les sections via l'éditeur (drag désactivé, `sectionOrder` plus lu/écrit dans le bin, `arrange()` fait foi)
 - **Vidéos de fond Cloudinary** (2026-09-04) : toujours livrer des fichiers pré-encodés (2 résolutions desktop/mobile), jamais d'URL de transformation à la volée (`f_auto,q_auto,w_...`) — sur ce compte, ces URLs tronquent la durée des vidéos livrées (bug vécu : un film de 23 min ressortait à 4,5s)
 
 ## Blocages / risques
-- Repo GitHub source de vérité ambigu : le `CLAUDE.md` du projet référence `melp-cloud/naeco-site`, alors que le clone a été fait depuis `NAECOEXPEDITION/naeco-site` — à clarifier lequel est le remote actif avant de pousser du code
-- 🔴 **Sécurité** : clé maître JSONbin + mot de passe éditeur stockés en clair dans le `CLAUDE.md` du repo client (pas juste référencés — la valeur elle-même). Si le repo fuite ou si l'accès change de mains, ces secrets sont exposés tels quels.
+-
 
 ## Next actions
 - [ ] Diagnostic jonctions Hero→Mission / Carnet→Expédition repris avec la technique d'aplat opaque (commits `f523ddb`, `4a180f7`) après échec du correctif root-cause `f719d3f` ; même technique étendue à Constat→Carnet et aux bandes latérales sans voile d'Expédition 2026 (commit `efcc2f2`) — non confirmé visuellement (preview gelée, fenêtre en arrière-plan), à valider par Melvin après hard-refresh
@@ -68,4 +66,4 @@ client: naeco
 ## Liens
 - Client : [[naeco]]
 - Patterns utilisés : [[jsonbin-source-de-verite]]
-- Repo / deployment : https://github.com/NAECOEXPEDITION/naeco-site (Cloudflare Pages)
+- Repo / deployment : https://github.com/NAECOEXPEDITION/naeco-site (Cloudflare Workers Builds, pas Pages — `npx wrangler deploy` séparé du push)
