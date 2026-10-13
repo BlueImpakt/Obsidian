@@ -132,3 +132,13 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Bug « la page n'affiche que 2 vidéos sur 6 sous Chrome » : la cause n'était pas le code mais un ancien état stocké dans le navigateur (localStorage) qui écrasait les valeurs de la page. Leçon : tout éditeur live qui persiste côté client doit purger sa clé à chaque version, sinon les visiteurs voient un site fantôme. Audit des 9 pages du site dans la foulée, 2 autres touchées.
 - Audit express d'un profil Instagram de marque artisanale : 31/100. Les 3 plus gros trous : aucun post épinglé, aucun highlight, bio tronquée dans la mauvaise langue. Angle de post : « le profil est un écran de décision, pas une vitrine ».
 - Animation photo → vidéo pour une carte d'expédition : ralentir le rythme de 25 % et recadrer 63 photos à la main pour le mobile a pesé plus sur le rendu final que n'importe quel réglage automatique. L'auto-crop échoue sur les sujets décentrés (baleines).
+
+## 2026-10-06
+
+- Angle : 75 agents IA installés d'un coup = ~4 500 tokens de descriptions chargés à chaque session. J'en ai gardé 33 (ceux qui servent vraiment mes stacks) et passé les skills à effet de bord en invocation manuelle. Le coût d'un outil, c'est aussi son contexte.
+
+## 2026-10-12
+
+- Angle : une carte « presque juste » est pire qu'une carte vide — audit des 23 aires marines protégées d'une carte client : contours dessinés à la main, règles saisies de mémoire, jamais sourcées. Contrôle simple : comparer la surface tracée à la surface déclarée (écart < 1 %).
+- Résultat : 23 AMP vérifiées sur décrets officiels, avec le niveau de preuve par fiche ; quand aucun texte n'interdit le drone, la carte affiche « à vérifier » plutôt qu'une fausse certitude.
+- Insight IA : la cause racine est venue de l'historique git (données présentes dès le 1er commit, aucune source) — demander à l'IA de citer sa source et de montrer comment elle a vérifié, pas seulement de corriger.
