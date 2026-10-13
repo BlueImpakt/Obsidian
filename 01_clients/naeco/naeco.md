@@ -5,6 +5,7 @@ statut: actif
 priorite: p2
 secteur: environnement
 localisation: france
+body_synced: 2026-10-13
 ---
 
 # naeco
@@ -17,7 +18,8 @@ localisation: france
 -
 
 ## Décisions prises
--
+- 2026-10-13 : retours client Mobilité tranchés — logos partenaires en fin de page, navigation inchangée.
+- 2026-10-04 : animations rorqual/globicéphale ralenties de 25 % (desktop + mobile).
 
 ## Besoins identifiés
 - Site vitrine de l'association
@@ -27,7 +29,7 @@ localisation: france
 -
 
 ## Next actions
-- [ ]
+- [ ] Déployer `mobilite.html` (retours client implémentés en local le 2026-10-13, non déployé) ([[naeco-site]])
 
 ## Journal
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
