@@ -3,6 +3,7 @@ tags: [project, encours, naeco]
 created: 2026-08-29
 statut: encours
 client: naeco
+body_synced: 2026-10-12
 ---
 
 # naeco-carte
@@ -13,9 +14,14 @@ client: naeco
 ## Livrables
 - Page "Carte interactive" (`index.html`), données dans `naeco_data.json`
 - Exemple de donnée : expédition 2022 "The Pelagos Sanctuary" (Sanctuaire Pelagos, biodiversité pélagique/cétacés, collab STARESO, tracé GPS complet, vidéo YouTube embarquée)
+- Animations « film photographique » rorqual + globicéphales (liens de partage `?anim=rorqual` / `?anim=globicephale`, banques photos sur Cloudinary)
+- Couche AMP : 23 aires marines protégées avec règles (drone, chasse sous-marine) et badge de protection dérivé de l'UICN
 
 ## État actuel
-- En production, déploiement Cloudflare Pages + config Netlify présente (`netlify.toml`) — à clarifier laquelle est la plateforme réellement utilisée
+- En production sur `map.naecoexpedition.org`, déploiement Cloudflare Pages (config Netlify `netlify.toml` présente — à clarifier laquelle est réellement utilisée)
+- Expédition « point zéro » terminée (2026-10-05) : badge « live » et polling 60 s retirés de la carte publique, trace figée + popup bateau avec heure d'arrivée
+- Données : 23 AMP (contours et règles recalés sur sources officielles le 2026-10-12), animations « film photographique » rorqual (« 1min », 60,91 s) et globicéphales (« 1min20 », 80,02 s) en ligne desktop + mobile (`40e2477`)
+- Bin JSONbin migré (2026-09-28) puis clé tournée et ancien bin supprimé (confirmé en prod 2026-10-08)
 
 ## Décisions techniques
 - **Stack** : HTML unique + JSON de données, pas de framework

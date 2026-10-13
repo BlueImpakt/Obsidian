@@ -5,6 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
+body_synced: 2026-10-13
 ---
 
 # sellerie-confort
@@ -19,12 +20,15 @@ localisation: france
 - Début août 2026 : maquettes envoyées par Blue Impakt
 - 2026-08-07 : retour client positif (« on aime beaucoup sauf la couleur beige »), demande de simplifier l'ajout de couleurs/matières et d'afficher les logos choisis sur la selle, et demande de prix. Réponse de Blue Impakt le jour même (3 points à préciser, proposition de point rapide)
 - Ensuite : la cliente précise le fonctionnement manuel actuel (patch physique, photo, ajout à la main sur chaque fiche) puis Blue Impakt envoie la proposition en 3 étapes + broderies, avec Phase 1 d'audit (devis + projet de contrat)
-- 2026-10-07 : réunion prévue pour convaincre la cliente et fixer la nouvelle période de Phase 1
+- 2026-10-07 : réunion d'environ 2 h avec Valérie — besoin confirmé, maquettes très appréciées, rien signé (accord de son mari attendu), nouvelle offre orale Phase 1 à 1 400 € HT ; une agence web les rencontre début novembre. CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]]
+- 2026-10-08 : maquettes mises en ligne sur Netlify pour l'envoi (Outlook perd les `assets/` des pièces jointes)
+- 2026-10-13 : contrat Phase 1 réécrit (1 400 € HT, acompte 50 %), CR client envoyé avec un placeholder de créneaux à compléter ; Valérie en congés à partir du 17/10
 
 ## Décisions prises
-- Phase 1 = audit technique avant chiffrage ferme de la Phase 2, 1 600 € HT déduits de la Phase 2 si suite
+- Phase 1 = audit technique avant chiffrage ferme de la Phase 2, **1 400 € HT** (4 j × 350 €) déduits de la Phase 2 si suite ; elle inclut, sans supplément, l'audit des automatisations, le suivi du parcours et le panier perdu
 - Le seul engagement pris : **tester l'IA** (patchs matières et broderies) avant de s'engager. Étape 1 optionnelle, les photos existantes sont conservées
 - Aucun accès à la prod : clone local, aucun accès direct à la base, aucune donnée clients/commandes/paiements consultée
+- WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — à confirmer par l'audit
 
 ## Besoins identifiés
 - Ajouter une couleur ou une matière beaucoup plus simplement (regroupement par famille au lieu d'une photo par selle, par zone, par matière)
@@ -32,9 +36,9 @@ localisation: france
 - Listes de choix plus lisibles côté client final ; refonte visuelle éventuelle du site entier, par étapes
 
 ## Devis / propositions
-- Devis I-26-08-1 — Phase 1 audit technique : **1 600 € HT** (4 j × 400 €), TVA non applicable (art. 293 B CGI). **Non signé**
-- Contrat Phase 1 (projet du 07/08/2026) : non signé, dates et durée de 20 jours à réécrire
-- Phase 2 : à chiffrer à l'issue de la Phase 1
+- Devis I-26-10-1 (08/10) — Phase 1 audit technique : **1 400 € HT** (4 j × 350 €), TVA non applicable (art. 293 B CGI), acompte 50 % à la signature ; I-26-10-2 (acompte 50/50) présent à côté, référence à aligner dans le contrat ; I-26-08-1 (1 600 €) obsolète. **Non signé**
+- Contrat Phase 1 : réécrit le 13/10 (Word + PDF, 1 400 € HT), **non signé** ; Valérie en congés le 17/10
+- Phase 2 : à chiffrer à l'issue de la Phase 1 (fourchette annoncée 4 000 à 7 000 €, taux 350 €/j)
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
@@ -45,7 +49,11 @@ localisation: france
 - 2026-10-07 : Sur [[sellerie-confort-configurateur]] — Refonte complète des 6 maquettes (`sellerieconfort-refonte/Maquette/`) : accueil, liste des selles (BMW), fiche produit, matières, configurateur, panier. Détails dans la fiche projet.
 - 2026-10-08 : Sur [[sellerie-confort-configurateur]] — Analyse du catalogue complet (345 fiches configurables) : 337 sur la même logique (3 jeux réutilisables : 37 matières, 44 liserés, 26 surpiqures), 8 fiches atypiques (dont CFMOTO 800 NK) ; ≈ 2 254 couches, ≈ 83 000 images. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — Après la réunion du 07/10, Valérie OK pour la Phase 1. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
+- 2026-10-13 : Sur [[sellerie-confort-configurateur]] — clause de plafonnement Phase 2 ajoutée au contrat (7 000 € HT max, 1 400 € de Phase 1 déduits, solde max 5 600 €)
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
 - Réunions : [[2026-10-07-sellerie-confort]] (prépa)
+- CR réunion : [[2026-10-07-sellerie-confort-cr-client]]
+- CR réunion : [[2026-10-07-sellerie-confort-cr-interne]]
+

@@ -30,8 +30,6 @@ localisation: france
 - [ ]
 
 ## Journal
-- 2026-09-21 : Sur [[naeco-site]] — bug de configuration Cloudflare Web Analytics corrigé — le tracker existant excluait les visiteurs UE ("Enable, excluding visitor data in the EU"), ramenant quasi toutes les vues (public France) à zéro ; repassé en "Enable" complet côté dashboard, aucun code… Détails dans la fiche projet.
-- 2026-09-23 : Sur [[naeco-carte]] — incident de perte de données JSONbin (cause : plan d'implémentation obsolète prescrivant un écrasement brut du bin), restauré et corrigé, sauvegarde committée. 6 nouveaux sites d'étude publiés. Sécurité : rotation de la clé maître JSONbin à faire (secret partagé avec [[naeco-site]]). Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — animation rorqual/globicéphale en 1 min 31 mise en ligne (`0a1aeef`), liens de partage `?anim=` avec écran d'accueil ▶ (`cc6a87e`).
@@ -45,6 +43,8 @@ localisation: france
 - 2026-10-08 : Sur [[naeco-carte]] — Rotation de clé JSONbin confirmée en prod, ancien bin compromis supprimé, clé et mot de passe historiques retirés des fichiers de doc/plan des deux repos (naeco-carte, naeco-site), poussé.
 - 2026-10-12 : Sur [[naeco-carte]] — audit des fiches AMP : contours et règles de 15+ AMP recalés sur les textes officiels, Maddalena + 4 AMP sardes + Capo Spartivento ajoutées (23 AMP), drone « à vérifier » plutôt qu'« interdit » sans source, badge dérivé de l'UICN ; déployé (`03b9d80`).
 - 2026-10-13 : Sur [[naeco-site]] — page Mobilité branchée sur l'éditeur v2, retours client Notion analysés
+- 2026-10-13 : Sur [[naeco-site]] — retours Mobilité tranchés (logos partenaires en fin de page, nav inchangée), implémentation démarrée
+- 2026-10-13 : Sur [[naeco-site]] — retours client Mobilité implémentés dans `mobilite.html` (local, non déployé).
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

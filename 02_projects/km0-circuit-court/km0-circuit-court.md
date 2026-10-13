@@ -3,6 +3,7 @@ tags: [project, encours, blue-impakt]
 created: 2026-08-29
 statut: encours
 client: blue-impakt
+body_synced: 2026-09-04
 ---
 
 # km0-circuit-court

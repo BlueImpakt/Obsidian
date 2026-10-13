@@ -3,6 +3,7 @@ tags: [project, encours, esprit-docker]
 created: 2026-08-29
 statut: encours
 client: esprit-docker
+body_synced: 2026-10-05
 ---
 
 # esprit-docker-site
@@ -18,6 +19,9 @@ client: esprit-docker
 ## État actuel
 - Site en production, légal à jour (mentions légales/CGU/CGV datées du 25 août 2026)
 - Pipeline d'assets produit très développé (plusieurs dizaines de scripts `.mjs` de retouche/correction d'images) — probablement le vrai savoir-faire technique du projet
+- Mail "colis expédié" (Brevo) en place depuis le 2026-09-02 : déclenché par le webhook Sendcloud, verrou anti-doublon `commandes.suivi_email_envoye_at` (migration faite sur Neon prod)
+- Graphify actif sur le repo (1108 nœuds / 1673 edges) ; `.claude/settings.local.json` gitignored
+- Volet Instagram en cours (2026-10-05) : `voice.md` des skills ig-* complété, `/ig-profile` 31/100, carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction
 
 ## Décisions techniques
 - **Stack** : Next.js (App Router), déploiement Cloudflare Pages (`@cloudflare/next-on-pages`, wrangler)

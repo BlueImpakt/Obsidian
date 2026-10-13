@@ -3,6 +3,7 @@ tags: [project, encours, blue-impakt]
 created: 2026-08-29
 statut: encours
 client: blue-impakt
+body_synced: 2026-10-13
 ---
 
 # site-blue-impakt
@@ -12,10 +13,12 @@ client: blue-impakt
 
 ## Livrables
 - Site statique (`index.html`) avec positionnement "L'IA au service de l'environnement et de l'humain"
+- Logo (wordmark CSS DM Sans 700) exporté en 4 fichiers dans `images/` du repo : `logo-blue-impakt-dark/light` en SVG + PNG transparent 2216×424 (2026-10-13)
 
 ## État actuel
-- Site existant et déployé (Cloudflare Pages, projet Wrangler `blue-impakt`)
-- Contient une section hero animée (GSAP), photo de profil (Melvin Perrottet)
+- Site existant et déployé (Cloudflare Pages, projet Wrangler `blue-impakt`, domaine blue-impakt.org)
+- Refonte Swiss-grid finalisée (2026-10-08) puis améliorations issues de la critique design (contraste, libellés, a11y FAQ) sur la branche `ameliorations-critique`, CTA hero retiré, version déployée
+- Section hero animée (Motion), photo de profil (Melvin Perrottet)
 
 ## Décisions techniques
 - Stack : HTML/CSS/JS statique, pas de framework — assets servis directement (`[assets] directory = "."` dans `wrangler.toml`)
