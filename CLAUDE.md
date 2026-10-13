@@ -239,6 +239,18 @@ les plus anciennes dans `<dossier-fiche>/journal-archive-AAAA-MM.md` (AAAA-MM =
 mois de la plus ancienne entrée archivée), pour garder la fiche lisible. Ne
 garde que les ~15 entrées les plus récentes dans le corps de la fiche.
 
+**Fiche client = miroir condensé des fiches projet.** Chaque entrée du
+`## Journal` d'une fiche projet a son pendant d'une ligne dans le `## Journal`
+de la fiche client (frontmatter `client:` du projet). Garanti mécaniquement par
+`client-sync` (hook d'ingestion et `/good-night`) : ne pas recopier à la main.
+
+**Capture automatique des sessions Claude Code** (`~/.claude/skills/good-night/`) :
+hook `SessionEnd` (`/clear`, fermeture) + hook `SessionStart` (rattrape les
+sessions fermées sans `/clear`, inactives depuis plus de 2 h). Les faits sont
+datés par leur **jour réel** (frontière 04:00), pas par le jour du `/clear`. Les
+branches d'une même conversation ne sont ingérées qu'une fois. `/good-night`
+le soir ferme les jours, roule les tâches et vérifie.
+
 ### 5. Nettoyer
 - **Supprimer** les daily notes et clippings traités
 - **Ne jamais supprimer** `content-feed.md` (votre système de syndication de contenu le vide après utilisation)
