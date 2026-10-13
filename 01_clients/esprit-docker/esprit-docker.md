@@ -5,6 +5,7 @@ statut: actif
 priorite: p2
 secteur: artisanat
 localisation: france
+body_synced: 2026-10-05
 ---
 
 # esprit-docker
@@ -16,10 +17,13 @@ localisation: france
 - **Contact pro** : contact@esprit-docker.com
 
 ## Historique des échanges
--
+- 2026-09-02 : Bug mail de suivi Sendcloud — 0 email de suivi envoyé en 30 jours côté Sendcloud (config panel correcte) ; le mail "point relais" reçu vient de Mondial Relay. Solution de repli (Brevo, webhook Sendcloud) implémentée et déployée, test end-to-end à faire par Melvin (voir [[esprit-docker-site]]).
+- 2026-10-05 : Audit Instagram @esprit_docker (31/100), voice.md ig-* renseigné, carousel « Composez votre docker » rédigé en attente de validation.
 
 ## Décisions prises
--
+- 2026-09-02 : Repli Brevo retenu pour l'email « expédié » (envoyé depuis le webhook Sendcloud, anti-doublon via `commandes.suivi_email_envoye_at`) — le mail de suivi natif Sendcloud n'est pas fiable (0 envoi en 30 jours).
+- 2026-08-30 : Auth admin : retour à `ADMIN_PASSWORD` en Secret Cloudflare (série hash PBKDF2 revertée).
+- 2026-10-05 : Instagram — CTA mot-clé `DOCKER`, voix FR.
 
 ## Besoins identifiés
 - Site e-commerce Next.js pour vente de chapeaux, avec gestion avancée de variantes produit (photos par face/profil, motifs, détourage)
@@ -28,7 +32,9 @@ localisation: france
 -
 
 ## Next actions
-- [ ]
+- [ ] Test end-to-end du flux Brevo « expédié » (commande + paiement + marquage expédiée + annulation Sendcloud) — Melvin
+- [ ] Valider le carousel Instagram « Composez votre docker »
+- [ ] Ajouter `.claude/settings.local.json` au `.gitignore`
 
 ## Journal
 - 2026-08-29 : Repo identifié (`github.com/espritdocker/esprit-docker`), fiche client créée à partir des mentions légales/CGV du site
