@@ -300,6 +300,8 @@ Produits 16319 (Triumph Tiger 01, couche nommée « Yamaha TDM 900 »), 17258 (B
 - **Essais de déformation vers le rendu propre (noir et azur)** : (v1) normalisation radiale par zone : échec ; (v2) correspondance colonne par colonne entre les bords haut et bas du motif et du panneau : **le panneau avant suit la courbure, les alvéoles sont lisibles, mais elles sont étirées (×2,7 en largeur) et l'assise arrière est inutilisable** ; (v3) repère de l'axe principal : pire (cisaillement). Conclusion : une correspondance **par contours seuls ne suffit pas** ; il faut soit des points de contrôle placés à la main (maillage), soit une génération paramétrique du motif suivant la surface. Fichiers `essais/warp-v*`, script `scripts/warp_nid_abeille_v2.js`. À présenter comme **faisabilité partielle**, pas comme résultat publiable.
 - **Essai v4 : maillage à points de contrôle (thin-plate spline), 17 points avant + 16 arrière, fait à la main sur la photo et le rendu** : **résultat exploitable comme démonstration** (alvéoles hexagonales en perspective sur le panneau avant, le liseré haut, le bec et l'assise arrière, découpées par les masques des couches, sur compo noir et compo azur). Défauts : alvéoles étirées en bas du panneau avant, bord irrégulier de l'assise arrière, quelques fragments au bec. Points : `scripts/tps_points_avant.json`, `tps_points_arriere.json` ; script `scripts/tps_nid_abeille.js` ; images `essais/maillage-tps-*.png`. Coût réel : relever ~30 points par modèle, c'est le temps de travail à chiffrer par modèle en Phase 2 (ou à automatiser par détection de contours des panneaux).
 - **Essai v5 : génération procédurale** (Melvin : le maillage n'est « pas propre ») : réseau d'hexagones réguliers (pointe en haut, allongés) dessiné dans le repère de la selle (surface réglée entre bord haut et bord bas relevés à la main), traits de largeur constante, cellules retenues seulement si leur centre tombe dans l'empreinte du motif de Valérie, découpe par les masques de couches. **Plus propre** : pas de lignes déchirées ni de fragments, perspective suivie. Défauts : cellules entières seulement donc couverture irrégulière au bord, pas de relief (ombres) sur les traits, arrière peu couvert, paramètres de densité réglés à l'œil (15 colonnes × 4,4 rangées devant, 11 × 3 derrière). Fichiers `essais/procedural-*.png`, `scripts/proc_nid_abeille.js`. C'est la voie qui généralise : un modèle = 2 courbes de bord + 2 réglages de densité.
+- **CORRECTION (la plus importante) : le calque se pose presque tel quel.** Melvin avait raison : « le calque du nid d'abeille sans la selle » et « le calque de la selle sans le nid d'abeille » se superposent. Avec **échelle = 1920 / 5712 ≈ 0,336 et décalage vertical ≈ -100 px**, sans aucune déformation, 93 % des pixels du motif tombent sur la selle de la Z900 et le rendu est le meilleur de tous les essais (`essais/CALQUE-SIMPLE-noir-motif-blanc.png`, `...-azur-...`). Le PNG 5712 × 4284 (4:3) est simplement un canevas plus haut que celui du configurateur (1920 × 1280, 3:2). Mes essais précédents (déformation radiale, maillage, génération procédurale) partaient d'un diagnostic **faux** (« autre point de vue ») : ils sont à considérer comme des impasses, pas comme la voie à suivre. Mon premier calage (IoU 0,34, échelle 0,405) utilisait une mauvaise métrique. Reste à affiner : échelle/décalage fin (quelques pixels), épaisseur des traits à l'échelle réduite, recoloration par coloris de fil.
+- **Hypothèse de Melvin validée : le calque a été dessiné sur la photo `z-900-nid-d-abeil.jpg-vert-kawa-scaled.jpg`.** Les 6 variantes de `2025/01` (rouge, argent, vert primaire, grioote et blanc, etc.) sont la même prise de vue avec des fils de couleurs différentes ; **aucune version brute (sans broderie) n'est dans le clone**. Reconstitution : calage du calque sur la photo par corrélation avec le vert des fils (échelle ≈ 0,462 du cadre 5712, décalage (-17,5 ; -138) dans le cadre 2560 × 1626), puis effacement des fils par diffusion. **Résultat : le calque (bleu azur, blanc) se pose proprement sur la base, en suivant la courbure** (`essais/RESULTAT-calque-*-sur-base-effacee.png`, base `BASE-photo-vert-kawa-broderie-effacee.png`). Défauts : bords bosselés où la broderie touchait la jonction avec le carbone, coutures vertes d'origine encore visibles. **À demander à Valérie : la photo brute d'origine (5712 × 4284) sans broderie**, avec laquelle ces défauts disparaissent. Le simulateur de Valérie = photo brute + un PNG de broderie par coloris de fil.
 - Fichiers déposés par Melvin dans `essais/` : `Z900 nid abeille gris.png` est une vignette 400 × 400 (trop petite pour mesurer) ; `Z900 nid abeille vert.htm` est une **page d'admin WordPress enregistrée** (médiathèque), pas une image : à ne pas utiliser.
 
 ### Données chiffrées nouvelles
@@ -503,3 +505,32 @@ Plafond contractuel : **7 000 € HT**, soit **16 j** après déduction des 1 40
 La cible interne de **≈ 5 000 € (14 j)** est très inférieure. Leviers : conserver Divi et ne refaire que les modèles (≈ −10 à −15 j), migrer un socle de pages, découper en lots. **Maintenance** (cible 450 €/mois) : chiffrage à part, avec périmètre et exclusions.
 
 **Pour rendre le chiffrage ferme** : décision Divi conservé ou non ; résultats des tests matières et broderies ; périmètre des pages ; inventaire des 38 groupes APF (4 fiches sur 38 faites).
+
+## 15. Reconstruction terminée, front Divi, instantanés (14/10, 20 h 40)
+
+### Bilan de la reconstruction locale
+| Élément | Résultat |
+|---|---|
+| Produits | **345 sur 345** publiés, identifiants d'origine conservés |
+| Médias téléchargés (API REST publique, mêmes chemins) | **15 120 sur 15 123** (5,33 Go) ; 1 fichier invalide (`2026/08/SELLE-MANDELLO-1-scaled.jpg`, id 187710) ; 2 en erreur HTTP (`BMW-R-1200RT-surpiqures_25/26`, ids 2803 et 2804) |
+| Pièces jointes enregistrées | **15 121** (avec leurs identifiants d'origine) |
+| Images d'un produit testé (16319) | **220 sur 220** présentes, servies en HTTP 200 |
+| Page produit locale | HTTP 200, bouton « Configurer », thème `clean` |
+| Utilisateurs en base locale | 1 (compte `Mel`), aucune donnée personnelle |
+
+### Front de référence : exports Divi reçus (3 fichiers, `Phase 1/divi-export/`, ignoré par Git)
+| Fichier | Contenu | Inspection |
+|---|---|---|
+| `Modeledivithemebuilder.json` (17 Mo) | **23 modèles** Theme Builder : site par défaut (en-tête 31066), Boutique, **13 modèles propres à des marques** (Aprilia, BMW, Ducati, Honda, Kawasaki, KTM, Suzuki, Triumph, Yamaha, CFMoto, Zontes, Voge, Moto Guzzi, Indian, Kymco, Honda Hornet), toutes les catégories, tous les produits, produits avec l'étiquette « Selle configurable », 404 | Aucune clé sensible ; une seule adresse e-mail (`contact@sellerieconfort.com`, 63 occurrences : coordonnées du magasin) |
+| `Options du thème Divi.json` | Réglages Divi (logo, palette, navigation) | Aucune clé d'API |
+| `Configurations personnalisées Divi.json` | Personnalisation (couleurs, polices, tailles) | Aucune clé sensible |
+
+Les deux fichiers d'options sont **appliqués** au site local par script (`scripts/import_divi_options.php` : 96 réglages et 221 réglages de personnalisation ; palette `#111111 | #ffffff | #1a428a | #426ca9 | #d02c30…` ; logo d'origine). Le Theme Builder s'importe **dans l'interface** (Divi → Theme Builder → portabilité → importer), le gestionnaire d'import procédant par étapes avec jetons de page.
+
+À noter pour la refonte : **13 modèles dupliqués par marque** (même mise en page, répétée) ; une seule gestion centralisée suffirait dans une refonte.
+
+### Instantanés (dans `Phase 1/clone-fichiers/snapshots/`)
+| Fichier | Contenu |
+|---|---|
+| `db-apres-reconstruction-2026-10-14.sql` (+ `.sha256`) | Base du site local après reconstruction (≈ 70 Mo), point de retour avant le test de la 2.0.0 |
+| `site-local-code-hors-uploads-2026-10-14.zip` | `wp-content` du site local sans `uploads` |

@@ -68,6 +68,8 @@ body_synced: 2026-10-14
 - [ ] Tests de rendu matières/couleurs (0,60 j), puis broderies et nid d'abeille (1,00 j)
 - [ ] Estimer la généralisation (poste 0,30 j) : 46 configurations, 302 couches distinctes, ≈ 10 900 images, 27 jeux de noms à nettoyer
 - [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 (plafond 7 000 € HT) et le calendrier ; intégrer les points de sécurité observés
+- [ ] Nid d'abeille Z900 : retrouver la photo brute (même prise de vue que `z-900-nid-d-abeil.jpg-vert-kawa-scaled.jpg`) sans broderie, pour valider le calque simple (échelle 0,336, décalage ≈ -100 px)
+- [ ] Export Divi Theme Builder (en-tête, pied, fiche produit) depuis la prod pour reproduire le front dans le site local
 
 ## Journal
 - 2026-10-06 : Repo `BlueImpakt/sellerie-confort` cloné en local. Contexte consolidé dans `RAPPORT_CONTEXTE_PROJET.md` : audit externe passif du site (pile, structure du configurateur, volumes) et corrections des incohérences de `AUDIT_RAPPORT.md` et du `.xlsx`. Fiche projet créée, questions pour la réunion du 07/10 listées dans le rapport.
@@ -79,6 +81,7 @@ body_synced: 2026-10-14
 - 2026-10-13 (suite) : Notes CR interne/client déplacées dans le dossier refonte (nouvelle référence). Contrat Phase 1 retouché côté Melvin (docx/pdf) et nouveau devis I-26-10-2 (acompte 50/50) présent à côté de I-26-10-1 : référence du devis dans le contrat à vérifier. Titulaires des comptes o2switch/OVH/Google inconnus.
 - 2026-10-13 (suite) : Clause de plafonnement Phase 2 ajoutée au contrat (Art. 6) : 7 000 € HT max pour le périmètre défini après l'audit, dépassement de temps à la charge du prestataire, hors périmètre par avenant ; 1 400 € de Phase 1 déduits (solde max 5 600 € HT, 16 j). Si le contrat est déjà signé, avenant nécessaire.
 - 2026-10-14 : Phase 1 lancée : contrat et devis I-26-10-2 signés, facture émise, acompte 700 € versé, accès WordPress admin et OVH OK. Délai de 10 jours calendaires à compter de l'accès effectif (échéance ~23-24/10). À régler avant d'intervenir : accord écrit de Valérie pour le plugin d'export (art. 2, congés le 17/10) et date de départ du délai confirmée par mail ; accès OVH hors périmètre contrat, inutile en Phase 1 (hébergeur o2switch, accès non fourni).
+- 2026-10-14 (suite) : Reconnaissance Phase 1 bouclée : code `mkl_pc` 1.7.6 et changelog 2.0.0 lus, 345 fiches publiques analysées (10 937 images uniques, 46 configurations, 302 couches distinctes), accord écrit de Valérie pour l'export, sauvegarde UpdraftPlus fichiers seuls puis site local `sellerie-confort.local` reconstruit (345 produits, médias publics) ; alerte plugin compromis jugée hors périmètre ; nid d'abeille Z900 : calque posé sans déformation = meilleur résultat, photo brute sans broderie à retrouver. Détail : [[pre-phase-1]].
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
