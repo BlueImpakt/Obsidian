@@ -274,6 +274,36 @@ Sources : `readme.txt` du dépôt officiel (trunk), page du plugin sur WordPress
 | Les images sont forcément distinctes par modèle | Petit plugin sur les crochets (filtre `mkl_pc/db/get` ou équivalent 2.0) qui compose les choix depuis un jeu partagé, images rattachées par nom |
 | Un rendu « masque + texture » est retenu (tests Phase 1) | Le jeu partagé porte les textures ; une couche par modèle porte le masque. Peu d'images, front-end à adapter |
 
+## 10. Matériel de test reçu et premiers constats (14/10, après-midi)
+
+Règle posée par Melvin : **aucune connexion à l'admin WordPress sans son autorisation explicite.** Tout ce qui suit vient de fichiers qu'il a déposés ou d'images publiques téléchargées avec son accord. Fichiers dans `sellerieconfort-refonte/Phase 1/` (repo `sellerie-confort`).
+
+### Nid d'abeille : fichiers de Valérie (`nid_d_abeille_z900_simulateur.zip`)
+| Point | Constat |
+|---|---|
+| Contenu | **Z900 uniquement**, 11 PNG, un par coloris : alcantara, antidérapant, blanc, bleu azur, bleu égyptien, bleu océan, bleu petronas, bleu sirius, bleu yam, carbone, charbon |
+| Format | RGBA, **5712 × 4284** (4:3), contre 1920 × 1280 (3:2) pour les couches du site |
+| Contenu réel | Seulement les **arêtes des alvéoles** (0,76 % de pixels opaques), en perspective, sur 3 zones. Géométrie **identique** d'un coloris à l'autre |
+| Coloris absents des 37 matières du site | **alcantara, carbone, bleu sirius** (à confirmer : nouvelles matières en stock ?) |
+
+### Exports admin du configurateur (4 produits, faits par Melvin)
+Produits 16319 (Triumph Tiger 01, couche nommée « Yamaha TDM 900 »), 17258 (BMW S1000 XR), 17773 (BMW S1000 R), **39477 (Kawasaki Z900 : 10 couches, 294 images)**. L'export natif de `mkl_pc` donne en plus du fichier public les **IDs de pièces jointes**, les dimensions et les vignettes : de quoi recompter les fichiers uniques sans clone. Aucun choix « nid d'abeille » dans la Z900 actuelle. Toutes les images : 1920 × 1280.
+
+### Images Z900 (public, téléchargées avec accord, 26 fichiers, 11 Mo)
+`z900-images/sources/` (3 coloris : noir antidérapant, bleu azur, blanc + fond et ombre) ; recomposition dans `z900-images/essais/`.
+
+### Recalage du motif sur la Z900 (essai)
+- Recherche automatique (échelle + translation) : **meilleure solution IoU 0,34**, échelle ≈ **0,405**, décalage ≈ (-180, -196) px. Script : `scripts/register_nid_abeille.js`.
+- Incrustation visuellement plausible (même perspective), mais **non validée** : des alvéoles débordent du bord de la selle ; découpées par les masques des couches (comportement du configurateur), la zone avant est bien remplie, la zone arrière est surtout coupée. Il manque une référence (capture du simulateur avec le motif posé).
+- **Test transfert inter-modèles impossible pour l'instant** : un seul modèle fourni. À porter au rapport comme « non démontré » avec marge de risque sur le chiffrage des broderies.
+
+### Données chiffrées nouvelles
+- Échantillon public (39 fiches) : 9 246 références pour **3 596 fichiers uniques** ; 1 762 identifiants partagés par au moins 2 produits (jusqu'à 13). Confirme que les « 83 000 images » sont des références.
+
+### À faire (en attente de Melvin)
+- Envoyer le mail groupé : brouillon `Phase 1/mail-valerie-brouillon.md` (accord export, date de départ du délai, information VIMAWEB, second modèle, capture du simulateur, coloris absents).
+- Vérifier côté médiathèque l'absence de `.psd` (filtre MIME), à faire par Melvin ou avec son accord explicite.
+
 ### Échantillon de 39 fiches configurables (14/10, fichiers publics, lecture seule)
 
 Méthode : 40 fiches tirées à intervalles réguliers parmi les 345 « configurable » du sitemap (1 timeout), fichier de config public lu en mémoire, rien d'autre que le résumé conservé. Résumé et script : `sellerieconfort-refonte/Phase 1/` (`echantillon-configs-publics-2026-10-14.json`, `scripts/sample_configs.py`).
@@ -302,5 +332,31 @@ Méthode : 40 fiches tirées à intervalles réguliers parmi les 345 « configur
 8. **Ce que le fichier public contient et ne contient pas** (contrôle sur le produit 16319). Présents : `layers` (couches : nom, type, ordre, nombre de choix), `content` (choix : nom, ordre, image par angle, vignette, valeur par défaut, disponibilité), `angles`, `product_info`. **Absents** : champs d'administration (libellés internes, drapeaux « masqué », prix additionnels), sauvegardes, date de dernière modification, produits non publiés ou hors sitemap. Les **images sont les fichiers d'origine** (PNG 1920 × 1280, 85 à 613 Ko), sans dégradation.
 9. **Conséquences** : l'admin affiche **1 593 produits : 1 526 publiés, 66 brouillons, 1 privé, 1 en corbeille**. Les 66 brouillons et le privé ne sont **pas visibles** dans le public. Le fichier public suffit pour chiffrer ce que voit le client. Il ne suffit pas pour un **inventaire contractuel** : le compte de 345 fiches vient d'un motif de slug (« configurable »), pas d'un drapeau, donc des produits configurables peuvent échapper (les 376 « autres slugs »). À recouper par l'admin : filtre sur l'étiquette « Configurable » (posée par le plugin « Purge + Tag ») et export de contrôle de quelques produits via l'onglet Import/Export du configurateur.
 10. **Convention de nom des images** : `Selle-{Marque}-{Modèle}-{zone}_{NN}_{Matière}.png`, par exemple `Selle-Yamaha-TDM-900-bec_00_Noir-Antiderapant.png`. L'indice `_NN` est un ordre à vérifier : il rend le rattachement par nom réaliste.
-11. **Comparaison export admin / fichier public sur 3 produits (14/10, 16h41-16h42)** : produits 16319 (8 couches, 220 choix), 17773 (10 couches, 294 choix), 17258 (9 couches, 257 choix). Résultat : **identiques**. Mêmes couches, mêmes choix, mêmes **identifiants d'image à 100 %** (220, 294 et 257 sur 220, 294 et 257), mêmes champs. Seule différence : `display_mode` est présent sur toutes les couches dans l'export et sur une seule dans le public. Aucun choix masqué ou indisponible (`available` vrai partout), aucun prix additionnel, aucun libellé interne : **le fichier public est fidèle pour les produits publiés**. Une seule vue (« Face »). Fichiers : `Phase 1/configurator-data--product-*.json`. Script : `Phase 1/scripts/` (comparaison).
+11. **Comparaison export admin / fichier public sur 4 produits (14/10, 16h41-16h47)** : produits 16319 (8 couches, 220 choix), 17773 (10 couches, 294 choix), 17258 (9 couches, 257 choix), 39477 (10 couches, 294 choix). Résultat : **identiques** sur les quatre. Mêmes couches, mêmes choix, mêmes **identifiants d'image à 100 %** (220, 294 et 257 sur 220, 294 et 257), mêmes champs. Seule différence : `display_mode` est présent sur toutes les couches dans l'export et sur une seule dans le public. Aucun choix masqué ou indisponible (`available` vrai partout), aucun prix additionnel, aucun libellé interne : **le fichier public est fidèle pour les produits publiés**. Une seule vue (« Face »). Fichiers : `Phase 1/configurator-data--product-*.json`. Script : `Phase 1/scripts/` (comparaison).
 12. **Conséquence** : l'analyse des 345 fiches publiques est fiable pour le chiffrage. L'écart restant concerne ce que le public ne montre pas par nature : **66 brouillons** et 1 produit privé, et d'éventuels produits configurables hors du motif de slug. Les prix ne dépendent pas des choix (aucun `extra_price`) : un jeu partagé n'a pas de tarif à porter.
+
+### Analyse des 345 fiches « configurable » publiques (14/10, 16h45-17h01, 0 erreur)
+
+Même méthode que l'échantillon, sur l'ensemble des 345 fichiers de config publics. Résumé : `Phase 1/analyse-345-fiches-publiques-2026-10-14.json`. Script : `Phase 1/scripts/sample_configs.py`.
+
+| Mesure | Résultat |
+|---|---|
+| Produits | **345 simples**, aucune variation |
+| Couches par produit | 8 (238), 10 (91), 9 (9), 7 (7) |
+| Références d'images | **83 034** |
+| Images uniques | **10 937** (10 935 noms de fichier), soit ≈ 7,6 références par image |
+| Images partagées entre produits | **7 243 sur 10 937 (66 %)**, jusqu'à **117 produits** pour une même image |
+| Couches avec choix | **2 254**, dont **302 distinctes** par liste d'images (13 %) |
+| Configurations complètes distinctes | **46 pour 345 produits** |
+| Taille des groupes de produits identiques | 117, 41, 26, 20, 19, 12, 11, 9, 9, 7, 5, 5… ; **17 produits isolés** |
+| Jeux de choix | 37 matières (1 521 couches), 44 liserés (357), 26 surpiqûres (338), 1 choix fixe (689), **atypiques : 34 couches** (41, 45, 46, 36, 40 ou 27 choix) |
+| Jeux de noms distincts | **27** au lieu de 3 attendus (fautes de frappe, copies, orthographes) |
+| Poids moyen du fichier de config | ≈ 129 Ko |
+
+#### Ce que ça change
+1. **Le vrai volume est ≈ 10 900 images, pas 83 000** (83 000 = références).
+2. **345 fiches se ramènent à 46 configurations** : c'est le nombre d'objets à maintenir si on regroupe. 17 sont des produits isolés, à traiter un par un. Le plus gros groupe (117 produits) ne demande qu'un seul « configurateur global » en 2.0.
+3. **302 couches distinctes** : c'est la bonne unité de chiffrage pour les images de l'étape 1.
+4. **Nettoyage préalable** : 27 jeux de noms à ramener à 3 et 34 couches atypiques à examiner (dont CFMOTO).
+5. **Borne haute** : les 46 groupes sont des identités exactes. Une couche en plus ou une image différente sépare deux fiches presque identiques, donc le nombre réel de familles sera inférieur après nettoyage.
+6. **Limites** : analyse des produits publiés repérés par le motif de slug (345 sur 1 526 publiés). Restent à examiner les 66 brouillons et d'éventuels configurables hors motif.
