@@ -400,3 +400,23 @@ Sites du client (prod, dev, préprod) : connexion à l'admin sur autorisation ex
 
 ### Outils et scripts (dans `Phase 1/scripts/`)
 `sample_configs.py`, `compare_export.py`, `download_media.py`, `inspect_archives.py`, `check_flagged.py`, `extract_master.py`, `fetch_products_data.py`, `build_products.php`, `build_attachments.php`, `pipeline_reconstruction.ps1`.
+
+
+## 12. Lecture du code sur mesure (14/10, soir, depuis `01-lecture`)
+
+Lecture seule, rien exécuté. Plugins et correctifs écrits pour ce site.
+
+| Fichier | Auteur (en-tête) | Fonction | À retenir |
+|---|---|---|---|
+| `plugins/purge-bandeaux-noir-diamant/` (1 628 lignes) | « Vous » | **Outil d'administration** (Outils → `sc-pc-tools`) : 1) retire un choix de couleur/matière (`Noir diamant`) de toutes les structures du configurateur, avec dry-run puis exécution, sauvegarde et CSV ; 2) pose l'étiquette « Configurable » sur les produits configurables ; 3) purge des méta de cache | Voir ci-dessous |
+| `plugins/sc-notice-carbone/` | Sellerie Confort | Fenêtre modale d'information sur la suppression de la finition Carbone | Aucun lien avec la logique du configurateur |
+| `plugins/sc-order-note/` | Vimaweb | Colonne « Notes » dans la liste des commandes | Hors configurateur |
+| `plugins/sc-export-pdf-factures/` | Vimaweb | Export ZIP de factures PDF par plage de dates | Données personnelles : hors périmètre |
+| `mu-plugins/fix-wapf-preview.php` | `vw_` (Vimaweb) | Contournement d'un bogue d'APF Pro 2.7.5 (aperçu dans l'éditeur) | APF Pro est désormais **inactif** (Extended 3.2.1 actif) : correctif probablement caduc |
+| `mu-plugins/active-plugins.php` | ARTEO Digital | Filtre la liste des extensions actives | À lire avant toute activation en local |
+
+### Ce que le plugin de purge explique
+1. **Les 1,1 Go de `postmeta`** : à chaque exécution réelle, pour chaque méta du configurateur modifiée, il ajoute une **copie complète « avant »** sous la clé `<clé d'origine>_backup_bandeaux_purge_<meta_id>`. Dix ou douze exécutions sur 345 produits suffisent à expliquer le gros du poids : **hypothèse forte, à confirmer avec les données** (le décompte des clés `*_backup_bandeaux_purge_*`). Piste d'allègement : base de 1,47 Go à environ 0,4 Go.
+2. **L'étiquette « Configurable » n'existe pas** : la fonction de pose n'a jamais été exécutée. Ce n'est donc pas un indicateur fiable de produits configurables.
+3. **Les dates de modification ne sont pas des dates d'édition** : l'outil fait un `wp_update_post` sur chaque produit traité. Le « modifié le 13/10 » de plusieurs centaines de produits vient très probablement de là. À ne pas utiliser pour dater des changements de contenu (conclusion corrigée sur dev, voir §9).
+4. **Fiabilité** : l'outil manipule des tableaux sérialisés ligne à ligne, avec des suppressions de méta et de cache par motif `LIKE`. C'est du code de maintenance en production non revu : à signaler comme risque dans le rapport.
