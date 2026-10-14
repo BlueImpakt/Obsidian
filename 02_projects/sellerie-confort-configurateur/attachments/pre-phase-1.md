@@ -267,3 +267,32 @@ Sources : `readme.txt` du dépôt officiel (trunk), page du plugin sur WordPress
 | Une couche globale peut recevoir une image par modèle (ou des masques) | Utiliser les couches/configurateurs globaux de la 2.0, avec un petit outil d'import par nom |
 | Les images sont forcément distinctes par modèle | Petit plugin sur les crochets (filtre `mkl_pc/db/get` ou équivalent 2.0) qui compose les choix depuis un jeu partagé, images rattachées par nom |
 | Un rendu « masque + texture » est retenu (tests Phase 1) | Le jeu partagé porte les textures ; une couche par modèle porte le masque. Peu d'images, front-end à adapter |
+
+### Échantillon de 39 fiches configurables (14/10, fichiers publics, lecture seule)
+
+Méthode : 40 fiches tirées à intervalles réguliers parmi les 345 « configurable » du sitemap (1 timeout), fichier de config public lu en mémoire, rien d'autre que le résumé conservé. Résumé et script : `sellerieconfort-refonte/Phase 1/` (`echantillon-configs-publics-2026-10-14.json`, `scripts/sample_configs.py`).
+
+| Mesure | Résultat |
+|---|---|
+| Type de produit | **39 sur 39 « simple »**, config chargée dans la page (pas de variations) |
+| Couches par produit | 8 (28 produits), 10 (9), 9 (1), 7 (1) |
+| Jeux de choix par couche | 37 (matières, 174 couches), 44 (liserés, 39), 26 (surpiqûres, 39), 1 (couches fixes, 78) |
+| Références d'images | 9 246 pour 39 produits, soit ≈ 237 par produit |
+| Images **uniques** | **3 596** (≈ 2,6 références par image) |
+| Images utilisées par plusieurs produits | **1 762 sur 3 596 (49 %)**, jusqu'à **13 produits** pour une même image |
+| Couches avec choix | 252, dont **98 distinctes** par liste d'images |
+| Configurations complètes | **15 distinctes sur 39 produits**, le plus gros groupe en compte **13 identiques** |
+| Poids du fichier de config | ≈ 127 Ko en moyenne |
+| Jeux de noms de matières | 6 variantes (au lieu de 3 attendus) : fautes de frappe et copies |
+
+#### Ce que ça corrige et ce que ça apporte
+1. **Je corrige l'audit d'octobre** (« rien n'est partagé entre modèles ») : les **images sont déjà réutilisées** entre produits quand la forme de selle est la même (jusqu'à 13). La duplication est dans la **configuration de chaque produit** (JSON copié), pas dans les fichiers.
+2. **Le nombre d'images à produire est bien plus faible que 83 000** : 83 000 est un nombre de références. Le chiffrage de l'étape 1 doit porter sur les **couches distinctes**, donc sur les formes de selle, pas sur les fiches.
+3. **Les couches et configurateurs globaux de la 2.0 deviennent très plausibles** : un groupe de produits identiques (jusqu'à 13) est exactement un « configurateur global » à assigner par catégorie. Sur l'échantillon, 252 couches se réduisent à 98, et 39 configurations à 15.
+4. **Pas de variations** : tous les produits sont simples, donc le mode `share_layers_config` n'est pas utilisé.
+5. **Prudence** : échantillon de 39 sur 345 (11 %), tiré par ordre alphabétique des URL. La proportion de doublons sur l'ensemble reste à confirmer sur les 345 (≈ 700 requêtes publiques, quelques minutes).
+6. **Un écart à expliquer** : les 345 fichiers de config publics pèsent ≈ 44 Mo (345 × 127 Ko), alors que `SC_postmeta` fait **1 101 Mo**. La config visible n'en explique que 4 %. Reste ≈ 1 Go à identifier (sauvegardes `__backup`, métas de plugins, résidus d'anciens plugins ?). Piste d'allègement de la base (1,47 Go) et de performance, à documenter dans le rapport. Non visible depuis l'extérieur : nécessite les données.
+7. **Export WordPress natif par catégorie : impossible pour les produits.** Le filtre de catégorie n'existe que pour les articles. L'export « tous les produits » (1 595, avec 1,1 Go de métadonnées) renvoie `ERR_INVALID_RESPONSE`. Ne pas le relancer sans filtre de dates restreint.
+8. **Ce que le fichier public contient et ne contient pas** (contrôle sur le produit 16319). Présents : `layers` (couches : nom, type, ordre, nombre de choix), `content` (choix : nom, ordre, image par angle, vignette, valeur par défaut, disponibilité), `angles`, `product_info`. **Absents** : champs d'administration (libellés internes, drapeaux « masqué », prix additionnels), sauvegardes, date de dernière modification, produits non publiés ou hors sitemap. Les **images sont les fichiers d'origine** (PNG 1920 × 1280, 85 à 613 Ko), sans dégradation.
+9. **Conséquences** : le fichier public suffit pour chiffrer ce que voit le client. Il ne suffit pas pour un **inventaire contractuel** : le compte de 345 fiches vient d'un motif de slug (« configurable »), pas d'un drapeau, donc des produits configurables peuvent échapper (les 376 « autres slugs »). À recouper par l'admin : filtre sur l'étiquette « Configurable » (posée par le plugin « Purge + Tag ») et export de contrôle de quelques produits via l'onglet Import/Export du configurateur.
+10. **Convention de nom des images** : `Selle-{Marque}-{Modèle}-{zone}_{NN}_{Matière}.png`, par exemple `Selle-Yamaha-TDM-900-bec_00_Noir-Antiderapant.png`. L'indice `_NN` est un ordre à vérifier : il rend le rattachement par nom réaliste.
