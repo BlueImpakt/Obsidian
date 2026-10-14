@@ -7,7 +7,7 @@ projet: sellerie-confort-configurateur
 
 # Discussion Claude : Phase 1
 
-Points tranchés ou clarifiés à l'oral le 14/10/2026 (échanges vocaux). Complète [[pre-phase-1]] et [[2026-10-14-sellerie-confort-hebergement-acces]]. Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
+Journal des discussions menées avec Claude **en dehors de Claude Code** (échanges vocaux et conversation), pas des notes de réunion client. Contient les points tranchés ou clarifiés le 14/10/2026. Complète [[pre-phase-1]] et [[2026-10-14-sellerie-confort-hebergement-acces]]. Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 
 ## 1. OVH vs o2switch, en deux phrases pour Valérie
 
