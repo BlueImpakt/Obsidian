@@ -591,3 +591,6 @@ Chiffrage : ces points justifient une fourchette large pour la Phase 3 (**26 à 
 Constats de données : la fiche **« Selle TRIUMPH Tiger 900 – Configurable »** (id 17377) affiche des visuels **BMW GS** ; la fiche 16319 (Triumph 900 Tiger 1993-1998) porte les images de la **Yamaha TDM 900**. Des fiches utilisent les images d'un autre modèle.
 
 Pièges : le vidage des règles d'URL doit se faire dans un **second processus** (WooCommerce enregistre les types de contenu avant la mise à jour de l'option) ; les menus de la prod ont des identifiants absents en local (menus et emplacements réaffectés : `relink_menus.php`, `assign_locations.php`).
+
+### Options de commande reconstruites (14/10, 22 h 30)
+345 groupes de champs écrits sans erreur (méta `_wapf_fieldgroup` par produit) : 856 cases à cocher, 483 pastilles image, 338 pastilles couleur, 345 champs numériques, 1 647 boutons radio, 1 725 champs texte, 339 zones de texte. Avertissements corrigés (structure « clone » et réglages des pastilles). L'affichage des erreurs PHP du site local est coupé (`WP_DEBUG_DISPLAY` faux) ; elles restent dans le journal.
