@@ -23,10 +23,11 @@ body_synced: 2026-10-14
 - Maquettes HTML de refonte (déjà montrées début août, direction validée, seul le beige à changer) : démonstration uniquement, **pas un engagement contractuel** ; refonte complète des 6 maquettes le 07/10, très appréciées, en ligne sur Netlify (08/10)
 
 ## État actuel
-- **Pré-signature, Phase 1 acceptée oralement.** Réunion du 07/10 tenue (~2 h avec Valérie Cenizo) : besoin confirmé, maquettes très appréciées ; **rien n'est signé**, contrat et démarrage dépendent de l'accord de son mari. Nouvelle offre orale : Phase 1 à 1 400 € HT. CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]]
-- Contrat Phase 1 réécrit le 13/10 (Word + PDF, 1 400 € HT, acompte 50 %) ; devis I-26-10-1 et I-26-10-2 à aligner avec la référence citée dans le contrat. Mail de CR parti avec un placeholder de créneaux à compléter
-- Valérie en congés à partir du 17/10 : contrat signé + accès WordPress admin à obtenir avant, rapport livré pendant ses congés. Concurrence : une agence web les rencontre début novembre
-- Audit externe passif du site (06/10, hébergement et DNS le 13/10) : pas d'accès admin, rien testé sur le site, aucun clone local à ce jour. Maquettes en ligne sur Netlify depuis le 08/10
+- **Phase 1 lancée le 14/10/2026.** Contrat et devis I-26-10-2 signés le 13/10 (1 400 € HT, 4 j × 350 €), acompte de 700 € versé, comptes nominatifs sur la prod et sur dev. **Délai de 10 jours calendaires : 14/10 → 24/10/2026.** Valérie en congés dès le 17/10 ; son accord écrit pour une extension d'export temporaire est reçu (en réserve, non utilisé). VIMAWEB est informé ; pas de contact direct de notre part.
+- **Reconnaissance du 14/10** : voir [[pre-phase-1]] et [[2026-10-14-sellerie-confort-hebergement-acces]]. Hébergement o2switch (compte VIMAWEB), domaine/DNS/ancien hébergement OVH (Valérie), configurateur `mkl_pc` 1.7.6 en prod (la **2.0.0** du 12/10 apporte des couches et configurateurs globaux, avec migration de données). **345 fiches → 46 configurations distinctes**, 10 937 images uniques pour 83 034 références, export admin identique au fichier public sur 4 produits.
+- **Alerte sécurité observée** (plugin *Essential Plugin* / WP Logo Showcase, avertissement WordPress.org dans l'admin de la prod) : **hors périmètre**, décision du 14/10, pas de prise de contact avec VIMAWEB, constat reporté au rapport.
+- **Clone local construit le 14/10** (Local, WordPress 7.1.3, PHP 8.2, site `sellerie-confort.local`) : code issu d'UpdraftPlus **sans base ni téléversements** (4 archives + empreintes en lecture seule, plus 3 copies), médias par téléchargement public à l'identique, 345 produits recréés depuis les fichiers publics. Accès libre de Claude au WordPress local ; pour les sites du client, autorisation explicite à chaque fois. Détails : [[pre-phase-1]].
+- Maquettes en ligne sur Netlify depuis le 08/10. Volet **nid d'abeille** traité dans une autre session (simulateur Z900 reçu de Valérie).
 
 ## Décisions techniques
 - **Pile détectée** (front uniquement) : WordPress + WooCommerce 11.1.0, thème Divi, LiteSpeed. Configurateur = plugin **Product Configurator for WooCommerce** v1.7.5 (`mkl_pc`), config stockée en fichiers JS dans `wp-content/uploads/mkl_product_configurations/product_configuration_{ID}.js`. Options de commande (gel, chauffage, hauteur) = autre plugin, **Advanced Product Fields** (`wapf`) : deux systèmes distincts
@@ -41,28 +42,32 @@ body_synced: 2026-10-14
 - **Pistes IA pour les patchs/broderies** (recherche, **rien testé**) : Mira-Scene (3D depuis image unique) **écarté** (maillages trop approximatifs, pas de retexturage réaliste, lourd en GPU). Retenu à tester : segmentation (SAM / SAM 3) + retexturage 2D avec préservation des ombres et lumières, ou édition générative (FLUX.1 Kontext [pro] meilleur candidat, Nano Banana Pro/2 en face-à-face, GPT Image 2 plan B, Qwen-Image-Edit en local). Outils SaaS de recolor (Photoroom, Claid, GoStudio) : bons pour un prototype, peu contrôlables. Le rendu ne sera jamais identique à 100 % à une photo, l'étape 1 reste optionnelle et ne remplace pas les photos existantes
 - **Décision (2026-10-07, réunion)** : les étapes 1 et 2 du flux d'ajout d'un modèle (photos sous plusieurs angles, calques Photoshop) restent manuelles chez Valérie ; on automatise l'ajout des matières par calque et le classement par familles. Le nid d'abeille est une broderie : son test est inclus dans les tests broderies de l'audit. Ergonomie : tout sur une seule page, conservé
 - **Hébergement (13/10, lecture publique)** : o2switch (LiteSpeed), DNS OVH, mail Google Workspace ; staging probablement faisable chez o2switch. WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — hypothèse à confirmer par l'audit
+- **Clone : jamais la base ni les téléversements de la prod** (5 437 commandes dans `wp_posts`, 2 890 comptes, 2 241 formulaires, clés de paiement) : art. 2 du contrat et condition écrite de Valérie. Voie retenue : fichiers du code seuls (UpdraftPlus), médias par téléchargement public à l'identique, produits reconstruits depuis les fichiers publics. Base filtrée (WP Migrate Pro ou export serveur) = option si les réglages et mises en page sont nécessaires.
+- **Étape 2 (regroupement)** : tester les couches et configurateurs globaux de `mkl_pc` 2.0.0 sur copie (la mise à jour migre les données ; publiée le 12/10, attendre une version corrective avant la prod) ; sinon petit plugin sur le filtre `mkl_pc/db/get`. Le rattachement des images par convention de nom reste une piste.
+- **Règle d'accès** : sites du client sur autorisation explicite ; WordPress local libre.
 
 ## Blocages / risques
-- Contrat non signé : démarrage et signature suspendus à l'accord du mari de Valérie ; pas de décompte tant que les accès ne sont pas fournis ; contrat et accès WordPress admin à obtenir avant ses congés (17/10)
-- Dépendance aux accès WordPress côté cliente (Valérie Cenizo les a) ; rôle exact de VIMAWEB et ARTEO à clarifier, ainsi que l'auteur du plugin sur-mesure `sc-notice-carbone`
-- Mise en production en Phase 2 : à décider avec la cliente (moi, VIMAWEB ou hybride). Mon engagement du 07/08 de ne pas toucher à la logique technique du site est à reformuler. Voir [[2026-10-07-sellerie-confort]] pour les limites techniques Phase 1/2 et la compatibilité avec le code existant
-- Hypothèse d'homogénéité des 345 fiches **levée le 08/10** : 337 fiches sur 345 suivent la même logique (3 jeux réutilisables), 8 atypiques (dont CFMOTO 800 NK)
-- Acceptabilité côté cliente d'images générées par IA en vente, et critère de validation du réalisme (qui tranche) non définis
-- Photos sources (patchs physiques retouchés) : existence de fichiers haute résolution ou PSD hors site inconnue
-- Fichiers parasites du repo : `script_scraping_sellerie.py.py` (doublon) ; `index.html` des maquettes contient un extrait de JS affiché tel quel ; prix des maquettes fictifs (250 €, 285 €)
-- **VIMAWEB** détient les licences des plugins (`mkl_pc`, `wapf`, Divi) et a les mêmes accès WordPress que Valérie : elle est d'accord pour les reprendre à son nom ; procédure (transfert éditeur ou rachat) à confirmer plugin par plugin ; Valérie doit l'informer de la collaboration si elle donne suite
-- Hébergement o2switch (LiteSpeed), DNS et domaine chez OVH (expire le 17/06/2027), email Google Workspace : titulaires des comptes inconnus, à demander à Valérie avant de contacter VIMAWEB ; accès serveur, version PHP et staging non vérifiables depuis le site public
-- Concurrence : une agence web les rencontre début novembre — démarrer vite pour ne pas perdre la place
+- **VIMAWEB** : titulaire du compte o2switch (dev et prod), détient les licences des plugins (`mkl_pc`, `wapf`, Divi), plugins sur mesure (`Sync MKL…` prototypé sur dev, non déployé). Informé, pas de contact direct. Mise en production et accès serveur en Phase 2 : à décider avec Valérie (reprise du compte à son nom ou VIMAWEB à la demande).
+- **Sécurité (hors périmètre)** : plugin compromis signalé par WordPress.org, toujours actif en prod ; ancien hébergement OVH en PHP 7.2 avec l'ancien site et le mail ; `dev` public sans mot de passe. À reporter au rapport, sans investigation.
+- **Inventaire à compléter par l'admin** : 66 brouillons et 1 produit privé non visibles du public ; produits configurables hors du motif de slug éventuels.
+- **Écart inexpliqué** : `SC_postmeta` pèse 1 101 Mo alors que les 345 fichiers de config publics ne font que ≈ 44 Mo (sauvegardes `__backup` ? métas de plugins ?).
+- **`mkl_pc` 2.0.0** : migration automatique des données ; les plugins de VIMAWEB et `Purge + Tag` s'appuient sur l'ancien stockage. Aucune mise à jour en prod avant test sur copie.
+- **Images partagées** : l'image d'une matière sur une couche reste propre au modèle ; un jeu partagé ne supprime pas la production des images (étape 1). Acceptabilité des images générées par IA et critère de réalisme (qui tranche) non définis.
+- **Sources d'origine** (PSD, photos de patchs) : inconnues hors site ; question à Valérie. 69 Go non inventoriés sur l'ancien hébergement OVH (créé le 17/06/2013) pourraient en contenir.
+- **Échéances** : fin du délai le 24/10/2026 ; plan OVH à renouveler en avril 2027 ; domaine expire le 17/06/2027. Concurrence : une agence web rencontre le client début novembre.
+- Fichiers parasites du repo : `script_scraping_sellerie.py.py` ; `index.html` des maquettes affiche un extrait de JS ; prix des maquettes fictifs.
 
 ## Next actions
-- [ ] Envoyer à Valérie les 2 créneaux de rattrapage (placeholder resté dans le mail de CR) ; envoyer le mail d'accord écrit pour le plugin d'export (art. 2) et confirmer la date de départ du délai
-- [ ] Obtenir l'accès WordPress admin temporaire et démarrer le décompte de la période
-- [ ] Cloner le site en local (données + médias) et auditer le plugin `mkl_pc` et son stockage (fichiers JS + base)
-- [ ] Choisir les modèles/coloris échantillons (BMW GS LC ?) et lancer les tests matières/couleurs puis broderies
-- [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 et le calendrier
-- [ ] Demander à Valérie qui est titulaire des comptes o2switch, OVH et Google avant de contacter VIMAWEB ; vérifier que le contrat cite bien le devis I-26-10-2
-- [ ] Licences des plugins : préparer avec Valérie la reprise à son nom (`mkl_pc`, `wapf`, Divi) si VIMAWEB bloque ; Valérie informe VIMAWEB de la collaboration si elle donne suite
-- [ ] Dans l'audit : vérifier ce que permet `mkl_pc` (familles de matières, broderies, options) et cadrer le périmètre de l'audit offert pour tenir dans les 4 jours
+- [x] Contrat, devis I-26-10-2, acompte, comptes nominatifs, accord écrit pour l'extension d'export (13-14/10)
+- [x] Reconnaissance : hébergement, accès, lecture du code `mkl_pc` 1.7.6, changelog 2.0.0, analyse des 345 fiches, comparaison export admin / public
+- [ ] **Terminer la reconstruction locale** (pipeline `Phase 1/reconstruction/pipeline.log` : produits, médias, pièces jointes), puis prendre l'**instantané** (base + dossier du site)
+- [ ] **Désinstaller UpdraftPlus** et supprimer le jeu de sauvegarde sur la prod (condition de Valérie), puis lui confirmer par mail qu'aucune donnée personnelle n'a été exportée
+- [ ] Répondre à Valérie : départ du délai le 14/10 (fin le 24/10) ; nid d'abeille (second modèle, photo de base Z900), trois coloris absents du site, fichiers sources (PSD)
+- [ ] Lire le code des plugins sur mesure (VIMAWEB, ARTEO), `Divi Child` (dont `checkout/payment.php`) et `mu-plugins` : couplages avec `mkl_pc`
+- [ ] Tester la **2.0.0** sur le site local (couches/configurateurs globaux, migration des données) avant tout chiffrage
+- [ ] Tests de rendu matières/couleurs (0,60 j), puis broderies et nid d'abeille (1,00 j)
+- [ ] Estimer la généralisation (poste 0,30 j) : 46 configurations, 302 couches distinctes, ≈ 10 900 images, 27 jeux de noms à nettoyer
+- [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 (plafond 7 000 € HT) et le calendrier ; intégrer les points de sécurité observés
 
 ## Journal
 - 2026-10-06 : Repo `BlueImpakt/sellerie-confort` cloné en local. Contexte consolidé dans `RAPPORT_CONTEXTE_PROJET.md` : audit externe passif du site (pile, structure du configurateur, volumes) et corrections des incohérences de `AUDIT_RAPPORT.md` et du `.xlsx`. Fiche projet créée, questions pour la réunion du 07/10 listées dans le rapport.

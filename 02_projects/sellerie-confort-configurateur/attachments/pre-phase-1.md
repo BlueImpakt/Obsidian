@@ -360,3 +360,43 @@ Même méthode que l'échantillon, sur l'ensemble des 345 fichiers de config pub
 4. **Nettoyage préalable** : 27 jeux de noms à ramener à 3 et 34 couches atypiques à examiner (dont CFMOTO).
 5. **Borne haute** : les 46 groupes sont des identités exactes. Une couche en plus ou une image différente sépare deux fiches presque identiques, donc le nombre réel de familles sera inférieur après nettoyage.
 6. **Limites** : analyse des produits publiés repérés par le motif de slug (345 sur 1 526 publiés). Restent à examiner les 66 brouillons et d'éventuels configurables hors motif.
+
+
+## 11. Clone local (construit le 14/10, soir)
+
+### Fichiers : `Phase 1/clone-fichiers/`
+
+| Dossier | Contenu | Rôle |
+|---|---|---|
+| `00-master/` | 4 archives UpdraftPlus (`plugins`, `themes`, `mu-plugins`, `others`) + `SHA256SUMS.txt` | Original, **lecture seule** |
+| `01-lecture/` | Code extrait (26 499 fichiers, 396 Mo) | Lecture |
+| `02-essai/` | Copie identique | À casser |
+| `03-reserve/` | Copie identique | Référence |
+| `wp-content/uploads/` | Médias téléchargés à l'identique (+ `manifeste-medias.csv`) | Source des images du site local |
+
+Contrôles faits sur les archives, sans les extraire : **aucune base de données, aucun `wp-config.php`, aucun téléversement**. Fichiers signalés : `plugins/woo-payline-caution/.env` (4 variables d'URL, pas de clé), `wpayline_caution__debug.log` (29 Ko, aucune adresse e-mail, téléphone ni IBAN détectés), `error_log` du plugin DPD (27 Mo, 134 909 lignes : le plugin journalise sans fin, constat de santé). Les journaux ne sont pas dans les copies de travail. Le dossier `wpvivid_staging` vient de notre essai WPvivid, pas de la prod.
+
+Inventaire des plugins (38 dossiers) : le plugin compromis y figure sous `wp-logo-showcase-responsive-slider-slider` (106 fichiers) ; dossiers d'origine locale : `sc-export-pdf-factures`, `sc-notice-carbone`, `sc-order-note`, `purge-bandeaux-noir-diamant`. `mu-plugins` : `active-plugins.php` (ARTEO), `fix-wapf-preview.php`, `InitUmbrella.php`.
+
+### Site local : `sellerie-confort.local`
+
+| Élément | Valeur |
+|---|---|
+| Outil | Local (WP Engine), site `sellerie-confort`, dossier `C:\Users\LENOVO\Local Sites\sellerie-confort` |
+| Environnement | WordPress **7.1.3**, PHP **8.2.29** (prod : 8.3.35), nginx, base sur le port 10005 |
+| Thème | Divi Child (Divi 4.27.8) |
+| Plugins actifs | WooCommerce 11.2.1, Product Configurator 1.7.6, APF Extended 3.2.1 |
+| Exclus | Plugin compromis, WP Umbrella, CleanTalk, LiteSpeed Cache, UpdraftPlus, WP Tiger |
+| Repère visuel | Barre d'admin **rouge** + « LOCAL » (`mu-plugins/env-local-banner.php`) |
+| Compte admin | `Mel` (local, sans lien avec les sites du client) |
+| Produits | 345 recréés depuis les fichiers publics avec leurs identifiants d'origine (`reconstruction/donnees/`, scripts `build_products.php`) |
+| Pièces jointes | Insérées avec leurs identifiants d'origine (`build_attachments.php`) |
+| Orchestration | `scripts/pipeline_reconstruction.ps1`, journal `reconstruction/pipeline.log` |
+
+Le site local n'est branché sur aucune des quatre copies : son code a été **copié depuis `01-lecture`** (empreinte du fichier principal du configurateur identique). Instantané de la base à prendre une fois la reconstruction terminée.
+
+### Règle d'accès
+Sites du client (prod, dev, préprod) : connexion à l'admin sur autorisation explicite, cas par cas. WordPress local : accès libre (décision de Melvin du 14/10/2026). Mémoire et `CLAUDE.md` du dépôt à jour.
+
+### Outils et scripts (dans `Phase 1/scripts/`)
+`sample_configs.py`, `compare_export.py`, `download_media.py`, `inspect_archives.py`, `check_flagged.py`, `extract_master.py`, `fetch_products_data.py`, `build_products.php`, `build_attachments.php`, `pipeline_reconstruction.ps1`.
