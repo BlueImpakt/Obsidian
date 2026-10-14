@@ -204,3 +204,66 @@ Deux fichiers `SystemStatusReport_sellerieconfort.com_…` : identiques sauf les
 
 #### Tables à exclure d'un export (préfixe `SC_`)
 `users`, `usermeta` (garder la structure, créer un admin local), `comments`, `commentmeta`, `woocommerce_order_items`, `woocommerce_order_itemmeta`, `woocommerce_sessions`, `woocommerce_payment_tokens*`, `wc_orders*`, `wc_order_*`, `wc_customer_lookup`, `wcpdf_*`, `wpforms_entries*`, `wpforms_payment*`, `wc_cofidispayment_*`, `alma_business_data`, `cleantalk_*`, `pimwick_gift_card*`, `wdr_order_*` ; **et** les articles de type `shop_order` et `shop_order_refund` avec leurs `postmeta`.
+
+### Lecture du code de `mkl_pc` 1.7.6 (14/10, plugin lu sans être exécuté)
+
+Version lue : **1.7.6**, celle de la prod (la 2.0.0 reste à lire). Fichiers clés : `inc/db.php`, `inc/cache.php`.
+
+| Sujet | Ce que fait le plugin |
+|---|---|
+| **Stockage** | Par produit, en méta WooCommerce : `_mkl_product_configurator_layers`, `_angles`, `_content`, `_last_updated`, plus `_mkl_pc__is_configurable` et `_mkl_pc__variable_configuration_mode`. Tableaux PHP sérialisés dans `SC_postmeta` |
+| **Forme du contenu** | Liste de couches ; chaque couche a des `choices[]` ; chaque choix a des `images[]` avec `image {id, url}` et `thumbnail {id, url}`. L'URL est stockée **dans** la donnée, avec l'ID de la pièce jointe |
+| **Fichier JS public** | Simple **cache généré** de ces données (`PC.productData.prod_{ID}`), régénéré à la demande si 404, à la sauvegarde des réglages WooCommerce et à chaque purge totale de LiteSpeed (d'où les dates vers 4 h) |
+| **Partage entre produits** | **Aucune notion de jeu, de famille ou de bibliothèque partagée.** Seul partage natif : mode `share_layers_config` des produits variables (couches communes, choix par variation) |
+| **Rattachement par nom de fichier** | Le plugin contient déjà une résolution d'image par **nom de fichier** (`scan_product_images`, `_find_image_id`), utilisée après une migration |
+| **Import/Export** | Section native par produit |
+| **Sauvegarde** | La migration (`update.php`) ajoute une méta `_mkl_product_configurator_content__backup` : peut expliquer une partie du 1,1 Go de `postmeta`, à vérifier |
+
+#### Points d'extension (sans toucher au cœur du plugin)
+
+| Crochet | Usage possible |
+|---|---|
+| Filtre **`mkl_pc/db/get`** | Lecture : reconstruire `content` à la volée à partir d'un jeu de matières partagé |
+| Filtre `mkl_product_configurator_content_data` | Idem, au niveau du contenu |
+| Filtre `mkl_product_configurator/data/set/{component}` et `.../set/choice` | Écriture : normaliser ou compléter avant enregistrement |
+| Actions `mkl_pc_before_save_product_configuration`, `mkl_pc_saved_product_configuration` | Déclencher une synchronisation après sauvegarde |
+| Filtre `mkl_pc_get_configurator_data` | Modifier ce qui part dans le fichier JS |
+| Filtre `mkl_pc_db_fields` | Ajouter des champs (famille, groupe) |
+| Filtre `mkl_product_configurator_admin_menu` | Ajouter un onglet dans l'éditeur du configurateur |
+| Méthode `DB::update_choice()` | Mise à jour programmatique d'un choix |
+
+#### Conclusion technique provisoire
+
+- **L'option 1 (étendre via crochets) est viable** pour l'étape 2 : un petit plugin peut lire un jeu partagé (37, 26, 44 matières) et composer le contenu de chaque produit, sans forker.
+- **Nuance importante** : un jeu partagé peut partager les **noms, ordres, prix, vignettes**, mais l'**image d'une matière sur une couche d'un modèle reste propre à ce modèle** (c'est la découpe). La partie lourde reste donc l'étape 1 (produire ces images), pas l'étape 2.
+- **Piste à tester** : rattacher les images **par convention de nom** (`{modèle}-{zone}-{matière}`), comme le plugin sait déjà le faire. Ça remplacerait la saisie manuelle une par une.
+- **À vérifier** : le poids réel de `postmeta` (sauvegardes ?) et le mode réellement utilisé par les produits Sellerie Confort. (La 2.0.0 est lue : voir ci-dessous.)
+
+### Changelog de `mkl_pc` 2.0.0 (publiée le 12/10/2026, il y a 2 jours)
+
+Sources : `readme.txt` du dépôt officiel (trunk), page du plugin sur WordPress.org. Prérequis : WordPress 6.0+, PHP 7.4+, testé jusqu'à 7.1. La prod (WP 7.1.3, PHP 8.3) est compatible.
+
+| Nouveauté | Contenu | Pertinence |
+|---|---|---|
+| **Configurateurs globaux** | Une configuration commune, rangée dans « Product Configurator > Global configurators », **assignable par produit ou par catégorie** (sous-catégories incluses). « Make local copy » détache un produit | **Forte** : c'est la notion de jeu partagé qui manquait |
+| **Couches globales** | Toute couche peut devenir globale (« Make Global ») et être importée dans d'autres produits ; « Edit original » propage ; « Disconnect » rend une copie locale | **Forte**, même remarque |
+| **Méta de configuration par couche** | Réglage « Configuration meta data » : une méta par couche, au lieu d'une méta unique | Utile pour exports, factures, ERP |
+| **Commandes** | Une commande affiche l'**image et les noms enregistrés à l'achat**, plus ceux de la configuration actuelle | **Protège l'historique** quand on restructure |
+| **Ordre des couches** | L'ordre d'empilement est enregistré avec la configuration | |
+| **Performance** | Section dédiée ; option « n'afficher que les images visibles » ; purge optionnelle des configurations avec LiteSpeed | À regarder pour le panier et le temps de chargement |
+| Autres | Thème « EV », configurateur 3D (glTF/GLB) | Hors sujet |
+
+#### Ce que ça change
+1. **La fonction de partage existe désormais nativement**, mais elle partage une **couche ou une configuration entière avec ses images**. Les sources ne disent rien du partage des images entre produits. Chez Sellerie Confort, l'image d'une matière sur une couche est la **découpe propre au modèle** : un partage « global » ne s'applique donc directement qu'aux couches dont l'image est identique d'un modèle à l'autre. À tester sur échantillon avant d'en faire la solution.
+2. **Mise à jour = migration de données.** La notice de mise à jour dit : « Configurator data moves to a new storage format, converted automatically. » Le changelog, lui, ne parle ni de migration ni de rupture. **Ne rien mettre à jour en production** avant d'avoir testé sur une copie, d'autant que les plugins de VIMAWEB et le plugin « Purge + Tag » s'appuient sur l'ancien stockage.
+3. **Publiée le 12/10** : très récente. Mieux vaut attendre une ou deux versions correctives avant de la recommander pour la prod.
+4. **L'historique des commandes** : en 1.7.6, une commande peut être rendue à partir de la configuration *actuelle*. Restructurer les données avant la 2.0 peut donc altérer l'affichage des commandes passées. Argument pour mettre à jour d'abord, sur staging, puis restructurer.
+5. **Le rattachement par nom de fichier** reste pertinent, notamment pour produire les couches de chaque modèle sans saisie manuelle.
+
+#### Arbre de décision provisoire (étape 2)
+
+| Si les tests montrent que… | Alors |
+|---|---|
+| Une couche globale peut recevoir une image par modèle (ou des masques) | Utiliser les couches/configurateurs globaux de la 2.0, avec un petit outil d'import par nom |
+| Les images sont forcément distinctes par modèle | Petit plugin sur les crochets (filtre `mkl_pc/db/get` ou équivalent 2.0) qui compose les choix depuis un jeu partagé, images rattachées par nom |
+| Un rendu « masque + texture » est retenu (tests Phase 1) | Le jeu partagé porte les textures ; une couche par modèle porte le masque. Peu d'images, front-end à adapter |
