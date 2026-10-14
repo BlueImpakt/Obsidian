@@ -297,6 +297,8 @@ Produits 16319 (Triumph Tiger 01, couche nommée « Yamaha TDM 900 »), 17258 (B
 - **Diagnostic (confirmé)** : le PNG 5712 × 4284 est dessiné sur la **photo** de la selle finie (cadrage d'origine d'un smartphone, redimensionnée à 2560 de large puis recadrée par le site). Superposé à la photo `z-900-nid-d-abeil.jpg-vert-kawa-scaled.jpg` avec échelle = 2560 / 5712 ≈ 0,448 et décalage vertical ≈ -100 px, les alvéoles coïncident avec la vraie broderie (résidu de 10 à 20 px à affiner). Les 3 zones du motif = panneau avant (grande zone), liseré haut du panneau avant, assise arrière.
 - **Conséquence** : le nid d'abeille n'existe aujourd'hui dans aucune couche du configurateur ; il est montré par des photos de selles réelles. Le configurateur affiche un autre point de vue (rendu), il faut donc un **passage photo → rendu par panneau** (transformation projective par panneau, puis éventuellement maillage). C'est le vrai travail de la Phase 2 sur les broderies.
 - **Références disponibles dans `clone-fichiers/wp-content/uploads`** : 7 photos Z900 avec nid d'abeille (`2025/01/z-900-nid-d-abeil*`), et d'autres modèles (Z650, BMW R1200/1250 GS, Hornet 750, Aprilia RS 660, MT-07…) : vérité terrain pour le test inter-modèles.
+- **Essais de déformation vers le rendu propre (noir et azur)** : (v1) normalisation radiale par zone : échec ; (v2) correspondance colonne par colonne entre les bords haut et bas du motif et du panneau : **le panneau avant suit la courbure, les alvéoles sont lisibles, mais elles sont étirées (×2,7 en largeur) et l'assise arrière est inutilisable** ; (v3) repère de l'axe principal : pire (cisaillement). Conclusion : une correspondance **par contours seuls ne suffit pas** ; il faut soit des points de contrôle placés à la main (maillage), soit une génération paramétrique du motif suivant la surface. Fichiers `essais/warp-v*`, script `scripts/warp_nid_abeille_v2.js`. À présenter comme **faisabilité partielle**, pas comme résultat publiable.
+- **Essai v4 : maillage à points de contrôle (thin-plate spline), 17 points avant + 16 arrière, fait à la main sur la photo et le rendu** : **résultat exploitable comme démonstration** (alvéoles hexagonales en perspective sur le panneau avant, le liseré haut, le bec et l'assise arrière, découpées par les masques des couches, sur compo noir et compo azur). Défauts : alvéoles étirées en bas du panneau avant, bord irrégulier de l'assise arrière, quelques fragments au bec. Points : `scripts/tps_points_avant.json`, `tps_points_arriere.json` ; script `scripts/tps_nid_abeille.js` ; images `essais/maillage-tps-*.png`. Coût réel : relever ~30 points par modèle, c'est le temps de travail à chiffrer par modèle en Phase 2 (ou à automatiser par détection de contours des panneaux).
 - Fichiers déposés par Melvin dans `essais/` : `Z900 nid abeille gris.png` est une vignette 400 × 400 (trop petite pour mesurer) ; `Z900 nid abeille vert.htm` est une **page d'admin WordPress enregistrée** (médiathèque), pas une image : à ne pas utiliser.
 
 ### Données chiffrées nouvelles
@@ -422,3 +424,24 @@ Lecture seule, rien exécuté. Plugins et correctifs écrits pour ce site.
 2. **L'étiquette « Configurable » n'existe pas** : la fonction de pose n'a jamais été exécutée. Ce n'est donc pas un indicateur fiable de produits configurables.
 3. **Les dates de modification ne sont pas des dates d'édition** : l'outil fait un `wp_update_post` sur chaque produit traité. Le « modifié le 13/10 » de plusieurs centaines de produits vient très probablement de là. À ne pas utiliser pour dater des changements de contenu (conclusion corrigée sur dev, voir §9).
 4. **Fiabilité** : l'outil manipule des tableaux sérialisés ligne à ligne, avec des suppressions de méta et de cache par motif `LIKE`. C'est du code de maintenance en production non revu : à signaler comme risque dans le rapport.
+
+## 13. Rendu du configurateur en local (14/10, soir)
+
+Page de test : `http://sellerie-confort.local/product/modele-selle-configurable-triumph-tiger-01/` (produit 16319). Comparaison du HTML public de la prod et du site local.
+
+| Élément | Prod | Local, état initial | Local, après alignement |
+|---|---|---|---|
+| Thème du configurateur | `clean` | `float` (défaut) | **`clean`** |
+| Fermeture après ajout au panier / après un choix | oui / oui | non / non | **oui / oui** |
+| Image du choix actif dans la couche | oui | non | **oui** |
+| Devise et format | `€`, virgule décimale | `$`, point | **`€`, virgule** |
+| Messages | en français | en anglais | **en français** (paquets de langue copiés) |
+| Bouton | « Configurer » | « Configure » | **« Configurer »** |
+
+Deux pièges rencontrés : WooCommerce était en mode **« bientôt disponible »** (le site local n'affichait pas les produits : `woocommerce_coming_soon` passé à `no`), et les réglages du configurateur sont dans l'option `mkl_pc__settings`, absente d'une base neuve (reproduits depuis l'objet public `PC_config`). Script : `Phase 1/scripts/set_prod_like_settings.php`.
+
+### Ce qui reste différent
+- **Page autour du configurateur** : la prod utilise des modèles **Divi Theme Builder** (en-tête, pied de page, fiche produit : 131 sections contre 24 en local), stockés en base, donc absents.
+- **Options de commande** (gel, chauffage, hauteur, mode de commande) : ce sont des groupes de champs APF (`wapf_product`, 38 en prod) stockés en base, donc **absents**. À reconstruire depuis le HTML public si besoin.
+- Classes du bouton : celles du thème local (`primary button btn btn-primary wp-element-button`) contre `button` en prod. Cosmétique.
+- Réglages secondaires du configurateur non exposés au public (prix dans le configurateur, nom des angles) : défauts.
