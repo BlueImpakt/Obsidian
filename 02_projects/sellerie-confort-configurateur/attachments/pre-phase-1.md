@@ -181,4 +181,26 @@ Textes bruts : `sellerieconfort-refonte/site-health-prod-2026-10-14.txt` et `sit
 5. **Product Configurator 2.0.0** existe : lire le changelog avant de conclure sur les limites de `mkl_pc` (la 2.0 peut changer la donne sur les jeux partagés).
 6. **Payline est bien en production** (le rapport d'audit avait raison), à côté d'Alma et Cofidis. `Woo Payline Caution` porte la caution de l'échange standard.
 7. **Serveur confortable** pour la suite : PHP 8.3, 2 Go de mémoire, Imagick disponible, `time_limit` 600 s. Export/import et traitement d'images côté serveur sont envisageables.
-8. **Point bloquant pour l'export** : savoir où sont stockées les **commandes** (HPOS ou anciennes tables `wp_posts`). Avec le stockage historique, un filtre par table ne suffit pas à les exclure. À lire dans WooCommerce → Réglages → Avancé → Fonctionnalités → « Stockage des données de commande ». **Relevé du 14/10 sur dev** : stockage **hérité** (`wp_posts`), HPOS non activé, bloqué par deux extensions déclarées incompatibles (Custom Order Statuses for WooCommerce, Shipping Method Description), avec des commandes non synchronisées. **Prod à relever** : elle utilise une autre extension de statuts (Tyche 3.0.1), donc le résultat peut différer.
+8. **Point bloquant pour l'export** : savoir où sont stockées les **commandes** (HPOS ou anciennes tables `wp_posts`). Avec le stockage historique, un filtre par table ne suffit pas à les exclure. À lire dans WooCommerce → Réglages → Avancé → Fonctionnalités → « Stockage des données de commande ». **Relevé du 14/10 sur dev** : stockage **hérité** (`wp_posts`), HPOS non activé, bloqué par deux extensions déclarées incompatibles (Custom Order Statuses for WooCommerce, Shipping Method Description), avec des commandes non synchronisées. **Prod relevée le 14/10 : stockage hérité aussi** (`wp_posts`), HPOS bloqué par une seule extension incompatible (Shipping Method Description for WooCommerce), commandes non synchronisées. **Conséquence : un filtre par table ne suffit pas à exclure les commandes.** Les données personnelles se trouvent aussi dans les fichiers (factures PDF, dossiers `woocommerce_uploads`, `wpforms`, logs). Méthode d'export à choisir en conséquence, avec un contrôle final (recherche de `_billing_`, `_shipping_` dans l'export). Options : export WordPress natif (produits et médias seulement, rien à installer sur la prod) ou WP Migrate avec exclusion de types de contenu (peut-être une fonction payante, à vérifier à l'écran).
+
+### Rapport système WooCommerce de la prod (14/10, 2 exports dans `Phase 1/`)
+
+Deux fichiers `SystemStatusReport_sellerieconfort.com_…` : identiques sauf les compteurs d'Action Scheduler (le second est le plus récent).
+
+| Constat | Valeur | Ce que ça change |
+|---|---|---|
+| **Préfixe de tables** | **`SC_`** (pas `wp_`) | À utiliser dans tout filtre ou toute requête |
+| **Où est la config du configurateur** | Aucune table `mkl_` : elle est dans **`SC_postmeta`** (**1 101 Mo** sur 1 363 Mo de base, soit 81 %) | Impossible d'exclure `postmeta` pour éviter les commandes : elle contient aussi ce qu'on veut garder. Confirme qu'il faut filtrer par type de contenu |
+| **Commandes** | **5 437** `shop_order` + 51 remboursements dans `SC_posts` ; `wc_orders*` quasi vides ; HPOS désactivé, synchro désactivée | Les commandes et leurs métadonnées sont dans les mêmes tables que les produits |
+| **Produits** | 1 595 produits, 42 variations, 38 groupes `wapf_product` | |
+| **Médiathèque** | **15 185 pièces jointes** au total | Contredit l'estimation de ≈ 83 000 images : ce chiffre compte des **références**, pas des fichiers. Fichiers uniques ≤ 15 185. À rapprocher des 15,06 Go d'uploads |
+| **Autres contenus** | 2 609 révisions, 1 311 entrées `seopress_404` | Bruit à ne pas exporter |
+| **Restes d'anciens plugins** | Tables `bwg_*` (Photo Gallery), `ngg_*` (NextGEN), `yoast_*`, `berocket_*`, `mainwp_wpvivid_*` | Plusieurs générations de site se sont empilées |
+| **Surcharge de modèle obsolète** | `Divi Child/woocommerce/checkout/payment.php` en version **9.8.0** contre 10.9.0 | Risque sur le tunnel de paiement. Piste pour le panier perdu |
+| **Tâches planifiées en échec** | **447** échouées (de 07/08 à 12/10), 7 335 terminées | À identifier : quel hook, quel plugin |
+| **Cron WordPress** | « – » | Possiblement désactivé côté WordPress (cron serveur ?), à vérifier |
+| **Cache objet externe** | Aucun | |
+| **Journal WooCommerce** | 30 jours, 11 Mo | |
+
+#### Tables à exclure d'un export (préfixe `SC_`)
+`users`, `usermeta` (garder la structure, créer un admin local), `comments`, `commentmeta`, `woocommerce_order_items`, `woocommerce_order_itemmeta`, `woocommerce_sessions`, `woocommerce_payment_tokens*`, `wc_orders*`, `wc_order_*`, `wc_customer_lookup`, `wcpdf_*`, `wpforms_entries*`, `wpforms_payment*`, `wc_cofidispayment_*`, `alma_business_data`, `cleantalk_*`, `pimwick_gift_card*`, `wdr_order_*` ; **et** les articles de type `shop_order` et `shop_order_refund` avec leurs `postmeta`.
