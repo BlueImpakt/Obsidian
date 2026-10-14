@@ -118,9 +118,9 @@ Le plugin `mkl_pc` n'a sans doute pas de notion de famille ni de jeu partagé. Q
 | Sujet | État |
 |---|---|
 | Source du clone | **Production avec filtre de tables**, accord écrit de Valérie. Dev écarté : 1 071 utilisateurs et 151 entrées de formulaire (données personnelles, art. 2) et versions plus anciennes |
-| Accord écrit pour le plugin d'export | **À obtenir avant le 17/10** |
-| Date de départ du délai (10 j) | À confirmer par mail |
-| Information de VIMAWEB | Valérie d'accord, pas encore faite. Risque : licences, mise en production, hostilité |
+| Accord écrit pour le plugin d'export | **Obtenu par mail de Valérie** : installation temporaire de l'extension nécessaire à la copie technique, « conformément au contrat ». **Conditions** : aucune donnée personnelle ni commande exportée ; extension désinstallée dès l'export terminé. **Non utilisé à ce jour** (le public suffit, voir §9) : en réserve |
+| Date de départ du délai (10 j) | **14/10/2026** (précisé par Melvin) : fin du délai le **24/10/2026**. À tracer par mail à Valérie |
+| Information de VIMAWEB | **Faite** (précisé par Melvin le 14/10). Pas de contact direct de notre part. Risques qui restent : licences, mise en production, réaction |
 | Temps de reconnaissance | À consigner : il consomme le délai calendaire, à décider s'il compte dans les 4 jours |
 | Stratégie tarifaire Phase 2 | Interne uniquement, voir [[2026-10-07-sellerie-confort-cr-interne]] |
 | Cible Phase 2 | Calendrier et chiffrage seulement après audit |
@@ -130,7 +130,7 @@ Le plugin `mkl_pc` n'a sans doute pas de notion de famille ni de jeu partagé. Q
 | Date | Quoi |
 |---|---|
 | **17/10/2026** | Départ en congés de Valérie : accord écrit et accès avant |
-| **~23-24/10/2026** | Fin du délai de 10 jours (à confirmer) |
+| **24/10/2026** | Fin du délai de 10 jours (départ le 14/10) |
 | **Début novembre** | Rencontre du client avec une agence web |
 | **Avril 2027** | Renouvellement du plan OVH |
 | **17/06/2027** | Expiration du domaine |
