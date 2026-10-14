@@ -77,6 +77,7 @@ body_synced: 2026-10-14
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
+- Hébergement et accès : [[2026-10-14-sellerie-confort-hebergement-acces]] (qui détient quoi, copie du site, accès o2switch) · synthèse [[pre-phase-1]] (cadre, reconnaissance, échéances)
 - Client : [[sellerie-confort]]
 - Patterns utilisés :
 - Repo / deployment : https://github.com/BlueImpakt/sellerie-confort (local : `C:\Users\LENOVO\Documents\GitHub\sellerie-confort`) · site client : https://sellerieconfort.com

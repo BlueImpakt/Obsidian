@@ -55,6 +55,7 @@ body_synced: 2026-10-13
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
 - Réunions : [[2026-10-07-sellerie-confort]] (prépa)
+- Réunions : [[2026-10-14-sellerie-confort-hebergement-acces]] (prépa : hébergement et accès)
 - CR réunion : [[2026-10-07-sellerie-confort-cr-client]]
 - CR réunion : [[2026-10-07-sellerie-confort-cr-interne]]
 
