@@ -445,3 +445,60 @@ Deux pièges rencontrés : WooCommerce était en mode **« bientôt disponible �
 - **Options de commande** (gel, chauffage, hauteur, mode de commande) : ce sont des groupes de champs APF (`wapf_product`, 38 en prod) stockés en base, donc **absents**. À reconstruire depuis le HTML public si besoin.
 - Classes du bouton : celles du thème local (`primary button btn btn-primary wp-element-button`) contre `button` en prod. Cosmétique.
 - Réglages secondaires du configurateur non exposés au public (prix dans le configurateur, nom des angles) : défauts.
+
+## 14. Référence du front, options de commande, charpente de chiffrage (14/10, soir)
+
+### A. Référence du front existant
+Captures publiques, bureau (1440) et mobile (390), pages entières : `Phase 1/reference-front/{desktop,mobile}/` (12 pages, + fiche produit avec configurateur ouvert). Script : `scripts/capture_reference.mjs`. Aucun clone nécessaire : c'est le public.
+
+| Constat sur la fiche produit actuelle | |
+|---|---|
+| Structure | Fiche Divi : étiquette « Configurable », photo, prix (barré 250 € → **210 € TTC**), bloc Cofidis 3x/4x, puis formulaire APF **sous** le configurateur |
+| Le configurateur | **Plein écran séparé** (liste des 6 couches à gauche, selle à droite, « Valider la configuration », « Reset ») : ce n'est donc pas « tout sur une page » |
+| Parasites à l'ouverture | Fenêtre « Information importante » (Carbone) + bannière cookies |
+| Prix | Le public renvoie 250 € (prix de base) ; le 210 € vient de **Discount Rules** : le local affiche 250 € |
+| Page oubliée en ligne | `xx__ma-moto-php-shortcode__archive-backup` (page d'archive de code, publiée) |
+
+### B. Options de commande (APF), 4 fiches publiques
+Détail : `Phase 1/reconstruction/options-apf-echantillon.json`. Script : `scripts/inventory_options.py`.
+
+| Groupe | Champs | Fiches |
+|---|---|---|
+| **Communs** (groupes `59570`, `4659`) | Modèle de ma moto*, Année*, Taille pilote*, Poids pilote*, Poids passager, Commentaires, **Type de commande*** (2 choix), **Hauteur d'assise pilote*** (3), **Option gel** (4), Options de selle, Informations complémentaires, **Broderies*** (oui/non) | 4 sur 4 (12 champs) |
+| **Par modèle** (groupes `858`, `1132`, `p_<id>`) | Broderie dosseret*, Motif de broderie (3), **Couleurs de broderie (26)**, Motif bandes / dosseret, Précisions couleurs, Autres couleurs | 1 à 2 sur 4, conditionnels |
+
+Surcoûts relevés : hauteur ±2 cm **+10 €**, gel avant / arrière **+35 €**, deux assises **+70 €**. 12 à 17 champs par fiche, **règles conditionnelles** (la broderie ouvre le motif, qui ouvre les couleurs). Sur 38 groupes au total, un socle commun et des groupes propres à chaque modèle.
+
+### C. Charpente de chiffrage (ordres de grandeur, à valider)
+Taux 350 €/j. Volumes : 345 fiches = **46 configurations**, 302 couches distinctes, 27 marques, 448 modèles, 15 pages, 1 526 produits, 34 plugins actifs.
+
+**Phase 2 : simulateur + parcours de commande (page produit unique)**
+
+| Poste | j |
+|---|---|
+| Design de la page unique, mobile compris (maquette R6) | 1 à 2 |
+| Nettoyage des données (27 jeux de noms, 34 couches atypiques) et regroupement en 46 configurations | 3 à 5 |
+| Configurateur 2.0 ou plugin sur crochets, essais de migration, retour arrière | 2 à 4 |
+| Page : configurateur **intégré** + options + infos client sur une seule page | 4 à 6 |
+| Broderies / nid d'abeille (selon les tests) | 2 à 4 |
+| Recette, staging, mise en production | 2 à 3 |
+| **Total** | **14 à 24 j (≈ 4 900 à 8 400 €)** |
+
+Plafond contractuel : **7 000 € HT**, soit **16 j** après déduction des 1 400 € de Phase 1. La page produit unique relève du « simulateur et parcours de commande » : elle est **dans** le plafond. Au-dessus de 16 j : resserrer (broderies en option), pas absorber.
+
+**Phase 3 : refonte complète sous WordPress**
+
+| Poste | j |
+|---|---|
+| Thème sur mesure à la place de Divi (système de design, en-tête, pied, modèles) | 6 à 10 |
+| Marques, catégories modèle, recherche « Ma moto » | 5 à 8 |
+| Pages de contenu (Matières, FAQ, Infos, Contact, légal) | 3 à 5 |
+| Panier et paiement (Alma, Cofidis, Payline, caution échange standard, DPD) | 4 à 7 |
+| Compte client, e-mails, factures PDF | 2 à 4 |
+| SEO (301), performance, accessibilité, RGPD | 3 à 5 |
+| Recette, migration, mise en production, formation | 3 à 4 |
+| **Total** | **26 à 43 j (≈ 9 100 à 15 000 €)** |
+
+La cible interne de **≈ 5 000 € (14 j)** est très inférieure. Leviers : conserver Divi et ne refaire que les modèles (≈ −10 à −15 j), migrer un socle de pages, découper en lots. **Maintenance** (cible 450 €/mois) : chiffrage à part, avec périmètre et exclusions.
+
+**Pour rendre le chiffrage ferme** : décision Divi conservé ou non ; résultats des tests matières et broderies ; périmètre des pages ; inventaire des 38 groupes APF (4 fiches sur 38 faites).
