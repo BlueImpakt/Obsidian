@@ -53,6 +53,7 @@ body_synced: 2026-10-14
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — clause de plafonnement Phase 2 ajoutée au contrat (7 000 € HT max, 1 400 € de Phase 1 déduits, solde max 5 600 €)
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — Phase 1 lancée : contrat/devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours.
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — reconnaissance Phase 1 bouclée, accord écrit d'export reçu, site local reconstruit (345 produits), alerte plugin compromis hors périmètre, nid d'abeille Z900 en cours
+- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — site local reconstruit comme la prod (front Divi, 345 produits), nid d'abeille Z900 validé sur sa propre photo mais transfert vers le configurateur non résolu
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
