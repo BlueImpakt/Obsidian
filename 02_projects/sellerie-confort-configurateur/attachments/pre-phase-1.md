@@ -293,9 +293,11 @@ Produits 16319 (Triumph Tiger 01, couche nommée « Yamaha TDM 900 »), 17258 (B
 `z900-images/sources/` (3 coloris : noir antidérapant, bleu azur, blanc + fond et ombre) ; recomposition dans `z900-images/essais/`.
 
 ### Recalage du motif sur la Z900 (essai)
-- Recherche automatique (échelle + translation) : **meilleure solution IoU 0,34**, échelle ≈ **0,405**, décalage ≈ (-180, -196) px. Script : `scripts/register_nid_abeille.js`.
-- Incrustation visuellement plausible (même perspective), mais **non validée** : des alvéoles débordent du bord de la selle ; découpées par les masques des couches (comportement du configurateur), la zone avant est bien remplie, la zone arrière est surtout coupée. Il manque une référence (capture du simulateur avec le motif posé).
-- **Test transfert inter-modèles impossible pour l'instant** : un seul modèle fourni. À porter au rapport comme « non démontré » avec marge de risque sur le chiffrage des broderies.
+- **Essai 1 (échec, constaté par Melvin)** : pose rigide (échelle + translation) du motif sur le rendu du configurateur, meilleur IoU 0,34, échelle ≈ 0,405. **Le motif ne suit pas la courbure de la selle.** Cause : le motif n'est pas dessiné sur le rendu du configurateur. Script `scripts/register_nid_abeille.js` : à ne pas réutiliser tel quel.
+- **Diagnostic (confirmé)** : le PNG 5712 × 4284 est dessiné sur la **photo** de la selle finie (cadrage d'origine d'un smartphone, redimensionnée à 2560 de large puis recadrée par le site). Superposé à la photo `z-900-nid-d-abeil.jpg-vert-kawa-scaled.jpg` avec échelle = 2560 / 5712 ≈ 0,448 et décalage vertical ≈ -100 px, les alvéoles coïncident avec la vraie broderie (résidu de 10 à 20 px à affiner). Les 3 zones du motif = panneau avant (grande zone), liseré haut du panneau avant, assise arrière.
+- **Conséquence** : le nid d'abeille n'existe aujourd'hui dans aucune couche du configurateur ; il est montré par des photos de selles réelles. Le configurateur affiche un autre point de vue (rendu), il faut donc un **passage photo → rendu par panneau** (transformation projective par panneau, puis éventuellement maillage). C'est le vrai travail de la Phase 2 sur les broderies.
+- **Références disponibles dans `clone-fichiers/wp-content/uploads`** : 7 photos Z900 avec nid d'abeille (`2025/01/z-900-nid-d-abeil*`), et d'autres modèles (Z650, BMW R1200/1250 GS, Hornet 750, Aprilia RS 660, MT-07…) : vérité terrain pour le test inter-modèles.
+- Fichiers déposés par Melvin dans `essais/` : `Z900 nid abeille gris.png` est une vignette 400 × 400 (trop petite pour mesurer) ; `Z900 nid abeille vert.htm` est une **page d'admin WordPress enregistrée** (médiathèque), pas une image : à ne pas utiliser.
 
 ### Données chiffrées nouvelles
 - Échantillon public (39 fiches) : 9 246 références pour **3 596 fichiers uniques** ; 1 762 identifiants partagés par au moins 2 produits (jusqu'à 13). Confirme que les « 83 000 images » sont des références.
