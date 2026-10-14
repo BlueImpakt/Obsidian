@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-13
+body_synced: 2026-10-14
 ---
 
 # sellerie-confort-configurateur
@@ -55,7 +55,7 @@ body_synced: 2026-10-13
 - Concurrence : une agence web les rencontre début novembre — démarrer vite pour ne pas perdre la place
 
 ## Next actions
-- [ ] Obtenir avant le 17/10 le contrat Phase 1 signé (devis I-26-10-1, 1 400 € HT) et l'accès WordPress admin ; envoyer à Valérie les 2 créneaux de rattrapage (placeholder resté dans le mail de CR) ; régénérer le devis dans Henrri
+- [ ] Envoyer à Valérie les 2 créneaux de rattrapage (placeholder resté dans le mail de CR) ; envoyer le mail d'accord écrit pour le plugin d'export (art. 2) et confirmer la date de départ du délai
 - [ ] Obtenir l'accès WordPress admin temporaire et démarrer le décompte de la période
 - [ ] Cloner le site en local (données + médias) et auditer le plugin `mkl_pc` et son stockage (fichiers JS + base)
 - [ ] Choisir les modèles/coloris échantillons (BMW GS LC ?) et lancer les tests matières/couleurs puis broderies
@@ -73,6 +73,7 @@ body_synced: 2026-10-13
 - 2026-10-13 : Après la réunion du 07/10, Valérie OK pour la Phase 1. Contrat réécrit (Word + PDF) : **1 400 € HT (4 j × 350 €)**, devis **I-26-10-1** du 08/10, acompte 50 % (700 €) facturé après signature, solde 50 % à la remise du rapport ; chiffrage de la refonte complète + maintenance mensuelle et audit automatisations/panier/suivi inclus sans supplément ; taux Phase 2 à 350 €. Départ en congés de Valérie le 17/10 : le rapport sera livré pendant ses congés, il faut contrat signé + accès WP avant. Hébergeur identifié par lectures publiques : o2switch (LiteSpeed), DNS chez OVH, mail Google Workspace, domaine expire le 17/06/2027. Analyse WordPress : refonte (thème, plugin configurateur, familles en base) faisable sans quitter WordPress, moins chère et moins risquée que du from scratch ; synthèse ajoutée à la note interne du CR. Mail de CR parti avec un placeholder de créneaux non rempli (rattrapage à envoyer).
 - 2026-10-13 (suite) : Notes CR interne/client déplacées dans le dossier refonte (nouvelle référence). Contrat Phase 1 retouché côté Melvin (docx/pdf) et nouveau devis I-26-10-2 (acompte 50/50) présent à côté de I-26-10-1 : référence du devis dans le contrat à vérifier. Titulaires des comptes o2switch/OVH/Google inconnus.
 - 2026-10-13 (suite) : Clause de plafonnement Phase 2 ajoutée au contrat (Art. 6) : 7 000 € HT max pour le périmètre défini après l'audit, dépassement de temps à la charge du prestataire, hors périmètre par avenant ; 1 400 € de Phase 1 déduits (solde max 5 600 € HT, 16 j). Si le contrat est déjà signé, avenant nécessaire.
+- 2026-10-14 : Phase 1 lancée : contrat et devis I-26-10-2 signés, facture émise, acompte 700 € versé, accès WordPress admin et OVH OK. Délai de 10 jours calendaires à compter de l'accès effectif (échéance ~23-24/10). À régler avant d'intervenir : accord écrit de Valérie pour le plugin d'export (art. 2, congés le 17/10) et date de départ du délai confirmée par mail ; accès OVH hors périmètre contrat, inutile en Phase 1 (hébergeur o2switch, accès non fourni).
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
