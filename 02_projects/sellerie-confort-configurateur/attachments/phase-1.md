@@ -681,3 +681,31 @@ Le site local a été **remis dans son état d'origine** (configuration restaur�
 | Photo plein cadre d'une matière réelle (Fiber blanc, Violet) | **Phase 2** (matières non disponibles) |
 | « Version récente » comme défaut | Appuyée par la tendance par époque ; **non confirmée** par Valérie |
 | Raccord pour une nouvelle matière sans texture maître | Plan B décrit (§11 et §12) |
+
+### Test de la 2.0.0 sur la copie « regroupement » (15/10, nuit)
+
+**Procédure** (copie `127.0.0.1:8090` uniquement, jamais le site local d'origine ni la production) :
+1. Instantané de la base de la copie : base `sc_regroupement_v1_7_6` (52 tables, 345 produits).
+2. Sauvegarde des fichiers du plugin 1.7.6 : `sellerie-confort-regroupement\_sauvegarde\`.
+3. Mise à jour par WP-CLI depuis le dépôt officiel (`downloads.wordpress.org/plugin/product-configurator-for-woocommerce.2.0.0.zip`).
+4. Mesure de l'état des données avant et après (`scripts/etat_configurateur.php`, résultats dans `essais-v2/`).
+
+| Mesure | 1.7.6 (avant) | 2.0.0 (après) |
+|---|---|---|
+| Fiches configurables | 345 | 345 |
+| Clés de méta et nombre de lignes | 5 clés × 345 | identiques |
+| Poids des données (contenu) | 56 801 838 octets | **identique** |
+| Lecture par l'API du plugin (Z900) | 10 calques, 351 choix, 57 groupes | **identique** |
+| Filtre `mkl_pc/db/get` (regroupement) | présent | **présent** |
+| Fichier de configuration public | 162 107 octets, 57 groupes | 162 492 octets, 57 groupes, **plus un fichier `.json`** |
+| Front : choix rendus et en-têtes de famille | 292 / 57 | 292 / 57 |
+| Erreurs du navigateur | 12 adresses numériques `0.0.66.x` | **les mêmes sur le site local 1.7.6** : bruit préexistant |
+| Administration de la fiche | fonctionne | fonctionne ; nouveautés « Configurator source », « Configurator type », « Global Layers » |
+
+**Ce que fait la migration** (lecture de `inc/update.php` de la 2.0.0) : elle ajoute deux réglages par défaut (`fe_3d_use_draco_loader`, `purge_with_page_cache`) et reprend le mode d'enregistrement des images de configuration (`save_images`). **Elle ne convertit aucune donnée de produit.** Les deux types de contenu `mkl_global_layer` et `mkl_pc_global_config` sont créés mais vides.
+
+**Correction** : la notice du dépôt (« les données passent à un nouveau format, converties automatiquement ») m'avait fait écrire qu'un retour arrière exigerait de restaurer la base. Pour cette mise à jour, **ce n'est pas le cas** : le retour arrière consiste à remettre les fichiers de la 1.7.6, l'option `mkl_pc__settings` et l'option `mkl_pc_version`. L'instantané de la base reste une précaution. Ce qu'une **première sauvegarde faite dans l'éditeur 2.0** écrit dans les fiches n'est pas testé.
+
+**Non testé** : l'usage des configurateurs et couches globaux ; l'enregistrement dans l'éditeur ; des commandes factices ; l'outil « Purge + Tag » (inactif dans la copie) ; les performances ; la compatibilité du thème personnalisé ; les fonctions 3D.
+
+**Conséquence pour le plan** : la 2.0.0 est compatible avec le regroupement testé sur la 1.7.6 (même filtre, mêmes données, même rendu). Le passage en production reste à décider avec Valérie et ne dépend pas du regroupement.
