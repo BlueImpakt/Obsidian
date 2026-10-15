@@ -631,3 +631,53 @@ Règle proposée pour la Phase 2 : **les images d'origine ne sont jamais remplac
 **À trancher**
 - L'écart acceptable pour mélanger images d'origine et générées dans une même fiche (aujourd'hui : ΔE médian de 2 à 3 pour la couleur).
 - La validation par Valérie, matière par matière, avec une planche de comparaison, avant publication (recommandée).
+
+
+## 13. Poste 3 : points de clôture (15/10, soir)
+
+Les photos de matières réelles (validation d'une texture maître photographiée) sont **reportées à la Phase 2** : Melvin n'a pas les matières avec lui.
+
+### Version de texture par modèle (43 modèles, 21 matières à deux versions)
+
+Chaque zone de surface de ces matières est comparée à la texture maître récente (pixels identiques). Fichier : `Phase 1/essais-poste3/version-par-modele.csv`.
+
+| Version utilisée | Nombre | Modèles |
+|---|---|---|
+| **Récente** (≥ 95 % des zones identiques à la texture récente) | 23 | KTM Duke, Piaggio MP3, Suzuki GSX S 1000, Honda Goldwing 1500, Honda Goldwing 1800, Honda Goldwing 1800 2Parts, Honda CB 650 R, Honda CBF, Honda CBR 1000 F, Honda CBR 900 2Parts, Honda CTX, Honda Integra, Suzuki Hayabusa, Suzuki SV 2Parts, Yamaha MT 07 2Parts, Yamaha MT 09 Tracer, Yamaha MT 09 Tracer 2Parts, Yamaha TDM 850, Yamaha TDM 900, Yamaha FJR 1300 2001, Yamaha FJR 1300 2005, Yamaha FZ8 2Parts, Yamaha T Max |
+| **Ancienne** (≤ 15 % identiques ; 9,5 % correspond aux 2 matières sur 21 qui n'ont pas changé) | 18 | BMW R 1200RT, Dorsoduro 750, Ducati Diavel, Piaggio MP3 av 2014, BMW C650 GT, BMW GS LC, BMW K 1600 GTL, BMW R 1150 RT, BMW R 1200 RT LC, BMW S 1000 R, BMW S 1000 R 2Parts, BMW XR 1000, Kawasaki Z 750 1000 2Parts, Kawasaki Z 900, Suzuki GSX S 2Parts, BMW R 1200 GS, Suzuki GSR 600, Honda VFR VTEC |
+| **Mixte** | 2 | Honda Africa Twin, Honda Shadow (77 % et 87 % de zones récentes) |
+
+**Tendance par époque d'envoi** (dossier d'upload) : jusqu'à 2023/06, 3 modèles récents sur 21 ; **depuis 2023/07, 20 sur 22** ; **depuis 2023/10, 10 sur 10**. Cela appuie la règle « version récente par défaut pour un nouveau modèle », sans la confirmer avec Valérie (pas de mail).
+
+### Liserés : la couleur se déduit de la vignette, avec une exception métallique
+
+Correction de ce que j'avais écrit au §12 : les liserés ne sont **pas** de fines lignes. Le calque d'un liseré couvre une surface médiane de **≈ 16 000 px**, avec une couleur presque unie (écart-type médian 4,3 à 5,3 sur 255).
+
+| Mesure (Z900 et KTM Duke, 44 liserés, un choix laissé de côté) | Résultat |
+|---|---|
+| ΔE médian de la couleur déduite de la vignette | **2,8 à 2,9** |
+| Part des liserés à ΔE ≤ 5 / ≤ 10 | **93 %** / **98 %** |
+| Moins bien déduits | Or pailleté (12,1 à 12,5), Or (6,9 à 7,1), Gris souris (5,5), Gris fiber argent (5,0), Marron (4,7 à 4,8) |
+| Les plus texturés | Or pailleté, Gris argent chromé, Or, Gris fiber argent (écart-type 15 à 26) |
+
+**Règle** : liserés unis → couleur de la vignette ; liserés métalliques ou pailletés (Or pailleté, Or, Argent chromé, Gris fiber argent) → on garde leurs fichiers actuels (ils ont une vraie texture, pas de texture maître construite pour eux).
+
+### Démonstration dans le vrai configurateur local
+
+Procédure testée sur le KTM Duke (produit 10169), site local uniquement :
+
+1. génération des 6 calques de surface de « Violet » depuis la texture maître et les masques du modèle (identiques à 100 % aux originaux, couverts à 100 %) ;
+2. enregistrement comme nouvelles pièces jointes ;
+3. retrait puis recréation du choix « Violet » avec ces images ;
+4. le plugin a **régénéré lui-même** son fichier de configuration public avec les 6 nouvelles images ;
+5. dans l'interface, la sélection « Assises avant : Violet » affiche le calque `Selle-KTM-Duke-assise-av_38_Violet-MAITRE.png` sur la selle.
+
+Le site local a été **remis dans son état d'origine** (configuration restaurée, pièces jointes de démonstration supprimées). Scripts : `poste3_demo_generer.py`, `poste3_demo_enregistrer.php`. Ce que ça prouve : le chemin « générer les images puis les enregistrer dans le plugin » fonctionne ; il reste à construire l'outil qui le fait en un geste (Phase 2).
+
+### Points restants du poste 3
+
+| Point | Statut |
+|---|---|
+| Photo plein cadre d'une matière réelle (Fiber blanc, Violet) | **Phase 2** (matières non disponibles) |
+| « Version récente » comme défaut | Appuyée par la tendance par époque ; **non confirmée** par Valérie |
+| Raccord pour une nouvelle matière sans texture maître | Plan B décrit (§11 et §12) |
