@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-14
+body_synced: 2026-10-15
 ---
 
 # sellerie-confort
@@ -24,6 +24,7 @@ body_synced: 2026-10-14
 - 2026-10-08 : maquettes mises en ligne sur Netlify pour l'envoi (Outlook perd les `assets/` des pièces jointes)
 - 2026-10-13 : contrat Phase 1 réécrit (1 400 € HT, acompte 50 %), CR client envoyé avec un placeholder de créneaux à compléter ; Valérie en congés à partir du 17/10 ; Valérie OK pour la Phase 1 ; clause de plafonnement Phase 2 ajoutée (7 000 € HT max)
 - 2026-10-14 : Phase 1 lancée — contrat et devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours
+- 2026-10-14 : accord écrit d'export reçu de la cliente (reconstruction du site en local)
 
 ## Décisions prises
 - Phase 1 = audit technique avant chiffrage ferme de la Phase 2, **1 400 € HT** (4 j × 350 €) déduits de la Phase 2 si suite ; elle inclut, sans supplément, l'audit des automatisations, le suivi du parcours et le panier perdu
@@ -56,6 +57,8 @@ body_synced: 2026-10-14
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — site local reconstruit comme la prod (front Divi, 345 produits), nid d'abeille Z900 validé sur sa propre photo mais transfert vers le configurateur non résolu
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — images de nid d'abeille rangées par modèle ; second jeu complet (BMW F900 XR) repéré pour tester la généralisation
 - 2026-10-14 (fin de soirée) : Sur [[sellerie-confort-configurateur]] — clone local complété (catégories, URL de la prod, sélecteur « Ma Moto », options de commande reconstruites sur 345 fiches) ; constat de fiches dupliquées avec les visuels d'un autre modèle à signaler.
+- 2026-10-15 : Sur [[sellerie-confort-configurateur]] — plan Phase 1 formalisé ([[phase-1]]), voie 1.7.6 + plugin envisagée, nid d'abeille testé sur 5 modèles, plus de mails à Valérie.
+- 2026-10-15 (suite) : Sur [[sellerie-confort-configurateur]] — poste 3 : rendu matières reproductible à l'identique via texture maître reconstituée (version récente par défaut) ; poste 1 : 336 fiches sur 345 regroupables sur la 1.7.6.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-14
+body_synced: 2026-10-15
 ---
 
 # sellerie-confort-configurateur
@@ -61,13 +61,13 @@ body_synced: 2026-10-14
 - [x] Contrat, devis I-26-10-2, acompte, comptes nominatifs, accord écrit pour l'extension d'export (13-14/10)
 - [x] Reconnaissance : hébergement, accès, lecture du code `mkl_pc` 1.7.6, changelog 2.0.0, analyse des 345 fiches, comparaison export admin / public
 - [ ] **Désinstaller UpdraftPlus** et supprimer le jeu de sauvegarde sur la prod (condition de Valérie), puis lui confirmer par mail qu'aucune donnée personnelle n'a été exportée
-- [ ] Répondre à Valérie : départ du délai le 14/10 (fin le 24/10) ; nid d'abeille (second modèle, photo de base Z900), trois coloris absents du site, fichiers sources (PSD) ; question sur les fiches dupliquées qui montrent les visuels d'un autre modèle (Tiger 900 avec GS, fiche 16319 avec TDM)
-- [ ] Lire le code des plugins sur mesure (VIMAWEB, ARTEO), `Divi Child` (dont `checkout/payment.php`) et `mu-plugins` : couplages avec `mkl_pc`
-- [ ] Tester la **2.0.0** sur le site local (couches/configurateurs globaux, migration des données) avant tout chiffrage
-- [ ] Tests de rendu matières/couleurs (0,60 j), puis broderies et nid d'abeille (1,00 j)
+- [x] Lire `Divi Child/woocommerce/checkout/payment.php` et `mu-plugins/active-plugins.php` (15/10, [[phase-1]] §8) : `payment.php` équivalent au modèle actuel, texte avec « (X €) » littéral ; tous les plugins chargés sur panier et paiement. Le plugin `Sync MKL…` de VIMAWEB n'existe que sur dev, à noter comme limite du rapport
+- [ ] Tester la **2.0.0** sur le site local seulement pour vérifier qu'une couche globale reçoit une image par modèle (non obligatoire : le rapport chiffre deux voies, 1.7.6 + plugin sur `mkl_pc/db/get` ou 2.0.0 native) ; paquet 2.0.0 non disponible a priori
+- [x] Tests de rendu matières/couleurs (**poste 3 terminé**, 15/10) : recette retrouvée (texture maître 1920 × 1280 par matière, découpée par les masques), 39 matières identiques au pixel sur 3 modèles à la version récente, 99,4 % avec la bonne version ; nouvelle matière = couleur du patch (unie) ou sa petite image 171 px avec raccord ; synthèse et règles pour la Phase 2 dans [[phase-1]] §11
+- [x] Regroupement lot / famille sur la 1.7.6 (poste 1, 15/10) : 336 fiches sur 345 recomposables exactement, 1 renommage → 337 fiches, 57 groupes natifs affichés ; détail dans [[phase-1]] §7
 - [ ] Estimer la généralisation (poste 0,30 j) : 46 configurations, 302 couches distinctes, ≈ 10 900 images, 27 jeux de noms à nettoyer
 - [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 (plafond 7 000 € HT) et le calendrier ; intégrer les points de sécurité observés
-- [ ] Nid d'abeille : valider un transfert du calque vers le rendu du configurateur par correspondance dense (RoMa/LoFTR, test sur photo à vraie broderie rouge) ; sinon chiffrer un calque par modèle de selle (forme = masque unique, 11 coloris par remplissage)
+- [ ] Nid d'abeille : option A (motif réel de Valérie rempli dans les calques, planche `calque-A/resultats`) ; vérifier l'ajout d'une zone « Broderie » dans l'admin du plugin local, finir les tests de courbure 3D (Depth Anything V2 Large, déroulage par longueur d'arc) et les logos (retrait/ajout, Tiger 900)
 - [ ] Site local : retrouver les 3 médias en erreur et refaire à la main les menus du pied de page (absents du HTML public) ; comparer les captures local / prod (`Phase 1/reference-front/`)
 - [ ] Nid d'abeille : appliquer la méthode (calage par silhouette, pièce par pièce) à la BMW F900 XR (80 calques, dossier `Phase 1/images-nid-abeille/bmw-f900xr`), comprendre les doublons `-1`
 
@@ -85,10 +85,13 @@ body_synced: 2026-10-14
 - 2026-10-14 (soir) : Site local reconstruit à l'identique de la prod côté front (345 produits, médias, Theme Builder Divi 23 modèles, 15 pages, menu) et instantanés pris. Nid d'abeille Z900 : photo brute introuvable, base reconstituée ; le calque valide sur sa propre photo (forme = masque unique, 11 coloris par remplissage) mais le transfert vers le rendu du configurateur échoue (calage 2D, LSCM, relief) ; correspondance dense (RoMa/LoFTR) en test. Reste : sélecteur « Ma Moto », options APF, vignettes manquantes.
 - 2026-10-14 (nuit) : Images de nid d'abeille rangées par modèle dans `Phase 1/images-nid-abeille/` (118 fichiers, INDEX.md) ; second jeu complet par matière trouvé (BMW F900 XR, 80 calques) = test de généralisation de la méthode, pas encore exploité.
 - 2026-10-14 (fin de soirée) : Clone local complété : 501 catégories et 41 étiquettes recréées, URL identiques à la prod, sélecteur « Ma Moto » fonctionnel, options de commande APF reconstruites par produit sur 345 fiches (approximation : groupes globaux non reproduits). Constat : fiches dupliquées qui affichent les visuels d'un autre modèle (GS sur Tiger 900, TDM sur la fiche 16319), à vérifier avec Valérie. Restent : menus du pied de page, 3 médias en erreur, test 2.0.0, tests de rendu.
+- 2026-10-15 : Plan Phase 1 mis à plat dans [[phase-1]] (6 postes du devis + volets offerts). Décisions : 1.7.6 + plugin sur `mkl_pc/db/get` envisageable, test 2.0.0 non obligatoire (deux voies chiffrées au rapport) ; plus de mails à Valérie, déduction par les fichiers ; familles de matières = 7 familles de la page Matières (vérifié Z900) ; Tiger 900/GS = logo incrusté, pas erreur de copie. Nid d'abeille : option A (calque rempli, motif réel 60 × 43 px) testée sur 5 modèles, export en zone « Broderie » jugé faisable, courbure 3D en test (Depth Anything V2 Large).
+- 2026-10-15 (suite) : Poste 3 : texture maître par matière reconstituée depuis les calques (69 % du canevas, identique au pixel sur modèles à version récente, 39/39) ; la source réelle est la petite image 171 px de Valérie, pas le patch 750 px ; 21 matières à deux versions (règle : récente pour un nouveau modèle). Poste 1 : 336/345 fiches recomposables sur la 1.7.6. Détail dans [[phase-1]] §10.
+- 2026-10-15 (clôture poste 3) : Raccords de la petite image testés (KTM Duke, 8 matières) : tissages réguliers = motifs strictement périodiques, recadrage sur un nombre entier de périodes (écart 0,9 sur 255 pour le Noir perforé), fondu pour les cuirs. Règles Phase 2 : version de texture par modèle (récente par défaut), image 1:1 en lumière rasante pour une nouvelle matière texturée, couleur unie par fil de surpiqûre. Détail dans [[phase-1]] §11.
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
-- Hébergement et accès : [[2026-10-14-sellerie-confort-hebergement-acces]] (qui détient quoi, copie du site, accès o2switch) · synthèse [[pre-phase-1]] (cadre, reconnaissance, échéances)
+- Hébergement et accès : [[2026-10-14-sellerie-confort-hebergement-acces]] (qui détient quoi, copie du site, accès o2switch) · synthèse [[pre-phase-1]] (cadre, reconnaissance, échéances) · suivi [[phase-1]] (postes du devis et volets offerts)
 - Client : [[sellerie-confort]]
 - Patterns utilisés :
 - Repo / deployment : https://github.com/BlueImpakt/sellerie-confort (local : `C:\Users\LENOVO\Documents\GitHub\sellerie-confort`) · site client : https://sellerieconfort.com
