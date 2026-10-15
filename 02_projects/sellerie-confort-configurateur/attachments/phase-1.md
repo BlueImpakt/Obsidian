@@ -17,7 +17,7 @@ Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 
 | # | Poste | j | Livrable attendu | État au 15/10 |
 |---|---|---|---|---|
-| 1 | Audit du fonctionnement actuel et de la structure de données | 1,00 | Fonctionnement de `mkl_pc`, stockage, faisabilité du regroupement par famille | **Fait pour le regroupement (15/10)** : lot et famille testés sur la 1.7.6, voir §7. Lecture de `payment.php` et `active-plugins.php` faite (§8). Reste le test de la 2.0.0 (optionnel, paquet non disponible, voir §7). |
+| 1 | Audit du fonctionnement actuel et de la structure de données | 1,00 | Fonctionnement de `mkl_pc`, stockage, faisabilité du regroupement par famille | **Fait pour le regroupement (15/10)** : lot et famille testés sur la 1.7.6, voir §7. Lecture de `payment.php` et `active-plugins.php` faite (§8). Fichier public régénéré, 9 fiches atypiques listées, conclusion en fin de §10 (« Compléments poste 1 »). **Poste 1 clos** ; reste le test de la 2.0.0, optionnel (paquet non disponible, voir §7). |
 | 2 | Clone local complet (données et médias), isolé de la production | 0,40 | Site local isolé, sans donnée personnelle | **Fait** : 345 produits, 15 121 médias, Divi, catégories, « Ma Moto », options APF. Reste cosmétique (3 médias en erreur, menus du pied de page). |
 | 3 | Tests de rendu matières/couleurs, comparés aux photos réelles | 0,60 | Comparaison au rendu réel (SSIM/ΔE) sur un échantillon | **Fait (15/10)** : générateur couleur + texture, validé sur 5 modèles, voir §6. Couleur : faisable (ΔE ≈ 2,5). Matières unies : rendu correct. **Matières texturées : la recette de Valérie est retrouvée** (texture maître 1920 × 1280 par matière, découpée par le masque de chaque zone) ; régénération à l'aveugle exacte au pixel pour une partie des matières, voir §10. Surpiqûres = couleur unie. |
 | 4 | Tests broderies / logos / nid d'abeille | 1,00 | Verdict de faisabilité chiffré par type de broderie | **En cours.** Nid d'abeille : le calque se pose sur sa photo d'origine, le transfert vers le rendu du configurateur n'est pas résolu. Logos : aucun essai consigné ; cas d'usage identifié, retirer le logo incrusté dans la photo de fond d'une forme de selle réutilisée (Tiger 900 avec GS) ou en poser un autre. |
@@ -454,3 +454,36 @@ Repère : une visibilité du raccord ≤ 1,2 correspond à une couture invisible
 ### Scripts (dossier `Phase 1/scripts/`)
 
 `poste3_versions_texture.py`, `poste3_texture_maitre.py`, `poste3_planche_39_v2.py`, `poste3_selles.py`, `poste3_raccords_tuile.py`, `poste3_inventaire_matieres.py`, `poste3_tuile_171.py`, `poste3_correspondance_contenu.py`. Résultats : `Phase 1/essais-poste3/`.
+
+### Compléments poste 1 : fichier public, fiches atypiques, clôture (15/10, nuit, site local)
+
+**Le fichier de configuration public reprend les données composées.** Le fichier `uploads/mkl_product_configurations/product_configuration_39477.js` (celui que charge le visiteur) est supprimé puis régénéré par le plugin dans quatre états (mu-plugin de test, produit pilote Z900) :
+
+| État | Taille | Groupes | Choix | Choix renommés |
+|---|---|---|---|---|
+| Normal (mode off) | 156 545 octets | 0 | 294 | 0 |
+| Famille | 166 795 octets (+ 6,5 %) | **57** | 292 rattachés + 57 en-têtes | 0 |
+| Lot (un seul renommage) | 156 612 octets | 0 | 294 | **7** (un par calque concerné) |
+| Retour au mode normal, régénéré | 156 545 octets | 0 | 294 | 0 |
+
+Le retour à l'état normal redonne **exactement** la taille d'origine. Le site local est remis en mode normal (`sc_test_mode` sur `off`).
+
+**Les 9 fiches atypiques** (calque dont la liste ne reprend pas la liste canonique de son type) :
+
+| Fiches | Ce qui diffère | Traitement envisagé |
+|---|---|---|
+| **5 sportives** : CFMOTO 800 NK, Yamaha R1, Yamaha R6, Kawasaki ZX-6R, Suzuki GSXR 600 | 44 à 45 choix par calque (7 calques), **aucune vignette en commun** avec le jeu canonique : autre génération du jeu. 28 noms sur 37 en commun, avec des variantes d'orthographe (« bordeau », « grisbrume »). Il manque Citron, Marron, Gris brume argent, Gris tonnerre, Bleu MT Violet sous leur nom habituel. | Rapprocher par nom (28/37) puis par contenu pour le reste ; ou les laisser en jeu propre au début |
+| **2 nid d'abeille** : Yamaha MT-09, Suzuki GSX-S 8S/8R | **Jeu canonique + 4 choix** (Alcantara, Rose brillant, Rouge brillant, Vert brillant) : 37 sur 37 en commun, mêmes vignettes | Jeu canonique avec 4 matières optionnelles par fiche |
+| **BMW F 900 XR ou R** | 43 à 47 choix, 28 noms sur 37 en commun, **fautes de frappe** (« alcanatara », « asssies marron fonce ») et autres vignettes ; surpiqûres : 34 choix | Normaliser les noms, puis rapprocher |
+| **Honda Goldwing 1800** | Un seul calque : « Coutures assises (si option choisie) », 26 choix dont 5 fils différents | Variante du jeu des surpiqûres |
+
+Liste complète : `Phase 1/essais-poste3/poste1-fiches-atypiques.json`. Les 336 autres fiches reprennent exactement les listes canoniques.
+
+### Conclusion du poste 1 pour le rapport
+
+- **Le regroupement par lot et par famille est faisable sur le plugin actuel (1.7.6), sans fork** : un petit plugin sur le filtre `mkl_pc/db/get`, des groupes de choix natifs pour les familles.
+- **Périmètre** : 336 fiches sur 345 (97 %) se recomposent exactement à partir de 3 jeux partagés. Les 9 autres se traitent par exception (tableau ci-dessus).
+- **Vérifié en local** : lecture par l'API du plugin, rendu du front, régénération du fichier public, retour à l'état d'origine à l'octet près.
+- **Reste pour la Phase 2** : écriture du jeu partagé (stocker une fois, pas seulement composer à la lecture) ; écrans « Matières » et « Modèles » pour Valérie ; version de la texture par groupe de modèles (§10) ; fiches atypiques ; comportement des commandes passées (identifiants de choix conservés, à vérifier en recette).
+- **Plugin 2.0.0** : non testé ; non nécessaire pour conclure. Il remplacerait le petit plugin par les configurateurs globaux natifs (migration automatique à tester sur copie avant toute mise à jour).
+- **Limites** : le plugin `Sync MKL…` de VIMAWEB (dev seulement) n'a pas été lu ; les liserés et surpiqûres n'ont pas de version de texture déterminable ; test sur la copie locale reconstruite, pas sur la production.
