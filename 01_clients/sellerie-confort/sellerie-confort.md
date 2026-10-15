@@ -54,6 +54,8 @@ body_synced: 2026-10-14
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — Phase 1 lancée : contrat/devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours.
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — reconnaissance Phase 1 bouclée, accord écrit d'export reçu, site local reconstruit (345 produits), alerte plugin compromis hors périmètre, nid d'abeille Z900 en cours
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — site local reconstruit comme la prod (front Divi, 345 produits), nid d'abeille Z900 validé sur sa propre photo mais transfert vers le configurateur non résolu
+- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — images de nid d'abeille rangées par modèle ; second jeu complet (BMW F900 XR) repéré pour tester la généralisation
+- 2026-10-14 (fin de soirée) : Sur [[sellerie-confort-configurateur]] — clone local complété (catégories, URL de la prod, sélecteur « Ma Moto », options de commande reconstruites sur 345 fiches) ; constat de fiches dupliquées avec les visuels d'un autre modèle à signaler.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

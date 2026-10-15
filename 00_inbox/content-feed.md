@@ -142,3 +142,9 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Angle : une carte « presque juste » est pire qu'une carte vide — audit des 23 aires marines protégées d'une carte client : contours dessinés à la main, règles saisies de mémoire, jamais sourcées. Contrôle simple : comparer la surface tracée à la surface déclarée (écart < 1 %).
 - Résultat : 23 AMP vérifiées sur décrets officiels, avec le niveau de preuve par fiche ; quand aucun texte n'interdit le drone, la carte affiche « à vérifier » plutôt qu'une fausse certitude.
 - Insight IA : la cause racine est venue de l'historique git (données présentes dès le 1er commit, aucune source) — demander à l'IA de citer sa source et de montrer comment elle a vérifié, pas seulement de corriger.
+
+## 2026-10-14
+
+- Reconstruire un site WordPress client en local sans toucher à sa base : 345 produits, 15 120 médias, 501 catégories, Theme Builder Divi et options de commande recréés à partir du seul contenu public et des fichiers de code (sans clients ni commandes)
+- Un audit public de 345 fiches configurables a ramené « 83 000 images » à 10 937 images uniques et 46 configurations distinctes : mesurer avant de chiffrer
+- Les modèles IA ne se valent pas côté licence : Depth Anything V2 Small est en Apache-2.0 (usage commercial OK), Base et Large en CC-BY-NC

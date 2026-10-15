@@ -29,10 +29,9 @@ body_synced: 2026-10-13
 -
 
 ## Next actions
-- [ ] Déployer `mobilite.html` (retours client implémentés en local le 2026-10-13, non déployé) ([[naeco-site]])
+- [ ] Voir les next actions de [[naeco-site]] (éditeur v2 : test login/sync en prod et rollout des 5 pages restantes, menu « Programme », CI à surveiller)
 
 ## Journal
-- 2026-09-23 (suite) : Sur [[naeco-carte]] — stockage Cloudinary des animations rorqual/globicéphales entièrement réorganisé et nettoyé (74 fichiers orphelins supprimés), animation globicéphales reconstruite depuis zéro et branchée à son observation. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
 - 2026-09-23 (suite) : Sur [[naeco-carte]] — animation rorqual/globicéphale en 1 min 31 mise en ligne (`0a1aeef`), liens de partage `?anim=` avec écran d'accueil ▶ (`cc6a87e`).
 - 2026-09-28 : Sur [[naeco-site]] — Plan 1 de l'éditeur v2 livré, testé et déployé en prod ; incident de sécurité JSONbin résolu (migration des bins vers le compte actuel, clé/mot de passe régénérés, anciens bins supprimés) ; incident de déploiement `.dev.vars` exposé puis corrigé. Sur [[naeco-carte]] — migré vers le nouveau bin, redéployé et vérifié en prod. Détails dans les fiches projet.
@@ -47,6 +46,7 @@ body_synced: 2026-10-13
 - 2026-10-13 : Sur [[naeco-site]] — page Mobilité branchée sur l'éditeur v2, retours client Notion analysés
 - 2026-10-13 : Sur [[naeco-site]] — retours Mobilité tranchés (logos partenaires en fin de page, nav inchangée), implémentation démarrée
 - 2026-10-13 : Sur [[naeco-site]] — retours client Mobilité implémentés dans `mobilite.html` (local, non déployé).
+- 2026-10-13 (déployé) : Sur [[naeco-site]] — page Mobilité (retours client + éditeur v2) déployée en prod ; CI muette, déploiement manuel ; test login/sauvegarde éditeur à faire.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

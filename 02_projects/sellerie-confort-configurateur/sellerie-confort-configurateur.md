@@ -61,14 +61,15 @@ body_synced: 2026-10-14
 - [x] Contrat, devis I-26-10-2, acompte, comptes nominatifs, accord écrit pour l'extension d'export (13-14/10)
 - [x] Reconnaissance : hébergement, accès, lecture du code `mkl_pc` 1.7.6, changelog 2.0.0, analyse des 345 fiches, comparaison export admin / public
 - [ ] **Désinstaller UpdraftPlus** et supprimer le jeu de sauvegarde sur la prod (condition de Valérie), puis lui confirmer par mail qu'aucune donnée personnelle n'a été exportée
-- [ ] Répondre à Valérie : départ du délai le 14/10 (fin le 24/10) ; nid d'abeille (second modèle, photo de base Z900), trois coloris absents du site, fichiers sources (PSD)
+- [ ] Répondre à Valérie : départ du délai le 14/10 (fin le 24/10) ; nid d'abeille (second modèle, photo de base Z900), trois coloris absents du site, fichiers sources (PSD) ; question sur les fiches dupliquées qui montrent les visuels d'un autre modèle (Tiger 900 avec GS, fiche 16319 avec TDM)
 - [ ] Lire le code des plugins sur mesure (VIMAWEB, ARTEO), `Divi Child` (dont `checkout/payment.php`) et `mu-plugins` : couplages avec `mkl_pc`
 - [ ] Tester la **2.0.0** sur le site local (couches/configurateurs globaux, migration des données) avant tout chiffrage
 - [ ] Tests de rendu matières/couleurs (0,60 j), puis broderies et nid d'abeille (1,00 j)
 - [ ] Estimer la généralisation (poste 0,30 j) : 46 configurations, 302 couches distinctes, ≈ 10 900 images, 27 jeux de noms à nettoyer
 - [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 (plafond 7 000 € HT) et le calendrier ; intégrer les points de sécurité observés
 - [ ] Nid d'abeille : valider un transfert du calque vers le rendu du configurateur par correspondance dense (RoMa/LoFTR, test sur photo à vraie broderie rouge) ; sinon chiffrer un calque par modèle de selle (forme = masque unique, 11 coloris par remplissage)
-- [ ] Site local : reconstruire le sélecteur « Ma Moto » (PHP sur mesure absent des archives), les options de commande APF et identifier les vignettes manquantes (3 médias en erreur)
+- [ ] Site local : retrouver les 3 médias en erreur et refaire à la main les menus du pied de page (absents du HTML public) ; comparer les captures local / prod (`Phase 1/reference-front/`)
+- [ ] Nid d'abeille : appliquer la méthode (calage par silhouette, pièce par pièce) à la BMW F900 XR (80 calques, dossier `Phase 1/images-nid-abeille/bmw-f900xr`), comprendre les doublons `-1`
 
 ## Journal
 - 2026-10-06 : Repo `BlueImpakt/sellerie-confort` cloné en local. Contexte consolidé dans `RAPPORT_CONTEXTE_PROJET.md` : audit externe passif du site (pile, structure du configurateur, volumes) et corrections des incohérences de `AUDIT_RAPPORT.md` et du `.xlsx`. Fiche projet créée, questions pour la réunion du 07/10 listées dans le rapport.
@@ -82,6 +83,8 @@ body_synced: 2026-10-14
 - 2026-10-14 : Phase 1 lancée : contrat et devis I-26-10-2 signés, facture émise, acompte 700 € versé, accès WordPress admin et OVH OK. Délai de 10 jours calendaires à compter de l'accès effectif (échéance ~23-24/10). À régler avant d'intervenir : accord écrit de Valérie pour le plugin d'export (art. 2, congés le 17/10) et date de départ du délai confirmée par mail ; accès OVH hors périmètre contrat, inutile en Phase 1 (hébergeur o2switch, accès non fourni).
 - 2026-10-14 (suite) : Reconnaissance Phase 1 bouclée : code `mkl_pc` 1.7.6 et changelog 2.0.0 lus, 345 fiches publiques analysées (10 937 images uniques, 46 configurations, 302 couches distinctes), accord écrit de Valérie pour l'export, sauvegarde UpdraftPlus fichiers seuls puis site local `sellerie-confort.local` reconstruit (345 produits, médias publics) ; alerte plugin compromis jugée hors périmètre ; nid d'abeille Z900 : calque posé sans déformation = meilleur résultat, photo brute sans broderie à retrouver. Détail : [[pre-phase-1]].
 - 2026-10-14 (soir) : Site local reconstruit à l'identique de la prod côté front (345 produits, médias, Theme Builder Divi 23 modèles, 15 pages, menu) et instantanés pris. Nid d'abeille Z900 : photo brute introuvable, base reconstituée ; le calque valide sur sa propre photo (forme = masque unique, 11 coloris par remplissage) mais le transfert vers le rendu du configurateur échoue (calage 2D, LSCM, relief) ; correspondance dense (RoMa/LoFTR) en test. Reste : sélecteur « Ma Moto », options APF, vignettes manquantes.
+- 2026-10-14 (nuit) : Images de nid d'abeille rangées par modèle dans `Phase 1/images-nid-abeille/` (118 fichiers, INDEX.md) ; second jeu complet par matière trouvé (BMW F900 XR, 80 calques) = test de généralisation de la méthode, pas encore exploité.
+- 2026-10-14 (fin de soirée) : Clone local complété : 501 catégories et 41 étiquettes recréées, URL identiques à la prod, sélecteur « Ma Moto » fonctionnel, options de commande APF reconstruites par produit sur 345 fiches (approximation : groupes globaux non reproduits). Constat : fiches dupliquées qui affichent les visuels d'un autre modèle (GS sur Tiger 900, TDM sur la fiche 16319), à vérifier avec Valérie. Restent : menus du pied de page, 3 médias en erreur, test 2.0.0, tests de rendu.
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
