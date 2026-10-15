@@ -502,3 +502,90 @@ Constat de Melvin sur la planche : seuls le Violet et le Marron (cuirs) fonction
 Règle retenue : **cuirs → fondu (B)** ; **tissages réguliers (perforé, strié, Fiber blanc) → recadrage (A)** ; Fiber argent et anthracite → brut. **Noir quadrillé : cas à part**, aucune des deux méthodes n'est parfaite ; à traiter si nécessaire par un assemblage de morceaux (« quilting »), non testé. Mon choix de B pour le quadrillé dans le tableau de la §11 se fondait sur la mesure de couture et ne tient pas compte du brouillage du motif.
 
 **Le raccord ne s'applique que sans texture maître** : nouvelle matière dont on n'a que la petite image de 171 px. Avec une photo plein cadre (1920 × 1280 ou plus, à l'échelle 1:1), il n'y a rien à répéter, donc aucun raccord.
+
+## 12. Poste 3 : compléments (15/10, soir) : cas sans texture maître, zone non couverte, photo d'une texture maître, raccords
+
+### L'idée en langage simple
+
+Valérie a, pour chaque matière, **un grand rouleau de tissu** (la texture maître) et, pour chaque modèle, des **gabarits** (la forme de l'assise, du bec, des bandeaux). Elle pose le gabarit sur le tissu et découpe : c'est le calque. Le même rouleau sert pour tous les modèles. Nous n'avons pas le rouleau lui-même : nous l'avons **reconstitué en recollant les morceaux déjà découpés** dans les calques de tous les modèles.
+
+### Comment la texture maître a été construite
+
+Elle est construite avec les **calques finis** des modèles existants (chaque pixel est copié d'un calque), **pas** avec la petite image de 171 px. La petite image a servi à comprendre qu'une grande texture partagée existe : on la retrouve pixel pour pixel (corrélation 0,999) dans les calques de dizaines de modèles, donc c'est un extrait de cette grande texture.
+
+```
+petite image 171 px  ← extrait de →  texture maître (grande image)
+                                      reconstituée depuis les calques finis
+```
+
+### Les 30,7 % non couverts : du vide
+
+La texture maître couvre **69,2 %** du canevas de 1920 × 1280. Ce qui reste a été classé pixel par pixel avec les photos de base et les ombres de tous les modèles (planche `essais-poste3/zone-non-couverte.png`).
+
+| Contenu du canevas | Part |
+|---|---|
+| Couvert par la texture maître (silhouette des 43 modèles réunis) | 69,2 % |
+| **Fond vide hors silhouette** (marges autour des selles) | 30,6 % |
+| Petits trous à l'intérieur de la silhouette (63 trous, le plus grand de 1 305 px) | 0,2 % |
+| Partie de selle non texturée | ≈ 0 % |
+
+La boîte englobante de toutes les selles tient dans x 25 → 1901, y 55 → 1218. **Aucune selle n'apparaît dans les 30 %**, ce qui corrige le risque que j'avais noté (§10). Le risque restant est étroit : un modèle photographié avec un **cadrage très différent** de ceux d'aujourd'hui. Les 0,2 % de trous fins se comblent par interpolation des voisins.
+
+### Les cas où il n'y a pas de texture maître
+
+| # | Cas | Pourquoi | Conséquence |
+|---|---|---|---|
+| 1 | **Une nouvelle matière** | Aucun calque existant ne la porte, donc rien à assembler | Photo plein cadre (voir plus bas), ou à défaut sa petite image répétée avec raccord |
+| 2 | Une partie du canevas jamais utilisée | 30,6 % de vide, sans selle | Aucune action tant que le cadrage de prise de vue reste le même |
+| 3 | Les matières réservées aux liserés (« Argent brillant », « Rouge brillant », « L'argent Chrome », « Vert brillant »…) | Trop glissantes pour les assises ; le jeu des liserés compte 44 choix contre 37 pour les surfaces | Pas de texture maître et pas besoin : fines lignes de couleur unie |
+
+Les 39 matières de surface analysées ont toutes une texture maître reconstituée.
+
+### Le raccord : seulement sans texture maître
+
+Pour remplir une zone de 700 px avec une image de 171 px, on la répète comme un carrelage. Entre deux carreaux, une **couture** apparaît si les bords ne s'ajustent pas. Le raccord est la façon de la faire disparaître.
+
+| Situation | Raccord ? |
+|---|---|
+| Matière existante (texture maître 1920 × 1280) | **Non** : on découpe dans une grande image, rien n'est répété |
+| Nouvelle matière avec une **photo plein cadre** (1920 × 1280 ou plus, échelle 1:1) | **Non** : c'est une vraie texture maître |
+| Nouvelle matière avec **seulement sa petite image de 171 px** | **Oui** |
+
+Colonnes de la planche des raccords (`essais-poste3/raccords/raccords-Selle-KTM-Duke.jpg`, carré de 342 px, soit environ 2 × 2 tuiles) : **réel** = extrait du vrai calque du KTM Duke (référence) ; **plain** = la petite image répétée telle quelle ; **A** = recadrée sur un nombre entier de périodes puis répétée ; **B** = fondue avec une copie d'elle-même décalée de moitié puis répétée. Chiffres : « raccord » = visibilité de la couture (1,0 invisible) ; « écart » = écart moyen au réel sur 255, sensible à la phase du motif, donc secondaire devant le jugement visuel.
+
+### Photographier une texture maître pour une nouvelle matière
+
+C'est la meilleure solution pour une nouvelle matière texturée : même procédé que Valérie, aucune répétition, donc aucun raccord.
+
+| Point | Consigne |
+|---|---|
+| Taille | Image d'au moins **1920 × 1280 px**, l'étoffe remplit tout le cadre, sans pli |
+| Échelle | Même taille de tissage à l'écran que les matières existantes (voir ci-dessous) |
+| Prise de vue | De face, à plat, lumière rasante (≈ 15 à 30° au-dessus de la surface), sans flash |
+| Lumière | Même direction pour toutes les matières |
+| Couleur | Charte grise dans le cadre, balance des blancs fixée |
+
+**Calibrer l'échelle** : photographier d'abord une matière déjà connue (par exemple le Fiber blanc) avec le même réglage, comparer son tissage à sa texture maître reconstituée pour obtenir l'agrandissement, puis photographier les nouvelles matières au même réglage.
+
+**Valider avant de s'engager** : photographier deux matières connues (Fiber blanc et Violet), construire leurs calques avec la photo et les comparer à ceux de Valérie. Si l'écart est du même ordre que celui des matières existantes entre elles, le protocole est bon.
+
+**Non testé** : le temps de prise de vue, et le smartphone (probablement suffisant).
+
+### Test sur selles : réel, texture maître, raccord (15/10, soir)
+
+Trois rendus de la même selle, deux combinaisons par modèle (script `poste3_selles_raccord.py`, images `essais-poste3/selles-raccord/`) :
+- **réel** : les calques du modèle ;
+- **texture maître** : zones de surface régénérées avec la texture maître construite sans ce modèle ;
+- **raccord** : zones de surface remplies avec la **petite image de 171 px** répétée, méthode retenue par matière (A pour les tissages réguliers, B pour les cuirs, brut sinon ; Noir quadrillé forcé sur A). La tuile est posée à un décalage fixe, sans jamais regarder le réel.
+
+| Modèle | Combinaison | Texture maître : pixels identiques (écart moyen sur 255) | Raccord : écart moyen sur 255 |
+|---|---|---|---|
+| KTM Duke (version récente) | 1 | **100 %** (0,00) | 11,9 |
+| KTM Duke | 2 | **100 %** (0,00) | 10,7 |
+| BMW R 1150 RT (ancienne version) | 1 | 77,6 % (2,6) | 11,5 |
+| BMW R 1150 RT | 2 | 69,0 % (3,4) | 10,7 |
+
+**Lecture** : à l'échelle de la selle, les trois rendus sont indiscernables. Au zoom sur les assises, la **texture maître** est la plus proche du réel ; le **raccord** garde le bon tissage et la bonne couleur mais avec un grain légèrement différent, et des jonctions verticales visibles sur le Noir quadrillé. L'écart moyen du raccord (≈ 11 sur 255) est environ 3 à 4 fois celui de la texture maître sur une ancienne version, et il vient surtout du décalage des motifs. C'est un plan B correct pour une nouvelle matière sans texture maître, pas un équivalent.
+
+![[poste3-selle-raccord-ktm-duke.jpg]]
+![[poste3-selle-raccord-bmw-r1150rt.jpg]]
