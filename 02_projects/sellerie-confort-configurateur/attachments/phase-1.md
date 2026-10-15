@@ -589,3 +589,5 @@ Trois rendus de la même selle, deux combinaisons par modèle (script `poste3_se
 
 ![[poste3-selle-raccord-ktm-duke.jpg]]
 ![[poste3-selle-raccord-bmw-r1150rt.jpg]]
+
+**Précision sur le Noir quadrillé (15/10, soir)** : le Noir quadrillé est une matière existante, donc il a sa texture maître et ne demande **aucun raccord**. Il n'a servi que de **cas d'essai** du plan B (une matière à motif irrégulier). La seule limite qui en ressort concerne une **nouvelle matière** de même genre, livrée avec sa seule petite image de 171 px : le raccord ne serait pas parfait. Ce n'est pas un point à traiter pour le catalogue actuel.
