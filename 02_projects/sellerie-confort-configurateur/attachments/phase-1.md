@@ -487,3 +487,18 @@ Liste complète : `Phase 1/essais-poste3/poste1-fiches-atypiques.json`. Les 336 
 - **Reste pour la Phase 2** : écriture du jeu partagé (stocker une fois, pas seulement composer à la lecture) ; écrans « Matières » et « Modèles » pour Valérie ; version de la texture par groupe de modèles (§10) ; fiches atypiques ; comportement des commandes passées (identifiants de choix conservés, à vérifier en recette).
 - **Plugin 2.0.0** : non testé ; non nécessaire pour conclure. Il remplacerait le petit plugin par les configurateurs globaux natifs (migration automatique à tester sur copie avant toute mise à jour).
 - **Limites** : le plugin `Sync MKL…` de VIMAWEB (dev seulement) n'a pas été lu ; les liserés et surpiqûres n'ont pas de version de texture déterminable ; test sur la copie locale reconstruite, pas sur la production.
+
+### Décision sur les raccords après examen visuel (Melvin, 15/10, soir)
+
+Constat de Melvin sur la planche : seuls le Violet et le Marron (cuirs) fonctionnent avec le fondu ; pour le reste, le recadrage sur périodes entières donne un meilleur résultat visuel. Vérifié au zoom ×4 sur la jonction entre tuiles (`essais-poste3/raccords/zoom-jonction.png`) :
+
+| Matière | Brut | A (périodes entières) | B (fondu) |
+|---|---|---|---|
+| Fiber blanc | couture nette | **sans couture** | légère cassure |
+| Noir strié | léger saut | **sans couture** | léger saut |
+| Gris fiber argent | rayures verticales propres au tissage | idem | idem |
+| **Noir quadrillé** | couture | **couture encore visible** | continu, motif un peu brouillé |
+
+Règle retenue : **cuirs → fondu (B)** ; **tissages réguliers (perforé, strié, Fiber blanc) → recadrage (A)** ; Fiber argent et anthracite → brut. **Noir quadrillé : cas à part**, aucune des deux méthodes n'est parfaite ; à traiter si nécessaire par un assemblage de morceaux (« quilting »), non testé. Mon choix de B pour le quadrillé dans le tableau de la §11 se fondait sur la mesure de couture et ne tient pas compte du brouillage du motif.
+
+**Le raccord ne s'applique que sans texture maître** : nouvelle matière dont on n'a que la petite image de 171 px. Avec une photo plein cadre (1920 × 1280 ou plus, à l'échelle 1:1), il n'y a rien à répéter, donc aucun raccord.
