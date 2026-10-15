@@ -609,3 +609,25 @@ Pour garder `sellerie-confort.local` fidèle à la production, le regroupement p
 Vérifications : page produit en HTTP 200, groupes affichés dans le configurateur (en-têtes « LES NOIRS », « LES GRIS »…), fichier public d'origine du site local resté à 156 545 octets.
 
 **Ce que la copie n'est pas** : le jeu partagé n'est pas encore stocké une seule fois (la composition se fait à la lecture) et aucun écran de gestion n'existe pour Valérie. Les 9 fiches atypiques restent telles quelles.
+
+### Quelles images demain : originales ou générées ? (15/10, nuit)
+
+Règle proposée pour la Phase 2 : **les images d'origine ne sont jamais remplacées**. On génère seulement ce qui n'existe pas encore. Un même configurateur mélange donc images d'origine (matières historiques) et images générées (ajouts).
+
+| Cas | Images utilisées | Pourquoi |
+|---|---|---|
+| **Ancien modèle, matières existantes** | **Originales**, inchangées | Déjà faites par Valérie et validées. Les régénérer n'apporte rien : au mieux identique, au pire une autre version. |
+| **Nouveau modèle, matières existantes** | **Générées** (masques du modèle × texture maître) | Les images n'existent pas encore. C'est le gain de temps de Valérie. |
+| **Ancien modèle, nouvelle matière** | **Générées**, pour la nouvelle matière seulement | La matière n'existe sur aucun calque : il faut une image par zone de chaque modèle. |
+| **Nouveau modèle, nouvelle matière** | **Générées** | Idem |
+
+**Pourquoi ne pas régénérer l'existant**
+- Pas de gain : pour 18 matières sur 39, la régénération est identique à l'original au pixel près.
+- Risque de version : pour 21 matières, les modèles d'avant 2023/01 portent une version plus ancienne de la texture ; la version récente les changerait.
+- Risque d'écart visuel sur les matières texturées, que le test à l'aveugle n'écarte pas entièrement.
+
+**Volume pour une nouvelle matière** : une image par zone de surface de chaque modèle. Les 345 fiches ne portent que 302 listes d'images distinctes et beaucoup de modèles partagent leurs masques ; le nombre réel de fichiers est de l'ordre de la centaine ou de quelques centaines, **à chiffrer**.
+
+**À trancher**
+- L'écart acceptable pour mélanger images d'origine et générées dans une même fiche (aujourd'hui : ΔE médian de 2 à 3 pour la couleur).
+- La validation par Valérie, matière par matière, avec une planche de comparaison, avant publication (recommandée).
