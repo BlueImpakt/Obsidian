@@ -709,3 +709,99 @@ Le site local a été **remis dans son état d'origine** (configuration restaur�
 **Non testé** : l'usage des configurateurs et couches globaux ; l'enregistrement dans l'éditeur ; des commandes factices ; l'outil « Purge + Tag » (inactif dans la copie) ; les performances ; la compatibilité du thème personnalisé ; les fonctions 3D.
 
 **Conséquence pour le plan** : la 2.0.0 est compatible avec le regroupement testé sur la 1.7.6 (même filtre, mêmes données, même rendu). Le passage en production reste à décider avec Valérie et ne dépend pas du regroupement.
+
+
+## 14. Passer sur la 2.0.0 et écran de gestion : tests sur la copie et prototype (16/10)
+
+Tout ce qui suit a été fait **sur la copie « regroupement »** (`127.0.0.1:8090`), jamais sur le site local d'origine ni sur la production. Les commandes sont des commandes factices, supprimées à la fin.
+
+### 14.1 Test des commandes passées (1.7.6 contre 2.0.0)
+
+Méthode : commandes créées par le **vrai chemin du plugin** (ajout au panier puis création de commande WooCommerce), l'une avec les fichiers de la **1.7.6** (sauvegarde remise temporairement), l'autre avec la **2.0.0** ; puis modification du catalogue de la fiche Z900 ; relecture. Scripts : `scripts/poste1_test_commandes*.php|ps1`, journaux dans `essais-v2/`.
+
+| Ce qu'on relit | Modification du catalogue | 1.7.6 | 2.0.0 |
+|---|---|---|---|
+| **Page de la commande dans l'administration** (ligne « Configuration ») | renommage, retrait d'un choix, renumérotage des identifiants | identique | identique |
+| **« Commander à nouveau »** (la configuration est reconstruite) | renommage d'une matière | **le nom change** | **identique** |
+| idem | retrait d'un choix | **le choix et son image sont perdus** | **identique** |
+| idem | renumérotage des couches et des choix | **la couche et le choix sont perdus** | **identique** |
+
+Lecture :
+- La commande enregistre déjà, sous les deux versions, le nom, la couche et l'identifiant d'image au moment de l'achat : l'affichage dans l'administration ne bouge pas.
+- Ce que la 1.7.6 ne protège pas, c'est la **reconstruction** d'une configuration à partir d'une commande (« Commander à nouveau »), qui relit le catalogue **actuel**. La 2.0.0 s'appuie sur les données enregistrées.
+- **La protection vaut aussi pour les commandes passées sous 1.7.6** : leurs lignes contenaient déjà le nom, la couche et l'image ; la 2.0.0 s'en sert. Une mise à jour protège donc l'historique existant, sans migration.
+- Limites : commandes factices sur une copie, une fiche. Les vraies commandes (5 437) restent hors périmètre ; courriels, factures PDF et bons de commande non testés.
+
+### 14.2 Configurateurs globaux sur la copie
+
+| Mesure | Résultat |
+|---|---|
+| Configurations distinctes parmi les 345 fiches | **55** (empreinte du contenu, des couches et des angles) |
+| Configurateurs globaux créés | **55**, 345 fiches rattachées, 0 erreur |
+| Lecture après rattachement, données locales conservées | **345 / 345 identiques** à la référence |
+| Lecture après **purge des données locales** de chaque fiche | **345 / 345 identiques** : la lecture passe bien par le global |
+| Modification faite **une fois** dans le global G06 | visible sur **19 fiches sur 19**, retour à l'identique à l'annulation |
+| Écriture par `DB::set()` en ligne de commande | **abîme le global** (contenu écrit par morceaux sans l'index de finalisation, lecture impossible) : réparé depuis la sauvegarde. Écrire au format bloc JSON utilisé à la création, ou passer par l'éditeur du navigateur. |
+
+À retenir : le natif partage bien les fiches, mais **n'offre rien pour agir sur les 55 configurateurs à la fois**.
+
+### 14.3 L'écran de gestion : ce que le natif ne fait pas
+
+| Besoin | Natif 2.0.0 | Écran de gestion |
+|---|---|---|
+| Une configuration partagée par plusieurs fiches | Oui (configurateur global) | Non nécessaire |
+| Modifier une fois pour tout un groupe | Oui (« Edit original ») | Non nécessaire |
+| Commandes passées protégées | Oui | Non nécessaire |
+| **Renommer une matière partout** | Non : 55 configurateurs à ouvrir | **Oui** |
+| **Désactiver une matière partout** | Non | **Oui** |
+| **Familles de matières** (7, issues de la page « Matières ») | À recréer à la main dans chacun des 55 | **Oui**, définies une fois |
+| **Ajouter une matière à tous les modèles** (images comprises) | Non : une image par zone et par configurateur, à la main | **Oui**, génération par lots |
+| Vue d'ensemble : où est utilisée telle matière | Non | **Oui** |
+
+### 14.4 Le prototype : plugin « Gestion du configurateur »
+
+Dossier : `Phase 1/plugin-gestion/sc-gestion-configurateur/` (un seul fichier PHP), tests dans `plugin-gestion/tests/`, notice `plugin-gestion/README.md`. Menu « Configurateur SC » dans l'administration, droit `manage_woocommerce`.
+
+| Écran | Fonction | Résultat des tests |
+|---|---|---|
+| **Matières et couleurs** | Catalogue des matières (par nom normalisé), filtres matières / fils de surpiqûre et par famille, renommage, famille, activation, nombre de fiches concernées | **19 / 19** : affichage, enregistrement, effet côté visiteur (renommage sur 7 couches, matière masquée, matière déplacée de famille), retour à l'état initial |
+| **Modèles et calques** | Les 55 configurateurs globaux, leurs fiches, leurs couches, listes atypiques, liens vers l'édition native | affichage vérifié, aucune erreur |
+| **Ajouter une matière** | Nom, famille, matière unie (couleur) ou texturée (petite image) ; une image par zone et par configurateur, générée à partir du masque ; barre de progression ; annulation | matière unie **18 / 18**, matière texturée **14 / 14** (voir 14.5) |
+
+Principe : renommages, activations et familles sont appliqués **à la lecture** (aucune donnée de fiche réécrite). Seul l'ajout d'une matière écrit, dans les configurateurs globaux, avec une sauvegarde par configurateur et une annulation. L'éditeur d'administration du plugin ne reçoit jamais de données composées.
+
+### 14.5 Ajout d'une matière : résultats et qualité des images générées
+
+**Fonctionnement mesuré** : 55 configurateurs traités, **304 images** de 1920 × 1280 générées en **170 à 190 s** (environ 0,6 s par image), vignette incluse, matière visible côté visiteur sur toutes les zones concernées, familles toujours en groupes natifs (56), annulation : 350 noms avant, 350 après, matière disparue, comparaison de lecture **345 / 345** à la référence à la fin de tous les essais.
+
+**Qualité** : même zone (« Assises Fiber blanc », Z900), image générée à partir d'une petite image 171 px, comparée à l'image réelle de la boutique.
+
+| Entrée fournie | Masque | Écart moyen | Couleur moyenne | Énergie de texture (générée / réelle) | Aspect |
+|---|---|---|---|---|---|
+| **Carré 171 px de la vraie matière**, raccords atténués | identique (IoU 1,000) | 13,5 / 255 | **identique** | 11,5 / 12,9 | quasi indiscernable ; un fin trait vertical subsiste à certains raccords |
+| Même carré, sans atténuation | identique | 14,0 / 255 | identique | 13,0 / 12,9 | raccords visibles tous les 171 px |
+| **Vignette rééchantillonnée depuis un JPG de 750 px** (ombrée), raccords atténués | identique | 11,8 / 255 | **+4 niveaux (plus clair)** | 6,5 / 12,9 | grain adouci, teinte un peu claire |
+
+Lecture :
+- **La qualité dépend surtout de l'image fournie**, pas du moteur : un vrai carré de la matière à l'échelle 1 donne le même rendu que l'image réelle (masque, couleur) ; une vignette ombrée ou rééchantillonnée donne une matière plus lisse et un peu plus claire.
+- L'option « Atténuer les raccords » (cochée par défaut) retire l'éclairage lent de la petite image puis fond la tuile avec sa version décalée. Elle supprime le quadrillage dû à l'éclairage ; il reste, sur certains motifs, un trait fin au raccord. Elle adoucit légèrement le grain (énergie 11,5 au lieu de 13,0).
+- Planches : `attachments/gestion-qualite-generee-vs-reelle-vraie-tuile.png` et `gestion-qualite-generee-vs-reelle-entree-degradee.png` (à gauche générée, à droite réelle).
+- Pour une matière à fort relief (cuir, carbone), ce traitement ne remplace pas la texture maître de la boutique : la décision est à prendre matière par matière (voir §12).
+
+### 14.6 Défauts trouvés en test, corrigés
+
+| Défaut | Cause | Correction |
+|---|---|---|
+| Une fiche rendue illisible après écriture en ligne de commande | `DB::set()` écrit en morceaux sans index | Écriture au format bloc JSON ; réparation depuis la sauvegarde |
+| Caractères accentués abîmés (`é` devenu `u00e9`) après une annulation | Sauvegarde enregistrée sans `wp_slash` | Sauvegarde et écriture avec `wp_slash` ; global réparé, 345 / 345 vérifié |
+| « Violet » mélangeant matière et fil de surpiqûre | Identité sans distinction de type | Préfixe `fil-` pour les fils |
+| Catalogue gonflé (152 puis 231 identités) | Préfixes de zone non retirés | Liste de préfixes dans `decouper()` |
+| Écran d'administration du plugin recevant des données composées | Filtre appliqué aussi à l'éditeur | Garde : composition seulement côté visiteur (`fe=1`) |
+| Page d'administration inaccessible sur la copie | Routeur ne traitant pas `wp-admin/` | Routeur corrigé |
+
+### 14.7 Limites et suite
+
+- Prototype validé **sur une copie uniquement** : aucune recette sur préproduction, aucune compatibilité vérifiée avec le thème Divi personnalisé ni avec l'enregistrement dans l'éditeur 2.0.
+- Un seul ajout suivi à la fois ; catalogue reconstruit à la demande (~15 s) ; fiches à liste atypique laissées telles quelles si moins de la moitié des matières sont reconnues.
+- L'hébergement (VIMAWEB) reste à traiter : l'installation du plugin et le passage en 2.0.0 en production sont des décisions de Phase 2, hors périmètre de la Phase 1.
+- **Pour la Phase 2** : recette de l'ajout de matière sur une vraie préproduction ; fournir à Valérie un protocole pour la petite image (vrai carré à l'échelle réelle, sans ombre) ; chiffrer l'écran de gestion (le prototype couvre déjà les trois écrans, reste l'ergonomie et la recette).
