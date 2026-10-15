@@ -59,6 +59,7 @@ body_synced: 2026-10-15
 - 2026-10-14 (fin de soirée) : Sur [[sellerie-confort-configurateur]] — clone local complété (catégories, URL de la prod, sélecteur « Ma Moto », options de commande reconstruites sur 345 fiches) ; constat de fiches dupliquées avec les visuels d'un autre modèle à signaler.
 - 2026-10-15 : Sur [[sellerie-confort-configurateur]] — plan Phase 1 formalisé ([[phase-1]]), voie 1.7.6 + plugin envisagée, nid d'abeille testé sur 5 modèles, plus de mails à Valérie.
 - 2026-10-15 (suite) : Sur [[sellerie-confort-configurateur]] — poste 3 : rendu matières reproductible à l'identique via texture maître reconstituée (version récente par défaut) ; poste 1 : 336 fiches sur 345 regroupables sur la 1.7.6.
+- 2026-10-15 (nuit) : Sur [[sellerie-confort-configurateur]] — nid d'abeille testé sur 6 selles avec délimitations calées sur les calques, copie du site local avec regroupement famille/lot, 2.0.0 en test sur la copie ; règle : images d'origine conservées pour les modèles existants.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
