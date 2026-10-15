@@ -591,3 +591,21 @@ Trois rendus de la même selle, deux combinaisons par modèle (script `poste3_se
 ![[poste3-selle-raccord-bmw-r1150rt.jpg]]
 
 **Précision sur le Noir quadrillé (15/10, soir)** : le Noir quadrillé est une matière existante, donc il a sa texture maître et ne demande **aucun raccord**. Il n'a servi que de **cas d'essai** du plan B (une matière à motif irrégulier). La seule limite qui en ressort concerne une **nouvelle matière** de même genre, livrée avec sa seule petite image de 171 px : le raccord ne serait pas parfait. Ce n'est pas un point à traiter pour le catalogue actuel.
+
+### Copie du site local avec le regroupement en place (15/10, nuit)
+
+Pour garder `sellerie-confort.local` fidèle à la production, le regroupement par famille est mis en place sur **une copie séparée** : même plugin (**Product Configurator 1.7.6, non modifié**), même thème, mêmes données de départ.
+
+| Élément | Valeur |
+|---|---|
+| Adresse | `http://127.0.0.1:8090` (serveur PHP intégré, accessible seulement depuis ce poste) |
+| Dossier | `C:\Users\LENOVO\sellerie-confort-regroupement\public` (cœur WordPress, plugins, thème, mu-plugins copiés) |
+| Base | `sc_regroupement`, copie des 52 tables (345 produits), **séparée** de la base `local` |
+| Médias | Dossiers `2022` à `2026` reliés au site local d'origine (jonctions), **aucune duplication** de 5 Go ; le dossier du fichier de configuration public est propre à la copie (pas de pollution du site d'origine) |
+| Regroupement | mu-plugin `sc-regroupement-test.php` en mode **`famille` sur toutes les fiches** (option `sc_test_mode`) : 7 familles en en-têtes de liste, 57 groupes sur la Z900, fichier public de 162 107 octets contre 156 545 à l'origine |
+| Repère visuel | Barre d'administration rouge et mention « COPIE REGROUPEMENT » |
+| Lancement | `Phase 1/scripts/copie_regroupement_lancer.ps1` (le site Local d'origine doit être démarré : sa base héberge aussi `sc_regroupement`) |
+
+Vérifications : page produit en HTTP 200, groupes affichés dans le configurateur (en-têtes « LES NOIRS », « LES GRIS »…), fichier public d'origine du site local resté à 156 545 octets.
+
+**Ce que la copie n'est pas** : le jeu partagé n'est pas encore stocké une seule fois (la composition se fait à la lecture) et aucun écran de gestion n'existe pour Valérie. Les 9 fiches atypiques restent telles quelles.
