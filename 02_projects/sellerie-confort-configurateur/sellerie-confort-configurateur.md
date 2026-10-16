@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-15
+body_synced: 2026-10-16
 ---
 
 # sellerie-confort-configurateur
@@ -45,6 +45,7 @@ body_synced: 2026-10-15
 - **Clone : jamais la base ni les téléversements de la prod** (5 437 commandes dans `wp_posts`, 2 890 comptes, 2 241 formulaires, clés de paiement) : art. 2 du contrat et condition écrite de Valérie. Voie retenue : fichiers du code seuls (UpdraftPlus), médias par téléchargement public à l'identique, produits reconstruits depuis les fichiers publics. Base filtrée (WP Migrate Pro ou export serveur) = option si les réglages et mises en page sont nécessaires.
 - **Étape 2 (regroupement)** : tester les couches et configurateurs globaux de `mkl_pc` 2.0.0 sur copie (la mise à jour migre les données ; publiée le 12/10, attendre une version corrective avant la prod) ; sinon petit plugin sur le filtre `mkl_pc/db/get`. Le rattachement des images par convention de nom reste une piste.
 - **Règle d'accès** : sites du client sur autorisation explicite ; WordPress local libre.
+- **Décision (2026-10-16) : nouvelle matière = grande photo haute résolution** utilisée comme texture maître (sans raccord, découpée par masque pour les 304 images), préférée au petit carré répété. Mise à l'échelle/redimensionnement auto non codés, à prévoir en Phase 2 ; jamais testé sur une vraie photo.
 
 ## Blocages / risques
 - **VIMAWEB** : titulaire du compte o2switch (dev et prod), détient les licences des plugins (`mkl_pc`, `wapf`, Divi), plugins sur mesure (`Sync MKL…` prototypé sur dev, non déployé). Informé, pas de contact direct. Mise en production et accès serveur en Phase 2 : à décider avec Valérie (reprise du compte à son nom ou VIMAWEB à la demande).
@@ -67,13 +68,12 @@ body_synced: 2026-10-15
 - [x] Regroupement lot / famille sur la 1.7.6 (poste 1, 15/10) : 336 fiches sur 345 recomposables exactement, 1 renommage → 337 fiches, 57 groupes natifs affichés ; détail dans [[phase-1]] §7 ; fichier public régénéré (57 groupes, renommage visible, retour à l'octet près), 9 fiches atypiques listées : **poste 1 clos** (reste la 2.0.0, optionnelle)
 - [ ] Estimer la généralisation (poste 0,30 j) : 46 configurations, 302 couches distinctes, ≈ 10 900 images, 27 jeux de noms à nettoyer
 - [ ] Rédiger le rapport de synthèse, chiffrer la Phase 2 (plafond 7 000 € HT) et le calendrier ; intégrer les points de sécurité observés
-- [ ] Nid d'abeille : option A (motif réel de Valérie rempli dans les calques, planche `calque-A/resultats`) ; courbure 3D réglée (K120 par défaut, filet de sécurité, 15/10) ; reste : confirmer l'orientation horizontale (jugée encore diagonale), recopier la 2e forme de nid d'abeille (2 modèles de broderie), vérifier l'ajout d'une zone « Broderie » dans l'admin du plugin local et finir les tests de logos (retrait/ajout, Tiger 900)
+- [ ] Nid d'abeille : option A (motif réel de Valérie rempli dans les calques, planche `calque-A/resultats`) ; courbure 3D réglée (K120 par défaut, filet de sécurité, 15/10) ; orientation tranchée le 16/10 (forme A alignée sur l'axe de l'assise, 17° sur Diavel ; forme B hexagones réguliers validée) ; reste : appliquer aux selles déjà testées avec les deux formes (planche finale), vérifier l'ajout d'une zone « Broderie » dans l'admin du plugin local et finir les tests de logos (retrait/ajout, Tiger 900)
 - [ ] Site local : retrouver les 3 médias en erreur et refaire à la main les menus du pied de page (absents du HTML public) ; comparer les captures local / prod (`Phase 1/reference-front/`)
 - [ ] Nid d'abeille : appliquer la méthode (calage par silhouette, pièce par pièce) à la BMW F900 XR (80 calques, dossier `Phase 1/images-nid-abeille/bmw-f900xr`), comprendre les doublons `-1`
-- [ ] Logos brodés : tests autonomes dosseret / bandes / couleurs sur ~20 selles avec les 5 logos (série automatique lancée le 16/10), à valider visuellement
+- [ ] Logos brodés : tests autonomes dosseret / bandes / couleurs sur ~20 selles avec les 5 logos (série automatique lancée le 16/10), à valider visuellement ; pose 3D MoGe-2 validée sur MT-09 (16/10), essai en cours sur 8 selles à fort dosseret
 
 ## Journal
-- 2026-10-13 (suite) : Notes CR interne/client déplacées dans le dossier refonte (nouvelle référence). Contrat Phase 1 retouché côté Melvin (docx/pdf) et nouveau devis I-26-10-2 (acompte 50/50) présent à côté de I-26-10-1 : référence du devis dans le contrat à vérifier. Titulaires des comptes o2switch/OVH/Google inconnus.
 - 2026-10-13 (suite) : Clause de plafonnement Phase 2 ajoutée au contrat (Art. 6) : 7 000 € HT max pour le périmètre défini après l'audit, dépassement de temps à la charge du prestataire, hors périmètre par avenant ; 1 400 € de Phase 1 déduits (solde max 5 600 € HT, 16 j). Si le contrat est déjà signé, avenant nécessaire.
 - 2026-10-14 : Phase 1 lancée : contrat et devis I-26-10-2 signés, facture émise, acompte 700 € versé, accès WordPress admin et OVH OK. Délai de 10 jours calendaires à compter de l'accès effectif (échéance ~23-24/10). À régler avant d'intervenir : accord écrit de Valérie pour le plugin d'export (art. 2, congés le 17/10) et date de départ du délai confirmée par mail ; accès OVH hors périmètre contrat, inutile en Phase 1 (hébergeur o2switch, accès non fourni).
 - 2026-10-14 (suite) : Reconnaissance Phase 1 bouclée : code `mkl_pc` 1.7.6 et changelog 2.0.0 lus, 345 fiches publiques analysées (10 937 images uniques, 46 configurations, 302 couches distinctes), accord écrit de Valérie pour l'export, sauvegarde UpdraftPlus fichiers seuls puis site local `sellerie-confort.local` reconstruit (345 produits, médias publics) ; alerte plugin compromis jugée hors périmètre ; nid d'abeille Z900 : calque posé sans déformation = meilleur résultat, photo brute sans broderie à retrouver. Détail : [[pre-phase-1]].
@@ -88,6 +88,7 @@ body_synced: 2026-10-15
 - 2026-10-15 (poste 1, 2.0.0) : 2.0.0 testée sur la copie « regroupement » : commandes passées relues à l'identique après renommage/retrait/renumérotage (en 1.7.6 : nom changé, choix et image perdus) ; 55 configurateurs globaux, 345/345 fiches lues à l'identique ; écran « Matières et couleurs » dans l'admin de la copie, 19 tests sur 19, ajout d'une matière OK. Le natif n'enlève pas le besoin de l'écran de gestion. Détail dans [[phase-1]] §14.
 - 2026-10-15 (nuit, suite) : Sur le nid d'abeille, K120 confirmé par défaut après test sur la Ducati Diavel (selle la plus bombée sur 49, cisaillement 0,35, seule à être baissée d'un cran par le filet de sécurité) ; maille redressée à l'horizontale par défaut (la maille copiée du calque était en perspective), encore jugée diagonale, vérification à plat en cours ; 2e forme de nid d'abeille à recopier (2 modèles de broderie à proposer) ; tests de logos brodés lancés sur 6 selles, série auto de 20 selles × 5 logos × 10 palettes le 16/10.
 - 2026-10-16 : Nouvelle matière : la meilleure entrée est une grande photo haute résolution = texture maître (sans raccord, découpée par masque pour les 304 images) plutôt qu'un petit carré répété ; échelle/redimensionnement auto non codés, à prévoir en Phase 2 (jamais testé sur vraie photo).
+- 2026-10-16 : Logos brodés : série de 19 selles faite, puis passage de Depth Anything à MoGe-2 (pose 3D, normales, 21 s par selle) pour le dosseret concave et l'orientation ; logos réduits de 25 %, test MT-09 validé, essai lancé sur 8 selles à fort dosseret. Nid d'abeille : forme B validée, forme A alignée sur l'axe de l'assise (17° sur Diavel, OK Z900 et MT-07).
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]

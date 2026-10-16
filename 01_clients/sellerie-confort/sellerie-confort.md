@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-15
+body_synced: 2026-10-16
 ---
 
 # sellerie-confort
@@ -31,6 +31,7 @@ body_synced: 2026-10-15
 - Le seul engagement pris : **tester l'IA** (patchs matières et broderies) avant de s'engager. Étape 1 optionnelle, les photos existantes sont conservées
 - Aucun accès à la prod : clone local, aucun accès direct à la base, aucune donnée clients/commandes/paiements consultée
 - WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — à confirmer par l'audit
+- Images d'origine conservées pour les modèles existants ; pour une nouvelle matière, grande photo haute résolution (texture maître) préférée au petit carré répété, échelle auto à prévoir en Phase 2
 
 ## Besoins identifiés
 - Ajouter une couleur ou une matière beaucoup plus simplement (regroupement par famille au lieu d'une photo par selle, par zone, par matière)
@@ -46,7 +47,6 @@ body_synced: 2026-10-15
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-07 : Sur [[sellerie-confort-configurateur]] — Refonte complète des 6 maquettes (`sellerieconfort-refonte/Maquette/`) : accueil, liste des selles (BMW), fiche produit, matières, configurateur, panier. Détails dans la fiche projet.
 - 2026-10-08 : Sur [[sellerie-confort-configurateur]] — Analyse du catalogue complet (345 fiches configurables) : 337 sur la même logique (3 jeux réutilisables : 37 matières, 44 liserés, 26 surpiqures), 8 fiches atypiques (dont CFMOTO 800 NK) ; ≈ 2 254 couches, ≈ 83 000 images. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — Après la réunion du 07/10, Valérie OK pour la Phase 1. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — clause de plafonnement Phase 2 ajoutée au contrat (7 000 € HT max, 1 400 € de Phase 1 déduits, solde max 5 600 €)
@@ -61,6 +61,7 @@ body_synced: 2026-10-15
 - 2026-10-15 : Sur [[sellerie-confort-configurateur]] — 2.0.0 testée sur une copie (commandes passées protégées, 55 configurateurs globaux, écran de gestion « Matières et couleurs » en admin de la copie, 19 tests sur 19).
 - 2026-10-15 (nuit, suite) : Sur [[sellerie-confort-configurateur]] — nid d'abeille : K120 confirmé par défaut (test Ducati Diavel), orientation horizontale en cours d'affinage, 2e forme à recopier ; tests de logos brodés lancés.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
+- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés en pose 3D (MoGe-2) validée sur MT-09, nid d'abeille forme A alignée sur l'axe de la selle et forme B validée.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
