@@ -1027,3 +1027,24 @@ Test sur la copie (`http://127.0.0.1:8090`, produit KTM Duke 10169), 3 passages 
 - Une fiche, une machine, serveur local ; B n'a ni champs d'options ni blocs de réassurance (comparaison à contenu inégal).
 - Pas de test d'un thème sans Divi.
 - La mesure n'a pas isolé le coût propre de l'habillage (même fichiers chargés en A et B).
+
+**Calques automatiques : Mask2Former sur GPU (Kaggle, T4 ×2, 16/10)** : même jeu (44 configurations d'entraînement, 11 de test jamais vues), même mesure que l'essai DINOv2. Modèle de départ `facebook/mask2former-swin-tiny-coco-instance`, 150 époques en 28 minutes, avec déformations d'images (symétrie, zoom, décalage, luminosité). Notebook : `plugin-gestion/tests/entrainer_mask2former.ipynb`. Le jeu de données a été envoyé sur le compte Kaggle de Melvin en **dataset privé**.
+
+| Classe (configurations de test concernées) | DINOv2 gelé | **Mask2Former** |
+|---|---|---|
+| Assise unique (10) | 0,75 | **0,86** |
+| Assise avant / arrière (2 / 1) | 0,94 / 0,94 | **0,95 / 0,99** |
+| Bandeaux (11) | 0,68 | **0,95** |
+| Bec (11) | 0,81 | **0,89** |
+| Bandes et dosseret (8) | 0,69 | **0,81** |
+| Bandes (3) | 0,68 | 0,60 |
+| **Liserés (10)** | 0,00 | **0,71** |
+| Surpiqûres (10) | 0,00 | 0,12 |
+| Dosseret (1) | 0,00 | 0,00 |
+| **IoU moyen** | 0,51 | **0,72** |
+
+- IoU par configuration : de 0,45 à 0,86 (une seule sous 0,5 : 0,446 et 0,474 pour deux configurations).
+- Lecture : sur des selles jamais vues, les grandes zones sont retrouvées à 0,86 à 0,99 et **les liserés, qui échappaient à SAM et à DINOv2, passent à 0,71**. Reste faible : les **surpiqûres** (0,12, lignes de quelques pixels) et le **dosseret isolé** (0,00, une seule configuration de test, donc pas concluant). Les bandes sont à 0,60 sur 3 configurations seulement.
+- Comparaison avec SAM (0,39 à un clic par zone, Z900 seule) : autre protocole, à titre indicatif.
+- Limites : 11 configurations de test, une seule exécution (pas de répétition, pas de réglage), 55 images au total ; les chiffres par classe reposent sur 1 à 11 configurations ; l'IoU à 0,5 de seuil ne dit pas la précision du contour au pixel près (nécessaire pour un calque de production). Aucun contrôle visuel des masques prédits n'est encore fait pour ce modèle.
+- Suite envisagée : contrôle visuel des masques ; affinage des contours (SAM ou détection de contours) ; surpiqûres par détection de lignes ; plus de configurations par classe ; mesure de l'écart de contour en pixels face aux calques de Valérie.
