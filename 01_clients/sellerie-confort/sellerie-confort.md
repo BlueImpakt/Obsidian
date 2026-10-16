@@ -47,7 +47,6 @@ body_synced: 2026-10-16
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-08 : Sur [[sellerie-confort-configurateur]] — Analyse du catalogue complet (345 fiches configurables) : 337 sur la même logique (3 jeux réutilisables : 37 matières, 44 liserés, 26 surpiqures), 8 fiches atypiques (dont CFMOTO 800 NK) ; ≈ 2 254 couches, ≈ 83 000 images. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — Après la réunion du 07/10, Valérie OK pour la Phase 1. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — clause de plafonnement Phase 2 ajoutée au contrat (7 000 € HT max, 1 400 € de Phase 1 déduits, solde max 5 600 €)
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — Phase 1 lancée : contrat/devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours.
@@ -62,6 +61,7 @@ body_synced: 2026-10-16
 - 2026-10-15 (nuit, suite) : Sur [[sellerie-confort-configurateur]] — nid d'abeille : K120 confirmé par défaut (test Ducati Diavel), orientation horizontale en cours d'affinage, 2e forme à recopier ; tests de logos brodés lancés.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés en pose 3D (MoGe-2) validée sur MT-09, nid d'abeille forme A alignée sur l'axe de la selle et forme B validée.
+- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés : orientation B validée et série finale propre ; configurateur gratuit sans licence, Divi utilisable sans licence ; habillage du plugin commencé en local.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
