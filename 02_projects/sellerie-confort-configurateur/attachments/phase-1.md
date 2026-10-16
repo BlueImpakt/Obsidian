@@ -805,3 +805,34 @@ Lecture :
 - Un seul ajout suivi à la fois ; catalogue reconstruit à la demande (~15 s) ; fiches à liste atypique laissées telles quelles si moins de la moitié des matières sont reconnues.
 - L'hébergement (VIMAWEB) reste à traiter : l'installation du plugin et le passage en 2.0.0 en production sont des décisions de Phase 2, hors périmètre de la Phase 1.
 - **Pour la Phase 2** : recette de l'ajout de matière sur une vraie préproduction ; fournir à Valérie un protocole pour la petite image (vrai carré à l'échelle réelle, sans ombre) ; chiffrer l'écran de gestion (le prototype couvre déjà les trois écrans, reste l'ergonomie et la recette).
+
+
+### 14.8 Nouvelles matières : carré répété ou texture maître, et quelle photo demander à Valérie (16/10)
+
+**Ce qui est utilisé aujourd'hui**
+- **En production** (Product Configurator, 1.7.6) : aucune image n'est générée ni répétée. Le plugin affiche des images de 1920 × 1280 px préparées hors du site (une par matière, zone et modèle, par exemple `Selle-Kawasaki-Z-900-assise-av_37_Fiber-Blanc.png`) et téléversées à la main, à partir de textures maîtres et de masques. La petite vignette de la matière ne sert qu'à choisir.
+- **Dans le prototype de gestion** (copie locale seulement) : le carré de 171 px fourni est **répété en carrelage** sur le cadre, puis découpé par le masque de chaque zone. Il ne sait pas lire une grande photo comme texture maître.
+
+**Deux façons d'apporter une nouvelle matière**
+
+| | Petit carré répété (prototype) | Large bout de matière = texture maître |
+|---|---|---|
+| Principe | Un carré de 171 px répété en carrelage | La photo, mise à l'échelle, remplit le cadre |
+| Raccords et répétition | Possibles ; atténuées par un fondu, un trait fin peut rester | **Aucun** |
+| Matière nécessaire | Quelques centimètres | Un bout couvrant la plus grande zone à l'échelle |
+| État | Fait et testé (§14.5) | **À construire** (choix de zone, mise à l'échelle) |
+
+Logique proposée pour la Phase 2 : si la photo couvre la plus grande zone à l'échelle, utiliser la texture maître ; sinon prendre le plus grand carré propre et le répéter avec le fondu. Une texture maître donne le même résultat pour tous les modèles : le découpage par les masques fournit les 304 images.
+
+**Taille du bout de matière**
+- Mesure : sur la Z900, la zone « Assises » occupe **844 × 555 px** dans le cadre de 1920 × 1280. Il suffit de couvrir la plus grande zone : les autres zones (bandeaux, liserés, bandes) peuvent prendre d'autres morceaux de la même photo, à la même échelle. Seule la Z900 est mesurée ; les autres modèles restent à vérifier.
+- En centimètres, il faut une **cote réelle** d'une selle (longueur ou largeur d'assise). Exemple, à titre d'hypothèse non mesurée : si 844 px valent 40 cm, cela fait environ 21 px/cm, soit un bout d'environ 40 × 26 cm au minimum, 50 × 35 cm avec de la marge.
+- Un échantillon de fournisseur de 10 × 10 cm ne suffit pas pour une texture maître ; il suffit pour le carré répété.
+
+**Photographier la matière**
+- Avec un téléphone récent (environ 4000 × 3000 px), un bout de 50 × 35 cm photographié en plein cadre donne environ 80 px/cm, soit environ 4 fois le détail nécessaire (hypothèse de 21 px/cm) : l'image sera réduite, il n'y a pas de manque de détail.
+- Les vraies limites : netteté (trépied), appareil bien à plat (sans perspective), cadrer large et n'utiliser que le centre (déformation des bords), lumière douce et régulière sans reflet (les matières brillantes ou métallisées sont les plus difficiles).
+- Si le bout est trop grand : scanner à plat (A4 ou A3), ou plusieurs photos assemblées (non testé).
+- L'**échelle** reste à fixer : une règle visible dans la photo, ou un réglage avec aperçu sur une selle. Le prototype ne gère que l'échelle 1.
+
+**Non testé** : aucune photo réelle prise au téléphone, aucune texture maître construite par le plugin, mesure de la plus grande zone sur les autres modèles, calibrage px/cm avec une cote réelle.
