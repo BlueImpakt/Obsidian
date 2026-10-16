@@ -810,7 +810,7 @@ Lecture :
 ### 14.8 Nouvelles matières : carré répété ou texture maître, et quelle photo demander à Valérie (16/10)
 
 **Ce qui est utilisé aujourd'hui**
-- **En production** (Product Configurator, 1.7.6) : aucune image n'est générée ni répétée. Le plugin affiche des images de 1920 × 1280 px préparées hors du site (une par matière, zone et modèle, par exemple `Selle-Kawasaki-Z-900-assise-av_37_Fiber-Blanc.png`) et téléversées à la main, à partir de textures maîtres et de masques. La petite vignette de la matière ne sert qu'à choisir.
+- **En production** (Product Configurator, 1.7.6) : aucune image n'est générée ni répétée. Le plugin affiche des images de 1920 × 1280 px préparées hors du site (une par matière, zone et modèle, par exemple `Selle-Kawasaki-Z-900-assise-av_37_Fiber-Blanc.png`) et téléversées à la main, à partir de textures maîtres et de masques. **Correction après l'appel du 16/10 (voir 14.9)** : selon Valérie, ces images ont été faites à partir de petites images de matière répétées (par Samuel, il y a environ 13 ans) ; la « texture maître » des §11 à 13 est une reconstitution équivalente, pas un fichier d'origine. La petite vignette de la matière ne sert qu'à choisir.
 - **Dans le prototype de gestion** (copie locale seulement) : le carré de 171 px fourni est **répété en carrelage** sur le cadre, puis découpé par le masque de chaque zone. Il ne sait pas lire une grande photo comme texture maître.
 
 **Deux façons d'apporter une nouvelle matière**
@@ -878,3 +878,46 @@ La voie A donne **la structure, le style et les outils de la maquette** pour le 
 - Testé sur la **2.0.0** (version de la copie), pas sur la 1.7.6 de la prod ; la structure du configurateur intégré est la même sur les deux d'après l'inspection.
 - Un seul produit (KTM Duke), un seul navigateur (celui de l'application), taille mobile émulée.
 - Les pages de test ont été supprimées ; les fichiers sont dans un mu-plugin de la copie, pas sur le site local principal.
+
+
+### 14.9 Appel avec Valérie (16/10) : ce qu'elle a dit et ce que ça change
+
+**Ce que Valérie a dit** (notes de Melvin, appel téléphonique ; certains points sont donnés « probablement » ou « je ne suis pas sûr »)
+- Les images de matières sont faites à partir de **petites images (vignettes) répétées** pour « patcher » les calques. Pas de textures maîtres photographiées au départ. C'est **Samuel**, le premier développeur, qui l'a fait il y a environ **13 ans**, pour quasiment toutes les matières.
+- Il n'y a **pas eu de nouvelle matière depuis plusieurs années** (à confirmer). Une matière « ajoutée en 2025 » n'a pas été photographiée en 2025 : les dates relevées dans les fichiers sont des dates de téléversement, pas de prise de vue. Pourquoi certaines matières existent en 750 px et d'autres en 171 px reste inexpliqué.
+- **Pas de PSD, seulement des PNG.**
+- **Ajouter une selle** : Produits → Démarrer le configurateur → Contenu, puis ajout des images **une à une**, par calque et par matière, pour chaque selle.
+- Elle **crée les calques dans Photoshop**, ce qui lui prend beaucoup de temps. Elle a **de nombreuses nouvelles selles** qu'elle ne peut pas ajouter : ce ne sont pas des modèles duplicables, il faudrait refaire tous les calques.
+- Une fois les calques faits, elle doit **payer VIMAWEB pour « faire entrer » la selle**, parce que VIMAWEB crée les matières. Ce point n'est pas compris : à clarifier (voir ci-dessous).
+- Demande : **automatiser la création des calques**.
+
+**Mesure faite après l'appel** : la vraie texture du Fiber blanc (assise Z900) est-elle une répétition littérale d'une tuile de 171 px ? (`plugin-gestion/tests/periode_reelle.py`, écart moyen absolu entre l'image et elle-même décalée, sur 255)
+
+| Décalage | Écart | Lecture |
+|---|---|---|
+| 171 px à l'horizontale, à la verticale, en diagonale | 14 à 15 | **pas de répétition à 171 px** (même niveau qu'un décalage au hasard) |
+| **51 px à la verticale** (et 102 px) | **0,0** | superposition **exacte au pixel** : répétition littérale d'une cellule de 51 px de haut |
+| 27 px à l'horizontale | 1,8 | quasi exacte (cellule d'environ 27 px de large) |
+
+Lecture :
+- Valérie a raison sur le fond : la texture est bien une **répétition**, mais d'une **petite cellule de tissage** (environ 27 × 51 px pour le Fiber blanc), et non du carré de 171 px. Le carré de 171 px est un extrait de cette surface, et ne contient pas un nombre entier de cellules (171 / 51 = 3,35).
+- C'est pourquoi le prototype, qui répète le carré de 171 px tel quel, s'écarte de 12 à 14 niveaux et fait apparaître des raccords. En détectant la cellule (autocorrélation) et en répétant **la cellule**, on doit retrouver la texture réelle quasiment au pixel près pour les tissages réguliers : c'est la méthode A du §11 (écart de 6,0 contre 12,6 pour le Fiber blanc, 0,9 pour le Noir perforé).
+- Pour les cuirs irréguliers (Violet, Marron), il n'y a pas de cellule ; le fondu reste le meilleur recours.
+- Le prototype doit donc passer du « carré de 171 px répété » à la « cellule détectée répétée ». Cela ne demande aucune photo plein cadre. Mesure faite sur une seule matière ; à étendre aux 8 matières texturées du §11.
+
+**Ce que ça change pour la Phase 2**
+1. **La matière n'est plus le goulot** : peu de nouvelles matières, et leur ajout est couvert par l'écran de gestion (§14.4) avec la cellule répétée.
+2. **Le goulot est la création des calques d'une nouvelle selle.** Une image de zone est la texture de la matière découpée par le masque de la zone (identique au pixel sur 39 matières et 3 modèles, §11) : créer les calques d'un nouveau modèle revient à produire les **masques de zones** (assise, bec, bandeaux, liserés, bandes) et le fond photo/ombres, puis à générer toutes les images de matières par calcul.
+3. **La saisie image par image disparaît** : configurateur global (2.0.0) et génération par lots, déjà testés sur la copie.
+4. **Dépendance à VIMAWEB** : à clarifier avec Valérie ce que VIMAWEB fait au juste quand elle le paie (création des matières dans le plugin ? plugin sur mesure ?). L'écran de gestion supprimerait ce besoin pour les matières.
+
+**Automatiser les calques : outils envisagés (non testés ici)**
+- **Segmentation des zones** : SAM 2 (Segment Anything) avec un clic par zone, ou GroundingDINO + SAM avec des consignes écrites ; contrôle et correction à la main. Hypothèse la plus réaliste : semi-automatique (cinq clics par selle, au lieu de dessiner tous les calques).
+- **Ombres et volume** : estimation de profondeur ou de normales (MoGe-2, déjà utilisée pour le nid d'abeille) pour conserver le relief ; sinon reprendre le calque d'ombres du modèle le plus proche.
+- **Assemblage** : Python (NumPy, OpenCV, pyvips), déterministe, comme pour les matières ; pas de génération d'image par IA pour les calques de matière.
+- **Validation sans risque** : refaire les masques de 5 à 10 selles **existantes** avec l'outil et mesurer l'écart (IoU) avec les masques de Valérie, qui servent de vérité terrain.
+
+**Reste à demander à Valérie**
+- Ce que VIMAWEB facture exactement et pourquoi.
+- Combien de nouvelles selles en attente, et photos de ces selles disponibles (cadrage identique aux selles actuelles ?).
+- Où sont les vignettes d'origine de Samuel, et pourquoi 750 px pour certaines matières et 171 px pour d'autres.
