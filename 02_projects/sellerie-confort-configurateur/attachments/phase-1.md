@@ -923,7 +923,7 @@ Lecture :
 - Où sont les vignettes d'origine de Samuel, et pourquoi 750 px pour certaines matières et 171 px pour d'autres.
 
 **Précisions reçues après l'appel (16/10)**
-- **VIMAWEB** : Valérie le paie à chaque nouvelle selle, mais on ne sait pas ce qu'il fait derrière. Ce qui est sûr : **c'est elle qui découpe les calques et ajoute les patchs un à un**. L'intervention de VIMAWEB reste à identifier (hypothèse non vérifiée : le plugin sur mesure `Sync MKL…` prototypé sur le site de développement, voir fiche projet ; rien ne le confirme). À ne pas présenter comme un fait dans le rapport.
+- **VIMAWEB** : Valérie le paie à chaque nouvelle selle, mais on ne sait pas ce qu'il fait derrière. Ce qui est sûr : **c'est elle qui découpe les calques et ajoute les patchs un à un**. Précisé ensuite dans le même appel : voir « Rôle de VIMAWEB » plus bas (l'hypothèse sur le plugin `Sync MKL…` n'est pas retenue).
 - **Selles en attente** : plusieurs. Elles sont prises **globalement sous le même angle et à la même distance, mais pas au centimètre près**. Conséquences : les masques d'une nouvelle selle ne sont pas réutilisables d'un modèle à l'autre (segmentation à refaire pour chaque selle) ; l'échelle de la texture par rapport à la selle varie légèrement d'une photo à l'autre (de quelques pour cent, à mesurer sur les modèles existants avant de décider d'un réglage d'échelle).
 - **Vignettes d'origine de Samuel** : a priori sur l'ancien hébergement **OVH** (69 Go non inventoriés). L'inventaire de ces 69 Go est le moyen de retrouver les sources et d'expliquer 750 px contre 171 px ; il demande l'accès à l'hébergement (hors périmètre tant que Melvin ne l'a pas décidé).
 
@@ -947,3 +947,11 @@ Lecture :
 - Ajouter des clics négatifs dans les autres zones n'a **pas** amélioré le résultat (moyenne 0,29 au lieu de 0,39 ; le bec baisse de 0,94 à 0,40).
 - Cas difficile : selle noire sur noir. Le masque de Valérie exclut aussi le logo brodé, ce qui pénalise un peu l'IoU.
 - **Conclusion** : SAM seul, dans cette version, ne suffit pas pour produire les calques. Pistes à tester, par ordre de promesse : (1) **partir des masques du modèle existant le plus proche** et les recaler sur la nouvelle selle (même angle et même distance, au centimètre près seulement) en s'appuyant sur la silhouette, puis affiner les bords avec SAM ou les contours ; (2) un modèle SAM plus grand (vit-large ou SAM 2.1) avec boîtes englobantes au lieu de points ; (3) détection des coutures par contours pour les liserés et surpiqûres. Rien de cela n'est testé.
+
+**Rôle de VIMAWEB (précisé par Melvin après l'appel, 16/10 ; rapporté de mémoire, à confirmer avec Valérie)**
+- Il y a **deux opérations distinctes**, faites par deux personnes :
+  1. **VIMAWEB (payé à chaque nouvelle selle)** : Valérie lui remet le **calque** (la forme de la zone) ; il y applique les **couleurs et matières** et fournit les images « matière X sur zone Y ». C'est la fabrication des images de zones.
+  2. **Valérie** : dans Produits → Démarrer le configurateur → Contenu, elle ajoute **une par une** les matières, et associe à chaque choix l'image de zone (« photo du calque ») et la vignette de la matière. C'est ce qui relie la matière au calque.
+- Cela correspond aux données : chaque choix du configurateur porte deux images distinctes, l'**image de zone** (1920 × 1280, fabriquée) et la **vignette** (le petit carré cliquable, fourni par Valérie).
+- **Conséquence** : l'opération 1, celle que paie Valérie à VIMAWEB, est exactement ce que le poste 3 reproduit par calcul (texture + masque) et que l'écran de gestion automatise ; l'opération 2 est la saisie image par image que les configurateurs globaux 2.0 et la génération par lots suppriment. Reste à la charge de Valérie la **découpe des calques** (masques de zones), que l'essai SAM ne remplace pas encore.
+- Non établi : comment VIMAWEB applique les couleurs (outil, script Photoshop, travail manuel), à quel prix et avec quelle qualité par rapport à notre génération.
