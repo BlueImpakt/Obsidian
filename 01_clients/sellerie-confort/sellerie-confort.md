@@ -47,7 +47,6 @@ body_synced: 2026-10-16
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-13 : Sur [[sellerie-confort-configurateur]] — Après la réunion du 07/10, Valérie OK pour la Phase 1. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — clause de plafonnement Phase 2 ajoutée au contrat (7 000 € HT max, 1 400 € de Phase 1 déduits, solde max 5 600 €)
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — Phase 1 lancée : contrat/devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours.
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — reconnaissance Phase 1 bouclée, accord écrit d'export reçu, site local reconstruit (345 produits), alerte plugin compromis hors périmètre, nid d'abeille Z900 en cours
@@ -62,6 +61,7 @@ body_synced: 2026-10-16
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés en pose 3D (MoGe-2) validée sur MT-09, nid d'abeille forme A alignée sur l'axe de la selle et forme B validée.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés : orientation B validée et série finale propre ; configurateur gratuit sans licence, Divi utilisable sans licence ; habillage du plugin commencé en local.
+- 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
