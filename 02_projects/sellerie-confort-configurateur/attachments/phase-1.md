@@ -1048,3 +1048,16 @@ Test sur la copie (`http://127.0.0.1:8090`, produit KTM Duke 10169), 3 passages 
 - Comparaison avec SAM (0,39 à un clic par zone, Z900 seule) : autre protocole, à titre indicatif.
 - Limites : 11 configurations de test, une seule exécution (pas de répétition, pas de réglage), 55 images au total ; les chiffres par classe reposent sur 1 à 11 configurations ; l'IoU à 0,5 de seuil ne dit pas la précision du contour au pixel près (nécessaire pour un calque de production). Aucun contrôle visuel des masques prédits n'est encore fait pour ce modèle.
 - Suite envisagée : contrôle visuel des masques ; affinage des contours (SAM ou détection de contours) ; surpiqûres par détection de lignes ; plus de configurations par classe ; mesure de l'écart de contour en pixels face aux calques de Valérie.
+
+**Calques automatiques : SegFormer-B0 sur cette machine (processeur, 16/10)** : même jeu et même mesure. Poids de départ `nvidia/mit-b0` (téléchargé, officiel NVIDIA, environ 14 Mo), 60 époques en 1 h 01 min sur processeur, déformations d'images, perte BCE pondérée + Dice. Script : `plugin-gestion/tests/essai_segformer_b0.py`.
+
+| Modèle | IoU moyen (11 configurations de test) | Liserés | Surpiqûres | Bandeaux | Assise unique |
+|---|---|---|---|---|---|
+| DINOv2 gelé + tête (CPU, quelques minutes) | 0,51 | 0,00 | 0,00 | 0,68 | 0,75 |
+| **SegFormer-B0** (CPU, 1 h) | **0,64** | 0,62 | 0,08 | 0,74 | 0,76 |
+| **Mask2Former** (GPU Kaggle, 28 min) | **0,72** | 0,71 | 0,12 | 0,95 | 0,86 |
+
+- Lecture : SegFormer-B0, entraîné entièrement sur cette machine, trouve déjà les liserés (0,62) et fait mieux que DINOv2 ; Mask2Former reste devant, surtout sur les bandeaux (0,95 contre 0,74). Dans les trois cas, les surpiqûres (lignes de quelques pixels) et le dosseret isolé (une seule configuration de test) échouent.
+- Les deux configurations les plus difficiles sont les mêmes pour tous les modèles (G222649 et G222674).
+- Limites : une exécution par modèle, 11 configurations de test, réglages non optimisés (SegFormer-B0 n'a pas été entraîné aussi longtemps que Mask2Former).
+- Conséquence : un GPU n'est pas indispensable pour un résultat utile (0,64 sur processeur), mais Mask2Former donne un net avantage pour les grandes zones.
