@@ -964,3 +964,5 @@ Lecture :
 - **Pas de trou sous le nid d'abeille** : l'image de la couche Assises est opaque (99,7 %) à l'endroit du nid d'abeille, lequel est une image semi-transparente (alpha moyen 123) posée par-dessus. Retirer la couche laisse donc une assise unie, sans zone vide.
 - À noter : les images de cette selle (2025/03) dépassent 1920 px de large (le nid d'abeille s'étend jusqu'à x = 4251 px) : les selles récentes n'ont pas toutes le cadre de 1920 × 1280 des plus anciennes. À vérifier avant d'appliquer l'hypothèse d'échelle unique.
 - Non testé : le rendu du front avec le réglage modifié, et le comportement sur les autres selles à nid d'abeille.
+
+Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-sam-z900-calques.png` (une ligne par zone : masque choisi par SAM, meilleure des 3 propositions, masque réel de Valérie). Constat visuel : l'assise avant et les bandes latérales ressortent comme la selle entière ou des morceaux troués ; le bec et le dosseret sont propres (mais le logo brodé du dosseret est perçu comme un trou) ; les liserés et les surpiqûres ne sont pas trouvés.
