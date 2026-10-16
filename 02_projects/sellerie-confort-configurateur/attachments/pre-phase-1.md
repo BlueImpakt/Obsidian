@@ -346,6 +346,19 @@ Produits 16319 (Triumph Tiger 01, couche nommée « Yamaha TDM 900 »), 17258 (B
   - **Nouvelle coquille client** : « Avant **assisses** arrière » (MT-07, FZ8).
   - **Limite** : le drapage K400, réglé sur la Z900, déforme trop les formes très 3D (dossier de la Goldwing, place passager du T-Max) : alvéoles tordues et étirées. À régler par modèle ou à plafonner.
   - **À exploiter** : des fiches ont déjà un calque nid d'abeille en production : `f900xr` (32182, « Couture Nid d'abeille »), produit 59286 (« Couture nid d'abeille »), et probablement `r6` (28480). Ce sont d'autres calques réels de Valérie, qui peuvent servir de vérité terrain pour un 2e modèle.
+- **Logos brodés (15-16/10)** : dosseret et bandes latérales, logos recolorables dans les 26 couleurs de fil (= palette des surpiqûres). Sources : les 5 JPEG de `Phase 1/Broderie/` (aile Honda, Yamaha, Yeux, électrocardiogramme Triumph, Alpinestar). Scripts dans `opus-nid-abeille/calque-A/` : `logo_brode.py`, `logo_3d.py`, `geometrie_moge.py`, `test_effacement.py`.
+  - **Repris du nid d'abeille** :
+    - motif réel avec la texture du fil (fond et cadres pointillés du logiciel de broderie retirés) ;
+    - découpe par l'alpha du calque cible, puis insertion juste après ce calque dans l'empilement réel ;
+    - contrôle automatique : 0 à 6 px hors zone sur toutes les selles.
+  - **Logo d'origine** : les logos par défaut (Z900, DUKE, CBF, TRACER, GS, XR) sont dessinés dans le calque fixe « Ombres et éclairage », clairs ou foncés et opaques (XR). Ils servent de guide de position et de taille, puis sont effacés du calque d'ombres : la texture de la matière n'est pas touchée. Test sur 6 matières (perforé, carbone, fibre argent, rouge, bleu, sable) : propre (`resultats/v7-logos-brodes/effacement/`).
+    - **Conséquence pour la production** : le calque d'ombres doit exister **sans** le logo d'origine, et le logo d'origine devenir un choix du calque broderie.
+  - **Relief (16/10)** : Depth Anything donne une profondeur relative sans normales fiables, d'où une orientation et des dosserets creux faux. Passage à **MoGe-2** (Microsoft, `Ruicheng/moge-2-vitl-normal`, points 3D et normales, 22 s par selle sur processeur, contre 100 s pour Depth Anything).
+    - Le logo est déplié sur la vraie surface par coordonnées géodésiques (carte exponentielle discrète) ; son « haut » est la verticale de la selle projetée sur la surface.
+    - Échelle : MoGe ignore la focale du rendu, chaque selle est ramenée à 75 cm de long.
+    - Logos **réduits de 25 %** par rapport au logo d'origine (demande de Melvin).
+    - Validé sur MT-09 Tracer (dosseret creux).
+  - **Orientation du dosseret, choix de Melvin : B**. On garde le dépliage 3D, mais le logo est tourné dans le plan de la surface pour reprendre l'inclinaison des logos d'origine de Valérie (environ −30° à l'écran). L'horizontale 3D réelle (largeur de la selle) apparaît presque verticale dans la vue 3/4 et se lit mal. Les bandes latérales restent en 3D physique. Comparaison : `resultats/v8-logos-3d/COMPARAISON-orientation-dosseret.jpg`.
 - Fichiers déposés par Melvin dans `essais/` : `Z900 nid abeille gris.png` est une vignette 400 × 400 (trop petite pour mesurer) ; `Z900 nid abeille vert.htm` est une **page d'admin WordPress enregistrée** (médiathèque), pas une image : à ne pas utiliser.
 
 ### Données chiffrées nouvelles
