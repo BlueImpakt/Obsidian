@@ -1167,3 +1167,32 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 - Réserve : on n'a pas vérifié que la version 2 a bien lu le dataset à 1152 × 768 (le dataset d'origine à 768 × 512 était aussi rattaché au notebook, et le temps d'entraînement est plus court que prévu pour cette taille).
 - **Lecture** : trois modèles très différents (DINOv2 gelé 0,51, SegFormer-B0 0,64, Mask2Former Swin-base 0,64, Swin-tiny 0,72) restent dans une même fourchette, et une seule selle de test peut faire varier le score de 0,5 point. Avec 11 configurations de test et une exécution par modèle, **l'écart entre 0,64 et 0,72 n'est pas fiable** : le facteur limitant est le petit nombre de formes de selles (55), pas la taille du modèle. Ne pas conclure qu'un modèle est meilleur sans validation croisée sur les 55.
 - Conséquence pour le plan : plus de calcul sur le même jeu n'apporte rien de démontré. Le scénario retenu reste **semi-automatique** (proposition du modèle, correction par Valérie), à valider par la mesure du temps de retouche.
+
+## 20. Voie B : les 4 chantiers restants faits, test de bout en bout (16/10)
+
+**Objectif : savoir si l'approche tient pour la Phase 2. Réponse : oui sur tous les cas testés, sans réglage par produit.**
+
+### Ce qui a été construit
+1. **Champ « Type de commande »** (Modification, ou Échange standard +15 €) : nouvelle rubrique de l'étape Options, prix inclus dans le total, récapitulatif, lien de partage, envoi dans APF. Le texte d'information est celui du champ APF (réel). Rubrique masquée quand le produit n'a qu'un seul choix (Z900 : Modification seule). Capture `poste3-voieB-8-options-type-commande.png`.
+2. **Correspondance des champs APF produit par produit** : fini la table par libellé. Un champ APF reçoit un **rôle** d'après son type et son libellé (modèle, année, taille, poids, hauteur, gel, type de commande, couleurs, motifs, emplacements, oui/non broderie…), calculé à chaque chargement (`sc_maq_role`). Les champs qui ne reçoivent aucun rôle (chauffage, accoudoirs, dosseret passager…) sont **affichés tels quels dans l'étape Options**, avec leur prix, et envoyés à APF (`sc_maq_extra`). Capture `-9-options-chauffage.png`.
+   - **Mesure sur les 344 produits configurables de la copie** (`couverture_champs.php`) : **tous les champs obligatoires sont reconnus (0 non reconnu)** ; 141 produits utilisent des cases « Dosseret / Bandeau central » (2023) et 193 un oui/non par emplacement ; 79 produits ont des champs supplémentaires gérés de façon générique. Les libellés varient (« Motif Bandeau central » ×87, « Motif Bandes » ×19, « Hauteur de selle » ×14, « Modèle ABS »…) sans que ça gêne.
+   - Piège rencontré : deux champs APF peuvent porter **le même libellé** (« Broderies » : cases d'emplacements et oui/non) ; le tableau est donc indexé par **identifiant de champ**, pas par libellé.
+3. **Fiche récapitulative** (`?sc_recap=1`) : après l'ajout au panier, WooCommerce renvoie sur la fiche du produit, qui affiche la dernière ligne du panier : aperçu de la selle configurée, matières avec vignettes, broderies (y compris logos), options, informations, **total**, délai de fabrication, livraison, mode d'envoi selon le type de commande. Boutons : Voir mon panier, **Modifier ma configuration** (retour au configurateur avec les choix et les informations gardés dans la session du navigateur), Continuer mes achats. Les phrases de délai, de port et d'envoi sont celles de la page Panier du site actuel. Captures `-10-`, `-11-` et `-12-` (mobile).
+4. **En-tête et pied de page du site** : ceux de la maquette (logo, navigation, Mon compte, Panier avec le **nombre d'articles réel**, pied de page), avec les adresses réelles du site (accueil, boutique, matières et couleurs, contact, compte, panier) sur le configurateur et sur la fiche récapitulative.
+
+### Tests de bout en bout (Chrome, scripts `test-parcours.mjs`, `test-logos.mjs`, `test-produits.mjs`)
+- **Duke** (copie, 2.0.0) et **Z900** (site principal, 1.7.6) : parcours complet jusqu'à la fiche récapitulative puis le panier, totaux identiques partout (290 €, 245 €), logos compris.
+- **4 autres modèles sans aucun réglage** : Yamaha FJR 1300 (cases d'emplacements, motif dosseret et bandeau central, échange standard : 280 €), BMW R 1200 RT (chauffage et top case obligatoires, hauteur supplémentaire : 330 €), Honda Goldwing 1500 (dosseret pilote, chauffage, accoudoirs : 645 €), Honda Africa Twin (dosseret et bandeau central : 270 €). Panier et fiche récapitulative corrects pour chacun.
+- Aucune erreur JavaScript, aucune alerte PHP.
+
+### Ce qui reste (Phase 2)
+- **Champs supplémentaires** : rendu générique simple (cases et boutons) ; les champs conditionnels d'APF (visibles selon une autre réponse) sont affichés sans condition, donc facultatifs à l'écran. Une vraie règle de conditions est à écrire pour les 79 produits concernés.
+- **Plusieurs motifs de même rôle** (ex. « Motif Assise avant » et « Motif Assise arrière ») : traités comme champs supplémentaires, avec vignette ; une interface dédiée par emplacement serait plus claire.
+- **Modifier depuis la fiche récapitulative** ajoute une seconde ligne au panier (le plugin sait modifier une ligne existante : à brancher).
+- **26 fils pour les logos** (option A : 4 fils seulement) ; **les logos du prototype** à caler sur les motifs réels de chaque modèle.
+- **Poids de la page** (calques du plugin masqué en plus de ceux de l'interface) et **mesure Lighthouse** de la page du configurateur.
+- Pied de page et menu : textes de la maquette (« Maquette de refonte — design non définitif ») à remplacer ; le lien « Configurateur » du menu renvoie à la boutique faute de page générique.
+- Aucun paiement n'a été effectué : la fiche s'arrête au panier.
+
+### Fichiers
+`Phase 1/maquette-branchee/` : `build.py`, `sc-maquette.php` (rôles, champs supplémentaires, redirection, adresses), `recap.php` (fiche récapitulative), `couverture_champs.php`, `test-parcours.mjs`, `test-logos.mjs`, `test-produits.mjs`, `captures/`.
