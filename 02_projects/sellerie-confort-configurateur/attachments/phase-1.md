@@ -1069,3 +1069,36 @@ Captures bureau (1440 px) de la copie, produit KTM Duke : `Phase 1/habillage-con
 - **A (Divi)** : en-tête et bandeau de fil d'Ariane de Divi, photo du produit, texte d'avertissement, prix, puis le configurateur habillé (outils, compteur, zones, pied avec prix et bouton bleu), puis les champs d'options et le total, tous à la même largeur.
 - **B (modèle PHP)** : fil d'Ariane, titre, tag « Délai de 1 mois », prix, configurateur habillé et pied, puis le pied de page. Plus proche de la maquette, mais **sans** les champs d'options, la description ni la photo produit.
 - **Défaut corrigé en cours de test** : sur A, le configurateur et les options étaient décalés vers la droite et coupés au bord (la colonne Divi n'est pas centrée dans la fenêtre). Corrigé par un alignement calculé en JavaScript (`habillage.js`), le CSS seul ne suffisait pas.
+
+## 17. Voie B : l'interface de la maquette branchée sur le plugin (16/10)
+
+**Question posée** : la maquette `configurateur-maquette-r6.html` peut-elle servir d'interface réelle, avec le panier du site qui fonctionne derrière ? **Réponse : oui, sur la copie, pour une fiche (KTM Duke 10169), de la sélection des matières jusqu'à l'ajout au panier.**
+
+### Ce qui a été fait
+- La page de la maquette (HTML, CSS, JavaScript) est reprise **telle quelle** (scène, barre d'outils, 4 étapes, familles de matières, récapitulatif, partage, annuler/refaire, comparer, mobile). Un script (`Phase 1/maquette-branchee/build.py`) l'assemble en gabarit WordPress avec quelques remplacements ciblés. Activation par `?sc_maq=1` sur la fiche, uniquement sur la copie (mu-plugin `sc-maquette.php`).
+- **Données du plugin** : les calques, leurs choix, les images et l'ordre d'empilement viennent du plugin (`mkl_pc('db')->get`), le choix d'origine est celui du plugin (vérifié : les 8 zones ont le même choix par défaut que le configurateur actuel). Les motifs de broderie, les 26 couleurs, les hauteurs, le gel et le prix viennent des champs APF du produit.
+- **Panier** : le configurateur du plugin et le formulaire WooCommerce (champs APF) sont présents dans la page mais masqués. Au clic sur « Ajouter au panier », la maquette recopie les matières dans le plugin, les champs dans APF, puis déclenche le bouton du plugin : c'est le chemin actuel de la fiche, rien n'est contourné.
+
+### Test automatisé (Chrome, `test-parcours.mjs`)
+Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke plein et contour », couleur Bleu azur, hauteur abaissée, gel assise avant, 5 informations, récapitulatif, ajout au panier, lecture du panier.
+- Total affiché dans la maquette : **290,00 €** = 245 + 10 + 35. Panier WooCommerce : **290,00 €**, avec les 8 lignes de configuration (Fiber black, etc.) et tous les champs APF (broderie, motif, couleur, hauteur, gel, modèle, année, taille, poids, commentaire).
+- Aucune erreur JavaScript, aucune matière non classée après réglage des règles de familles.
+- Captures : `poste3-voieB-1-matieres.png`, `-2-broderies.png`, `-3-recap.png`, `-4-mobile.png`, `-5-panier.png` (même dossier).
+
+### Trouvailles
+- **Le script du thème enfant bloque l'ajout au panier** : `Divi Child/js/custom-single-product.js` empêche le bouton « Ajouter au panier » tant qu'on n'a pas cliqué « Configurer ma selle », et plante (`prix-base` absent) sur une page qui n'est pas la fiche Divi. Le gabarit retire donc les scripts et styles du thème, des CDN (Bootstrap, html2canvas) et la galerie WooCommerce. En refonte, ce script disparaît de toute façon.
+- **Les noms de matières du plugin sont irréguliers** (« Gris tonnerrre » avec trois r, « Assises Citron », « Assises Marron » sans « clair ») : les familles de la maquette reposent sur des règles de reconnaissance de noms, trois règles ajoutées. Sur le site réel, les **groupes natifs du plugin 2.0.0** (déjà présents dans les données de la copie : « Les Noirs », etc.) évitent cette dépendance aux noms : à décider en phase 2.
+- Les miniatures de matières de la copie n'existent pas en 150×150 (tailles non générées) : repli sur l'image d'origine dans l'adaptateur. Sans effet en production.
+- Défaut de la copie, hors sujet : les champs APF « image-swatch » du formulaire masqué appellent `http://16657`… (identifiant de média pris pour une adresse) : trois requêtes en erreur, invisibles.
+
+### Ce qui reste pour que ce soit la vraie interface
+1. **Étape manquante : « Type de commande »** (Modification, ou Échange standard +15 € avec caution) : champ obligatoire d'APF, absent de la maquette. Le pont choisit « Modification » par défaut, ce qui est faux pour un client qui veut l'échange standard. À ajouter dans la maquette (étape Options ou Infos).
+2. **Fiche-modèle** : les libellés APF sont repérés par leur texte (« Broderie Dosseret », « Motif de broderie »…), valable pour la Duke. Les produits avec « Bandes » ou d'autres intitulés demandent une table de correspondance par produit (ou des noms de champs normalisés dans APF, c'est un choix de Valérie).
+3. **Champ « Broderies » en double** (oui/non, obligatoire) en plus de « Broderie Dosseret » : le pont répond pareil aux deux, à clarifier avec Valérie.
+4. **Parcours cible** (décision de Melvin, 16/10) : le configurateur (matières, broderies, options, infos perso, tout dans la page) puis la **fiche produit récapitulative** (options choisies, prix, livraison). Pas encore fait : aujourd'hui l'ajout au panier ramène sur la fiche.
+5. **En-tête et pied de page du site** : la page de test n'en a pas (la maquette les a). À brancher via Divi Theme Builder (en-tête/pied globaux) ou un gabarit PHP.
+6. **Poids et vitesse** : le plugin charge ses propres calques en plus de ceux de la maquette (mêmes fichiers, donc cache navigateur). À mesurer au Lighthouse, ou à éviter en appelant l'ajout au panier de WooCommerce directement.
+7. Champs de la maquette non reliés : « Bandes » (le motif n'existe pas pour la Duke, case masquée), prix barré.
+
+### Fichiers
+`Phase 1/maquette-branchee/` : `build.py` (assemblage et déploiement sur la copie), `sc-maquette.php` (adaptateur de données, bascule `?sc_maq=1`), `test-parcours.mjs`, `apf_dump.php`, `captures/`. Le dossier généré `sc-maquette/` est reconstruit par `build.py`.
