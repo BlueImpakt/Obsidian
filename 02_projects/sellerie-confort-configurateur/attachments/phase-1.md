@@ -926,3 +926,24 @@ Lecture :
 - **VIMAWEB** : Valérie le paie à chaque nouvelle selle, mais on ne sait pas ce qu'il fait derrière. Ce qui est sûr : **c'est elle qui découpe les calques et ajoute les patchs un à un**. L'intervention de VIMAWEB reste à identifier (hypothèse non vérifiée : le plugin sur mesure `Sync MKL…` prototypé sur le site de développement, voir fiche projet ; rien ne le confirme). À ne pas présenter comme un fait dans le rapport.
 - **Selles en attente** : plusieurs. Elles sont prises **globalement sous le même angle et à la même distance, mais pas au centimètre près**. Conséquences : les masques d'une nouvelle selle ne sont pas réutilisables d'un modèle à l'autre (segmentation à refaire pour chaque selle) ; l'échelle de la texture par rapport à la selle varie légèrement d'une photo à l'autre (de quelques pour cent, à mesurer sur les modèles existants avant de décider d'un réglage d'échelle).
 - **Vignettes d'origine de Samuel** : a priori sur l'ancien hébergement **OVH** (69 Go non inventoriés). L'inventaire de ces 69 Go est le moyen de retrouver les sources et d'expliquer 750 px contre 171 px ; il demande l'accès à l'hébergement (hors périmètre tant que Melvin ne l'a pas décidé).
+
+**Essai SAM sur une selle existante (Kawasaki Z900, 16/10, CPU, modèle `facebook/sam-vit-base` déjà présent en cache, aucun téléchargement)** : un clic par zone placé au point le plus intérieur du masque réel (simule l'opérateur), comparé aux masques de Valérie (canal alpha des images de zones). Script : `plugin-gestion/tests/essai_sam_selle.py`, planche : `attachments/gestion-essai-sam-z900.png` (vert = masque de Valérie, rouge = SAM, point jaune = clic). Temps : environ 10 s pour l'image, moins d'une seconde par zone.
+
+| Zone | IoU (masque choisi par SAM) | Meilleur des 3 propositions |
+|---|---|---|
+| Dosseret | **0,96** | 0,96 |
+| Bec | **0,94** | 0,94 |
+| Assises avant | 0,34 | 0,75 |
+| Bandeaux | 0,43 | 0,43 |
+| Assises arrière | 0,23 | 0,46 |
+| Bandes latérales | 0,18 | 0,79 |
+| Liserés | 0,03 | 0,23 |
+| Surpiqûres | 0,00 | 0,00 |
+| **Moyenne** | **0,39** | **0,57** |
+
+Lecture :
+- **Un clic suffit pour les zones nettement délimitées** (bec, dosseret : 0,94 à 0,96) et pour la silhouette d'ensemble.
+- **Il ne suffit pas** pour les zones séparées par une simple couture sur un cuir de même couleur (assises, bandeaux, bandes latérales) : SAM renvoie souvent la selle entière ou une zone voisine. Les liserés (fines lignes) et les surpiqûres (741 px) ne sont pas trouvés.
+- Ajouter des clics négatifs dans les autres zones n'a **pas** amélioré le résultat (moyenne 0,29 au lieu de 0,39 ; le bec baisse de 0,94 à 0,40).
+- Cas difficile : selle noire sur noir. Le masque de Valérie exclut aussi le logo brodé, ce qui pénalise un peu l'IoU.
+- **Conclusion** : SAM seul, dans cette version, ne suffit pas pour produire les calques. Pistes à tester, par ordre de promesse : (1) **partir des masques du modèle existant le plus proche** et les recaler sur la nouvelle selle (même angle et même distance, au centimètre près seulement) en s'appuyant sur la silhouette, puis affiner les bords avec SAM ou les contours ; (2) un modèle SAM plus grand (vit-large ou SAM 2.1) avec boîtes englobantes au lieu de points ; (3) détection des coutures par contours pour les liserés et surpiqûres. Rien de cela n'est testé.
