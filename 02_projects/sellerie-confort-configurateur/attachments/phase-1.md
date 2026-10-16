@@ -1203,3 +1203,58 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 - Différence avec le site principal (1.7.6) : la 2.0.0 découpe les données en morceaux ; l'écriture passe donc par son API (`mkl_pc('db')->set`) et non par les métadonnées directes. Relecture vérifiée par l'API. Sauvegarde de la configuration d'origine dans `export-configurateur/kawasaki-z-900/sauvegarde-copie-39477/` ; retour arrière : `wp eval-file import_logos_copie.php 39477 <dossier> restaurer`.
 - **Vérifié** : configurateur natif de la 2.0.0 (les deux calques apparaissent avec leurs choix), interface de la maquette (`?sc_maq=1` : logo et fil, comparaison), fiche récapitulative et panier (lignes « Broderie dosseret : Yeux - fil rouge vif », « Broderie bande laterale : Yamaha - fil rouge vif » et champs APF). Test `SC_BASE=http://127.0.0.1:8090 SC_TAG=logos20 node test-logos.mjs`. Capture `poste3-voieB-13-logos-z900-plugin20.png`.
 - Conclusion : les logos brodés (option A) fonctionnent de la même façon en 1.7.6 et en 2.0.0.
+
+## 22. Parcours : pas de fiche récapitulative, le panier récapitule (décision de Melvin, 17/10)
+
+- **Décision** : après le configurateur, l'ajout au panier mène **directement au panier**, qui sert de récapitulatif (matières, broderies, options, infos, prix). La fiche récapitulative du §20 est retirée (fichier mis de côté : `Phase 1/maquette-branchee/_abandon/recap.php`).
+- **Référencement** (contexte de la décision) : remplacer la fiche produit par l'interface ferait perdre le contenu indexé (texte, photos, prix, données produit). Recommandation : la fiche produit reste la page référencée, avec un bouton « Configurer ma selle » ; le configurateur est une étape à part (adresse propre, canonique vers la fiche ou noindex). Parcours : fiche produit → configurateur → panier.
+- Fait sur la copie et le site local : redirection de l'ajout vers le panier (`woocommerce_add_to_cart_redirect` → page panier) ; tests rejoués (Duke, BMW R 1200 RT) : arrivée sur « Panier de commande » avec toutes les lignes, totaux corrects.
+- À prévoir en Phase 2 : le panier doit être à la hauteur de ce rôle (maquette `panier.html` : vignette de la selle configurée, lignes lisibles, lien « Modifier » qui rouvre le configurateur sur la ligne au lieu d'en ajouter une).
+
+## 23. Mise en production sans casser : environnements et passage dev → préprod → prod (17/10)
+
+### Ce qui manque pour confirmer qu'on peut mettre la maquette en prod
+Acquis : l'interface pilote le plugin sans le modifier (1.7.6 et 2.0.0), panier WooCommerce correct, 6 modèles de bout en bout, 344 fiches sur 344 avec leurs champs obligatoires reconnus, retour arrière par simple désactivation. À valider, par ordre d'importance :
+1. **Un environnement identique à la prod** : le site local n'a que 4 extensions actives. Risques : cache et optimisation LiteSpeed (fusion ou report des scripts) qui casseraient le pont ; le gabarit retire les scripts externes, donc aussi bandeau cookies, statistiques et peut-être des scripts de paiement : il faut une liste de scripts à garder.
+2. **Une commande complète**, pas seulement le panier : paiement Payline en mode test, courriels, affichage de la commande dans l'admin vérifié par Valérie (c'est elle qui fabrique à partir de ça).
+3. **Le catalogue entier** : test automatique sur les ~345 fiches configurables.
+4. **Conditions APF** des 79 fiches à champs supplémentaires (affichés sans condition aujourd'hui).
+5. **« Modifier » qui double la ligne du panier** : brancher la modification de ligne du plugin.
+6. **Navigateurs et poids** : Safari iPhone, Firefox, Lighthouse du configurateur, calques chargés deux fois.
+7. **Fragilité aux mises à jour du plugin** (le pont s'appuie sur sa structure HTML) : figer la version, rejouer les tests avant chaque mise à jour.
+8. **Référencement** : voir §22 (la fiche produit reste la page référencée, configurateur à part, canonique ou noindex).
+9. **Textes de maquette** à remplacer (pied de page « Maquette de refonte… », libellé « Configurateur »), validation par Valérie.
+
+### Copie locale complète ou préprod ?
+- **Une copie locale complète** (toutes les extensions et réglages de la prod) couvre environ 80 % des risques : conflits d'extensions et de scripts, test des 345 fiches, commande jusqu'à sa création, affichage dans l'admin, mises à jour du plugin. Elle ne couvre pas : cache LiteSpeed, retour du paiement Payline (adresse locale non joignable), courriels, vitesse réelle.
+  - Conditions : **export anonymisé** (sans clients, commandes ni clés de paiement, art. 2 du contrat) avec l'accord écrit de Valérie ; ne pas faire tourner l'extension signalée comme compromise.
+- **Une préprod n'est pas obligatoirement chez le même hébergeur**, mais c'est le plus fiable : les risques restants viennent du serveur (LiteSpeed, PHP, pare-feu o2switch, courriels, paiement). Sur o2switch, une copie sur sous-domaine ne coûte presque rien ; l'hébergement est géré par VIMAWEB, donc à passer par Valérie.
+- Ordre proposé : copie locale complète anonymisée d'abord, puis courte vérification en préprod (cache, paiement test, courriels).
+
+### Dev, préprod, prod
+- **Même chose côté serveur** (une copie du site sur un sous-domaine), **usage différent** : la **dev** sert à développer et peut s'éloigner de la prod ; la **préprod** est une copie **fraîche et fidèle** de la prod, refaite juste avant le test final. Une dev peut servir de préprod si on la recopie depuis la prod juste avant.
+- **Plusieurs copies possibles** : l'offre o2switch permet a priori plusieurs sites et sous-domaines sur le même hébergement (dans la limite de l'espace disque) : à confirmer avec VIMAWEB.
+- **Le site dev existant du client** : contenu et date de dernière copie inconnus (pas d'accès sans autorisation de Melvin) ; à demander à VIMAWEB. S'il peut être rafraîchi depuis la prod, il sert de préprod.
+- Cible : **une dev à jour** pour travailler, **une préprod** pour le dernier test, puis **la prod**.
+
+### Le passage d'un environnement à l'autre
+**Règle** : **le code monte** (dev → préprod → prod : notre extension, fichiers, versions d'extensions) ; **les données descendent** (prod → préprod → dev : commandes, clients, produits, stocks). **Jamais la base de dev ou de préprod vers la prod** : elle effacerait les commandes et clients arrivés entre-temps.
+
+**Dev → préprod**
+1. Recréer la préprod comme copie fraîche de la prod (sous-domaine o2switch), fermée à Google et aux visiteurs, paiement en mode test, courriels bloqués.
+2. Y appliquer la livraison **exactement comme on le fera en prod** : dépôt du code (mu-plugin, versionné dans git), puis scripts qui modifient des données (ex. calques de broderie, champs APF).
+3. Tester : catalogue complet automatisé, commande test, validation de Valérie dans l'admin.
+La préprod est la **répétition générale** de la mise en prod.
+
+**Préprod → prod**
+1. Sauvegarde complète de la prod (fichiers et base), à une heure creuse.
+2. Même paquet de code, mêmes scripts qu'en préprod.
+3. Vider le cache LiteSpeed.
+4. Vérifier quelques fiches et une commande, puis surveiller.
+5. **Retour arrière** : désactiver l'extension, ou l'interface fiche par fiche. Pas de restauration de la base (on perdrait les commandes passées depuis).
+
+**Point délicat** : une partie de la configuration vit dans la base (calques du configurateur, champs APF, réglages) et ne « monte » pas avec le code. Elle se rejoue en prod par script (comme nos scripts d'import) ou à la main dans l'admin : tout changement de données passe donc par un script testé en préprod.
+
+**Outils o2switch** : cPanel propose en général un outil de clonage (WP Toolkit ou Softaculous selon l'installation) et le déploiement git. Attention, « pousser vers le site en ligne » peut écraser la base : à n'utiliser que pour les fichiers. À confirmer avec VIMAWEB.
+
+**Atout de notre approche** : l'interface tient dans une extension et s'active produit par produit ; mise en prod = déposer des fichiers et cocher des fiches ; retour arrière immédiat.
