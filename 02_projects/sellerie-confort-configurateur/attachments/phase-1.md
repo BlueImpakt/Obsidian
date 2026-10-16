@@ -988,3 +988,42 @@ Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-
 - Limites : peu d'exemples (44), très peu de configurations de test par classe (1 à 11), perte d'entraînement proche de zéro (apprentissage par cœur probable), une seule exécution. Les contours sont à affiner (SAM, contours d'image) et les lignes fines demandent une autre méthode.
 - Planche : `attachments/gestion-essai-dinov2-zones.png` (photo de base, masques réels, masques prédits ; trois selles de test). Sur une des selles, la photo de base est une silhouette grise sans texture.
 - Suite envisagée : Mask2Former (ou SegFormer) entraîné sur GPU loué avec déformations d'image, puis affinage des contours par SAM ; lignes fines (liserés, surpiqûres) par détection de contours. Rien de cela n'est testé.
+
+## 16. Divi contre modèle PHP pour la fiche produit : mesure Lighthouse (16/10)
+
+Test sur la copie (`http://127.0.0.1:8090`, produit KTM Duke 10169), 3 passages par cas, médiane. Fichiers : `Phase 1/habillage-configurateur/test-divi/` (`sc-fiche-produit.php`, `sc-test-fiche-php.php`, `mesure.mjs`, `mesure.log`). Le modèle PHP et le script viennent de la branche `claude/gallant-cray-219vp6` (non fusionnée) ; deux corrections : le gabarit PHP est rangé dans `mu-plugins/sc-habillage/` (à la racine, WordPress le chargeait comme extension et plantait), et le script appelle Lighthouse par Node (le lancement par `npx` échoue sous Windows).
+
+- **A** : fiche actuelle, rendue par le modèle Theme Builder de Divi (`/?p=10169`).
+- **B** : même fiche, rendue par un modèle PHP qui reprend la maquette (fil d'Ariane, titre, tag, référence, prix, configurateur en ligne) (`/?p=10169&sc_php=1`). L'en-tête et le pied de page restent ceux de Divi dans les deux cas.
+
+| Version | Profil | Score | LCP (s) | TBT (ms) | CLS | Poids (Ko) | Requêtes | CSS inutilisé (Ko) | JS inutilisé (Ko) |
+|---|---|---|---|---|---|---|---|---|---|
+| A Theme Builder | mobile | 30 | 31,88 | 1 324 | 0,039 | 15 332 | 142 | 262 | 416 |
+| A Theme Builder | bureau | 57 | 5,09 | 242 | 0,010 | 15 332 | 142 | 256 | 416 |
+| B modèle PHP | mobile | 33 | 13,62 | 1 057 | 0,025 | 12 456 | 130 | 255 | 425 |
+| B modèle PHP | bureau | 62 | 2,52 | 246 | 0,023 | 12 456 | 130 | 273 | 426 |
+
+### Ce que contient le poids de la page (premier passage de chaque cas)
+
+| Type | A : requêtes, poids | B : requêtes, poids |
+|---|---|---|
+| **Images** | 68, **12,45 Mo (83 %)** | 58, **9,69 Mo (80 %)** |
+| Scripts | 43, 1,09 Mo | 43, 1,09 Mo |
+| Polices | 9, 0,74 Mo | 7, 0,74 Mo |
+| Feuilles de style | 18, 0,32 Mo | 18, 0,32 Mo |
+| Document HTML | 0,37 Mo | 0,32 Mo |
+
+### Lecture
+
+1. **Le poids vient des images, pas de Divi** : 80 à 83 % du transfert, soit près de 10 à 12 Mo. L'image PNG la plus lourde pèse 1,3 Mo ; les calques du configurateur dominent la page dans les deux versions.
+2. **Le gain de B (environ 2,9 Mo, 12 requêtes, +3 à +5 points de score) vient du contenu**, pas du mécanisme : la fiche A affiche en plus des images (galerie, blocs de réassurance) et des champs d'options que B ne contient pas. Ce n'est donc **pas un gain de « quitter Divi »**.
+3. **Scripts et feuilles de style sont identiques** (43 scripts, 1,09 Mo ; 18 feuilles, 0,32 Mo) : B garde l'en-tête et le pied de page de Divi, donc le JavaScript de Divi reste chargé. Ce test **ne mesure pas** ce que coûterait ou gagnerait un thème entièrement sans Divi.
+4. **Les valeurs absolues sont mauvaises dans les deux cas** (score mobile 30 et 33 ; LCP 14 à 32 s) : serveur PHP local à un seul processus, limitation réseau de Lighthouse, aucun cache ni CDN. À lire en **relatif**, pas comme des valeurs de production.
+
+**Conséquence pour la question « sortir de Divi »** : le levier de performance n'est pas Divi mais **le chargement des images du configurateur** (n'afficher que les calques visibles, formats plus légers, chargement différé). Un modèle PHP seul n'allège pas la page de façon significative.
+
+### Limites
+
+- Une fiche, une machine, serveur local ; B n'a ni champs d'options ni blocs de réassurance (comparaison à contenu inégal).
+- Pas de test d'un thème sans Divi.
+- La mesure n'a pas isolé le coût propre de l'habillage (même fichiers chargés en A et B).
