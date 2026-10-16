@@ -1061,3 +1061,11 @@ Test sur la copie (`http://127.0.0.1:8090`, produit KTM Duke 10169), 3 passages 
 - Les deux configurations les plus difficiles sont les mêmes pour tous les modèles (G222649 et G222674).
 - Limites : une exécution par modèle, 11 configurations de test, réglages non optimisés (SegFormer-B0 n'a pas été entraîné aussi longtemps que Mask2Former).
 - Conséquence : un GPU n'est pas indispensable pour un résultat utile (0,64 sur processeur), mais Mask2Former donne un net avantage pour les grandes zones.
+
+### Captures A et B (16/10)
+
+Captures bureau (1440 px) de la copie, produit KTM Duke : `Phase 1/habillage-configurateur/test-divi/captures/A-divi-bureau.png` et `B-php-bureau.png`.
+
+- **A (Divi)** : en-tête et bandeau de fil d'Ariane de Divi, photo du produit, texte d'avertissement, prix, puis le configurateur habillé (outils, compteur, zones, pied avec prix et bouton bleu), puis les champs d'options et le total, tous à la même largeur.
+- **B (modèle PHP)** : fil d'Ariane, titre, tag « Délai de 1 mois », prix, configurateur habillé et pied, puis le pied de page. Plus proche de la maquette, mais **sans** les champs d'options, la description ni la photo produit.
+- **Défaut corrigé en cours de test** : sur A, le configurateur et les options étaient décalés vers la droite et coupés au bord (la colonne Divi n'est pas centrée dans la fenêtre). Corrigé par un alignement calculé en JavaScript (`habillage.js`), le CSS seul ne suffisait pas.
