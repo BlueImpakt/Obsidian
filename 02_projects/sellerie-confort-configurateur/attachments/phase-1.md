@@ -836,3 +836,45 @@ Logique proposée pour la Phase 2 : si la photo couvre la plus grande zone à l'
 - L'**échelle** reste à fixer : une règle visible dans la photo, ou un réglage avec aperçu sur une selle. Le prototype ne gère que l'échelle 1.
 
 **Non testé** : aucune photo réelle prise au téléphone, aucune texture maître construite par le plugin, mesure de la plus grande zone sur les autres modèles, calibrage px/cm avec une cote réelle.
+
+## 15. Voie A : habiller le plugin sur la copie, ce que ça donne (16/10)
+
+Test sur la copie (`http://127.0.0.1:8090`, base `sc_regroupement`, plugin `mkl_pc` **2.0.0** actif, familles déjà dans les données). Fichiers : `Phase 1/habillage-configurateur/` (`sc-habillage-configurateur.php`, `habillage.css`, `habillage.js`, `habillage-familles.js`), polices dans `Maquette/assets/fonts/`. Rien en ligne.
+
+### Ce qui fonctionne (vérifié à l'écran et par script)
+
+| Élément de la maquette | Résultat |
+|---|---|
+| Configurateur **dans la fiche produit**, à la place du bouton plein écran | Oui : shortcode natif `[mkl_configurator]` injecté sur la fiche, bouton masqué, pleine largeur (1200 px centré) malgré la colonne étroite de Divi |
+| Selle à gauche, panneau de 470 px à droite, pied sous les deux | Oui (grille CSS) |
+| Couleurs et polices de la maquette (bleu `#1b478a`, Zilla Slab, Archivo, fil de couture pointillé) | Oui |
+| Liste des zones, grille de vignettes à 4 colonnes, matière active entourée en pointillé | Oui |
+| **Familles en onglets avec compteurs** (Noirs 8, Gris 6, Bleus 6, Rouges 4, Orangés/Jaunes 5, Verts 3, Autres 5) | Oui, à partir des groupes natifs |
+| **Annuler / Refaire / Tout réinitialiser** | Oui (testé : choix → 1/8, annuler → 0/8, refaire → 1/8, réinitialiser → 0/8) |
+| **Comparer** (maintenir pour voir la configuration d'origine) | Écrit ; non testé à la souris |
+| **Partager** : lien avec la configuration dans l'adresse, rechargé à l'ouverture | Oui (testé : un lien à 3 zones en Violet les applique et le compteur affiche 3/8) |
+| Compteur « n / 8 zones personnalisées », étiquette de la matière choisie | Oui |
+| Noms de matières raccourcis (sans le préfixe de zone) | Écrit ; non vérifié visuellement |
+| **Champs d'options** (broderies, hauteur d'assise, gel, infos client) de même largeur et de même style | Oui, mais **sous** le configurateur, pas dans le panneau |
+| Mobile (une colonne, sans débordement horizontal) | Oui ; le panneau garde une hauteur fixe |
+| Ajout au panier | Bouton du plugin restylé (bleu) ; **non testé** jusqu'au panier |
+
+Le plugin se pilote par des événements souris complets (un `.click()` seul ne suffit pas) ; il expose aussi `reset_configuration` et `select_choice`.
+
+### Ce qui n'est pas fait (reste de la maquette)
+
+1. **Étapes Broderies, Options, Informations dans le panneau** : les champs APF restent en dessous. Les déplacer dans le panneau garde à faire : règles conditionnelles, champs obligatoires, navigation entre étapes.
+2. **Total combiné** avec les surcoûts APF (+10 €, +35 €…) : le plugin affiche le prix de base, APF les surcoûts à part.
+3. **Récapitulatif** en tiroir : non fait.
+4. **Mobile en feuille qui se déplie par le bas** : non fait ; seule la mise en une colonne l'est.
+5. Quelques finitions au pixel (vignettes, espacements) : à comparer à la maquette.
+
+### Lecture
+
+La voie A donne **la structure, le style et les outils de la maquette** pour le choix des matières, avec peu de code (un mu-plugin, ≈ 16 Ko de CSS, ≈ 8 Ko de JavaScript). Elle ne donne pas encore **le parcours en quatre étapes** : c'est là que se concentre le reste de l'effort, et la voie B (interface maison branchée sur le plugin) devient plus pertinente si ce parcours est un impératif.
+
+### Réserves
+
+- Testé sur la **2.0.0** (version de la copie), pas sur la 1.7.6 de la prod ; la structure du configurateur intégré est la même sur les deux d'après l'inspection.
+- Un seul produit (KTM Duke), un seul navigateur (celui de l'application), taille mobile émulée.
+- Les pages de test ont été supprimées ; les fichiers sont dans un mu-plugin de la copie, pas sur le site local principal.
