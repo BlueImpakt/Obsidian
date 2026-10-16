@@ -963,7 +963,17 @@ Lecture :
 - **Vérification sur la copie (fiche F 900 XR, produit 32182)** : la couche « Couture Nid d'abeille » est une couche simple comme les autres ; ses réglages « Exiger un choix », « Sélection par défaut » et « L'utilisateur peut désélectionner » sont **vides**, donc le plugin sélectionne par défaut le premier choix et ne permet pas de le retirer. Le plugin offre nativement les réglages « Ne rien sélectionner par défaut » (`select_nothing`) et « L'utilisateur peut désélectionner le choix » (`can_deselect`) : **rendre le nid d'abeille facultatif est un réglage de la couche, sans développement**.
 - **Pas de trou sous le nid d'abeille** : l'image de la couche Assises est opaque (99,7 %) à l'endroit du nid d'abeille, lequel est une image semi-transparente (alpha moyen 123) posée par-dessus. Retirer la couche laisse donc une assise unie, sans zone vide.
 - À noter : les images de cette selle (2025/03) dépassent 1920 px de large (le nid d'abeille s'étend jusqu'à x = 4251 px) : les selles récentes n'ont pas toutes le cadre de 1920 × 1280 des plus anciennes. À vérifier avant d'appliquer l'hypothèse d'échelle unique.
-- Non testé : le rendu du front avec le réglage modifié, et le comportement sur les autres selles à nid d'abeille.
+- Non testé : le rendu du front avec le réglage modifié sur la fiche d'origine, et le comportement sur les autres selles à nid d'abeille (F 900 XR, GSX-S 8S/8R).
+
+**Apprentissage (16/10, site local) : le nid d'abeille peut être retiré dans la version configurable, sur la fiche MT-09 (produit 59286)**
+- **Fiches nid d'abeille configurables du site** : 3 fiches au nom explicite (BMW F 900 XR / R, Yamaha MT-09 2024, Suzuki GSX-S 8S/8R). La **MT-09 (produit 59286, 320 €)** a 10 couches dont « Couture nid d'abeille » : **27 coloris**, images en 1920 × 1280, toutes présentes dans le clone (`2024/12/`). Leurs noms de fichier sont trompeurs : 2 en `couture-nid-abeille-*` (noir, blanc), les 25 autres en `assises-*` (`assises-azur.png`…). C'est cette fiche qui a fourni la maille de la forme A (`formes.json`).
+- **Retirer le nid d'abeille est possible et sans trou** : sans la couche, il reste les zones de surface (Assises, Avant assise arrière, Bandes, Bandeaux, Bec, Bec arrière, Couture). Vérifié sur une copie locale (produit 222762, la fiche 59286 n'est pas modifiée) : la selle s'affiche, les choix de couleur fonctionnent, l'assise change bien de couleur sans motif dessous.
+- **Nid d'abeille facultatif = un onglet, pas du développement** : la couche est ré-ajoutée sur la copie sous le nom « Nid d'abeille » (en dernier), avec les 27 coloris et leurs vignettes, **rien de sélectionné par défaut** (`default_selection = select_nothing`) et **désélectionnable** (`can_deselect`). Le rendu avec le coloris Rouge vif est correct. Désélection : confirmée en déclenchant l'événement du plugin ; un vrai clic dans le navigateur de test ne l'a pas fait reculer (clic mal ciblé ou comportement réel : à revérifier à la main).
+- **Le calque « Noir antidérapant » qui reste est dégradé** : les calques de la fiche (2024/12) ne sont **pas** la texture maître de Valérie. Luminosité 44 contre 29 pour la texture maître (version récente, 2023), grain plus gros, taches horizontales répétées (raccords de tuile). Écart moyen de 17 niveaux et 9 % de pixels identiques à la texture maître, **pour les 6 zones** de la fiche : c'est donc la matière entière qui est une version à part, pas seulement l'assise.
+- **Correction appliquée sur la copie** : on garde le masque de chaque calque (canal alpha) et on remplace les couleurs par la texture maître de Noir antidérapant (`poste3_reappliquer_texture_maitre.py`) ; les ~3 % de pixels hors texture reconstituée sont complétés par la même texture décalée. 5 zones refaites (Assises, Avant assise arrière, Bandes, Bandeaux, Bec), rendu uniforme sans taches ; la selle est plus sombre, c'est le vrai niveau de la texture maître. Le choix « Bec arrière Noir antidérapant » pointe vers `assises-anthracite-2.png`, une image **anthracite** (luminosité 59) : fichier probablement erroné, non touché.
+- **Autre défaut trouvé** : le calque d'ombres de cette fiche contient le logo « CB 125 R » (copié d'une fiche Honda), visible sur le rendu : à retirer, comme pour les logos incrustés (voir Poste 4).
+- **Outils** (dans `Phase 1/scripts/`) : `creer_selle_sans_nid_local.php` (copie sans nid, option `onglet` pour le rendre facultatif), `remplacer_image_choix_local.php` (remplace l'image d'un choix), `poste3_reappliquer_texture_maitre.py`. Résultats : `Phase 1/essais-poste3/mt09-texture-maitre/`. Tout est limité au site local `sellerie-confort.local`.
+- **Pour la production** (non fait, hors périmètre sans décision de Melvin) : rendre le nid d'abeille facultatif sur les fiches de Valérie = cocher « Ne rien sélectionner par défaut » et « Peut désélectionner » sur la couche ; corriger la matière Noir antidérapant demande de remplacer les 6 images de chaque fiche concernée.
 
 Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-sam-z900-calques.png` (une ligne par zone : masque choisi par SAM, meilleure des 3 propositions, masque réel de Valérie). Constat visuel : l'assise avant et les bandes latérales ressortent comme la selle entière ou des morceaux troués ; le bec et le dosseret sont propres (mais le logo brodé du dosseret est perçu comme un trou) ; les liserés et les surpiqûres ne sont pas trouvés.
 
@@ -1128,3 +1138,25 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 
 ### Fichiers
 `Phase 1/maquette-branchee/` : `build.py` (options `--deploy` pour la copie 8090, `--local` pour le site principal `sellerie-confort.local`), `sc-maquette.php`, `test-logos.mjs`, `test-parcours.mjs`. Aperçu : `http://sellerie-confort.local/?p=39477&sc_maq=1`. Le mu-plugin `sc-maquette` est installé sur le site principal et sur la copie, sans effet hors `?sc_maq=1`.
+
+## 19. Apprentissages de la session « voie B » (16/10)
+
+**1. On peut coder la maquette dans le site réel sans casser le plugin.**
+- Le plugin n'est pas modifié : l'interface de la maquette s'appuie dessus. Il garde son rôle (calques, choix, prix, panier) et la maquette ne fait que le piloter, par les mêmes clics que ceux d'un visiteur. Un seul gabarit (mu-plugin `sc-maquette`), activé par `?sc_maq=1` ; hors de ce paramètre, le site est inchangé.
+- Vérifié sur **deux versions** du plugin : 2.0.0 (copie, Duke) et **1.7.6, la version actuellement en production** (site principal, Z900). Il n'y a donc pas besoin de la 2.0.0 pour avoir l'interface de la maquette.
+- Rien dans le plugin, APF ou Divi ne limite l'affichage. Seuls obstacles rencontrés : le script de Divi Child qui bloque le bouton, retiré de ce gabarit, et le formulaire de la 1.7.6 sans les champs APF (recopiés par le pont).
+- Le panier reste celui de WooCommerce : le total, la ligne « Configuration » et les champs APF sont les mêmes qu'aujourd'hui.
+
+**2. La broderie logo fonctionne dans cette interface.**
+- Les calques « Broderie dosseret / bande » du prototype (option A) se choisissent par logo et par fil dans l'étape Broderies, avec aperçu en direct, comparaison et panier correct (logo, fil, champs APF).
+- Limites connues : 4 fils (pas 26), une couleur par logo, logos du prototype différents des 12 motifs d'APF. Pour 26 fils sans 260 images : option B, dont il reste à enregistrer le choix dans le panier.
+
+**3. Pièges à retenir**
+- Une image « transparente » faite à la main avait un pixel non nul : la lueur de survol (`drop-shadow`) la rendait visible sur toute la selle (voile violet). Utiliser un vrai GIF 1×1 transparent, et **tester le survol**, pas seulement l'affichage fixe.
+- Filtrer les scripts du thème par leur chemin `/wp-content/themes/` (et non `/themes/`, qui attrape `inc/themes/clean` du plugin), et par le domaine du site (pas une adresse en dur).
+- Les noms de matières du plugin sont irréguliers (fautes, « Marron » sans « clair ») : les familles par règles de noms demandent des ajustements ; les groupes natifs du plugin 2.0.0 sont plus sûrs.
+- Les captures de la fenêtre de l'application peuvent être gelées (fenêtre masquée) : tester avec Chrome et puppeteer (`test-parcours.mjs`, `test-logos.mjs`).
+
+**4. Conséquence pour la suite (Phase 2)**
+- La refonte du configurateur peut se faire **au-dessus du plugin existant**, sans réécrire le moteur de calques ni le panier : le travail porte sur l'interface, la correspondance des champs APF par produit, le champ « Type de commande », la fiche récapitulative et l'en-tête/pied du site.
+- Reste à mesurer : poids et vitesse de la page (le plugin masqué charge ses calques en plus de ceux de l'interface).
