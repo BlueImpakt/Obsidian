@@ -46,8 +46,6 @@ body_synced: 2026-10-15
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-06 : Sur [[sellerie-confort-configurateur]] — fiche créée, prospect passé en `#discussion` (devis Phase 1 envoyé, contrat non signé, réunion le 07/10). Audit externe passif du site réalisé et contexte consolidé dans le repo `BlueImpakt/sellerie-confort`. Détails dans la fiche projet.
-- 2026-10-06 (suite) : Sur [[sellerie-confort-configurateur]] — contrat Phase 1 mis à jour, audit du configurateur public, réunion du 07/10 préparée avec schéma Excalidraw. Détails dans la fiche projet et [[2026-10-07-sellerie-confort]].
 - 2026-10-07 : Sur [[sellerie-confort-configurateur]] — Refonte complète des 6 maquettes (`sellerieconfort-refonte/Maquette/`) : accueil, liste des selles (BMW), fiche produit, matières, configurateur, panier. Détails dans la fiche projet.
 - 2026-10-08 : Sur [[sellerie-confort-configurateur]] — Analyse du catalogue complet (345 fiches configurables) : 337 sur la même logique (3 jeux réutilisables : 37 matières, 44 liserés, 26 surpiqures), 8 fiches atypiques (dont CFMOTO 800 NK) ; ≈ 2 254 couches, ≈ 83 000 images. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-13 : Sur [[sellerie-confort-configurateur]] — Après la réunion du 07/10, Valérie OK pour la Phase 1. (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
@@ -60,6 +58,9 @@ body_synced: 2026-10-15
 - 2026-10-15 : Sur [[sellerie-confort-configurateur]] — plan Phase 1 formalisé ([[phase-1]]), voie 1.7.6 + plugin envisagée, nid d'abeille testé sur 5 modèles, plus de mails à Valérie.
 - 2026-10-15 (suite) : Sur [[sellerie-confort-configurateur]] — poste 3 : rendu matières reproductible à l'identique via texture maître reconstituée (version récente par défaut) ; poste 1 : 336 fiches sur 345 regroupables sur la 1.7.6.
 - 2026-10-15 (nuit) : Sur [[sellerie-confort-configurateur]] — nid d'abeille testé sur 6 selles avec délimitations calées sur les calques, copie du site local avec regroupement famille/lot, 2.0.0 en test sur la copie ; règle : images d'origine conservées pour les modèles existants.
+- 2026-10-15 : Sur [[sellerie-confort-configurateur]] — 2.0.0 testée sur une copie (commandes passées protégées, 55 configurateurs globaux, écran de gestion « Matières et couleurs » en admin de la copie, 19 tests sur 19).
+- 2026-10-15 (nuit, suite) : Sur [[sellerie-confort-configurateur]] — nid d'abeille : K120 confirmé par défaut (test Ducati Diavel), orientation horizontale en cours d'affinage, 2e forme à recopier ; tests de logos brodés lancés.
+- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
