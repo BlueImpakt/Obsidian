@@ -1196,3 +1196,10 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 
 ### Fichiers
 `Phase 1/maquette-branchee/` : `build.py`, `sc-maquette.php` (rôles, champs supplémentaires, redirection, adresses), `recap.php` (fiche récapitulative), `couverture_champs.php`, `test-parcours.mjs`, `test-logos.mjs`, `test-produits.mjs`, `captures/`.
+
+## 21. Logos brodés sur le plugin 2.0.0 (17/10)
+
+- Les calques « Broderie dosseret » (22 choix) et « Broderie bande laterale » (21 choix) et l'ombre sans logo d'origine sont ajoutés à la **Z900 de la copie** (produit 39477, `127.0.0.1:8090`, plugin 2.0.0), par `Phase 1/maquette-branchee/import_logos_copie.php`.
+- Différence avec le site principal (1.7.6) : la 2.0.0 découpe les données en morceaux ; l'écriture passe donc par son API (`mkl_pc('db')->set`) et non par les métadonnées directes. Relecture vérifiée par l'API. Sauvegarde de la configuration d'origine dans `export-configurateur/kawasaki-z-900/sauvegarde-copie-39477/` ; retour arrière : `wp eval-file import_logos_copie.php 39477 <dossier> restaurer`.
+- **Vérifié** : configurateur natif de la 2.0.0 (les deux calques apparaissent avec leurs choix), interface de la maquette (`?sc_maq=1` : logo et fil, comparaison), fiche récapitulative et panier (lignes « Broderie dosseret : Yeux - fil rouge vif », « Broderie bande laterale : Yamaha - fil rouge vif » et champs APF). Test `SC_BASE=http://127.0.0.1:8090 SC_TAG=logos20 node test-logos.mjs`. Capture `poste3-voieB-13-logos-z900-plugin20.png`.
+- Conclusion : les logos brodés (option A) fonctionnent de la même façon en 1.7.6 et en 2.0.0.
