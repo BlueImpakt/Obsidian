@@ -47,7 +47,6 @@ body_synced: 2026-10-16
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — Phase 1 lancée : contrat/devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours.
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — reconnaissance Phase 1 bouclée, accord écrit d'export reçu, site local reconstruit (345 produits), alerte plugin compromis hors périmètre, nid d'abeille Z900 en cours
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — site local reconstruit comme la prod (front Divi, 345 produits), nid d'abeille Z900 validé sur sa propre photo mais transfert vers le configurateur non résolu
 - 2026-10-14 : Sur [[sellerie-confort-configurateur]] — images de nid d'abeille rangées par modèle ; second jeu complet (BMW F900 XR) repéré pour tester la généralisation
@@ -62,6 +61,7 @@ body_synced: 2026-10-16
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés : orientation B validée et série finale propre ; configurateur gratuit sans licence, Divi utilisable sans licence ; habillage du plugin commencé en local.
 - 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — détourage automatique des calques : Mask2Former IoU 0,72, SegFormer 0,64, insuffisant en production, piste semi-automatique ; logos brodés testés dans le configurateur local (2 options, import de logo client OK).
+- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — segmentation Mask2Former v2 IoU 0,64 (pas mieux que 0,72), SAM 3 à tester ; logos brodés ajustés (56 %, horizontal sur bande, « Sans logo ») ; estimation postes 5-6 ≈ 1,5 j.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
