@@ -966,3 +966,25 @@ Lecture :
 - Non testé : le rendu du front avec le réglage modifié, et le comportement sur les autres selles à nid d'abeille.
 
 Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-sam-z900-calques.png` (une ligne par zone : masque choisi par SAM, meilleure des 3 propositions, masque réel de Valérie). Constat visuel : l'assise avant et les bandes latérales ressortent comme la selle entière ou des morceaux troués ; le bec et le dosseret sont propres (mais le logo brodé du dosseret est perçu comme un trou) ; les liserés et les surpiqûres ne sont pas trouvés.
+
+**Calques automatiques : essai d'un modèle entraîné sur les calques de Valérie (16/10, CPU, aucun téléchargement)**
+- **Jeu de données** : les **55 configurations distinctes** (les 55 configurateurs globaux, chacun regroupant des fiches à calques identiques) plutôt que les 345 fiches : photo de base + un masque par zone (canal alpha des images de couches), découpage **par configuration** (44 entraînement, 11 test jamais vues). 54 images en 1920 × 1280, 1 en 5712 × 4284 (BMW F 900 XR). Les noms de zones diffèrent d'une configuration à l'autre (bandes séparées du dosseret ou non, assise unique ou avant/arrière) : 11 classes. Le nid d'abeille n'existe que dans 2 configurations. Scripts : `plugin-gestion/tests/dump_jeu_segmentation.php`, `construire_jeu_segmentation.py`, `essai_dinov2_zones.py`.
+- **Modèle** : DINOv2-small gelé (déjà en cache) + une petite tête apprise, 300 époques sur processeur (quelques minutes). Aucune déformation d'image, aucun réglage.
+
+| Classe (configurations de test où elle existe) | IoU |
+|---|---|
+| Assise avant / arrière (2 et 1) | 0,94 / 0,94 |
+| Bec (11) | 0,81 |
+| Assise unique (10) | 0,75 |
+| Bandes et dosseret (8) | 0,69 |
+| Bandeaux (11) | 0,68 |
+| Bandes (3) | 0,68 |
+| Dosseret (1) | 0,00 |
+| Liserés (10) | 0,00 |
+| Surpiqûres (10) | 0,00 |
+| **Moyenne de toutes les classes** | **0,51** ; **≈ 0,78** sans les trois classes à zéro |
+
+- Lecture : sur des selles **jamais vues**, le modèle place les grandes zones au bon endroit (bec, assises, bandeaux, bandes), avec des contours en escalier (le modèle voit par blocs de 14 px) et quelques confusions entre zones voisines. Il ne trouve **ni les liserés ni les surpiqûres** (lignes de quelques pixels) ni le dosseret isolé (1 seule configuration de test). Comparaison avec SAM un clic par zone (moyenne 0,39 sur la Z900) **non équivalente** : autre protocole, autres selles, SAM sans entraînement.
+- Limites : peu d'exemples (44), très peu de configurations de test par classe (1 à 11), perte d'entraînement proche de zéro (apprentissage par cœur probable), une seule exécution. Les contours sont à affiner (SAM, contours d'image) et les lignes fines demandent une autre méthode.
+- Planche : `attachments/gestion-essai-dinov2-zones.png` (photo de base, masques réels, masques prédits ; trois selles de test). Sur une des selles, la photo de base est une silhouette grise sans texture.
+- Suite envisagée : Mask2Former (ou SegFormer) entraîné sur GPU loué avec déformations d'image, puis affinage des contours par SAM ; lignes fines (liserés, surpiqûres) par détection de contours. Rien de cela n'est testé.
