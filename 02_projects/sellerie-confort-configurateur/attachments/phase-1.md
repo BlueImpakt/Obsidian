@@ -921,3 +921,8 @@ Lecture :
 - Ce que VIMAWEB facture exactement et pourquoi.
 - Combien de nouvelles selles en attente, et photos de ces selles disponibles (cadrage identique aux selles actuelles ?).
 - Où sont les vignettes d'origine de Samuel, et pourquoi 750 px pour certaines matières et 171 px pour d'autres.
+
+**Précisions reçues après l'appel (16/10)**
+- **VIMAWEB** : Valérie le paie à chaque nouvelle selle, mais on ne sait pas ce qu'il fait derrière. Ce qui est sûr : **c'est elle qui découpe les calques et ajoute les patchs un à un**. L'intervention de VIMAWEB reste à identifier (hypothèse non vérifiée : le plugin sur mesure `Sync MKL…` prototypé sur le site de développement, voir fiche projet ; rien ne le confirme). À ne pas présenter comme un fait dans le rapport.
+- **Selles en attente** : plusieurs. Elles sont prises **globalement sous le même angle et à la même distance, mais pas au centimètre près**. Conséquences : les masques d'une nouvelle selle ne sont pas réutilisables d'un modèle à l'autre (segmentation à refaire pour chaque selle) ; l'échelle de la texture par rapport à la selle varie légèrement d'une photo à l'autre (de quelques pour cent, à mesurer sur les modèles existants avant de décider d'un réglage d'échelle).
+- **Vignettes d'origine de Samuel** : a priori sur l'ancien hébergement **OVH** (69 Go non inventoriés). L'inventaire de ces 69 Go est le moyen de retrouver les sources et d'expliquer 750 px contre 171 px ; il demande l'accès à l'hébergement (hors périmètre tant que Melvin ne l'a pas décidé).
