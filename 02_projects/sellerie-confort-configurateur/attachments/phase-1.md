@@ -999,6 +999,41 @@ Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-
 - Planche : `attachments/gestion-essai-dinov2-zones.png` (photo de base, masques réels, masques prédits ; trois selles de test). Sur une des selles, la photo de base est une silhouette grise sans texture.
 - Suite envisagée : Mask2Former (ou SegFormer) entraîné sur GPU loué avec déformations d'image, puis affinage des contours par SAM ; lignes fines (liserés, surpiqûres) par détection de contours. Rien de cela n'est testé.
 
+### 14.10 Les trois jeux de choix et l'écran « Matières et couleurs » en quatre onglets (17/10)
+
+**Pourquoi 78 matières et 153 surpiqûres s'affichaient.** L'écran comptait les **noms distincts** sur les 55 configurateurs globaux, pas les couleurs réelles. Les fautes, les listes atypiques et mes essais l'ont gonflé. Les chiffres de la note pré-phase-1 (jeux de choix par couche : 37, 44, 26) sont les bons.
+
+**Les trois jeux standard** (repérés par la taille des listes, sur les 55 configurateurs) :
+
+| Jeu | Choix | Couches | Contenu |
+|---|---|---|---|
+| **Matières** | 37 | 174 (assises, bec, bandeaux, bandes, dosseret) | Noirs, gris, bleus, rouges, orange, jaune, verts, marrons, blanc, Fiber blanc, violet |
+| **Liserés** | 44 | 50 | Les 37 matières + 7 finitions brillantes (gris argent brillant, gris argent chromé, rouge brillant, or, or pailleté, vert brillant, rose brillant) |
+| **Surpiqûres (fils)** | 26 | 51 | Palette de fils, **identique aux 26 « Couleurs broderie »** des options de commande (mêmes noms : « Argent et Brume », « Bleu égyptien et Yam »…) |
+
+Un quatrième type : les **couches fixes** (1 choix, 78 couches), qui ne sont pas un jeu à choisir.
+
+**Écran de gestion (prototype, copie `127.0.0.1:8090`)** : quatre onglets **Matières 37 · Liserés 44 · Surpiqûres 26 · À vérifier 183**. Une matière appartient à un jeu si elle figure dans une liste de la taille standard du jeu ; sinon elle va dans « À vérifier » avec sa raison :
+
+| Raison | Nombre |
+|---|---|
+| Nid d'abeille nommé autrement (« Couture nid d'abeille X », « Nid d'abeille X ») | 52 |
+| Petites pointes (couche de la Yamaha R6, 44 choix, 5 fiches) | 44 |
+| Variante ou faute (« bordeau », « bleu sirius », « Surpiques bleu azur »…) | 64 |
+| Broderie de logo (mes calques d'essai, présents dans un configurateur de la copie) | 22 |
+| Doublon probable (« Gris tonnerrre ») | 1 |
+
+(Une première version annonçait 86 « variantes ou fautes » : 22 étaient mes choix de logos.)
+
+**Propreté des trois jeux (vérifiée)** : Liserés et Surpiqûres n'ont **ni doublon ni faute** et une seule composition de liste partout. Matières : deux défauts dans les données, **« Gris tonnerrre »** (trois r) dans les **66 listes « Assises »** (les 159 autres écrivent « Gris tonnerre ») et **« orange poterie »** en minuscule dans 66 listes. Corrigés sur la copie par le mécanisme de l'écran (renommage), le doublon héritant de la famille « Les Gris ». **Vignettes** : dans les listes standard chaque matière n'a **qu'une seule vignette** (nuancier 2022/05, 750 × 750) ; les « plusieurs vignettes » venaient des autres listes (nid d'abeille, images de 171 px), et le compteur ne les prend plus en compte.
+
+**Rattachement du nid d'abeille et des logos à la palette de 26 fils : décision à prendre, rien de fait.**
+- **Logos** : les 4 fils de mes essais (blanc, rouge vif, vert brillant, jaune citron) sont dans les 26. **Broderie en production** : le champ d'options « Couleurs broderie » (26 pastilles, hors configurateur) reprend exactement les 26 fils, mais aucun lien dans le catalogue : renommer un fil ne change pas la broderie.
+- **Nid d'abeille** : 36 noms de couleur distincts sur ses listes (27 choix sur la MT-09, 29 sur une autre fiche). 21 des 26 fils sont utilisés ; 8 noms sont des synonymes d'un fil (citron, bordeau, Rouge Bordeaux, Gris brume argent, « blanc et fiber blanc », « rouge vif-brillant » à confirmer, Bleu Égyptien et Bleu Yam, qui fusionneraient en « Bleu égyptien et Yam ») ; **7 couleurs n'existent pas dans les 26** et seraient perdues sans précaution : bleu petronas, bleu sirius, marron foncé, marron clair, rose clair, prune, violet (chacune dans une seule liste).
+- **Proposition** : rattacher le nid d'abeille et la broderie au jeu Surpiqûres (palette unique), fusionner les synonymes, garder les 7 couleurs en plus comme **couleurs supplémentaires réservées au nid d'abeille**, ou demander à Valérie si elles sont obsolètes ; trancher le cas Égyptien/Yam avec elle.
+
+Code : `Phase 1/plugin-gestion/sc-gestion-configurateur/` (README à jour). Aucun changement en production.
+
 ## 16. Divi contre modèle PHP pour la fiche produit : mesure Lighthouse (16/10)
 
 Test sur la copie (`http://127.0.0.1:8090`, produit KTM Duke 10169), 3 passages par cas, médiane. Fichiers : `Phase 1/habillage-configurateur/test-divi/` (`sc-fiche-produit.php`, `sc-test-fiche-php.php`, `mesure.mjs`, `mesure.log`). Le modèle PHP et le script viennent de la branche `claude/gallant-cray-219vp6` (non fusionnée) ; deux corrections : le gabarit PHP est rangé dans `mu-plugins/sc-habillage/` (à la racine, WordPress le chargeait comme extension et plantait), et le script appelle Lighthouse par Node (le lancement par `npx` échoue sous Windows).
@@ -1281,3 +1316,28 @@ La préprod est la **répétition générale** de la mise en prod.
 - **Comparaison** sur les 11 mêmes configurations de test : SAM 3 sans entraînement 0,43 au mieux, contre **0,72 pour Mask2Former entraîné** sur les 44 autres. Les deux sont complémentaires : Mask2Former place mieux les grandes zones et les bandeaux, SAM 3 détoure mieux les zones compactes à partir d'une boîte.
 - Limites : une exécution, prompts non réglés (une seule boîte ou un seul clic par zone), contours non examinés au pixel près ; affiner SAM 3 sur les calques n'est pas testé (848 M de paramètres : un GPU T4 ne suffit probablement pas sans gel partiel du modèle).
 - **Conséquence pour la Phase 2** : un outil semi-automatique réaliste combinerait (1) Mask2Former pour proposer toutes les zones, (2) SAM 3 pour redétourer les zones compactes à partir des boîtes de Mask2Former ou d'un rectangle tracé par Valérie, (3) une sélection des coutures pour les liserés et surpiqûres (elles suivent les bords des zones à 99 % et 78 %), (4) la correction manuelle du reste. La mesure décisive reste le temps de retouche par selle, face au détourage actuel dans Photoshop.
+
+### 14.10 Calques automatiques : conclusion (décision de Melvin, 17/10)
+
+**Décision** : on arrête les essais. Aucun des modèles testés ne produit des calques utilisables sans reprise : le détourage manuel de Valérie reste la référence.
+
+| Approche testée (16-17/10) | Données | Résultat (IoU, 1 = identique au calque de Valérie) |
+|---|---|---|
+| SAM 1 (vit-base), un clic par zone | Z900 | 0,39 |
+| DINOv2 gelé + tête apprise | 44 selles apprises, 11 testées | 0,51 |
+| SegFormer-B0 entraîné (processeur) | idem | 0,64 |
+| Mask2Former Swin-tiny entraîné (GPU Kaggle) | idem | **0,72** (meilleur) |
+| Mask2Former Swin-base, image plus grande | idem | 0,64 |
+| SAM 3 sans entraînement, une boîte par zone | 55 selles | 0,44 (0,43 sur les 11 de test) |
+
+Ce que montrent les chiffres :
+- Les **zones compactes** (bec, dosseret, assises séparées) sont bien détourées : 0,8 à 0,99 selon le modèle, et SAM 3 y arrive sans entraînement à partir d'une simple boîte.
+- Les **zones qui entourent la selle** (bandeaux, bandes) sont instables : 0,3 à 0,95 selon le modèle et l'essai.
+- Les **lignes fines** échouent partout : surpiqûres 0,00 à 0,13, liserés 0,00 à 0,71.
+- **Aucun essai ne dépasse 0,72 en moyenne**, et les écarts entre essais (une même selle de 0,86 à 0,37) montrent que le facteur limitant est le **petit nombre de formes de selles (55)**, plus que le modèle. Les zones sont aussi des **choix de conception** de Valérie, que la photo ne dicte pas toujours.
+
+Ce qui n'a pas été testé (à mentionner honnêtement dans le rapport) : SAM 3 réentraîné sur les calques (trop lourd pour un GPU gratuit), la combinaison Mask2Former + SAM 3, la validation croisée sur les 55, la mesure du temps de retouche d'une proposition par rapport au détourage complet. Ces pistes pourraient réduire le travail de Valérie dans un outil semi-automatique, mais **rien ne démontre aujourd'hui un gain** : elles ne sont pas retenues pour la Phase 2.
+
+Conséquence pour la Phase 2 : la **découpe des calques reste manuelle** chez Valérie (comme décidé en réunion le 07/10 pour les étapes 1 et 2 du flux d'ajout d'un modèle). L'automatisation porte sur ce qui suit la découpe et que les essais ont validé : génération des images de matières à partir des calques (poste 3, écran de gestion §14.4-14.5), configurateurs globaux 2.0 (§14.2), suppression de la saisie image par image et de l'intervention payante de VIMAWEB pour les couleurs.
+
+Traces : scripts et notebooks dans `Phase 1/plugin-gestion/tests/` (`essai_sam_selle.py`, `essai_dinov2_zones.py`, `essai_segformer_b0.py`, `entrainer_mask2former*.ipynb`, `essai_sam3_zeroshot.ipynb`, `essai_sam21_zeroshot.ipynb` non lancé) ; jeu de données (55 configurations) hors dépôt dans `sellerie-confort-regroupement/_jeu_segmentation*`, copie privée sur le compte Kaggle de Melvin.
