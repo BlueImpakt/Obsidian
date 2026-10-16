@@ -1102,3 +1102,29 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 
 ### Fichiers
 `Phase 1/maquette-branchee/` : `build.py` (assemblage et déploiement sur la copie), `sc-maquette.php` (adaptateur de données, bascule `?sc_maq=1`), `test-parcours.mjs`, `apf_dump.php`, `captures/`. Le dossier généré `sc-maquette/` est reconstruit par `build.py`.
+
+## 18. Voie B : les logos brodés (option A) branchés dans la maquette (16/10)
+
+**Résultat : sur la Z900 (produit 39477, site Local principal, plugin 1.7.6), l'étape Broderies de la maquette pilote les calques « Broderie dosseret » et « Broderie bande latérale » du prototype ; on voit le logo sur la selle, et le panier garde le logo et le fil.**
+
+### Fonctionnement
+- Le gabarit détecte les calques dont le nom contient « broderie ». Un choix de calque = « Logo - fil couleur » (image déjà découpée et ombrée). Ces calques ne sont plus des zones de l'étape Matières : ils deviennent l'étape Broderies.
+- **Dosseret / Bandes** : les cases d'emplacement choisissent le calque. Décochées : choix d'origine du plugin (logo d'origine sur le dosseret, aucune broderie sur les bandes). Cochées : tuiles de logos (Yeux, Aile Honda, Yamaha, Electrocardiogramme, Alpinestar, + « Sans broderie » sur le dosseret), puis **une couleur de fil** (4 fils : blanc, rouge vif, vert brillant, jaune citron). L'aperçu change en direct, « Comparer » revient au logo d'origine.
+- **Panier** : le pont active les deux calques du plugin (la ligne « Broderie dosseret : Yeux - fil rouge vif » apparaît dans « Configuration » du panier), et remplit aussi les champs APF « Broderie Dosseret », « Motif de broderie » (option au nom le plus proche du logo, sinon la première), « Couleurs broderie ».
+- Test automatisé `test-logos.mjs` : logo Yeux rouge sur le dosseret, Yamaha rouge sur les bandes, comparaison, 4 infos, ajout au panier : **panier correct** (logos, fils, champs APF, infos). Test de non-régression sur la copie (Duke, plugin 2.0.0) : toujours bon. Captures : `poste3-voieB-6-logos-z900.png`, `poste3-voieB-7-logos-panier.png`.
+
+### Corrections faites en route
+- **Plugin 1.7.6, formulaire du panier** : avec `force_form`, le plugin envoie son propre formulaire, **sans les champs APF** (le panier était refusé : « Error adding product to cart », champs obligatoires absents). Le pont recopie les champs APF dans ce formulaire avant l'envoi. En 2.0.0 le plugin envoie le formulaire WooCommerce : sans effet.
+- Le gabarit n'affichait pas les messages WooCommerce : ils sont maintenant repris en message en haut de page.
+- Le retrait des styles et scripts du thème retirait aussi ceux du plugin (chemin `/themes/` présent dans `inc/themes/clean`) : limité à `/wp-content/themes/`, et au domaine du site (le site principal est en `sellerie-confort.local`).
+- Modal Bootstrap du thème enfant et marqueurs PhotoSwipe masqués.
+
+### Limites et décisions à prendre
+1. **Seulement 4 fils**, contre 26 couleurs dans APF : le prototype n'a que 4 fils par logo. Pour les 26, soit 26 images par logo et par emplacement (**5 logos × 26 × 2 emplacements = 260 images 1920×1280**), soit **l'option B** (logo recoloré en direct dans la page). Option B : l'interface s'y prêterait très bien (une couleur libre, aperçu immédiat), mais l'enregistrement du choix dans le panier reste à faire (noté dans §Logos brodés de `pre-phase-1.md`).
+2. **Une seule couleur par logo** : la maquette permet plusieurs couleurs de broderie (champ « Couleurs broderie » d'APF, avec précisions). Avec le calque, c'est une couleur ; un logo multicolore demande un calque par combinaison ou l'option B avec zones.
+3. **Les logos du prototype ne sont pas ceux d'APF pour la Z900** : APF propose 12 motifs (Z 900, Z du Z 900, Griffe Monster, Logo Akrapovic, Pattes de chat, Red-Bull, K de Kawasaki, Punisher, Fox...), le prototype en fait 5 (dont Aile Honda et Yamaha, qui servent de test). Seuls Yeux, Electrocardiogramme et Alpinestar se recoupent ; pour Aile Honda et Yamaha, le champ APF reçoit la première option : **à rendre cohérent avec la liste réelle des motifs de Valérie**.
+4. Les vignettes de logos (fil blanc sur fond gris) sont peu contrastées dans la tuile : une vignette dédiée par logo améliorerait la lecture.
+5. Sur le site principal, le champ APF « Poids passager » et « Commentaires » existent avec d'autres identifiants que sur la copie : le pont les repère par libellé, donc sans effet.
+
+### Fichiers
+`Phase 1/maquette-branchee/` : `build.py` (options `--deploy` pour la copie 8090, `--local` pour le site principal `sellerie-confort.local`), `sc-maquette.php`, `test-logos.mjs`, `test-parcours.mjs`. Aperçu : `http://sellerie-confort.local/?p=39477&sc_maq=1`. Le mu-plugin `sc-maquette` est installé sur le site principal et sur la copie, sans effet hors `?sc_maq=1`.
