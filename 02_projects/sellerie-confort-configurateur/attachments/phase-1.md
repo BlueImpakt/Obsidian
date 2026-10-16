@@ -1258,3 +1258,26 @@ La préprod est la **répétition générale** de la mise en prod.
 **Outils o2switch** : cPanel propose en général un outil de clonage (WP Toolkit ou Softaculous selon l'installation) et le déploiement git. Attention, « pousser vers le site en ligne » peut écraser la base : à n'utiliser que pour les fichiers. À confirmer avec VIMAWEB.
 
 **Atout de notre approche** : l'interface tient dans une extension et s'active produit par produit ; mise en prod = déposer des fichiers et cocher des fiches ; retour arrière immédiat.
+
+**Calques automatiques : SAM 3 sans entraînement (Kaggle T4, 17/10)** : `facebook/sam3` (848 M de paramètres, accès accordé par Meta le 17/10), aucune selle de Valérie vue à l'entraînement, donc mesure sur les **55 configurations**. Une demande par zone, quatre façons : un clic au point le plus intérieur de la zone, une boîte autour de la zone (rectangle de l'opérateur), clic + boîte, texte (« motorcycle seat », « piping », « stitching »…, meilleur masque retenu : borne haute). Notebook : `plugin-gestion/tests/essai_sam3_zeroshot.ipynb` (installation de SAM 3 sans rétrograder NumPy).
+
+| Zone (configurations) | Clic, choix de SAM | Clic, meilleur des 3 | **Boîte** | Clic + boîte | Texte (meilleur) |
+|---|---|---|---|---|---|
+| Bec (54) | 0,72 | 0,86 | **0,89** | 0,89 | 0,16 |
+| Dosseret (12) | 0,23 | 0,67 | **0,94** | 0,94 | 0,29 |
+| Assise avant (18) | 0,31 | 0,61 | **0,81** | 0,81 | 0,25 |
+| Assise arrière (16) | 0,45 | 0,79 | **0,79** | 0,79 | 0,34 |
+| Assise unique (39) | 0,42 | 0,49 | 0,55 | 0,56 | 0,33 |
+| Bandes (25) | 0,31 | 0,68 | 0,52 | 0,57 | 0,16 |
+| Bandes et dosseret (28) | 0,10 | 0,31 | 0,48 | 0,60 | 0,16 |
+| Bandeaux (54) | 0,36 | 0,50 | 0,29 | 0,40 | 0,13 |
+| Liserés (51) | 0,26 | 0,28 | 0,06 | 0,05 | 0,34 |
+| Surpiqûres (51) | 0,01 | 0,01 | 0,01 | 0,01 | 0,09 |
+| **Moyenne (55)** | 0,33 | 0,47 | 0,44 | 0,47 | 0,21 |
+| Moyenne (11 configurations de test des modèles entraînés) | 0,32 | 0,43 | 0,39 | 0,42 | 0,20 |
+
+- **Lecture** : sans aucun entraînement, une **boîte** suffit pour les **zones compactes et bien délimitées** : bec 0,89, dosseret 0,94, assise avant 0,81, assise arrière 0,79 (au niveau de Mask2Former entraîné, voire au-dessus pour le dosseret). En revanche, SAM 3 échoue sur les **zones allongées qui entourent la selle** (bandeaux 0,29 à 0,50, bandes et dosseret 0,48 à 0,60) : leur boîte couvre presque toute la selle. Les **lignes** (liserés, surpiqûres) restent hors d'atteinte (au mieux 0,34 pour les liserés, par le texte).
+- « Meilleur des 3 » suppose qu'un opérateur choisisse parmi les trois propositions de SAM, ce qui est réaliste dans un outil interactif.
+- **Comparaison** sur les 11 mêmes configurations de test : SAM 3 sans entraînement 0,43 au mieux, contre **0,72 pour Mask2Former entraîné** sur les 44 autres. Les deux sont complémentaires : Mask2Former place mieux les grandes zones et les bandeaux, SAM 3 détoure mieux les zones compactes à partir d'une boîte.
+- Limites : une exécution, prompts non réglés (une seule boîte ou un seul clic par zone), contours non examinés au pixel près ; affiner SAM 3 sur les calques n'est pas testé (848 M de paramètres : un GPU T4 ne suffit probablement pas sans gel partiel du modèle).
+- **Conséquence pour la Phase 2** : un outil semi-automatique réaliste combinerait (1) Mask2Former pour proposer toutes les zones, (2) SAM 3 pour redétourer les zones compactes à partir des boîtes de Mask2Former ou d'un rectangle tracé par Valérie, (3) une sélection des coutures pour les liserés et surpiqûres (elles suivent les bords des zones à 99 % et 78 %), (4) la correction manuelle du reste. La mesure décisive reste le temps de retouche par selle, face au détourage actuel dans Photoshop.
