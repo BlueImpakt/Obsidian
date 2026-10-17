@@ -28,8 +28,8 @@ Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 
 | Volet | Livrable attendu | État au 15/10 |
 |---|---|---|
-| Audit des tâches manuelles automatisables | Liste des tâches avec temps et coût estimés (rappels, emailing, bons de commande) | **Pas commencé.** Source : CR de la réunion du 07/10. |
-| Diagnostic de la perte de panier | Diagnostic avec préconisation (cookies, sauvegarde de session) | **Pistes** : `payment.php` écartée (§8, équivalent au modèle actuel) ; restent 447 tâches planifiées en échec, cron à vérifier, tous les plugins chargés sur panier et paiement (§8), absence de cookies. Préconisation à rédiger. |
+| Audit des tâches manuelles automatisables | Liste des tâches avec temps et coût estimés (rappels, emailing, bons de commande) | **En cours (17/10), voir §25** : fiche d'habillage (bouton « Habillage », maquette A4) et courriel « En fabrication » au clic sur l'étiquette retenus ; courriels après commande déjà en place, note de suivi DPD automatique (vérifié dans le code). Source : CR de la réunion du 07/10. |
+| Diagnostic de la perte de panier | Diagnostic avec préconisation (cookies, sauvegarde de session) | **Fait le 17/10, sans accès prod ni dev** : `Phase 1/diagnostic-panier-perdu.md`. **Causes confirmées dans le code :**<br>1. **Payline** renvoie vers « Commande reçue » avant la banque, et WooCommerce y vide le panier : tout paiement abandonné, annulé ou refusé laisse un panier vide.<br>2. **Cofidis** renomme la session du client avant sa redirection.<br>3. Panier sans compte gardé **2 jours** seulement.<br>**Écartés** : Alma, Complianz, `payment.php`, script du thème. **Préconisations** : ne pas vider le panier avant paiement, restaurer au retour de la banque, sessions de 30 jours, relance e-mail, lien de sauvegarde de configuration (refonte). |
 | État des lieux du suivi statistique | État des lieux avec outil de parcours utilisateur recommandé | **Pas commencé.** |
 | Chiffrage de la refonte complète et d'une maintenance mensuelle | Fourchette de jours et de coût | **Charpente faite** (Phase 3 : 26 à 43 j). Maintenance à chiffrer à part. |
 
@@ -1027,10 +1027,19 @@ Un quatrième type : les **couches fixes** (1 choix, 78 couches), qui ne sont pa
 
 **Propreté des trois jeux (vérifiée)** : Liserés et Surpiqûres n'ont **ni doublon ni faute** et une seule composition de liste partout. Matières : deux défauts dans les données, **« Gris tonnerrre »** (trois r) dans les **66 listes « Assises »** (les 159 autres écrivent « Gris tonnerre ») et **« orange poterie »** en minuscule dans 66 listes. Corrigés sur la copie par le mécanisme de l'écran (renommage), le doublon héritant de la famille « Les Gris ». **Vignettes** : dans les listes standard chaque matière n'a **qu'une seule vignette** (nuancier 2022/05, 750 × 750) ; les « plusieurs vignettes » venaient des autres listes (nid d'abeille, images de 171 px), et le compteur ne les prend plus en compte.
 
-**Rattachement du nid d'abeille et des logos à la palette de 26 fils : décision à prendre, rien de fait.**
-- **Logos** : les 4 fils de mes essais (blanc, rouge vif, vert brillant, jaune citron) sont dans les 26. **Broderie en production** : le champ d'options « Couleurs broderie » (26 pastilles, hors configurateur) reprend exactement les 26 fils, mais aucun lien dans le catalogue : renommer un fil ne change pas la broderie.
-- **Nid d'abeille** : 36 noms de couleur distincts sur ses listes (27 choix sur la MT-09, 29 sur une autre fiche). 21 des 26 fils sont utilisés ; 8 noms sont des synonymes d'un fil (citron, bordeau, Rouge Bordeaux, Gris brume argent, « blanc et fiber blanc », « rouge vif-brillant » à confirmer, Bleu Égyptien et Bleu Yam, qui fusionneraient en « Bleu égyptien et Yam ») ; **7 couleurs n'existent pas dans les 26** et seraient perdues sans précaution : bleu petronas, bleu sirius, marron foncé, marron clair, rose clair, prune, violet (chacune dans une seule liste).
-- **Proposition** : rattacher le nid d'abeille et la broderie au jeu Surpiqûres (palette unique), fusionner les synonymes, garder les 7 couleurs en plus comme **couleurs supplémentaires réservées au nid d'abeille**, ou demander à Valérie si elles sont obsolètes ; trancher le cas Égyptien/Yam avec elle.
+**Rattachement du nid d'abeille et des logos à la palette de 26 fils : fait sur la copie (17/10, après accord de Melvin).**
+- **Constat de départ** : seules **2 fiches** ont une couche de nid d'abeille dédiée : **Yamaha MT-09** (59286, 27 choix) et **BMW F 900 XR / R** (32182, 29 choix, liste ancienne et désordonnée). La **Suzuki GSX-S 8S/8R** (59650) n'a pas de couche dédiée : sa couche « Couture » est déjà la liste standard de 26 fils. La MT-09 couvre les **26 fils au complet** (+ le cas Égyptien/Yam) ; la F 900 XR n'a aucun gris et a **7 couleurs hors palette**.
+- **Ce que « rattacher » change** : une couleur de nid d'abeille prend l'**identité du fil** (nom, famille, activation communs). Les **images restent distinctes** (un PNG coloré par fiche) et les **listes par fiche ne changent pas** : aucune fiche ne se met à offrir les 26 couleurs.
+- **Résultat (écran, copie)** : **Surpiqûres 26 (+11 supplémentaires)**, À vérifier 131 (183 avant : les 52 noms de nid d'abeille n'y sont plus). Les 27 et 29 choix des deux fiches sont **tous conservés** après composition (vérifié), maintenant classés en familles (Les Noirs, Les Gris…) comme les autres listes de fils.
+- **Fusionnés avec un fil de la palette (synonymes)** : citron → Jaune citron ; bordeau et Rouge Bordeaux → Bordeaux ; Gris brume argent → Argent et Brume. Le reste du nid d'abeille correspond déjà à un fil par son nom.
+- **Les 11 couleurs supplémentaires (rien n'est perdu)**, rangées sous l'onglet Surpiqûres, après les 26 :
+  - **7 hors palette**, F 900 XR uniquement : bleu petronas, bleu sirius, marron foncé, marron clair, rose clair, prune, violet ;
+  - **2 calques distincts, variantes du fil « Bleu égyptien et Yam »** : « bleu égyptien » et « bleu yam » gardent chacun leur calque et héritent la famille et l'activation du fil (désactiver le fil les masque) ;
+  - **2 noms ambigus, non rattachés** tant que Valérie n'a pas répondu : « blanc et fiber blanc » (Fiber blanc est une texture, pas un fil) et « rouge vif-brillant » (Rouge vif ou Rouge brillant ?).
+- **Logos** : la couleur du fil d'un logo est déjà **la médiane du calque « Couture » du modèle** (jeu Surpiqûres), donc les logos reposent sur la palette. Le rattachement : `scripts/exporter_palette_fils.php` exporte les 26 fils du catalogue (`palette_fils.json`) et `export_configurateur.py` les lit avec `FILS=palette` (par défaut, les 4 fils d'essai ; non lancé sur les 26 : 26 couleurs × 5 logos × 2 emplacements par modèle). Les 22 choix de mon prototype restent dans « À vérifier » (« Broderie de logo (essai) »).
+- **Broderie, champ d'options de commande « Couleurs broderie »** (26 pastilles, hors configurateur) : mêmes noms que les 26 fils, mais **toujours pas relié** : renommer un fil ne le suit pas. Il faut une passerelle (le plugin remplit les libellés du champ depuis le catalogue) : environ 1 j, **non faite**.
+- **À trancher avec Valérie** : (1) les 7 couleurs de la F 900 XR sont-elles encore vendues ? (2) « Égyptien et Yam » : garder deux calques (retenu pour l'instant) ou un seul ? (3) « rouge vif-brillant » : quel rouge ? (4) « blanc et fiber blanc » : un seul calque pour les deux ? La F 900 XR a aussi un doublon (« bleu yam » deux fois).
+- **Bascule technique** : les clés du catalogue passent par `SC_Gestion::rattacher()` (palette, synonymes, variantes, noms à confirmer en constantes de la classe). Si le jeu de 26 change, la constante `PALETTE` est à mettre à jour.
 
 Code : `Phase 1/plugin-gestion/sc-gestion-configurateur/` (README à jour). Aucun changement en production.
 
@@ -1294,6 +1303,73 @@ La préprod est la **répétition générale** de la mise en prod.
 
 **Atout de notre approche** : l'interface tient dans une extension et s'active produit par produit ; mise en prod = déposer des fichiers et cocher des fiches ; retour arrière immédiat.
 
+### Hébergement : piste « reprendre o2switch au nom de Valérie » (17/10, à valider avec Valérie et VIMAWEB)
+**Problème** : sur l'hébergement de VIMAWEB, tout le chantier de la Phase 2 (dev, préprod) leur est visible. Moyens :
+- WP Umbrella (journal d'activité, sur prod et dev) ;
+- journaux d'accès o2switch ;
+- connexions WordPress ;
+- e-mail de création de compte ;
+- `WP_DEBUG_LOG` actif sur dev.
+
+**Ce qu'on sait** :
+- Le dev a été créé avec **WP Tiger**, dans le dossier `myTiger-Preprod` du **compte cPanel `sellerieconfort`** : prod et dev vivent donc très probablement dans **un même compte o2switch, dédié au site**.
+- Les deux adresses IP différentes (prod `109.234.165.168`, dev `109.234.165.38`) passent toutes deux par le frontal « PowerBoost » d'o2switch : elles ne prouvent pas deux serveurs.
+
+**Piste** : avec l'accord de VIMAWEB, transférer ce compte à Valérie, qui devient titulaire et payeuse.
+- **Cas 1, compte dédié (le plus probable)** : changement de titulaire par le support o2switch (le client n'a pas accès aux outils d'administration du serveur) ; procédure officielle non trouvée, à confirmer avec eux. Avantage majeur : **rien ne bouge** (même serveur, même IP, cache LiteSpeed, aucune migration, aucune coupure).
+- **Cas 2, site logé dans un compte d'agence de VIMAWEB** : pas de cession possible. Valérie ouvre son abonnement o2switch, migration du site (o2switch aide gratuitement aux migrations entrantes), puis changement d'adresse IP dans le DNS, que Valérie contrôle déjà chez OVH.
+
+**À régler dans les deux cas** :
+- licences des plugins payants au nom de VIMAWEB (Divi, SEOPress Pro, configurateur…), à transférer ou racheter ;
+- WP Umbrella à retirer, sauf si Valérie garde leur maintenance ;
+- changement de tous les codes (cPanel, FTP, base, administrateurs), à l'occasion du traitement du plugin signalé comme compromis ;
+- sort de dev et préprod.
+
+**Intérêt** : Valérie titulaire peut créer un accès à Melvin et une préprod sur sous-domaine. VIMAWEB ne voit plus le chantier, sauf s'il reste en maintenance.
+
+**Alternatives** :
+- **Local + préprod sur un hébergement contrôlé par Melvin**, livraison en paquet (git, extension, scripts) : rien de visible avant la mise en production.
+- **OVH au nom de Valérie** : elle y a déjà domaines, DNS, boîtes mail, l'ancien hébergement (PHP 7.2, à éteindre après migration des boîtes) et un plan « Performance » `sellerz` peut-être inutilisé. Cela implique une migration et des tests de performance (pas de cache LiteSpeed). Renouvellement OVH en avril 2027.
+- **Recommandation** : si VIMAWEB accepte et que c'est le cas 1, reprendre o2switch est le plus simple et le moins risqué.
+
+**Question à poser** (par Valérie, à VIMAWEB ou à o2switch) : « Le compte cPanel `sellerieconfort` est-il un abonnement dédié, et peut-on en transférer la titularité à Sellerie Confort ? »
+
+### Environnement de dev de la Phase 2 : données clients, RGPD, neutralisation (décision de Melvin, 17/10)
+**Retenu** : cadrer la RGPD dans le contrat de Phase 2, puis travailler sur une **copie exacte de la prod, en ligne sur o2switch** (préproduction WP Tiger), **neutralisée** à l'installation. C'est plus simple qu'une copie pseudonymisée.
+
+**1. Cadrer la RGPD dans le contrat de Phase 2**
+- Le contrat de Phase 1 (art. 2) interdit de consulter clients, commandes et paiements : la Phase 2 doit l'autoriser explicitement.
+- Clause de **sous-traitance (art. 28 RGPD)** : Valérie responsable du traitement, Melvin (Blue Impakt) sous-traitant. À y fixer :
+  - finalité (développement, tests, maintenance) ;
+  - catégories de données (clients, commandes, comptes) ;
+  - lieu de stockage et durée ;
+  - mesures de sécurité ;
+  - pas de sous-traitance ultérieure sans accord ;
+  - suppression en fin de mission ;
+  - alerte en cas de fuite.
+- **Justifier l'usage de données réelles** (principe de minimisation, art. 5) : diagnostic de commandes réelles, tests sur l'historique des commandes (structure, champs, mise à jour du configurateur).
+- **Vocabulaire** : une copie dont on remplace noms et e-mails mais garde les commandes est **pseudonymisée**, pas anonymisée : elle reste une donnée personnelle (art. 4). La pseudonymisation n'est plus nécessaire avec la clause ; elle reste une option pour une copie hors serveur.
+
+**2. Dev en ligne sur o2switch, pas en local**
+- **Pourquoi** : le local actuel est limité, mais pas par l'absence de données clients. Il est reconstruit à partir des pages publiques, n'a que 4 extensions actives sur 34 (sans LiteSpeed, CleanTalk, Payline, Alma, Cofidis, Complianz…) et n'a pas d'adresse publique (pas de retour bancaire, pas d'e-mails).
+- **Données réelles nécessaires** pour très peu de tests : diagnostic d'une commande précise, et vérification finale en prod. Tout le reste (configurateur, catalogue, panier, commandes, paiements en mode test, e-mails, factures, historique, statistiques) se fait sans.
+- **Mise en place** : VIMAWEB crée ou rafraîchit une préproduction avec **WP Tiger** (copie complète des fichiers et de la base, dans un sous-dossier ou sous-domaine du compte o2switch, comme le dev actuel `myTiger-Preprod`, aujourd'hui figé vers juin et en retard de versions).
+  - WP Tiger copie tout, données clients comprises, sans option de pseudonymisation documentée (non vérifié dans la doc officielle).
+  - **Ne jamais « pousser » la préprod vers la prod** : cela écraserait les commandes arrivées entre-temps.
+- **Copie à garder sur l'hébergement plutôt que sur le poste de Melvin** : les données ne quittent pas le serveur. En local, il faudrait un disque chiffré, aucune copie ailleurs et la suppression en fin de mission (2 890 clients).
+- **Visibilité** : la préprod WP Tiger est dans le compte de VIMAWEB, donc visible pour eux. Elle ne devient privée qu'avec la reprise du compte au nom de Valérie (sous-section précédente).
+
+**3. Neutralisation de la copie : obligatoire, contrat ou pas**
+Une copie exacte garde les clés de paiement de production, les vrais e-mails clients et les tâches planifiées. Sans neutralisation, le dev peut écrire aux clients, encaisser ou rembourser, et renseigner WP Umbrella. Un script, lancé une fois à chaque copie :
+- coupure des e-mails sortants (ou redirection vers une adresse de test), y compris WP Mail SMTP ;
+- moyens de paiement en mode test (Payline, Alma, Cofidis), clés de production retirées ;
+- tâches planifiées et Action Scheduler désactivées (relances, synchronisations, exports) ;
+- WP Umbrella désactivé ;
+- site fermé aux moteurs et aux visiteurs (mot de passe, `noindex`) ;
+- plugin signalé comme compromis non exécuté, et recherche du fichier `wp-comments-posts.php` dans la copie.
+
+**À préparer par Melvin** : la clause RGPD de sous-traitance, le script de neutralisation, et la demande à VIMAWEB (envoyée par Valérie).
+
 **Calques automatiques : SAM 3 sans entraînement (Kaggle T4, 17/10)** : `facebook/sam3` (848 M de paramètres, accès accordé par Meta le 17/10), aucune selle de Valérie vue à l'entraînement, donc mesure sur les **55 configurations**. Une demande par zone, quatre façons : un clic au point le plus intérieur de la zone, une boîte autour de la zone (rectangle de l'opérateur), clic + boîte, texte (« motorcycle seat », « piping », « stitching »…, meilleur masque retenu : borne haute). Notebook : `plugin-gestion/tests/essai_sam3_zeroshot.ipynb` (installation de SAM 3 sans rétrograder NumPy).
 
 | Zone (configurations) | Clic, choix de SAM | Clic, meilleur des 3 | **Boîte** | Clic + boîte | Texte (meilleur) |
@@ -1341,3 +1417,150 @@ Ce qui n'a pas été testé (à mentionner honnêtement dans le rapport) : SAM 3
 Conséquence pour la Phase 2 : la **découpe des calques reste manuelle** chez Valérie (comme décidé en réunion le 07/10 pour les étapes 1 et 2 du flux d'ajout d'un modèle). L'automatisation porte sur ce qui suit la découpe et que les essais ont validé : génération des images de matières à partir des calques (poste 3, écran de gestion §14.4-14.5), configurateurs globaux 2.0 (§14.2), suppression de la saisie image par image et de l'intervention payante de VIMAWEB pour les couleurs.
 
 Traces : scripts et notebooks dans `Phase 1/plugin-gestion/tests/` (`essai_sam_selle.py`, `essai_dinov2_zones.py`, `essai_segformer_b0.py`, `entrainer_mask2former*.ipynb`, `essai_sam3_zeroshot.ipynb`, `essai_sam21_zeroshot.ipynb` non lancé) ; jeu de données (55 configurations) hors dépôt dans `sellerie-confort-regroupement/_jeu_segmentation*`, copie privée sur le compte Kaggle de Melvin.
+
+## 24. Fiche produit au design de la maquette : configurable et non configurable (17/10)
+
+**Décision de Melvin** : le configurateur ne peut pas être refait sans la fiche produit, sinon les options et les infos perso sont demandées deux fois. Deux fiches au même design (maquette « Fiche produit ») :
+- **Selle configurable** : contenu d'origine **sans** options, broderies ni infos perso (elles sont dans le configurateur). Zone d'achat : prix, délai, bouton **« Configurer ma selle »** vers le configurateur, avertissement d'origine sur les couleurs par défaut.
+- **Produit non configurable** : contenu d'origine **avec** ses options et infos perso (champs APF) sur la fiche, **ajout au panier direct** (une étape de moins). Seule la forme change.
+- Parcours : fiche → configurateur → panier (selle configurable) ; fiche → panier (non configurable).
+
+**Fait sur la copie** (`?sc_fiche=1`, `Phase 1/maquette-branchee/fiche.php`, styles `assets/fiche.css` tirés de la maquette) :
+- Contenu réel : photos (principale + galerie avec vignettes), titre, référence, prix et prix barré, fil d'Ariane par catégories, résumé et description si présents, catégories et étiquettes, produits similaires de WooCommerce, garanties ; textes de modification, délai et livraison repris du site (fiche et page panier).
+- Non configurable : le formulaire WooCommerce et ses champs APF sont dans la colonne principale, restylés en cartes d'options ; la boîte d'achat affiche le total en direct et déclenche l'ajout ; les conditions APF (champs qui apparaissent selon une réponse) restent gérées par APF lui-même.
+- Le fil d'Ariane du configurateur ramène à la fiche.
+- **Test** (`test-fiches.mjs`) : fiche configurable (bouton vers le configurateur, aucun champ d'option) ; fiche non configurable (hauteur, gel, infos, échange standard : total 340 € = 245 + 10 + 70 + 15, identique au panier, toutes les lignes APF dans le panier). Captures `poste3-voieB-14` à `-16`.
+- **Limite du test** : les deux sites locaux ne contiennent **aucun produit non configurable** (copie construite à partir des fiches configurables publiques). Le cas a été testé sur un produit de **TEST** créé sur la copie (`creer_produit_test.php`, réf. `TEST-NON-CONFIG`, photos et champs APF de la Duke). À vérifier sur de vrais produits non configurables (en stock, carte cadeau, accessoires) dans la copie complète.
+
+**À noter** : la base locale a changé de port (10005 → 10006) après le redémarrage de Local ; `wp-config.php` et `lancer.ps1` de la copie sont mis à jour.
+
+### Correction du §24 (17/10) : produit de test non configurable
+- **Erreur** : le premier produit de test reprenait les champs APF de la Duke (configurable), donc des **broderies en option**, qui n'existent pas sur une selle non configurable. Le gabarit, lui, affiche bien les champs propres à chaque produit (la maquette ne sert qu'au design) ; c'est le contenu du test qui était inventé.
+- **Corrigé** : le produit de test recopie maintenant la **fiche publique de prod « Selle confort moto Yamaha R6 »** (non configurable, lue le 17/10) : prix 265 → 225 €, caractéristiques (la broderie fait partie du modèle : « Logo Yamaha en blanc et r6 en blanc »), catégorie, étiquettes, champs hauteur, gel, informations et type de commande « Modification » seul, avec son texte. Photo : celle de la R6 configurable de la copie.
+- **Fiche non configurable ajustée au contenu d'origine** : « Délai de 1 mois » (selle fabriquée sur commande ; l'état du stock seulement pour la catégorie « En stock »), caractéristiques et « Ce modèle de selle est disponible : Modification » dans la boîte d'achat (sous le bouton, qui reste visible), « Prix de base (sans options) », accordéon « Modification, délai et livraison ».
+- Test : hauteur -2 cm, gel 2 assises, infos, Modification : **305 €** (225 + 10 + 70), identique au panier. Non reproduit : les mensualités Cofidis de la fiche d'origine (extension de paiement absente des copies).
+
+## 25. Automatisations : fiche d'habillage et courriel « En fabrication » (17/10)
+
+Volet offert « Audit des tâches manuelles automatisables ». Sources : code des extensions de la prod lu dans le clone (lecture seule), une commande de Melvin (juin-juillet 2026) pour les courriels reçus, captures de Melvin dans l'admin. Aucune commande client consultée.
+
+### Ce que le site produit déjà à partir d'une commande
+
+| Document | Outil | Contenu | Production |
+|---|---|---|---|
+| Bon de livraison (« bon de commande » pour Valérie, à confirmer) | WooCommerce PDF Invoices & Packing Slips, modèle maison du thème enfant (`woocommerce/pdf/facture-sellerie-confort/`) | Client, livraison, paiement, selle, **délai de fabrication** (ajout VIMAWEB du 30/05/25), toutes les lignes de la commande (configuration + champs APF), « Caractéristiques selle » | Contenu automatique ; création automatique ou au clic : réglage en base, **à vérifier** |
+| Variante « avec étiquette » | Idem (`packing-slip-avec-etiquette.php`) | Le bon + un encadré « Étiquette de suivi de fabrication » par selle | Idem ; laquelle des deux est utilisée : à demander |
+| **Étiquette de production** (colonne « Etiquettes prod ») | `product-manufacturing-label` : extension d'étiquettes d'expédition modifiée | N° de commande, client, date, moto + année, selle chauffante, gel, TP / Pi / Pa (taille et poids pilote, poids passager), hauteur, type de commande | **Un clic par commande**, imprimante d'étiquettes (à confirmer) ; marque la commande « imprimée » (`_printed`) |
+| Facture | WCPDF, modèle maison | Comptable | Selon réglages |
+
+**L'étiquette sert à la base et à la mousse** (identification, morphologie, gel) : elle ne lit que les champs APF, donc **aucune matière ni couleur** ; broderie, motif et commentaires sont **masqués exprès** (`hideproductfieldstab`). L'habillage (matières, liserés, surpiqûres, broderie) est aujourd'hui recopié **à la main** sur une fiche interne, que nous n'avons pas vue.
+
+### Fiche d'habillage : bouton « Habillage » (retenu par Melvin)
+
+![[sellerie-confort-fiche-habillage-maquette.png]]
+
+Maquette A4 (données fictives, selle KTM Duke composée à partir des calques publics) : ![[sellerie-confort-fiche-habillage-maquette.pdf]]. Source : `Phase 1/fiche-habillage/` (`maquette-fiche-habillage.html`, `composer_visuel_duke.py`).
+
+- **Bouton « Habillage »** à côté de « Etiquette » dans la liste des commandes, + action groupée (imprimer les fiches des commandes cochées). **A4**, imprimante couleur ; l'étiquette reste sur l'imprimante d'étiquettes. Travailler par lot (toutes les étiquettes, puis toutes les fiches) : Chrome garde la dernière imprimante.
+- **Contenu** : en-tête (n°, date, client, échange standard, délai, broderie, gel) ; **image de la selle configurée** ; **pilote et moto** (moto et année, taille, poids pilote et passager, hauteur) ; options ; **habillage** zone par zone (pastille couleur, case « Coupé ») ; **broderie** avec **vignette du motif**, fil, case « Brodé » ; **commentaires en entier** (client, informations complémentaires, note interne `_sc_order_note`) ; suivi atelier (coupe, couture, broderie, contrôle).
+- **Règles** : la fiche lit **tous** les champs de la commande (un champ inconnu va dans « Autres informations ») ; les cadres de commentaires restent **imprimés même vides**, pour écrire à la main.
+- **Image** : `mkl_pc` superpose déjà les calques choisis en une image (`save_image`, `merge`, REST `mkl_pc/v1/merge/…`). En 1.7.6, l'image est recalculée depuis la configuration actuelle (une matière retirée peut la changer) ; la 2.0.0 fige image et noms à l'achat.
+- **Montage** : mu-plugin à part, l'extension de VIMAWEB n'est pas modifiée. **Charge : 1,25 à 1,5 j.**
+- **À obtenir** : photo de la fiche manuelle actuelle (ordre des rubriques), confirmation de l'imprimante d'étiquettes et de la présence d'une imprimante couleur.
+
+### Courriels après commande : ce qui existe déjà
+
+Courriels reçus pour une commande de Melvin (n° 153844) : compte créé, commande reçue (avec pièce jointe), justificatif de paiement (9 juin) ; **« Note ajoutée à votre commande »** puis **« Commande expédiée »** (23 juillet) ; courriels DPD (livraison, arrivée en relais) ; commande terminée (25 juillet).
+
+**La note de suivi DPD est automatique, pas manuelle** (vérifié dans le code) : texte « Cher client, vous pouvez suivre la livraison de votre colis DPD en cliquant sur ce lien : https://my.dpd.fr/<n° de colis> » = extension **DPD France 6.0.1** (`dpd-woocommerce`), tâche planifiée **horaire** `dpd_schedule_status_update` en mode « lien de suivi par numéro de colis » (`ScheduledActions.php`, lien `my.dpd.fr/`) : elle ajoute une **note client** (`add_order_note($note, 1)`, d'où le courriel « Note ajoutée ») puis passe la commande au statut d'expédition (d'où « Expédiée »). L'action groupée manuelle de l'extension produirait un lien `dpd.fr/tracex_…`, absent ici. Conséquence : la tâche DPD tournait en juillet 2026 ; elle n'est probablement pas parmi les 447 tâches en échec.
+
+**Ce qui manque** : rien entre la commande et l'expédition (**6 semaines de silence** sur cet exemple, pendant la fabrication). Inutile d'ajouter le lien DPD à nos courriels : DPD et sa note le font déjà.
+
+### Courriel « En fabrication » au clic sur l'étiquette (retenu par Melvin)
+
+- Déclencheur : le clic sur **« Etiquette »** (la commande passe `_printed = yes` par l'appel `mark_order_as_printed`) → statut « En fabrication » → courriel au client « Votre selle est en fabrication », avec le délai (règle du bon de livraison : « En stock » ou étiquette « délai de … » du produit).
+- Montage : statut maison (vérifier d'abord la liste existante dans Custom Order Status) + classe de courriel WooCommerce (`woocommerce_email_classes`, modifiable par Valérie dans Réglages › E-mails) ; désactiver le courriel générique de Custom Order Status pour éviter les doublons.
+- Option : courriel à mi-délai (« votre selle avance, livraison prévue vers le … »).
+- **Charge : 0,25 à 0,5 j.**
+- À capturer dans l'admin de la prod avant de coder : statuts personnalisés existants, courriels actifs (Réglages › E-mails).
+
+### Autres pistes listées (à chiffrer avec les volumes de Valérie)
+Échange standard : relances client J+7 / J+10 et alerte J+12 pour la caution (le contrôle des 10 jours est désactivé dans `woo-payline-caution`), 1 à 1,5 j · panier perdu : lien de reprise et relance, 1,5 à 2,5 j · demande d'avis après livraison, 0,25 à 0,5 j · envoi mensuel des factures au comptable, 0,25 à 0,5 j. Retirée : « notes de commande préremplies » (supposition sans fondement ; la colonne « Notes » est une note interne libre).
+
+## 25. Revue design et textes des fiches et du configurateur (17/10)
+
+- **Méthode** (choix de Melvin : A + B + C) : skills `design-critique` et `ux-copy` en direct, puis trois agents en parallèle sur un brief commun (aucun texte inventé, aucun fichier modifié) : **UI Designer** (design visuel), **UX Researcher** (parcours d'achat et reformulations), **UI Finish-Gate Reviewer** (finition et accessibilité, pages ouvertes dans Chrome, axe-core). Verdict du contrôle final : **HOLD**, 4 bloquants.
+- **Bloquants corrigés** : police, couleurs et focus clavier écrasés par le CSS en ligne de Divi (la feuille du thème est maintenant chargée après) ; type de commande et hauteur **cochés à la place du client** (plus de choix par défaut, blocage à la validation avec message) ; selle rognée dans l'aperçu.
+- **Autres corrections** : zones nommées, familles sur une rangée, étapes nommées, sélection nette, cibles de 44 px, boîte d'achat non coupée, délai cohérent (« Fabrication sur commande », Goldwing 3 mois), modalités visibles, fil d'Ariane commun fiche/configurateur, textes reformulés **sans information nouvelle**.
+- **Restent** : aperçu de la Duke (logo incrusté dans la photo de base : il faut une photo sans broderie) ; fautes des textes APF et du contenu produit (à corriger par Valérie) ; « 45 jours » contre « 1 mois » (au client) ; panier à refaire ; conditions APF des champs supplémentaires.
+- Tests rejoués après corrections : Duke, BMW R 1200 RT, FJR 1300, Z900 (2.0.0), fiche configurable et non configurable : paniers et totaux identiques.
+- Détail et tableau complet : `Phase 1/maquette-branchee/revue-design/revue-synthese.md` (brief des agents : `brief-revue.md`, revue A : `revue-A-claude.md`, script appliqué : `appliquer_revue.py`). Captures `poste3-voieB-17` à `-19`.
+
+### Compléments du 17/10 (suite) : courriels, panier perdu, avis, caution
+
+**Courriels automatiques actuels.** Gabarits **WooCommerce** (réglables dans WooCommerce › Réglages › E-mails), envoyés par l'extension **WP Mail SMTP** (le service d'envoi réglé est en base : à lire dans les en-têtes d'un courriel reçu, « Afficher l'original »). S'y ajoutent les courriels d'extensions : note de suivi DPD, statut « Expédiée » (Custom Order Status), « Prélèvement de la caution » (`woo-payline-caution`), cartes cadeaux, notifications WPForms. **Aucun outil d'emailing commercial** (lettre d'information, promotions) n'est installé. L'« emailing à la main » du CR du 07/10 désigne probablement les courriels écrits par Valérie (dont la relance de retour de selle, confirmée par Melvin) : à lui demander.
+
+**Cartes cadeaux : piste retirée.** Version gratuite de PW Gift Cards : pas de date d'expiration (fonction de la version Pro, `set_expiration_date` vide), donc rien à rappeler.
+
+**Avis clients** : J+15 **après la livraison** (passage en « Terminée » par DPD), lien vers la fiche Google. Aucune extension d'avis installée. 0,25 à 0,5 j.
+
+**Configuration perdue, panier perdu : deux problèmes.**
+- **Configuration perdue avant le panier** : le configurateur `mkl_pc` n'enregistre rien (aucune sauvegarde navigateur dans son code ; module payant « Save your design » chez l'éditeur). Rechargement, retour arrière ou onglet fermé = tout est perdu.
+- **Panier perdu après l'ajout** : piste trouvée en lecture publique de la prod (en-têtes seulement). Les fiches produit sont servies par le **cache serveur o2switch** (`x-lsadc-cache: hit`, « PowerBoost », en plus de LiteSpeed Cache, `max-age` 7 jours), **même quand la requête porte les cookies de panier WooCommerce** (`woocommerce_items_in_cart`, `wp_woocommerce_session_*`) : un client qui a un panier reçoit la même page en cache que tout le monde (compteur de panier, messages, jetons de sécurité figés jusqu'à 7 jours). La page panier, elle, n'est pas en cache. **Hypothèse à vérifier** par un test de visiteur (Melvin ou Valérie : ajouter au panier, revenir sur une fiche et sur l'accueil, regarder le compteur et le panier) puis, si confirmé, exclure les visiteurs ayant un panier du cache o2switch (réglage serveur, à faire par le titulaire de l'hébergement).
+
+**Prototype fait sur la copie (17/10)** : `Phase 1/relance-panier/` (mu-plugin `sc-relance.php`, README, test `test-relance.mjs`, captures). **16 vérifications sur 16** :
+1. Configuration en cours **sauvegardée dans le navigateur** (adresse `#z=…` de la maquette + infos pilote, 30 jours) et **remise au retour** avec le message « Votre configuration du … est retrouvée » et « Recommencer à zéro ».
+2. **« Recevoir par e-mail »** dans le **récapitulatif seulement** (à côté de « Partager » ; l'encadré de l'étape 4, à côté du panier, est retiré pour ne pas inciter à remettre l'achat à plus tard) : adresse + même schéma que le panier (décision de Melvin) : mention en petit « Si vous ne commandez pas, nous pourrons vous envoyer deux rappels (24 h et 72 h après) » et case **« Je ne veux pas de rappel »** (vérifié : cochée, aucun rappel) ; courriel au gabarit WooCommerce avec **image de la selle**, choix, total et bouton **« Reprendre ma configuration »** qui rouvre configuration **et** infos sur un autre appareil ; **rappels à 24 h et 72 h** ; désinscription en un clic dans chaque message.
+3. **Capture au paiement** : mention et case « Je ne veux pas de rappel » sous le champ e-mail ; copie du panier ; relances à 1 h, 24 h, 72 h ; **lien de reprise du panier vérifié dans un autre navigateur** (selle et options retrouvées).
+4. **Arrêt** dès qu'une commande payée existe avec la même adresse (vérifié), ou au clic de désinscription. Suivi dans WooCommerce › Relances. Sur le local, les courriels sont écrits dans `wp-content/sc-courriels/` (aucun envoi).
+
+![[sellerie-confort-relance-formulaire.png]]
+![[sellerie-confort-relance-courriel.png]]
+
+Charge pour la prod : environ **2 à 2,5 j** (adaptation au configurateur retenu, textes avec Valérie, RGPD, tests d'envoi réel et de paiement), en plus du diagnostic du cache (0,25 à 0,5 j).
+
+### Échange standard : retour de selle et caution
+
+**Aujourd'hui (code de `woo-payline-caution`, Vimaweb)** : aucune alerte. Seuls repères :
+- colonne **« Caution »** de la liste des commandes : bouton **« Prélever (n) »** pour chaque commande en échange standard payée par Payline, **dès le premier jour** (la mention « En attente » avant 10 jours est commentée dans le code) ; « Terminée » quand toutes les selles sont reçues ou les cautions prélevées ;
+- fenêtre par selle : **« Selle reçue »** ou **« Prélever »** (débit immédiat de la carte enregistrée chez Payline, `do_immediate_wallet_payment`, puis commande séparée « caution payée » et courriel « Prélèvement de la caution ») ; montant par produit, puis catégorie, puis défaut ;
+- **Cofidis : pas de bouton** (exclu dans le code). **Alma** : pas exclu, mais sans carte enregistrée chez Payline le prélèvement échoue (« Impossible de récupérer les informations du portefeuille »). **Carte virtuelle** (e-carte à usage unique ou courte durée) : le débit ultérieur échoue.
+- Valérie parcourt la liste, calcule les délais de tête et écrit les relances à la main.
+
+**Relance voulue par Melvin** : J+7 après la livraison, avec avertissement sur la caution. **Attention** : DPD passe la commande en « Terminée » à la livraison (courriel « terminée » 1 à 2 jours après la livraison sur l'exemple de Melvin) ; la condition « sauf si Terminée » bloquerait toutes les relances. Condition proposée : **selle non reçue et caution non prélevée** (données que l'extension tient par selle). Suite : 2ᵉ relance à J+14, résumé quotidien « Cautions à traiter » à Valérie, **prélèvement toujours validé par Valérie**. 1 à 1,5 j.
+
+**Simplifier la gestion : deux voies**
+
+| Voie | Contenu | Pour | Contre | Charge |
+|---|---|---|---|---|
+| A. Liste des commandes actuelle, enrichie | Colonne « Retour selle » : jours depuis la livraison, pastille verte / orange / rouge, relances envoyées ; vue filtrée « Échanges standard à traiter » ; action groupée « Selle reçue » | Rien de nouveau à apprendre | Mélangé aux autres commandes ; les cas sans carte (Alma, Cofidis) restent hors outil | 0,5 à 0,75 j |
+| B. **Écran « Échanges standard »** (WooCommerce › Échanges standard) | Une ligne par selle à récupérer : commande, client, date de livraison, J+, relances, moyen de paiement (carte enregistrée ou non), montant ; boutons Selle reçue / Prélever / Relancer / Envoyer un lien de paiement ; historique. **Gère aussi les relances de caution des clients sans carte prélevable** (paiement en 3-4 fois Alma ou Cofidis, carte virtuelle) : relance du retour de selle puis, à défaut, lien de paiement de la caution et relances de ce lien (demande de Melvin, 17/10) | Tout au même endroit, y compris les cas sans carte ; base des relances automatiques | Un écran de plus à maintenir | 1 à 1,5 j |
+
+**Recommandation : B**, en gardant le bouton « Selle reçue » dans la liste des commandes. Les deux voies partagent les relances (1 à 1,5 j ci-dessus).
+
+**Caution impossible à prélever (paiement en 3-4 fois, carte virtuelle) : solutions**
+
+| Solution | Principe | Pour | Contre |
+|---|---|---|---|
+| 1. Empreinte de carte séparée | Pour un échange standard payé avec Alma ou Cofidis : enregistrement d'une carte chez Payline (portefeuille, sans débit) à la fin de la commande | Même fonctionnement qu'aujourd'hui ensuite | Une étape de plus pour le client ; carte virtuelle toujours refusée ; carte expirée possible |
+| 2. **Consigne encaissée puis remboursée** (modèle des pièces auto) | La caution est payée à la commande, remboursée au retour de l'ancienne selle (remboursement déclenché par « Selle reçue ») | Aucun risque d'impayé, marche avec toute carte, y compris virtuelle | Le client avance 200 à 400 € ; financement par Alma/Cofidis à vérifier ; possible frein à la vente |
+| 3. Pré-autorisation | Blocage du montant sur la carte | Pas de débit | Validité d'environ 7 jours, trop courte avec un mois de fabrication |
+| 4. Mandat SEPA | Mandat de prélèvement signé à la commande | Indépendant de la carte et du financement | Nouveau prestataire ou option Payline, contestation possible 8 semaines |
+| 5. Lien de paiement à J+14 | Si pas de retour et pas de carte : lien de paiement envoyé (depuis l'écran B) | Simple, peu de développement | Aucune garantie : repose sur la bonne foi, recours sinon |
+| 6. Règle commerciale | Échange standard réservé au paiement comptant par carte (Alma, Cofidis masqués pour ce type de commande) | 0,25 j, risque supprimé | Ventes financées perdues ou à basculer en « Modification » |
+
+Proposition : court terme **6 ou 5** ; moyen terme **1** ou **2** selon les chiffres. À demander à Valérie : part des échanges standard payés en plusieurs fois, nombre de selles non renvoyées par an et montant perdu, ce qu'elle fait aujourd'hui quand le paiement est passé par Cofidis, délai réel accordé (10 jours après réception ?), moment du passage en « Terminée », texte de sa relance actuelle.
+
+### Ajustements demandés par Melvin après la revue (17/10)
+- **Zones** : les 8 pastilles sur 2 rangées de 4 (une rangée débordait et masquait Liserés et Surpiqûres).
+- **Broderies** : **couleurs et commentaire sous chaque emplacement** (dosseret, puis bandes), au lieu d'une palette commune en bas ; **5 motifs par ligne** (vignettes plus petites). Sur la Z900 (logos en calques), chaque emplacement a son fil (ex. dosseret rouge vif, bandes blanc). APF n'ayant qu'un champ « Couleurs broderie », on y coche l'union des couleurs et le détail par emplacement va dans « Autres couleurs / Précisions couleurs » (ex. « Dosseret : Gris souris (commentaire) ; Bandes : Gris macadam (commentaire) »). Vérifié au panier (FJR 1300, Z900).
+- Motifs APF sans image sur la copie (médias absents) : le nom du motif s'affiche à la place.
+- **Tout tient dans l'écran à 100 %** (demande de Melvin) : zones sur une seule rangée (une colonne par zone, nom court dessous), **toutes les familles visibles** (puces compactes sur 3 lignes au lieu d'une rangée qui défilait), en-tête « Matières & couleurs » masqué (le nom est dans l'onglet), mention « rendu non contractuel » déplacée dans le récapitulatif. Mesuré sans défilement dans le panneau en 1920×960 et 1440×790 ; sur un écran de 1366×650, le configurateur dépasse encore de 50 px.
+- **Survol de la selle** : vignette avec la matière de la zone, son nom et « Cliquer pour modifier », et la pastille de la zone mise en évidence dans le panneau ; le clic sur la selle choisit la zone (déjà présent dans la maquette, rendu visible).
+- **Logos brodés : les 26 couleurs de fil et plusieurs couleurs possibles** (demande de Melvin) : la palette des logos est maintenant celle des surpiqûres (= champ APF « Couleurs broderie », 26 couleurs) au lieu des 4 fils du prototype, avec choix multiple. **Aperçu** : si le logo n'existe pas en image dans la couleur choisie (seuls blanc, rouge vif, vert brillant, jaune citron existent), la page recolore l'image en fil blanc avec la première couleur choisie (canvas, découpe et relief conservés). **Panier** : APF reçoit toutes les couleurs (« Couleurs broderie » et détail par emplacement) ; la ligne du plugin indique le logo dans le fil le plus proche disponible (ex. « Yeux - fil blanc ») : à terme, un calque par logo sans couleur figée (option B) éviterait cette ambiguïté.
+- « **Sans broderie** » est maintenant la première tuile des motifs du dosseret.
+- **Tout le bloc blanc tient dans la fenêtre à 100 %** (demande de Melvin) : la hauteur du configurateur est calculée sur la fenêtre réelle (barre d'administration, en-tête et titre compris) au lieu de valeurs fixes ; puces de familles plus compactes et panneau un peu plus large sur grand écran (2 lignes de familles en 1920 px, 3 en 1440 px) ; compteur « zones personnalisées » abrégé sous 1600 px. Mesuré sans défilement : 1920×880, 1920×950, 1440×760 ; en dessous de 1366×640, le configurateur garde une hauteur minimale de 500 px.
+
+**Aujourd'hui, sans carte prélevable (Alma, Cofidis, carte virtuelle)** : rien dans le site. L'extension n'a ni lien de paiement ni courriel pour ce cas (vérifié dans son code : Cofidis exclu, Alma sans portefeuille Payline, aucun lien `order-pay` ni envoi). Ce que fait Valérie (lien de paiement depuis l'espace Payline/Monext, virement, chèque, appel) n'est pas visible : **à lui demander**.
+
+**Commander plus tard ? (question de Melvin, 17/10)** Risque réel si le bouton est à côté de « Ajouter au panier ». Fait sur la copie : bouton seulement dans le récapitulatif ; **proposition au départ** « Vous partez ? Gardez votre selle » (une fois par visite, client engagé, ni envoi ni clic panier ; souris qui sort par le haut sur ordinateur, 60 s d'inactivité sur téléphone ; pas de piège sur le bouton retour) ; **bilan** dans WooCommerce › Relances (envois et commandes par origine, délai moyen avant commande) pour décider après quelques semaines de garder, déplacer ou retirer le bouton.

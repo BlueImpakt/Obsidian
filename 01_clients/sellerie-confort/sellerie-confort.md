@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-16
+body_synced: 2026-10-17
 ---
 
 # sellerie-confort
@@ -47,12 +47,6 @@ body_synced: 2026-10-16
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — reconnaissance Phase 1 bouclée, accord écrit d'export reçu, site local reconstruit (345 produits), alerte plugin compromis hors périmètre, nid d'abeille Z900 en cours
-- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — site local reconstruit comme la prod (front Divi, 345 produits), nid d'abeille Z900 validé sur sa propre photo mais transfert vers le configurateur non résolu
-- 2026-10-14 : Sur [[sellerie-confort-configurateur]] — images de nid d'abeille rangées par modèle ; second jeu complet (BMW F900 XR) repéré pour tester la généralisation
-- 2026-10-14 (fin de soirée) : Sur [[sellerie-confort-configurateur]] — clone local complété (catégories, URL de la prod, sélecteur « Ma Moto », options de commande reconstruites sur 345 fiches) ; constat de fiches dupliquées avec les visuels d'un autre modèle à signaler.
-- 2026-10-15 : Sur [[sellerie-confort-configurateur]] — plan Phase 1 formalisé ([[phase-1]]), voie 1.7.6 + plugin envisagée, nid d'abeille testé sur 5 modèles, plus de mails à Valérie.
-- 2026-10-15 (suite) : Sur [[sellerie-confort-configurateur]] — poste 3 : rendu matières reproductible à l'identique via texture maître reconstituée (version récente par défaut) ; poste 1 : 336 fiches sur 345 regroupables sur la 1.7.6.
 - 2026-10-15 (nuit) : Sur [[sellerie-confort-configurateur]] — nid d'abeille testé sur 6 selles avec délimitations calées sur les calques, copie du site local avec regroupement famille/lot, 2.0.0 en test sur la copie ; règle : images d'origine conservées pour les modèles existants.
 - 2026-10-15 : Sur [[sellerie-confort-configurateur]] — 2.0.0 testée sur une copie (commandes passées protégées, 55 configurateurs globaux, écran de gestion « Matières et couleurs » en admin de la copie, 19 tests sur 19).
 - 2026-10-15 (nuit, suite) : Sur [[sellerie-confort-configurateur]] — nid d'abeille : K120 confirmé par défaut (test Ducati Diavel), orientation horizontale en cours d'affinage, 2e forme à recopier ; tests de logos brodés lancés.
@@ -62,6 +56,12 @@ body_synced: 2026-10-16
 - 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — détourage automatique des calques : Mask2Former IoU 0,72, SegFormer 0,64, insuffisant en production, piste semi-automatique ; logos brodés testés dans le configurateur local (2 options, import de logo client OK).
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — segmentation Mask2Former v2 IoU 0,64 (pas mieux que 0,72), SAM 3 à tester ; logos brodés ajustés (56 %, horizontal sur bande, « Sans logo ») ; estimation postes 5-6 ≈ 1,5 j.
+- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — SAM 3 testé (0,44, zones compactes 0,8-0,94) : conclusion qu'aucun modèle testé ne remplace le détourage de Valérie ; parcours sans fiche récap (panier direct) ; mise en prod dev → préprod → prod cadrée (§23) ; écran Matières 37 / Liserés 44 / Surpiqûres 26 propre.
+- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — Écran de gestion « Matières et couleurs » en 4 onglets d'après les trois jeux de choix standard (listes de 37, 44 et 26 choix) : Matières 37, Liserés 44, Surpiqûres 26, plus À vérifier 183 (nid d'abeille nommé autrement 52, petites pointes R6 44, variantes ou… Détails dans la fiche projet.
+- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — panier perdu diagnostiqué : Payline vide le panier avant la banque, Cofidis détache la session, panier invité 2 jours ; correctif préconisé (pas de vidage avant paiement, 30 jours).
+- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiches produit (configurable / non configurable) prototypées au design de la maquette, revue design multi-agents et 4 défauts bloquants corrigés.
+- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiche d'habillage A4 maquettée, courriel « En fabrication » retenu ; module de sauvegarde/envoi de configuration et relances testé sur la copie ; retour/caution à simplifier.
+- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — relances configuration/panier cadrées RGPD, caution non relancée pour Alma/Cofidis/carte virtuelle, configurateur tenant à l'écran avec logos 26 couleurs, reprise progressive de l'hébergement o2switch au nom de Valérie.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

@@ -148,3 +148,15 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Reconstruire un site WordPress client en local sans toucher à sa base : 345 produits, 15 120 médias, 501 catégories, Theme Builder Divi et options de commande recréés à partir du seul contenu public et des fichiers de code (sans clients ni commandes)
 - Un audit public de 345 fiches configurables a ramené « 83 000 images » à 10 937 images uniques et 46 configurations distinctes : mesurer avant de chiffrer
 - Les modèles IA ne se valent pas côté licence : Depth Anything V2 Small est en Apache-2.0 (usage commercial OK), Base et Large en CC-BY-NC
+
+## 2026-10-16
+
+- Test terrain segmentation d'images produit (selles de moto, 55 configurations) : 5 modèles testés (SAM 1, DINOv2, SegFormer, Mask2Former, SAM 3). SAM 3 sans entraînement, guidé par une simple boîte, détoure les zones compactes à 0,89-0,94 d'IoU, mais s'effondre sur les zones allongées (0,29) et les lignes fines (surpiqûres 0,01). Meilleur score global : Mask2Former entraîné, 0,72. Conclusion honnête au client : aucun modèle testé ne remplace le détourage manuel de l'artisane ; on automatise ce qui est prouvé (génération des images de matières), pas le reste.
+- Angle de post : « le code monte, les données descendent » — pourquoi on ne pousse jamais la base d'une préprod vers une boutique WooCommerce en ligne (commandes et clients arrivés entre-temps effacés).
+
+## 2026-10-17
+
+- **Panier perdu sur un e-commerce WooCommerce : la cause était dans le code des moyens de paiement, pas dans les cookies.** Audit sans accès à la prod : le module de paiement carte renvoie le client vers « Commande reçue » avant la banque, et WooCommerce vide le panier à ce moment-là. Paiement annulé ou refusé = selle sur mesure à reconfigurer de zéro. Le module de financement fait pareil. Angle : chercher là où le client part du site, pas là où il arrive.
+- **Automatiser l'atelier, pas seulement les mails.** Chez un artisan sellier, les courriels après commande existaient déjà ; le vrai temps perdu était la fiche de fabrication recopiée à la main (matières par zone, broderie, commentaires), alors que tout est déjà dans la commande. Un bouton « Habillage » qui imprime la fiche A4 avec l'image de la selle configurée règle ça.
+- Angle de post : relance de panier abandonné et RGPD — c'est de la prospection (L34-5 CPCE), l'« opt-in allégé » est discutable sans vente aboutie. Compromis appliqué sur un configurateur e-commerce : mention sous le champ e-mail + case « Je ne veux pas de rappel », 3 rappels max, désinscription en un clic, aucun pixel de suivi.
+- Angle de post : en auditant le code d'un plugin de caution, découvert que les clients en paiement fractionné ou carte virtuelle ne reçoivent aucun lien de caution — un trou de process invisible tant qu'on ne lit pas le code.
