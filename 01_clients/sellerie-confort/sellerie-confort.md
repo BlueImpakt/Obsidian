@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-17
+body_synced: 2026-10-19
 ---
 
 # sellerie-confort
@@ -42,13 +42,12 @@ body_synced: 2026-10-17
 - Devis I-26-10-1 (08/10) — Phase 1 audit technique : **1 400 € HT** (4 j × 350 €), TVA non applicable (art. 293 B CGI), acompte 50 % à la signature ; I-26-10-2 (acompte 50/50) présent à côté, référence à aligner dans le contrat ; I-26-08-1 (1 600 €) obsolète. **Signé le 14/10** (acompte 700 € versé)
 - Contrat Phase 1 : réécrit le 13/10 (Word + PDF, 1 400 € HT), clause de plafonnement Phase 2 ajoutée le 13/10, **signé le 14/10**
 - Phase 2 : à chiffrer à l'issue de la Phase 1 (fourchette annoncée 4 000 à 7 000 €, taux 350 €/j) ; **plafond contractuel 7 000 € HT**, 1 400 € de Phase 1 déduits, solde max 5 600 €
+- **Chiffrage du 19/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette) : Phase 2 = **17,5 j, 6 125 € HT à payer (Phase 1 déduite)** ; Phase 3 (refonte complète du site + automatisations) = **20 à 23 j, 7 000 à 8 050 € HT**
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
-- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés en pose 3D (MoGe-2) validée sur MT-09, nid d'abeille forme A alignée sur l'axe de la selle et forme B validée.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés : orientation B validée et série finale propre ; configurateur gratuit sans licence, Divi utilisable sans licence ; habillage du plugin commencé en local.
 - 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — détourage automatique des calques : Mask2Former IoU 0,72, SegFormer 0,64, insuffisant en production, piste semi-automatique ; logos brodés testés dans le configurateur local (2 options, import de logo client OK).
@@ -62,6 +61,8 @@ body_synced: 2026-10-17
 - 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — logos brodés branchés sur Duke et CBF, couleurs de broderie par familles, configurateur sans défilement ; import Z900 bloqué par l'arrêt de MySQL de Local.
+- 2026-10-19 : Sur [[sellerie-confort-configurateur]] — taille des logos calculée sur la surface du calque (plafond dosseret 45 %), Z900 importée aux 26 fils.
+- 2026-10-19 : Sur [[sellerie-confort-configurateur]] — chiffrage Phase 2 17,5 j (6 125 € HT, Phase 1 déduite) et Phase 3 20-23 j (7 000-8 050 € HT), Word + PDF prêts.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

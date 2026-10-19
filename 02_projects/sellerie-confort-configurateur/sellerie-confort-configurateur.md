@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-17
+body_synced: 2026-10-19
 ---
 
 # sellerie-confort-configurateur
@@ -19,7 +19,8 @@ body_synced: 2026-10-17
 - **Phase 1 — audit technique : 1 400 € HT** (4 j × 350 €, art. 293 B CGI, acompte 50 % (700 €) après signature, solde à la remise du rapport ; déduit de la Phase 2 si suite). Devis I-26-10-1 du 08/10 (I-26-10-2, acompte 50/50, présent à côté ; I-26-08-1 à 1 600 € obsolète). Rapport de synthèse : compréhension du problème, résultats des tests, estimation de généralisation au catalogue, faisabilité, chiffrage Phase 2 + calendrier
   - 0,6 j audit plugin et stockage · 0,4 j clone local · 1 j tests matières/couleurs · 1 j tests broderies · 0,3 j estimation généralisation · 0,7 j rapport + chiffrage
   - **Phase 1 élargie, offerte** (réunion du 07/10) : audit des automatisations (rappels, emailing, bons de commande), suivi statistique du parcours utilisateur, panier perdu (pas de cookies, mail de relance à envisager) ; chiffrage de la refonte complète + maintenance mensuelle inclus
-- **Phase 2** (à chiffrer après Phase 1) : étape 1 patchs IA (optionnelle), étape 2 backend (regroupement par famille), étape 3 frontend/ergonomie, + broderies ; fourchette annoncée 4 000 à 7 000 € (viser 5 500 €), à chiffrer en jours réels après l'audit, taux 350 €/j
+- **Phase 2** : étape 1 patchs IA (optionnelle), étape 2 backend (regroupement par famille), étape 3 frontend/ergonomie, + broderies ; **chiffrée le 19/10 : 17,5 j, 6 125 € HT à payer (Phase 1 déduite)**, 8 lots ≤ 3 j (env. dev/préprod, mkl_pc 2.0.0, données, configurateur/fiche/panier, design, broderies, écran matières, recette + mise en prod) ; fourchette initiale 4 000 à 7 000 €, taux 350 €/j
+- **Phase 3** (refonte complète du site, configurateur fait en Phase 2, automatisations comprises) : **20 à 23 j, 7 000 à 8 050 € HT** (chiffrage du 19/10) ; Word + PDF `Phase 1/chiffrage-phases-1-2-3.docx` et variante `-fourchette`
 - Maquettes HTML de refonte (déjà montrées début août, direction validée, seul le beige à changer) : démonstration uniquement, **pas un engagement contractuel** ; refonte complète des 6 maquettes le 07/10, très appréciées, en ligne sur Netlify (08/10)
 
 ## État actuel
@@ -52,6 +53,7 @@ body_synced: 2026-10-17
 - **Mise en production (2026-10-16)** : dev à jour → préprod (copie fraîche de la prod, fermée à Google, paiement en test, courriels bloqués) → prod ; le code (mu-plugin versionné, scripts de données) monte, les données descendent, jamais de base poussée vers la prod ; retour arrière = désactiver le mu-plugin. Détail dans [[phase-1]] §23.
 - **Acquis (2026-10-17) : écran de gestion « Matières et couleurs » en 4 onglets** bâti sur les trois jeux de choix standard : Matières 37, Liserés 44, Surpiqûres 26, plus À vérifier 183 (nid d'abeille nommé autrement 52, petites pointes R6 44, variantes ou fautes 86, doublon 1). Détail dans [[phase-1]] §14.10.
 - **Décision (2026-10-17) : refaire la fiche produit avec le configurateur.** Selle configurable : contenu d'origine sans options, broderies ni infos perso (dans le configurateur), bouton « Configurer ma selle ». Non configurable : options et infos sur la fiche, ajout au panier direct. Même design (maquette « Fiche produit »). Prototype sur la copie, détail [[phase-1]] §24.
+- **Décision (2026-10-19) : taille des logos brodés = part fixe de la surface 3D du calque** (dosseret ou bande), mesurée sur le contour du fil brodé (sans marges ni ombre) et bornée par la plus grande taille qui tient (marge 8 mm) ; le logo d'origine ne sert plus qu'à placer et orienter. Plafond dosseret retenu : 45 % ; bandes : 80 % de la taille max en test (logos ronds limités par la hauteur de bande).
 
 ## Blocages / risques
 - **VIMAWEB** : titulaire du compte o2switch (dev et prod), détient les licences des plugins (`mkl_pc`, `wapf`, Divi), plugins sur mesure (`Sync MKL…` prototypé sur dev, non déployé). Informé, pas de contact direct. Mise en production et accès serveur en Phase 2 : à décider avec Valérie (reprise du compte à son nom ou VIMAWEB à la demande).
@@ -95,11 +97,10 @@ body_synced: 2026-10-17
 - [ ] Panier perdu / cache : faire un test visiteur (ajout au panier, retour sur une fiche, compteur) pour confirmer le cache o2switch `x-lsadc-cache: hit` ; si confirmé, réglage serveur à demander au titulaire
 - [ ] Hébergement : faire confirmer par le support o2switch la procédure de changement de titulaire (avec accord de VIMAWEB) ; prévoir au contrat de Phase 2 l'accès aux données clients + clause de sous-traitance RGPD art. 28
 - [ ] Dev Phase 2 : rédiger la clause RGPD de sous-traitance (art. 28) du contrat, le script de neutralisation (e-mails, paiements en test, tâches planifiées, WP Umbrella) et la demande de préprod WP Tiger à VIMAWEB (envoyée par Valérie)
-- [ ] Redémarrer le site `sellerie-confort` dans Local (MySQL arrêté le 17/10), vérifier le port de la base, puis relancer l'import des logos de la Z900 sur la copie et les tests du parcours (Duke / CBF / Z900)
+- [ ] Refaire les tests du parcours Duke / CBF / Z900 sur la copie (Local relancé et Z900 importée le 19/10) ; après chaque redémarrage de Local, relancer la copie avec `copie_regroupement_lancer.ps1`
+- [ ] Logos brodés : appliquer le plafond dosseret de 45 % et valider la règle sur la largeur des bandes (80 % en test), puis repasser les 12 selles
 
 ## Journal
-- 2026-10-17 (suite) : Nid d'abeille rattaché à la palette des 26 fils sur la copie : Surpiqûres 26 (+11 supplémentaires : 7 hors palette F 900 XR, 2 variantes Égyptien/Yam, 2 noms à confirmer), À vérifier 131 ; 27 et 29 choix des deux fiches conservés ; logos : export des fils depuis le catalogue (`FILS=palette`) ; reste la passerelle vers le champ « Couleurs broderie » et 4 questions à Valérie. Détail dans [[phase-1]] §14.10.
-- 2026-10-16 (soir, suite) : Segmentation : Mask2Former v2 (Swin-base) IoU 0,64, pas mieux que la v1 (0,72) ; limite = 55 formes de selles, pas le modèle ; notebook SAM 3 sans entraînement préparé pour Kaggle. Logos brodés : réduits à 56 % de l'original, case horizontale aussi sur la bande, « Sans logo » retire le logo d'origine. Estimation postes 5-6 ≈ 1,5 j (devis 1,0 j). Détail dans [[phase-1]].
 - 2026-10-16 (nuit) : Segmentation close : SAM 3 sans entraînement (Kaggle, 55 selles, une boîte par zone) = dosseret 0,94, bec 0,89, assises séparées 0,79-0,81, mais bandeaux 0,29, liserés 0,06, surpiqûres 0,01 (moyenne 0,44). Conclusion Phase 1 : aucun des modèles testés (meilleur Mask2Former 0,72) ne remplace le détourage de Valérie ; découpe des calques manuelle en Phase 2, automatisation limitée à la génération des images de matières. Détail dans [[phase-1]] §14.10.
 - 2026-10-16 (nuit) : Mise en production cadrée ([[phase-1]] §23) : 9 manques avant la prod (préprod fidèle, commande complète en test Payline validée par Valérie, catalogue entier, cache LiteSpeed, scripts externes à garder…) ; schéma dev → préprod → prod, le code monte, les données descendent, jamais de base poussée vers la prod. Jeux standard propres sur la copie (« Gris tonnerrre » et « orange poterie » corrigés, une vignette par matière) ; reste à trancher le rattachement nid d'abeille/logos à la palette de 26 fils.
 - 2026-10-17 (automatisations) : Étiquette de production = base et mousse (morphologie, gel, moto), sans matières ni broderie ; l'habillage est recopié à la main. Retenu : bouton « Habillage » (fiche A4 avec image de la selle, infos pilote, habillage par zone, motif de broderie en vignette, commentaires même vides ; 1,25-1,5 j, maquette jointe) et courriel « En fabrication » au clic sur l'étiquette (0,25-0,5 j). Courriels après commande déjà en place ; la note de suivi DPD est automatique (tâche horaire de DPD France 6.0.1). Détail dans [[phase-1]] §25.
@@ -113,6 +114,8 @@ body_synced: 2026-10-17
 - 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 (logos Duke / CBF) : logos brodés branchés sur Duke et CBF 600 1000 (5 logos × 26 fils, deux emplacements), un seul emplacement affiché à la fois, couleurs de broderie par familles, aucun défilement à aucune étape sur Z900 / Duke / CBF, affichage 100 % = ancien 90 % ; modifs reportées dans `build.py` (`sc-maquette` est régénéré). Import Z900 (263 choix) bloqué par l'arrêt de MySQL de Local.
+- 2026-10-19 (logos) : Import Z900 aux 26 fils sur la copie (132 / 131 choix). Taille des logos désormais calculée sur la surface 3D du calque (contour du fil, sans marges) ; plafond dosseret retenu à 45 %, 80 % de la taille max sur les bandes en test ; planches avant/après dans `calque-A/resultats/v9-tailles/`.
+- 2026-10-19 (chiffrage) : Phase 2 = 17,5 j, 6 125 € HT à payer (Phase 1 déduite) ; Phase 3 refonte complète (automatisations comprises) = 20 à 23 j, 7 000 à 8 050 € HT ; Word + PDF `Phase 1/chiffrage-phases-1-2-3.docx` et variante `-fourchette`.
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
