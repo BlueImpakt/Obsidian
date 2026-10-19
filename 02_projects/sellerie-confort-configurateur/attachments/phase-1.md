@@ -1248,6 +1248,25 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
 - **Vérifié** : configurateur natif de la 2.0.0 (les deux calques apparaissent avec leurs choix), interface de la maquette (`?sc_maq=1` : logo et fil, comparaison), fiche récapitulative et panier (lignes « Broderie dosseret : Yeux - fil rouge vif », « Broderie bande laterale : Yamaha - fil rouge vif » et champs APF). Test `SC_BASE=http://127.0.0.1:8090 SC_TAG=logos20 node test-logos.mjs`. Capture `poste3-voieB-13-logos-z900-plugin20.png`.
 - Conclusion : les logos brodés (option A) fonctionnent de la même façon en 1.7.6 et en 2.0.0.
 
+### 21 bis. Logos brodés : taille selon le calque, 26 fils, Duke et CBF (19-20/10)
+- **Selles branchées sur la copie 8090**, export à 26 fils (`FILS=palette`, palette tirée du catalogue de gestion par `scripts/exporter_palette_fils.php`) :
+  - Z900 39477, KTM Duke 10169, Honda CBF 600 1000 17731 ;
+  - dosseret et bande latérale, 132 et 131 choix.
+- **Taille des logos, règle retenue par Melvin le 20/10** (`logo_3d.py`, `LOGO_TAILLE=zone`, par défaut). Elle ne dépend plus du logo d'origine, qui ne sert qu'à placer et orienter. Taille du logo = le minimum de :
+  - 65 % (dosseret) ou 80 % (bandes) de la plus grande taille qui tient dans la zone visible ;
+  - longueur ≤ **45 %** de la racine de la surface du calque (plafond choisi par Melvin) ;
+  - hauteur ≤ 50 % de la **largeur** du calque (cercle inscrit, surface dépliée). Demande de Melvin : sur une bande longue et étroite, la surface seule trompe.
+  - Effet : grands dosserets (XR) → logos plus grands, petits (CBF) → plus petits, et les logos ronds ne remplissent plus les bandes.
+  - Mesures : `calibrer_tailles.py` ; planches : `resultats/v9-tailles/`.
+- **Bug corrigé dans `import_logos_copie.php`** : chaque import ajoutait 7 doublons d'en-têtes de groupes (« Les Noirs »… ids 9001-9007) dans chaque zone de matière. La 2.0.0 les renvoie à la lecture, et les réécrire les enregistrait en plus. Les choix `is_group` sont désormais retirés avant l'écriture. Z900, Duke et CBF ont été réparées (44 choix par zone, comme à l'origine). **Tout autre produit importé avec l'ancien script est à réimporter.**
+- **Maquette (`build.py`, blocs du 17-19/10)** :
+  - zoom 90 % sur ordinateur ;
+  - un seul emplacement de broderie affiché à la fois ;
+  - couleurs du fil par familles ;
+  - vignettes de matières adaptées au nombre ;
+  - aucune étape ne défile à 1280 × 640.
+- **Limite** : sur la Duke et la CBF, le choix « Logo d'origine » rend les traits blancs légèrement plus ternes (écart maximal de 20 sur 255). On ne peut pas recréer une ombre très claire par superposition.
+
 ## 22. Parcours : pas de fiche récapitulative, le panier récapitule (décision de Melvin, 17/10)
 
 - **Décision** : après le configurateur, l'ajout au panier mène **directement au panier**, qui sert de récapitulatif (matières, broderies, options, infos, prix). La fiche récapitulative du §20 est retirée (fichier mis de côté : `Phase 1/maquette-branchee/_abandon/recap.php`).
