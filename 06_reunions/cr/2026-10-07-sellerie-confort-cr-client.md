@@ -1,5 +1,5 @@
 ---
-tags: [cr-reunion]
+tags: [cr-reunion, sellerie-confort]
 created: 2026-10-07
 client: sellerie-confort
 ---

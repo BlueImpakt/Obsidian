@@ -1,5 +1,7 @@
 ---
-tags: [pattern, process, stack, boilerplate]
+tags: [pattern, process, validé]
+created: 2026-10-15
+type: process
 source: formation Millenium (17.01, 17.06, 17.09, 17.14) + discussions
 ---
 
