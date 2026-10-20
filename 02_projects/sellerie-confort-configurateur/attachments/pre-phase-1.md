@@ -538,6 +538,8 @@ Détail : `Phase 1/reconstruction/options-apf-echantillon.json`. Script : `scrip
 Surcoûts relevés : hauteur ±2 cm **+10 €**, gel avant / arrière **+35 €**, deux assises **+70 €**. 12 à 17 champs par fiche, **règles conditionnelles** (la broderie ouvre le motif, qui ouvre les couleurs). Sur 38 groupes au total, un socle commun et des groupes propres à chaque modèle.
 
 ### C. Charpente de chiffrage (ordres de grandeur, à valider)
+> **Dépassé** : chiffrage à jour (20/10) dans [[prepa-phase-2]] §1.
+
 Taux 350 €/j. Volumes : 345 fiches = **46 configurations**, 302 couches distinctes, 27 marques, 448 modèles, 15 pages, 1 526 produits, 34 plugins actifs.
 
 **Phase 2 : simulateur + parcours de commande (page produit unique)**
