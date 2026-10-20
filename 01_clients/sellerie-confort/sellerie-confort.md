@@ -50,7 +50,6 @@ body_synced: 2026-10-20
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — SAM 3 testé (0,44, zones compactes 0,8-0,94) : conclusion qu'aucun modèle testé ne remplace le détourage de Valérie ; parcours sans fiche récap (panier direct) ; mise en prod dev → préprod → prod cadrée (§23) ; écran Matières 37 / Liserés 44 / Surpiqûres 26 propre.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — Écran de gestion « Matières et couleurs » en 4 onglets d'après les trois jeux de choix standard (listes de 37, 44 et 26 choix) : Matières 37, Liserés 44, Surpiqûres 26, plus À vérifier 183 (nid d'abeille nommé autrement 52, petites pointes R6 44, variantes ou… Détails dans la fiche projet.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — panier perdu diagnostiqué : Payline vide le panier avant la banque, Cofidis détache la session, panier invité 2 jours ; correctif préconisé (pas de vidage avant paiement, 30 jours).
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiches produit (configurable / non configurable) prototypées au design de la maquette, revue design multi-agents et 4 défauts bloquants corrigés.
@@ -65,6 +64,7 @@ body_synced: 2026-10-20
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — Chiffrage revu (Word `Phase 1/chiffrage-phases-1-2-3*.docx`) : Phase 2 17,5 j (6 125 € HT à payer, plafond de 16 j dépassé de 1,5 j avec l'écran de gestion), Phase 3 20 à 23 j (7 000 à 8 050 € HT). (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport Phase 1 version client rédigé (artefact, 9 annexes visuelles), Phase 2 présentée à 15 j + option écran de gestion ; dev Phase 2 sur copie avec données clients neutralisée (RGPD art. 28).
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — options de broderie incohérentes sur 296 fiches (18 groupes sur 46) à homogénéiser en Phase 2 ; copie fusionnée en 46 configurateurs ; aile Honda en miroir.
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — captures définitives des annexes du rapport client posées (matières, écran de gestion, logo 3D, étapes 1-3 sur Z900)
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
