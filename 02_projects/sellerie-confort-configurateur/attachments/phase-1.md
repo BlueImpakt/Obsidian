@@ -1783,6 +1783,50 @@ Acquis : l'interface pilote le plugin sans le modifier (1.7.6 et 2.0.0), panier 
 ### Environnements, hébergement et RGPD
 Déplacé le 20/10 dans [[prepa-phase-2]] : copie locale ou préprod, dev / préprod / prod, passage d'un environnement à l'autre, piste de reprise du compte o2switch, environnement de dev, RGPD et neutralisation.
 
+### Accès au site de dev en ligne et propriété du code (20/10)
+Questions de Melvin du 20/10 : où vit le code quand on travaille sur la dev en ligne, quels accès demander à VIMAWEB, ce qu'il voit, à qui appartient le code. Complète [[prepa-phase-2]] §2 sans le répéter.
+
+#### Où vit le code, comment on y accède
+- **Claude Code tourne sur le PC de Melvin**, pas sur WordPress. Il agit à distance sur les fichiers et la base. Ses conversations et sa mémoire restent sur le PC (`~/.claude/`).
+- **Sur le serveur** : la dev est dans le compte cPanel o2switch `sellerieconfort`, dossier `myTiger-Preprod` (WP Tiger) ; code dans `wp-content/plugins/`, données dans la base MySQL de la dev.
+- **Source de vérité** : le repo GitHub. On développe et on teste en local, puis on **déploie par script** vers la dev (seulement le dossier de l'extension, jamais le dossier « Phase 1 »). On ne modifie rien directement sur le serveur.
+- **Le WordPress local** ne lit pas le repo : `sc-gestion-configurateur` n'y est plus installé au 20/10 (ni `plugins/` ni `mu-plugins/`, sans doute effacé par la copie « regroupement »). À rebrancher par une jonction Windows vers le dossier du repo.
+
+| Accès | Ce qu'il permet | Limite |
+|---|---|---|
+| **SSH par clé** (recommandé) | Déploiement scripté (`rsync`), WP-CLI, journaux d'erreurs | Sur o2switch, l'accès SSH vaut pour **tout le compte cPanel** : prod comprise |
+| **SFTP / FTP** | Déposer et lire des fichiers | Pas de WP-CLI ; activation et erreurs à voir dans l'admin. Un compte FTP cPanel **peut être limité à un dossier** (`myTiger-Preprod`) |
+| **Admin WordPress seule** | Melvin téléverse l'extension en .zip | Tout passe par Melvin (règle du projet), débogage sans journaux |
+
+#### Règles d'accès retenues (à reporter dans le `CLAUDE.md` du repo quand l'accès existera)
+- **Clé SSH dédiée au projet** (`~/.ssh/sellerie_dev`), alias `dev-sellerie` ; seule la clé publique est envoyée à VIMAWEB. **Aucun mot de passe dans la conversation** (il finirait dans les transcriptions).
+- **Pas d'identifiant wp-admin pour Claude** : WP-CLI suffit ; contrôle visuel fait par Melvin.
+- Chaque déploiement est annoncé avant d'être lancé ; aucune écriture directe en base sans accord ; rien qui touche clients, commandes, paiements.
+- **Prod et dev dans le même compte cPanel** : un accès SSH ouvre aussi la prod. À demander : un accès **limité à la dev** (compte FTP restreint à `myTiger-Preprod`) ou, à défaut, un garde-fou de chemin dans le script de déploiement. La prod reste interdite (art. 2).
+
+#### Ce qu'il faut demander à VIMAWEB (par Valérie)
+Suffisant pour démarrer : **l'accès** (SSH si possible, sinon SFTP limité à la dev) et trois confirmations :
+1. **Neutralisation de la dev** conforme à la décision du 17/10 ([[prepa-phase-2]] §2) : fermée au public (elle est publique aujourd'hui), paiements Payline / Alma / Cofidis en test, courriels et tâches planifiées coupés. Les données clients sont encadrées par la clause RGPD du contrat de Phase 2 : **pas d'accès à la dev avant sa signature**.
+2. **Rafraîchissement depuis la prod** : à quelle fréquence, et écrase-t-il nos fichiers ? (si oui : on redéploie depuis le repo).
+3. **Mise en prod** : qui la fait, avec quelle procédure.
+
+Utile, à défaut à relever nous-mêmes (Outils > Santé du site) : versions PHP / MySQL, limites PHP, cache serveur et sa purge, `WP_DEBUG_LOG`, sauvegarde avant déploiement, état du plugin signalé comme compromis sur la dev, politique de mises à jour automatiques.
+
+#### Ce que VIMAWEB voit
+Tout ce qui est **sur le serveur** : fichiers déployés (code en clair), base, journaux de connexion SSH, historique des commandes du shell, dates de modification ; s'y ajoutent WP Umbrella et `WP_DEBUG_LOG` ([[prepa-phase-2]] §2). Rien de ce qui reste sur le PC : repo privé, local, conversations, chiffrages. Conséquences : aucun secret en dur dans l'extension (`wp-config.php` ou options), ne déployer que l'extension, comparer régulièrement le serveur au repo (VIMAWEB peut aussi modifier ou restaurer des fichiers).
+
+#### Propriété du code
+| Code | Propriétaire probable | Conséquence |
+|---|---|---|
+| WordPress, WooCommerce, Divi, extensions du marché | Leurs éditeurs (GPL ou licence commerciale ; licences payantes au nom de VIMAWEB) | Aucune : on s'y branche librement |
+| Développements sur mesure de VIMAWEB : `sc-order-note`, `sc-export-pdf-factures`, `woo-payline-caution`, `fix-wapf-preview`, `Sync MKL…` (dev), leur traitement des couleurs | **Peut-être VIMAWEB** : en droit français, le prestataire indépendant reste titulaire des droits sauf **cession écrite et détaillée** (CPI L131-3) ; payer ne suffit pas. L'en-tête `Author: Vimaweb` indique l'auteur, pas le propriétaire | Ne pas les modifier, ni les copier, ni les reprendre ligne à ligne. Les **désactiver** reste le droit de Valérie |
+| Code de Melvin : `sc-gestion-configurateur`, scripts, génération des matières, interface | Melvin, jusqu'à cession ou licence prévue par contrat | VIMAWEB n'a aucun droit dessus, même déployé chez lui |
+
+- **Rien n'est bloqué** : l'écran de gestion et l'interface sont des extensions séparées, branchées sur WooCommerce et sur `mkl_pc` par leurs points d'accroche ; la fiche d'habillage est un mu-plugin à part (§12) ; la génération des matières a été refaite par calcul (§5), sans le code de VIMAWEB.
+- **À vérifier** : le contrat Valérie / VIMAWEB (clause de propriété intellectuelle ou de cession) ; seule Valérie peut répondre.
+- **Contrat de Melvin du 13/10** : aucune clause de propriété intellectuelle trouvée dans les notes. **À prévoir au contrat de Phase 2** : cession au client au paiement complet, ou licence d'utilisation, et droit de réutiliser les briques génériques.
+- Pas un avis juridique : en cas de conflit avec VIMAWEB ou de reprise de leur code, consultation d'un avocat en propriété intellectuelle.
+
 ## 12. Volet offert : tâches automatisables, panier perdu, caution
 
 Volet offert « Audit des tâches manuelles automatisables ». Sources : code des extensions de la prod lu dans le clone (lecture seule), une commande de Melvin (juin-juillet 2026) pour les courriels reçus, captures de Melvin dans l'admin. Aucune commande client consultée.
