@@ -166,3 +166,6 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 ## 2026-10-20
 
 - Audit e-commerce (configurateur de selles) : 345 fiches produit saisies une par une se ramènent à 46 configurations réellement distinctes. En relisant les 345 pages publiques, 296 fiches proposent des options de broderie différentes pour un même visuel : deux générations de champs coexistent. Angle : avant d'automatiser, mesurer ce qui est vraiment différent — la dette de saisie manuelle se voit dans les données, pas dans l'interface.
+- Audit d'un site e-commerce : Google Analytics installé, mais il ne mesure que les pages vues. Ni le configurateur, ni le panier, ni l'origine des ventes. Et il dépose ses cookies même quand le visiteur clique « Refuser » (non conforme CNIL). Angle : « avoir GA ≠ savoir où vos clients abandonnent » — un état des lieux statistique se fait en 1 h sans aucun accès admin.
+- Angle méthode : en refonte, ne jamais travailler sur une copie brute avec données clients sur son PC. Copie locale sans données perso → dev hébergé (données encadrées RGPD) → préprod → prod.
+- Angle prix : détailler le chiffrage par lot mais s'engager sur les livrables et le prix total, pas sur les jours de chaque lot — transparence pour un client déjà échaudé, périmètre écrit qui protège le prestataire.

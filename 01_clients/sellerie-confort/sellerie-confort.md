@@ -43,15 +43,13 @@ body_synced: 2026-10-20
 - Devis I-26-10-1 (08/10) — Phase 1 audit technique : **1 400 € HT** (4 j × 350 €), TVA non applicable (art. 293 B CGI), acompte 50 % à la signature ; I-26-10-2 (acompte 50/50) présent à côté, référence à aligner dans le contrat ; I-26-08-1 (1 600 €) obsolète. **Signé le 14/10** (acompte 700 € versé)
 - Contrat Phase 1 : réécrit le 13/10 (Word + PDF, 1 400 € HT), clause de plafonnement Phase 2 ajoutée le 13/10, **signé le 14/10**
 - Phase 2 : à chiffrer à l'issue de la Phase 1 (fourchette annoncée 4 000 à 7 000 €, taux 350 €/j) ; **plafond contractuel 7 000 € HT**, 1 400 € de Phase 1 déduits, solde max 5 600 €
-- **Chiffrage du 19/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette) : Phase 2 = **17,5 j, 6 125 € HT à payer (Phase 1 déduite)** ; Phase 3 (refonte complète du site + automatisations) = **20 à 23 j, 7 000 à 8 050 € HT**
-- **Rapport client Phase 1 (20/10, artefact claude.ai, non envoyé)** : Phase 2 présentée à **15 j (5 250 € HT)** + écran de gestion en option (2,5 j, 875 € HT) pour tenir le plafond, au lieu des 17,5 j d'un bloc du Word, à valider avant envoi
+- **Chiffrage du 19/10, revu le 20/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette, repris dans le rapport client) : Phase 2 = **17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer (Phase 1 déduite)**, sous le plafond de 7 000 € HT, paiement 50 % à la commande / 50 % à la mise en production ; Phase 3 (refonte complète du site + automatisations) = **20 à 28,5 j, 7 000 à 9 975 € HT**
+- **Rapport client Phase 1 (20/10, artefact claude.ai + PDF v2, non envoyé)** : chiffrage aligné sur le Word (17,5 j d'un bloc, l'option 15 j + écran de gestion abandonnée), détail par lot conservé, relu et corrigé ; incohérences restantes à trancher, mail de synthèse prêt
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — panier perdu diagnostiqué : Payline vide le panier avant la banque, Cofidis détache la session, panier invité 2 jours ; correctif préconisé (pas de vidage avant paiement, 30 jours).
-- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiches produit (configurable / non configurable) prototypées au design de la maquette, revue design multi-agents et 4 défauts bloquants corrigés.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiche d'habillage A4 maquettée, courriel « En fabrication » retenu ; module de sauvegarde/envoi de configuration et relances testé sur la copie ; retour/caution à simplifier.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — relances configuration/panier cadrées RGPD, caution non relancée pour Alma/Cofidis/carte virtuelle, configurateur tenant à l'écran avec logos 26 couleurs, reprise progressive de l'hébergement o2switch au nom de Valérie.
 - 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
@@ -65,6 +63,8 @@ body_synced: 2026-10-20
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — options de broderie incohérentes sur 296 fiches (18 groupes sur 46) à homogénéiser en Phase 2 ; copie fusionnée en 46 configurateurs ; aile Honda en miroir.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — captures définitives des annexes du rapport client posées (matières, écran de gestion, logo 3D, étapes 1-3 sur Z900)
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — liste des demandes à VIMAWEB pour le dev Phase 2 (accès SSH/SFTP, données perso, isolation, circuit dev → prod)
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — accès au dev et propriété du code documentés, état des lieux statistique livré (GA4 pages vues seulement, cookies posés malgré refus = non conforme CNIL), méthode Phase 2 copie locale sans données → dev → préprod → prod, rapport exporté en PDF v2.
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
