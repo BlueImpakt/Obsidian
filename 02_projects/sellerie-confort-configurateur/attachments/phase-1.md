@@ -296,7 +296,29 @@ Lecture :
 | Modification faite **une fois** dans le global G06 | visible sur **19 fiches sur 19**, retour à l'identique à l'annulation |
 | Écriture par `DB::set()` en ligne de commande | **abîme le global** (contenu écrit par morceaux sans l'index de finalisation, lecture impossible) : réparé depuis la sauvegarde. Écrire au format bloc JSON utilisé à la création, ou passer par l'éditeur du navigateur. |
 
-À retenir : le natif partage bien les fiches, mais **n'offre rien pour agir sur les 55 configurateurs à la fois**.
+À retenir : le natif partage bien les fiches, mais **n'offre rien pour agir sur tous les configurateurs à la fois**.
+
+#### Fusion à 46 configurateurs, un par jeu d'images (20/10)
+
+Les 55 configurateurs venaient d'une empreinte stricte (contenu, couches, vues). Ils ne correspondent qu'à **46 jeux d'images**, le même nombre qu'au §3.4 : 7 jeux d'images étaient coupés en 2 ou 3 configurateurs, soit 9 de trop. Écarts relevés entre jumeaux :
+- **nom du calque de fond**, invisible pour le client : « Selle Modèle » ou « Selle Aprilia Dorsoduro 750 » (G01, G02, G04), « Selle BMW S 1000 R ap 2021 » (G05, G12) ;
+- **choix par défaut** : Assises (G11, G14), Assises, Liserés et Surpiqûres (G16, G20), Bec, Bandeaux et Bandes et dosseret (G49) ;
+- **calques de logos** et ombre sans logo d'origine ajoutés en test à la Z900 et à la Duke, absents de la R6 (G52) et de la MT 125 (G51) qui ont les mêmes images ;
+- G50 : aucun écart.
+
+Fusion faite sur la copie par `plugin-gestion/tests/fusionner_globaux_46.php` :
+- dans chaque groupe, on garde le configurateur qui a le plus de fiches ;
+- les **91 fiches** des autres y sont rattachées (seul le rattachement de la fiche change, le contenu n'est pas réécrit) ;
+- les 9 configurateurs retirés sont mis à la corbeille, sauvegardés dans `plugin-gestion/tests/fusion-46/`, avec un retour arrière par l'option `restaurer`.
+
+Contrôle :
+- les **254 fiches non déplacées** lisent exactement la même chose qu'avant ;
+- les 91 fiches déplacées ne changent que par les écarts ci-dessus ;
+- la R6 et la MT 125 reçoivent les calques de logos ;
+- les écrans de gestion affichent **46 configurateurs, 345 fiches** ;
+- la maquette s'affiche sur la R6 sans erreur.
+
+Les choix par défaut retenus sont ceux du configurateur gardé : à valider avec Valérie en Phase 2 (lot « Données du catalogue »).
 
 ### 3.8 Compléments : fichier public, fiches atypiques
 
@@ -1038,9 +1060,9 @@ Lecture :
 | Une configuration partagée par plusieurs fiches | Oui (configurateur global) | Non nécessaire |
 | Modifier une fois pour tout un groupe | Oui (« Edit original ») | Non nécessaire |
 | Commandes passées protégées | Oui | Non nécessaire |
-| **Renommer une matière partout** | Non : 55 configurateurs à ouvrir | **Oui** |
+| **Renommer une matière partout** | Non : 46 configurateurs à ouvrir | **Oui** |
 | **Désactiver une matière partout** | Non | **Oui** |
-| **Familles de matières** (7, issues de la page « Matières ») | À recréer à la main dans chacun des 55 | **Oui**, définies une fois |
+| **Familles de matières** (7, issues de la page « Matières ») | À recréer à la main dans chacun des 46 | **Oui**, définies une fois |
 | **Ajouter une matière à tous les modèles** (images comprises) | Non : une image par zone et par configurateur, à la main | **Oui**, génération par lots |
 | Vue d'ensemble : où est utilisée telle matière | Non | **Oui** |
 
@@ -1051,14 +1073,14 @@ Dossier : `Phase 1/plugin-gestion/sc-gestion-configurateur/` (un seul fichier PH
 | Écran | Fonction | Résultat des tests |
 |---|---|---|
 | **Matières et couleurs** | Catalogue des matières (par nom normalisé), filtres matières / fils de surpiqûre et par famille, renommage, famille, activation, nombre de fiches concernées | **19 / 19** : affichage, enregistrement, effet côté visiteur (renommage sur 7 couches, matière masquée, matière déplacée de famille), retour à l'état initial |
-| **Modèles et calques** | Les 55 configurateurs globaux, leurs fiches, leurs couches, listes atypiques, liens vers l'édition native | affichage vérifié, aucune erreur |
+| **Modèles et calques** | Les 46 configurateurs globaux (un par jeu d'images, 55 avant la fusion du 20/10, §3.7), leurs fiches, leurs couches, listes atypiques, liens vers l'édition native | affichage vérifié, aucune erreur ; après la fusion : 46 configurateurs, 345 fiches |
 | **Ajouter une matière** | Nom, famille, matière unie (couleur) ou texturée (petite image) ; une image par zone et par configurateur, générée à partir du masque ; barre de progression ; annulation | matière unie **18 / 18**, matière texturée **14 / 14** (voir 14.5) |
 
 Principe : renommages, activations et familles sont appliqués **à la lecture** (aucune donnée de fiche réécrite). Seul l'ajout d'une matière écrit, dans les configurateurs globaux, avec une sauvegarde par configurateur et une annulation. L'éditeur d'administration du plugin ne reçoit jamais de données composées.
 
 ### 6.3 Ajout d'une matière : résultats et qualité des images générées
 
-**Fonctionnement mesuré** : 55 configurateurs traités, **304 images** de 1920 × 1280 générées en **170 à 190 s** (environ 0,6 s par image), vignette incluse, matière visible côté visiteur sur toutes les zones concernées, familles toujours en groupes natifs (56), annulation : 350 noms avant, 350 après, matière disparue, comparaison de lecture **345 / 345** à la référence à la fin de tous les essais.
+**Fonctionnement mesuré** (avant la fusion à 46 du 20/10) : 55 configurateurs traités, **304 images** de 1920 × 1280 générées en **170 à 190 s** (environ 0,6 s par image), vignette incluse, matière visible côté visiteur sur toutes les zones concernées, familles toujours en groupes natifs (56), annulation : 350 noms avant, 350 après, matière disparue, comparaison de lecture **345 / 345** à la référence à la fin de tous les essais.
 
 **Qualité** : même zone (« Assises Fiber blanc », Z900), image générée à partir d'une petite image 171 px, comparée à l'image réelle de la boutique.
 
@@ -1094,9 +1116,9 @@ Lecture :
 
 ### 6.6 Les trois jeux de choix et l'écran « Matières et couleurs » en quatre onglets (17/10)
 
-**Pourquoi 78 matières et 153 surpiqûres s'affichaient.** L'écran comptait les **noms distincts** sur les 55 configurateurs globaux, pas les couleurs réelles. Les fautes, les listes atypiques et mes essais l'ont gonflé. Les chiffres de la note pré-phase-1 (jeux de choix par couche : 37, 44, 26) sont les bons.
+**Pourquoi 78 matières et 153 surpiqûres s'affichaient.** L'écran comptait les **noms distincts** sur les configurateurs globaux (55 à l'époque), pas les couleurs réelles. Les fautes, les listes atypiques et mes essais l'ont gonflé. Les chiffres de la note pré-phase-1 (jeux de choix par couche : 37, 44, 26) sont les bons.
 
-**Les trois jeux standard** (repérés par la taille des listes, sur les 55 configurateurs) :
+**Les trois jeux standard** (repérés par la taille des listes, sur les configurateurs globaux) :
 
 | Jeu | Choix | Couches | Contenu |
 |---|---|---|---|
@@ -1324,16 +1346,16 @@ Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-
 
 Sources :
 - options de broderie lues sur les **345 fiches publiques** (champs APF des pages, lecture seule) ;
-- rattachement de chaque fiche à l'une des **55 configurations globales** de la copie de regroupement.
+- rattachement de chaque fiche à l'une des **46 configurations** (une par jeu d'images, après la fusion du 20/10, §3.7).
 
-Les 55 configurations utilisent 45 jeux d'images, parce que certaines partagent les mêmes images. Principe retenu par Melvin : **une option proposée sur le site est réalisable, on ne la retire pas**.
+Principe retenu par Melvin : **une option proposée sur le site est réalisable, on ne la retire pas**.
 
-- **Options différentes dans une même configuration** : **22 configurations sur 55**, soit **286 fiches sur 345**. Ces fiches partagent les mêmes images, donc les mêmes zones.
+- **Options différentes dans une même configuration** : **18 configurations sur 46**, soit **296 fiches sur 345**. Ces fiches partagent les mêmes images, donc les mêmes zones.
   - **Deux générations de champs coexistent**, et c'est la cause principale :
-    - ancien champ « Broderie Dosseret » Oui/Non + « Motif de broderie », qui ne propose que le dosseret : **193 fiches** ;
-    - nouveau champ « Broderies » à cases, plusieurs emplacements (dosseret et bandeau central ou bandes) + un « Motif » par emplacement : **138 fiches** ;
-    - variante « Emplacements des broderies » : 3 fiches.
-    - Exemples : G01 Mana (26 anciens / 19 cases), G02 Dorsoduro (21 / 21), G03 TDM 900 (17 / 22). Le même visuel propose donc le bandeau central sur une fiche et pas sur la voisine.
+    - ancien champ « Broderie <emplacement> » Oui/Non + « Motif de broderie », un seul emplacement, le dosseret presque toujours : **199 fiches** ;
+    - nouveau champ « Broderies » à cases (ou « Emplacements des broderies »), plusieurs emplacements (dosseret et bandeau central ou bandes) + un « Motif » par emplacement : **143 fiches** ;
+    - aucun emplacement : 3 fiches (voir plus bas).
+    - Exemples : G01 Mana / Dorsoduro / GSR 600, 117 fiches (49 anciens / 68 cases) ; G03 TDM 900 (19 / 22) ; G07 Duke (15 / 4). Le même visuel propose donc le bandeau central sur une fiche et pas sur la voisine.
   - **Emplacements propres à une seule fiche**, non repris par les autres fiches de la configuration :
     - avant d'assise arrière (R7, RS 660, Z 300, R3, Brutal 800, Hornet 750) ;
     - bandeau avant (Niken) ;
@@ -1347,8 +1369,8 @@ Les 55 configurations utilisent 45 jeux d'images, parce que certaines partagent 
 - **Modèles sans option de broderie** :
   - **3 fiches n'ont aucun emplacement** : seulement le champ générique Oui/Non. Avec l'homogénéisation, elles recevraient les broderies de leur configuration. Il faut demander à Valérie si l'absence est voulue.
     - BMW S 1000 XR, alors que la XR 1000 de G27 propose le dosseret ;
-    - Yamaha Tenere 700, dans G16 ;
-    - Suzuki GSXR 600, dans G18.
+    - Yamaha Tenere 700, dans G16 (MT 09 Tracer) ;
+    - Suzuki GSXR 600, dans G18 (R6).
   - **5 fiches proposent la broderie sans aucun motif à choisir** (liste vide) : C 650 Scarver, Tenere 700 Rally, TRX 850, XVS 1300 Stryker, Virago 1100.
 - **Autres constats du relevé** :
   - vignettes de motif vides (image par défaut de WooCommerce) : 278 sur 1 619, sur 152 fiches, dont 76 sans aucune vignette ;
@@ -1356,8 +1378,8 @@ Les 55 configurations utilisent 45 jeux d'images, parce que certaines partagent 
   - un champ « Broderies » Oui/Non obligatoire, présent dans 344 pages, annonce toujours « dosseret et/ou bandeau central », quel que soit l'emplacement réel ; sur l'Africa Twin, il crée deux blocs « Broderies » à la suite.
 - Fichiers dans `Phase 1/` :
   - `broderies-fiches-publiques-2026-10-20.json` (relevé brut) ;
-  - `broderies-emplacements-par-configuration-2026-10-20.json` ;
-  - `broderies-incoherences-2026-10-20.md` (tableau des 22 configurations, fiche par fiche, et autres problèmes).
+  - `broderies-emplacements-par-configuration-2026-10-20.json` (sur les 46 configurations) ;
+  - `broderies-incoherences-2026-10-20.md` (tableau des 18 configurations, fiche par fiche, et autres problèmes).
 
 ## 8. Automatisation des calques (demande de Valérie, 16-17/10)
 
@@ -1396,6 +1418,7 @@ Lecture :
 
 **Calques automatiques : essai d'un modèle entraîné sur les calques de Valérie (16/10, CPU, aucun téléchargement)**
 - **Jeu de données** : les **55 configurations distinctes** (les 55 configurateurs globaux, chacun regroupant des fiches à calques identiques) plutôt que les 345 fiches : photo de base + un masque par zone (canal alpha des images de couches), découpage **par configuration** (44 entraînement, 11 test jamais vues). 54 images en 1920 × 1280, 1 en 5712 × 4284 (BMW F 900 XR). Les noms de zones diffèrent d'une configuration à l'autre (bandes séparées du dosseret ou non, assise unique ou avant/arrière) : 11 classes. Le nid d'abeille n'existe que dans 2 configurations. Scripts : `plugin-gestion/tests/dump_jeu_segmentation.php`, `construire_jeu_segmentation.py`, `essai_dinov2_zones.py`.
+- **Correction du 20/10 : images en double.** Les 55 configurations ne comptent que **46 visuels distincts** (§3.7). 9 images sont des doublons exacts, dont 3 entre l'entraînement et le test : G20 = G16, G50 = G03 et G49, G05 = G12. Les modèles entraînés avaient donc déjà vu 3 des 11 selles de test : leurs scores (0,51 à 0,72) sont **optimistes**, et le score sur les 8 selles vraiment inédites n'est pas recalculable (scores par configuration non conservés). SAM 3, sans entraînement, n'est pas concerné, mais sa moyenne sur 55 compte 9 selles deux fois. La conclusion (§8.8) ne change pas, elle se renforce.
 - **Modèle** : DINOv2-small gelé (déjà en cache) + une petite tête apprise, 300 époques sur processeur (quelques minutes). Aucune déformation d'image, aucun réglage.
 
 | Classe (configurations de test où elle existe) | IoU |
@@ -1460,7 +1483,7 @@ Lecture :
 - Classes lues sur la capture : bandes et dosseret 0,82 (v1 : 0,81), bandeaux 0,82 (v1 : 0,95), bec 0,79 (v1 : 0,89), liserés 0,65 (v1 : 0,71), bandes 0,59, surpiqûres 0,13, dosseret 0,00, assise arrière 0,98. (Les premières lignes, assise unique et assise avant, n'étaient pas lisibles sur la capture.)
 - Par configuration : de 0,37 à 0,81. **G222689 passe de 0,86 (v1) à 0,37** ; G222649 et G222674 restent les plus faibles (0,37 et 0,42).
 - Réserve : on n'a pas vérifié que la version 2 a bien lu le dataset à 1152 × 768 (le dataset d'origine à 768 × 512 était aussi rattaché au notebook, et le temps d'entraînement est plus court que prévu pour cette taille).
-- **Lecture** : trois modèles très différents (DINOv2 gelé 0,51, SegFormer-B0 0,64, Mask2Former Swin-base 0,64, Swin-tiny 0,72) restent dans une même fourchette, et une seule selle de test peut faire varier le score de 0,5 point. Avec 11 configurations de test et une exécution par modèle, **l'écart entre 0,64 et 0,72 n'est pas fiable** : le facteur limitant est le petit nombre de formes de selles (55), pas la taille du modèle. Ne pas conclure qu'un modèle est meilleur sans validation croisée sur les 55.
+- **Lecture** : trois modèles très différents (DINOv2 gelé 0,51, SegFormer-B0 0,64, Mask2Former Swin-base 0,64, Swin-tiny 0,72) restent dans une même fourchette, et une seule selle de test peut faire varier le score de 0,5 point. Avec 11 configurations de test et une exécution par modèle, **l'écart entre 0,64 et 0,72 n'est pas fiable** : le facteur limitant est le petit nombre de formes de selles (46 visuels distincts), pas la taille du modèle. Ne pas conclure qu'un modèle est meilleur sans validation croisée sur les 46.
 - Conséquence pour le plan : plus de calcul sur le même jeu n'apporte rien de démontré. Le scénario retenu reste **semi-automatique** (proposition du modèle, correction par Valérie), à valider par la mesure du temps de retouche.
 
 ### 8.7 SAM 3 sans entraînement
@@ -1505,9 +1528,9 @@ Ce que montrent les chiffres :
 - Les **zones compactes** (bec, dosseret, assises séparées) sont bien détourées : 0,8 à 0,99 selon le modèle, et SAM 3 y arrive sans entraînement à partir d'une simple boîte.
 - Les **zones qui entourent la selle** (bandeaux, bandes) sont instables : 0,3 à 0,95 selon le modèle et l'essai.
 - Les **lignes fines** échouent partout : surpiqûres 0,00 à 0,13, liserés 0,00 à 0,71.
-- **Aucun essai ne dépasse 0,72 en moyenne**, et les écarts entre essais (une même selle de 0,86 à 0,37) montrent que le facteur limitant est le **petit nombre de formes de selles (55)**, plus que le modèle. Les zones sont aussi des **choix de conception** de Valérie, que la photo ne dicte pas toujours.
+- **Aucun essai ne dépasse 0,72 en moyenne**, et les écarts entre essais (une même selle de 0,86 à 0,37) montrent que le facteur limitant est le **petit nombre de formes de selles (46 visuels distincts ; 3 des 11 selles de test avaient un double à l'entraînement, voir §8.3)**, plus que le modèle. Les zones sont aussi des **choix de conception** de Valérie, que la photo ne dicte pas toujours.
 
-Ce qui n'a pas été testé (à mentionner honnêtement dans le rapport) : SAM 3 réentraîné sur les calques (trop lourd pour un GPU gratuit), la combinaison Mask2Former + SAM 3, la validation croisée sur les 55, la mesure du temps de retouche d'une proposition par rapport au détourage complet. Ces pistes pourraient réduire le travail de Valérie dans un outil semi-automatique, mais **rien ne démontre aujourd'hui un gain** : elles ne sont pas retenues pour la Phase 2.
+Ce qui n'a pas été testé (à mentionner honnêtement dans le rapport) : SAM 3 réentraîné sur les calques (trop lourd pour un GPU gratuit), la combinaison Mask2Former + SAM 3, la validation croisée sur les 46 visuels distincts, la mesure du temps de retouche d'une proposition par rapport au détourage complet. Ces pistes pourraient réduire le travail de Valérie dans un outil semi-automatique, mais **rien ne démontre aujourd'hui un gain** : elles ne sont pas retenues pour la Phase 2.
 
 Conséquence pour la Phase 2 : la **découpe des calques reste manuelle** chez Valérie (comme décidé en réunion le 07/10 pour les étapes 1 et 2 du flux d'ajout d'un modèle). L'automatisation porte sur ce qui suit la découpe et que les essais ont validé : génération des images de matières à partir des calques (poste 3, écran de gestion §6.2-6.3), configurateurs globaux 2.0 (§3.7), suppression de la saisie image par image et de l'intervention payante de VIMAWEB pour les couleurs.
 
