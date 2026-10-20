@@ -19,7 +19,7 @@ Taux 350 € HT par jour, TVA non applicable (art. 293 B du CGI). Document Word 
 
 | Lot | Durée | Détail |
 |---|---|---|
-| Environnements dev et préprod | 1 j | Copie complète du site sans données clients. Préprod fermée au public, paiements en test, courriels bloqués |
+| Environnements dev et préprod | 1 j | Copie exacte du site sur l'hébergement, données clients comprises (encadrées par une clause RGPD au contrat), neutralisée : fermée au public, paiements en test, courriels et tâches automatiques coupés. Préprod refaite juste avant la mise en ligne |
 | Configurateur en version 2.0.0 | 1,5 j | Mise à jour sur les 345 fiches. Test : commandes passées intactes, retour arrière possible |
 | Données du catalogue | 3 j | Les 345 fiches regroupées en 46 configurations, noms corrigés, familles validées avec Valérie. Test : chaque fiche affiche les mêmes choix qu'avant |
 | Configurateur intégré, fiche produit, panier | 3 j | Nouvelle interface sur toutes les fiches configurables, nouvelle fiche produit, panier récapitulatif. Test : prix et panier corrects sur chaque modèle |
