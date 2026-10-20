@@ -48,7 +48,6 @@ body_synced: 2026-10-19
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — détourage automatique des calques : Mask2Former IoU 0,72, SegFormer 0,64, insuffisant en production, piste semi-automatique ; logos brodés testés dans le configurateur local (2 options, import de logo client OK).
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — segmentation Mask2Former v2 IoU 0,64 (pas mieux que 0,72), SAM 3 à tester ; logos brodés ajustés (56 %, horizontal sur bande, « Sans logo ») ; estimation postes 5-6 ≈ 1,5 j.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — SAM 3 testé (0,44, zones compactes 0,8-0,94) : conclusion qu'aucun modèle testé ne remplace le détourage de Valérie ; parcours sans fiche récap (panier direct) ; mise en prod dev → préprod → prod cadrée (§23) ; écran Matières 37 / Liserés 44 / Surpiqûres 26 propre.
@@ -63,6 +62,8 @@ body_synced: 2026-10-19
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — taille des logos calculée sur la surface du calque (plafond dosseret 45 %), Z900 importée aux 26 fils.
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — chiffrage Phase 2 17,5 j (6 125 € HT, Phase 1 déduite) et Phase 3 20-23 j (7 000-8 050 € HT), Word + PDF prêts.
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — logos brodés : règle de taille complète (45 % de √surface, min 5 cm dosseret, 4-7 cm bandes) et orientations validées sauf l'aile Honda sur bandes ; bug du script d'import corrigé, Duke / CBF / Z900 réparées.
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — Chiffrage revu (Word `Phase 1/chiffrage-phases-1-2-3*.docx`) : Phase 2 17,5 j (6 125 € HT à payer, plafond de 16 j dépassé de 1,5 j avec l'écran de gestion), Phase 3 20 à 23 j (7 000 à 8 050 € HT). (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — broderies relevées sur les 345 fiches publiques ([[phase-1]] §7.6). Dans 22 configurations sur 55 (286 fiches), des fiches au même visuel proposent des emplacements différents : deux générations de champs coexistent (dosseret seul pour 193 fiches, cases à cocher pour 138) et certains emplacements n'existent que sur une fiche. En Phase 2, il faudra définir les emplacements une fois par configuration (réunion de ceux des fiches, exceptions validées par Valérie) avec un seul champ. 3 fiches n'ont aucune broderie (S 1000 XR, Tenere 700, GSXR 600) et 5 n'ont aucun motif à choisir, à vérifier avec Valérie.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

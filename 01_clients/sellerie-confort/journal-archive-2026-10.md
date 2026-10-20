@@ -23,3 +23,4 @@ Entrées archivées automatiquement (seuil `## Journal` > 15, voir CLAUDE.md). H
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — nouvelle matière : grande photo haute résolution (texture maître) préférée au petit carré répété ; échelle auto à prévoir en Phase 2.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés en pose 3D (MoGe-2) validée sur MT-09, nid d'abeille forme A alignée sur l'axe de la selle et forme B validée.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — logos brodés : orientation B validée et série finale propre ; configurateur gratuit sans licence, Divi utilisable sans licence ; habillage du plugin commencé en local.
+- 2026-10-16 (appel Valérie) : Sur [[sellerie-confort-configurateur]] — appel : images d'origine = vignettes répétées, VIMAWEB colore par code (60 €/selle), nid d'abeille facultatif par réglage de couche ; détourage auto des calques : SAM 0,39, modèle entraîné 0,51 IoU, Kaggle/Mask2Former à tester.

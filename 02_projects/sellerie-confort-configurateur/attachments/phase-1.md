@@ -1320,6 +1320,45 @@ Planche des calques détourés par SAM sur la Z900 : `attachments/gestion-essai-
   - aucune étape ne défile à 1280 × 640.
 - **Limite** : sur la Duke et la CBF, le choix « Logo d'origine » rend les traits blancs légèrement plus ternes (écart maximal de 20 sur 255). On ne peut pas recréer une ombre très claire par superposition.
 
+### 7.6 Emplacements de broderie : fiches et configurations (relevé du 20/10)
+
+Sources :
+- options de broderie lues sur les **345 fiches publiques** (champs APF des pages, lecture seule) ;
+- rattachement de chaque fiche à l'une des **55 configurations globales** de la copie de regroupement.
+
+Les 55 configurations utilisent 45 jeux d'images, parce que certaines partagent les mêmes images. Principe retenu par Melvin : **une option proposée sur le site est réalisable, on ne la retire pas**.
+
+- **Options différentes dans une même configuration** : **22 configurations sur 55**, soit **286 fiches sur 345**. Ces fiches partagent les mêmes images, donc les mêmes zones.
+  - **Deux générations de champs coexistent**, et c'est la cause principale :
+    - ancien champ « Broderie Dosseret » Oui/Non + « Motif de broderie », qui ne propose que le dosseret : **193 fiches** ;
+    - nouveau champ « Broderies » à cases, plusieurs emplacements (dosseret et bandeau central ou bandes) + un « Motif » par emplacement : **138 fiches** ;
+    - variante « Emplacements des broderies » : 3 fiches.
+    - Exemples : G01 Mana (26 anciens / 19 cases), G02 Dorsoduro (21 / 21), G03 TDM 900 (17 / 22). Le même visuel propose donc le bandeau central sur une fiche et pas sur la voisine.
+  - **Emplacements propres à une seule fiche**, non repris par les autres fiches de la configuration :
+    - avant d'assise arrière (R7, RS 660, Z 300, R3, Brutal 800, Hornet 750) ;
+    - bandeau avant (Niken) ;
+    - dosseret avant (Tiger 955i, Stelvio, R 1150 GS) ;
+    - assise avant ou arrière (Z 800, Multistrada V4, Hayabusa, Z 1000 SX) ;
+    - côté de l'assise arrière (ZZR 1400).
+- **Homogénéiser fiche et configuration (à faire en Phase 2)** :
+  - Avec les configurateurs globaux, les emplacements de broderie doivent être définis **une fois par configuration**, à partir de ses zones. Sinon, une fiche propose un emplacement que le visuel partagé ne montre pas, et le client voit une offre différente selon la fiche par laquelle il arrive.
+  - **Règle proposée** : par défaut, la configuration propose la réunion des emplacements offerts par ses fiches. Valérie valide les exceptions liées à une moto (selle réelle différente de l'image partagée).
+  - L'ancien champ disparaît au profit d'**un seul champ d'emplacements**, avec un libellé unique par zone. Aujourd'hui : Bandes / Bandes latérales, Bandeau central / Le bandeau central / Bandeau, « Couleurs broderie » facultatif / « Couleurs broderies* » obligatoire.
+- **Modèles sans option de broderie** :
+  - **3 fiches n'ont aucun emplacement** : seulement le champ générique Oui/Non. Avec l'homogénéisation, elles recevraient les broderies de leur configuration. Il faut demander à Valérie si l'absence est voulue.
+    - BMW S 1000 XR, alors que la XR 1000 de G27 propose le dosseret ;
+    - Yamaha Tenere 700, dans G16 ;
+    - Suzuki GSXR 600, dans G18.
+  - **5 fiches proposent la broderie sans aucun motif à choisir** (liste vide) : C 650 Scarver, Tenere 700 Rally, TRX 850, XVS 1300 Stryker, Virago 1100.
+- **Autres constats du relevé** :
+  - vignettes de motif vides (image par défaut de WooCommerce) : 278 sur 1 619, sur 152 fiches, dont 76 sans aucune vignette ;
+  - motifs génériques « Marque / Modèle / Motif » sur 4 fiches (Africa Twin) ;
+  - un champ « Broderies » Oui/Non obligatoire, présent dans 344 pages, annonce toujours « dosseret et/ou bandeau central », quel que soit l'emplacement réel ; sur l'Africa Twin, il crée deux blocs « Broderies » à la suite.
+- Fichiers dans `Phase 1/` :
+  - `broderies-fiches-publiques-2026-10-20.json` (relevé brut) ;
+  - `broderies-emplacements-par-configuration-2026-10-20.json` ;
+  - `broderies-incoherences-2026-10-20.md` (tableau des 22 configurations, fiche par fiche, et autres problèmes).
+
 ## 8. Automatisation des calques (demande de Valérie, 16-17/10)
 
 ### 8.1 Outils envisagés
