@@ -1258,6 +1258,15 @@ Parcours : matière (Fiber black sur assises avant), broderie dosseret « Duke p
   - hauteur ≤ 50 % de la **largeur** du calque (cercle inscrit, surface dépliée). Demande de Melvin : sur une bande longue et étroite, la surface seule trompe.
   - Effet : grands dosserets (XR) → logos plus grands, petits (CBF) → plus petits, et les logos ronds ne remplissent plus les bandes.
   - Mesures : `calibrer_tailles.py` ; planches : `resultats/v9-tailles/`.
+- **Compléments validés par Melvin (20/10)** :
+  - **Longueur du logo** : minimum 5 cm sur le dosseret et 4 cm sur les bandes, maximum 7 cm sur les bandes. Si le minimum ne tient pas, l'emplacement n'est pas proposé pour ce logo : Yamaha sur les bandes de la GS, de la SV, de la Hayabusa et de la CBF ; Alpinestar sur la Hayabusa.
+  - **Bandes** : logo **centré** sur la bande dépliée, au milieu de sa longueur, puis au milieu de sa largeur à cet endroit.
+  - **Orientation sur le dosseret** : l'inclinaison du logo d'origine du modèle, mesurée par profil de projection de ses traits ; −30° si ce n'est pas un texte lisible.
+    - Table `ANGLE_MODELE` d'exceptions par modèle : CBF −15°, XR 1000 −30° (« XR » en italique, mesuré à −45°).
+    - Choix de Melvin sur planche : Z900 −30°, CBF −15°.
+    - Essais écartés : jonction dosseret/assise, bord bas du dosseret et ligne de niveau 3D. Tous instables sur des dosserets en dôme.
+  - **Orientation sur les bandes** : électrocardiogramme et aile Honda horizontaux à l'écran. Le trait du bas de l'aile doit être parallèle au sol ; la ligne de niveau 3D de MoGe n'y arrivait pas.
+  - Planches : `resultats/v10-pose/`. Duke, CBF et Z900 régénérées et réimportées dans la copie (la CBF compte 237 choix, sans Yamaha sur la bande).
 - **Bug corrigé dans `import_logos_copie.php`** : chaque import ajoutait 7 doublons d'en-têtes de groupes (« Les Noirs »… ids 9001-9007) dans chaque zone de matière. La 2.0.0 les renvoie à la lecture, et les réécrire les enregistrait en plus. Les choix `is_group` sont désormais retirés avant l'écriture. Z900, Duke et CBF ont été réparées (44 choix par zone, comme à l'origine). **Tout autre produit importé avec l'ancien script est à réimporter.**
 - **Maquette (`build.py`, blocs du 17-19/10)** :
   - zoom 90 % sur ordinateur ;
