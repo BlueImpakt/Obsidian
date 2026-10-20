@@ -30,7 +30,7 @@ Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 |---|---|---|
 | Audit des tâches manuelles automatisables | Liste des tâches avec temps et coût estimés (rappels, emailing, bons de commande) | **Fait** (§12) : documents et courriels existants relevés, fiche d'habillage maquettée, courriel « En fabrication », relances de configuration et de panier prototypées (16 vérifications), échange standard et caution analysés, chiffrage |
 | Diagnostic de la perte de panier | Diagnostic avec préconisation | **Piste trouvée** (§12) : configuration jamais enregistrée par le plugin ; fiches servies par le cache serveur o2switch même avec un panier. Test en visiteur à faire, préconisation et prototype faits |
-| État des lieux du suivi statistique | État des lieux avec outil de parcours utilisateur recommandé | **Pas commencé** |
+| État des lieux du suivi statistique | État des lieux avec outil de parcours utilisateur recommandé | **Fait** (§12, 20/10) : GA4 seul (via SEOPress), sans e-commerce ni configurateur ; **déposé sans consentement et malgré un refus** ; outil recommandé : Microsoft Clarity |
 | Automatisation des calques (demande de Valérie, 16/10) | Faisabilité | **Étudié et clos** (§8) : aucun modèle ne remplace le détourage de Valérie |
 | Chiffrage de la refonte complète et d'une maintenance mensuelle | Fourchette de jours et de coût | **Refonte chiffrée** (Phase 3 : 20 à 23 j, [[prepa-phase-2]] §1) ; maintenance à chiffrer |
 
@@ -1932,6 +1932,38 @@ Proposition : court terme **6 ou 5** ; moyen terme **1** ou **2** selon les chif
 **Aujourd'hui, sans carte prélevable (Alma, Cofidis, carte virtuelle)** : rien dans le site. L'extension n'a ni lien de paiement ni courriel pour ce cas (vérifié dans son code : Cofidis exclu, Alma sans portefeuille Payline, aucun lien `order-pay` ni envoi). Ce que fait Valérie (lien de paiement depuis l'espace Payline/Monext, virement, chèque, appel) n'est pas visible : **à lui demander**.
 
 **Commander plus tard ? (question de Melvin, 17/10)** Risque réel si le bouton est à côté de « Ajouter au panier ». Fait sur la copie : bouton seulement dans le récapitulatif ; **proposition au départ** « Vous partez ? Gardez votre selle » (une fois par visite, client engagé, ni envoi ni clic panier ; souris qui sort par le haut sur ordinateur, 60 s d'inactivité sur téléphone ; pas de piège sur le bouton retour) ; **bilan** dans WooCommerce › Relances (envois et commandes par origine, délai moyen avant commande) pour décider après quelques semaines de garder, déplacer ou retirer le bouton.
+
+### Suivi statistique : état des lieux (20/10)
+Volet offert « État des lieux du suivi statistique, avec outil de parcours utilisateur recommandé ». Sources : HTML public de l'accueil, d'une fiche (KTM 790/890 Duke nid d'abeilles), du panier et de la politique de cookies ; export « Options du thème Divi » ; Site Health de la prod du 14/10 ; test dans le navigateur intégré (profil sans visite antérieure du site, `_fv=1`), requêtes envoyées à Google relevées. Aucun accès à l'admin, ni à Google Analytics.
+
+#### Ce qui est en place
+| Outil | Constat |
+|---|---|
+| **Google Analytics 4** `G-ZN6BLJQ8SG` | Sur toutes les pages, dans le `<head>`, inséré par **SEOPress PRO** (signature `gtag('set','cookie_flags','SameSite=None;Secure')` ; ni Divi ni extension dédiée). Envoie la **page vue** et les mesures automatiques (défilement à 90 %). **Aucun événement e-commerce** (`view_item`, `add_to_cart`, `begin_checkout`, `purchase` absents de la fiche et du panier) |
+| Second identifiant GA4 `_ga_SGCM8NRNPT` | Présent dans le relevé de cookies de Complianz, pas dans le code actuel : ancienne propriété ou autre site, à identifier |
+| Google Tag Manager | Snippet de Complianz avec un **identifiant vide** (`gtm.js?id=` → **erreur 400** à chaque page) : configuration abandonnée, à retirer |
+| Search Console | Validée par balise méta (`google-site-verification`). Propriétaire inconnu |
+| WooCommerce | Rapports de ventes natifs (Analytics, dans l'admin) ; **attribution des commandes** (origine de chaque commande, Sourcebuster) **seulement si le visiteur accepte le marketing** (`consentCategory: "marketing"`) : couverture partielle |
+| Autres | Ni pixel Meta, ni Google Ads, ni Clarity, Hotjar, Matomo. AWStats (journaux serveur) probablement disponible dans le cPanel o2switch : non vérifié |
+
+#### Le configurateur et le panier sont invisibles
+Le configurateur s'ouvre dans une fenêtre, sur la même page : **aucune page vue, aucun événement**. On ne peut mesurer ni le nombre d'ouvertures, ni l'étape d'abandon, ni le passage configurateur → panier → commande, ni l'origine des ventes (sauf consentement marketing). C'est précisément ce qu'il faudrait pour le **panier perdu** (§12).
+
+#### Consentement : GA4 tourne sans consentement, et après un refus
+- Complianz déclare les statistiques « suivies de façon anonyme, aucun droit n'est demandé » (politique de cookies du **8/10/2024**) : à la première visite, **sans aucun clic**, il pose `cmplz_statistics=allow`. GA4 pose `_ga` et `_ga_ZN6BLJQ8SG` et envoie `page_view` à `region1.google-analytics.com`.
+- **Après « Refuser »** (`cmplz_statistics=deny` bien enregistré) : à la page suivante, GA4 envoie de nouveau `page_view` **avec le même identifiant de visiteur** (`cid=1290531262.1792497893`), et Complianz **remet `cmplz_statistics=allow`**. Le script de SEOPress est écrit en dur dans la page (et mis en cache par LiteSpeed) : Complianz ne le bloque pas.
+- **Pas de Consent Mode** (`gcd=13l3l3l2l1l1`, aucun `gtag('consent','default')`).
+- Google Analytics **n'est pas déclaré** comme service dans la politique : ses cookies sont rangés en « Divers, finalité en attente d'enquête ».
+- Lecture : pour la CNIL, Google Analytics n'entre pas dans l'exemption de consentement des outils de mesure d'audience. En l'état, le site dépose un traceur soumis à consentement sans le demander, et malgré un refus explicite. Risque réel (contrôles et sanctions CNIL sur les cookies). Relève de la configuration du site (prestataire), hors périmètre de la Phase 1 : signalé, rien modifié.
+- Incident pendant le test : la fenêtre « Information importante » (Carbone) recouvre le bandeau cookies sur les fiches. Le premier clic sur « Refuser » tombe dessus et n'est pas pris en compte.
+
+#### Recommandations
+1. **Mise en conformité (immédiat, réglage, ~0,5 j)** : statistiques soumises à consentement dans Complianz ; GA4 chargé par Complianz (ou SEOPress avec son option de consentement), Consent Mode v2 ; retirer le GTM vide ; relancer l'analyse des cookies et mettre à jour la politique. Conséquence assumée : seules les visites des personnes qui acceptent sont comptées (Consent Mode modélise une partie du reste).
+2. **Mesurer ce qui compte (Phase 2, avec la nouvelle interface, estimation 0,5 à 1 j)** : événements e-commerce GA4 (fiche vue, ajout au panier, début de commande, commande avec montant) et **entonnoir du configurateur** (ouverture, étapes 1 à 4, envoi par e-mail, ajout au panier). Comme l'interface est notre code, les événements s'y ajoutent sans toucher au plugin. **Hors chiffrage actuel de la Phase 2 : décision de Melvin** (l'inclure dans le lot « Configurateur intégré » ou en option).
+3. **Outil de parcours recommandé : Microsoft Clarity**. Gratuit, enregistrements de sessions, cartes de clics et de défilement, détection des clics répétés de frustration ; saisies masquées par défaut ; soumis au consentement en Europe (intégration Complianz). Usage ciblé : configurateur, panier, commande, pour voir où les clients bloquent. Alternatives : **Matomo** (peut être configuré pour l'exemption CNIL, donc chiffres complets, mais payant en version hébergée ou à maintenir si auto-hébergé) ; Hotjar (payant au-delà d'un petit volume).
+4. **Propriété des comptes** : Valérie doit être **administratrice** de la propriété GA4, de la Search Console (et de Clarity) avec son propre compte Google. Si elles sont au nom d'une agence (ARTEO, VIMAWEB), demander le transfert, comme pour l'hébergement et les licences ([[prepa-phase-2]] §2).
+
+À demander à Valérie : qui a accès à Google Analytics et à la Search Console ; si elle consulte ces chiffres ; ce qu'elle voudrait savoir (ventes par origine, abandons, modèles les plus configurés).
 
 ## 13. Poste 6 : rapport et chiffrage
 
