@@ -162,3 +162,7 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Angle de post : en auditant le code d'un plugin de caution, découvert que les clients en paiement fractionné ou carte virtuelle ne reçoivent aucun lien de caution — un trou de process invisible tant qu'on ne lit pas le code.
 - Configurateur e-commerce : proposer « recevoir ma configuration par e-mail » au moment où le visiteur part (et non à côté du bouton d'achat), 2 rappels max avec case « je ne veux pas de rappel », et un bilan qui mesure si ça récupère des clients ou retarde seulement l'achat
 - Dev sur données réelles : contrat RGPD de sous-traitance (art. 28) + neutralisation systématique de la copie (e-mails coupés, paiements en test, tâches planifiées arrêtées) ; « pseudonymisé » n'est pas « anonymisé »
+
+## 2026-10-20
+
+- Audit e-commerce (configurateur de selles) : 345 fiches produit saisies une par une se ramènent à 46 configurations réellement distinctes. En relisant les 345 pages publiques, 296 fiches proposent des options de broderie différentes pour un même visuel : deux générations de champs coexistent. Angle : avant d'automatiser, mesurer ce qui est vraiment différent — la dette de saisie manuelle se voit dans les données, pas dans l'interface.

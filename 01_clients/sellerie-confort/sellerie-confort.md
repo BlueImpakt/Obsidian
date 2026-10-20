@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-19
+body_synced: 2026-10-20
 ---
 
 # sellerie-confort
@@ -32,6 +32,7 @@ body_synced: 2026-10-19
 - Aucun accès à la prod : clone local, aucun accès direct à la base, aucune donnée clients/commandes/paiements consultée
 - WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — à confirmer par l'audit
 - Images d'origine conservées pour les modèles existants ; pour une nouvelle matière, grande photo haute résolution (texture maître) préférée au petit carré répété, échelle auto à prévoir en Phase 2
+- Dev de la Phase 2 (17/10, repris dans le rapport le 20/10) : copie exacte de la prod sur l'hébergement, données clients comprises, neutralisée, encadrée par une clause RGPD de sous-traitance (art. 28) au contrat de Phase 2
 
 ## Besoins identifiés
 - Ajouter une couleur ou une matière beaucoup plus simplement (regroupement par famille au lieu d'une photo par selle, par zone, par matière)
@@ -43,13 +44,12 @@ body_synced: 2026-10-19
 - Contrat Phase 1 : réécrit le 13/10 (Word + PDF, 1 400 € HT), clause de plafonnement Phase 2 ajoutée le 13/10, **signé le 14/10**
 - Phase 2 : à chiffrer à l'issue de la Phase 1 (fourchette annoncée 4 000 à 7 000 €, taux 350 €/j) ; **plafond contractuel 7 000 € HT**, 1 400 € de Phase 1 déduits, solde max 5 600 €
 - **Chiffrage du 19/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette) : Phase 2 = **17,5 j, 6 125 € HT à payer (Phase 1 déduite)** ; Phase 3 (refonte complète du site + automatisations) = **20 à 23 j, 7 000 à 8 050 € HT**
+- **Rapport client Phase 1 (20/10, artefact claude.ai, non envoyé)** : Phase 2 présentée à **15 j (5 250 € HT)** + écran de gestion en option (2,5 j, 875 € HT) pour tenir le plafond, au lieu des 17,5 j d'un bloc du Word, à valider avant envoi
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — détourage automatique des calques : Mask2Former IoU 0,72, SegFormer 0,64, insuffisant en production, piste semi-automatique ; logos brodés testés dans le configurateur local (2 options, import de logo client OK).
-- 2026-10-16 : Sur [[sellerie-confort-configurateur]] — segmentation Mask2Former v2 IoU 0,64 (pas mieux que 0,72), SAM 3 à tester ; logos brodés ajustés (56 %, horizontal sur bande, « Sans logo ») ; estimation postes 5-6 ≈ 1,5 j.
 - 2026-10-16 : Sur [[sellerie-confort-configurateur]] — SAM 3 testé (0,44, zones compactes 0,8-0,94) : conclusion qu'aucun modèle testé ne remplace le détourage de Valérie ; parcours sans fiche récap (panier direct) ; mise en prod dev → préprod → prod cadrée (§23) ; écran Matières 37 / Liserés 44 / Surpiqûres 26 propre.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — Écran de gestion « Matières et couleurs » en 4 onglets d'après les trois jeux de choix standard (listes de 37, 44 et 26 choix) : Matières 37, Liserés 44, Surpiqûres 26, plus À vérifier 183 (nid d'abeille nommé autrement 52, petites pointes R6 44, variantes ou… Détails dans la fiche projet.
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — panier perdu diagnostiqué : Payline vide le panier avant la banque, Cofidis détache la session, panier invité 2 jours ; correctif préconisé (pas de vidage avant paiement, 30 jours).
@@ -63,6 +63,8 @@ body_synced: 2026-10-19
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — chiffrage Phase 2 17,5 j (6 125 € HT, Phase 1 déduite) et Phase 3 20-23 j (7 000-8 050 € HT), Word + PDF prêts.
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — logos brodés : règle de taille complète (45 % de √surface, min 5 cm dosseret, 4-7 cm bandes) et orientations validées sauf l'aile Honda sur bandes ; bug du script d'import corrigé, Duke / CBF / Z900 réparées.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — Chiffrage revu (Word `Phase 1/chiffrage-phases-1-2-3*.docx`) : Phase 2 17,5 j (6 125 € HT à payer, plafond de 16 j dépassé de 1,5 j avec l'écran de gestion), Phase 3 20 à 23 j (7 000 à 8 050 € HT). (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport Phase 1 version client rédigé (artefact, 9 annexes visuelles), Phase 2 présentée à 15 j + option écran de gestion ; dev Phase 2 sur copie avec données clients neutralisée (RGPD art. 28).
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — options de broderie incohérentes sur 296 fiches (18 groupes sur 46) à homogénéiser en Phase 2 ; copie fusionnée en 46 configurateurs ; aile Honda en miroir.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
