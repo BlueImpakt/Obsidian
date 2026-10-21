@@ -50,7 +50,6 @@ body_synced: 2026-10-21
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — logos brodés branchés sur Duke et CBF, couleurs de broderie par familles, configurateur sans défilement ; import Z900 bloqué par l'arrêt de MySQL de Local.
 - 2026-10-19 : Sur [[sellerie-confort-configurateur]] — taille des logos calculée sur la surface du calque (plafond dosseret 45 %), Z900 importée aux 26 fils.
@@ -65,6 +64,7 @@ body_synced: 2026-10-21
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — groupes de configuration identifiés : Africa Twin 1100 = 1000 ; Transalp 600 dans un groupe de 41 fiches
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Remotion pour Instagram en brainstorming (V1 100 % graphisme, scénario Africa Twin → configurateur → motarde), 3 pistes visuelles maquettées
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

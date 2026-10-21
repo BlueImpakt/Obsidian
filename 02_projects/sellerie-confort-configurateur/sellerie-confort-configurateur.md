@@ -116,9 +116,10 @@ body_synced: 2026-10-21
 - [ ] Vérifier la mise en page du PDF v2 du rapport (tableaux, images) puis l'envoyer à Valérie avec le mail de synthèse
 - [ ] Obtenir l'accord écrit de Valérie pour neutraliser le dev (fermeture au public, paiements en test, courriels et tâches coupés)
 - [ ] Commiter les listes déroulantes Année / Taille / Poids (`build.py` + tests) et vérifier en base le numéro de groupe de la Transalp 600 (G03 supposé) une fois Local relancé
+- [ ] Vidéo promo : demander à Valérie ce que fait concrètement le gel (marque, épaisseur, effet) avant de l'utiliser comme argument ; valider toute promesse chiffrée (ex. « 500 km, zéro mal ») avec elle
+- [ ] Vidéo promo : ajouter `.superpowers/` au `.gitignore` du repo sellerie-confort (maquettes à ne pas committer)
 
 ## Journal
-- 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 (logos Duke / CBF) : logos brodés branchés sur Duke et CBF 600 1000 (5 logos × 26 fils, deux emplacements), un seul emplacement affiché à la fois, couleurs de broderie par familles, aucun défilement à aucune étape sur Z900 / Duke / CBF, affichage 100 % = ancien 90 % ; modifs reportées dans `build.py` (`sc-maquette` est régénéré). Import Z900 (263 choix) bloqué par l'arrêt de MySQL de Local.
 - 2026-10-19 (logos) : Import Z900 aux 26 fils sur la copie (132 / 131 choix). Taille des logos désormais calculée sur la surface 3D du calque (contour du fil, sans marges) ; plafond dosseret retenu à 45 %, 80 % de la taille max sur les bandes en test ; planches avant/après dans `calque-A/resultats/v9-tailles/`.
@@ -133,6 +134,7 @@ body_synced: 2026-10-21
 - 2026-10-20 (chiffrage rapport) : Rapport client aligné sur le Word : Phase 2 = 17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer Phase 1 déduite (sous le plafond de 7 000 € HT), paiement 50 % commande / 50 % mise en prod ; Phase 3 = 20 à 28,5 j, 7 000 à 9 975 € HT ; détail par lot conservé, accord de neutralisation du dev demandé à Valérie ; relecture complète faite, incohérences restantes à trancher.
 - 2026-10-20 (formulaire) : Champs Année / Taille / Poids pilote / Poids passager passés en listes déroulantes dans `build.py`, vérifiés sur la copie 8090 jusqu'au panier WooCommerce (tests au vert, non commité).
 - 2026-10-21 (groupes) : Africa Twin 1100 = même configuration que l'Africa Twin 1000 seule ; Transalp 600 = groupe générique de 41 fiches (probablement G03 TDM 900, à confirmer en base).
+- 2026-10-21 (vidéo promo) : vidéo Remotion pour Instagram lancée en brainstorming, V1 100 % graphisme ; scénario Africa Twin 1100 → selle isolée → nouveau configurateur (matières, logo Transalp, gel) → motarde qui repart ; 3 pistes visuelles maquettées (atelier, nuit de circuit, vue en coupe)
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
