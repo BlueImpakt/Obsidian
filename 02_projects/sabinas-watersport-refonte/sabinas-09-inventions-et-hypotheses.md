@@ -32,6 +32,7 @@ source: GitHub/sabina-watersport-refonte/docs/09-inventions-et-hypotheses.md
 | « English & Deutsch » à bord | Langues non écrites sur ses sites (équipe allemande ; Click&Boat cite DE/EN/FR/IT) |
 
 ## 3. Déduit par nous
+- **Vidéo WDR** : la légende « Speedboat Tour Deluxe on WDR live (German TV), 2022 » est déduite du titre YouTube de Sabina (« … WDR live Tamina 2022 »). À confirmer avec elle : reportage diffusé, ou simple tournage.
 - **Identification des photos** : Sabina à la barre, Roland, « THOI » sous voiles, baie Saint-Paul à Lindos. Déduite du contexte des pages où les photos apparaissent.
 - **Carte schématique** : positions de Cave Island et de la Blue Lagoon approximatives (la carte l'indique : « schematic, not to scale »).
 - **Ordre des escales** : catamaran, sunset, voilier et partagé suivent l'ordre décrit sur ses sites. Pour le speedboat, le site liste les spots sans ordre : la page les présente comme « temps forts ».

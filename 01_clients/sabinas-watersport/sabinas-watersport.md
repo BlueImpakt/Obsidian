@@ -7,6 +7,7 @@ secteur: tourisme
 localisation: remote
 origine_lead: prospection à froid (Melvin)
 tjm:
+body_synced: 2026-10-21
 ---
 
 # sabinas-watersport
@@ -22,7 +23,8 @@ tjm:
 - Aucun contact pour l'instant : approche prévue à froid, par lien vers une maquette mobile envoyé par e-mail/WhatsApp.
 
 ## Décisions prises
--
+- Positionnement de la maquette : luxury & exclusive (maquette v1 itérée, 2026-10-21).
+- Comparaison A/B avant envoi : maquette v1 vs maquette concurrente piste C « Horizon » (Prompt 3D).
 
 ## Besoins identifiés
 - 3 sites Jimdo éclatés (2007, 2017, 2022) → un seul site, une seule mise à jour par an.
@@ -43,6 +45,7 @@ tjm:
 
 ## Journal
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
+- 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette v1 itérée (positionnement luxury & exclusive, vidéos, tarifs sports nautiques) et maquette concurrente au Prompt 3D (piste C « Horizon ») pour comparaison A/B
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]
