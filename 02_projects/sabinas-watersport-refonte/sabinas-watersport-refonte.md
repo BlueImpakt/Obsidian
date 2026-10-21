@@ -24,6 +24,7 @@ body_synced: 2026-10-21
   - [[sabinas-06-comparatif-stack-pattern]] — stack des agents vs [[stack-creation-site-web]], stack retenue
 - Maquette mobile cliquable (home + fiche catamaran + réservation 3 étapes + écran concept), EN officiel + FR/DE, dossier `maquette/` du repo — **v1 livrée** (revues Finish-Gate, accessibilité, textes appliquées). `?lang=de` ouvre en allemand.
 - [[sabinas-08-message-accroche]] — WhatsApp + e-mail en allemand, avec traduction FR
+- [[sabinas-09-inventions-et-hypotheses]] — ce qui n'est pas un fait dans la maquette (à valider avec Sabina)
 
 ## État actuel
 - 2026-10-21 : analyse terminée ; maquette v1 et message d'accroche prêts. Reste : contact de Melvin dans la maquette, hébergement privé, reconfirmation des chiffres d'avis, envoi.
