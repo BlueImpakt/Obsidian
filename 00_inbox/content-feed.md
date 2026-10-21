@@ -173,3 +173,5 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 ## 2026-10-21
 
 - Vidéo de présentation Blue Impakt de 10 s générée en code (Remotion/React) avec Claude Code, à partir de la charte du site : angle « une vidéo de marque sans logiciel de montage », format Reels/LinkedIn vertical
+- Vidéo pub moto faite avec une IA grand public (Google Flow, abonnement AI Plus) + Remotion : 8 images à 0 crédit, 4 clips vidéo sur 250 crédits. Leçon terrain : l'édition IA réinvente la pièce qu'on veut isoler (selle redessinée, 2× trop grande) → détourage à la main depuis les vrais pixels ; un geste complexe (enjamber une moto, baisser une visière) casse en vidéo IA → découper en clips courts avec image de début ET de fin.
+- Angle : Polar (payments pour SaaS) refuse explicitement les services de voyage et les services humains. Pour une activité touristique, Stripe en acompte reste le bon choix : vérifier la politique d'usage avant de choisir un PSP.
