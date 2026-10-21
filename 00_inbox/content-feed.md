@@ -169,3 +169,7 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Audit d'un site e-commerce : Google Analytics installé, mais il ne mesure que les pages vues. Ni le configurateur, ni le panier, ni l'origine des ventes. Et il dépose ses cookies même quand le visiteur clique « Refuser » (non conforme CNIL). Angle : « avoir GA ≠ savoir où vos clients abandonnent » — un état des lieux statistique se fait en 1 h sans aucun accès admin.
 - Angle méthode : en refonte, ne jamais travailler sur une copie brute avec données clients sur son PC. Copie locale sans données perso → dev hébergé (données encadrées RGPD) → préprod → prod.
 - Angle prix : détailler le chiffrage par lot mais s'engager sur les livrables et le prix total, pas sur les jours de chaque lot — transparence pour un client déjà échaudé, périmètre écrit qui protège le prestataire.
+
+## 2026-10-21
+
+- Vidéo de présentation Blue Impakt de 10 s générée en code (Remotion/React) avec Claude Code, à partir de la charte du site : angle « une vidéo de marque sans logiciel de montage », format Reels/LinkedIn vertical
