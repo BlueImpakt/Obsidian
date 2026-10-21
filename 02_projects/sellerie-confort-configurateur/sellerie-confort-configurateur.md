@@ -120,9 +120,9 @@ body_synced: 2026-10-21
 - [ ] Vidéo promo : demander à Valérie ce que fait concrètement le gel (marque, épaisseur, effet) avant de l'utiliser comme argument ; valider toute promesse chiffrée (ex. « 500 km, zéro mal ») avec elle
 - [ ] Vidéo promo : valider le rendu final de l'assemblage 30 s (tâche 9) et la déformation du logo Africa Twin qui épouse la forme du dosseret
 - [ ] Vidéo promo : écouter la piste son (vérifiée uniquement par mesures : niveaux, silences, placement des bruitages)
+- [ ] Vidéo promo : regarder le nouveau rendu intégrant les retours du 21/10 (selle redécoupée, début ×2, gel et poids ralentis, fin sans temps mort, « Mode confort activé ») ; ensuite décider fusion/push de la branche `video-promo-v1`
 
 ## Journal
-- 2026-10-19 (logos) : Import Z900 aux 26 fils sur la copie (132 / 131 choix). Taille des logos désormais calculée sur la surface 3D du calque (contour du fil, sans marges) ; plafond dosseret retenu à 45 %, 80 % de la taille max sur les bandes en test ; planches avant/après dans `calque-A/resultats/v9-tailles/`.
 - 2026-10-19 (chiffrage) : Phase 2 = 17,5 j, 6 125 € HT à payer (Phase 1 déduite) ; Phase 3 refonte complète (automatisations comprises) = 20 à 23 j, 7 000 à 8 050 € HT ; Word + PDF `Phase 1/chiffrage-phases-1-2-3.docx` et variante `-fourchette`.
 - 2026-10-19 (logos, suite) : Règle de taille appliquée (45 % de √surface, hauteur ≤ 50 % de la largeur, min 5 cm dosseret, 4-7 cm bandes, emplacement retiré si le min ne tient pas) et remesurée sur 12 selles × 5 logos ; orientation dosseret = inclinaison du logo d'origine (exceptions CBF −15°, XR −30°), logos centrés sur les bandes, validé sauf l'aile Honda sur bandes (calée sur l'horizontale de l'image). Bug du script d'import corrigé (en-têtes de groupe dupliqués), Duke / CBF / Z900 réparées à 44 choix par zone.
 - 2026-10-19 (logos, nuit) : Duke / CBF / Z900 régénérées et réimportées sur la copie avec toutes les règles du 19/10 (aile Honda horizontale sur les bandes, exceptions CBF −15° / XR −30°, 44 choix par zone) ; Yamaha non proposé sur la bande de la CBF.
@@ -137,6 +137,7 @@ body_synced: 2026-10-21
 - 2026-10-21 (vidéo promo) : vidéo Remotion pour Instagram lancée en brainstorming, V1 100 % graphisme ; scénario Africa Twin 1100 → selle isolée → nouveau configurateur (matières, logo Transalp, gel) → motarde qui repart ; 3 pistes visuelles maquettées (atelier, nuit de circuit, vue en coupe)
 - 2026-10-21 (vidéo promo, réalisation) : spec + plan commités ; images et clips IA générés dans Google Flow (AI Plus, sans API) et validés ; selle d'origine qui se métamorphose en selle confort dans le configurateur ; logo Africa Twin fourni intégré ; tâches 1 à 8 validées (sous-agents Opus), assemblage 30 s (tâche 9) en cours
 - 2026-10-21 (vidéo promo) : tâche 9 livrée, film 30 s assemblé avec son (`promo-t9b.mp4`, −15,3 LUFS) ; corrections de relecture faites ; restent une image blanche (frame 776) et les saccades du départ, en correction.
+- 2026-10-21 (vidéo promo, v1) : film 30 s livré (`sellerie-confort-reel-v1-sans-musique.mp4`, sans musique) après 3 séries de corrections de la tâche 9, README et relecture finale OK (branche locale `video-promo-v1`, 20 commits, non poussée) ; retours de Melvin (selle redécoupée, rythme ×2 / ralentis, fin fluide, « Mode confort activé », « Mousse adaptée à ta morphologie ») en cours d'intégration, sans relecture agent.
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
