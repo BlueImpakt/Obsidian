@@ -47,6 +47,7 @@ body_synced: 2026-10-21
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette v1 itérée (positionnement luxury & exclusive, vidéos, tarifs sports nautiques) et maquette concurrente au Prompt 3D (piste C « Horizon ») pour comparaison A/B
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — liens d'avis Google / Tripadvisor placés dans les cartes de note de la maquette.
+- 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette v1 peaufinée (header, footer réseaux, hero, photos watersports, galeries tenant dans la première vue).
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]

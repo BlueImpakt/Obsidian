@@ -51,6 +51,7 @@ body_synced: 2026-10-21
 - [ ] Une fois validé, extraire le boilerplate en pattern dans `03_knowledge/patterns/`
 - [ ] Maquette 3D : finir les corrections du finish-gate (B1 « Everywhere. » qui déborde sur Für Sie en EN, 8 majeurs) puis comparer `maquette/` et `maquette-3d/` et choisir celle à envoyer
 - [ ] Après avoir rempli `PITCH_CONTACT` (ligne 14 de `maquette/app.js`), incrémenter le `?v=` des scripts dans `index.html`
+- [ ] Maquette : trouver l'URL LinkedIn de Sabina (profil ou page) pour le bouton du footer, sinon le retirer ; décider d'ajouter Instagram (`sabinas.watersport`)
 
 ## Journal
 - 2026-10-21 : Analyse des 3 sites livrée (6 docs + inventaire photos). Décision : un seul site sur sabinas-watersport.com, EN/DE d'abord, stack Astro + Sanity + n8n + Stripe, pack Pro 3 500 à 4 800 € + 89 à 129 €/mois.
@@ -60,6 +61,7 @@ body_synced: 2026-10-21
 - 2026-10-21 : Maquette v1 itérée : walkthrough après = 6/10 frictions résolues ; tarifs sports nautiques en page détail ; vedette par filtre ; renommage Private / Half-Private tour, ton luxury & exclusive ; galeries fléchées ; hero drone HD ; 7 vidéos YouTube en nocookie ; bug Motion (scale(0)) corrigé.
 - 2026-10-21 : Maquette 3D : 3 pistes en aveugle (A Bordalbum, B Carte de bord, C Horizon), Melvin choisit C (+ mode soleil clair) ; home, fiche, réservation et écran Für Sie construits ; a11y et LCP OK, finish-gate KO (1 bloquant, 8 majeurs) en correction.
 - 2026-10-21 : Maquette v1 : liens d'avis Google / Tripadvisor intégrés et centrés dans leurs cartes de note (EN/FR/DE), scripts en `?v=36`.
+- 2026-10-21 : Maquette v1 peaufinée : header « Exclusive boat trips » / Watersports, footer Facebook + LinkedIn, hero « Your own sailing day », photos watersports de Sabina (7 cartes), galeries PC 5 éléments sans défilement avec vidéo au centre tenant dans la première vue ; scripts en `?v=53`.
 
 ## Liens
 - Client : [[sabinas-watersport]]
