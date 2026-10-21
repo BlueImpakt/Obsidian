@@ -46,3 +46,38 @@ Projets avec réservation en temps réel, comptes utilisateurs et paiement sécu
 ## Liens
 - Leçons : `formation-ia/1701-créer-sa-stack-technique`, `1706-comprendre-les-boilerplate`, `1709-intégration-des-paiements`, `1714-créer-la-landing-page`
 - Boilerplates payantes citées : ShipFast (200 $), Super Starter, OpenSaaS
+
+---
+
+## Variante : site d'activités / tourisme (ajout du 2026-10-21)
+
+Pour les opérateurs d'activités (excursions bateau, sports nautiques, tours guidés) : petites structures saisonnières, clientèle internationale sur mobile, gérant peu technophile. Le besoin principal est un **site de contenu qui convertit**, pas une application. La réservation monte en puissance par paliers. Variante issue du cas [[sabinas-watersport-refonte]] (comparatif complet : [[sabinas-06-comparatif-stack-pattern]]).
+
+### Ce qui change par rapport à la stack principale
+
+| Brique | Stack principale | Variante tourisme | Raison |
+|---|---|---|---|
+| Front | Next.js + Tailwind + TS | **Astro** + Tailwind + TS, îlots React pour le calendrier et le formulaire | Surtout du contenu multilingue lu en 4G : zéro JS par défaut |
+| Édition par le client | — | **Sanity** (Studio utilisable sur mobile), ou Keystatic pour tout garder dans git | Le gérant change un prix ou une date depuis son téléphone, sans appeler l'agence |
+| Base / back-end | Convex | Aucune au lancement ; **Convex** seulement pour le moteur maison (palier 3) | Tant que le gérant valide chaque demande, il n'y a pas de surbooking possible |
+| Authentification | BetterAuth | Aucune côté visiteurs ; BetterAuth pour le back-office opérateur au palier 3 | Personne ne crée de compte pour une sortie en bateau |
+| Paiement | Polar ou Stripe | **Stripe** au nom du client (Stripe Connect au palier 3, l'agence ne détient jamais les fonds) | Service physique vendu localement avec la TVA locale : le merchant of record de Polar, pensé pour le numérique, n'apporte rien, coûte plus cher, et surtout **la politique d'usage de Polar interdit les « Human services » et les « Travel Services »** (vérifié le 2026-10-21) : une excursion n'est pas éligible |
+| Hébergement | Vercel ou Cloudflare Pages | **Cloudflare** (Pages, Workers, Turnstile, redirections, Registrar) | Gratuit en commercial ; redirections 301 des anciens domaines au même endroit |
+| Automatisation | — | **n8n** auto-hébergé | Différenciateur Blue Impakt, justifie le mensuel |
+
+### Réservation par paliers
+1. **P1, demande structurée** (par défaut au lancement) : formulaire activité + date + personnes → Worker Cloudflare → n8n → le gérant valide d'un tap → lien d'acompte Stripe → confirmation. Zéro commission.
+2. **P2, SaaS de booking intégré** (Bókun, Regiondo) : quand il faut un calendrier en libre-service, des places vendues à l'unité ou la synchronisation Viator/GetYourGuide.
+3. **P3, moteur maison multi-clients** : Convex (inventaire de places en temps réel) + BetterAuth + Stripe Connect. À envisager seulement à partir de 8 à 10 clients dans le secteur.
+
+### Briques spécifiques au secteur
+- Multilingue avec `hreflang` (langues à choisir selon les nationalités de touristes de la destination), contenus saisis une fois et traduits.
+- schema.org : `TouristTrip`, `Offer`, `LocalBusiness`, `FAQPage`, `AggregateRating`.
+- Barre d'action collante sur mobile : WhatsApp (message pré-rempli), Appeler, Réserver.
+- Note et avis Google/TripAdvisor affichés et visibles même si les cookies sont refusés.
+- Conditions visibles avant la demande : acompte, annulation, météo, enfants.
+- Workflows n8n : confirmation, rappel J-1 avec point de rendez-vous, alerte vent (le gérant valide avant envoi), demande d'avis J+1.
+- Regroupement de domaines multiples : un seul site, redirections 301 page par page, transfert des domaines vers Cloudflare Registrar avant toute résiliation de l'ancien builder.
+
+### Quand utiliser cette variante plutôt que la stack principale
+Site vitrine + réservation d'activités, catalogue de moins de ~30 produits, pas de comptes clients. Dès qu'il faut des comptes, un espace membre ou de la réservation temps réel sur plusieurs opérateurs, on revient à la stack principale (Next.js + Convex + BetterAuth).
