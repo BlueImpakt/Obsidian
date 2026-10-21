@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-20
+body_synced: 2026-10-21
 ---
 
 # sellerie-confort
@@ -50,8 +50,6 @@ body_synced: 2026-10-20
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — fiche d'habillage A4 maquettée, courriel « En fabrication » retenu ; module de sauvegarde/envoi de configuration et relances testé sur la copie ; retour/caution à simplifier.
-- 2026-10-17 : Sur [[sellerie-confort-configurateur]] — relances configuration/panier cadrées RGPD, caution non relancée pour Alma/Cofidis/carte virtuelle, configurateur tenant à l'écran avec logos 26 couleurs, reprise progressive de l'hébergement o2switch au nom de Valérie.
 - 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 : Sur [[sellerie-confort-configurateur]] — logos brodés branchés sur Duke et CBF, couleurs de broderie par familles, configurateur sans défilement ; import Z900 bloqué par l'arrêt de MySQL de Local.
@@ -65,6 +63,8 @@ body_synced: 2026-10-20
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — liste des demandes à VIMAWEB pour le dev Phase 2 (accès SSH/SFTP, données perso, isolation, circuit dev → prod)
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — accès au dev et propriété du code documentés, état des lieux statistique livré (GA4 pages vues seulement, cookies posés malgré refus = non conforme CNIL), méthode Phase 2 copie locale sans données → dev → préprod → prod, rapport exporté en PDF v2.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — groupes de configuration identifiés : Africa Twin 1100 = 1000 ; Transalp 600 dans un groupe de 41 fiches
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

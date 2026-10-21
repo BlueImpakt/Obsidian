@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-20
+body_synced: 2026-10-21
 ---
 
 # sellerie-confort-configurateur
@@ -115,10 +115,9 @@ body_synced: 2026-10-20
 - [ ] Rapport client : trancher les incohérences restantes de la relecture du 20/10 (matières « images conservées » vs « matières texturées à refaire » ; lot « Écran de gestion » 2,5 j élargi aux matières existantes et calques sans jours en plus)
 - [ ] Vérifier la mise en page du PDF v2 du rapport (tableaux, images) puis l'envoyer à Valérie avec le mail de synthèse
 - [ ] Obtenir l'accord écrit de Valérie pour neutraliser le dev (fermeture au public, paiements en test, courriels et tâches coupés)
+- [ ] Commiter les listes déroulantes Année / Taille / Poids (`build.py` + tests) et vérifier en base le numéro de groupe de la Transalp 600 (G03 supposé) une fois Local relancé
 
 ## Journal
-- 2026-10-17 (configurateur) : Broderies avec couleurs et commentaire par emplacement, logos aux 26 couleurs des surpiqûres en choix multiple (« Sans broderie » en premier, recoloration du logo blanc), configurateur tenant dans l'écran à 100 % et vignette cliquable au survol de la selle ; tests Duke / FJR / BMW / Z900 au vert.
-- 2026-10-17 (hébergement) : Piste reprise du compte o2switch au nom de Valérie ajoutée à [[phase-1]] §23 ; dev = préprod WP Tiger dans le même compte (hypothèse « autre serveur » corrigée). Un espace dev chez VIMAWEB leur resterait visible ; décidé une reprise progressive en 3 temps, données clients cadrées au contrat de Phase 2 (sous-traitance RGPD art. 28, copie anonymisée par défaut).
 - 2026-10-17 : relance du configurateur finalisée sur la copie (bouton seulement dans le récapitulatif, proposition au départ, 2 rappels 24 h / 72 h, case « pas de rappel », bilan d'effet dans WooCommerce › Relances, 16/16 tests)
 - 2026-10-17 : dev de la Phase 2 décidé : copie exacte de la prod en préprod WP Tiger (o2switch), RGPD cadrée au contrat (art. 28), neutralisation obligatoire à chaque copie ([[phase-1]] §23)
 - 2026-10-17 (logos Duke / CBF) : logos brodés branchés sur Duke et CBF 600 1000 (5 logos × 26 fils, deux emplacements), un seul emplacement affiché à la fois, couleurs de broderie par familles, aucun défilement à aucune étape sur Z900 / Duke / CBF, affichage 100 % = ancien 90 % ; modifs reportées dans `build.py` (`sc-maquette` est régénéré). Import Z900 (263 choix) bloqué par l'arrêt de MySQL de Local.
@@ -132,6 +131,8 @@ body_synced: 2026-10-20
 - 2026-10-20 : Liste des demandes à VIMAWEB pour le dev Phase 2 établie (SSH par clé ou SFTP, WP-CLI/git, données personnelles du dev, isolation mails/paiements en test, circuit dev → prod, versions serveur et plugins) ; plugin `sc-gestion-configurateur` constaté absent du site Local
 - 2026-10-20 (accès dev / stats / PDF) : Accès au dev en ligne et propriété du code documentés ([[phase-1]] §11 : clé SSH, pas de wp-admin ni mot de passe dans le chat, VIMAWEB voit tout ce qui est sur son serveur) ; état des lieux statistique livré ([[phase-1]] §12 : GA4 via SEOPress PRO, pages vues seulement, ventes et configurateur non mesurés, cookies GA déposés malgré le refus = non conforme CNIL) ; méthode Phase 2 copie locale sans données → dev → préprod → prod ; rapport client exporté en PDF v2.
 - 2026-10-20 (chiffrage rapport) : Rapport client aligné sur le Word : Phase 2 = 17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer Phase 1 déduite (sous le plafond de 7 000 € HT), paiement 50 % commande / 50 % mise en prod ; Phase 3 = 20 à 28,5 j, 7 000 à 9 975 € HT ; détail par lot conservé, accord de neutralisation du dev demandé à Valérie ; relecture complète faite, incohérences restantes à trancher.
+- 2026-10-20 (formulaire) : Champs Année / Taille / Poids pilote / Poids passager passés en listes déroulantes dans `build.py`, vérifiés sur la copie 8090 jusqu'au panier WooCommerce (tests au vert, non commité).
+- 2026-10-21 (groupes) : Africa Twin 1100 = même configuration que l'Africa Twin 1000 seule ; Transalp 600 = groupe générique de 41 fiches (probablement G03 TDM 900, à confirmer en base).
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]
