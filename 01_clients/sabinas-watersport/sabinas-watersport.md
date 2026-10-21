@@ -42,7 +42,7 @@ tjm:
 - [ ] Envoyer la maquette + message d'accroche en allemand (voir [[sabinas-watersport-refonte]])
 
 ## Journal
--
+- 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]

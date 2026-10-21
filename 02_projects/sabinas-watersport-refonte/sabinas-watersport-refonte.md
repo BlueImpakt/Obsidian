@@ -3,6 +3,7 @@ tags: [project, encours, sabinas-watersport]
 created: 2026-10-21
 statut: encours
 client: sabinas-watersport
+body_synced: 2026-10-21
 ---
 
 # sabinas-watersport-refonte
@@ -25,7 +26,7 @@ client: sabinas-watersport
 - Message d'accroche e-mail/WhatsApp en allemand — **à faire**
 
 ## État actuel
-- 2026-10-21 : analyse terminée (4 agents : audit, marché, CRO, stack). Maquette cadrée (mobile d'abord, lien envoyé à froid), en attente de validation du brief par Melvin.
+- 2026-10-21 : analyse terminée (4 agents : audit, marché, CRO, stack). Brief validé ; maquette mobile écrite (home, fiche catamaran, réservation en 3 étapes, écran concept ; EN avec FR/DE), vérification en taille mobile en cours.
 
 ## Décisions techniques
 - **Un seul site** sur `sabinas-watersport.com` (le nom qui porte les avis Google), avec deux univers *Boat trips* et *Watersports*. `catamaran-yachtsailing-rhodos.com` et `dolphin-tours-rhodos.com` redirigés page par page.
@@ -41,7 +42,6 @@ client: sabinas-watersport
 - Mentions légales sans AFM ni GEMI, statut juridique des 2 entités inconnu.
 
 ## Next actions
-- [ ] Valider le brief de la maquette (voir conversation du 2026-10-21)
 - [ ] Construire la maquette mobile DE/EN avec les vraies photos
 - [ ] Reconfirmer notes et nombre d'avis Google/TripAdvisor + prix Viator
 - [ ] Rédiger le message d'accroche en allemand (e-mail + WhatsApp)
@@ -51,6 +51,7 @@ client: sabinas-watersport
 ## Journal
 - 2026-10-21 : Analyse des 3 sites livrée (6 docs + inventaire photos). Décision : un seul site sur sabinas-watersport.com, EN/DE d'abord, stack Astro + Sanity + n8n + Stripe, pack Pro 3 500 à 4 800 € + 89 à 129 €/mois.
 - 2026-10-21 : Pattern [[stack-creation-site-web]] enrichi d'une variante « site d'activités / tourisme » (Astro + Sanity + Cloudflare + n8n + Stripe, réservation par paliers, Convex au palier 3).
+- 2026-10-21 : Brief validé, maquette mobile écrite (home, fiche catamaran, réservation 3 étapes, écran concept ; EN + FR/DE, photos client en WebP, animations Motion), vérification mobile en cours. Polar écarté (interdit les services de voyage), Stripe conservé.
 
 ## Liens
 - Client : [[sabinas-watersport]]
