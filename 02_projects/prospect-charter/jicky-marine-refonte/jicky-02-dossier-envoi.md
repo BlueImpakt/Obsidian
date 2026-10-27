@@ -18,7 +18,6 @@ Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, pa
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[jicky-sous-titres-fr.srt]]), déposer `voix-melvin-fr.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
-- [ ] Maquette : dans la vue bureau à 390 px, le « message de la veille » ouvert depuis la liste « envoyé » s'affiche en colonne d'un mot par ligne (la règle `.flow li` s'applique aussi aux puces du message) ; la vidéo l'ouvre depuis l'écran de relecture, où il s'affiche bien. À corriger dans `office-page.js` / `variante-c-pages.css`.
 - [ ] Chiffres : mesurés le 27/10 sur le commit 3e6b647 ; repasser la porte qualité avant l'envoi et relancer `chiffres` avec son resultat.json si la maquette a changé.
 
 
@@ -134,11 +133,11 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 pa
 | 42,3 | La demande arrive à votre bureau, complète. |
 | 44,9 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
 | 50,7 | Vous relisez le message. Rien ne part sans vous. |
-| 54,0 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
-| 59,8 | Ce qui avait manqué à un client en novembre 2025. |
-| 63,2 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
-| 68,4 | Un prototype privé, avec vos photos et vos tarifs. |
-| 71,7 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
+| 54,0 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
+| 59,6 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
+| 64,1 | Ce qui avait manqué à un client en novembre 2025. |
+| 68,2 | Un prototype privé, avec vos photos et vos tarifs. |
+| 71,4 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
 
 ## Liens
 - Projet parent : [[jicky-marine-refonte]]
