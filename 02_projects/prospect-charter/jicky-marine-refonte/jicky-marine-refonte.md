@@ -70,6 +70,7 @@ body_synced: 2026-10-27
 - 2026-10-27 : Flotte à l'échelle : rendu « plâtre blanc » essayé sur Pardo 43 et Sanya 57 (détourage BiRefNet gratuit + niveaux de gris modelés) ; détail conservé, rien d'inventé ; défauts : voiles du Sanya coupées, Pardo vu d'en haut, passagers visibles. Aperçu des 13 bateaux à profil sur l'accueil en cours.
 - 2026-10-27 : Photos des cartes de l'accueil mises en attente derrière le hero (ff3a790, 33 tests) : affichage principal iPhone 4G lente ~6,9 → ~6,1 s en médiane ; Lighthouse simulé ne voit pas le gain.
 - 2026-10-27 : Flotte à l'échelle révisée : 18 bateaux en trois-quarts avant, même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année). Doute : « Lagoon 420 2026 » probablement un Lagoon 42.
+- 2026-10-27 : Flotte à l'échelle intégrée à l'accueil avant les vignettes (dbe42dd puis corrections 20c3b54 et suivant) : 18 silhouettes plâtre 3/4 avant (photos Jicky + même modèle sur internet), mâts à la hauteur officielle (specs chantiers), section épinglée avec défilement horizontal au scroll. Revues animation et accessibilité faites et corrigées. Pipeline : research/depth/detourer-lot.mjs (BiRefNet), research/echelle.py, research/platre.py. À vérifier avec Jicky : Lagoon 420 = Lagoon 42, Sunseeker 60 = Predator 1re gén., modèle exact du Sunseeker 52.
 
 ## Liens
 - Projet parent : [[prospect-charter]]
