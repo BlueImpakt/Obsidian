@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:02,833
+Voici jickymarine.com, ouvert sur un téléphone.
+
+2
+00:00:02,833 --> 00:00:06,833
+Le texte est trop petit pour être lu sans zoomer.
+
+3
+00:00:06,833 --> 00:00:10,067
+Sur la maquette : votre nom, vos photos en grand.
+
+4
+00:00:10,067 --> 00:00:13,067
+Votre note dès le premier écran : 4,6 sur 5, 75 avis.
+
+5
+00:00:13,067 --> 00:00:16,333
+Puis vos 18 bateaux, chacun avec son prix de départ.
+
+6
+00:00:16,333 --> 00:00:22,733
+Toute la flotte sur une page, à filtrer par sortie, destination et invités.
+
+7
+00:00:22,733 --> 00:00:25,967
+Chaque bateau a sa fiche : photos, détails, prix.
+
+8
+00:00:25,967 --> 00:00:29,600
+Les tarifs par sortie, horaires et destinations compris.
+
+9
+00:00:29,600 --> 00:00:34,700
+Le client choisit sa sortie et sa date : le prix s’affiche aussitôt.
+
+10
+00:00:34,700 --> 00:00:38,700
+Puis le nombre d’invités et le déjeuner.
+
+11
+00:00:38,700 --> 00:00:42,333
+Enfin ses coordonnées. Rien à payer à ce stade.
+
+12
+00:00:42,333 --> 00:00:44,867
+La demande arrive à votre bureau, complète.
+
+13
+00:00:44,867 --> 00:00:50,700
+Côté bureau : le bateau, la date, les invités et le prix, déjà calculé.
+
+14
+00:00:50,700 --> 00:00:54,033
+Vous relisez le message. Rien ne part sans vous.
+
+15
+00:00:54,033 --> 00:00:59,767
+La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent.
+
+16
+00:00:59,767 --> 00:01:03,167
+Ce qui avait manqué à un client en novembre 2025.
+
+17
+00:01:03,167 --> 00:01:08,433
+Un tap : la confirmation part avec le lien de paiement Up2pay.
+
+18
+00:01:08,433 --> 00:01:11,667
+Un prototype privé, avec vos photos et vos tarifs.
+
+19
+00:01:11,667 --> 00:01:14,933
+Prochain pas : 15 minutes ensemble, si cela vous parle.

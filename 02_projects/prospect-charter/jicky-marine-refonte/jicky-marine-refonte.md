@@ -17,6 +17,7 @@ body_synced: 2026-10-27
 - Étude source dans le repo : `docs/etudes/2026-10-25-jicky-marine-paiement.md`
 - **Maquette cliquable** (piste B ; design C retenu, grille régulière nourrie de sites de brokers, EN/FR) : `C:\Users\LENOVO\Documents\GitHub\jicky-marine-refonte\maquette\` (branche `maquette`, local, pas de remote). 6 écrans : accueil (hero diaporama, note Tripadvisor), flotte filtrable, fiches des 18 bateaux avec vrais prix, demande en 3 étapes sans calendrier, vue bureau (relecture du message, montant, relances au choix, alerte même bateau même date), écran concept en FR. EN officiel + FR. Variantes A (taste) et D (Müller-Brockmann) gardées pour comparaison.
 - Docs du repo maquette : spec `docs/superpowers/specs/2026-10-25-maquette-design.md`, `docs/hypotheses.md` (ce qui n'est pas un fait), `docs/photos.md`, revues `docs/revues/` (finish-gate, personas, accessibilité, textes).
+- [[jicky-02-dossier-envoi]] — dossier d'envoi : vidéo, avant/après, chiffres, page privée, messages J0 à J+15 (brouillons)
 
 ## État actuel
 - 2026-10-25 : étude paiement / réservation faite ; fiche prospect corrigée dans les CSV (commentaire, défaut, accroche). Aucun contact pour l'instant.
