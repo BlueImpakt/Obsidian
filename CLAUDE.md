@@ -66,15 +66,16 @@
 **Localisations** : `#france` `#remote` (zone de prospection : France entière / remote)
 
 **Liens systématiques** :
-- Vers projets associés : `[[nom-projet-AAAA-MM]]`
+- Vers projets associés : `[[nom-projet]]`
 - Vers patterns utilisés : `[[pattern-xyz]]`
 
 ---
 
 ### 02_projects
-**Format dossier** : `nom-projet-AAAA-MM/nom-projet-AAAA-MM.md`
-- La note principale garde le même nom que le dossier (préserve les wikilinks `[[nom-projet-AAAA-MM]]` existants)
-- `nom-projet-AAAA-MM/attachments/` accueille les fichiers non-texte liés au projet (Excalidraw, images, PDF)
+**Format dossier** : `nom-projet/nom-projet.md`
+- La note principale garde le même nom que le dossier (préserve les wikilinks `[[nom-projet]]` existants)
+- `nom-projet/attachments/` accueille les fichiers non-texte liés au projet (Excalidraw, images, PDF)
+- **Sous-projets** : un projet parent peut regrouper des sous-projets dans son dossier, `02_projects/<parent>/<sous-projet>/<sous-projet>.md` (même règle nom de dossier = nom de fiche). Frontmatter du sous-projet : `parent: <parent>` ; la fiche parent liste ses sous-projets dans `## Sous-projets`, et chaque sous-projet a `- Projet parent : [[<parent>]]` dans `## Liens`. Exemple : `02_projects/prospect-charter/` (agent de prospection) avec `sabinas-watersport-refonte/` et `jicky-marine-refonte/`. Les scripts good-night (`client_sync.py`, `fiche_staleness.py`) lisent ces sous-dossiers.
 
 **Tags obligatoires** : `#project` + `#[statut]` + `#[client-associé]`
 
@@ -102,7 +103,7 @@
 - `troubleshooting.md` — Bugs résolus et solutions
 
 **Tags pour patterns** : `#pattern` + `#[type]` + `#validé`
-**Types** : `#code` / `#prompt` / `#process` / `#workflow` / etc. (customize to your stack)
+**Types** : `#code` / `#prompt` / `#process` / `#workflow` / etc.
 
 **Liens systématiques** :
 - Vers cas d'usage réels : `[[client-X]]` / `[[projet-Y]]`
@@ -112,7 +113,7 @@
 ### 04_personal
 **Sous-dossiers** :
 - `admin/` — Compta, légal, banking, business admin
-- `formation-millenium/` — Le side project "pipeline RAG Millenium" (chunks_db.sqlite, scraping, enrichissement) — jamais mélangé aux clients Blue Impakt
+- Autres sous-dossiers perso au cas par cas. Le pipeline RAG Millenium (`chunks_db.sqlite`, scraping, enrichissement) vit hors vault dans `C:\Users\LENOVO\Documents\Millenium` — jamais mélangé aux clients Blue Impakt
 
 **Tags** : `#perso` + `#[catégorie]`
 
@@ -150,7 +151,7 @@
 - `pattern-template.md` — Nouveau pattern technique
 - `daily-note-template.md` — Daily note
 
-**Setup Templater (à faire une fois dans Obsidian)** : Paramètres → Templater → dossier de templates `templates/` → activer "Folder templates" → mapper `01_clients` → `client-template.md`, `02_projects` → `project-template.md`, `06_reunions/cr` → `cr-reunion-template.md`, `06_reunions/prepa` → `prepa-reunion-template.md`, `00_inbox` → `daily-note-template.md`. Une fois fait, un nouveau fichier créé dans ces dossiers applique le bon template automatiquement.
+**Dossiers → templates (configurés dans Templater, « Folder templates »)** : `01_clients` → `client-template.md`, `02_projects` → `project-template.md`, `06_reunions/cr` → `cr-reunion-template.md`, `06_reunions/prepa` → `prepa-reunion-template.md`, `00_inbox` → `daily-note-template.md`, `03_knowledge/patterns` → `pattern-template.md`. Un nouveau fichier créé dans ces dossiers applique le bon template automatiquement.
 
 ---
 
@@ -158,23 +159,17 @@
 - **Dataview** — alimente `_dashboard.md` (voir plus bas). Ne pas dupliquer ses requêtes ailleurs.
 - **Tasks** — surface toutes les checklists non cochées du vault (section "Toutes les actions ouvertes" du dashboard). Pas de syntaxe spéciale requise, les `- [ ]` existants sont déjà indexés.
 - **Templater** — voir section `templates/` ci-dessus.
-- **Git** (backup auto vers GitHub privé, ajout optionnel) — auto-commit + push sur intervalle régulier. Voir `[[backup-obsidian-git]]` pour la config complète.
+- **Git** (backup auto vers GitHub privé) — auto-commit + push sur intervalle régulier ; config dans les réglages du plugin.
+- **Excalidraw** — schémas, rangés dans les dossiers `attachments/`.
 
 ### `_dashboard.md` (racine du vault)
-Vue vivante générée par Dataview/Tasks : clients par statut, priorités P1, projets en cours/bloqués, patterns validés récents, réunions récentes, toutes les actions ouvertes. **Ce n'est pas un index de navigation** (la règle "pas d'INDEX.md" reste valable — rien n'y est écrit à la main, tout est recalculé à l'ouverture). Ne pas y ajouter de contenu statique.
+Vue vivante générée par Dataview/Tasks : clients par statut, priorités P1, projets en cours/bloqués, patterns validés récents, réunions récentes, toutes les actions ouvertes. **Ce n'est pas un index de navigation** : rien n'y est écrit à la main, tout est recalculé à l'ouverture. Ne pas y ajouter de contenu statique.
 
 ---
 
 ## Priorité : toujours consulter le vault avant de répondre
 
-Avant d'utiliser un outil ou de répondre depuis ta mémoire générale, va d'abord
-lire ce qui existe dans le vault (fiche client/projet concernée, `03_knowledge/`,
-etc.). Un skill (ex. `superpowers:brainstorming`, déclenché par des mots comme
-"réfléchir") peut parfois prendre la priorité et sauter cette lecture — si je
-remarque que tu sembles avoir "oublié" le contexte du vault, je te le dirai
-explicitement ("va d'abord consulter le vault") ; ce n'est pas une erreur à
-corriger dans cette constitution, juste un réflexe à avoir sur le moment. Détail
-dans `[[backlog-ameliorations-vault]]`.
+Avant d'utiliser un outil ou de répondre depuis ta mémoire générale, lis d'abord ce qui existe dans le vault (fiche client/projet concernée, `03_knowledge/`, etc.). Si tu sembles avoir « oublié » le contexte, je te dirai « va d'abord consulter le vault ». Détail dans `[[backlog-ameliorations-vault]]`.
 
 ---
 
@@ -253,7 +248,7 @@ le soir ferme les jours, roule les tâches et vérifie.
 
 ### 5. Nettoyer
 - **Supprimer** les daily notes et clippings traités
-- **Ne jamais supprimer** `content-feed.md` (votre système de syndication de contenu le vide après utilisation)
+- **Ne jamais supprimer** `content-feed.md` (mon système de syndication de contenu le vide après utilisation)
 
 ---
 
@@ -323,8 +318,8 @@ piège "tout-RAG" que la masterclass déconseille : ça ferait exploser le conte
 
 Trois ponts, tous construits et opérationnels :
 
-1. **Synthèses statiques (fait, 2026-08-29)** : `C:\Users\LENOVO\Documents\Millenium\export_millenium_notes.py`
-   exporte une note markdown **par leçon** (270 leçons, pas par chunk — 6605 chunks
+1. **Synthèses statiques** : `C:\Users\LENOVO\Documents\Millenium\export_millenium_notes.py`
+   exporte une note markdown **par leçon** (pas par chunk — des milliers de chunks
    seraient beaucoup trop) vers `03_knowledge/formations/<module>/`, groupées par
    module (`formation-ia`, `formation-productivite`, `formation-vente`,
    `masterclass`). Chaque note contient resume/concepts/outils/tips_techniques
@@ -332,12 +327,11 @@ Trois ponts, tous construits et opérationnels :
    liste toutes les leçons avec un résumé d'une ligne — sert d'index léger pour que
    Claude n'ouvre que les leçons pertinentes plutôt que de tout parcourir. Le script
    est idempotent (relançable) et normalise les variantes d'accents dans les noms de
-   module (ex. bug source "Productivite"/"Productivité" corrigé côté export, pas
-   dans la base). À relancer après un nouveau lot d'enrichissement côté Millenium
+   module. À relancer après un nouveau lot d'enrichissement côté Millenium
    pour resynchroniser.
-2. **Requête à la demande (fait — déjà existant avant même ce vault, redécouvert le 2026-08-29)** :
+2. **Requête à la demande** :
    `C:\Users\LENOVO\Documents\Millenium\query_rag.py` fait de la vraie recherche
-   sémantique (pas mot-clé) sur les 6605 chunks bruts — embedding
+   sémantique (pas mot-clé) sur tous les chunks bruts — embedding
    `intfloat/multilingual-e5-small` + re-ranking cross-encoder, **100% local et
    gratuit**, aucun appel API payant. Emballé en skill Claude Code
    (`~/.claude/skills/millenium-rag/`), invocable depuis n'importe quelle session
@@ -345,7 +339,7 @@ Trois ponts, tous construits et opérationnels :
    des notes de synthèse (`03_knowledge/formations/`) ne suffit pas — plus lent
    mais plus précis, retrouve un passage même si la question est formulée
    différemment du texte source.
-3. **Variante web (fait, 2026-08-29)** : `~/.claude/skills/millenium-rag-open/` —
+3. **Variante web** : `~/.claude/skills/millenium-rag-open/` —
    même recherche locale, complétée par une recherche web quand c'est justifié
    (prix/versions/fonctionnalités susceptibles d'avoir changé depuis
    l'enregistrement, ou corpus insuffisant). Distingue toujours clairement dans
@@ -353,10 +347,9 @@ Trois ponts, tous construits et opérationnels :
    `millenium-rag` quand une info a des chances d'être périmée.
 
 **Ajouter une nouvelle leçon au RAG** (masterclass, replay, cours) : suivre
-[[ajouter-lecon-au-rag-millenium]] — processus en 9 étapes battle-tested (chunking,
+[[ajouter-lecon-au-rag-millenium]] — processus pas à pas (chunking,
 enrichissement avec méthode anti-décalage d'ID, vérification obligatoire, export
-vers ce vault), écrit à partir de l'ajout réel de la masterclass Claude Code +
-Obsidian d'Alexis Buhaj.
+vers ce vault).
 
 ---
 
@@ -367,15 +360,8 @@ Obsidian d'Alexis Buhaj.
 - **Vertical strength** : secteur impact/environnement — positionnement affiché sur le site Blue Impakt, à faire vivre dans le choix des clients et le contenu LinkedIn
 - **Active outreach** : pas encore de campagne active
 
-### Deals actifs (mis à jour 2026-08-29)
-Aucun pour l'instant dans ce vault. Des projets clients existent déjà sur une autre
-machine (sessions Claude Code passées) — à récupérer via le backfill
-(`~/.claude/skills/good-night/BACKFILL.md`) dès que ces fichiers sont rapatriés ici.
-Une fois fait, cette section liste les clients actifs avec leur statut :
-`[[nom-client]]`.
-
-### Projets en cours
-À remplir après le backfill ou au fil de l'eau (`good-night` / ingestion manuelle).
+### Clients et projets actifs
+Vue vivante dans `_dashboard.md` (Dataview) : clients par statut, projets en cours ou bloqués. Ne pas dupliquer la liste ici.
 
 ---
 
@@ -434,11 +420,11 @@ Une fois fait, cette section liste les clients actifs avec leur statut :
 ### Personal projects / Side business
 **Contexte strictement séparé de Blue Impakt.**
 Ne jamais mélanger dans clients/projets Blue Impakt.
-Tout va dans `04_personal/formation-millenium/`
+Tout va dans `04_personal/`.
 
 ### Content feed
 `00_inbox/content-feed.md` est alimenté par ingestion quotidienne.
-**Ne jamais supprimer ce fichier** — votre système de syndication le vide après génération posts.
+**Ne jamais supprimer ce fichier** — mon système de syndication le vide après génération des posts.
 
 ### Anti-spam de questions
 Ne pas me redemander systématiquement ce que j'ai déjà explicité dans cette constitution.

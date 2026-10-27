@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-21
+body_synced: 2026-10-22
 ---
 
 # sellerie-confort
@@ -25,6 +25,7 @@ body_synced: 2026-10-21
 - 2026-10-13 : contrat Phase 1 réécrit (1 400 € HT, acompte 50 %), CR client envoyé avec un placeholder de créneaux à compléter ; Valérie en congés à partir du 17/10 ; Valérie OK pour la Phase 1 ; clause de plafonnement Phase 2 ajoutée (7 000 € HT max)
 - 2026-10-14 : Phase 1 lancée — contrat et devis signés, acompte 700 € versé, accès WordPress OK ; délai de 10 jours en cours
 - 2026-10-14 : accord écrit d'export reçu de la cliente (reconstruction du site en local)
+- 2026-10-21/22 : vidéo promo Instagram (Remotion, rushes IA) : v1 29 s livrée, variantes dézoom et « loupes matières » (33,4 s) rendues, version « infos » en rendu au 22/10 ; en attente de validation de Melvin, rien envoyé à la cliente. Détail : [[sellerie-confort-configurateur]]
 
 ## Décisions prises
 - Phase 1 = audit technique avant chiffrage ferme de la Phase 2, **1 400 € HT** (4 j × 350 €) déduits de la Phase 2 si suite ; elle inclut, sans supplément, l'audit des automatisations, le suivi du parcours et le panier perdu
@@ -50,12 +51,6 @@ body_synced: 2026-10-21
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-19 : Sur [[sellerie-confort-configurateur]] — logos brodés : règle de taille complète (45 % de √surface, min 5 cm dosseret, 4-7 cm bandes) et orientations validées sauf l'aile Honda sur bandes ; bug du script d'import corrigé, Duke / CBF / Z900 réparées.
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — Chiffrage revu (Word `Phase 1/chiffrage-phases-1-2-3*.docx`) : Phase 2 17,5 j (6 125 € HT à payer, plafond de 16 j dépassé de 1,5 j avec l'écran de gestion), Phase 3 20 à 23 j (7 000 à 8 050 € HT). (+1 autre(s) entrée(s) le même jour, voir la fiche projet)
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport Phase 1 version client rédigé (artefact, 9 annexes visuelles), Phase 2 présentée à 15 j + option écran de gestion ; dev Phase 2 sur copie avec données clients neutralisée (RGPD art. 28).
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — options de broderie incohérentes sur 296 fiches (18 groupes sur 46) à homogénéiser en Phase 2 ; copie fusionnée en 46 configurateurs ; aile Honda en miroir.
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — captures définitives des annexes du rapport client posées (matières, écran de gestion, logo 3D, étapes 1-3 sur Z900)
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — liste des demandes à VIMAWEB pour le dev Phase 2 (accès SSH/SFTP, données perso, isolation, circuit dev → prod)
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — accès au dev et propriété du code documentés, état des lieux statistique livré (GA4 pages vues seulement, cookies posés malgré refus = non conforme CNIL), méthode Phase 2 copie locale sans données → dev → préprod → prod, rapport exporté en PDF v2.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
@@ -65,6 +60,12 @@ body_synced: 2026-10-21
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo : film complet de 30 s assemblé avec son, derniers défauts de rendu en correction
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Reel 30 s v1 livrée et relue ; retours de Melvin en cours d'intégration.
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo v1 29 s livrée avec les retours de Melvin, variante « dézoom » de fin lancée sur copie.
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo : variante dézoom2 rendue (gros plan selle, motarde qui entre au recul).
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo v2 « loupes matières » rendue (33,4 s), à valider par Melvin.
+- 2026-10-22 : Sur [[sellerie-confort-configurateur]] — vidéo promo : version « infos » (assise antidérapante, infographies dosseret) en rendu, modifs précédentes commitées.
+- 2026-10-22 : Sur [[sellerie-confort-configurateur]] — bandeau central (aile Honda, ECG, yeux) branché sur l'Africa Twin ; vidéo promo mise à jour
+- 2026-10-22 : Sur [[sellerie-confort-configurateur]] — vidéo promo version client « Maquette » prête ; à envoyer en relance de l'audit le 28-29/10
+- 2026-10-27 : Sur [[sellerie-confort-configurateur]] — audit SEO de sellerieconfort.com livré : bases saines, freins = fiches en double, codes internes dans les titres, LCP mobile ~19,6 s, page Divi de sauvegarde indexée.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

@@ -4,9 +4,6 @@ created: 2026-10-21
 projet: sabinas-watersport-refonte
 source: GitHub/sabina-watersport-refonte/docs/04-stack-boilerplate.md
 ---
-
-↩ [[sabinas-watersport-refonte]]
-
 # 04 — Stack boilerplate & méthode de déploiement « opérateurs nautiques / excursions »
 
 > Document d'architecture décisionnel. Client zéro : Sabinas Watersport Rhodos (Lardos, Rhodes).
@@ -98,6 +95,96 @@ Règle d'or : le gérant ou la gérante **saisit un prix une seule fois** (pas u
 - **Conséquences** : redirections 301 **page à page** (pas toutes vers la home) pour les ~45 URLs connues. Les anciens domaines restent renouvelés **au moins 2 ans** (idéalement à vie, c'est ~10-15 €/an). Les DNS sont transférés hors Jimdo **avant** la résiliation des packs Jimdo (voir risques 7.4).
 
 Règle générale pour le boilerplate : **1 opérateur = 1 domaine**. On ne fait de multi-sites que pour deux marques réellement distinctes (clientèle et produits différents), jamais pour « ranker » sur un mot-clé.
+
+### 1.6 Plan de redirection 301, domaine par domaine
+
+**Principe** : une adresse ne « pointe » pas vers le même site en doublon (ce serait du contenu dupliqué pour Google). Les deux domaines secondaires **redirigent en 301** vers le domaine principal, page par page. Le visiteur et Google arrivent sur la page équivalente, jamais sur la home par défaut.
+
+**Slugs cibles** (même structure `/{lang}/{slug}/`, slugs localisés) :
+
+| Page | EN | FR | DE |
+|---|---|---|---|
+| Catamaran privé | `private-catamaran` | `catamaran-prive` | `privater-katamaran` |
+| Catamaran semi-privé | `half-private-catamaran` | `catamaran-semi-prive` | `halbprivater-katamaran` |
+| Coucher de soleil | `sunset-cruise` | `coucher-de-soleil` | `sonnenuntergang` |
+| Speedboat | `speedboat` | `speedboat` | `speedboot` |
+| Voilier | `sailing` | `voilier` | `segeln` |
+| Sports nautiques | `watersports` | `sports-nautiques` | `wassersport` |
+| Demande de réservation | `book` | `reserver` | `anfrage` |
+| À propos | `about` | `a-propos` | `ueber-uns` |
+| Conditions de réservation (acompte, météo, annulation) | `booking-conditions` | `conditions` | `buchungsbedingungen` |
+| Point de départ | `meeting-point` | `point-de-depart` | `treffpunkt` |
+
+**A. `sabinas-watersport.com` (domaine principal, on garde le domaine, les URLs changent)**
+
+| Ancienne URL (chemin) | Nouvelle URL |
+|---|---|
+| `/` | `/en/` (`x-default`) |
+| `/our-boat-trips-watersports-english/catamaran-daycruise-private-boat-trips/` | `/en/private-catamaran/` |
+| `/en-boat-trips-watersports/sailboat-tour-yachtsailing/` | `/en/sailing/` |
+| `/en-boat-trips-watersports/private-boat-tour/` | `/en/speedboat/` |
+| `/en-boat-trips-watersports/watersports-prices/` | `/en/watersports/` |
+| `/en-boat-trips-watersports/booking-request/` | `/en/book/` |
+| `/en-boat-trips-watersports/about-us/` | `/en/about/` |
+| `/en-boat-trips-watersports/deposit-payment/` | `/en/booking-conditions/` |
+| `/fr-excursions-en-bateau-sports-nautiques/` | `/fr/` |
+| `/fr-excursions-en-bateau-sports-nautiques/excursion-en-catamaran-tour-coucher-de-soleil/` | `/fr/coucher-de-soleil/` |
+| `/fr-excursions-en-bateau-sports-nautiques/excursion-en-voilier-tout-la-jounee/` | `/fr/voilier/` |
+| `/fr-excursions-en-bateau-sports-nautiques/tour-prive-en-bateau/` | `/fr/speedboat/` |
+| `/fr-excursions-en-bateau-sports-nautiques/sports-nautiques-et-tarifs/` | `/fr/sports-nautiques/` |
+| `/fr-excursions-en-bateau-sports-nautiques/demande-de-réservation/` | `/fr/reserver/` |
+| `/fr-excursions-en-bateau-sports-nautiques/à-propos-de-nous/` | `/fr/a-propos/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/` | `/de/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/katamaran-tagestour-private-boot-trips/` | `/de/privater-katamaran/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/yachtsegeln-segeltour/` | `/de/segeln/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/private-bootstour/` | `/de/speedboot/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/wassersport-preise/` | `/de/wassersport/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/buchungsanfrage/` | `/de/anfrage/` |
+| `/de-katamaran-tagestour-bootstouren-wassersport/über-uns/` | `/de/ueber-uns/` |
+| `/about/` | `/en/about/` |
+
+**B. `catamaran-yachtsailing-rhodos.com` → `sabinas-watersport.com`** (ce domaine ne parle que du catamaran : la racine va sur la fiche catamaran, pas sur la home)
+
+| Ancienne URL (chemin) | Nouvelle URL |
+|---|---|
+| `/` et `/info-in-english/` | `/en/private-catamaran/` |
+| `/info-in-english/our-trips/catamaran-photos-info/` | `/en/private-catamaran/` |
+| `/info-in-english/our-trips/rates-2026-catamaran-private-tour/` | `/en/private-catamaran/` |
+| `/info-in-english/our-trips/romantic-catamaran-sunset-cruise/` | `/en/sunset-cruise/` |
+| `/info-in-english/our-trips/booking-request/` | `/en/book/` |
+| `/info-in-english/our-trips/deposit-payment/` | `/en/booking-conditions/` |
+| `/info-auf-deutsch/` et `/info-auf-deutsch/unsere-touren/` | `/de/privater-katamaran/` |
+| `/info-auf-deutsch/unsere-touren/katamaran-fotos-info/` | `/de/privater-katamaran/` |
+| `/info-auf-deutsch/unsere-touren/preise-2026-katamaran-private-tour/` | `/de/privater-katamaran/` |
+| `/info-auf-deutsch/unsere-touren/romantic-catamaran-sunset-tour/` | `/de/sonnenuntergang/` |
+| `/info-auf-deutsch/unsere-touren/buchungsanfrage/` | `/de/anfrage/` |
+| `/fr-notre-excursions/` | `/fr/catamaran-prive/` |
+| `/fr-notre-excursions/catamaran-photos-info/` | `/fr/catamaran-prive/` |
+| `/fr-notre-excursions/tarifs-2026-catamaran-tour-prive/` | `/fr/catamaran-prive/` |
+| `/fr-notre-excursions/demande-de-réservation/` | `/fr/reserver/` |
+| `/about/` | `/en/about/` |
+
+**C. `dolphin-tours-rhodos.com` → `sabinas-watersport.com`** (la société de croisières ; ses 3 produits sont tous sur la home et la liste des offres)
+
+| Ancienne URL (chemin) | Nouvelle URL |
+|---|---|
+| `/` | `/en/` |
+| `/prices/` | `/en/` (la liste des sorties est juste sous le hero) |
+| `/about-us/` | `/en/about/` |
+| `/contact-and-location/` | `/en/meeting-point/` |
+| `/imprint/`, `/privacy-policy/`, `/withdrawal/` | `/en/legal/`, `/en/privacy/`, `/en/booking-conditions/` |
+
+Les pages `legal`, `privacy`, `withdrawal` des trois sites (dossiers `/j/…` pour les pages juridiques Jimdo) vont vers les pages légales uniques du nouveau site.
+
+**Mise en œuvre sur Cloudflare** *(quotas : voir la page Cloudflare Redirects en sources)*
+1. Ajouter les 3 domaines à Cloudflare (zone DNS) avant de toucher à Jimdo.
+2. Charger les 45 redirections en **liste de redirections en masse** (fichier CSV : ancienne URL, nouvelle URL, code 301, conservation de la requête) pour chaque domaine.
+3. Redirection du `www` vers le domaine nu (ou l'inverse) pour chaque domaine, en 301, avant la règle page à page.
+4. Tester chaque ligne avec `curl -I <ancienne-url>` : attendu `301` puis `200` sur la cible, sans chaîne de deux redirections.
+5. Dans Google Search Console : déclarer les 3 domaines, soumettre le nouveau sitemap, puis utiliser l'outil de changement d'adresse pour les deux domaines secondaires *(à vérifier : cet outil est prévu pour un déménagement de site vers un autre domaine ; la fusion de deux domaines vers un domaine existant se déclare par les redirections et le sitemap si l'outil la refuse)*.
+6. Garder les 3 noms de domaine renouvelés au moins 2 ans (voir ADR-001). Les redirections cessent de fonctionner le jour où un domaine expire.
+
+**Ce qu'un client verrait pendant la bascule** : les anciennes adresses restent valides, imprimées sur une carte de visite ou un flyer, et le visiteur atterrit sur la page équivalente. L'adresse affichée devient `sabinas-watersport.com/...`.
 
 ---
 

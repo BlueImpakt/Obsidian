@@ -32,10 +32,6 @@ body_synced: 2026-10-13
 - [ ] Voir les next actions de [[naeco-site]] (éditeur v2 : test login/sync en prod et rollout des 5 pages restantes, menu « Programme », CI à surveiller)
 
 ## Journal
-- 2026-09-23 (suite) : Sur [[naeco-site]] — refonte de l'éditeur v2 (tous textes/police/taille/couleur éditables sur les 8 pages) lancée : design et plan 1 validés et commités, exécution démarrée, bloquée en attente d'un `.dev.vars` client. Détails dans la fiche projet.
-- 2026-09-23 (suite) : Sur [[naeco-carte]] — animation rorqual/globicéphale en 1 min 31 mise en ligne (`0a1aeef`), liens de partage `?anim=` avec écran d'accueil ▶ (`cc6a87e`).
-- 2026-09-28 : Sur [[naeco-site]] — Plan 1 de l'éditeur v2 livré, testé et déployé en prod ; incident de sécurité JSONbin résolu (migration des bins vers le compte actuel, clé/mot de passe régénérés, anciens bins supprimés) ; incident de déploiement `.dev.vars` exposé puis corrigé. Sur [[naeco-carte]] — migré vers le nouveau bin, redéployé et vérifié en prod. Détails dans les fiches projet.
-- 2026-09-29 : Sur [[naeco-site]] — page mobilité retravaillée (6 capsules Instagram, nouveau texte d'intro, design critique appliquée, remerciement DRAJES de Corse), déployé. Sur [[naeco-carte]] — animation rorqual reprise (version 45s en ligne pour rorqual et globicéphale, 48 nouvelles photos Cloudinary), et 90 points GPS parasites nettoyés sur le tracé live. Détails dans les fiches projet.
 - 2026-10-02 : Sur [[naeco-site]] — bug page Partenaires corrigé (fetch JSONbin obsolète écrasait les catégories), hauteur du voile hero réduite de 50%, texte abaissé, virgule retirée après "Méditerranée" dans le HTML, tout déployé. Détails dans la fiche projet.
 - 2026-10-02 (suite) : Sur [[naeco-site]] — lockup NAECO × STARESO ajouté sous l'eyebrow "Expédition 2026" (logo STARESO officiel, animation d'apparition échelonnée), déployé. Sur [[naeco-carte]] — recadrage mobile portrait de l'animation rorqual repris en méthode pixel-précise après échec du crop automatique, déployé ; déplacement d'une photo long→short en attente de déploiement. Détails dans les fiches projet.
 - 2026-10-02 (suite) : Sur [[naeco-site]] — lockup "NAECO × STARESO" ajouté et animé dans le teaser expédition, logo STARESO au repos corrigé, déployé. Sur [[naeco-carte]] — recadrage mobile portrait V24 finalisé (méthode documentée), pool rorqual ajusté (L06/S04), nouveau dossier Cloudinary V35 globicéphale créé en préparation d'une vidéo pas encore produite. Détails dans les fiches projet.
@@ -47,6 +43,10 @@ body_synced: 2026-10-13
 - 2026-10-13 : Sur [[naeco-site]] — retours Mobilité tranchés (logos partenaires en fin de page, nav inchangée), implémentation démarrée
 - 2026-10-13 : Sur [[naeco-site]] — retours client Mobilité implémentés dans `mobilite.html` (local, non déployé).
 - 2026-10-13 (déployé) : Sur [[naeco-site]] — page Mobilité (retours client + éditeur v2) déployée en prod ; CI muette, déploiement manuel ; test login/sauvegarde éditeur à faire.
+- 2026-10-23 : Sur [[naeco-site]] — éditeur étendu (masquer/espacer blocs, logos Mobilité éditables), spike Sanity isolé lancé sur Mobilité pour décider d'une migration.
+- 2026-10-23 : Sur [[naeco-site]] — éditeur étendu (masquage, espacement, logos Mobilité) déployé en prod (`a9f6181`), test Cloudinary à faire.
+- 2026-10-23 : Sur [[naeco-site]] — spike Sanity bouclé sur Mobilité (rapport rédigé), go/no-go en attente du test par l'équipe.
+- 2026-10-23 : Sur [[naeco-site]] — éditeur étendu à tout le site (listes partenaires/soutiens/équipe), 14 bugs corrigés et connexion sécurisée par jeton, déployé ; hachage des mots de passe à faire par Melvin.
 
 ## Liens
 - Projets : [[naeco-site]], [[naeco-carte]]

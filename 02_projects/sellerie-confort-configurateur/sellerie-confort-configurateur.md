@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-21
+body_synced: 2026-10-27
 ---
 
 # sellerie-confort-configurateur
@@ -117,18 +117,12 @@ body_synced: 2026-10-21
 - [ ] Vérifier la mise en page du PDF v2 du rapport (tableaux, images) puis l'envoyer à Valérie avec le mail de synthèse
 - [ ] Obtenir l'accord écrit de Valérie pour neutraliser le dev (fermeture au public, paiements en test, courriels et tâches coupés)
 - [ ] Commiter les listes déroulantes Année / Taille / Poids (`build.py` + tests) et vérifier en base le numéro de groupe de la Transalp 600 (G03 supposé) une fois Local relancé
-- [ ] Vidéo promo : demander à Valérie ce que fait concrètement le gel (marque, épaisseur, effet) avant de l'utiliser comme argument ; valider toute promesse chiffrée (ex. « 500 km, zéro mal ») avec elle
-- [ ] Vidéo promo : valider le rendu final de l'assemblage 30 s (tâche 9) et la déformation du logo Africa Twin qui épouse la forme du dosseret
+- [ ] Vidéo promo : demander à Valérie ce que fait concrètement le gel (marque, épaisseur, effet) avant de l'utiliser comme argument ; valider toute promesse chiffrée (ex. « 500 km, zéro mal ») et les infographies « Assise antidérapante » / « Dosseret soutien lombaire » avec elle
+- [ ] Vidéo promo : valider le rendu v2 « loupes matières » (33,4 s : durée +3 s, bouton panier qui dépasse) puis le rendu v1-infos (assise antidérapante, infographies) ; choisir la version finale (29 s sauvegardée, dézoom, v2, v1-infos)
 - [ ] Vidéo promo : écouter la piste son (vérifiée uniquement par mesures : niveaux, silences, placement des bruitages)
-- [ ] Vidéo promo : regarder la variante « dézoom » (`sellerie-confort-reel-v1-dezoom.mp4`) et choisir entre elle et la version 29 s sauvegardée ; ensuite décider fusion/push de la branche `video-promo-v1`
+- [ ] Vidéo promo : décider fusion/push de la branche locale `video-promo-v1` (non poussée)
 
 ## Journal
-- 2026-10-19 (logos, suite) : Règle de taille appliquée (45 % de √surface, hauteur ≤ 50 % de la largeur, min 5 cm dosseret, 4-7 cm bandes, emplacement retiré si le min ne tient pas) et remesurée sur 12 selles × 5 logos ; orientation dosseret = inclinaison du logo d'origine (exceptions CBF −15°, XR −30°), logos centrés sur les bandes, validé sauf l'aile Honda sur bandes (calée sur l'horizontale de l'image). Bug du script d'import corrigé (en-têtes de groupe dupliqués), Duke / CBF / Z900 réparées à 44 choix par zone.
-- 2026-10-19 (logos, nuit) : Duke / CBF / Z900 régénérées et réimportées sur la copie avec toutes les règles du 19/10 (aile Honda horizontale sur les bandes, exceptions CBF −15° / XR −30°, 44 choix par zone) ; Yamaha non proposé sur la bande de la CBF.
-- 2026-10-20 (rapport client) : Version client synthétique du rapport Phase 1 en artefact claude.ai (Phase 2 présentée 15 j / 5 250 € HT + écran de gestion en option 2,5 j / 875 € HT, à valider), 9 annexes visuelles ; dev Phase 2 corrigé partout en « copie exacte avec données clients, neutralisée, RGPD art. 28 » (PDF du chiffrage non régénérés).
-- 2026-10-20 (broderies) : Aile Honda en miroir (ne tient plus à 4 cm sur la bande CBF) ; relevé des 345 fiches publiques : 18 groupes sur 46 (296 fiches) aux options de broderie incohérentes, 3 sans broderie, 5 sans motif ([[phase-1]] §7.6) ; base retenue 46 configurations, 55 configurateurs de la copie fusionnés en 46 (91 fiches déplacées), écran de gestion recalculé.
-- 2026-10-20 (annexes) : Captures définitives des annexes du rapport client posées (Matières, écran « Matières et couleurs » à 46 globaux, logo « Yeux » 3D sur Z900, étapes 1-3 du configurateur sur Z900), légendes adaptées
-- 2026-10-20 : Liste des demandes à VIMAWEB pour le dev Phase 2 établie (SSH par clé ou SFTP, WP-CLI/git, données personnelles du dev, isolation mails/paiements en test, circuit dev → prod, versions serveur et plugins) ; plugin `sc-gestion-configurateur` constaté absent du site Local
 - 2026-10-20 (accès dev / stats / PDF) : Accès au dev en ligne et propriété du code documentés ([[phase-1]] §11 : clé SSH, pas de wp-admin ni mot de passe dans le chat, VIMAWEB voit tout ce qui est sur son serveur) ; état des lieux statistique livré ([[phase-1]] §12 : GA4 via SEOPress PRO, pages vues seulement, ventes et configurateur non mesurés, cookies GA déposés malgré le refus = non conforme CNIL) ; méthode Phase 2 copie locale sans données → dev → préprod → prod ; rapport client exporté en PDF v2.
 - 2026-10-20 (chiffrage rapport) : Rapport client aligné sur le Word : Phase 2 = 17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer Phase 1 déduite (sous le plafond de 7 000 € HT), paiement 50 % commande / 50 % mise en prod ; Phase 3 = 20 à 28,5 j, 7 000 à 9 975 € HT ; détail par lot conservé, accord de neutralisation du dev demandé à Valérie ; relecture complète faite, incohérences restantes à trancher.
 - 2026-10-20 (formulaire) : Champs Année / Taille / Poids pilote / Poids passager passés en listes déroulantes dans `build.py`, vérifiés sur la copie 8090 jusqu'au panier WooCommerce (tests au vert, non commité).
@@ -138,6 +132,12 @@ body_synced: 2026-10-21
 - 2026-10-21 (vidéo promo) : tâche 9 livrée, film 30 s assemblé avec son (`promo-t9b.mp4`, −15,3 LUFS) ; corrections de relecture faites ; restent une image blanche (frame 776) et les saccades du départ, en correction.
 - 2026-10-21 (vidéo promo, v1) : film 30 s livré (`sellerie-confort-reel-v1-sans-musique.mp4`, sans musique) après 3 séries de corrections de la tâche 9, README et relecture finale OK (branche locale `video-promo-v1`, 20 commits, non poussée) ; retours de Melvin (selle redécoupée, rythme ×2 / ralentis, fin fluide, « Mode confort activé », « Mousse adaptée à ta morphologie ») en cours d'intégration, sans relecture agent.
 - 2026-10-21 (vidéo promo, v1 29 s) : retours de Melvin intégrés (selle redécoupée, début ×2, gel/poids ralentis, « Mode confort activé »), film 29,0 s livré (commit `c1138d3`) et sauvegardé ; variante « dézoom » (plan serré selle → recul rapide simultané à l'action motarde) lancée sur copie.
+- 2026-10-21 (vidéo promo, dézoom) : variante `dezoom2` rendue (30,4 s) : selle posée en très gros plan ×3,6 motarde hors champ, recul de ~2,9 s pendant qu'elle entre en mettant son casque, relais clip sans saut ; versions précédentes conservées.
+- 2026-10-21 (vidéo promo, v2) : rendu « loupes matières » livré (33,4 s) : étape 1 ralentie ×2 avec bec assorti aux bandes (6 appuis), 6 cercles de zoom sur les matières, départ de la motarde accéléré ×3 ; à valider : durée +3 s et bouton panier qui dépasse.
+- 2026-10-22 (vidéo promo, infos) : modifs de Melvin commitées (0c56aa1 : étape 1 demi-vitesse, 6e clic bec gris, loupes, départ à 51 images, vérifiés OK) ; rendu v1-infos en cours avec assise antidérapante et infographies « Assise antidérapante » / « Dosseret soutien lombaire ».
+- 2026-10-22 (bandeau central) : « Bandeau central » remplace « Bandes » sur l'Africa Twin 1000/1100 (groupe G30) avec aile Honda contour (7 cm, non miroir), électrocardiogramme, yeux ; 159 choix importés et vérifiés dans le navigateur ; bug corrigé : motif au nom avec espace perdu au rechargement du lien. Vidéo promo mise à jour en conséquence (`v1-aile2`).
+- 2026-10-22 (vidéo promo, maquette) : version client avec mention « Maquette » puis « PROJET EN COURS » sous le panier (`eb46f80`) ; décision : envoyer la vidéo en relance le 28-29/10 si l'audit reste sans réponse (client en congés jusqu'au 24/10), aperçu offert, version finale incluse si Phase 2.
+- 2026-10-27 (audit SEO) : audit SEO de sellerieconfort.com livré (`Phase 1/audit-seo-2026-10-27.md`) : bases techniques saines (Lighthouse SEO 100) ; freins = 1 530 fiches pour 751 motos (doublons), codes internes dans titres/H1, LCP mobile ~19,6 s (~10 Mo d'images par fiche), page de sauvegarde Divi indexée dans le sitemap.
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]

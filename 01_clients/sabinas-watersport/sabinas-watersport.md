@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: remote
 origine_lead: prospection à froid (Melvin)
 tjm:
-body_synced: 2026-10-21
+body_synced: 2026-10-23
 ---
 
 # sabinas-watersport
@@ -25,6 +25,7 @@ body_synced: 2026-10-21
 ## Décisions prises
 - Positionnement de la maquette : luxury & exclusive (maquette v1 itérée, 2026-10-21).
 - Comparaison A/B avant envoi : maquette v1 vs maquette concurrente piste C « Horizon » (Prompt 3D).
+- Maquette hébergée sur Vercel (lien privé noindex) ; plan de redirection 301 des 3 domaines défini (2026-10-22).
 
 ## Besoins identifiés
 - 3 sites Jimdo éclatés (2007, 2017, 2022) → un seul site, une seule mise à jour par an.
@@ -41,13 +42,17 @@ body_synced: 2026-10-21
 - **Prochaine échéance** : `dolphin-tours-rhodos.com` expire le 2026-12-01 (argument de calendrier) ; mise en ligne cible mi-janvier 2027, avant la saison
 
 ## Next actions
-- [ ] Envoyer la maquette + message d'accroche en allemand (voir [[sabinas-watersport-refonte]])
+- [ ] Envoyer la maquette (lien Vercel privé) + accroche WhatsApp DE/EN, prête (voir [[sabinas-watersport-refonte]])
 
 ## Journal
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette v1 itérée (positionnement luxury & exclusive, vidéos, tarifs sports nautiques) et maquette concurrente au Prompt 3D (piste C « Horizon ») pour comparaison A/B
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — liens d'avis Google / Tripadvisor placés dans les cartes de note de la maquette.
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette v1 peaufinée (header, footer réseaux, hero, photos watersports, galeries tenant dans la première vue).
+- 2026-10-21 : Sur [[sabinas-watersport-refonte]] — maquette : vidéo hero, carte OSM, revue copy/design ; prête à 4/5 pour la prospection, manque contact de réponse et hébergement privé.
+- 2026-10-22 : Sur [[sabinas-watersport-refonte]] — plan de redirection 301 des 3 domaines et maquette en ligne sur Vercel (lien privé noindex)
+- 2026-10-22 : Sur [[sabinas-watersport-refonte]] — accroche WhatsApp DE/EN prête avec lien démo et section stack sur la page concept
+- 2026-10-23 : Sur [[sabinas-watersport-refonte]] — e-mail de relance EN finalisé (maquette + stack en 6 lignes + demande d'un créneau de 10 min), à envoyer.
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]
