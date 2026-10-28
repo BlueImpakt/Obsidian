@@ -11,6 +11,7 @@
 | Trois demandes (Famille Exemple, Agence Exemple, Groupe Test), adresses example.com | vue bureau | Fictives |
 | Messages automatiques et leur calendrier, choix « automatique / je relis » | vue bureau | Le système proposé, pas l'existant |
 | Email de confirmation et lien « Payer l'acompte » | vue bureau | Le lien dépend de la banque de RM (inconnue) |
+| Minimum de 5 nuits pour des dates libres, prix au prorata des nuits | fiche, tunnel | Choix de Melvin et calcul de la maquette ; le site ne publie ni minimum ni prix à la nuit |
 | Copie de chaque message à l'agence | tunnel (mode agence), vue bureau, page concept | Le système proposé ; on ignore comment RM traite aujourd'hui les agences |
 
 ## 2. Vrai, mais tiré d'une autre source que rmcroisieres.com (à reconfirmer)

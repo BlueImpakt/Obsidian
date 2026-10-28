@@ -45,7 +45,7 @@ Melvin a délégué la validation de la planche (« pour celui-ci, passe tout se
 - **Photos partagées et filigrane laissés tels quels** (Sol / Estella, Pantagonia / Affligem / Rev'anou, Manureva / Lily, Le Dumbea / Kayo) : à toi de décider (Nano Banana ou photos de RM). *Coût* : cartes voisines identiques dans la flotte.
 - **Semaines : huit à la fois à partir du mois choisi**, en grille (fin du rail horizontal coupé, jugé « coupé au bord » à l'aveugle). *Coût* : un geste de plus pour un départ lointain (choisir le mois).
 - **Fourchette « de … à … la semaine »** sur la fiche au lieu de « dès … » : la première semaine affichée n'est pas la moins chère. *Coût* : aucun.
-- **Rachat de franchise de 3 % ajouté au total avec skipper** (« obligatoire si vous embauchez un skipper », page Formalités), minimum de 260 € supposé. *Coût* : total faux de quelques dizaines d'euros si le minimum ne s'applique pas.
+- **Rachat de franchise de 3 % ajouté au total avec skipper** (« obligatoire si vous embauchez un skipper », page Formalités), minimum de 160 € (« 3 % de la location, 160 Euros minimum », pages Qui sommes-nous et Formalités en anglais ; la page Formalités en français dit « d'un minimum de 260 Euro » : contradiction, d'abord appliquée à 260 €, corrigée le 28/10). *Coût* : 100 € d'écart sur les petits bateaux si c'est 260 € qui fait foi si le minimum ne s'applique pas.
 
 ## Passe de vitesse et retours de Melvin (28/10/2026, après la note de relecture)
 
@@ -58,3 +58,7 @@ Melvin a délégué la validation de la planche (« pour celui-ci, passe tout se
 
 - **Boutons de route au nom complet** (consigne de Melvin) : « Tour de la Martinique », « Grenadines depuis le Marin », « Grenadines depuis Saint-Vincent ». Sur ordinateur, ils passent sur trois lignes : titre, boutons et échelle resserrés sous 900 px de haut pour garder l'itinéraire entier (vérifié à 1 280 × 720, 1 366 × 768, 1 440 × 900) ; le nom de la route n'est plus répété au-dessus de l'échelle (lu par les lecteurs d'écran). *Coût* : titre un peu plus petit sur portable.
 - **Plus de mention de rmcroisieres.com comme source dans les pages** (consigne de Melvin) : liens « rmcroisieres.com » des bases, des services et de l'itinéraire, note et lien de la fiche, pied de page, lien 12knots du récapitulatif. Restent les badges « exemple » et « à confirmer ». *Coût* : aucun ; les sources sont dans `docs/faits.md`.
+- **Durée : « 1 semaine » ou « du … au … », 5 nuits au moins** (consigne de Melvin), sur la fiche et dans le tunnel, à la place de « 1 ou 2 semaines » (non sourcé) et de « Partir un autre jour ». « 5 jours » compté comme 5 nuits entre les deux dates (`NUITS_MIN` dans `maquette/semaines.js`). Prix des dates libres : chaque nuit au septième du tarif de la semaine de sa période, marqué « à confirmer » ; skipper et hôtesse comptés au nombre de nuits. *Coût* : prix faux si RM facture autrement les séjours courts ; minimum à passer à 4 si « 5 jours » se compte comme RM (« 8 jours / 7 nuits »).
+- **« 10 personnes au plus sur ce bateau » retiré** (consigne de Melvin) : la liste des personnes s'arrête déjà à la capacité du bateau. *Coût* : aucun.
+- **Rachat de franchise avec skipper : minimum 160 €** au lieu de 260 € (voir plus haut).
+

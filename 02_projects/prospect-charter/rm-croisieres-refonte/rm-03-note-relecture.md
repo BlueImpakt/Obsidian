@@ -22,15 +22,15 @@ Maquette locale : lancer le serveur `rm-maquette` (`.claude/launch.json`, port 4
 
 ## Supposé ou tiré d'ailleurs (marqué « à confirmer » ou « exemple »)
 - Frais de fin de séjour 680 € (2 330 € pour Liberta), samedi comme jour de départ, semaines complètes de Manureva, Le Dumbea et Estella : 12knots, 28/10/2026.
-- Année des deux grilles de tarifs (2026, 2027), skipper facturé 7 jours, rachat de franchise de 3 % avec skipper (minimum 260 €).
+- Année des deux grilles de tarifs (2026, 2027), skipper facturé 7 jours, rachat de franchise de 3 % avec skipper, minimum 160 € (le site dit aussi 260 € : voir plus bas).
 - Délai de réponse « sous 24 h », lien WhatsApp sur le mobile du site, demandes et messages automatiques de la vue bureau, lien de paiement, copie de chaque message à l'agence.
-- **Choix « 1 semaine / 2 semaines » du tunnel : ni sourcé ni marqué.** Le site ne publie que des tarifs à la semaine et des idées de croisière de 8 et 10 jours (question plus bas).
+- **Durée : « 1 semaine » (du samedi au samedi) ou « du … au … », 5 nuits au moins** (à ta demande ; le site ne publie ni minimum ni prix à la nuit). Prix des dates libres au prorata des nuits, comme 12knots pour les semaines à cheval sur deux saisons, marqué « à confirmer ».
 - Détail complet : `docs/hypotheses.md`.
 
 ## Manque
 - Photos HD : Dlokoko (259 px), An tu plezi (465 px, bandes noires rognées), Take It Easy (600 px), Pantagonia, Affligem et Rev'anou (697 px, même photo avec le filigrane d'un autre site), Le Gaspésien (768 px), Manureva et Lily (854 px, même rendu du chantier). Aucune retouche par IA : à toi de décider (Nano Banana) ou à demander à RM.
 - Tes coordonnées : `PITCH_CONTACT` vide dans `maquette/concept.js`, `PITCH_LIEN_PAGE` dans les messages.
-- Réponses de RM : barème qui fait foi (site 30/30/40 ou agences 50 % à J-45), Booking Manager comme planning unique, frais, tarifs skipper, bateaux de Blue Lagoon, départs le samedi, durées possibles (semaine seule, deux semaines, croisière de dix jours ?).
+- Réponses de RM : barème qui fait foi (site 30/30/40 ou agences 50 % à J-45), Booking Manager comme planning unique, frais, tarifs skipper, bateaux de Blue Lagoon, départs le samedi, durées possibles (semaine seule, deux semaines, croisière de dix jours ?), durée minimale, prix d'un jour en plus (le site ne publie qu'un « prix quotidien » pour la pénalité de retard, sans montant), minimum du rachat de franchise avec skipper (160 € sur « Qui sommes-nous » et la page Formalités en anglais, 260 € sur la page Formalités en français).
 - Aucun email de gérant publié : le premier message part par le formulaire du site, contact@rmcroisieres.com ou le téléphone.
 
 ## Décisions prises à ta place (coût si elles sont fausses)
@@ -42,8 +42,8 @@ Maquette locale : lancer le serveur `rm-maquette` (`.claude/launch.json`, port 4
 
 Toutes les décisions : `docs/decisions.md`.
 
-## Mesures (porte qualité n° 12 du 28/10/2026)
-- **Porte qualité : tout passe (9 contrôles sur 9).** Tests (21), débordement (216 vues), photos jamais agrandies (1 208 + 264 en galerie), états ouverts (120 parcours), console, faits (151 × 2 langues), tunnel (client sur téléphone : 8 gestes, 3 étapes ; agence : 14 gestes), système visuel.
+## Mesures (porte qualité du 28/10/2026 : n° 12, puis n° 14 à 16 après le choix de durée)
+- **Porte qualité : tout passe (9 contrôles sur 9).** Après le choix de durée, la porte lit les passagers dans les caractéristiques de la fiche et reconnaît le choix « 1 semaine / Du … au … » comme question de date (`research/build_gate.py`). Tests (23), débordement (216 vues), photos jamais agrandies (1 208 + 264 en galerie), états ouverts (120 parcours), console, faits (151 × 2 langues), tunnel (client sur téléphone : 8 gestes, 3 étapes ; agence : 14 gestes), système visuel.
 - **Affichage sur téléphone en vrai bridage** (seuil 4 s) : accueil 2,6 s (4,4 avant cette passe), flotte 3,9 s (7,0), fiche 3,6 s (4,4). Gains : un dictionnaire de traduction par page au lieu de sept, logo à sa taille, version 900 px des grandes photos (qualité 95), données compactées, première photo de la flotte préchargée, polices chargées après la grande photo (repli Didot ou Bodoni 72 sur iPhone le temps du chargement). Mesures sur le serveur local, sans compression : en ligne, ce sera plus rapide. Accessibilité et bonnes pratiques Lighthouse : 100 partout.
 - **Avant / après, accueil sur téléphone** : 7,9 Mo et 7,0 s d'affichage pour rmcroisieres.com, 579 Ko pour la maquette (13,6 fois plus légère).
 - **Comparaison à l'aveugle** (juge neuf, Y.CO, The Moorings, Belmond) : 2e sur le premier écran et la fiche derrière Belmond, 1re sur le tunnel à 1 440 px (`docs/revues/aveugle-2.md`). L'écart tient surtout aux photos de RM.
