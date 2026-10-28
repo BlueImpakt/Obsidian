@@ -3,77 +3,77 @@
 Votre site, sur un téléphone.
 
 2
-00:00:01,833 --> 00:00:02,433
+00:00:01,833 --> 00:00:05,433
 Le texte est trop petit pour être lu sans zoomer.
 
 3
-00:00:02,433 --> 00:00:04,467
+00:00:05,433 --> 00:00:07,467
 La maquette, vos photos en grand.
 
 4
-00:00:04,467 --> 00:00:07,667
+00:00:07,467 --> 00:00:10,667
 Votre note dès le premier écran : 4,6 sur 5, 75 avis.
 
 5
-00:00:07,667 --> 00:00:12,767
+00:00:10,667 --> 00:00:15,367
 Vos 18 bateaux côte à côte, à l’échelle, du 37 au 90 pieds.
 
 6
-00:00:12,767 --> 00:00:16,033
+00:00:15,367 --> 00:00:18,567
 Puis vos 18 bateaux, chacun avec son prix de départ.
 
 7
-00:00:16,033 --> 00:00:21,900
+00:00:18,567 --> 00:00:24,433
 Toute la flotte sur une page, à filtrer par sortie, destination et invités.
 
 8
-00:00:21,900 --> 00:00:25,133
+00:00:24,433 --> 00:00:27,667
 Chaque bateau a sa fiche : photos, détails, prix.
 
 9
-00:00:25,133 --> 00:00:28,767
+00:00:27,667 --> 00:00:31,300
 Les tarifs par sortie, horaires et destinations compris.
 
 10
-00:00:28,767 --> 00:00:33,867
+00:00:31,300 --> 00:00:36,400
 Le client choisit sa sortie et sa date : le prix s’affiche aussitôt.
 
 11
-00:00:33,867 --> 00:00:37,867
+00:00:36,400 --> 00:00:40,400
 Puis le nombre d’invités et le déjeuner.
 
 12
-00:00:37,867 --> 00:00:41,500
+00:00:40,400 --> 00:00:44,033
 Enfin ses coordonnées. Rien à payer à ce stade.
 
 13
-00:00:41,500 --> 00:00:44,033
+00:00:44,033 --> 00:00:46,567
 La demande arrive à votre bureau, complète.
 
 14
-00:00:44,033 --> 00:00:49,300
+00:00:46,567 --> 00:00:51,833
 Côté bureau : le bateau, la date, les invités et le prix, déjà calculé.
 
 15
-00:00:49,300 --> 00:00:52,633
+00:00:51,833 --> 00:00:55,167
 Vous relisez le message. Rien ne part sans vous.
 
 16
-00:00:52,633 --> 00:00:58,167
+00:00:55,167 --> 00:01:00,700
 Un tap : la confirmation part avec le lien de paiement Up2pay.
 
 17
-00:00:58,167 --> 00:01:03,900
+00:01:00,700 --> 00:01:06,433
 La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent.
 
 18
-00:01:03,900 --> 00:01:06,800
+00:01:06,433 --> 00:01:09,333
 Ce qui avait manqué à un client en novembre 2025.
 
 19
-00:01:06,800 --> 00:01:09,300
+00:01:09,333 --> 00:01:11,833
 Prototype privé : vos photos, vos tarifs.
 
 20
-00:01:09,300 --> 00:01:11,800
+00:01:11,833 --> 00:01:14,333
 Prochain pas : 15 minutes ensemble.

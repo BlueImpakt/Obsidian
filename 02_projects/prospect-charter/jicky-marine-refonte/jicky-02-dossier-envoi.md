@@ -24,7 +24,7 @@ Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, pa
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 72 s, version légère | [[jicky-video-vertical-fr-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 74 s, version légère | [[jicky-video-vertical-fr-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[jicky-video-paysage-fr-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[jicky-couverture-video-fr.jpg]] |
 | Avant/après téléphone, premier écran | [[jicky-accueil-telephone-ecran.jpg]] |
@@ -116,30 +116,30 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 pa
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-72 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+74 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
 | 0,0 | Votre site, sur un téléphone. |
 | 1,8 | Le texte est trop petit pour être lu sans zoomer. |
-| 2,4 | La maquette, vos photos en grand. |
-| 4,5 | Votre note dès le premier écran : 4,6 sur 5, 75 avis. |
-| 7,7 | Vos 18 bateaux côte à côte, à l’échelle, du 37 au 90 pieds. |
-| 12,8 | Puis vos 18 bateaux, chacun avec son prix de départ. |
-| 16,0 | Toute la flotte sur une page, à filtrer par sortie, destination et invités. |
-| 21,9 | Chaque bateau a sa fiche : photos, détails, prix. |
-| 25,1 | Les tarifs par sortie, horaires et destinations compris. |
-| 28,8 | Le client choisit sa sortie et sa date : le prix s’affiche aussitôt. |
-| 33,9 | Puis le nombre d’invités et le déjeuner. |
-| 37,9 | Enfin ses coordonnées. Rien à payer à ce stade. |
-| 41,5 | La demande arrive à votre bureau, complète. |
-| 44,0 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
-| 49,3 | Vous relisez le message. Rien ne part sans vous. |
-| 52,6 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
-| 58,2 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
-| 63,9 | Ce qui avait manqué à un client en novembre 2025. |
-| 66,8 | Prototype privé : vos photos, vos tarifs. |
-| 69,3 | Prochain pas : 15 minutes ensemble. |
+| 5,4 | La maquette, vos photos en grand. |
+| 7,5 | Votre note dès le premier écran : 4,6 sur 5, 75 avis. |
+| 10,7 | Vos 18 bateaux côte à côte, à l’échelle, du 37 au 90 pieds. |
+| 15,4 | Puis vos 18 bateaux, chacun avec son prix de départ. |
+| 18,6 | Toute la flotte sur une page, à filtrer par sortie, destination et invités. |
+| 24,4 | Chaque bateau a sa fiche : photos, détails, prix. |
+| 27,7 | Les tarifs par sortie, horaires et destinations compris. |
+| 31,3 | Le client choisit sa sortie et sa date : le prix s’affiche aussitôt. |
+| 36,4 | Puis le nombre d’invités et le déjeuner. |
+| 40,4 | Enfin ses coordonnées. Rien à payer à ce stade. |
+| 44,0 | La demande arrive à votre bureau, complète. |
+| 46,6 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
+| 51,8 | Vous relisez le message. Rien ne part sans vous. |
+| 55,2 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
+| 60,7 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
+| 66,4 | Ce qui avait manqué à un client en novembre 2025. |
+| 69,3 | Prototype privé : vos photos, vos tarifs. |
+| 71,8 | Prochain pas : 15 minutes ensemble. |
 
 ## Liens
 - Projet parent : [[jicky-marine-refonte]]
