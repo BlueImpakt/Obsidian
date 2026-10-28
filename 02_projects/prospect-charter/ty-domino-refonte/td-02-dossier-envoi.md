@@ -56,6 +56,7 @@ Objet : Ty Domino : votre site, vu depuis un téléphone
 ```
 Bonjour Bruno Desporte,
 
+Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je refais des sites pour ceux qui vivent de la mer.
 Votre programme est déjà écrit étape par étape, de l’îlet Madame à l’îlet Chancel, et vos passagers parlent tous du calme, de la voile et du repas.
 4,9 sur 394 avis Google, mais votre page contact envoie les e-mails vers info@monsite.fr, l’adresse du modèle Wix, et pour réserver il faut remplir un formulaire puis attendre la réponse.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
@@ -101,7 +102,7 @@ Bonne saison,
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.9 / 5, 394 avis Google, relevé : 28/10/2026 (docs/etudes/2026-10-28-ty-domino-reservation.md).
+Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.9 / 5, 394 avis Google, relevé : 28/10/2026 (docs/etudes/2026-10-28-ty-domino-reservation.md).
 
 ## Chiffres
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : ty-domino-refonte/sortie/porte-7/resultat.json et sortie/lighthouse-avant/

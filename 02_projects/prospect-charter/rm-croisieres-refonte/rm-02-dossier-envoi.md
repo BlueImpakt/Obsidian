@@ -55,6 +55,7 @@ Objet : RM Croisières : votre site, vu depuis un téléphone
 ```
 Bonjour,
 
+Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je refais des sites pour ceux qui vivent de la mer.
 Vos itinéraires sont déjà écrits nuit par nuit, du Marin aux Grenadines, et votre flotte va du monocoque au Sunreef 50 avec équipage.
 Vos 22 bateaux sont déjà proposés semaine par semaine chez 12knots, mais votre propre site ne montre aucune disponibilité, et le bouton « Rentrons en contact » de l'accueil mène à une page cassée.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
@@ -100,7 +101,7 @@ Bonne saison,
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.3 / 5, 20 avis Google, relevé : 23/10/2026 (agent prospect-charter, resultats/prospects-charter-v2.csv).
+Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.3 / 5, 20 avis Google, relevé : 23/10/2026 (agent prospect-charter, resultats/prospects-charter-v2.csv).
 
 ## Chiffres
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : rm-croisieres-refonte/sortie/porte-26/resultat.json et sortie/lighthouse-avant/

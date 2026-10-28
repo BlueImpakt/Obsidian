@@ -54,6 +54,7 @@ Objet : Jicky Marine : votre site, vu depuis un téléphone
 ```
 Bonjour,
 
+Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je refais des sites pour ceux qui vivent de la mer.
 4,6 sur 5 et 75 avis sur Tripadvisor : vos clients y citent vos équipages par leur prénom.
 Une flotte de 18 bateaux depuis 2004 à St Barth, mais votre site est illisible sur mobile et chaque réservation passe par un échange d'emails, là où les agences encaissent en ligne.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
@@ -99,7 +100,7 @@ Bonne saison,
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
+Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
 
 ## Chiffres
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel ; 2 taps : vue bureau de la maquette (office.html, « Relire le message » puis « Envoyer avec le lien de paiement »)
