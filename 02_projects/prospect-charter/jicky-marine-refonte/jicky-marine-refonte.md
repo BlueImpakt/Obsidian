@@ -25,6 +25,8 @@ body_synced: 2026-10-28
 - 2026-10-28 : flotte à l'échelle refaite (acf918c) puis 6 des 7 bateaux trop de profil remplacés par des images Nano Banana à 30° (Fjord 53 à relancer) ; Sanya 57 depuis la photo de Melvin, hauteur de mât à trancher avec Jicky. Fiche chiffres régénérée : « 3 étapes pour demander une sortie » à la place de « 3,5× plus légère », carte des notes avec Performance 75 → 96 (objectif, 82 mesuré).
 - 2026-10-28 (midi) : accueil animé (hero, titres, étapes, tarifs), ordre Hero → Flotte à l'échelle → La flotte → Comment ça marche → À bord → Sorties et tarifs → Bureau, menu aligné ; accroche « Choisissez votre bateau, on s'occupe du reste » au-dessus du bouton (à vérifier sur iPhone : bouton en partie sous la barre fixe). Titre de la section flotte « Dix-huit bateaux… » encore en discussion.
 - 2026-10-28 (soir) : maquette et page privée en ligne sur Vercel (compte blueimpakt, projet `jicky-marine-ltdnit`, noindex, sans suivi) : page privée https://jicky-marine-ltdnit.vercel.app/p/, lien injecté dans les messages J0-J+15. Titre flotte « De 37 à 90 pieds, toute la flotte », hero tenu à toutes les tailles, bouton pause retiré, vidéo 74,3 s avec la flotte à l'échelle. Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
+- 2026-10-28 (nuit) : page privée republiée avec mention Blue Impakt, lien « disponible 7 jours » et message d'expiration corrigé ; J+15 ne promet plus 30 jours. Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
+- 2026-10-28 (nuit, suite) : page privée avec ligne « Voir en grand » (5 visuels ordinateur/téléphone et mesures en nouvelle fenêtre), captures avant/après refaites sans mention « non publié ». Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -38,7 +40,9 @@ body_synced: 2026-10-28
 - **Flotte à l'échelle (28/10)** : catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme (haubans, drisses, balancine, barres de flèche retirés) ; bateaux trop de profil refaits par Nano Banana à 30°, caméra basse, téléobjectif.
 - **Fiche chiffres (28/10)** : chiffre clé « 3 étapes pour demander une sortie, depuis le téléphone » (CGV art. 3.2) ; Performance de la maquette affichée à 96 comme objectif après optimisation et mise en ligne (82 mesuré, en note interne), mention au pied de la fiche.
 - **Animations (28/10)** : textes du hero au chargement, titres et étapes au défilement (montée « rideau »), rien si mouvement réduit, désactivées pour la porte qualité et la vidéo (forçables via `?anim`). Mât du Sanya 57 calé sur sa photo (28,4 m), décision Melvin.
-- **Hébergement (28/10)** : maquette et page privée sur Vercel (compte blueimpakt, projet dédié, noindex) tant que le site n'est pas vendu ; le J+15 promet 30 jours en ligne. Pas de bouton pause sur le hero (écart WCAG 2.2.2 assumé pour une maquette) ; longueur réelle préférée à l'arrondi du site (Leopard 88 à 88 ft). Mât du Lagoon 55 gardé à 30,08 m (cote officielle).
+- **Hébergement (28/10)** : maquette et page privée sur Vercel (compte blueimpakt, projet dédié, noindex) tant que le site n'est pas vendu (le J+15 ne promet plus 30 jours en ligne). Pas de bouton pause sur le hero (écart WCAG 2.2.2 assumé pour une maquette) ; longueur réelle préférée à l'arrondi du site (Leopard 88 à 88 ft). Mât du Lagoon 55 gardé à 30,08 m (cote officielle).
+- **Page privée (28/10, Melvin)** : lien annoncé « disponible 7 jours » sous le bouton ; variantes A et D non publiées, gardées en interne ; mention « © 2026 Blue Impakt. Maquette confidentielle, reproduction interdite. » en pied de page.
+- **Page privée (28/10, Melvin)** : visuels ordinateur et page entière du dossier d'envoi proposés en liens « Voir en grand » (nouvelle fenêtre) sous l'avant/après, pas intégrés à la page.
 
 ## Blocages / risques
 - Plafond par transaction du contrat Up2pay inconnu (pas dans les CGV, à demander).
@@ -68,10 +72,9 @@ body_synced: 2026-10-28
 - [ ] Porte qualité Jicky : corriger les autres échecs (mode concierge à 12 gestes avec nombre de personnes trop tard, focus invisible sur champs en erreur, fiche Fairline lente sur mobile 7,3 s, lien du bandeau prototype trop petit, Pardo 43 étiré 2,4×)
 - [ ] Flotte à l'échelle : relancer le Fjord 53 dans Nano Banana (`research/nano-banana-30deg/PROMPTS.md`, section « Relance ») puis l'intégrer
 - [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; maquette calée sur la photo (28,4 m), décision Melvin du 2026-10-28
+- [ ] Vérifier que les photos du hero téléphone se chargent sur la version en ligne (manquantes repérées le 2026-10-28)
 
 ## Journal
-- 2026-10-27 : Photos principales refaites via Nano Banana (Fairline 65, Axopar 37, Sanya 57, Lagoon 55, Nautitech 47, San Lorenzo 90 en route) et VanDutch 55 sur une photo existante 1240 px (c379ddb) ; 3e diapo hero Pardo 43 (3e6b647) ; Leopard 53 à 53 ft ; tarifs identiques regroupés sur une ligne (a6a97fc). IA limitée aux photos principales/hero, à faire valider par Jicky.
-- 2026-10-27 : Barème d'annulation du récap reformulé au plus près des CGV (5cf5d2e) ; délai « sous 2 h » et WhatsApp prérempli gardés comme propositions « Exemple ».
 - 2026-10-27 : 3 revues (Lighthouse, web-design-guidelines, états ouverts) puis 2 bloquants de chargement + 5 bugs corrigés (2c736ae) et cartes en 1200 px (0a5e5e1) : accueil iPhone 3,15 → 1,94 Mo, ~8,5 s en 4G lente ; a11y et bonnes pratiques à 100.
 - 2026-10-27 : Flotte à l'échelle retenue sur l'accueil (avant les vignettes), défilement épinglé au scroll, rendu maquette blanche détaillé à partir des vraies photos de profil ; 13/18 bateaux ont un profil, 5 n'ont que des trois-quarts ; Blender écarté.
 - 2026-10-27 : Flotte à l'échelle : rendu « plâtre blanc » essayé sur Pardo 43 et Sanya 57 (détourage BiRefNet gratuit + niveaux de gris modelés) ; détail conservé, rien d'inventé ; défauts : voiles du Sanya coupées, Pardo vu d'en haut, passagers visibles. Aperçu des 13 bateaux à profil sur l'accueil en cours.
@@ -85,6 +88,8 @@ body_synced: 2026-10-28
 - 2026-10-28 : 6/7 bateaux refaits via Nano Banana intégrés à 30° (d36f0d1), Sanya 57 depuis la photo de Melvin (c27279c), mâts revus (Lagoon 42 20,65 m, Nautitech 47 21,4 m), génois en tête de mât (4b2fc78), titre « Eighteen boats, one exclusive experience » (89862f7). Fiche chiffres : « 3 étapes pour demander une sortie » remplace « 3,5× plus légère », Performance 75 → 96 affichée comme objectif. Reste Fjord 53 ; mât du Sanya (photo ≈ 28 m / 23 m publiés) à trancher.
 - 2026-10-28 : Textes de l'accueil animés (7fa3982, mouvement réduit respecté, coupé pour porte et vidéo), Axopar 37 restauré après un webp vide (dfb6442), « Sorties et tarifs » sous « À bord » et menu réordonné (4dad9bc, 99436f5), accroche « Choisissez votre bateau, on s'occupe du reste » + bouton à 30 % de transparence (9686871). Mât du Sanya 57 : suit la photo (28,4 m), décision Melvin.
 - 2026-10-28 : Titre « De 37 à 90 pieds, toute la flotte » (be25255), hero tenu à toutes les tailles (1f7093e), bouton pause retiré (d7b5c54), Leopard 88 à 88 ft (0a49515) ; vidéo 74,3 s avec la flotte à l'échelle ; maquette + page privée en ligne sur Vercel (https://jicky-marine-ltdnit.vercel.app/p/, noindex), lien injecté dans les messages J0-J+15 (9761e38). Reste PITCH_CONTACT.
+- 2026-10-28 : Mention « © 2026 Blue Impakt. Maquette confidentielle » en pied de page, « lien disponible 7 jours » sous le bouton de la page privée, variantes A et D non publiées (trace interne) ; message « lien expiré » de la page privée corrigé et republié ; J+15 ne promet plus 30 jours.
+- 2026-10-28 : Page privée : ligne « Voir en grand » sous l'avant/après (5 liens en nouvelle fenêtre : ordinateur et téléphone, premier écran et page entière, les trois mesures), vérifiée en ligne ; captures refaites sans « non publié » (maquette-outils 05df909). Publication Vercel depuis Python en échec, faite depuis le terminal.
 
 ## Liens
 - Projet parent : [[prospect-charter]]

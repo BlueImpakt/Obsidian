@@ -55,6 +55,8 @@ body_synced: 2026-10-28
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — flotte : 6/7 images Nano Banana intégrées, mâts et génois corrigés ; fiche chiffres « 3 étapes » et Performance 96 (objectif).
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — accueil animé, sections réordonnées, nouvelle accroche du hero ; mât du Sanya 57 calé sur la photo (28,4 m).
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — maquette et page privée déployées sur Vercel en lien non référencé, vidéo 74,3 s refaite, titre flotte « De 37 à 90 pieds, toute la flotte » ; reste PITCH_CONTACT avant envoi.
+- 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée republiée (mention Blue Impakt, lien « 7 jours », expiration corrigée), variantes A et D gardées en interne.
+- 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée enrichie de 5 liens « Voir en grand » (avant/après ordinateur et téléphone, mesures), captures refaites sans mention « non publié ».
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])
