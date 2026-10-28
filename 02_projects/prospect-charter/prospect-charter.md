@@ -15,6 +15,7 @@ body_synced: 2026-10-27
 ## Sous-projets
 - [[sabinas-watersport-refonte]] — Sabinas Watersport Rhodos (Rhodes, Grèce) : premier dossier complet, maquette v1, base du boilerplate et repère de calibrage (douleur ≈ 8).
 - [[jicky-marine-refonte]] — Jicky Marine (Saint-Barthélemy) : n°1 du top 50, étude paiement / réservation faite le 2026-10-25.
+- [[rm-croisieres-refonte]] — RM Croisières (Le Marin, Martinique, et Saint-Vincent) : maquette de refonte construite en autonomie le 2026-10-28 (route nuit par nuit, calendrier Booking Manager, demande avec total).
 
 ## Livrables
 - Agent : skill `/prospect-charter` + sous-agent `site-auditor`, scripts Python (découverte Apify Google Maps, filtrage, fusion, top 50).
