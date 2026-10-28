@@ -10,11 +10,11 @@ genere_par: maquette-outils/envoi
 
 Projet : [[jicky-marine-refonte]] · Client : [[jicky-marine]] · Parent : [[prospect-charter]] · Source : outil `maquette-outils/envoi`, config `envoi/exemples/jicky.json`
 
-Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est publié ni envoyé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
+Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est envoyé ; seule la page privée est en ligne, en lien non référencé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
 
 ## À faire avant le premier envoi
 - [ ] Remplacer `PITCH_CONTACT` (email + téléphone de Melvin) dans les messages et la page privée
-- [ ] Héberger la page privée et la maquette en lien privé, puis remplacer `PITCH_LIEN_PAGE` (aucun lien traçant, aucun pixel)
+- [x] Page privée et maquette hébergées en lien privé, non référencé : https://jicky-marine-ltdnit.vercel.app/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[jicky-sous-titres-fr.srt]]), déposer `voix-melvin-fr.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
@@ -57,7 +57,7 @@ Bonjour,
 4,6 sur 5 et 75 avis sur Tripadvisor : vos clients y citent vos équipages par leur prénom.
 Une flotte de 18 bateaux depuis 2004 à St Barth, mais votre site est illisible sur mobile et chaque réservation passe par un échange d'emails, là où les agences encaissent en ligne.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
-[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers PITCH_LIEN_PAGE]
+[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers https://jicky-marine-ltdnit.vercel.app/p/]
 Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
 Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
@@ -79,7 +79,7 @@ Objet : Jicky Marine : un détail tiré de vos avis
 Bonjour,
 
 Un détail tiré de vos avis : en novembre 2025, un client a salué le bateau et l’équipage, mais regretté des instructions d’arrivée incomplètes : le bateau n’accoste qu’une fois tout le groupe sur le ponton, le parking est rare, l’agent difficile à reconnaître.
-Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : PITCH_LIEN_PAGE
+Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : https://jicky-marine-ltdnit.vercel.app/p/
 15 minutes cette semaine ou la suivante ?
 Un « stop » suffit pour ne plus recevoir de message.
 
@@ -93,7 +93,7 @@ Objet : Jicky Marine : je clos de mon côté
 Bonjour,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La maquette reste en ligne 30 jours à la même adresse, si vous voulez la montrer à votre équipe : PITCH_LIEN_PAGE
+La maquette reste en ligne 30 jours à la même adresse, si vous voulez la montrer à votre équipe : https://jicky-marine-ltdnit.vercel.app/p/
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt
