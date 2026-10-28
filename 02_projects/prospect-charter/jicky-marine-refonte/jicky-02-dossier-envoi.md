@@ -105,7 +105,7 @@ Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel
 
 - **3 étapes pour demander une sortie, depuis le téléphone** : Aujourd’hui : un email au bureau, qui répond par un récapitulatif et un lien de paiement.
-- **Performance 75 → 82 · Accessibilité 60 → 100 · Référencement 82 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil sur téléphone : site actuel, puis maquette.
+- **Performance 75 → 96* · Accessibilité 60 → 100 · Référencement 82 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette. * Performance : objectif une fois le site optimisé et en ligne.
 - **Téléphone affichage pensé pour l’écran** : Le site actuel n’a pas de réglage pour téléphone : il s’y affiche en version bureau rétrécie.
 
 **Ne pas citer :**
