@@ -24,7 +24,7 @@ Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, pa
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 75 s, version légère | [[jicky-video-vertical-fr-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 77 s, version légère | [[jicky-video-vertical-fr-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[jicky-video-paysage-fr-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[jicky-couverture-video-fr.jpg]] |
 | Avant/après téléphone, premier écran | [[jicky-accueil-telephone-ecran.jpg]] |
@@ -116,7 +116,7 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 pa
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-75 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+77 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
@@ -125,20 +125,20 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 pa
 | 6,8 | Sur la maquette : votre nom, vos photos en grand. |
 | 10,1 | Votre note dès le premier écran : 4,6 sur 5, 75 avis. |
 | 13,1 | Puis vos 18 bateaux, chacun avec son prix de départ. |
-| 16,3 | Toute la flotte sur une page, à filtrer par sortie, destination et invités. |
-| 22,7 | Chaque bateau a sa fiche : photos, détails, prix. |
-| 26,0 | Les tarifs par sortie, horaires et destinations compris. |
-| 29,6 | Le client choisit sa sortie et sa date : le prix s’affiche aussitôt. |
-| 34,7 | Puis le nombre d’invités et le déjeuner. |
-| 38,7 | Enfin ses coordonnées. Rien à payer à ce stade. |
-| 42,3 | La demande arrive à votre bureau, complète. |
-| 44,9 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
-| 50,7 | Vous relisez le message. Rien ne part sans vous. |
-| 54,0 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
-| 59,6 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
-| 64,1 | Ce qui avait manqué à un client en novembre 2025. |
-| 68,2 | Un prototype privé, avec vos photos et vos tarifs. |
-| 71,4 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
+| 17,2 | Toute la flotte sur une page, à filtrer par sortie, destination et invités. |
+| 23,6 | Chaque bateau a sa fiche : photos, détails, prix. |
+| 26,8 | Les tarifs par sortie, horaires et destinations compris. |
+| 30,4 | Le client choisit sa sortie et sa date : le prix s’affiche aussitôt. |
+| 35,5 | Puis le nombre d’invités et le déjeuner. |
+| 39,5 | Enfin ses coordonnées. Rien à payer à ce stade. |
+| 43,2 | La demande arrive à votre bureau, complète. |
+| 45,7 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
+| 51,6 | Vous relisez le message. Rien ne part sans vous. |
+| 54,9 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
+| 60,4 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
+| 66,2 | Ce qui avait manqué à un client en novembre 2025. |
+| 70,3 | Un prototype privé, avec vos photos et vos tarifs. |
+| 73,5 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
 
 ## Liens
 - Projet parent : [[jicky-marine-refonte]]

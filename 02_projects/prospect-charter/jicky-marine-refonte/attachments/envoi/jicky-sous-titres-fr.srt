@@ -15,61 +15,61 @@ Sur la maquette : votre nom, vos photos en grand.
 Votre note dès le premier écran : 4,6 sur 5, 75 avis.
 
 5
-00:00:13,067 --> 00:00:16,333
+00:00:13,067 --> 00:00:17,200
 Puis vos 18 bateaux, chacun avec son prix de départ.
 
 6
-00:00:16,333 --> 00:00:22,733
+00:00:17,200 --> 00:00:23,567
 Toute la flotte sur une page, à filtrer par sortie, destination et invités.
 
 7
-00:00:22,733 --> 00:00:25,967
+00:00:23,567 --> 00:00:26,800
 Chaque bateau a sa fiche : photos, détails, prix.
 
 8
-00:00:25,967 --> 00:00:29,600
+00:00:26,800 --> 00:00:30,433
 Les tarifs par sortie, horaires et destinations compris.
 
 9
-00:00:29,600 --> 00:00:34,700
+00:00:30,433 --> 00:00:35,533
 Le client choisit sa sortie et sa date : le prix s’affiche aussitôt.
 
 10
-00:00:34,700 --> 00:00:38,700
+00:00:35,533 --> 00:00:39,533
 Puis le nombre d’invités et le déjeuner.
 
 11
-00:00:38,700 --> 00:00:42,333
+00:00:39,533 --> 00:00:43,167
 Enfin ses coordonnées. Rien à payer à ce stade.
 
 12
-00:00:42,333 --> 00:00:44,867
+00:00:43,167 --> 00:00:45,700
 La demande arrive à votre bureau, complète.
 
 13
-00:00:44,867 --> 00:00:50,700
+00:00:45,700 --> 00:00:51,567
 Côté bureau : le bateau, la date, les invités et le prix, déjà calculé.
 
 14
-00:00:50,700 --> 00:00:54,033
+00:00:51,567 --> 00:00:54,900
 Vous relisez le message. Rien ne part sans vous.
 
 15
-00:00:54,033 --> 00:00:59,567
+00:00:54,900 --> 00:01:00,433
 Un tap : la confirmation part avec le lien de paiement Up2pay.
 
 16
-00:00:59,567 --> 00:01:04,100
+00:01:00,433 --> 00:01:06,167
 La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent.
 
 17
-00:01:04,100 --> 00:01:08,200
+00:01:06,167 --> 00:01:10,267
 Ce qui avait manqué à un client en novembre 2025.
 
 18
-00:01:08,200 --> 00:01:11,433
+00:01:10,267 --> 00:01:13,500
 Un prototype privé, avec vos photos et vos tarifs.
 
 19
-00:01:11,433 --> 00:01:14,700
+00:01:13,500 --> 00:01:16,767
 Prochain pas : 15 minutes ensemble, si cela vous parle.
