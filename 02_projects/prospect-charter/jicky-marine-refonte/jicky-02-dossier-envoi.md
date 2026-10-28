@@ -93,7 +93,7 @@ Objet : Jicky Marine : je clos de mon côté
 Bonjour,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La maquette reste en ligne 30 jours à la même adresse, si vous voulez la montrer à votre équipe : https://jicky-marine-ltdnit.vercel.app/p/
+La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : https://jicky-marine-ltdnit.vercel.app/p/
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt

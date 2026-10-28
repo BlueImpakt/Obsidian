@@ -10,7 +10,7 @@ body{margin:0;background:var(--fond);color:var(--encre);font:17px/1.6 system-ui,
 main{max-width:1080px;margin:0 auto;padding:40px 16px 72px}
 h1{font:400 clamp(30px,5.4vw,54px)/1.08 "Bodoni 72",Didot,Georgia,serif;margin:0 0 16px;letter-spacing:-.01em}
 h2{font:400 clamp(24px,3.6vw,34px)/1.15 "Bodoni 72",Didot,Georgia,serif;margin:0 0 8px}
-.intro{color:var(--doux);max-width:640px;margin:0 0 8px}section{margin-top:64px}.p{color:var(--doux);margin:0 0 20px;max-width:640px}
+.intro{color:var(--doux);max-width:640px;margin:0 0 8px}.dispo{color:var(--doux);font-size:14px;margin:12px 0 0}section{margin-top:64px}.p{color:var(--doux);margin:0 0 20px;max-width:640px}
 video{display:block;width:100%;max-width:1080px;height:auto;border-radius:14px;background:#000;box-shadow:0 30px 60px -30px rgba(11,34,54,.5)}
 @media (max-width:700px){video{max-width:420px;margin:0 auto}}
 .btn{display:inline-block;background:var(--lagon);color:#fff;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:6px}
@@ -53,13 +53,14 @@ video{display:block;width:100%;max-width:1080px;height:auto;border-radius:14px;b
 <section aria-labelledby="t-ch"><h2 id="t-ch">Trois mesures</h2><div class="chiffres"><div class="ch"><p class="g">3 étapes</p><p class="t">pour demander une sortie, depuis le téléphone</p><p class="d">Aujourd’hui : un email au bureau, qui répond par un récapitulatif et un lien de paiement.</p></div><div class="ch notes"><div class="ns"><div class="n"><span class="nom">Performance</span><span class="av">75</span><span class="fl" aria-hidden="true">→</span><span class="ap">96</span></div><div class="n"><span class="nom">Accessibilité</span><span class="av">60</span><span class="fl" aria-hidden="true">→</span><span class="ap">100</span></div><div class="n"><span class="nom">Référencement</span><span class="av">82</span><span class="fl" aria-hidden="true">→</span><span class="ap">100</span></div></div><p class="t">notes sur 100</p></div><div class="ch"><p class="g">Téléphone</p><p class="t">affichage pensé pour l’écran</p><p class="d">Le site actuel n’a pas de réglage pour téléphone : il s’y affiche en version bureau rétrécie.</p></div></div><p class="cond">Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026. Performance de la maquette : objectif une fois le site optimisé et mis en ligne.</p></section>
 
 <section aria-labelledby="t-m"><h2 id="t-m">Voir la maquette</h2><p class="p">La page « concept » explique ce qui change pour votre bureau, écran par écran.</p>
-<a class="btn" href="https://jicky-marine-ltdnit.vercel.app/concept.html?lang=fr">Ouvrir la page concept</a></section>
+<div data-acces><a class="btn" href="https://jicky-marine-ltdnit.vercel.app/concept.html?lang=fr">Ouvrir la page concept</a><p class="dispo">Lien disponible 7 jours, jusqu’au 10 novembre.</p></div>
+<script>if (Date.now() > Date.parse("2026-11-10T23:59:00-04:00") || /[?&]expire\b/.test(location.search)) document.querySelector("[data-acces]").innerHTML = "<p class=\"dispo\">Le lien de la maquette a expiré. Je vous la montre volontiers en 15 minutes.</p>";</script></section>
 
 <section aria-labelledby="t-o"><h2 id="t-o">Proposition</h2>
 <div class="offre"><span class="aconf">À CONFIRMER PAR MELVIN</span><p style="margin:0">Prix pilote en échange d’une étude de cas publiée avec votre accord.</p></div></section>
 
 <section aria-labelledby="t-c"><h2 id="t-c">Me joindre</h2><p class="contact">Melvin Perrottet, Blue Impakt<br>PITCH_CONTACT</p></section>
-<footer>Prototype Blue Impakt. Aucune donnée n’est envoyée depuis cette page.</footer>
+<footer>© 2026 Blue Impakt. Page et maquette confidentielles, reproduction interdite. Aucune donnée n’est envoyée depuis cette page.</footer>
 </main><script>
 document.querySelectorAll('.ba').forEach(function(ba){var r=ba.querySelector('input');
 function maj(){ba.style.setProperty('--p',r.value+'%')}r.addEventListener('input',maj);maj();});
