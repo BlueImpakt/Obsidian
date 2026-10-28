@@ -102,13 +102,15 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec)
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel
 
-- **3,5× plus légère sur téléphone** : Page d’accueil : 3,66 Mo aujourd’hui, 1,04 Mo pour la maquette.
+- **3 étapes pour demander une sortie, depuis le téléphone** : Aujourd’hui : un email au bureau, qui répond par un récapitulatif et un lien de paiement.
 - **Performance 75 → 82 · Accessibilité 60 → 100 · Référencement 82 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil sur téléphone : site actuel, puis maquette.
 - **Téléphone affichage pensé pour l’écran** : Le site actuel n’a pas de réglage pour téléphone : il s’y affiche en version bureau rétrécie.
 
 **Ne pas citer :**
+- Poids de page (« 3,5× plus légère ») : parle peu au gérant (Melvin, 28/10/2026) ; reste dans la note interne
+- Nombre de gestes du tunnel : 8 gestes paraît beaucoup (Melvin, 28/10/2026) : citer les étapes
 - Premier affichage (FCP) : souvent plus rapide sur un vieux site sans polices ni CSS : se retourne contre nous
 - LCP du site actuel : trop instable en labo (4 à 14 s selon le passage) pour un chiffre-choc
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »

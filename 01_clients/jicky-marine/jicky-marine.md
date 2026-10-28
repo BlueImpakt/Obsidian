@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: france
 origine_lead: agent prospect-charter (run Saint-Barthélemy du 2026-10-23)
 tjm:
-body_synced: 2026-10-27
+body_synced: 2026-10-28
 ---
 
 # jicky-marine
