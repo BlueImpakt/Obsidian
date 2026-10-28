@@ -4,7 +4,7 @@ created: 2026-10-25
 statut: encours
 client: jicky-marine
 parent: prospect-charter
-body_synced: 2026-10-27
+body_synced: 2026-10-28
 ---
 
 # jicky-marine-refonte
@@ -22,6 +22,7 @@ body_synced: 2026-10-27
 ## État actuel
 - 2026-10-25 : étude paiement / réservation faite ; fiche prospect corrigée dans les CSV (commentaire, défaut, accroche). Aucun contact pour l'instant.
 - 2026-10-27 : maquette cliquable design C en local (branche `maquette`, 33 tests verts), non déployée : photos principales refaites, perf mobile corrigée (accueil iPhone 1,94 Mo), tarifs regroupés, couleurs des photos converties en sRGB ; flotte à l'échelle intégrée à l'accueil mais en reprise (angles, échelles, mâts). Dossier d'envoi prêt en brouillon ([[jicky-02-dossier-envoi]]) ; porte qualité FAIL (météo absente du tunnel, mode concierge, focus). Restent `PITCH_CONTACT`, le déploiement privé et la relecture des messages. Toujours aucun contact avec Jicky.
+- 2026-10-28 : flotte à l'échelle refaite (acf918c) avec photos internet, 7 bateaux encore trop de profil en cours de remplacement par des images Nano Banana à 30° ; fiche chiffres régénérée (carte performance / accessibilité / référencement). Le chiffre « 3,5× plus légère » du dossier d'envoi est à remplacer.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -32,6 +33,7 @@ body_synced: 2026-10-27
 - **Flotte à l'échelle** : 18 bateaux en trois-quarts avant, tous dans le même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année) ; rendu « plâtre blanc ».
 - **Couleurs des photos** : conversion des profils (Display P3, Adobe RGB…) en sRGB avant export dans `process_photos.py` ; pas d'harmonisation des photos pour Jicky (décision Melvin 27/10).
 - **Flotte à l'échelle** : photos internet au bon angle préférées aux photos Jicky mal orientées ; mât entier toujours visible, même si ça laisse du vide au-dessus des bateaux à moteur.
+- **Flotte à l'échelle (28/10)** : catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme (haubans, drisses, balancine, barres de flèche retirés) ; bateaux trop de profil refaits par Nano Banana à 30°, caméra basse, téléobjectif.
 
 ## Blocages / risques
 - Plafond par transaction du contrat Up2pay inconnu (pas dans les CGV, à demander).
@@ -55,14 +57,14 @@ body_synced: 2026-10-27
 - [ ] Faire valider par Jicky les photos retravaillées par IA (Fairline 65, Axopar 37, Sanya 57, San Lorenzo 90, Lagoon 55, Nautitech 47), notamment l'inscription inventée sur le flybridge du Fairline
 - [ ] Demander à Jicky : Fairline 63 ou 65 ? et pourquoi les demi-journées du San Lorenzo 90 sont « Saint-Barth » alors qu'il ne peut pas entrer dans la Réserve marine
 - [x] Flotte à l'échelle : résultats des 3 agents récupérés (specs sourcées, photos 3/4 avant), planche montrée, rendu plâtre fait et intégré à l'accueil (2026-10-27)
-- [ ] Flotte à l'échelle : lever les doutes de modèle — « Lagoon 420 2026 » probablement Lagoon 42, photos « Sunseeker 60 » nommées `predator-56`, modèle exact du San Lorenzo 90 et du Sunseeker 52
-- [ ] Flotte à l'échelle (reprise) : mêmes angles pour les 18 bateaux, objets parasites derrière Sanya 57 et Bali 54 retirés, échelles rigoureuses (Sanya 57 vs Lagoon 55), mâts entiers et bien dessinés ; boucles de vérification jusqu'à un résultat propre
+- [ ] Flotte à l'échelle : faire confirmer par Jicky les identifications du 2026-10-28 — « Sunseeker 52 » = Camargue 50, « Sunseeker 60 » = Predator 56 2000-2004 ; reste « Lagoon 420 2026 » probablement Lagoon 42 et modèle exact du San Lorenzo 90
+- [x] Flotte à l'échelle (reprise) : refaite le 2026-10-28 (acf918c) — photos internet caméra basse, parasites gommés, Sanya 57 plus long que le Lagoon 55, mâts entiers à la hauteur officielle ; angles : 7 bateaux encore trop de profil, voir ci-dessous
 - [ ] Tunnel : mentionner la météo (art. 9 des CGV) avant l'envoi de la demande, et revoir `docs/decisions.md` qui dit les CGV sans articles météo ni mineurs (art. 9 et 13 existent)
 - [ ] Porte qualité Jicky : corriger les autres échecs (mode concierge à 12 gestes avec nombre de personnes trop tard, focus invisible sur champs en erreur, fiche Fairline lente sur mobile 7,3 s, lien du bandeau prototype trop petit, Pardo 43 étiré 2,4×)
+- [ ] Flotte à l'échelle : intégrer les 7 images Nano Banana à 30° (détourage, plâtre, échelle) et comparer leurs proportions aux cotes du chantier ; vérifier hauteur de mât et génois du Sanya 57, mâts du Lagoon 42 et du Nautitech 47
+- [ ] Dossier d'envoi Jicky : choisir le chiffre qui remplace « 3,5× plus légère » (proposé : « Demande en 8 gestes ») et régénérer le dossier
 
 ## Journal
-- 2026-10-27 : Galerie corrigée : photos entières sans défilement à toutes largeurs, grands formats harmonisés, agrandissement plafonné à 1,5× (279b442, 31 tests).
-- 2026-10-27 : Benchmark des tunnels concurrents St-Barth : seul St Barth Yachting a un tunnel complet (dispo réelles, Stripe donc société hors île) ; MasterSki et les grosses flottes restent sur « écrivez-nous » ; St Barth Excursions encaisse via Systempay (contrat bancaire, comme Up2pay) ; les places de marché passent toutes par demande/devis. Confirme le parcours sur demande de la maquette.
 - 2026-10-27 : Synthèse écrite (22 sites) : la maquette est dans la norme (demande puis lien), lui manquent l'annulation près du bouton, un délai de réponse chiffré et WhatsApp prérempli ; à noter, le barème d'annulation de St Barth Yachting est identique aux CGV Jicky (à vérifier).
 - 2026-10-27 : Tunnel C complété (366f883, 31 tests) : barème d'annulation des CGV dans le récap avec lien, délai de réponse chiffré (Exemple), WhatsApp prérempli sur la fiche (Exemple). Synthèse benchmark commitée dans prospection-charter (1cbc122).
 - 2026-10-27 : Essai de relief 2.5D sur la photo proue du Pardo 43 (`maquette/relief.html`, 1313362) : carte de profondeur Depth Anything V2 calculée sur le processeur, shader WebGL, souris ou mouvement automatique, repli photo fixe. Gratuit, rien d'inventé. À valider par Melvin avant intégration au hero C. Pistes 3D gardées : flotte à l'échelle, demi-tour du Sanya 57 via Google Flow (2 photos réelles en début et fin).
@@ -77,6 +79,7 @@ body_synced: 2026-10-27
 - 2026-10-27 : Flotte à l'échelle jugée insuffisante par Melvin (angles incohérents, objets parasites, Sanya 57 plus petit que Lagoon 55, mâts coupés) : reprise lancée avec photos internet au bon angle, gréement redessiné et échelle des voiliers calée sur la tête de mât.
 - 2026-10-28 : Flotte à l'échelle refaite (acf918c) : 18 photos internet en trois-quarts avant, caméra basse (sous-agents de recherche, cahier research/refs-internet/CAHIER-PHOTOS.md), gréement redessiné au-dessus de la bôme d'après des points relevés sur chaque photo, mâts entiers à la hauteur officielle, parasites et lettrage gommés. Sanya 57 désormais plus long que le Lagoon 55 (Lagoon calé sur sa coque de 16,56 m). Identifications : « Sunseeker 52 » = Camargue 50, « Sunseeker 60 » = Predator 56 2000-2004 — à confirmer avec Jicky. Leçon : les photos de drone gonflent la hauteur des bateaux (Leopard 53 : 8,7 m mesurés pour 5,7 m) : exiger une caméra basse.
 - 2026-10-27 : Profils couleur des photos convertis en sRGB (9c8a98b, 36 fichiers, couleurs fidèles au site d'origine) ; message de la veille corrigé à 390 px (c994c7d) ; dossier d'envoi créé ([[jicky-02-dossier-envoi]] : vidéos 75 s, avant/après, page privée, brouillons J0-J+15, rien envoyé) ; porte qualité FAIL : météo absente du tunnel avant l'envoi alors que les CGV ont un article météo.
+- 2026-10-28 : Angles relus : 7 bateaux encore trop de profil, refaits via Nano Banana à 30° (dossier research/nano-banana-30deg, intégration en cours) ; catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme. Fiche chiffres : performance, accessibilité, référencement dans une carte (75 → 82, 60 → 100, 82 → 100 ; maquette-outils a83025d).
 
 ## Liens
 - Projet parent : [[prospect-charter]]

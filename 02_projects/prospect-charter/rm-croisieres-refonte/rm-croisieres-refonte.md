@@ -4,6 +4,7 @@ created: 2026-10-28
 statut: encours
 client: rm-croisieres
 parent: prospect-charter
+body_synced: 2026-10-28
 ---
 
 # rm-croisieres-refonte
