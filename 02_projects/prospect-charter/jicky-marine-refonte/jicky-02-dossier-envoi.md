@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, jicky-marine]
-created: 2026-10-27
+created: 2026-10-28
 projet: jicky-marine-refonte
 parent: jicky-marine-refonte
 genere_par: maquette-outils/envoi
@@ -102,14 +102,13 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647)
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec)
 
 - **3,5× plus légère sur téléphone** : Page d’accueil : 3,66 Mo aujourd’hui, 1,04 Mo pour la maquette.
-- **60 → 100 accessibilité, contrôle automatique** : Score Lighthouse sur 100. Contrôle automatique seulement (langue, textes des images, contrastes, liens).
+- **Performance 75 → 82 · Accessibilité 60 → 100 · Référencement 82 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil sur téléphone : site actuel, puis maquette.
 - **Téléphone affichage pensé pour l’écran** : Le site actuel n’a pas de réglage pour téléphone : il s’y affiche en version bureau rétrécie.
 
 **Ne pas citer :**
-- Score « Performance » Lighthouse : écart trop faible et trop variable d'un passage à l'autre pour servir d'argument
 - Premier affichage (FCP) : souvent plus rapide sur un vieux site sans polices ni CSS : se retourne contre nous
 - LCP du site actuel : trop instable en labo (4 à 14 s selon le passage) pour un chiffre-choc
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
