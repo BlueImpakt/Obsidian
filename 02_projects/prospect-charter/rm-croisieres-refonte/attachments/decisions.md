@@ -62,3 +62,4 @@ Melvin a délégué la validation de la planche (« pour celui-ci, passe tout se
 - **« 10 personnes au plus sur ce bateau » retiré** (consigne de Melvin) : la liste des personnes s'arrête déjà à la capacité du bateau. *Coût* : aucun.
 - **Rachat de franchise avec skipper : minimum 160 €** au lieu de 260 € (voir plus haut).
 
+- **Boutons « Réserver » (FR) et « Request » (EN)** au lieu de « Demander une semaine » / « Request a week » (consigne de Melvin), en-tête, barre, accueil et titre du tunnel. *Coût* : « Réserver » promet un peu plus que la demande (RM confirme ensuite) ; l'intro du tunnel le dit.
