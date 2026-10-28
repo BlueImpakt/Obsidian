@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, jicky-marine]
-created: 2026-10-28
+created: 2026-10-29
 projet: jicky-marine-refonte
 parent: jicky-marine-refonte
 genere_par: maquette-outils/envoi
@@ -102,9 +102,9 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel ; 2 taps : vue bureau de la maquette (office.html, « Relire le message » puis « Envoyer avec le lien de paiement »)
 
-- **3 étapes pour demander une sortie, depuis le téléphone** : Aujourd’hui : un email au bureau, qui répond par un récapitulatif et un lien de paiement.
+- **3 étapes pour réserver depuis le téléphone, prix affiché d’emblée · 2 taps côté bureau : relire, puis envoyer le lien de paiement Réservation rapide, gestion simple** : Aujourd’hui : un email au bureau, qui répond par un récapitulatif et un lien de paiement.
 - **Performance 75 → 96* · Accessibilité 60 → 100 · Référencement 82 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette. * Performance : objectif une fois le site optimisé et en ligne.
 - **Téléphone affichage pensé pour l’écran** : Le site actuel n’a pas de réglage pour téléphone : il s’y affiche en version bureau rétrécie.
 
