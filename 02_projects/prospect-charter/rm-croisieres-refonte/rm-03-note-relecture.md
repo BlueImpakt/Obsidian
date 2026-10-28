@@ -59,7 +59,7 @@ Toutes les décisions : `docs/decisions.md`.
 Textes, code, animations, accessibilité, personas, impeccable, règles Vercel, Finish-Gate, deux comparaisons à l'aveugle, audit de couverture du site (`docs/revues/couverture-site.md`). Puis tes retours du 28/10 : sources retirées des pages, avis sous 50 masqués, accroches, durée, prix des fiches françaises, deux pages, en-tête, hero plein écran, cartes, WhatsApp, numéro du bureau en signature.
 
 ## Dossier d'envoi
-`sortie/envoi-final-2/` (hors git) et la note [[rm-02-dossier-envoi]] du vault : vidéo (verticale et paysage, sous-titres), couverture, avant/après, page privée, brouillons J0 à J+15. Rien n'est envoyé.
+`sortie/envoi-final-3/` (hors git) et la note [[rm-02-dossier-envoi]] du vault : vidéo de 72 s (verticale et paysage, sous-titres), couverture, avant/après, page privée, brouillons J0 à J+15. Rien n'est envoyé.
 
 ## Contrôle sur ton iPhone (5 minutes)
 Safari, en portrait puis en paysage :

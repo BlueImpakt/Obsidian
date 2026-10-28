@@ -25,7 +25,7 @@ Dossier d'envoi de la maquette RM Croisières : vidéo, avant/après, chiffres, 
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 59 s, version légère | [[rm-video-vertical-fr-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 72 s, version légère | [[rm-video-vertical-fr-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[rm-video-paysage-fr-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[rm-couverture-video-fr.jpg]] |
 | Avant/après téléphone, premier écran | [[rm-accueil-telephone-ecran.jpg]] |
@@ -117,26 +117,26 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-59 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+72 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
 | 0,0 | Voici rmcroisieres.com, ouvert sur un téléphone. |
-| 2,6 | Les prix existent, mais seulement au fond de chaque fiche, sans total. |
-| 6,6 | Sur la maquette : la mer, le bateau, et la route de la semaine dès le premier écran. |
-| 9,3 | Puis quatre bateaux à visiter en 3D, comme au ponton. |
-| 12,3 | Et la flotte, avec le prix de départ de chaque bateau. |
-| 17,2 | Chaque bateau a sa fiche : photos, caractéristiques, tarifs. |
-| 22,3 | Le client choisit sa semaine : le prix s’affiche, frais compris. |
-| 25,6 | Puis l’équipage : seul, avec skipper, ou skipper et hôtesse. |
-| 28,7 | Le total et l’échéancier de vos conditions de location suivent chaque choix. |
-| 31,5 | Enfin ses coordonnées. Rien à payer à ce stade. |
-| 35,7 | La demande arrive à votre bureau, complète et chiffrée. |
-| 40,4 | Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée. |
-| 42,6 | Un geste : la confirmation et le lien d’acompte partent à votre nom. |
-| 46,2 | Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture. |
-| 52,1 | Un prototype privé, avec vos photos, vos tarifs et vos conditions. |
-| 55,3 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
+| 3,2 | Les prix existent, mais seulement au fond de chaque fiche, sans total. |
+| 7,7 | Sur la maquette : la mer, le bateau, et la route de la semaine dès le premier écran. |
+| 13,1 | Puis quatre bateaux à visiter en 3D, comme au ponton. |
+| 16,6 | Et la flotte, avec le prix de départ de chaque bateau. |
+| 21,5 | Chaque bateau a sa fiche : photos, caractéristiques, tarifs. |
+| 26,6 | Le client choisit sa semaine : le prix s’affiche, frais compris. |
+| 30,8 | Puis l’équipage : seul, avec skipper, ou skipper et hôtesse. |
+| 34,7 | Le total et l’échéancier de vos conditions de location suivent chaque choix. |
+| 39,6 | Enfin ses coordonnées. Rien à payer à ce stade. |
+| 43,8 | La demande arrive à votre bureau, complète et chiffrée. |
+| 48,5 | Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée. |
+| 54,4 | Un geste : la confirmation et le lien d’acompte partent à votre nom. |
+| 58,9 | Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture. |
+| 64,8 | Un prototype privé, avec vos photos, vos tarifs et vos conditions. |
+| 68,5 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
 
 ## Liens
 - Projet parent : [[rm-croisieres-refonte]]
