@@ -21,7 +21,7 @@ body_synced: 2026-10-27
 
 ## État actuel
 - 2026-10-25 : étude paiement / réservation faite ; fiche prospect corrigée dans les CSV (commentaire, défaut, accroche). Aucun contact pour l'instant.
-- 2026-10-27 : maquette cliquable design C en local (branche `maquette`, 33 tests verts), non déployée : photos principales refaites, perf mobile corrigée (accueil iPhone 1,94 Mo), tarifs regroupés ; flotte à l'échelle en cours d'essai. Restent `PITCH_CONTACT`, le déploiement privé et le message d'accroche. Toujours aucun contact avec Jicky.
+- 2026-10-27 : maquette cliquable design C en local (branche `maquette`, 33 tests verts), non déployée : photos principales refaites, perf mobile corrigée (accueil iPhone 1,94 Mo), tarifs regroupés, couleurs des photos converties en sRGB ; flotte à l'échelle intégrée à l'accueil mais en reprise (angles, échelles, mâts). Dossier d'envoi prêt en brouillon ([[jicky-02-dossier-envoi]]) ; porte qualité FAIL (météo absente du tunnel, mode concierge, focus). Restent `PITCH_CONTACT`, le déploiement privé et la relecture des messages. Toujours aucun contact avec Jicky.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -30,12 +30,15 @@ body_synced: 2026-10-27
 - Argument : « on enlève la paperasse, pas le contact » ; repli possible sur la refonte seule ou la mise en conformité du paiement.
 - **Photos retouchées par IA (Nano Banana)** limitées aux photos principales et au hero, vérifiées une par une et à faire valider par Jicky ; galerie laissée en photos d'origine. « Principale » = vignette de la flotte + 1re photo de la fiche.
 - **Flotte à l'échelle** : 18 bateaux en trois-quarts avant, tous dans le même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année) ; rendu « plâtre blanc ».
+- **Couleurs des photos** : conversion des profils (Display P3, Adobe RGB…) en sRGB avant export dans `process_photos.py` ; pas d'harmonisation des photos pour Jicky (décision Melvin 27/10).
+- **Flotte à l'échelle** : photos internet au bon angle préférées aux photos Jicky mal orientées ; mât entier toujours visible, même si ça laisse du vide au-dessus des bateaux à moteur.
 
 ## Blocages / risques
 - Plafond par transaction du contrat Up2pay inconnu (pas dans les CGV, à demander).
 - Organisation interne inconnue (planning des 18 bateaux, bateaux confiés par des propriétaires, ventes via agences et concierges) : risque de doubles réservations si on vend un calendrier instantané trop tôt.
 - Module Up2pay WooCommerce avec des avis récents mitigés : à tester avant de s'engager.
 - Délai de réponse « sous 2 h » et WhatsApp affichés dans la maquette sont des propositions (badge Exemple) : Jicky n'affiche ni délai ni numéro WhatsApp.
+- Porte qualité FAIL sur Jicky : la météo (art. 9 des CGV) n'apparaît pas avant l'envoi de la demande ; `docs/decisions.md` affirmait à tort l'absence d'articles météo et mineurs.
 
 ## Next actions
 - [ ] Remplir `PITCH_CONTACT` (email + téléphone de Melvin) dans `maquette/common.js` : seul bloquant restant de la revue Finish-Gate
@@ -51,13 +54,13 @@ body_synced: 2026-10-27
 - [x] Ajouté à la maquette (366f883) : annulation des CGV dans le récap, délai « sous 2 h, 8 h-18 h » marqué Exemple, WhatsApp prérempli par bateau marqué Exemple ; délai réel et numéro WhatsApp à demander à Jicky
 - [ ] Faire valider par Jicky les photos retravaillées par IA (Fairline 65, Axopar 37, Sanya 57, San Lorenzo 90, Lagoon 55, Nautitech 47), notamment l'inscription inventée sur le flybridge du Fairline
 - [ ] Demander à Jicky : Fairline 63 ou 65 ? et pourquoi les demi-journées du San Lorenzo 90 sont « Saint-Barth » alors qu'il ne peut pas entrer dans la Réserve marine
-- [ ] Flotte à l'échelle : récupérer les résultats des 3 agents (caractéristiques sourcées des 18 bateaux, photos trois-quarts avant catamarans voiles affalées et yachts), montrer la planche d'une photo par bateau orientée dans le même sens, puis passer au rendu « plâtre blanc »
+- [x] Flotte à l'échelle : résultats des 3 agents récupérés (specs sourcées, photos 3/4 avant), planche montrée, rendu plâtre fait et intégré à l'accueil (2026-10-27)
 - [ ] Flotte à l'échelle : lever les doutes de modèle — « Lagoon 420 2026 » probablement Lagoon 42, photos « Sunseeker 60 » nommées `predator-56`, modèle exact du San Lorenzo 90 et du Sunseeker 52
+- [ ] Flotte à l'échelle (reprise) : mêmes angles pour les 18 bateaux, objets parasites derrière Sanya 57 et Bali 54 retirés, échelles rigoureuses (Sanya 57 vs Lagoon 55), mâts entiers et bien dessinés ; boucles de vérification jusqu'à un résultat propre
+- [ ] Tunnel : mentionner la météo (art. 9 des CGV) avant l'envoi de la demande, et revoir `docs/decisions.md` qui dit les CGV sans articles météo ni mineurs (art. 9 et 13 existent)
+- [ ] Porte qualité Jicky : corriger les autres échecs (mode concierge à 12 gestes avec nombre de personnes trop tard, focus invisible sur champs en erreur, fiche Fairline lente sur mobile 7,3 s, lien du bandeau prototype trop petit, Pardo 43 étiré 2,4×)
 
 ## Journal
-- 2026-10-25 : Maquette cliquable livrée (6 écrans, EN/FR, branche `maquette`) après quatre revues ; restent PITCH_CONTACT et le déploiement privé.
-- 2026-10-25 : Étude paiement livrée : paiement carte déjà en place (Up2pay + Booking Form), Stripe impossible à Saint-Barth ; offre recentrée sur une réservation sur demande par paliers, phase 1 sans calendrier.
-- 2026-10-25 : Photos de cartes choisies par Melvin figées dans le pipeline, fiches gardent leur photo d'origine (e9205ac, 5100067) ; grandes photos en webp qualité 95, surcoût hero ~1,2 Mo accepté (3f6ee70).
 - 2026-10-27 : Galerie corrigée : photos entières sans défilement à toutes largeurs, grands formats harmonisés, agrandissement plafonné à 1,5× (279b442, 31 tests).
 - 2026-10-27 : Benchmark des tunnels concurrents St-Barth : seul St Barth Yachting a un tunnel complet (dispo réelles, Stripe donc société hors île) ; MasterSki et les grosses flottes restent sur « écrivez-nous » ; St Barth Excursions encaisse via Systempay (contrat bancaire, comme Up2pay) ; les places de marché passent toutes par demande/devis. Confirme le parcours sur demande de la maquette.
 - 2026-10-27 : Synthèse écrite (22 sites) : la maquette est dans la norme (demande puis lien), lui manquent l'annulation près du bouton, un délai de réponse chiffré et WhatsApp prérempli ; à noter, le barème d'annulation de St Barth Yachting est identique aux CGV Jicky (à vérifier).
@@ -71,6 +74,8 @@ body_synced: 2026-10-27
 - 2026-10-27 : Photos des cartes de l'accueil mises en attente derrière le hero (ff3a790, 33 tests) : affichage principal iPhone 4G lente ~6,9 → ~6,1 s en médiane ; Lighthouse simulé ne voit pas le gain.
 - 2026-10-27 : Flotte à l'échelle révisée : 18 bateaux en trois-quarts avant, même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année). Doute : « Lagoon 420 2026 » probablement un Lagoon 42.
 - 2026-10-27 : Flotte à l'échelle intégrée à l'accueil avant les vignettes (dbe42dd puis corrections 20c3b54 et suivant) : 18 silhouettes plâtre 3/4 avant (photos Jicky + même modèle sur internet), mâts à la hauteur officielle (specs chantiers), section épinglée avec défilement horizontal au scroll. Revues animation et accessibilité faites et corrigées. Pipeline : research/depth/detourer-lot.mjs (BiRefNet), research/echelle.py, research/platre.py. À vérifier avec Jicky : Lagoon 420 = Lagoon 42, Sunseeker 60 = Predator 1re gén., modèle exact du Sunseeker 52.
+- 2026-10-27 : Flotte à l'échelle jugée insuffisante par Melvin (angles incohérents, objets parasites, Sanya 57 plus petit que Lagoon 55, mâts coupés) : reprise lancée avec photos internet au bon angle, gréement redessiné et échelle des voiliers calée sur la tête de mât.
+- 2026-10-27 : Profils couleur des photos convertis en sRGB (9c8a98b, 36 fichiers, couleurs fidèles au site d'origine) ; message de la veille corrigé à 390 px (c994c7d) ; dossier d'envoi créé ([[jicky-02-dossier-envoi]] : vidéos 75 s, avant/après, page privée, brouillons J0-J+15, rien envoyé) ; porte qualité FAIL : météo absente du tunnel avant l'envoi alors que les CGV ont un article météo.
 
 ## Liens
 - Projet parent : [[prospect-charter]]
