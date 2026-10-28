@@ -22,12 +22,14 @@ body_synced: 2026-10-28
 ## État actuel
 - 2026-10-28 : maquette finie, porte qualité n° 12 au vert sur les 9 contrôles (téléphone en vrai bridage : accueil 2,6 s, flotte 3,9 s, fiche 3,6 s) ; retours de Melvin appliqués (routes au nom complet, plus de source rmcroisieres.com dans les pages, avis sous 50 masqués, accroches) ; dossier d'envoi régénéré (13,6× plus légère), rien envoyé. Durée : « 1 semaine » ou « du … au … » (5 nuits au moins, prorata, à confirmer) ; rachat de franchise avec skipper à 160 € minimum. Lire [[rm-03-note-relecture]].
 - 2026-10-28 (suite) : audit de couverture du site (`docs/revues/couverture-site.md`) puis ajouts : prix FR vérifiés, équipement, jeux aquatiques, pages Croisières et Qui sommes-nous, WhatsApp prérempli ; porte complète finale sur 8 pages et dossier d'envoi à refaire une fois les modifications terminées.
+- 2026-10-28 (midi) : hero en photo HD fournie par Melvin, plein écran, titre « Choisissez votre cap et votre bateau » ; accueil : hero → visites 3D → Lagoon 43 → flotte (Liberta, Manureva, Yurelle, Sea Naaps, Bieckert, Madelon) ; dernière porte PASS sur a77f3cd, passe « première lecture » non encore commitée ; dossier d'envoi et vidéo à refaire quand Melvin aura fini ses retours.
 
 ## Décisions techniques
 - Demande + calendrier, pas de paiement en ligne en phase 1 ; phase 2 : widget ou API Booking Manager.
 - Grilles des fiches lues 2026 / 2027 (confirmé par 12knots) ; prorata des nuits ; frais de 680 € et samedis repris de 12knots, marqués « à confirmer ».
 - Photos du site uniquement, jamais agrandies ; aucune retouche IA (petites photos signalées : Dlokoko 259 px, An tu plezi 465 px, Take It Easy 600 px, Pantagonia / Affligem / Rev'anou 697 px avec filigrane d'un autre site).
 - Bouton principal « Réserver » (FR) / « Request » (EN), RM confirme ensuite ; demande WhatsApp préremplie marquée « exemple » (risque : hors planning si RM ne gère pas WhatsApp) ; prix FR retenus sauf écarts justifiés, affichés « à confirmer ».
+- Hero : photo HD fournie par Melvin avec dézoom de ×1,5 à ×1,8 sur 10 s (légère perte de netteté au début du mouvement acceptée, jamais agrandie au repos) ; numéro « Appelez le bureau » en bas à droite de la photo, sans fond.
 
 ## Blocages / risques
 - Barèmes contradictoires site / agences : l'échéancier affiché suit le site.
@@ -47,6 +49,7 @@ body_synced: 2026-10-28
 - 2026-10-28 : revues (textes, code, accessibilité, personas, impeccable, Vercel, Finish-Gate, deux aveugles), passes de corrections, porte qualité n° 6, dossier d'envoi généré (vidéo 57 s, J0 à J+15) ; skill maquette-prospect mis à jour.
 - 2026-10-28 : relevé du site, étude de réservation (Booking Manager, 12knots, barèmes), tunnels concurrents de Martinique, références premium (Y.CO, Moorings, Belmond) ; maquette construite, revues (textes, code, accessibilité, personas) et passe de corrections.
 - 2026-10-28 : prix corrigés d'après les fiches FR (écarts vérifiés un par un), bloc « À bord » sur 5 fiches, bouton « Réserver » (110ec3b), demande WhatsApp préremplie (exemple), pages Croisières et Qui sommes-nous ajoutées, hero réduit aux Grenadines depuis Saint-Vincent, légende du récif corrigée (a874a95), prix des options regroupés dans « Prix et conditions ».
+- 2026-10-28 : hero refait sur la photo HD de Melvin (dézoom ×1,5-1,8, titre « Choisissez votre cap et votre bateau », boutons croisières / flotte, numéro du bureau en bas à droite), sections Lagoon 43 et visites 3D ajoutées, flotte de l'accueil revue (Yurelle, Sea Naaps) ; porte PASS 9/9 (a77f3cd, accueil 2,3 s mobile), puis passe « première lecture » (hero plein écran, visites 3D en 2e) en attente du verdict de la porte.
 
 ## Liens
 - Projet parent : [[prospect-charter]]

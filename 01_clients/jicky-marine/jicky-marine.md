@@ -53,6 +53,7 @@ body_synced: 2026-10-28
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — flotte à l'échelle intégrée à l'accueil puis remise en chantier (angles, échelles, mâts) ; couleurs des photos converties en sRGB ; dossier d'envoi prêt en brouillon (vidéo, avant/après, messages) ; porte qualité FAIL (météo absente du tunnel).
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — 7 bateaux trop de profil refaits par Nano Banana à 30°, catamarans à voile simplifiés (mât, étai, bôme) ; fiche chiffres avec carte performance / accessibilité / référencement (60 → 100 en accessibilité).
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — flotte : 6/7 images Nano Banana intégrées, mâts et génois corrigés ; fiche chiffres « 3 étapes » et Performance 96 (objectif).
+- 2026-10-28 : Sur [[jicky-marine-refonte]] — accueil animé, sections réordonnées, nouvelle accroche du hero ; mât du Sanya 57 calé sur la photo (28,4 m).
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])

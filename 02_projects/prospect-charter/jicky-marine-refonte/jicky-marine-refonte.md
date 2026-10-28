@@ -23,6 +23,7 @@ body_synced: 2026-10-28
 - 2026-10-25 : étude paiement / réservation faite ; fiche prospect corrigée dans les CSV (commentaire, défaut, accroche). Aucun contact pour l'instant.
 - 2026-10-27 : maquette cliquable design C en local (branche `maquette`, 33 tests verts), non déployée : photos principales refaites, perf mobile corrigée (accueil iPhone 1,94 Mo), tarifs regroupés, couleurs des photos converties en sRGB ; flotte à l'échelle intégrée à l'accueil mais en reprise (angles, échelles, mâts). Dossier d'envoi prêt en brouillon ([[jicky-02-dossier-envoi]]) ; porte qualité FAIL (météo absente du tunnel, mode concierge, focus). Restent `PITCH_CONTACT`, le déploiement privé et la relecture des messages. Toujours aucun contact avec Jicky.
 - 2026-10-28 : flotte à l'échelle refaite (acf918c) puis 6 des 7 bateaux trop de profil remplacés par des images Nano Banana à 30° (Fjord 53 à relancer) ; Sanya 57 depuis la photo de Melvin, hauteur de mât à trancher avec Jicky. Fiche chiffres régénérée : « 3 étapes pour demander une sortie » à la place de « 3,5× plus légère », carte des notes avec Performance 75 → 96 (objectif, 82 mesuré).
+- 2026-10-28 (midi) : accueil animé (hero, titres, étapes, tarifs), ordre Hero → Flotte à l'échelle → La flotte → Comment ça marche → À bord → Sorties et tarifs → Bureau, menu aligné ; accroche « Choisissez votre bateau, on s'occupe du reste » au-dessus du bouton (à vérifier sur iPhone : bouton en partie sous la barre fixe). Titre de la section flotte « Dix-huit bateaux… » encore en discussion.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -35,6 +36,7 @@ body_synced: 2026-10-28
 - **Flotte à l'échelle** : photos internet au bon angle préférées aux photos Jicky mal orientées ; mât entier toujours visible, même si ça laisse du vide au-dessus des bateaux à moteur.
 - **Flotte à l'échelle (28/10)** : catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme (haubans, drisses, balancine, barres de flèche retirés) ; bateaux trop de profil refaits par Nano Banana à 30°, caméra basse, téléobjectif.
 - **Fiche chiffres (28/10)** : chiffre clé « 3 étapes pour demander une sortie, depuis le téléphone » (CGV art. 3.2) ; Performance de la maquette affichée à 96 comme objectif après optimisation et mise en ligne (82 mesuré, en note interne), mention au pied de la fiche.
+- **Animations (28/10)** : textes du hero au chargement, titres et étapes au défilement (montée « rideau »), rien si mouvement réduit, désactivées pour la porte qualité et la vidéo (forçables via `?anim`). Mât du Sanya 57 calé sur sa photo (28,4 m), décision Melvin.
 
 ## Blocages / risques
 - Plafond par transaction du contrat Up2pay inconnu (pas dans les CGV, à demander).
@@ -66,7 +68,6 @@ body_synced: 2026-10-28
 - [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; redescente à 23 m demandée par Melvin le 2026-10-28, interrompue
 
 ## Journal
-- 2026-10-27 : Tunnel C complété (366f883, 31 tests) : barème d'annulation des CGV dans le récap avec lien, délai de réponse chiffré (Exemple), WhatsApp prérempli sur la fiche (Exemple). Synthèse benchmark commitée dans prospection-charter (1cbc122).
 - 2026-10-27 : Essai de relief 2.5D sur la photo proue du Pardo 43 (`maquette/relief.html`, 1313362) : carte de profondeur Depth Anything V2 calculée sur le processeur, shader WebGL, souris ou mouvement automatique, repli photo fixe. Gratuit, rien d'inventé. À valider par Melvin avant intégration au hero C. Pistes 3D gardées : flotte à l'échelle, demi-tour du Sanya 57 via Google Flow (2 photos réelles en début et fin).
 - 2026-10-27 : Photos principales refaites via Nano Banana (Fairline 65, Axopar 37, Sanya 57, Lagoon 55, Nautitech 47, San Lorenzo 90 en route) et VanDutch 55 sur une photo existante 1240 px (c379ddb) ; 3e diapo hero Pardo 43 (3e6b647) ; Leopard 53 à 53 ft ; tarifs identiques regroupés sur une ligne (a6a97fc). IA limitée aux photos principales/hero, à faire valider par Jicky.
 - 2026-10-27 : Barème d'annulation du récap reformulé au plus près des CGV (5cf5d2e) ; délai « sous 2 h » et WhatsApp prérempli gardés comme propositions « Exemple ».
@@ -81,6 +82,7 @@ body_synced: 2026-10-28
 - 2026-10-27 : Profils couleur des photos convertis en sRGB (9c8a98b, 36 fichiers, couleurs fidèles au site d'origine) ; message de la veille corrigé à 390 px (c994c7d) ; dossier d'envoi créé ([[jicky-02-dossier-envoi]] : vidéos 75 s, avant/après, page privée, brouillons J0-J+15, rien envoyé) ; porte qualité FAIL : météo absente du tunnel avant l'envoi alors que les CGV ont un article météo.
 - 2026-10-28 : Angles relus : 7 bateaux encore trop de profil, refaits via Nano Banana à 30° (dossier research/nano-banana-30deg, intégration en cours) ; catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme. Fiche chiffres : performance, accessibilité, référencement dans une carte (75 → 82, 60 → 100, 82 → 100 ; maquette-outils a83025d).
 - 2026-10-28 : 6/7 bateaux refaits via Nano Banana intégrés à 30° (d36f0d1), Sanya 57 depuis la photo de Melvin (c27279c), mâts revus (Lagoon 42 20,65 m, Nautitech 47 21,4 m), génois en tête de mât (4b2fc78), titre « Eighteen boats, one exclusive experience » (89862f7). Fiche chiffres : « 3 étapes pour demander une sortie » remplace « 3,5× plus légère », Performance 75 → 96 affichée comme objectif. Reste Fjord 53 ; mât du Sanya (photo ≈ 28 m / 23 m publiés) à trancher.
+- 2026-10-28 : Textes de l'accueil animés (7fa3982, mouvement réduit respecté, coupé pour porte et vidéo), Axopar 37 restauré après un webp vide (dfb6442), « Sorties et tarifs » sous « À bord » et menu réordonné (4dad9bc, 99436f5), accroche « Choisissez votre bateau, on s'occupe du reste » + bouton à 30 % de transparence (9686871). Mât du Sanya 57 : suit la photo (28,4 m), décision Melvin.
 
 ## Liens
 - Projet parent : [[prospect-charter]]
