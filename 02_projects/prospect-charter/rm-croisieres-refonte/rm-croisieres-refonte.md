@@ -19,7 +19,7 @@ parent: prospect-charter
 - [[rm-02-dossier-envoi]] — dossier d'envoi : vidéo, avant/après, chiffres, page privée, messages J0 à J+15 (brouillons)
 
 ## État actuel
-- 2026-10-28 : maquette finie, prête pour la validation 2 de Melvin : porte qualité au vert sauf l'affichage mobile en vrai bridage (4,4 à 7 s, serveur local) ; 2e à l'aveugle derrière Belmond, 1re sur le tunnel ; dossier d'envoi prêt, rien envoyé. Lire [[rm-03-note-relecture]].
+- 2026-10-28 : maquette finie, porte qualité n° 12 au vert sur les 9 contrôles (téléphone en vrai bridage : accueil 2,6 s, flotte 3,9 s, fiche 3,6 s) ; retours de Melvin appliqués (routes au nom complet, plus de source rmcroisieres.com dans les pages, avis sous 50 masqués, accroches) ; dossier d'envoi régénéré (13,6× plus légère), rien envoyé. Question ouverte : durée 1 ou 2 semaines du tunnel, non sourcée. Lire [[rm-03-note-relecture]].
 
 ## Décisions techniques
 - Demande + calendrier, pas de paiement en ligne en phase 1 ; phase 2 : widget ou API Booking Manager.
@@ -38,6 +38,7 @@ parent: prospect-charter
 - [ ] Choisir le canal du premier contact (téléphone, formulaire, contact@)
 
 ## Journal
+- 2026-10-28 : passe de vitesse mobile (dictionnaires par page, logo, photos 900 px, polices après la photo, préchargement flotte), Finish-Gate HOLD corrigé (carte An tu plezi, acompte avant coordonnées, copie à l'agence), retours de Melvin sur les textes et les sources, porte n° 12 PASS, dossier d'envoi régénéré.
 - 2026-10-28 : revues (textes, code, accessibilité, personas, impeccable, Vercel, Finish-Gate, deux aveugles), passes de corrections, porte qualité n° 6, dossier d'envoi généré (vidéo 57 s, J0 à J+15) ; skill maquette-prospect mis à jour.
 - 2026-10-28 : relevé du site, étude de réservation (Booking Manager, 12knots, barèmes), tunnels concurrents de Martinique, références premium (Y.CO, Moorings, Belmond) ; maquette construite, revues (textes, code, accessibilité, personas) et passe de corrections.
 

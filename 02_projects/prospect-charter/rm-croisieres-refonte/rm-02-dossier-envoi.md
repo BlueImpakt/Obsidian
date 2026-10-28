@@ -25,7 +25,7 @@ Dossier d'envoi de la maquette RM Croisières : vidéo, avant/après, chiffres, 
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 57 s, version légère | [[rm-video-vertical-fr-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 58 s, version légère | [[rm-video-vertical-fr-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[rm-video-paysage-fr-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[rm-couverture-video-fr.jpg]] |
 | Avant/après téléphone, premier écran | [[rm-accueil-telephone-ecran.jpg]] |
@@ -55,7 +55,7 @@ Objet : RM Croisières : votre site, vu depuis un téléphone
 ```
 Bonjour,
 
-Votre équipage publie déjà ses itinéraires nuit par nuit, du Marin aux Grenadines, et chacun de vos bateaux porte un nom.
+Vos itinéraires sont déjà écrits nuit par nuit, du Marin aux Grenadines, et votre flotte va du monocoque au Sunreef 50 avec équipage.
 Vos 22 bateaux sont déjà proposés semaine par semaine chez 12knots, mais votre propre site ne montre aucune disponibilité, et le bouton « Rentrons en contact » de l'accueil mène à une page cassée.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
 [IMAGE : rm-couverture-video-fr.jpg, cliquable vers PITCH_LIEN_PAGE]
@@ -103,20 +103,19 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.3 / 5, 20 avis Google, relevé : 23/10/2026 (agent prospect-charter, resultats/prospects-charter-v2.csv).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : rm-croisieres-refonte/sortie/porte-6/resultat.json et sortie/lighthouse-avant/
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : rm-croisieres-refonte/sortie/porte-12/resultat.json et sortie/lighthouse-avant/
 
-- **8,8× plus légère sur téléphone** : Page d’accueil : 7,89 Mo aujourd’hui, 902 Ko pour la maquette.
+- **13,6× plus légère sur téléphone** : Page d’accueil : 7,89 Mo aujourd’hui, 579 Ko pour la maquette.
+- **Performance 35 → 94 · Accessibilité 92 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil sur téléphone : site actuel, puis maquette.
 
 **Ne pas citer :**
-- Accessibilité : écart insuffisant ou maquette sous 90 (92 → 100)
 - Affichage mobile : le site actuel est déjà adapté au téléphone
-- Score « Performance » Lighthouse : écart trop faible et trop variable d'un passage à l'autre pour servir d'argument
 - Premier affichage (FCP) : souvent plus rapide sur un vieux site sans polices ni CSS : se retourne contre nous
 - LCP du site actuel : trop instable en labo (4 à 14 s selon le passage) pour un chiffre-choc
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-57 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+58 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
@@ -125,17 +124,17 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil
 | 6,6 | Sur la maquette : vos itinéraires, nuit par nuit, dès le premier écran. |
 | 9,3 | Un geste pour voir les Grenadines depuis Blue Lagoon. |
 | 11,8 | Puis vos bateaux, chacun par son nom, avec son prix de départ. |
-| 16,3 | Chaque bateau a sa fiche : photos, caractéristiques, tarifs. |
-| 22,4 | Le client choisit sa semaine : le prix s’affiche, frais compris. |
-| 25,7 | Puis l’équipage : seul, avec skipper, ou skipper et hôtesse. |
-| 28,8 | Le total et l’échéancier de vos conditions de location suivent chaque choix. |
-| 30,3 | Enfin ses coordonnées. Rien à payer à ce stade. |
-| 34,5 | La demande arrive à votre bureau, complète et chiffrée. |
-| 39,0 | Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée. |
-| 41,2 | Un geste : la confirmation et le lien d’acompte partent à votre nom. |
-| 44,8 | Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture. |
-| 50,7 | Un prototype privé, avec vos photos, vos tarifs et vos conditions. |
-| 53,9 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
+| 16,2 | Chaque bateau a sa fiche : photos, caractéristiques, tarifs. |
+| 22,3 | Le client choisit sa semaine : le prix s’affiche, frais compris. |
+| 25,6 | Puis l’équipage : seul, avec skipper, ou skipper et hôtesse. |
+| 28,7 | Le total et l’échéancier de vos conditions de location suivent chaque choix. |
+| 31,5 | Enfin ses coordonnées. Rien à payer à ce stade. |
+| 35,3 | La demande arrive à votre bureau, complète et chiffrée. |
+| 39,9 | Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée. |
+| 42,1 | Un geste : la confirmation et le lien d’acompte partent à votre nom. |
+| 45,6 | Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture. |
+| 51,6 | Un prototype privé, avec vos photos, vos tarifs et vos conditions. |
+| 54,8 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
 
 ## Liens
 - Projet parent : [[rm-croisieres-refonte]]

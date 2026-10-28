@@ -15,49 +15,49 @@ Sur la maquette : vos itinéraires, nuit par nuit, dès le premier écran.
 Un geste pour voir les Grenadines depuis Blue Lagoon.
 
 5
-00:00:11,800 --> 00:00:16,300
+00:00:11,800 --> 00:00:16,233
 Puis vos bateaux, chacun par son nom, avec son prix de départ.
 
 6
-00:00:16,300 --> 00:00:22,400
+00:00:16,233 --> 00:00:22,300
 Chaque bateau a sa fiche : photos, caractéristiques, tarifs.
 
 7
-00:00:22,400 --> 00:00:25,733
+00:00:22,300 --> 00:00:25,633
 Le client choisit sa semaine : le prix s’affiche, frais compris.
 
 8
-00:00:25,733 --> 00:00:28,800
+00:00:25,633 --> 00:00:28,700
 Puis l’équipage : seul, avec skipper, ou skipper et hôtesse.
 
 9
-00:00:28,800 --> 00:00:30,333
+00:00:28,700 --> 00:00:31,533
 Le total et l’échéancier de vos conditions de location suivent chaque choix.
 
 10
-00:00:30,333 --> 00:00:34,500
+00:00:31,533 --> 00:00:35,300
 Enfin ses coordonnées. Rien à payer à ce stade.
 
 11
-00:00:34,500 --> 00:00:39,000
+00:00:35,300 --> 00:00:39,867
 La demande arrive à votre bureau, complète et chiffrée.
 
 12
-00:00:39,000 --> 00:00:41,233
+00:00:39,867 --> 00:00:42,100
 Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée.
 
 13
-00:00:41,233 --> 00:00:44,767
+00:00:42,100 --> 00:00:45,633
 Un geste : la confirmation et le lien d’acompte partent à votre nom.
 
 14
-00:00:44,767 --> 00:00:50,700
+00:00:45,633 --> 00:00:51,567
 Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture.
 
 15
-00:00:50,700 --> 00:00:53,933
+00:00:51,567 --> 00:00:54,800
 Un prototype privé, avec vos photos, vos tarifs et vos conditions.
 
 16
-00:00:53,933 --> 00:00:57,200
+00:00:54,800 --> 00:00:58,067
 Prochain pas : 15 minutes ensemble, si cela vous parle.

@@ -11,6 +11,7 @@
 | Trois demandes (Famille Exemple, Agence Exemple, Groupe Test), adresses example.com | vue bureau | Fictives |
 | Messages automatiques et leur calendrier, choix « automatique / je relis » | vue bureau | Le système proposé, pas l'existant |
 | Email de confirmation et lien « Payer l'acompte » | vue bureau | Le lien dépend de la banque de RM (inconnue) |
+| Copie de chaque message à l'agence | tunnel (mode agence), vue bureau, page concept | Le système proposé ; on ignore comment RM traite aujourd'hui les agences |
 
 ## 2. Vrai, mais tiré d'une autre source que rmcroisieres.com (à reconfirmer)
 
@@ -34,7 +35,7 @@
 
 ## 4. Ton commercial écrit par nous
 
-« Choisissez la route, puis le bateau. », « Deux ports d'attache », « Vingt-deux bateaux, chacun son nom », « Ce que coûte une semaine », textes de la page concept. Les itinéraires sont ceux de RM, noms de lieux corrigés en anglais (« Mosquito » → Mustique).
+« Choisissez la route, puis le bateau. », « Le tour de la Martinique, ou les Grenadines d’emblée », « Vingt-deux bateaux, une expérience hors du temps » (proposé par Melvin), « Ce que coûte vraiment une semaine », « Arriver plus tôt, repartir plus tard », « Ils ont navigué avec RM », « Un bateau à vous, loué par RM », textes de la page concept. Les itinéraires sont ceux de RM, noms de lieux corrigés en anglais (« Mosquito » → Mustique).
 
 ## 5. Engagements de Melvin
 
