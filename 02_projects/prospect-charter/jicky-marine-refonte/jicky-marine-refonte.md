@@ -65,7 +65,7 @@ body_synced: 2026-10-28
 - [ ] Tunnel : mentionner la météo (art. 9 des CGV) avant l'envoi de la demande, et revoir `docs/decisions.md` qui dit les CGV sans articles météo ni mineurs (art. 9 et 13 existent)
 - [ ] Porte qualité Jicky : corriger les autres échecs (mode concierge à 12 gestes avec nombre de personnes trop tard, focus invisible sur champs en erreur, fiche Fairline lente sur mobile 7,3 s, lien du bandeau prototype trop petit, Pardo 43 étiré 2,4×)
 - [ ] Flotte à l'échelle : relancer le Fjord 53 dans Nano Banana (`research/nano-banana-30deg/PROMPTS.md`, section « Relance ») puis l'intégrer
-- [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; redescente à 23 m demandée par Melvin le 2026-10-28, interrompue
+- [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; maquette calée sur la photo (28,4 m), décision Melvin du 2026-10-28
 
 ## Journal
 - 2026-10-27 : Essai de relief 2.5D sur la photo proue du Pardo 43 (`maquette/relief.html`, 1313362) : carte de profondeur Depth Anything V2 calculée sur le processeur, shader WebGL, souris ou mouvement automatique, repli photo fixe. Gratuit, rien d'inventé. À valider par Melvin avant intégration au hero C. Pistes 3D gardées : flotte à l'échelle, demi-tour du Sanya 57 via Google Flow (2 photos réelles en début et fin).
