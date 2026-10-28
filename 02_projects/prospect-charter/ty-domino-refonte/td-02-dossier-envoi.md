@@ -21,12 +21,12 @@ Dossier d'envoi de la maquette Ty Domino : vidéo, avant/après, chiffres, page 
 - [ ] Le lien e-mail de la page contact actuelle pointe vers info@monsite.fr : écrire à tydomino@gmail.com (mentions légales et pied de page).
 - [ ] Vérifier à la main le widget Bookeo de la page Réservation actuelle avant le premier échange (docs/etudes/2026-10-28-ty-domino-reservation.md).
 - [ ] Remplir PITCH_CONTACT et le lien de la page privée dans les messages avant l’envoi.
-- [ ] Écart aux règles : J0 : mot interdit (prix ou technologie) : '\\bprix\\b'
+
 
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 61 s, version légère | [[td-video-vertical-fr-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 63 s, version légère | [[td-video-vertical-fr-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[td-video-paysage-fr-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[td-couverture-video-fr.jpg]] |
 | Avant/après téléphone, premier écran | [[td-accueil-telephone-ecran.jpg]] |
@@ -57,7 +57,7 @@ Objet : Ty Domino : votre site, vu depuis un téléphone
 Bonjour Bruno Desporte,
 
 Votre programme est déjà écrit étape par étape, de l’îlet Madame à l’îlet Chancel, et vos passagers parlent tous du calme, de la voile et du repas.
-4,9 sur 394 avis Google, mais sur votre page contact le lien email renvoie vers info@monsite.fr, l'adresse du modèle Wix, et aucun prix n'est affiché.
+4,9 sur 394 avis Google, mais votre page contact envoie les e-mails vers info@monsite.fr, l’adresse du modèle Wix, et pour réserver il faut remplir un formulaire puis attendre la réponse.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
 [IMAGE : td-couverture-video-fr.jpg, cliquable vers PITCH_LIEN_PAGE]
 Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
@@ -95,7 +95,7 @@ Objet : Ty Domino : je clos de mon côté
 Bonjour Bruno Desporte,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La maquette reste en ligne 30 jours à la même adresse, si vous voulez la montrer à votre équipe : PITCH_LIEN_PAGE
+La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : PITCH_LIEN_PAGE
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt
@@ -104,9 +104,9 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.9 / 5, 394 avis Google, relevé : 28/10/2026 (docs/etudes/2026-10-28-ty-domino-reservation.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : ty-domino-refonte/sortie/porte-6/resultat.json et sortie/lighthouse-avant/
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : ty-domino-refonte/sortie/porte-7/resultat.json et sortie/lighthouse-avant/
 
-- **Performance 61 → 92 · Accessibilité 83 → 100 · Référencement 92 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette.
+- **Performance 61 → 75 · Accessibilité 83 → 100 · Référencement 92 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette.
 
 **Ne pas citer :**
 - Étapes de la demande : 3 étapes (plus de 3) ou parcours actuel non décrit (« demande » du côté avant)
@@ -118,7 +118,7 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-61 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+63 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
@@ -130,12 +130,12 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil
 | 20,9 | Le client choisit sa date : il voit les places restantes et le total. |
 | 26,7 | Ses coordonnées, et c’est tout. |
 | 32,7 | Avant de payer : vos conditions d’annulation et de météo, mot pour mot. |
-| 36,6 | L’acompte de 50 % est payé : la sortie est réservée. |
-| 40,7 | De votre côté : les réservations arrivent payées, les places se mettent à jour. |
-| 44,7 | Un appel ou un message WhatsApp ? Vous l’ajoutez en trois champs. |
-| 50,5 | Et la météo reste votre décision : un geste prévient tous les passagers du jour. |
-| 54,2 | Vos photos, vos prix, vos conditions de vente. |
-| 57,7 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
+| 37,1 | L’acompte de 50 % est payé : la sortie est réservée. |
+| 41,2 | De votre côté : les réservations arrivent payées, les places se mettent à jour. |
+| 46,0 | Un appel ou un message WhatsApp ? Vous l’ajoutez en trois champs. |
+| 51,8 | Et la météo reste votre décision : un geste prévient tous les passagers du jour. |
+| 55,5 | Vos photos, vos prix, vos conditions de vente. |
+| 59,0 | Prochain pas : 15 minutes ensemble, si cela vous parle. |
 
 ## Liens
 - Projet parent : [[ty-domino-refonte]]

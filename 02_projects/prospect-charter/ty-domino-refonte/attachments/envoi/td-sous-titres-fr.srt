@@ -27,29 +27,29 @@ Le client choisit sa date : il voit les places restantes et le total.
 Ses coordonnées, et c’est tout.
 
 8
-00:00:32,733 --> 00:00:36,600
+00:00:32,733 --> 00:00:37,100
 Avant de payer : vos conditions d’annulation et de météo, mot pour mot.
 
 9
-00:00:36,600 --> 00:00:40,667
+00:00:37,100 --> 00:00:41,167
 L’acompte de 50 % est payé : la sortie est réservée.
 
 10
-00:00:40,667 --> 00:00:44,700
+00:00:41,167 --> 00:00:46,000
 De votre côté : les réservations arrivent payées, les places se mettent à jour.
 
 11
-00:00:44,700 --> 00:00:50,500
+00:00:46,000 --> 00:00:51,800
 Un appel ou un message WhatsApp ? Vous l’ajoutez en trois champs.
 
 12
-00:00:50,500 --> 00:00:54,233
+00:00:51,800 --> 00:00:55,533
 Et la météo reste votre décision : un geste prévient tous les passagers du jour.
 
 13
-00:00:54,233 --> 00:00:57,733
+00:00:55,533 --> 00:00:59,033
 Vos photos, vos prix, vos conditions de vente.
 
 14
-00:00:57,733 --> 00:01:01,233
+00:00:59,033 --> 00:01:02,533
 Prochain pas : 15 minutes ensemble, si cela vous parle.

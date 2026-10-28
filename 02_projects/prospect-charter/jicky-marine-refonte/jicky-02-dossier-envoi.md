@@ -13,7 +13,7 @@ Projet : [[jicky-marine-refonte]] · Client : [[jicky-marine]] · Parent : [[pro
 Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est envoyé ; seule la page privée est en ligne, en lien non référencé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
 
 ## À faire avant le premier envoi
-- [ ] Remplacer `PITCH_CONTACT` (email + téléphone de Melvin) dans les messages et la page privée
+- [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
 - [x] Page privée et maquette hébergées en lien privé, non référencé : https://jicky-marine-ltdnit.vercel.app/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
@@ -62,7 +62,7 @@ Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
 Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+3, WhatsApp 
@@ -84,7 +84,7 @@ Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement 
 Un « stop » suffit pour ne plus recevoir de message.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+15, email
