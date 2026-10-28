@@ -8,18 +8,18 @@ Les prix existent, mais seulement au fond de chaque fiche, sans total.
 
 3
 00:00:06,633 --> 00:00:09,267
-Sur la maquette : vos itinéraires, nuit par nuit, dès le premier écran.
+Sur la maquette : la mer, le bateau, et la route de la semaine dès le premier écran.
 
 4
-00:00:09,267 --> 00:00:11,800
-Un geste pour voir les Grenadines depuis Blue Lagoon.
+00:00:09,267 --> 00:00:12,300
+Puis quatre bateaux à visiter en 3D, comme au ponton.
 
 5
-00:00:11,800 --> 00:00:16,233
-Puis vos bateaux, chacun par son nom, avec son prix de départ.
+00:00:12,300 --> 00:00:17,233
+Et la flotte, avec le prix de départ de chaque bateau.
 
 6
-00:00:16,233 --> 00:00:22,300
+00:00:17,233 --> 00:00:22,300
 Chaque bateau a sa fiche : photos, caractéristiques, tarifs.
 
 7
@@ -27,37 +27,37 @@ Chaque bateau a sa fiche : photos, caractéristiques, tarifs.
 Le client choisit sa semaine : le prix s’affiche, frais compris.
 
 8
-00:00:25,633 --> 00:00:28,700
+00:00:25,633 --> 00:00:28,733
 Puis l’équipage : seul, avec skipper, ou skipper et hôtesse.
 
 9
-00:00:28,700 --> 00:00:31,533
+00:00:28,733 --> 00:00:31,533
 Le total et l’échéancier de vos conditions de location suivent chaque choix.
 
 10
-00:00:31,533 --> 00:00:35,300
+00:00:31,533 --> 00:00:35,667
 Enfin ses coordonnées. Rien à payer à ce stade.
 
 11
-00:00:35,300 --> 00:00:39,867
+00:00:35,667 --> 00:00:40,400
 La demande arrive à votre bureau, complète et chiffrée.
 
 12
-00:00:39,867 --> 00:00:42,100
+00:00:40,400 --> 00:00:42,633
 Côté bureau : la demande, le total, l’acompte, et une alerte si la semaine est déjà demandée.
 
 13
-00:00:42,100 --> 00:00:45,633
+00:00:42,633 --> 00:00:46,167
 Un geste : la confirmation et le lien d’acompte partent à votre nom.
 
 14
-00:00:45,633 --> 00:00:51,567
+00:00:46,167 --> 00:00:52,100
 Les rappels d’acompte et le message de la veille partent seuls, ou après votre relecture.
 
 15
-00:00:51,567 --> 00:00:54,800
+00:00:52,100 --> 00:00:55,333
 Un prototype privé, avec vos photos, vos tarifs et vos conditions.
 
 16
-00:00:54,800 --> 00:00:58,067
+00:00:55,333 --> 00:00:58,600
 Prochain pas : 15 minutes ensemble, si cela vous parle.
