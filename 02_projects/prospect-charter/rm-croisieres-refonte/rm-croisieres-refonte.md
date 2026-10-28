@@ -23,6 +23,7 @@ body_synced: 2026-10-28
 - 2026-10-28 (soir) : maquette refaite après les retours de Melvin : hero plein écran (catamaran sur banc de sable, zoom lent), pages Croisières et Qui sommes-nous, en-tête et prix regroupés, prix des fiches françaises, équipement de 5 bateaux, demande WhatsApp. Porte au vert (n° 26, puis contrôles ciblés) ; Lighthouse à remesurer machine libre. Dossier d'envoi régénéré. Lire [[rm-03-note-relecture]].
 - 2026-10-28 (suite) : audit de couverture du site (`docs/revues/couverture-site.md`) puis ajouts : prix FR vérifiés, équipement, jeux aquatiques, pages Croisières et Qui sommes-nous, WhatsApp prérempli ; porte complète finale sur 8 pages et dossier d'envoi à refaire une fois les modifications terminées.
 - 2026-10-28 (midi) : hero en photo HD fournie par Melvin, plein écran, titre « Choisissez votre cap et votre bateau » ; accueil : hero → visites 3D → Lagoon 43 → flotte (Liberta, Manureva, Yurelle, Sea Naaps, Bieckert, Madelon) ; dernière porte PASS sur a77f3cd, passe « première lecture » non encore commitée ; dossier d'envoi et vidéo à refaire quand Melvin aura fini ses retours.
+- 2026-10-28 (fin de journée) : accueil refait en hero photo plein écran (d1212b6, 8e25b55) ; vidéo 72,3 s et dossier d'envoi final dans `sortie/envoi-final-3/` (61a9b06), note de relecture à jour ; rien envoyé. Lighthouse à remesurer machine libre (`py -I C:/Users/LENOVO/Documents/GitHub/maquette-outils/porte-qualite/porte_qualite.py gate.json --sortie sortie/porte-37 --seulement lighthouse`).
 
 ## Décisions techniques
 - Demande + calendrier, pas de paiement en ligne en phase 1 ; phase 2 : widget ou API Booking Manager.
@@ -51,6 +52,7 @@ body_synced: 2026-10-28
 - 2026-10-28 : relevé du site, étude de réservation (Booking Manager, 12knots, barèmes), tunnels concurrents de Martinique, références premium (Y.CO, Moorings, Belmond) ; maquette construite, revues (textes, code, accessibilité, personas) et passe de corrections.
 - 2026-10-28 : prix corrigés d'après les fiches FR (écarts vérifiés un par un), bloc « À bord » sur 5 fiches, bouton « Réserver » (110ec3b), demande WhatsApp préremplie (exemple), pages Croisières et Qui sommes-nous ajoutées, hero réduit aux Grenadines depuis Saint-Vincent, légende du récif corrigée (a874a95), prix des options regroupés dans « Prix et conditions ».
 - 2026-10-28 : hero refait sur la photo HD de Melvin (dézoom ×1,5-1,8, titre « Choisissez votre cap et votre bateau », boutons croisières / flotte, numéro du bureau en bas à droite), sections Lagoon 43 et visites 3D ajoutées, flotte de l'accueil revue (Yurelle, Sea Naaps) ; porte PASS 9/9 (a77f3cd, accueil 2,3 s mobile), puis passe « première lecture » (hero plein écran, visites 3D en 2e) en attente du verdict de la porte.
+- 2026-10-28 : Accueil refait en hero photo plein écran (d1212b6, dézoom ×1,5 sur 14 s, 8e25b55) ; vidéo refaite à 72,3 s avec sous-titres lisibles, dossier d'envoi final dans `sortie/envoi-final-3/` (61a9b06), rien envoyé ; Lighthouse à remesurer machine libre.
 
 ## Liens
 - Projet parent : [[prospect-charter]]
