@@ -57,10 +57,15 @@ Bonjour,
 Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je refais des sites pour ceux qui vivent de la mer.
 4,6 sur 5 et 75 avis sur Tripadvisor : vos clients y citent vos équipages par leur prénom.
 Une flotte de 18 bateaux depuis 2004 à St Barth, mais votre site est illisible sur mobile et chaque réservation passe par un échange d'emails, là où les agences encaissent en ligne.
+
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
-[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers https://jicky-marine-ltdnit.vercel.app/p/]
-Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
-Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
+[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers https://jicky-marine-ltdnit.vercel.app/p/].
+La maquette est disponible dans le lien également. 
+
+Auriez-vous 15 minutes dans les jours à venir pour en discuter ?
+
+Les acteurs de la mer méritent eux aussi les meilleurs design. 
+
 
 Melvin Perrottet, Blue Impakt
 melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
