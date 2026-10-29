@@ -3,7 +3,7 @@ tags: [project, encours, esprit-docker]
 created: 2026-08-29
 statut: encours
 client: esprit-docker
-body_synced: 2026-10-05
+body_synced: 2026-10-28
 ---
 
 # esprit-docker-site
@@ -22,6 +22,7 @@ body_synced: 2026-10-05
 - Mail "colis expédié" (Brevo) en place depuis le 2026-09-02 : déclenché par le webhook Sendcloud, verrou anti-doublon `commandes.suivi_email_envoye_at` (migration faite sur Neon prod)
 - Graphify actif sur le repo (1108 nœuds / 1673 edges) ; `.claude/settings.local.json` gitignored
 - Volet Instagram en cours (2026-10-05) : `voice.md` des skills ig-* complété, `/ig-profile` 31/100, carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction
+- SEO (2026-10-28) : audit fait, Lighthouse SEO 100 ; corrections écrites dans le repo (301 apex → www, canonicals, JSON-LD, sitemap à repli, noindex zones privées), non commitées ni déployées — le site en ligne n'a pas changé.
 
 ## Décisions techniques
 - **Stack** : Next.js (App Router), déploiement Cloudflare Pages (`@cloudflare/next-on-pages`, wrangler)
@@ -32,12 +33,13 @@ body_synced: 2026-10-05
 - **Traitement visuel produit** : pipeline de scripts Node custom (pas un service tiers) pour préparer/corriger les photos produit avant mise en ligne
 
 ## Blocages / risques
--
+- `/sitemap.xml` en 500 intermittente sur l'apex et apex/www servis en double tant que les corrections SEO ne sont pas déployées.
 
 ## Next actions
 - [ ] Valider avec Morgane le texte du carousel « Composez votre docker » (8 slides, 1080x1350) avant construction des visuels
 - [ ] Appliquer les corrections du score `/ig-profile` (31/100) côté Instagram : champ nom, bio FR non tronquée, 3 posts épinglés, highlights, Stories
 - [ ] Remplir les 8 champs `À CONFIRMER` de `~/.claude/instagram/voice.md` (tutoiement/vouvoiement, mots interdits, ton, positions de marque) à partir des premiers Reels tournés
+- [ ] Relire, commiter et déployer les corrections SEO (middleware 301 apex → www, canonicals, JSON-LD, sitemap) puis revérifier en ligne ; suivre l'indexation via Search Console ou `site:esprit-docker.com`
 
 ## Journal
 - 2026-08-29 : Repo identifié et analysé (`github.com/espritdocker/esprit-docker`), fiche projet créée
@@ -45,6 +47,7 @@ body_synced: 2026-10-05
 - 2026-09-02 : Path B implémenté pour le mail "colis expédié" (voir [[esprit-docker]] pour le diagnostic complet) — `emailExpedition.ts` (envoi Brevo, même charte que la confirmation) + hook dans le webhook Sendcloud + colonne `commandes.suivi_email_envoye_at` (verrou anti-doublon). Migration exécutée et vérifiée sur Neon prod (projet `esprit-docker`, branche `production`). Commit+push `20a6fc6` sur `master`.
 - 2026-09-04 : Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1108 nœuds/1673 edges, nudge `/graphify` actif en session. `.claude/settings.json` renommé en `.claude/settings.local.json` + gitignored (le hook contient un chemin `graphify.exe` propre à la machine de Melvin, à ne jamais committer).
 - 2026-10-05 : voice.md des skills ig-* complété depuis le profil Instagram (lu dans Chrome, lecture seule) ; langue FR, CTA `DOCKER`. `/ig-profile` : 31/100. Carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction.
+- 2026-10-28 : Audit SEO (Lighthouse SEO 100, mais apex/www en double, pas de canonical ni JSON-LD, sitemap 500 intermittente) ; corrections écrites dans le repo (301 apex → www, canonicals, JSON-LD Product/Organization, sitemap à repli, noindex zones privées, titres « casquette docker ») — tsc OK, non commitées ni déployées.
 
 ## Liens
 - Client : [[esprit-docker]]

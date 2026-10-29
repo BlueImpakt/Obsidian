@@ -43,7 +43,6 @@ body_synced: 2026-10-28
 - [ ] Premier contact (voir [[jicky-marine-refonte]])
 
 ## Journal
-- 2026-10-25 : Sur [[jicky-marine-refonte]] — Étude paiement livrée, offre recentrée sur une réservation sur demande par paliers.
 - 2026-10-25 : Sur [[jicky-marine-refonte]] — Maquette design C finalisée (photos choisies, webp qualité 95), 3 tours de revues appliqués.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — Galerie corrigée ; benchmark concurrents : aucun gros loueur de St-Barth n'a de réservation instantanée, le parcours sur demande tient.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — photos principales refaites (Nano Banana, à faire valider), tarifs regroupés, perf mobile corrigée (accueil iPhone 3,15 → 1,94 Mo), flotte à l'échelle retenue pour l'accueil.
@@ -57,6 +56,8 @@ body_synced: 2026-10-28
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — maquette et page privée déployées sur Vercel en lien non référencé, vidéo 74,3 s refaite, titre flotte « De 37 à 90 pieds, toute la flotte » ; reste PITCH_CONTACT avant envoi.
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée republiée (mention Blue Impakt, lien « 7 jours », expiration corrigée), variantes A et D gardées en interne.
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée enrichie de 5 liens « Voir en grand » (avant/après ordinateur et téléphone, mesures), captures refaites sans mention « non publié ».
+- 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée finalisée (coordonnées, logo sans lien, titre « la réservation en ligne, sans perdre la main »), porte qualité FAIL.
+- 2026-10-29 : Sur [[jicky-marine-refonte]] — poids accueil, focus et faits corrigés ; porte encore FAIL (photos agrandies, LCP mobile).
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])
