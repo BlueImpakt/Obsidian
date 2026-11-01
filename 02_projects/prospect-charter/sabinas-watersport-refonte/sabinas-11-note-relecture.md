@@ -29,7 +29,7 @@ Aperçu local : `npx --yes http-server@14.1.1 maquette -p 4186 -c-1` dans le dé
 ## Ce qui se voit à la première lecture
 
 - **Hero plein écran** : vue drone HD du catamaran, titre posé dessus (à droite sur ordinateur, pour ne pas couvrir le bateau), deux boutons, l'itinéraire en légende et le numéro en signature.
-- **En-tête** : « Your holiday highlight », menu Boat trips · Watersports · Prices & terms · Who we are, bouton « Request », 4 langues (EN, DE, IT, FR).
+- **En-tête** : « Your holiday highlight », menu Boat trips · Watersports · Prices & terms · Who we are, bouton « Request », 4 langues (EN, DE, IT, FR). L'italien reste : deux plateformes indépendantes, Click&Boat et Manawa, annoncent un skipper ou une équipe qui parle italien (ta règle : une langue seulement si quelqu'un de l'équipe la parle, 2 sources au moins) ; à confirmer avec Sabina.
 - **Cartes** : grille régulière de 6 cartes. **Prix et conditions** : chaque tarif une seule fois, puis les conditions.
 - **Demande en 3 étapes** (sortie et date, coordonnées, envoi), message WhatsApp déjà rédigé vers le numéro publié par Sabina.
 - **Nouveau en passe 2** :

@@ -4,7 +4,7 @@ created: 2026-10-21
 statut: encours
 client: sabinas-watersport
 parent: prospect-charter
-body_synced: 2026-10-31
+body_synced: 2026-11-01
 ---
 
 # sabinas-watersport-refonte
@@ -38,7 +38,7 @@ body_synced: 2026-10-31
 
 ## Décisions techniques
 - **Un seul site** sur `sabinas-watersport.com` (le nom qui porte les avis Google), avec deux univers *Boat trips* et *Watersports*. `catamaran-yachtsailing-rhodos.com` et `dolphin-tours-rhodos.com` redirigés page par page (plan 301 rédigé, §1.6 du doc stack).
-- **Langues** : EN = version officielle, DE, IT et FR en sélecteur (IT ajouté le 2026-10-31, demandé par le skill). PL plus tard.
+- **Langues** : EN = version officielle, DE et FR en sélecteur. IT (ajouté le 2026-10-31 d'après le skill, sans locuteur dans l'équipe) à garder seulement si un membre de l'équipe parle italien (décision du 2026-11-01). PL plus tard.
 - **Stack retenue** (après comparaison avec [[stack-creation-site-web]], voir [[sabinas-06-comparatif-stack-pattern]]) : Astro + Tailwind + TS (îlots React) + Sanity + Cloudflare + n8n + Stripe. Moteur maison P3 : **Convex** + BetterAuth + Stripe Connect (remplace Supabase). Polar écarté (service physique, TVA grecque).
 - **Réservation P1** : demande structurée → validation de Sabina → lien d'acompte Stripe → automatismes n8n (rappel J-1, alerte vent, demande d'avis J+1). P2 Bókun si elle veut un calendrier en libre-service ou la synchro Viator.
 - **Maquette** : déployée sur Vercel en lien privé (noindex), pas de publication publique claude.ai (page à la marque d'un tiers).
@@ -64,9 +64,9 @@ body_synced: 2026-10-31
 - [ ] Messages d'envoi : adapter le J0 (modèle de premier contact alors que Sabina a déjà reçu la v1) et écrire ou sauter le J+8 (aucun détail d'avis vérifié) ; J0 par défaut mardi 3/11, lien de la maquette v2 valable jusqu'au 10/11
 - [ ] Demander à Sabina le modèle du voilier (coque « Gib'Sea 302 », annonce Click&Boat « Dufour 30 Classic ») et le rôle de Roland / nom « Dolphin Tours »
 - [ ] Poser à Sabina les 5 questions de l'étude de réservation (solde, météo, annulation, délai de réponse, hôtels)
+- [ ] Italien : demander à Sabina si quelqu'un de l'équipe parle italien ; sinon retirer l'IT de la v2 (cliente « Giulia Rossi » du bureau en FR/DE) et republier
 
 ## Journal
-- 2026-10-21 : Pattern [[stack-creation-site-web]] enrichi d'une variante « site d'activités / tourisme » (Astro + Sanity + Cloudflare + n8n + Stripe, réservation par paliers, Convex au palier 3).
 - 2026-10-21 : Maquette v1 livrée (home avec carte vedette + lignes tarifaires, fiche catamaran avec carte d'itinéraire, réservation 3 étapes, écran concept pour Sabina ; EN officiel + FR/DE ; photos client en WebP ; Motion). Revues Finish-Gate, WCAG AA et textes appliquées. Message d'accroche DE rédigé. Polar écarté (interdit les services de voyage), Stripe conservé.
 - 2026-10-21 : Prompt 3D écrit ([[sabinas-07-prompt-3d-direction-artistique]], 2 transcripts YouTube + accès vault en lecture seule) pour un test A/B : maquette parallèle `maquette-3d/` construite sans voir `maquette/`.
 - 2026-10-21 : Maquette v1 itérée : walkthrough après = 6/10 frictions résolues ; tarifs sports nautiques en page détail ; vedette par filtre ; renommage Private / Half-Private tour, ton luxury & exclusive ; galeries fléchées ; hero drone HD ; 7 vidéos YouTube en nocookie ; bug Motion (scale(0)) corrigé.
@@ -81,6 +81,7 @@ body_synced: 2026-10-31
 - 2026-10-31 : Porte qualité n° 6 PASS sur la v2 (poids 2,1 Mo → 903 Ko, LCP téléphone 3,8 s, a11y et bonnes pratiques 100) ; bug v1 corrigé (barre du bas de la fiche catamaran sans présélection) ; commits jusqu'à 59aea5d, non redéployée.
 - 2026-10-31 : Passe v2 terminée : vue bureau de Sabina (confirmer en 2 gestes, alerte vent, planning), mode intermédiaire (réception d'hôtel, agence), audit de couverture (modèle du voilier et « retour sous voiles » retirés), étude des tunnels de Rhodes (réservation instantanée seulement sur les plateformes, où Sabina vend), comparaison à l'aveugle 1re ; porte n° 10 PASS. Dossier d'envoi fait (vidéo EN 68 s, avant/après, messages). **v2 publiée sur https://sabinas-xuygcn.vercel.app/** (page privée `/p/`), v1 intacte sur sabinas-concept-x7k2m9. Commit 957daa4.
 - 2026-10-31 : Dossier d'envoi v2 corrigé côté outil (J+8 réglable, attente d'images limitée) ; J0 à adapter (second contact après la v1), J+8 sans détail d'avis vérifié.
+- 2026-11-01 : Dossier d'envoi : bandeau cookies du site d'origine masqué sur vidéo et avant/après (outil e75b595). Italien de la v2 remis en cause : gardé seulement si un membre de l'équipe parle italien, sinon retrait et republication (~20 min).
 
 ## Liens
 - Projet parent : [[prospect-charter]]

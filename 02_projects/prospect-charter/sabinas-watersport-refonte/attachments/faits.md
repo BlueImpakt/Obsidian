@@ -19,6 +19,7 @@ Abréviations : **SW** = sabinas-watersport.com · **CAT** = catamaran-yachtsail
 | WhatsApp +49 176 31707126 | liens WhatsApp pré-rédigés, pied de page | DOL `/contact-and-location/` (lien `wa.me/4917631707126`) |
 | Sur la plage de mai à octobre, joignable toute l'année | pied de page, calendrier | DOL `/contact-and-location/` |
 | Facebook `boattripsrhodes`, Instagram `sabinas.watersport` | pied de page | SW (lien Facebook), DOL (lien Instagram) |
+| Skipper parlant allemand, anglais, français et italien (raison de l'italien de la maquette : règle de Melvin du 01/11, une langue seulement si quelqu'un de l'équipe la parle, 2 sources au moins) | langues de la maquette (pas affiché) | Annonces Click&Boat publiées par « Sabine » : Lavezzi 40 `wp424j` (« a skipper speaking German, English, French, Italian ») et voilier `9q8bbjd` (« Languages spoken: German, English, French, Italian »), relues le 01/11/2026 ; **2e source indépendante** : Manawa, activité 12727 « Private Sailing Training Day from Lardos », organisateur « Sabinas Watersports », point de rendez-vous « Sabinas Watersport Rhodos next to Hotel Lindian Village », « Languages spoken: Italian, French, English », relue le 01/11/2026. Règle du skill (2 sources) remplie ; plateformes tierces : **à confirmer avec Sabina** |
 
 ## Avis
 

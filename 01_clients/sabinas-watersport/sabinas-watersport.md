@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: remote
 origine_lead: prospection à froid (Melvin)
 tjm:
-body_synced: 2026-10-31
+body_synced: 2026-11-01
 ---
 
 # sabinas-watersport
@@ -26,6 +26,8 @@ body_synced: 2026-10-31
 - Positionnement de la maquette : luxury & exclusive (maquette v1 itérée, 2026-10-21).
 - Comparaison A/B avant envoi : maquette v1 vs maquette concurrente piste C « Horizon » (Prompt 3D).
 - Maquette hébergée sur Vercel (lien privé noindex) ; plan de redirection 301 des 3 domaines défini (2026-10-22).
+- Maquette v2 au niveau du skill maquette-prospect (porte qualité PASS, 903 Ko, a11y 100, 4 langues), pas encore redéployée (2026-10-31).
+- Bandeau cookies masqué sur vidéo/avant-après ; italien gardé seulement si l'équipe parle italien (2026-11-01).
 
 ## Besoins identifiés
 - 3 sites Jimdo éclatés (2007, 2017, 2022) → un seul site, une seule mise à jour par an.
@@ -42,8 +44,8 @@ body_synced: 2026-10-31
 - **Prochaine échéance** : `dolphin-tours-rhodos.com` expire le 2026-12-01 (argument de calendrier) ; mise en ligne cible mi-janvier 2027, avant la saison
 
 ## Next actions
-- [ ] Terminer la mise au niveau de la maquette (skill maquette-prospect), en cours (voir [[sabinas-watersport-refonte]])
-- [ ] Envoyer la maquette (lien Vercel privé) + accroche WhatsApp DE/EN et e-mail de relance EN, prêts (voir [[sabinas-watersport-refonte]])
+- [ ] Redéployer la maquette v2 (au niveau du skill maquette-prospect, porte qualité PASS, 4 langues) sur Vercel, puis l'envoyer (lien privé) + accroche WhatsApp DE/EN et e-mail de relance EN, prêts (voir [[sabinas-watersport-refonte]])
+- [ ] Confirmer que l'équipe parle italien, sinon retirer l'italien de la v2 (voir [[sabinas-watersport-refonte]])
 
 ## Journal
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
@@ -56,6 +58,7 @@ body_synced: 2026-10-31
 - 2026-10-23 : Sur [[sabinas-watersport-refonte]] — e-mail de relance EN finalisé (maquette + stack en 6 lignes + demande d'un créneau de 10 min), à envoyer.
 - 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette en cours de mise au niveau du skill maquette-prospect ; avis reconfirmés (Google 5,0/510, Tripadvisor 4,9/443).
 - 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette v2 au niveau du skill maquette-prospect, porte qualité PASS (903 Ko, a11y 100), 4 langues ; pas encore redéployée ni envoyée.
+- 2026-11-01 : Sur [[sabinas-watersport-refonte]] — bandeau cookies masqué sur vidéo/avant-après ; italien de la v2 gardé seulement si l'équipe parle italien.
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]

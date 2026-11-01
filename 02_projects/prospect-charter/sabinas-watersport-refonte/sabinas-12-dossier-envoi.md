@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, sabinas-watersport]
-created: 2026-10-31
+created: 2026-11-01
 projet: sabinas-watersport-refonte
 parent: sabinas-watersport-refonte
 genere_par: maquette-outils/envoi
