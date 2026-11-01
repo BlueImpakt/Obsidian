@@ -42,6 +42,7 @@ body_synced: 2026-10-31
 ## Next actions
 - [ ] Préparer le premier contact avec Jicky Marine (voir [[jicky-marine-refonte]])
 - [ ] Corriger le libellé « ticket élevé (semaine / plusieurs jours) » du top 50 pour Jicky Marine (location à la sortie, pas à la semaine)
+- [ ] Agent prospection charter : corriger le sous-agent `site-auditor` pour qu'il détecte les réservations chargées en JavaScript (navigateur réel) — faux « aucune réservation » sur CaptainJo et Nautitan
 
 ## Journal
 - 2026-10-25 : Projet parent créé ; Sabinas et Jicky Marine rangés en sous-projets.

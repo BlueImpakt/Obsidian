@@ -43,7 +43,6 @@ body_synced: 2026-10-29
 - [ ] Premier contact (voir [[jicky-marine-refonte]])
 
 ## Journal
-- 2026-10-25 : Sur [[jicky-marine-refonte]] — Maquette design C finalisée (photos choisies, webp qualité 95), 3 tours de revues appliqués.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — Galerie corrigée ; benchmark concurrents : aucun gros loueur de St-Barth n'a de réservation instantanée, le parcours sur demande tient.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — photos principales refaites (Nano Banana, à faire valider), tarifs regroupés, perf mobile corrigée (accueil iPhone 3,15 → 1,94 Mo), flotte à l'échelle retenue pour l'accueil.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — rendu « plâtre blanc » de la flotte à l'échelle essayé sur Pardo 43 et Sanya 57, aperçu des 13 bateaux en cours.
@@ -58,6 +57,7 @@ body_synced: 2026-10-29
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée enrichie de 5 liens « Voir en grand » (avant/après ordinateur et téléphone, mesures), captures refaites sans mention « non publié ».
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée finalisée (coordonnées, logo sans lien, titre « la réservation en ligne, sans perdre la main »), porte qualité FAIL.
 - 2026-10-29 : Sur [[jicky-marine-refonte]] — poids accueil, focus et faits corrigés ; porte encore FAIL (photos agrandies, LCP mobile).
+- 2026-10-27 : Leopard 45 : photo de Melvin en principale (1 376 px au lieu de 537), doublon retiré (2b2cf72) ; « Lagoon 420 » renommé « Lagoon 42 » sur toutes les pages (2e42e0c), identifiant interne inchangé — modèle exact à confirmer avec Jicky.
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])

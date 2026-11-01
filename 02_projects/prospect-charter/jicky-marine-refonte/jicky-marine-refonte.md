@@ -57,7 +57,7 @@ body_synced: 2026-10-29
 ## Next actions
 - [ ] Relire sur téléphone la maquette déployée (https://jicky-marine-ltdnit.vercel.app/, déployée sur Vercel le 2026-10-28)
 - [ ] Rédiger le message d'accroche (site illisible sur mobile + Booking Form avec carte par email) avec le lien de la démo
-- [ ] Demander à Jicky des photos haute définition (Leopard 45, Bali 54, Pardo 43 vignette 454 px ; Axopar 37 et Nautitech 47 remplacées le 2026-10-27 par des retouches Nano Banana)
+- [ ] Demander à Jicky des photos haute définition (Bali 54, Pardo 43 vignette 454 px ; Axopar 37 et Nautitech 47 remplacées le 2026-10-27 par des retouches Nano Banana, Leopard 45 par la photo de Melvin)
 - [x] Traduire en FR les pages client du design C (accueil, flotte, fiche, demande) — fait le 2026-10-25 (commit b30670f)
 - [ ] Préparer le premier message (accroche mobile + Booking Form) et le canal (email info@ ou appel au +590 590 27 70 34)
 - [ ] Trouver le nom du gérant (annuaire injoignable lors de l'audit)
@@ -77,7 +77,6 @@ body_synced: 2026-10-29
 - [ ] Vérifier que les photos du hero téléphone se chargent sur la version en ligne (manquantes repérées le 2026-10-28)
 
 ## Journal
-- 2026-10-27 : Flotte à l'échelle : rendu « plâtre blanc » essayé sur Pardo 43 et Sanya 57 (détourage BiRefNet gratuit + niveaux de gris modelés) ; détail conservé, rien d'inventé ; défauts : voiles du Sanya coupées, Pardo vu d'en haut, passagers visibles. Aperçu des 13 bateaux à profil sur l'accueil en cours.
 - 2026-10-27 : Photos des cartes de l'accueil mises en attente derrière le hero (ff3a790, 33 tests) : affichage principal iPhone 4G lente ~6,9 → ~6,1 s en médiane ; Lighthouse simulé ne voit pas le gain.
 - 2026-10-27 : Flotte à l'échelle révisée : 18 bateaux en trois-quarts avant, même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année). Doute : « Lagoon 420 2026 » probablement un Lagoon 42.
 - 2026-10-27 : Flotte à l'échelle intégrée à l'accueil avant les vignettes (dbe42dd puis corrections 20c3b54 et suivant) : 18 silhouettes plâtre 3/4 avant (photos Jicky + même modèle sur internet), mâts à la hauteur officielle (specs chantiers), section épinglée avec défilement horizontal au scroll. Revues animation et accessibilité faites et corrigées. Pipeline : research/depth/detourer-lot.mjs (BiRefNet), research/echelle.py, research/platre.py. À vérifier avec Jicky : Lagoon 420 = Lagoon 42, Sunseeker 60 = Predator 1re gén., modèle exact du Sunseeker 52.
@@ -92,6 +91,7 @@ body_synced: 2026-10-29
 - 2026-10-28 : Page privée : ligne « Voir en grand » sous l'avant/après (5 liens en nouvelle fenêtre : ordinateur et téléphone, premier écran et page entière, les trois mesures), vérifiée en ligne ; captures refaites sans « non publié » (maquette-outils 05df909). Publication Vercel depuis Python en échec, faite depuis le terminal.
 - 2026-10-28 : Page privée finalisée : PITCH_CONTACT rempli (email, téléphone, WhatsApp, 7bf9bd1), logo Blue Impakt sans lien (aabb931), titre « la réservation en ligne, sans perdre la main » (8e48837), carte « 3 étapes / 2 taps » (9a88118, a0aedc6), avant/après téléphone + ordinateur (a55b8a9), 5 questions concept (199cbce). Porte qualité FAIL (poids accueil, photos agrandies, focus, météo, Leopard 88).
 - 2026-10-29 : Porte qualité : poids de l'accueil mobile (1 736 → 1 123 Ko, silhouettes chargées à la première interaction), focus des champs en erreur et faits du Leopard 88 corrigés ; reste FAIL sur 8 photos agrandies (Pardo 43, Sanya) et le LCP mobile bridé (flotte 5,2 s, Fairline 7,3 s).
+- 2026-10-27 : Leopard 45 : photo de Melvin en principale (1 376 px au lieu de 537), doublon retiré (2b2cf72) ; « Lagoon 420 » renommé « Lagoon 42 » sur toutes les pages (2e42e0c), identifiant interne inchangé — modèle exact à confirmer avec Jicky.
 
 ## Liens
 - Projet parent : [[prospect-charter]]

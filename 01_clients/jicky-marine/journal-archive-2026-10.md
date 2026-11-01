@@ -5,3 +5,4 @@ Entrées archivées automatiquement (seuil `## Journal` > 15, voir CLAUDE.md). H
 ---
 
 - 2026-10-25 : Sur [[jicky-marine-refonte]] — Étude paiement livrée, offre recentrée sur une réservation sur demande par paliers.
+- 2026-10-25 : Sur [[jicky-marine-refonte]] — Maquette design C finalisée (photos choisies, webp qualité 95), 3 tours de revues appliqués.
