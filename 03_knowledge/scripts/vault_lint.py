@@ -16,7 +16,7 @@ ROOT_ALLOWED = {"CLAUDE.md", "_dashboard.md", ".gitignore"}
 PLACEHOLDERS = {"client-X", "nom-client", "nom-entreprise", "nom-projet-AAAA-MM", "pattern-xyz", "projet-Y"}
 SECRET_RE = re.compile(
     r"\$2[aby]\$\d{2}\$[./A-Za-z0-9]{6,}|sk_(?:live|test)_[A-Za-z0-9]{10,}|ghp_[A-Za-z0-9]{20,}"
-    r"|AKIA[0-9A-Z]{12,}|xox[bp]-[A-Za-z0-9-]{10,}|(?:api[_-]?key|master[_-]?key|password|mot de passe|token)\s*[:=]\s*[`\"']?[A-Za-z0-9/+_.$-]{20,}",
+    r"|(?-i:AKIA[0-9A-Z]{12,})|xox[bp]-[A-Za-z0-9-]{10,}|(?:api[_-]?key|master[_-]?key|password|mot de passe|token)\s*[:=]\s*[`\"']?[A-Za-z0-9/+_.$-]{20,}",
     re.I,
 )
 INBOX_MAX_DAYS = 7
