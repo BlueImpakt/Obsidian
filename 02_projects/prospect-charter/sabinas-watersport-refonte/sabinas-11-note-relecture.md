@@ -31,6 +31,7 @@ Aperçu local : `npx --yes http-server@14.1.1 maquette -p 4186 -c-1` dans le dé
 - **Hero plein écran** : vue drone HD du catamaran, titre posé dessus (à droite sur ordinateur, pour ne pas couvrir le bateau), deux boutons, l'itinéraire en légende et le numéro en signature.
 - **En-tête** : « Your holiday highlight », menu Boat trips · Watersports · Prices & terms · Who we are, bouton « Request », 4 langues (EN, DE, IT, FR). L'italien reste : deux plateformes indépendantes, Click&Boat et Manawa, annoncent un skipper ou une équipe qui parle italien (ta règle : une langue seulement si quelqu'un de l'équipe la parle, 2 sources au moins) ; à confirmer avec Sabina.
 - **Bandeau du prototype** (même bandeau que Jicky Marine, 01/11) au-dessus de l'en-tête : « Prototype by Blue Impakt for Sabinas Watersport Rhodos, not a live website », puis Guest view · Office view · About this prototype, la vue ouverte soulignée ; 4 langues. Il défile avec la page, le hero remplit toujours l'écran en dessous. Masqué dans la comparaison à l'aveugle.
+- **Retours du 01/11** (`docs/decisions.md` n° 22 à 28) : ligne « Boat trips · Watersports · Rhodes » sous « Sabinas » (menu complet dès 1 280 px, devise dès 1 600 px, sinon l'en-tête débordait) ; galerie des activités sur ordinateur en 5 éléments sans défilement, vidéo au centre, photos entières ; vidéo de « Who we are » remplacée par « Catamaran cruise Rhodes » (`-kP6tRSfjWI`) ; fiche chiffres à 3 cartes (« 3 → 1 » site) ; performance relevée.
 - **Cartes** : grille régulière de 6 cartes. **Prix et conditions** : chaque tarif une seule fois, puis les conditions.
 - **Demande en 3 étapes** (sortie et date, coordonnées, envoi), message WhatsApp déjà rédigé vers le numéro publié par Sabina.
 - **Nouveau en passe 2** :
@@ -67,7 +68,11 @@ Aperçu local : `npx --yes http-server@14.1.1 maquette -p 4186 -c-1` dans le dé
 - Accessibilité, personas, textes 4 langues, code, motion, guidelines : corrigés ou consignés dans `decisions.md`.
 - **Tunnels des concurrents à Rhodes** (`docs/etudes/2026-10-31-rhodes-tunnels-concurrents.md`) : la réservation instantanée d'un bateau privé n'existe que sur les plateformes, où Sabina vend elle-même. En direct, personne ne la propose : le tunnel par demande est au niveau du marché.
 
-## Mesures (porte qualité n° 10, 31/10/2026 : **PASS** ; n° 11 du 01/11 avec le bandeau : **PASS**, mêmes mesures à ±0,1 s)
+## Mesures (porte qualité n° 13, 01/11/2026 : **PASS**)
+
+Après les retours du 01/11 : sections sous la photo calculées à l'approche de l'écran, photo d'ouverture Android en qualité 85 (113 Ko au lieu de 233). Accueil sur téléphone, en local sans compression : performance **85** (simulé), affichage de la photo **2,7 s** en vrai bridage (3,9 s avant). **En ligne** (Vercel compresse), mêmes réglages que le site actuel : **94** (passages 72, 94, 95 ; le premier à froid juste après la mise en ligne). C'est ce chiffre que cite la fiche : performance 34 → 94.
+
+### Porte n° 10 (31/10, avant les retours)
 
 Rapport : `sortie/porte-10/rapport.md` (hors git). Médiane de 3 passages, indice machine 1 282 à 1 688.
 

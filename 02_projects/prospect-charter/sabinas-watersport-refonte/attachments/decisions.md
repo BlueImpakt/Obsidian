@@ -30,3 +30,16 @@ Chacune avec ce qu'elle coûte si elle est fausse.
 | 19 | Pas de recadrage portrait du hero pour les téléphones (proposé par la revue design, M3) | Il donnerait une photo 1,8× plus nette sur iPhone mais ferait passer le hero de 1 200 × 896 à 1 200 × 1 600 px : le LCP téléphone, déjà à 3,9 s pour un seuil de 4,0 s, sauterait | Le faire : 1 h (recadrage 1 344 × 1 792 depuis l'original, versions 900 et 1 200, `<source>` téléphone), à mesurer à la porte |
 | 20 | Bouton principal laissé en deux apparences (or plein dans la feuille et les fiches, encre et or dans l'en-tête et les cartes) | Hérité de la v1 validée par Melvin ; la revue design le signale comme écart à DESIGN.md | Unifier : 20 min, à décider par Melvin |
 | 21 | Prix plateforme ≈ 1 250 € gardé, désormais sourcé (Booking.com 1 250 €, Pelago 1 277,70 €, relevés le 31/10) | Étude des tunnels de Rhodes : Sabina vend elle-même son catamaran sur ces plateformes | Si Sabina ne veut pas qu'on compare : retirer le bloc « Réserver en direct », 10 min |
+
+## Retours de Melvin du 01/11/2026
+
+| # | Décision | Pourquoi | Coût si c'est faux |
+|---|---|---|---|
+| 22 | Bandeau du prototype au-dessus de l'en-tête (Guest view · Office view · About this prototype), comme Jicky | Demande de Melvin | Le retirer : 5 min |
+| 23 | Ligne « Boat trips · Watersports · Rhodes » sous « Sabinas » (celle de la v1), 4 langues ; menu complet seulement dès 1 280 px (bouton menu de 1 000 à 1 279 px) et devise « Your holiday highlight » dès 1 600 px | Demande de Melvin ; sinon l'en-tête déborde (1 108 px pour 985 en italien à 1 000 px, ~1 530 px en français avec la devise) | Ligne plus courte ou sans les langues dans l'en-tête : 20 min |
+| 24 | Galerie des activités sur ordinateur : 5 éléments sans défilement, vidéo au centre (3e) ; deux photos 4:3 entières de chaque côté, le centre sur toute la hauteur (vidéo 16:9, ou photo 4:3 sans vidéo) ; 4 photos (coucher de soleil) : une rangée ; téléphone : défilement au doigt | Règle de Melvin de la v1, perdue à la passe 2 ; la mosaïque garde les photos entières (revue Finish-Gate M2) | Bande de 5 égales : 10 min, mais photos recadrées |
+| 25 | Vidéo de « Who we are » : `-kP6tRSfjWI` (« Catamaran cruise Rhodes », site du catamaran et Dolphin Tours), aperçu 640 px (pas de version HD sur YouTube) | Choix de Melvin | Revenir à `RVT9gZDnP5E` : 2 min |
+| 26 | Performance : sections de l'accueil sous la photo en `content-visibility: auto` ; photo d'ouverture des téléphones Android (900 px) en qualité 85 (113 Ko au lieu de 233), seule exception à la qualité 95 | « 79 c'est pas assez » ; mise en page au chargement de ~1,8 s à ~0,6 s (téléphone simulé), photo deux fois plus légère ; différence de qualité quasi invisible (PSNR 36,7 dB) | Revenir en 95 : `research/photos.py`, 2 min |
+| 27 | 3e carte de la fiche chiffres : « 3 → 1 » (un seul site au lieu de trois), la carte « affichage mobile » sautant (site actuel déjà adapté au téléphone) | Demande de Melvin (« il faut en trouver une autre ») ; fait sourcé `docs/01` | Autre carte : `envoi/chiffres.json`, 5 min |
+| 28 | Italien gardé : skipper parlant italien selon deux plateformes indépendantes (Click&Boat, Manawa) | Règle de Melvin : une langue seulement si l'équipe la parle, 2 sources au moins | Retirer l'italien : 30 min |
+

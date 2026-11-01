@@ -83,6 +83,8 @@ body_synced: 2026-11-01
 - 2026-10-31 : Dossier d'envoi v2 corrigé côté outil (J+8 réglable, attente d'images limitée) ; J0 à adapter (second contact après la v1), J+8 sans détail d'avis vérifié.
 - 2026-11-01 : Dossier d'envoi : bandeau cookies du site d'origine masqué sur vidéo et avant/après (outil e75b595). Italien de la v2 remis en cause : gardé seulement si un membre de l'équipe parle italien, sinon retrait et republication (~20 min).
 
+- 2026-11-01 : Retours de Melvin sur la v2 : bandeau du prototype (comme Jicky), ligne sous « Sabinas », galerie 5 éléments vidéo au centre, vidéo de « Who we are », fenêtre cookies cachée dans l'avant/après, 3e carte « 3 → 1 », performance 79 → 94 en ligne (content-visibility, photo Android q85). Porte n° 13 PASS, v2 republiée, v1 intacte.
+
 ## Liens
 - Projet parent : [[prospect-charter]]
 - Client : [[sabinas-watersport]]
