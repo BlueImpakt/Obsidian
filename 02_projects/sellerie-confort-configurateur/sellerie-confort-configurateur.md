@@ -3,7 +3,7 @@ tags: [project, encours, sellerie-confort]
 created: 2026-10-06
 statut: encours
 client: sellerie-confort
-body_synced: 2026-10-27
+body_synced: 2026-10-29
 ---
 
 # sellerie-confort-configurateur
@@ -22,6 +22,7 @@ body_synced: 2026-10-27
 - **Phase 2** : étape 1 patchs IA (optionnelle), étape 2 backend (regroupement par famille), étape 3 frontend/ergonomie, + broderies ; **chiffrée le 19/10, revue le 20/10 : 17,5 j écran de gestion compris (6 125 € HT) + 200 € HT de logiciels et outils = 6 325 € HT, 4 925 € HT à payer Phase 1 déduite** (sous le plafond contractuel de 7 000 € HT), paiement 50 % à la commande / 50 % à la mise en production ; 8 lots ≤ 3 j (env. dev/préprod, mkl_pc 2.0.0, données, configurateur/fiche/panier, design, broderies, écran matières, recette + mise en prod) ; fourchette initiale 4 000 à 7 000 €, taux 350 €/j
 - **Phase 3** (refonte complète du site, configurateur fait en Phase 2, automatisations comprises) : **20 à 28,5 j, 7 000 à 9 975 € HT** (chiffrage du 19/10, revu le 20/10 dans le Word `-fourchette` et le rapport client) ; Word + PDF `Phase 1/chiffrage-phases-1-2-3.docx` et variante `-fourchette` ; détail dans [[prepa-phase-2]]
 - Maquettes HTML de refonte (déjà montrées début août, direction validée, seul le beige à changer) : démonstration uniquement, **pas un engagement contractuel** ; refonte complète des 6 maquettes le 07/10, très appréciées, en ligne sur Netlify (08/10)
+- **Maintenance (offre du 29/10)** : reprise du site en l'état 700 € HT (état des lieux daté, sécurisation, sauvegardes externes, préprod permanente) + 175 € HT/mois sur 12 mois ; évolutions et code sur mesure VIMAWEB hors forfait ; aucun supplément pendant les phases de refonte jusqu'à leur mise en production ; garantie corrective Phase 2 de 6 mois. Détail [[reprise-maintenance]]
 
 ## État actuel
 - **Phase 1 lancée le 14/10/2026.** Contrat et devis I-26-10-2 signés le 13/10 (1 400 € HT, 4 j × 350 €), acompte de 700 € versé, comptes nominatifs sur la prod et sur dev. **Délai de 10 jours calendaires : 14/10 → 24/10/2026.** Valérie en congés dès le 17/10 ; son accord écrit pour une extension d'export temporaire est reçu (en réserve, non utilisé). VIMAWEB est informé ; pas de contact direct de notre part.
@@ -29,6 +30,7 @@ body_synced: 2026-10-27
 - **Alerte sécurité observée** (plugin *Essential Plugin* / WP Logo Showcase, avertissement WordPress.org dans l'admin de la prod) : **hors périmètre**, décision du 14/10, pas de prise de contact avec VIMAWEB, constat reporté au rapport.
 - **Clone local construit le 14/10** (Local, WordPress 7.1.3, PHP 8.2, site `sellerie-confort.local`) : code issu d'UpdraftPlus **sans base ni téléversements** (4 archives + empreintes en lecture seule, plus 3 copies), médias par téléchargement public à l'identique, 345 produits recréés depuis les fichiers publics. Accès libre de Claude au WordPress local ; pour les sites du client, autorisation explicite à chaque fois. Détails : [[pre-phase-1]].
 - Maquettes en ligne sur Netlify depuis le 08/10. Volet **nid d'abeille** traité dans une autre session (simulateur Z900 reçu de Valérie).
+- **29/10 : Phase 2 acceptée par Valérie** (4 925 € HT confirmés, contrat à signer), **Phase 3 repoussée** (coût). Après un mail hostile de VIMAWEB, elle propose à Melvin de reprendre la maintenance : offre envoyée (reprise 700 € HT + 175 € HT/mois), réponse attendue. Phase 2 démarrée en local sur sauvegarde de la prod, mise en prod après bascule de l'hébergement. Voir [[reprise-maintenance]].
 
 ## Décisions techniques
 - **Pile détectée** (front uniquement) : WordPress + WooCommerce 11.1.0, thème Divi, LiteSpeed. Configurateur = plugin **Product Configurator for WooCommerce** v1.7.5 (`mkl_pc`), config stockée en fichiers JS dans `wp-content/uploads/mkl_product_configurations/product_configuration_{ID}.js`. Options de commande (gel, chauffage, hauteur) = autre plugin, **Advanced Product Fields** (`wapf`) : deux systèmes distincts
@@ -58,6 +60,7 @@ body_synced: 2026-10-27
 - **Décision (2026-10-20) : base de 46 configurations** (groupes de fiches aux images identiques) pour le rapport et la Phase 2 ; les 55 configurateurs globaux de la copie sont fusionnés en 46. Aucune option de broderie déjà proposée n'est retirée : en Phase 2, emplacements définis une fois par configuration, un seul champ, exceptions validées par Valérie ([[phase-1]] §7.6). Aile Honda en miroir à la source.
 - **Décision (2026-10-20) : méthode de travail Phase 2** = copie locale du dev sans données clients → dev hébergé avec données (clause RGPD) → préprod → prod ; inscrite dans l'audit. Licences payantes (GPL) non bloquantes : elles n'apportent que mises à jour, support et clé. Détail du chiffrage par lot conservé dans l'audit, engagement sur livrables et prix total. Accès au dev : clé SSH, ni identifiant wp-admin ni mot de passe dans le chat ([[phase-1]] §11).
 - **Vidéo promo (21/10)** : Remotion pour le montage, rushes IA générés dans Google Flow (abonnement AI Plus, aucune API gratuite viable, PC trop faible pour du local) ; selle d'origine qui se métamorphose en selle confort dans le configurateur ; logo Africa Twin brodé sur le dosseret ; spec et plan dans le repo (`docs/superpowers/specs|plans/2026-10-21-video-promo-remotion*`)
+- **Décision (2026-10-29) : Phase 2 démarrée en local sans attendre le transfert** (~12 j sur 17,5), sur une sauvegarde complète de la prod demandée par Valérie à VIMAWEB (pas leur dev), transmise par lien direct après signature de la clause RGPD art. 28 et anonymisée à l'import ; dev/préprod et mise en prod après la bascule de l'hébergement. Remplace le passage par le dev de VIMAWEB de la décision du 20/10.
 
 ## Blocages / risques
 - **VIMAWEB** : titulaire du compte o2switch (dev et prod), détient les licences des plugins (`mkl_pc`, `wapf`, Divi), plugins sur mesure (`Sync MKL…` prototypé sur dev, non déployé). Informé, pas de contact direct. Mise en production et accès serveur en Phase 2 : à décider avec Valérie (reprise du compte à son nom ou VIMAWEB à la demande).
@@ -78,6 +81,7 @@ body_synced: 2026-10-27
 - **Broderies (20/10)** : 296 fiches (18 groupes sur 46) proposent des emplacements différents pour un même visuel ; 3 fiches sans broderie, 5 sans motif. Panier : sur la Duke, le motif « électrocardiogramme » choisi au configurateur arrive en « Duke plein et contour » au formulaire de commande (correspondance à corriger).
 - **Suivi statistique (20/10)** : GA4 `G-ZN6BLJQ8SG` (SEOPress PRO) ne mesure que pages vues et défilement ; ventes et configurateur invisibles ; cookies GA déposés même après refus du bandeau (non conforme CNIL, réglage ~½ j côté prestataire) ([[phase-1]] §12).
 - **Propriété du code (20/10)** : les développements sur mesure de VIMAWEB (`sc-order-note`, `sc-export-pdf-factures`, `woo-payline-caution`, `fix-wapf-preview`, `Sync MKL…`) peuvent leur appartenir selon leur contrat ; WordPress, WooCommerce, Divi et plugins du marché ne posent pas de problème ([[phase-1]] §11).
+- **Conflit VIMAWEB (29/10)** : mail hostile (profil de Melvin, exigences post_meta, garantie 6 mois, interventions liées au configurateur facturées à l'heure) ; aucun échange direct, tout par écrit via Valérie. Calendrier de mise en prod dépendant du préavis de leur contrat (≤ 1 mois : mise en ligne janvier ; 3 mois : février ou mise en prod par VIMAWEB avec notre paquet).
 
 ## Next actions
 - [x] Contrat, devis I-26-10-2, acompte, comptes nominatifs, accord écrit pour l'extension d'export (13-14/10)
@@ -103,7 +107,7 @@ body_synced: 2026-10-27
 - [ ] Demander à Valérie comment elle récupère aujourd'hui les cautions des clients Alma / Cofidis / carte virtuelle (lien Payline, virement, chèque, appel)
 - [ ] Panier perdu / cache : faire un test visiteur (ajout au panier, retour sur une fiche, compteur) pour confirmer le cache o2switch `x-lsadc-cache: hit` ; si confirmé, réglage serveur à demander au titulaire
 - [ ] Hébergement : faire confirmer par le support o2switch la procédure de changement de titulaire (avec accord de VIMAWEB) ; prévoir au contrat de Phase 2 l'accès aux données clients + clause de sous-traitance RGPD art. 28
-- [ ] Dev Phase 2 : rédiger la clause RGPD de sous-traitance (art. 28) du contrat, le script de neutralisation (e-mails, paiements en test, tâches planifiées, WP Umbrella) et la demande de préprod WP Tiger à VIMAWEB (envoyée par Valérie)
+- [ ] Dev Phase 2 : rédiger la clause RGPD de sous-traitance (art. 28) du contrat, le script de neutralisation (e-mails, paiements en test, tâches planifiées, WP Umbrella) (préprod après la bascule de l'hébergement, décision du 29/10)
 - [ ] Refaire les tests du parcours Duke / CBF / Z900 sur la copie (Local relancé et Z900 importée le 19/10) ; après chaque redémarrage de Local, relancer la copie avec `copie_regroupement_lancer.ps1`
 - [ ] Logos brodés : trancher pour l'aile Honda en miroir sur la bande de la CBF (accepter 3 cm ou ne pas la proposer)
 - [ ] Généralisation des logos : optimiser l'import (images une fois par jeu, ~2 h de dev) et passer les images en WebP / palette réduite avant la mise en ligne (4 à 5 Go en PNG)
@@ -112,7 +116,6 @@ body_synced: 2026-10-27
 - [ ] Supprimer l'artefact « Sellerie Confort : Phase 1, version interne » (claude.ai ou `/artifacts`) : suppression impossible depuis la session
 - [ ] Questions à Valérie (Phase 2) : absence de broderie voulue sur les 3 selles concernées, emplacements propres à certaines motos, choix par défaut des configurateurs fusionnés en 46
 - [ ] Site Local : copier le plugin `sc-gestion-configurateur` (repo `Phase 1/plugin-gestion/`) dans `wp-content/plugins/` pour retrouver le menu « Configurateur SC »
-- [ ] Envoyer à VIMAWEB la liste des demandes pour le dev Phase 2 (clé SSH publique, WP-CLI/git, données personnelles, isolation, circuit dev → prod, versions PHP/MySQL et plugins prod)
 - [ ] Rapport client : trancher les incohérences restantes de la relecture du 20/10 (matières « images conservées » vs « matières texturées à refaire » ; lot « Écran de gestion » 2,5 j élargi aux matières existantes et calques sans jours en plus)
 - [ ] Vérifier la mise en page du PDF v2 du rapport (tableaux, images) puis l'envoyer à Valérie avec le mail de synthèse
 - [ ] Obtenir l'accord écrit de Valérie pour neutraliser le dev (fermeture au public, paiements en test, courriels et tâches coupés)
@@ -121,10 +124,11 @@ body_synced: 2026-10-27
 - [ ] Vidéo promo : valider le rendu v2 « loupes matières » (33,4 s : durée +3 s, bouton panier qui dépasse) puis le rendu v1-infos (assise antidérapante, infographies) ; choisir la version finale (29 s sauvegardée, dézoom, v2, v1-infos)
 - [ ] Vidéo promo : écouter la piste son (vérifiée uniquement par mesures : niveaux, silences, placement des bruitages)
 - [ ] Vidéo promo : décider fusion/push de la branche locale `video-promo-v1` (non poussée)
+- [ ] Phase 2 : faire demander par Valérie à VIMAWEB une sauvegarde complète de la prod (fichiers + base), transmise par lien direct, réceptionnée seulement après signature de la clause RGPD art. 28 ; stockage BitLocker, anonymisation à l'import, extension WP Logo Showcase désactivée avant tout lancement
+- [ ] Reprise maintenance : transmettre à Valérie la liste des accès à récupérer auprès de VIMAWEB (o2switch, contacts OVH, admins WP, clés API/mots de passe d'application, gestion à distance, code sur mesure, licences Divi/SEOPress/autres, GA4/Search Console/GTM, Payline/Alma/Cofidis, DPD, SMTP, reCAPTCHA) et vérifier préavis + clause de réversibilité de son contrat
+- [ ] Phase 2 : prévoir au lot « Recette et mise en production » un script d'export/restauration des seules données du configurateur, un essai minuté du retour arrière en préprod et la relecture des commandes après retour
 
 ## Journal
-- 2026-10-20 (accès dev / stats / PDF) : Accès au dev en ligne et propriété du code documentés ([[phase-1]] §11 : clé SSH, pas de wp-admin ni mot de passe dans le chat, VIMAWEB voit tout ce qui est sur son serveur) ; état des lieux statistique livré ([[phase-1]] §12 : GA4 via SEOPress PRO, pages vues seulement, ventes et configurateur non mesurés, cookies GA déposés malgré le refus = non conforme CNIL) ; méthode Phase 2 copie locale sans données → dev → préprod → prod ; rapport client exporté en PDF v2.
-- 2026-10-20 (chiffrage rapport) : Rapport client aligné sur le Word : Phase 2 = 17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer Phase 1 déduite (sous le plafond de 7 000 € HT), paiement 50 % commande / 50 % mise en prod ; Phase 3 = 20 à 28,5 j, 7 000 à 9 975 € HT ; détail par lot conservé, accord de neutralisation du dev demandé à Valérie ; relecture complète faite, incohérences restantes à trancher.
 - 2026-10-20 (formulaire) : Champs Année / Taille / Poids pilote / Poids passager passés en listes déroulantes dans `build.py`, vérifiés sur la copie 8090 jusqu'au panier WooCommerce (tests au vert, non commité).
 - 2026-10-21 (groupes) : Africa Twin 1100 = même configuration que l'Africa Twin 1000 seule ; Transalp 600 = groupe générique de 41 fiches (probablement G03 TDM 900, à confirmer en base).
 - 2026-10-21 (vidéo promo) : vidéo Remotion pour Instagram lancée en brainstorming, V1 100 % graphisme ; scénario Africa Twin 1100 → selle isolée → nouveau configurateur (matières, logo Transalp, gel) → motarde qui repart ; 3 pistes visuelles maquettées (atelier, nuit de circuit, vue en coupe)
@@ -139,6 +143,7 @@ body_synced: 2026-10-27
 - 2026-10-22 (vidéo promo, maquette) : version client avec mention « Maquette » puis « PROJET EN COURS » sous le panier (`eb46f80`) ; décision : envoyer la vidéo en relance le 28-29/10 si l'audit reste sans réponse (client en congés jusqu'au 24/10), aperçu offert, version finale incluse si Phase 2.
 - 2026-10-27 (audit SEO) : audit SEO de sellerieconfort.com livré (`Phase 1/audit-seo-2026-10-27.md`) : bases techniques saines (Lighthouse SEO 100) ; freins = 1 530 fiches pour 751 motos (doublons), codes internes dans titres/H1, LCP mobile ~19,6 s (~10 Mo d'images par fiche), page de sauvegarde Divi indexée dans le sitemap.
 - 2026-10-29 (reprise maintenance) : Valérie accepte la Phase 2, pas la Phase 3 pour l'instant ; après un mail hostile de VIMAWEB, elle propose à Melvin de reprendre la maintenance. Offre envoyée : reprise du site en l'état 700 € HT (état des lieux daté), maintenance 175 € HT/mois sur 12 mois, rien en supplément pendant les phases de refonte, code VIMAWEB et évolutions hors forfait, garantie Phase 2 de 6 mois ; aucun échange direct avec VIMAWEB. Suivi et garde-fous : [[reprise-maintenance]].
+- 2026-10-29 (Phase 2, démarrage) : décision de démarrer la Phase 2 en local sans attendre le transfert (~12 j sur 17,5), sur une sauvegarde complète de la prod demandée par Valérie à VIMAWEB (pas leur dev), transmise par lien direct après signature de la clause RGPD art. 28 et anonymisée à l'import ; dev/préprod et mise en prod après la bascule de l'hébergement. Réponses écrites à Valérie prêtes (budget 4 925 € HT confirmé, retour arrière < 1 h, aucun contact direct avec VIMAWEB).
 
 ## Liens
 - Réunion : [[2026-10-07-sellerie-confort]] (prépa) · CR : [[2026-10-07-sellerie-confort-cr-interne]] · [[2026-10-07-sellerie-confort-cr-client]] · schéma [[sellerie-confort-reunion-2026-10-07.excalidraw]]

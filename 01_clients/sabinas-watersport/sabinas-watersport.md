@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: remote
 origine_lead: prospection à froid (Melvin)
 tjm:
-body_synced: 2026-10-23
+body_synced: 2026-10-31
 ---
 
 # sabinas-watersport
@@ -17,7 +17,7 @@ body_synced: 2026-10-23
 - **Deux entités** : le centre nautique *Sabinas Watersport Rhodos* (depuis 2007) et la société de croisières *Dolphin Tours Rhodos* (depuis 2023). Roland est capitaine RYA Offshore.
 - **Flotte** : catamaran Fountaine Pajot Lavezzi 40 « THOI », voilier, speedboat, sports nautiques (windsurf, jetski, ski nautique, engins tractés).
 - **Contacts publics** : +30 697 259 3276 (mobile, WhatsApp), +49 176 31707126 (WhatsApp), info@dolphin-tours-rhodos.com, sabine.kuehl@web.de. Sur place de mai à octobre.
-- **Réputation** : Google 5,0/479 et TripAdvisor 4,9/443, n° 1 à Lardos (à reconfirmer).
+- **Réputation** : Google 5,0/510 et TripAdvisor 4,9/443 (reconfirmés le 2026-10-31), n° 1 à Lardos (à reconfirmer).
 
 ## Historique des échanges
 - Aucun contact pour l'instant : approche prévue à froid, par lien vers une maquette mobile envoyé par e-mail/WhatsApp.
@@ -42,7 +42,8 @@ body_synced: 2026-10-23
 - **Prochaine échéance** : `dolphin-tours-rhodos.com` expire le 2026-12-01 (argument de calendrier) ; mise en ligne cible mi-janvier 2027, avant la saison
 
 ## Next actions
-- [ ] Envoyer la maquette (lien Vercel privé) + accroche WhatsApp DE/EN, prête (voir [[sabinas-watersport-refonte]])
+- [ ] Terminer la mise au niveau de la maquette (skill maquette-prospect), en cours (voir [[sabinas-watersport-refonte]])
+- [ ] Envoyer la maquette (lien Vercel privé) + accroche WhatsApp DE/EN et e-mail de relance EN, prêts (voir [[sabinas-watersport-refonte]])
 
 ## Journal
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
@@ -53,6 +54,8 @@ body_synced: 2026-10-23
 - 2026-10-22 : Sur [[sabinas-watersport-refonte]] — plan de redirection 301 des 3 domaines et maquette en ligne sur Vercel (lien privé noindex)
 - 2026-10-22 : Sur [[sabinas-watersport-refonte]] — accroche WhatsApp DE/EN prête avec lien démo et section stack sur la page concept
 - 2026-10-23 : Sur [[sabinas-watersport-refonte]] — e-mail de relance EN finalisé (maquette + stack en 6 lignes + demande d'un créneau de 10 min), à envoyer.
+- 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette en cours de mise au niveau du skill maquette-prospect ; avis reconfirmés (Google 5,0/510, Tripadvisor 4,9/443).
+- 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette v2 au niveau du skill maquette-prospect, porte qualité PASS (903 Ko, a11y 100), 4 langues ; pas encore redéployée ni envoyée.
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]

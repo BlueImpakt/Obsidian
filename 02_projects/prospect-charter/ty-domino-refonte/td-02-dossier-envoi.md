@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, ty-domino]
-created: 2026-10-28
+created: 2026-10-31
 projet: ty-domino-refonte
 parent: ty-domino-refonte
 genere_par: maquette-outils/envoi
@@ -13,7 +13,7 @@ Projet : [[ty-domino-refonte]] · Client : [[ty-domino]] · Parent : [[prospect-
 Dossier d'envoi de la maquette Ty Domino : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est publié ni envoyé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
 
 ## À faire avant le premier envoi
-- [ ] Remplacer `PITCH_CONTACT` (email + téléphone de Melvin) dans les messages et la page privée
+- [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
 - [ ] Héberger la page privée et la maquette en lien privé, puis remplacer `PITCH_LIEN_PAGE` (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
@@ -65,7 +65,7 @@ Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
 Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+3, WhatsApp au +596 696 22 44 29
@@ -87,7 +87,7 @@ Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement 
 Un « stop » suffit pour ne plus recevoir de message.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+15, email
@@ -102,12 +102,12 @@ Bonne saison,
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.9 / 5, 394 avis Google, relevé : 28/10/2026 (docs/etudes/2026-10-28-ty-domino-reservation.md).
+Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.9 / 5, 394 avis Google, relevé : 28/10/2026 (docs/etudes/2026-10-28-ty-domino-reservation.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : ty-domino-refonte/sortie/porte-7/resultat.json et sortie/lighthouse-avant/
+Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : ty-domino-refonte/sortie/porte-9/resultat.json et sortie/lighthouse-avant/
 
-- **Performance 61 → 75 · Accessibilité 83 → 100 · Référencement 92 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette.
+- **Performance 61 → 95 · Accessibilité 83 → 100 · Référencement 92 → 100 notes sur 100** : Notes Lighthouse de la page d’accueil : site actuel, puis maquette.
 
 **Ne pas citer :**
 - Étapes de la demande : 3 étapes (plus de 3) ou parcours actuel non décrit (« demande » du côté avant)

@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:01,833
+Your site today, on a phone.
+
+2
+00:00:01,833 --> 00:00:05,633
+Three websites, and none of them shows all your trips.
+
+3
+00:00:05,633 --> 00:00:08,267
+The mock-up: your drone photo, full screen.
+
+4
+00:00:08,267 --> 00:00:11,867
+Your day in four stops, from your beach to the Blue Lagoon.
+
+5
+00:00:11,867 --> 00:00:15,467
+All your trips on one page, each with its starting price.
+
+6
+00:00:15,467 --> 00:00:20,667
+Every price once, in one table, with your terms.
+
+7
+00:00:20,667 --> 00:00:24,300
+Each trip has its page: photos, video, the day stop by stop.
+
+8
+00:00:24,300 --> 00:00:29,867
+Stafilia, Cave Island, Lindos, the Blue Lagoon.
+
+9
+00:00:29,867 --> 00:00:32,500
+The price for the group, worked out live.
+
+10
+00:00:32,500 --> 00:00:35,267
+Then a date: only days in season can be picked.
+
+11
+00:00:35,267 --> 00:00:38,900
+Name and WhatsApp. Nothing to pay at this stage.
+
+12
+00:00:38,900 --> 00:00:42,567
+Deposit, weather and cancellation, shown before sending.
+
+13
+00:00:42,567 --> 00:00:46,833
+Sent. The guest knows what happens next, and when.
+
+14
+00:00:46,833 --> 00:00:50,933
+Your side: the request arrives complete and priced.
+
+15
+00:00:50,933 --> 00:00:54,667
+You read the message, already written in the guest’s language.
+
+16
+00:00:54,667 --> 00:00:58,700
+Second tap: the deposit link goes out. Nothing leaves without you.
+
+17
+00:00:58,700 --> 00:01:03,167
+Strong wind forecast? You decide, then the guests are told.
+
+18
+00:01:03,167 --> 00:01:05,767
+Private prototype: your photos, your prices.
+
+19
+00:01:05,767 --> 00:01:08,367
+Next step: 15 minutes together.

@@ -3,7 +3,7 @@ tags: [project, encours, prospection]
 created: 2026-10-25
 statut: encours
 client: aucun
-body_synced: 2026-10-27
+body_synced: 2026-10-31
 ---
 
 # prospect-charter
@@ -27,6 +27,7 @@ body_synced: 2026-10-27
 ## État actuel
 - 2026-10-25 : prospect n°1 (Jicky Marine) étudié en détail ; l'offre type « réservation et paiement en ligne » est à adapter au cas par cas (moyens de paiement déjà en place, territoire, organisation du bureau).
 - 2026-10-27 : top 50 requalifié avec budget (registre français : fort +6, moyen +3, faible −15) et agence (−10 ; 35 sites signés par une agence sur les 126 prospects) — Taxi Cap (budget faible + agence Pixell), RM Croisières et 7 prospects avec agence sortis ; poids modifiables dans `scripts/top50.py`, méthode dans `resultats/top50-methode.md` (cf720ee).
+- 2026-10-31 : maquette Sabinas Watersport mise au niveau du skill `maquette-prospect` (hero plein écran, prix à un seul endroit, WhatsApp pré-rédigé, IT ajouté, DE relu, faits sourcés, porte qualité) ; erreurs v1 corrigées (« dès 640 € » sur le speedboat, acompte de 30 % inventé) — voir [[sabinas-11-note-relecture]].
 
 ## Décisions techniques
 - Deux notes par prospect : note de tri (le site est-il à refaire ?) et douleur (ce que la présence web coûte à l'entreprise) ; top 50 par score de priorité (douleur, gamme, moyens, closing, ticket).
@@ -49,6 +50,8 @@ body_synced: 2026-10-27
 - 2026-10-27 : Décision : passer à l'échelle sur d'autres refontes en réutilisant la méthode et les leçons Jicky/Sabina, avec un design, un parcours et un argumentaire propres à chaque client ; pistes retenues pour soigner la 1re maquette : dossier de faits sourcés vérifié par test et planche photos/direction à valider avant de coder.
 - 2026-10-27 : Outillage maquettes à la chaîne livré dans `maquette-outils` (extraction du site prospect, harmonisation photos, dossier d'envoi vidéo/avant-après/brouillons, porte qualité PASS/FAIL avec tunnel et comparaison à l'aveugle ; 236 tests) et intégré au skill `maquette-prospect` avec un prompt de lancement ; process fixé à 2 validations de Melvin (planche, maquette finie), envois faits par Melvin, un sous-projet vault par maquette.
 - 2026-10-27 : Maquette RM Croisières lancée avec le nouveau process (extraction en cours ; incohérence « Manureva » Lagoon 46 vs Lagoon 42 relevée).
+- 2026-10-31 : Maquette Sabinas Watersport mise au niveau du skill (hero plein écran, prix à un seul endroit, WhatsApp pré-rédigé, IT ajouté, DE relu, faits sourcés et porte qualité) ; deux erreurs de la v1 corrigées (« dès 640 € » sur le speedboat, acompte de 30 % inventé). Voir [[sabinas-11-note-relecture]].
+- 2026-10-31 : Sabinas v2 publiée comme seconde proposition (https://sabinas-xuygcn.vercel.app/, v1 intacte) avec vue bureau, mode intermédiaire et dossier d'envoi ; outil `envoi` corrigé (blocage sur les images d'une vue masquée, J+8 qui imposait la phrase de Jicky). Voir [[sabinas-watersport-refonte]].
 
 ## Liens
 - Client : aucun (projet de prospection)

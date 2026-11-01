@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-27
+body_synced: 2026-10-29
 ---
 
 # sellerie-confort
@@ -15,6 +15,7 @@ body_synced: 2026-10-27
 - **Contact** : Valérie Cenizo, co-gérante. Gère elle-même le contenu et dispose des accès WordPress : c'est elle l'utilisatrice réelle du back-office, pas un développeur
 - **Prestataires en place** : VIMAWEB (webmaster, maintenance, aide technique ponctuelle) et ARTEO Conseil (créateur du site d'après les mentions légales). Ils restent. Consigne : limiter les contacts avec eux, rester sur le design sans toucher à leurs outils
 - **Secteur hors cible principale** (artisanat/e-commerce, pas environnement/impact) : à garder en tête pour le positionnement
+- **29/10** : tension avec VIMAWEB (mail hostile sur le profil de Melvin) ; Valérie envisage de leur retirer la maintenance au profit de Blue Impakt (offre en attente)
 
 ## Historique des échanges
 - Début août 2026 : maquettes envoyées par Blue Impakt
@@ -27,6 +28,7 @@ body_synced: 2026-10-27
 - 2026-10-14 : accord écrit d'export reçu de la cliente (reconstruction du site en local)
 - 2026-10-21/22 : vidéo promo Instagram (Remotion, rushes IA) : v1 29 s, variantes dézoom et « loupes matières » (33,4 s), version « infos » ; version client « Maquette » prête le 22/10, rien envoyé à la cliente — à envoyer en relance de l'audit le 28-29/10. Détail : [[sellerie-confort-configurateur]]
 - 2026-10-27 : audit SEO de sellerieconfort.com livré — bases saines ; freins : fiches en double, codes internes dans les titres, LCP mobile ~19,6 s, page Divi de sauvegarde indexée
+- 2026-10-29 : Valérie répond à l'audit avec une série de questions : OK pour la Phase 2, pas pour la Phase 3 pour l'instant (coût) ; mail hostile de VIMAWEB transmis par elle (profil de Melvin, conditions sur le configurateur), qui l'agace ; elle propose à Melvin de reprendre la maintenance. Réponses écrites et offre de maintenance envoyées via elle. Détail : [[reprise-maintenance]]
 
 ## Décisions prises
 - Phase 1 = audit technique avant chiffrage ferme de la Phase 2, **1 400 € HT** (4 j × 350 €) déduits de la Phase 2 si suite ; elle inclut, sans supplément, l'audit des automatisations, le suivi du parcours et le panier perdu
@@ -35,6 +37,7 @@ body_synced: 2026-10-27
 - WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — à confirmer par l'audit
 - Images d'origine conservées pour les modèles existants ; pour une nouvelle matière, grande photo haute résolution (texture maître) préférée au petit carré répété, échelle auto à prévoir en Phase 2
 - Dev de la Phase 2 (17/10, repris dans le rapport le 20/10) : copie exacte de la prod sur l'hébergement, données clients comprises, neutralisée, encadrée par une clause RGPD de sous-traitance (art. 28) au contrat de Phase 2
+- Aucun échange direct avec VIMAWEB (29/10) : tout passe par écrit, via Valérie ; Phase 2 développée en local sur sauvegarde de la prod, pas sur leur dev
 
 ## Besoins identifiés
 - Ajouter une couleur ou une matière beaucoup plus simplement (regroupement par famille au lieu d'une photo par selle, par zone, par matière)
@@ -47,13 +50,12 @@ body_synced: 2026-10-27
 - Phase 2 : à chiffrer à l'issue de la Phase 1 (fourchette annoncée 4 000 à 7 000 €, taux 350 €/j) ; **plafond contractuel 7 000 € HT**, 1 400 € de Phase 1 déduits, solde max 5 600 €
 - **Chiffrage du 19/10, revu le 20/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette, repris dans le rapport client) : Phase 2 = **17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer (Phase 1 déduite)**, sous le plafond de 7 000 € HT, paiement 50 % à la commande / 50 % à la mise en production ; Phase 3 (refonte complète du site + automatisations) = **20 à 28,5 j, 7 000 à 9 975 € HT**
 - **Rapport client Phase 1 (20/10, artefact claude.ai + PDF v2, non envoyé)** : chiffrage aligné sur le Word (17,5 j d'un bloc, l'option 15 j + écran de gestion abandonnée), détail par lot conservé, relu et corrigé ; incohérences restantes à trancher, mail de synthèse prêt
+- **29/10** : Phase 2 acceptée sur le principe (4 925 € HT confirmés, contrat à signer, garantie corrective 6 mois) ; Phase 3 repoussée. **Offre maintenance** : reprise du site en l'état 700 € HT + 175 € HT/mois sur 12 mois, rien en supplément pendant les phases de refonte — réponse attendue
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — accès au dev et propriété du code documentés, état des lieux statistique livré (GA4 pages vues seulement, cookies posés malgré refus = non conforme CNIL), méthode Phase 2 copie locale sans données → dev → préprod → prod, rapport exporté en PDF v2.
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — groupes de configuration identifiés : Africa Twin 1100 = 1000 ; Transalp 600 dans un groupe de 41 fiches
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Remotion pour Instagram en brainstorming (V1 100 % graphisme, scénario Africa Twin → configurateur → motarde), 3 pistes visuelles maquettées
@@ -67,6 +69,8 @@ body_synced: 2026-10-27
 - 2026-10-22 : Sur [[sellerie-confort-configurateur]] — bandeau central (aile Honda, ECG, yeux) branché sur l'Africa Twin ; vidéo promo mise à jour
 - 2026-10-22 : Sur [[sellerie-confort-configurateur]] — vidéo promo version client « Maquette » prête ; à envoyer en relance de l'audit le 28-29/10
 - 2026-10-27 : Sur [[sellerie-confort-configurateur]] — audit SEO de sellerieconfort.com livré : bases saines, freins = fiches en double, codes internes dans les titres, LCP mobile ~19,6 s, page Divi de sauvegarde indexée.
+- 2026-10-29 : Sur [[sellerie-confort-configurateur]] — Phase 2 acceptée (4 925 € HT), Phase 3 repoussée ; après un mail hostile de VIMAWEB, offre de reprise de maintenance envoyée (700 € HT + 175 € HT/mois), aucun échange direct avec VIMAWEB.
+- 2026-10-29 : Sur [[sellerie-confort-configurateur]] — Phase 2 démarrée en local sur une sauvegarde complète de la prod demandée par Valérie (clause RGPD + anonymisation), mise en prod après bascule de l'hébergement.
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]
