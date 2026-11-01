@@ -426,6 +426,9 @@ Tout va dans `04_personal/`.
 `00_inbox/content-feed.md` est alimenté par ingestion quotidienne.
 **Ne jamais supprimer ce fichier** — mon système de syndication le vide après génération des posts.
 
+### Routines d'audit du vault
+À chaque routine d'audit, **corriger directement tout ce qui est corrigeable** (tags manquants, liens morts, doublons évidents, fiche client manquante, tâches obsolètes, formatage), puis commit + push sur la branche de travail. Ne remonter que ce qui demande un vrai jugement (priorité business, suppression, restructuration). Les règles « Quoi ne JAMAIS écraser sans confirmation » et l'exclusion de `03_knowledge/formations/` (généré par script) restent prioritaires.
+
 ### Anti-spam de questions
 Ne pas me redemander systématiquement ce que j'ai déjà explicité dans cette constitution.
 Si tu dois confirmer quelque chose de critique (delete, envoi mail) → demande.
