@@ -26,7 +26,7 @@ body_synced: 2026-10-31
 - Maquette mobile cliquable (home + fiche catamaran + réservation 3 étapes + écran concept), EN officiel + FR/DE, dossier `maquette/` du repo — **v1 livrée** (revues Finish-Gate, accessibilité, textes appliquées). `?lang=de` ouvre en allemand.
 - [[sabinas-08-message-accroche]] — WhatsApp + e-mail en allemand, avec traduction FR
 - [[sabinas-09-inventions-et-hypotheses]] — ce qui n'est pas un fait dans la maquette (à valider avec Sabina)
-- [[sabinas-07-prompt-3d-direction-artistique]] — Prompt 3D (2 transcripts + accès vault) pour la maquette concurrente `maquette-3d/` (test A/B), piste C « Horizon » retenue, en cours
+- Prompt 3D (2 transcripts + accès vault) pour la maquette concurrente `maquette-3d/` (test A/B), piste C « Horizon » retenue, en cours — *note `sabinas-07` jamais créée, lien retiré lors de l'audit du 2026-11-01*
 - Walkthrough personas après maquette : `docs/07-walkthrough-apres.md` du repo (6/10 frictions résolues, 4 partielles)
 - **v2 au niveau du skill [[maquette-prospect]] (31/10/2026)** : [[sabinas-11-note-relecture]] — **à lire en premier pour la v2** ; écart au skill, faits, hypothèses, décisions, étude de réservation dans `attachments/` et dans `docs/` du repo (`11-ecart-au-skill.md`, `faits.md`, `hypotheses.md`, `decisions.md`, `etudes/2026-10-31-sabinas-reservation.md`), `DESIGN.md` à la racine, porte qualité `gate.json` + `gate-faits.json`, tests `tests/`.
 - [[sabinas-12-dossier-envoi]] — dossier d'envoi : vidéo, avant/après, chiffres, page privée, messages J0 à J+15 (brouillons)
@@ -68,7 +68,7 @@ body_synced: 2026-10-31
 ## Journal
 - 2026-10-21 : Pattern [[stack-creation-site-web]] enrichi d'une variante « site d'activités / tourisme » (Astro + Sanity + Cloudflare + n8n + Stripe, réservation par paliers, Convex au palier 3).
 - 2026-10-21 : Maquette v1 livrée (home avec carte vedette + lignes tarifaires, fiche catamaran avec carte d'itinéraire, réservation 3 étapes, écran concept pour Sabina ; EN officiel + FR/DE ; photos client en WebP ; Motion). Revues Finish-Gate, WCAG AA et textes appliquées. Message d'accroche DE rédigé. Polar écarté (interdit les services de voyage), Stripe conservé.
-- 2026-10-21 : Prompt 3D écrit ([[sabinas-07-prompt-3d-direction-artistique]], 2 transcripts YouTube + accès vault en lecture seule) pour un test A/B : maquette parallèle `maquette-3d/` construite sans voir `maquette/`.
+- 2026-10-21 : Prompt 3D écrit (2 transcripts YouTube + accès vault en lecture seule ; note `sabinas-07` jamais créée) pour un test A/B : maquette parallèle `maquette-3d/` construite sans voir `maquette/`.
 - 2026-10-21 : Maquette v1 itérée : walkthrough après = 6/10 frictions résolues ; tarifs sports nautiques en page détail ; vedette par filtre ; renommage Private / Half-Private tour, ton luxury & exclusive ; galeries fléchées ; hero drone HD ; 7 vidéos YouTube en nocookie ; bug Motion (scale(0)) corrigé.
 - 2026-10-21 : Maquette 3D : 3 pistes en aveugle (A Bordalbum, B Carte de bord, C Horizon), Melvin choisit C (+ mode soleil clair) ; home, fiche, réservation et écran Für Sie construits ; a11y et LCP OK, finish-gate KO (1 bloquant, 8 majeurs) en correction.
 - 2026-10-21 : Maquette v1 : liens d'avis Google / Tripadvisor intégrés et centrés dans leurs cartes de note (EN/FR/DE), scripts en `?v=36`.

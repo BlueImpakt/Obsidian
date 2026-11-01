@@ -64,8 +64,11 @@ lire tout le fichier.
 
 ## Utiliser la formation Millenium pendant un travail client
 
-Deux niveaux, à choisir selon le besoin (détail complet dans
-[[03_knowledge/formations/_index|index formations]]) :
+Deux niveaux, à choisir selon le besoin (détail complet dans l'index de chaque
+module — [[03_knowledge/formations/formation-ia/_index|formation-ia]],
+[[03_knowledge/formations/formation-productivite/_index|formation-productivite]],
+[[03_knowledge/formations/formation-vente/_index|formation-vente]],
+[[03_knowledge/formations/masterclass/_index|masterclass]]) :
 
 - **Une notion stable et pédagogique** ("c'est quoi un RAG", "comment
   fonctionne le re-ranking") → les notes de synthèse dans
