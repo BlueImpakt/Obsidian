@@ -27,7 +27,7 @@ Dossier d'envoi de la maquette Sabinas Watersport Rhodos : vidéo, avant/après,
 ## Pièces
 | Pièce | Fichier |
 |---|---|
-| Vidéo verticale (téléphone, WhatsApp), 68 s, version légère | [[sabinas-video-vertical-en-leger.mp4]] |
+| Vidéo verticale (téléphone, WhatsApp), 69 s, version légère | [[sabinas-video-vertical-en-leger.mp4]] |
 | Vidéo 16:9 (ordinateur), version légère | [[sabinas-video-paysage-en-leger.mp4]] |
 | Couverture avec bouton lecture (à mettre dans l'email, cliquable vers la page) | [[sabinas-couverture-video-en.jpg]] |
 | Avant/après téléphone, premier écran | [[sabinas-accueil-telephone-ecran.jpg]] |
@@ -106,10 +106,11 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 5.0 / 5, 510 avis Google, relevé : 31/10/2026 (docs/faits.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 runs, home page · 31/10/2026 · source : avant : sortie/avant/lhr-1..3.json (envoi/mesurer_avant.sh) ; demande actuelle : formulaire libre à 4 champs, docs/01-audit-contenu.md §7 ; après : porte qualité n° 10 (sortie/porte-10/resultat.json) ; 3 étapes : contrôle tunnel ; 2 gestes : vue #bureau (« Read the request » puis « Confirm and send the 150 € link »)
+Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 runs, home page · 31/10/2026 · source : avant : sortie/avant/lhr-1..3.json (envoi/mesurer_avant.sh) ; demande actuelle : formulaire libre à 4 champs, docs/01-audit-contenu.md §7 ; après : porte qualité n° 11 (sortie/porte-11/resultat.json) ; 3 étapes : contrôle tunnel ; 2 gestes : vue #bureau (« Read the request » puis « Confirm and send the 150 € link »)
 
 - **3 steps to book from a phone, price shown upfront · 2 taps at the office: review, then send the payment link Fast booking, simple to run** : Today: a free form with name, phone, email and message; trip, date and number of guests are settled by message.
-- **Performance 34 → 85 · Accessibility 75 → 100 · Search visibility 92 → 100 scores out of 100** : Lighthouse scores of the home page: current site, then mock-up.
+- **Performance 34 → 79 · Accessibility 75 → 100 · Search visibility 92 → 100 scores out of 100** : Lighthouse scores of the home page: current site, then mock-up.
+- **3 → 1 one website for all your trips and prices** : Today: sabinas-watersport.com, catamaran-yachtsailing-rhodos.com and dolphin-tours-rhodos.com each show part of the trips and prices.
 
 **Ne pas citer :**
 - Affichage mobile : le site actuel est déjà adapté au téléphone
@@ -120,7 +121,7 @@ Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 run
 - « Site 100 % accessible » : Lighthouse ne fait que le contrôle automatique : dire « contrôle automatique »
 
 ## Vidéo : déroulé et sous-titres
-68 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
+69 s, 1080×1920 et 1920×1080, sans musique, sous-titres incrustés, aucune voix de synthèse. Piste « voix de Melvin » facultative (voir plus haut). Les versions maîtresses (≈ 20 Mo) restent dans la sortie de l'outil ; le vault garde les versions légères (≈ 8 Mo, même image, assez légères pour WhatsApp).
 
 | Début (s) | Sous-titre |
 |---|---|
@@ -132,17 +133,17 @@ Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 run
 | 15,5 | Every price once, in one table, with your terms. |
 | 20,7 | Each trip has its page: photos, video, the day stop by stop. |
 | 24,3 | Stafilia, Cave Island, Lindos, the Blue Lagoon. |
-| 29,9 | The price for the group, worked out live. |
-| 32,5 | Then a date: only days in season can be picked. |
-| 35,3 | Name and WhatsApp. Nothing to pay at this stage. |
-| 38,9 | Deposit, weather and cancellation, shown before sending. |
-| 42,6 | Sent. The guest knows what happens next, and when. |
-| 46,8 | Your side: the request arrives complete and priced. |
-| 50,9 | You read the message, already written in the guest’s language. |
-| 54,7 | Second tap: the deposit link goes out. Nothing leaves without you. |
-| 58,7 | Strong wind forecast? You decide, then the guests are told. |
-| 63,2 | Private prototype: your photos, your prices. |
-| 65,8 | Next step: 15 minutes together. |
+| 30,0 | The price for the group, worked out live. |
+| 32,6 | Then a date: only days in season can be picked. |
+| 35,4 | Name and WhatsApp. Nothing to pay at this stage. |
+| 39,0 | Deposit, weather and cancellation, shown before sending. |
+| 42,7 | Sent. The guest knows what happens next, and when. |
+| 46,9 | Your side: the request arrives complete and priced. |
+| 51,1 | You read the message, already written in the guest’s language. |
+| 54,9 | Second tap: the deposit link goes out. Nothing leaves without you. |
+| 58,9 | Strong wind forecast? You decide, then the guests are told. |
+| 63,4 | Private prototype: your photos, your prices. |
+| 66,0 | Next step: 15 minutes together. |
 
 ## Liens
 - Projet parent : [[sabinas-watersport-refonte]]

@@ -30,6 +30,7 @@ Aperçu local : `npx --yes http-server@14.1.1 maquette -p 4186 -c-1` dans le dé
 
 - **Hero plein écran** : vue drone HD du catamaran, titre posé dessus (à droite sur ordinateur, pour ne pas couvrir le bateau), deux boutons, l'itinéraire en légende et le numéro en signature.
 - **En-tête** : « Your holiday highlight », menu Boat trips · Watersports · Prices & terms · Who we are, bouton « Request », 4 langues (EN, DE, IT, FR). L'italien reste : deux plateformes indépendantes, Click&Boat et Manawa, annoncent un skipper ou une équipe qui parle italien (ta règle : une langue seulement si quelqu'un de l'équipe la parle, 2 sources au moins) ; à confirmer avec Sabina.
+- **Bandeau du prototype** (même bandeau que Jicky Marine, 01/11) au-dessus de l'en-tête : « Prototype by Blue Impakt for Sabinas Watersport Rhodos, not a live website », puis Guest view · Office view · About this prototype, la vue ouverte soulignée ; 4 langues. Il défile avec la page, le hero remplit toujours l'écran en dessous. Masqué dans la comparaison à l'aveugle.
 - **Cartes** : grille régulière de 6 cartes. **Prix et conditions** : chaque tarif une seule fois, puis les conditions.
 - **Demande en 3 étapes** (sortie et date, coordonnées, envoi), message WhatsApp déjà rédigé vers le numéro publié par Sabina.
 - **Nouveau en passe 2** :
@@ -66,7 +67,7 @@ Aperçu local : `npx --yes http-server@14.1.1 maquette -p 4186 -c-1` dans le dé
 - Accessibilité, personas, textes 4 langues, code, motion, guidelines : corrigés ou consignés dans `decisions.md`.
 - **Tunnels des concurrents à Rhodes** (`docs/etudes/2026-10-31-rhodes-tunnels-concurrents.md`) : la réservation instantanée d'un bateau privé n'existe que sur les plateformes, où Sabina vend elle-même. En direct, personne ne la propose : le tunnel par demande est au niveau du marché.
 
-## Mesures (porte qualité n° 10, 31/10/2026 : **PASS**)
+## Mesures (porte qualité n° 10, 31/10/2026 : **PASS** ; n° 11 du 01/11 avec le bandeau : **PASS**, mêmes mesures à ±0,1 s)
 
 Rapport : `sortie/porte-10/rapport.md` (hors git). Médiane de 3 passages, indice machine 1 282 à 1 688.
 
