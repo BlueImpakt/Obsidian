@@ -106,10 +106,10 @@ Melvin Perrottet, Blue Impakt
 Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 5.0 / 5, 510 avis Google, relevé : 31/10/2026 (docs/faits.md).
 
 ## Chiffres
-Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 runs, home page · 31/10/2026 · source : avant : sortie/avant/lhr-1..3.json (envoi/mesurer_avant.sh) ; demande actuelle : formulaire libre à 4 champs, docs/01-audit-contenu.md §7 ; après : porte qualité n° 11 (sortie/porte-11/resultat.json) ; 3 étapes : contrôle tunnel ; 2 gestes : vue #bureau (« Read the request » puis « Confirm and send the 150 € link »)
+Mesures : Lighthouse 12.8.2, mobile profile (simulated slow 4G), median of 3 runs, home page, both sites online · 01/11/2026 · source : avant : sortie/avant/lhr-1..3.json (envoi/mesurer_avant.sh) ; demande actuelle : formulaire libre à 4 champs, docs/01-audit-contenu.md §7 ; après : maquette en ligne, sortie/apres-enligne/lhr-1..3.json (porte qualité n° 13 PASS en local) ; 3 étapes : contrôle tunnel ; 2 gestes : vue #bureau (« Read the request » puis « Confirm and send the 150 € link »)
 
 - **3 steps to book from a phone, price shown upfront · 2 taps at the office: review, then send the payment link Fast booking, simple to run** : Today: a free form with name, phone, email and message; trip, date and number of guests are settled by message.
-- **Performance 34 → 79 · Accessibility 75 → 100 · Search visibility 92 → 100 scores out of 100** : Lighthouse scores of the home page: current site, then mock-up.
+- **Performance 34 → 94 · Accessibility 75 → 100 · Search visibility 92 → 100 scores out of 100** : Lighthouse scores of the home page: current site, then mock-up.
 - **3 → 1 one website for all your trips and prices** : Today: sabinas-watersport.com, catamaran-yachtsailing-rhodos.com and dolphin-tours-rhodos.com each show part of the trips and prices.
 
 **Ne pas citer :**
