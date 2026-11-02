@@ -45,7 +45,6 @@ body_synced: 2026-11-01
 - [ ] Premier contact (voir [[jicky-marine-refonte]])
 
 ## Journal
-- 2026-10-27 : Sur [[jicky-marine-refonte]] — rendu « plâtre blanc » de la flotte à l'échelle essayé sur Pardo 43 et Sanya 57, aperçu des 13 bateaux en cours.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — photos des cartes chargées après le hero (ff3a790), affichage principal iPhone 4G lente ~6,9 → ~6,1 s.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — flotte à l'échelle révisée : 18 bateaux en trois-quarts avant même sens, catamarans voiles affalées, photos manquantes prises sur le web.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — flotte à l'échelle intégrée à l'accueil puis remise en chantier (angles, échelles, mâts) ; couleurs des photos converties en sRGB ; dossier d'envoi prêt en brouillon (vidéo, avant/après, messages) ; porte qualité FAIL (météo absente du tunnel).
@@ -60,6 +59,7 @@ body_synced: 2026-11-01
 - 2026-10-27 : Leopard 45 : photo de Melvin en principale (1 376 px au lieu de 537), doublon retiré (2b2cf72) ; « Lagoon 420 » renommé « Lagoon 42 » sur toutes les pages (2e42e0c), identifiant interne inchangé — modèle exact à confirmer avec Jicky.
 - 2026-11-01 : Sur [[jicky-marine-refonte]] — page « Services aux yachts » ajoutée, revues corrigées, maquette 1re à l'aveugle sur 5 écrans sur 6.
 - 2026-11-02 : Sur [[jicky-marine-refonte]] — maquette servie sur jicky-marine.maquettes.blue-impakt.org, brouillon J0 régénéré
+- 2026-11-02 : Sur [[jicky-marine-refonte]] — mail J0 corrigé (image de couverture hébergée en ligne), pièces du 01/11 republiées sur l'adresse propre
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])

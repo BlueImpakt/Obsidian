@@ -25,8 +25,8 @@ body_synced: 2026-11-02
 - SEO / perf / a11y (2026-10-31) : corrections SEO du 28/10 + correctifs performance (hero rendu serveur, images via `images.esprit-docker.com`, WebP, cache statique 30 j) et accessibilité déployés en prod (commit `9c86356`) ; vérifié en ligne : 301 apex → www, sitemap 200, JSON-LD présent. LCP non remesuré après déploiement. Étape suivante : référencement (Search Console, mots-clés, contenu).
 - Avis (2026-10-31) : ligne « ★★★★★ 4,9/5 · 239 évaluations Vinted » sous le bouton d'achat de toutes les fiches (commit `ba5d513`, en ligne) ; aucun texte d'avis Vinted repris (CGU Vinted). Fondu, onglet « Avis » et page `/avis` conçus, en attente d'une collecte d'avis propres.
 - Modèle Steppe, ex-L'Essentielle (2026-10-31) : 21 photos en ligne (7 coloris × face/profil/dos ; script `scripts/essentiel-import-photos.mjs`, Orange Terracotta pour ce modèle, Orange Corail écartée côté serveur) ; bloc « Nouveau Docker » en tête de `/collection` déployé (commit `89fca47`, vérifié en ligne). Animations de la page Collection prêtes en local, non déployées.
-- Section `/guides` en MDX livrée (2026-11-02, commit `120692f`, brouillons exclus, sitemap conditionnel), vérifiée dans le navigateur ; durcissement en cours contre un guide mal formé.
-- Provenance des ventes (tâches 1 à 3) validée en relecture, non déployée : migration SQL à passer avant déploiement, point CNIL à trancher. Outil `seo-geo` cadré avec Esprit Docker en pilote (spec + 2 plans).
+- Section `/guides` en MDX livrée (2026-11-02, commit `120692f`, brouillons exclus, sitemap conditionnel), durcie contre un guide mal formé (404) ; premier guide « porter une casquette docker » en brouillon
+- Provenance des ventes (2026-11-02, commit `1094ebf`) : compteur anonyme mois × canal × page (option B, exemption CNIL, rien envoyé à Mollie), migration SQL déjà appliquée sur Neon ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; branches `feat/seo-geo-attribution-guides` et `feat/outil-seo-geo` non déployées, non poussées. Point zéro GEO : la marque n'est citée dans aucune des 32 réponses de Claude
 
 ## Décisions techniques
 - **Stack** : Next.js (App Router), déploiement Cloudflare Pages (`@cloudflare/next-on-pages`, wrangler)
@@ -57,12 +57,12 @@ body_synced: 2026-11-02
 - [ ] Mettre à jour le skill `set-image-espritdocker` (slugs avec tirets, cas sujet plus large que la cible : cible forcée + ombre atténuée avant recadrage) — accord Melvin en attente
 - [ ] Steppe vert : récupérer les bons fichiers photo auprès de Melvin (le zip Photoroom (1) est identique à l'ancien) puis relancer `--remplacer`
 - [ ] Déployer les correctifs Atelier mobile (« 66 combinaisons » centré, pastilles espacées)
-- [ ] Esprit Docker : passer la migration SQL de provenance AVANT tout déploiement ; trancher le point CNIL (consentement pour le stockage de provenance)
-- [ ] seo-geo : renseigner la clé API dans `.env` pour les appels réels de mesure GEO (Claude, DataForSEO)
+- [ ] seo-geo : vérifier le compte DataForSEO (401, compte non vérifié) ; facultatif, le premier rechargement est de 50 USD
+- [ ] Search Console : cliquer sur « Valider » (TXT DNS déjà en place), ajouter l'adresse Blue Impakt en Complet, créer le projet Google Cloud et le compte de service (clé dans `C:\Users\LENOVO\secrets\gsc-seo-geo.json`), l'ajouter en Restreint, décommenter `GSC_SERVICE_ACCOUNT_JSON` dans `seo-geo/.env`
+- [ ] Déployer les branches `feat/seo-geo-attribution-guides` (site) et `feat/outil-seo-geo` (non poussées) ; le comptage par canal ne démarre qu'au déploiement
+- [ ] Chantier marque pour les moteurs (Claude ne cite Esprit Docker dans aucune des 32 réponses) : indexation, fiche d'établissement Google, mentions externes (Vinted, Instagram, annuaires), JSON-LD Organization
 
 ## Journal
-- 2026-09-02 : Path B implémenté pour le mail "colis expédié" (voir [[esprit-docker]] pour le diagnostic complet) — `emailExpedition.ts` (envoi Brevo, même charte que la confirmation) + hook dans le webhook Sendcloud + colonne `commandes.suivi_email_envoye_at` (verrou anti-doublon). Migration exécutée et vérifiée sur Neon prod (projet `esprit-docker`, branche `production`). Commit+push `20a6fc6` sur `master`.
-- 2026-09-04 : Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1108 nœuds/1673 edges, nudge `/graphify` actif en session. `.claude/settings.json` renommé en `.claude/settings.local.json` + gitignored (le hook contient un chemin `graphify.exe` propre à la machine de Melvin, à ne jamais committer).
 - 2026-10-05 : voice.md des skills ig-* complété depuis le profil Instagram (lu dans Chrome, lecture seule) ; langue FR, CTA `DOCKER`. `/ig-profile` : 31/100. Carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction.
 - 2026-10-28 : Audit SEO (Lighthouse SEO 100, mais apex/www en double, pas de canonical ni JSON-LD, sitemap 500 intermittente) ; corrections écrites dans le repo (301 apex → www, canonicals, JSON-LD Product/Organization, sitemap à repli, noindex zones privées, titres « casquette docker ») — tsc OK, non commitées ni déployées.
 - 2026-10-31 : Audit perf/a11y (LCP mobile : accueil 3,5 s, fiche 2,7 s, collection 5,0 s) et correctifs (hero rendu serveur, images via images.esprit-docker.com, WebP, cache 30 j, a11y) ; flou du hero adouci (2 s → 4 s). Tout déployé avec les corrections SEO du 28/10 : commit 9c86356, vérifié en ligne (301 apex → www, sitemap 200, JSON-LD).
@@ -76,6 +76,8 @@ body_synced: 2026-11-02
 - 2026-11-02 : Revue finale branche attribution + /guides : défaut critique Safari < 16.4 (lookbehind regex) corrigé en vague finale ; « Steppe » = modèle Origine déjà au sitemap ; consentement CNIL (provenance) à trancher avant déploiement
 - 2026-11-02 : Vague finale de corrections de la revue de branche terminée (lookbehind regex supprimé pour Safari < 16.4, 28 tests verts, build propre), non poussée ; reste migration SQL provenance et point CNIL avant déploiement
 - 2026-11-02 : pilote de l'outil seo-geo sur Esprit Docker : audit technique rangé (images mobile lourdes, même méta sur les 13 fiches, Livraison/Entretien invisibles dans le HTML initial), brief du guide « porter-casquette-docker » audité et corrigé, rédaction à venir
+- 2026-11-02 : Provenance des ventes passée en compteur anonyme (option B, exemption CNIL, rien envoyé à Mollie, opposition dans « Gérer mes cookies », textes légaux réécrits ; commit 1094ebf) ; migration SQL appliquée sur Neon avec compte de lecture seule `seo_geo_lecture` ; point zéro GEO : Claude ne cite Esprit Docker dans aucune des 32 réponses, mesure sur Sonnet 5.5 (~1,70 $/mois) ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; premier guide « porter une casquette docker » en brouillon ; branches non déployées
+- 2026-11-02 : Search Console : propriété Domaine validée en DNS, compte de service `seo-geo` créé et ajouté, clé rangée hors repo ; collecte GSC en 403 tant que l'API n'est pas activée sur le projet `seo-geo-513517`. Positions Google mesurées : n°1 sur la marque seule, absent du top 10 sur 21 autres mots-clés.
 
 ## Liens
 - Client : [[esprit-docker]]

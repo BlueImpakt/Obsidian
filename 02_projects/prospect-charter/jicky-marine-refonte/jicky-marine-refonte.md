@@ -81,7 +81,6 @@ body_synced: 2026-11-01
 - [ ] Services aux yachts : faire confirmer par Jicky ce que transporte une livraison VIP et les conditions de règlement des livraisons (marqués « À confirmer » sur la page)
 
 ## Journal
-- 2026-10-27 : Flotte à l'échelle jugée insuffisante par Melvin (angles incohérents, objets parasites, Sanya 57 plus petit que Lagoon 55, mâts coupés) : reprise lancée avec photos internet au bon angle, gréement redessiné et échelle des voiliers calée sur la tête de mât.
 - 2026-10-28 : Flotte à l'échelle refaite (acf918c) : 18 photos internet en trois-quarts avant, caméra basse (sous-agents de recherche, cahier research/refs-internet/CAHIER-PHOTOS.md), gréement redessiné au-dessus de la bôme d'après des points relevés sur chaque photo, mâts entiers à la hauteur officielle, parasites et lettrage gommés. Sanya 57 désormais plus long que le Lagoon 55 (Lagoon calé sur sa coque de 16,56 m). Identifications : « Sunseeker 52 » = Camargue 50, « Sunseeker 60 » = Predator 56 2000-2004 — à confirmer avec Jicky. Leçon : les photos de drone gonflent la hauteur des bateaux (Leopard 53 : 8,7 m mesurés pour 5,7 m) : exiger une caméra basse.
 - 2026-10-27 : Profils couleur des photos convertis en sRGB (9c8a98b, 36 fichiers, couleurs fidèles au site d'origine) ; message de la veille corrigé à 390 px (c994c7d) ; dossier d'envoi créé ([[jicky-02-dossier-envoi]] : vidéos 75 s, avant/après, page privée, brouillons J0-J+15, rien envoyé) ; porte qualité FAIL : météo absente du tunnel avant l'envoi alors que les CGV ont un article météo.
 - 2026-10-28 : Angles relus : 7 bateaux encore trop de profil, refaits via Nano Banana à 30° (dossier research/nano-banana-30deg, intégration en cours) ; catamarans à voile réduits au mât, à l'étai avec génois enroulé et à la bôme. Fiche chiffres : performance, accessibilité, référencement dans une carte (75 → 82, 60 → 100, 82 → 100 ; maquette-outils a83025d).
@@ -96,6 +95,7 @@ body_synced: 2026-11-01
 - 2026-11-02 : Hébergement sur adresse propre https://jicky-marine.maquettes.blue-impakt.org (page privée /p/), plus de lien *.vercel.app dans les messages (anti-spam) ; republié avec la vidéo (73,7 s) et l'avant/après refaits le 01/11 ; brouillons J0-J+15 et note d'envoi régénérés.
 - 2026-11-01 : Page « Services aux yachts » EN/FR (livraisons, déchets, fret Miami sur devis, formulaire à estimation, vue bureau) et navigation revue ; revues textes/a11y/Finish-Gate corrigées (a42bbdc, 31 contrôles OK) ; comparaison à l'aveugle : 1re sur 5 écrans sur 6, 2e sur la fiche 1 440 px derrière Edmiston ; vidéo, avant/après et captures refaits.
 - 2026-11-02 : Maquette basculée sur jicky-marine.maquettes.blue-impakt.org (plus de lien vercel.app dans l'envoi, anti-spam) ; brouillon J0 régénéré avec la ligne de présentation
+- 2026-11-02 : Brouillon mail J0 : image de couverture pointée vers sa copie en ligne (le chemin localhost cassait l'image une fois collée dans Outlook) ; méthode conseillée : insérer l'image depuis le fichier puis lien Ctrl+K vers la page privée ; vidéo et avant/après du 01/11 republiées sur l'adresse propre
 
 ## Liens
 - Projet parent : [[prospect-charter]]

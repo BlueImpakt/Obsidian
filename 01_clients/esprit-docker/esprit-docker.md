@@ -29,16 +29,15 @@ body_synced: 2026-10-05
 - Site e-commerce Next.js pour vente de chapeaux, avec gestion avancée de variantes produit (photos par face/profil, motifs, détourage)
 
 ## Devis / propositions
--
+- 2026-11-02 : proposition SEO/GEO en brouillon, [[proposition-seo-geo]] (valorisation 5,5 j = 1 925 € HT ; recommandé : 700 € HT de mise en place au tarif pilote + 90 € HT / mois sur 3 mois d'essai)
 
 ## Next actions
 - [ ] Test end-to-end du flux Brevo « expédié » (commande + paiement + marquage expédiée + annulation Sendcloud) — Melvin
 - [ ] Valider le carousel Instagram « Composez votre docker »
 - [ ] Ajouter `.claude/settings.local.json` au `.gitignore`
+- [ ] Envoyer à Morgane [[referencement-google-ia]] et récupérer ses réponses (phrase de marque, nom et photo, année de création, comptes existants, questions du guide)
 
 ## Journal
-- 2026-09-02 : Vérif de la dernière piste Sendcloud faite — aucune case "permission de l'intégration" n'existe sur ce type d'intégration API (les "3 endroits" de la doc Sendcloud valent pour les intégrations plugin type Shopify, pas pour une intégration API brute). Config panel donc intégralement correcte des deux côtés (toggle global, templates, pays, webhook) et pourtant 0 email en 30 jours — cause probablement hors de contrôle (limitation d'offre ou colis API non branchés au moteur d'email côté serveur Sendcloud). **Path B (Brevo) implémenté et déployé** : voir [[esprit-docker-site]] pour le détail technique. Melvin devra faire le test end-to-end lui-même (commande + paiement + marquage expédiée + annulation Sendcloud = actions sortantes que l'agent ne déclenche pas). Confusion réglée en passant : les expéditions test "Test Kunde" du 27/08 venaient d'un script d'une session Claude Code antérieure avec accès à un `.env` local (clés API Sendcloud), pas de cette session.
-- 2026-09-04 : Sur [[esprit-docker-site]] — Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1108 nœuds/1673 edges, nudge `/graphify` actif en session. Détails dans la fiche projet.
 - 2026-10-05 : Sur [[esprit-docker-site]] — profil Instagram @esprit_docker audité (31/100 : pas d'épinglés ni highlights, bio tronquée en anglais, dernier post il y a 32 jours) ; voice.md des skills ig-* renseigné (FR, CTA mot-clé `DOCKER`) ; carousel « Composez votre docker » rédigé, en attente de validation.
 - 2026-10-28 : Sur [[esprit-docker-site]] — audit SEO et corrections écrites (301 apex → www, canonicals, JSON-LD, sitemap), non déployées.
 - 2026-10-31 : Sur [[esprit-docker-site]] — corrections SEO, performance et accessibilité déployées en prod (commit 9c86356) ; prochaine étape : référencement (Search Console sur le compte Google du client, mots-clés, contenu).
@@ -52,7 +51,11 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — revue finale attribution/guides : bug Safari ancien corrigé, CNIL (provenance) à trancher avant déploiement
 - 2026-11-02 : Sur [[esprit-docker-site]] — corrections finales de la revue de branche (compatibilité Safari), prêt à déployer après migration SQL et point CNIL
 - 2026-11-02 : Sur [[esprit-docker-site]] — audit technique SEO/GEO du pilote seo-geo rangé, premier guide en cours de brief
+- 2026-11-02 : Sur [[esprit-docker-site]] — Provenance des ventes passée en compteur anonyme (option B, exemption CNIL, rien envoyé à Mollie, opposition dans « Gérer mes cookies », textes légaux réécrits ; commit 1094ebf) ; migration SQL appliquée sur Neon avec compte de lecture seule `seo_geo_lecture` ; point zéro GEO : Claude ne cite Esprit Docker dans aucune des 32 réponses, mesure sur Sonnet 5.5 (~1,70 $/mois) ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; premier guide « porter une casquette docker » en brouillon ; branches non déployées
+- 2026-11-02 : Sur [[esprit-docker-site]] — Search Console branchée à l'outil seo-geo (propriété Domaine validée, compte de service prêt, API à activer) ; positions Google : n°1 sur la marque, absent du top 10 ailleurs.
+- 2026-11-02 : Sur [[esprit-docker-site]] — document client [[referencement-google-ia]] (langage simple, base de facturation du SEO/GEO) ; plan entité de marque codé sur la branche (`OnlineStore` + `sameAs`, descriptions à jour, IndexNow, commit e749994) ; compte Merchant Center créé.
 
 ## Liens
 - Projets : [[esprit-docker-site]]
+- Livrable client, référencement Google et IA : [[referencement-google-ia]]
 - Patterns utilisés : [[pipeline-assets-produit-ecommerce]]
