@@ -42,11 +42,56 @@ Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 | Sauvegardes | Faible | o2switch (JetBackup) + une sauvegarde externe en plus |
 | Hébergement o2switch, cPanel, PHP | Faible à moyenne | Rapport système déjà lu ; support o2switch réactif |
 | Cookies (Complianz), courriels (WP Mail SMTP), DNS chez OVH | Faible à moyenne | Réglages, pas de code |
-| **Code sur mesure VIMAWEB** | **Moyenne** | Déjà lu en partie en Phase 1 : `woo-payline-caution`, `product-manufacturing-label`, `sc-order-note`, modèles WCPDF dans Divi Child. À documenter à la reprise |
+| **Code sur mesure (auteurs à confirmer, voir §3 bis)** | **Moyenne** | Déjà lu en partie en Phase 1 : `woo-payline-caution`, `product-manufacturing-label`, `sc-order-note`, modèles WCPDF dans Divi Child. À documenter à la reprise |
 | **Paiements** (Payline, Alma, Cofidis) et DPD | **Moyenne, risque élevé** | Une panne coûte des ventes : commande test après chaque mise à jour |
 | **Incident de sécurité** (extension compromise) | **Élevée si avérée** | Seul vrai manque d'expérience |
 
 Constats déjà connus, à reprendre dans l'état des lieux : extension compromise **WP Logo Showcase Responsive Slider** active en prod ([[pre-phase-1]], alerte du 14/10) ; HPOS bloqué (Shipping Method Description) ; réglages Complianz perdus et WP Consent API ajouté (mail de VIMAWEB du 29/10) ; GA4 dépose des cookies malgré le refus ([[phase-1]] §12) ; page de sauvegarde Divi indexée (audit SEO du 27/10).
+
+## 3 bis. Constats du 02/11 (Santé du site, facture VIMAWEB, licences)
+
+Sources : export Outils → Santé du site → Info (02/11, 10:41), photo de la facture VIMAWEB, vérifications dans l'admin. Rien n'a été modifié sur le site.
+
+### Facture VIMAWEB : « Maintenance – Formule Premium »
+- **120 € HT/mois** (144 € TTC), prélèvement bancaire. Il y a donc bien une relation commerciale avec VIMAWEB : **devis ou conditions d'origine à demander à Valérie** (durée d'engagement, reconduction, préavis). Valérie dit ne pas avoir de contrat écrit ni avec VIMAWEB ni avec ARTEO : à confirmer.
+- Inclus : hébergement et nom de domaine, réinstallation, sauvegardes quotidienne + mensuelle (autre datacenter), mises à jour WordPress et extensions, licences, Google Analytics, assistance 30 min/mois, **6 h/an de modifications et de contenu**, demandes sous 48 h.
+- **Comparaison avec l'offre (175 € HT/mois)** : l'offre n'inclut ni hébergement, ni licences, ni les 6 h/an. L'écart réel est plus grand que 55 €. À chiffrer avant la visio : coût annuel de l'hébergement o2switch et des licences.
+- **Incohérences** : la facture cite Elementor Pro, Astra, WP Forms, WP Rocket et Cleantalk. **Elementor Pro, Astra et WP Rocket sont absents du site** (cache = LiteSpeed Cache gratuit, thème = Divi). « Nom de domaine inclus » : le domaine est chez OVH, au nom de Valérie. À clarifier par écrit, sans accuser.
+- Illisible sur la photo : date d'émission, numéro, période, durée d'engagement, taux des pénalités. Échéance lue : 18/11/2026, à confirmer.
+
+### Licences et titulaires
+| Élément | Constat | Titulaire |
+|---|---|---|
+| Divi 4.27.8 | Nom d'utilisateur et clé masqués dans Divi → Options → Mises à jour | Inconnu |
+| SEOPress PRO 10.3 | Clé active | Inconnu |
+| WPForms 2.0.3.1 | Licence **Elite** valide (la plus chère) pour **1 formulaire**, 2 278 entrées enregistrées | Inconnu |
+| CleanTalk 6.90 | Abonnement actif, compteur 27 466 spams bloqués | **VIMAWEB** (confirmé) |
+| WP Umbrella (extension + mu-plugin), Patchstack (mu-plugin) | Monitoring/sécurité, accès distants probables | Probablement VIMAWEB, à confirmer |
+
+Le titulaire n'est visible nulle part dans WordPress : reçus dans les mails de Valérie (cherche « elegant themes », « seopress », « wpforms », « cleantalk ») ou demande écrite à VIMAWEB via Valérie (compte, date de renouvellement, coût annuel). Le titulaire doit être connu pour chaque licence avant la reprise.
+
+### Auteurs du code sur mesure (en-têtes)
+| Élément | Auteur déclaré |
+|---|---|
+| Notes de commande 1.1.0 | Vimaweb |
+| SC - Export PDF Factures 1.0.0 | Vimaweb |
+| Woo Payline Caution 1.0 | Vimaweb |
+| mu-plugin « Active Plugins » 1.0 | ARTEO Digital (à lire : un mu-plugin ne se désactive pas depuis l'admin) |
+| SC Notice Carbone 1.0.0 | « Sellerie Confort » |
+| Divi Child 1.0.0 | « Anonyme » |
+| Product Manufacturing Labels 1.0, `fix-wapf-preview.php`, `_patchstack.php` | Non renseigné |
+| Purge + Tag « Configurable » 1.2.0 | « Vous » |
+
+Un en-tête n'est pas une preuve de propriété. Pour les droits (cession écrite), il faut les devis et factures de chaque module, ou une réponse écrite de VIMAWEB et d'ARTEO via Valérie.
+
+### Autres constats techniques
+- **Extension compromise toujours active** : WP Logo Showcase Responsive Slider (Essential Plugin) 3.8.7.1. Priorité de sécurité n° 1 de la reprise (voir §4).
+- **Configurateur** : prod en 1.7.6, **2.0.1 disponible** (testé : 2.0.0). Relire le journal des modifications et relancer les tests avant la mise en production.
+- **Mises à jour** : désactivées partout sauf WPForms ; une douzaine d'extensions en retard (écarts mineurs) et Divi 4.27.8 → 4.27.9. SEOPress 10.4 / SEOPress PRO 10.3 : versions décalées.
+- **Poids** : 17,9 Go (dont 15 Go d'images, base 1,47 Go) : impact sur sauvegardes externes et migration.
+- **Hébergement** : PHP 8.3.36, LiteSpeed, MariaDB 11.4.13, WordPress 7.1.4, 2 856 utilisateurs.
+- **À nettoyer plus tard (avec sauvegarde)** : DPD France 5.3.3, APF Pro et Product Manufacturing Labels inactifs ou en doublon.
+- **WpTiger (o2switch)** actif en production.
 
 ## 4. Les trois points à préparer
 
@@ -57,7 +102,8 @@ Constats déjà connus, à reprendre dans l'état des lieux : extension compromi
 ## 5. Déroulé de la reprise (checklist)
 
 ### Avant de signer
-- [ ] Réponse de Valérie : préavis du contrat VIMAWEB, titulaire du compte o2switch et des licences (Divi, SEOPress Pro, autres), droits sur le code sur mesure (utilisation et modification par un autre prestataire)
+- [ ] Réponse de Valérie : devis ou conditions d'origine de la facture VIMAWEB (engagement, reconduction, préavis éventuels ; pas de contrat écrit annoncé avec VIMAWEB ni ARTEO), titulaire du compte o2switch et des licences (Divi, SEOPress Pro, WPForms Elite, CleanTalk = VIMAWEB, WP Umbrella, Patchstack), auteur et droits de chaque module sur mesure (§3 bis)
+- [ ] Chiffrer l'offre à périmètre égal avec la facture VIMAWEB (120 € HT, hébergement, licences, 6 h/an) avant d'en discuter avec Valérie
 - [ ] RC pro : couverture maintenance d'un site marchand
 - [ ] Contrat : reprise + maintenance + clause garantie Phase 2 + exclusions + jours ouvrés + nettoyage de compromission hors forfait + cession du code Phase 2 au paiement complet
 - [ ] Renfort WordPress identifié
@@ -96,6 +142,8 @@ Constats déjà connus, à reprendre dans l'état des lieux : extension compromi
 
 ## 7. Questions ouvertes
 
-- Combien la cliente paie VIMAWEB aujourd'hui, et pour quoi (point de comparaison)
+- ~~Combien la cliente paie VIMAWEB aujourd'hui~~ → 120 € HT/mois, voir §3 bis. Reste : période d'engagement et ce que la facture inclut réellement (licences citées absentes du site)
 - Le site est-il dans un compte o2switch dédié ou dans un compte d'agence de VIMAWEB
+- Titulaire de chaque licence (Divi, SEOPress Pro, WPForms Elite, WP Umbrella, Patchstack) et accès distants VIMAWEB à retirer à la reprise
+- Qui a écrit chaque module sur mesure et dans quel cadre (devis, factures) ; contenu du mu-plugin « Active Plugins » (ARTEO)
 - Réaction de VIMAWEB à la fin du contrat (délais de transfert, rétention des accès) : prévoir que Valérie fixe une date ferme par écrit
