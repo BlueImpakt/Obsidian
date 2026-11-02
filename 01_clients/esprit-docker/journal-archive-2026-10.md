@@ -11,3 +11,4 @@ Entrées archivées automatiquement (seuil `## Journal` > 15, voir CLAUDE.md). H
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle L'Essentielle mis en ligne (photos normalisées, couleur Orange Terracotta) ; bloc « Nouvelle collection » prêt, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — 21 photos L'Essentielle (7 couleurs, 3 vues) en ligne ; en-tête « NOUVELLE / COLLECTION » en diagonale refait, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle Steppe (ex-L'Essentielle) en ligne, bloc « Nouveau Docker » sur /collection déployé (89fca47).
+- 2026-10-31 : Sur [[esprit-docker-site]] — section Steppe sur l'accueil, finitions fiche produit, Atelier sans Steppe, déployé (`a01e609`)

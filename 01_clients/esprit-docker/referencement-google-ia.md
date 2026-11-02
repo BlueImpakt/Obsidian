@@ -58,7 +58,7 @@ Les chiffres viennent directement de Google et des outils de mesure. Le rapport 
 
 - **Une description propre à chaque casquette** : les 73 pages produit avaient le même texte de présentation dans les résultats Google. Chacune a maintenant le sien (modèle, coloris, prix, finition).
 - **Les informations Livraison et Entretien** des fiches produit sont maintenant lues par Google et les IA ; elles étaient invisibles pour eux.
-- **Une « carte d'identité » de la marque**, cachée dans le code du site : elle dit aux moteurs que le site est une boutique en ligne, ce qu'elle vend, et la relie à votre compte Instagram (le lien vers Vinted va être retiré, la note peut rester en texte : vous gardez les deux séparés). C'est ce qui aide un moteur à comprendre que toutes ces pages parlent de la même marque.
+- **Une « carte d'identité » de la marque**, cachée dans le code du site : elle dit aux moteurs que le site est une boutique en ligne, ce qu'elle vend, et la relie à votre compte Instagram (Vinted n'apparaît plus ni en lien ni en mention : vous gardez les deux séparés). C'est ce qui aide un moteur à comprendre que toutes ces pages parlent de la même marque.
 - **Des descriptions à jour** : le site annonçait encore « 6 créations uniques » alors que la collection compte 13 modèles.
 - **Une mise à jour express des moteurs** : à chaque mise en ligne, Bing (sur lequel s'appuie notamment ChatGPT) est prévenu des pages nouvelles ou modifiées, au lieu d'attendre son passage.
 
@@ -110,7 +110,9 @@ Reçu le 2 novembre 2026 :
 5. **Vos comptes et ventes en personne** : Vinted (que vous gardez séparé du site), dépôt-vente chez Ornamenta Tattoo Shop à Langon, espace d'exposition chez Klay Store à Dax, un événement à VB (Langon) en 2026 pour Octobre rose. Aucun compte Pinterest ni Etsy pour l'instant.
 6. **Des contacts presse ou blogs** : aucun pour l'instant, nous ferons le repérage de notre côté.
 
-Il nous reste une seule question, facultative : **l'âge de vos clients**, en gros (vous nous avez dit qu'ils viennent de toute la France et d'Europe).
+7. **L'âge de vos clients** : de 20 à 50 ans environ, de toute la France et d'Europe.
+
+Plus aucune question en attente.
 
 ## Prochaines étapes
 
@@ -153,13 +155,16 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Choix du lieu dans la présentation de la marque : « Bordeaux » partout, « Sud-Ouest » seulement pour éviter de répéter « Bordeaux » dans un même texte (décision de Melvin).
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
 - 2 novembre : mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun, une discussion neuve par question, sans compte) : Esprit Docker est cité 2 fois sur 30, uniquement quand la question contient son nom ; les marques recommandées à la place sont relevées pour guider la suite.
-- Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Un second échange a réglé le reste : dépôt-vente à Langon, espace d'exposition à Dax, pas de compte Pinterest ni Etsy, pas de contact presse, « brodé à Bordeaux » partout. Seul l'âge de vos clients reste à préciser (facultatif).
+- Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Un second échange a réglé le reste : dépôt-vente à Langon, espace d'exposition à Dax, pas de compte Pinterest ni Etsy, pas de contact presse, « brodé à Bordeaux » partout. L'âge de vos clients est précisé (20 à 50 ans) : plus aucune question en attente.
 - Corrections du site mises en ligne : descriptions des fiches, Livraison et Entretien lisibles, carte d'identité de la marque, comptage anonyme des ventes par canal avec le bouton « M'opposer au comptage », textes légaux à jour. Vérifié en ligne sur l'accueil et une fiche produit. La rubrique « Guides » reste cachée tant qu'aucun guide n'est publié.
 - Bing prévenu des 19 pages du site (accusé de réception reçu).
 - Pages « À propos » et « Questions fréquentes » construites : qui fait les casquettes, où et comment, ce que la marque n'est pas (ni la marque Esprit, ni un bonnet docker) ; 13 questions (prix, matière, taille, entretien, livraison, retours, boutiques). Vérifiées (lisibles par Google et les IA, accessibilité). Elles restent cachées jusqu'à vos réponses à 6 questions (votre nom sur la page, année de création, lieu de l'atelier, broderie du logo, matière des bijoux, type de fermeture).
 - Google Merchant Center vérifié : plus aucun produit refusé, les 6 casquettes trouvées par Google sur le site sont en cours d'examen. Deux réglages à corriger pour coller aux conditions de vente : les retours sont déclarés gratuits (ils sont à la charge du client, sous 14 jours), et la livraison n'indique que Colissimo à 8,50 €, offerte dès 99,98 € (le point relais à 3,50 € manque, et la livraison est offerte dès 100 €).
 - Pages « À propos » et « Questions fréquentes » complétées avec vos réponses (votre nom, création en 2025, atelier à Gauriaguet, logo brodé à Bordeaux, bijoux en métal, boucle réglable, boutiques de Dax et Langon) et prêtes à mettre en ligne : vérifiées sur une copie du site, notes maximales en accessibilité et en référencement. Vinted n'y apparaît pas, comme vous le souhaitez.
-- Présentation de la marque corrigée sur le site (carte d'identité pour Google et les IA, descriptions de l'accueil et de la collection) : « logo brodé à Bordeaux, bijou cousu à la main en Gironde », au lieu de « assemblées à Bordeaux ». Prête pour la prochaine mise en ligne ; trois phrases de la page d'accueil restent à aligner.
+- Présentation de la marque corrigée sur le site (carte d'identité pour Google et les IA, descriptions de l'accueil et de la collection) : « logo brodé à Bordeaux, bijou cousu à la main en Gironde », au lieu de « assemblées à Bordeaux ». Prête pour la prochaine mise en ligne ; les textes de la page d'accueil restent tels quels (choix validé).
+- Vos réponses intégrées au guide « Comment porter une casquette docker » et au profil de la marque ; l'âge de vos clients (20 à 50 ans) ajouté.
+- Guide « Comment porter une casquette docker » mis en ligne, avec la rubrique « Guides » ; Bing prévenu de la nouvelle page.
+- Vinted retiré du site, comme vous le souhaitez : plus aucune mention ni aucun lien sur les fiches produit ni dans la carte d'identité de la marque. Vérifié en ligne sur l'accueil, une fiche produit, le guide, « À propos » et « Questions fréquentes ».
 - Google Merchant Center : conditions de retour corrigées (14 jours, produit neuf, retour par la poste à la charge du client, remboursement sous 14 jours), elles étaient déclarées gratuites et limitées aux produits défectueux.
 - Google Merchant Center : livraison corrigée, offerte dès 100 € et non plus 99,98 €, et point relais Mondial Relay à 3,50 € ajouté à côté de Colissimo à domicile à 8,50 €.
 - Google Merchant Center : liste des 73 casquettes envoyée à Google pour la France, acceptée sans aucune erreur ; Google l'examine (jusqu'à 3 jours ouvrés).
@@ -169,6 +174,7 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Search Console : plan du site (21 pages) envoyé à Google ; test en direct réussi, Google peut le lire. Le premier passage de Google prend en général quelques heures à quelques jours.
 - Google Merchant Center : ancienne liste envoyée à la main retirée ; seule reste la lecture automatique sur le site (73 casquettes, aucun problème signalé).
 - Google Merchant Center : photos et informations des casquettes vérifiées une à une face aux règles de Google (format et taille des photos, casquettes « unisexe » et « adulte », informations obligatoires en France) : tout est conforme. Aucun produit refusé à ce stade.
+- Annuaires, Instagram et Pinterest : tous les textes réécrits sur la phrase de marque retenue (« logo brodé à Bordeaux, bijou cousu à la main en Gironde », par Morgane Le Mouee) au lieu de « cousu à Bordeaux ». Le nom de Morgane peut apparaître. Comme la page À propos du site indique des bases fabriquées en Chine, deux annuaires sont écartés plus fermement (métiers d'art, Marques de France).
 
 **En cours**
 

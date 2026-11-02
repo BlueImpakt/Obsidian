@@ -49,7 +49,7 @@ Une fois les réponses reçues : mettre à jour `profil.md` (retirer les marqueu
 3. Aucun compte Pinterest ni Etsy.
 4. Aucun contact presse ou blog.
 5. « Brodé à Bordeaux » ; « Sud-Ouest » admis pour éviter de répéter Bordeaux dans un même contenu.
-Bonus (âge des clients) : pas de réponse, marqueur laissé dans `profil.md`.
+Bonus (âge des clients) : 20 à 50 ans, reporté dans `profil.md` (plus aucun marqueur de tranche d'âge).
 
 Reporté dans `profil.md`, le plan (`2026-11-plan-entite.md`), `referencement-google-ia.md` (section « Ce dont nous avons besoin » et journal de bord).
 À faire côté code du site : fiches produit, « brodé dans le Sud-Ouest » devient « brodé à Bordeaux ».

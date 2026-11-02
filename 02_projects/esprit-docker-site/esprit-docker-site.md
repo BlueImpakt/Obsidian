@@ -50,7 +50,6 @@ body_synced: 2026-11-02
 - [ ] Mise à jour de sécurité Next.js bloquée : `next-on-pages` plafonne à 15.5.2, correctifs à partir de 15.5.15 — trouver une voie (migration adaptateur Cloudflare)
 - [ ] Référencement : stratégie mots-clés (« casquette docker brodée », « casquette marin »…), concurrents FR, pages/contenus à créer, maillage, sources de backlinks
 - [ ] Avis : collecter les avis propres du site (e-mail Brevo quelques jours après livraison → formulaire → table Neon → modération admin) pour alimenter le fondu, l'onglet « Avis » et la page `/avis` déjà conçus (spec `docs/superpowers/specs/2026-10-31-avis-vinted-design.md`)
-- [ ] Google Shopping : répondre à la session dédiée (état des comptes Merchant Center / Search Console), puis flux produits automatique depuis Neon
 - [ ] Mettre à jour la note Vinted affichée (`src/lib/avisVinted.ts`) de temps en temps
 - [ ] L'Essentielle : valider la mise en corbeille R2 des PNG d'origine et versions intermédiaires inutilisées (`corbeille/produits/l-essentiel/…`) ; retirer le dos partagé en double sur Orange Terracotta si confirmé
 - [ ] L'Essentielle : redirection de l'ancienne adresse `/l-essentiel/…` / `/l-essentielle/…` (404) vers `/collection/steppe` si des liens ont été partagés
@@ -59,19 +58,15 @@ body_synced: 2026-11-02
 - [ ] Déployer les correctifs Atelier mobile (« 66 combinaisons » centré, pastilles espacées)
 - [ ] seo-geo : vérifier le compte DataForSEO (401, compte non vérifié) ; facultatif, le premier rechargement est de 50 USD
 - [ ] Search Console : cliquer sur « Valider » (TXT DNS déjà en place), ajouter l'adresse Blue Impakt en Complet, créer le projet Google Cloud et le compte de service (clé dans `C:\Users\LENOVO\secrets\gsc-seo-geo.json`), l'ajouter en Restreint, décommenter `GSC_SERVICE_ACCOUNT_JSON` dans `seo-geo/.env`
-- [ ] Déployer les branches `feat/seo-geo-attribution-guides` (site) et `feat/outil-seo-geo` (non poussées) ; le comptage par canal ne démarre qu'au déploiement
 - [ ] Chantier marque pour les moteurs (Claude ne cite Esprit Docker dans aucune des 32 réponses) : indexation, fiche d'établissement Google, mentions externes (Vinted, Instagram, annuaires), JSON-LD Organization
-- [ ] Fusionner et déployer `feat/flux-merchant` (8609d8b) et `feat/pages-a-propos-faq` (125cf8d), puis `npm run indexnow`
-- [ ] Arbitrer la phrase de marque « assemblées à Bordeaux » (accueil, layout, `DESCRIPTION_MARQUE`) vs atelier de Gauriaguet
-- [ ] Guide « porter une casquette docker » : passer `brouillon: false`, commiter et déployer
 - [ ] Annuaires : inscrire Créateurs Français et LesCréatrices.fr, créer le compte Pinterest (rien inscrit à ce jour)
 - [ ] Aligner la phrase de marque dans `PageAccueil.tsx` (« Assemblé à la main à Bordeaux », « Pose et finition main à Bordeaux », « …dans le Sud-Ouest à Bordeaux ») une fois la modification en cours terminée, puis sur Instagram, annuaires et Merchant Center
-- [ ] Demander le feu vert à Melvin puis pousser sur `master` le déploiement groupé (`58f1097` : redirection steppe → origine, À propos/FAQ, flux Merchant), puis `npm run indexnow`
 - [ ] Poser à Morgane : qui fabrique les casquettes de base et où ; accepte-t-elle que son nom soit public
+- [ ] Merchant Center : vérifier l'approbation des 73 produits vers le jeudi 5/11 (tâche programmée à 10 h), corriger le flux si refus
+- [ ] Vérifier en ligne `/guides/porter-casquette-docker` puis `npm run indexnow` pour le guide
+- [ ] Retirer l'URL Vinted de `PROFILS_MARQUE` (`src/lib/seo.ts:21`) et du test `seo.test.ts`, si Melvin confirme ; vérifier la formule « ancienne boutique » de la note Vinted
 
 ## Journal
-- 2026-10-31 : Modèle L'Essentielle renommé « Steppe » (Orange Corail écartée côté serveur), bloc « Nouveau Docker » de /collection finalisé et déployé (89fca47, vérifié en ligne) ; descriptions des 13 modèles mises à jour ; animations de la page Collection prêtes, non déployées.
-- 2026-10-31 : Section « Nouveau docker » Steppe sur l'accueil, finitions fiche produit (logo, note Vinted, bouton retour), prix minimum corrigé, Steppe/Terracotta retirés de l'Atelier — déployé (`0be017b`, `c37a609`, `a01e609`) ; correctifs Atelier mobile prêts en local
 - 2026-11-02 : Outil SEO/GEO `seo-geo` cadré avec Esprit Docker en pilote (spec + 2 plans) ; côté site, provenance des ventes (tâches 1 à 3) validée en relecture, section `/guides` en cours ; migration à passer avant déploiement, point CNIL à trancher
 - 2026-11-02 : Section `/guides` en MDX livrée (commit 120692f, brouillons exclus, sitemap conditionnel), vérifiée dans le navigateur ; durcissement en cours contre un guide mal formé.
 - 2026-11-02 : Revue finale branche attribution + /guides : défaut critique Safari < 16.4 (lookbehind regex) corrigé en vague finale ; « Steppe » = modèle Origine déjà au sitemap ; consentement CNIL (provenance) à trancher avant déploiement
@@ -85,6 +80,8 @@ body_synced: 2026-11-02
 - 2026-11-02 : Bing Webmaster Tools branché (import Search Console, sitemap soumis à la main, accueil indexé) ; Merchant Center : retours, livraison et flux de 73 produits importés, en attente d'examen Google ; GEO manuel remesuré question par question (ChatGPT fait, Gemini en cours)
 - 2026-11-02 : Morgane personnalise des casquettes de base (jamais « fabrique ») : formules corrigées dans les documents annuaires, profil et plan d'entité ; lieu de marque = « Bordeaux » par défaut, « Sud-Ouest » pour éviter la répétition.
 - 2026-11-02 : GEO manuel final (question par question, sans compte) : marque citée 2 fois sur 30, seulement à la q10 contenant son nom ; redirection 301 steppe → origine testée (`2bb3abe`, branche `fix/redirection-steppe`), déploiement groupé avec À propos/FAQ et flux Merchant en attente du feu vert.
+- 2026-11-02 : Lot groupé en prod (`58f1097` : À propos/FAQ, flux Merchant 73 produits, redirection Steppe → Origine), vérifié, IndexNow envoyé, sitemap soumis à la Search Console ; Merchant Center lit désormais le flux du site chaque nuit (flux manuel supprimé), approbation à vérifier le 5/11.
+- 2026-11-02 : Guide « porter une casquette docker » publié et poussé sur `master` (`4dc44ad`) ; atelier à Gauriaguet, logo brodé à Bordeaux, base fabriquée en Asie ; décision : plus aucun lien Vinted (sameAs inclus), à confirmer.
 
 ## Liens
 - Client : [[esprit-docker]]

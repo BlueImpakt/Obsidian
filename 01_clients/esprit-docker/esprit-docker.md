@@ -38,7 +38,6 @@ body_synced: 2026-10-05
 - [ ] Envoyer à Morgane [[referencement-google-ia]] et récupérer ses réponses (phrase de marque, nom et photo, année de création, comptes existants, questions du guide)
 
 ## Journal
-- 2026-10-31 : Sur [[esprit-docker-site]] — section Steppe sur l'accueil, finitions fiche produit, Atelier sans Steppe, déployé (`a01e609`)
 - 2026-11-02 : Sur [[esprit-docker-site]] — outil SEO/GEO cadré avec ce site en pilote ; provenance des ventes et section guides en cours de construction
 - 2026-11-02 : Sur [[esprit-docker-site]] — section `/guides` en MDX livrée et vérifiée (brouillons non indexés).
 - 2026-11-02 : Sur [[esprit-docker-site]] — revue finale attribution/guides : bug Safari ancien corrigé, CNIL (provenance) à trancher avant déploiement
@@ -53,6 +52,7 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — Bing Webmaster Tools branché, Merchant Center corrigé et flux de 73 produits importé (examen Google en cours), GEO manuel remesuré (ChatGPT fait, Gemini en cours)
 - 2026-11-02 : Sur [[esprit-docker-site]] — Morgane personnalise des casquettes de base (formules corrigées partout), « Bordeaux » par défaut pour la marque.
 - 2026-11-02 : Sur [[esprit-docker-site]] — GEO manuel final : marque citée 2 fois sur 30 (uniquement quand son nom est dans la question) ; redirection steppe → origine testée, déploiement groupé en attente du feu vert.
+- 2026-11-02 : Sur [[esprit-docker-site]] — lot SEO/GEO groupé en prod (À propos/FAQ, flux Merchant, redirection Steppe), Merchant Center lit le flux du site chaque nuit, guide « porter une casquette docker » publié.
 
 ## Liens
 - Projets : [[esprit-docker-site]]
