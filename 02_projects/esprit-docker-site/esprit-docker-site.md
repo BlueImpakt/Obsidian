@@ -61,9 +61,14 @@ body_synced: 2026-11-02
 - [ ] Search Console : cliquer sur « Valider » (TXT DNS déjà en place), ajouter l'adresse Blue Impakt en Complet, créer le projet Google Cloud et le compte de service (clé dans `C:\Users\LENOVO\secrets\gsc-seo-geo.json`), l'ajouter en Restreint, décommenter `GSC_SERVICE_ACCOUNT_JSON` dans `seo-geo/.env`
 - [ ] Déployer les branches `feat/seo-geo-attribution-guides` (site) et `feat/outil-seo-geo` (non poussées) ; le comptage par canal ne démarre qu'au déploiement
 - [ ] Chantier marque pour les moteurs (Claude ne cite Esprit Docker dans aucune des 32 réponses) : indexation, fiche d'établissement Google, mentions externes (Vinted, Instagram, annuaires), JSON-LD Organization
+- [ ] Fusionner et déployer `feat/flux-merchant` (8609d8b) et `feat/pages-a-propos-faq` (125cf8d), puis `npm run indexnow`
+- [ ] Arbitrer la phrase de marque « assemblées à Bordeaux » (accueil, layout, `DESCRIPTION_MARQUE`) vs atelier de Gauriaguet
+- [ ] Merchant Center : corriger retours (14 jours, frais à la charge du client, lien CGV) et livraison (Mondial Relay 3,50 €, offerte dès 100 €), importer le flux des 73 produits
+- [ ] Bing Webmaster Tools : import depuis Search Console (Bing ne connaît pas encore le site)
+- [ ] Guide « porter une casquette docker » : passer `brouillon: false`, commiter et déployer
+- [ ] Annuaires : inscrire Créateurs Français et LesCréatrices.fr, créer le compte Pinterest (rien inscrit à ce jour)
 
 ## Journal
-- 2026-10-05 : voice.md des skills ig-* complété depuis le profil Instagram (lu dans Chrome, lecture seule) ; langue FR, CTA `DOCKER`. `/ig-profile` : 31/100. Carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction.
 - 2026-10-28 : Audit SEO (Lighthouse SEO 100, mais apex/www en double, pas de canonical ni JSON-LD, sitemap 500 intermittente) ; corrections écrites dans le repo (301 apex → www, canonicals, JSON-LD Product/Organization, sitemap à repli, noindex zones privées, titres « casquette docker ») — tsc OK, non commitées ni déployées.
 - 2026-10-31 : Audit perf/a11y (LCP mobile : accueil 3,5 s, fiche 2,7 s, collection 5,0 s) et correctifs (hero rendu serveur, images via images.esprit-docker.com, WebP, cache 30 j, a11y) ; flou du hero adouci (2 s → 4 s). Tout déployé avec les corrections SEO du 28/10 : commit 9c86356, vérifié en ligne (301 apex → www, sitemap 200, JSON-LD).
 - 2026-10-31 : Avis Vinted : recopie des textes abandonnée (CGU Vinted : pas de reproduction sans accord écrit) ; ligne « ★★★★★ 4,9/5 · 239 évaluations Vinted » ajoutée sous le bouton d'achat de toutes les fiches (src/lib/avisVinted.ts), déployée (ba5d513) et vérifiée desktop + mobile. Spec avis (fondu, onglet, page /avis) gardée pour une collecte d'avis propres.
@@ -78,6 +83,7 @@ body_synced: 2026-11-02
 - 2026-11-02 : pilote de l'outil seo-geo sur Esprit Docker : audit technique rangé (images mobile lourdes, même méta sur les 13 fiches, Livraison/Entretien invisibles dans le HTML initial), brief du guide « porter-casquette-docker » audité et corrigé, rédaction à venir
 - 2026-11-02 : Provenance des ventes passée en compteur anonyme (option B, exemption CNIL, rien envoyé à Mollie, opposition dans « Gérer mes cookies », textes légaux réécrits ; commit 1094ebf) ; migration SQL appliquée sur Neon avec compte de lecture seule `seo_geo_lecture` ; point zéro GEO : Claude ne cite Esprit Docker dans aucune des 32 réponses, mesure sur Sonnet 5.5 (~1,70 $/mois) ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; premier guide « porter une casquette docker » en brouillon ; branches non déployées
 - 2026-11-02 : Search Console : propriété Domaine validée en DNS, compte de service `seo-geo` créé et ajouté, clé rangée hors repo ; collecte GSC en 403 tant que l'API n'est pas activée sur le projet `seo-geo-513517`. Positions Google mesurées : n°1 sur la marque seule, absent du top 10 sur 21 autres mots-clés.
+- 2026-11-02 : SEO/GEO en prod sur `master` (e749994, 6 min Cloudflare, vérifié, IndexNow 19 URL HTTP 202) ; GEO manuel 0 citation sur 30 (ChatGPT, Perplexity, Gemini) ; flux Merchant Center 73 produits (`feat/flux-merchant`, 8609d8b) et pages `/a-propos` + `/faq` (`feat/pages-a-propos-faq`, 125cf8d) prêts, non déployés ; réponses de Morgane intégrées, guide prêt à publier
 
 ## Liens
 - Client : [[esprit-docker]]

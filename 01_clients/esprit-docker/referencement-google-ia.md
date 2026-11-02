@@ -75,7 +75,7 @@ Le site retient pendant la visite d'où vient l'acheteur (Google, Instagram, Cha
 
 Une nouvelle rubrique accueillera des articles utiles aux acheteurs (comment porter un docker, comment l'entretenir, comment choisir…). Ce sont ces contenus que Google et les IA citent volontiers.
 
-Le premier guide, « Comment porter une casquette docker », est rédigé. Il attend vos réponses à quelques questions pour être exact avant publication.
+Le premier guide, « Comment porter une casquette docker », est rédigé. Vos réponses sont intégrées : il est prêt à être publié.
 
 ### 5. Les accès Google, à votre nom
 
@@ -101,12 +101,20 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 
 ## Ce dont nous avons besoin de votre part
 
-1. **Votre phrase de présentation** : faut-il dire « à Bordeaux » ou « dans le Sud-Ouest » ? (Le site dit aujourd'hui les deux : brodées dans le Sud-Ouest, assemblées à Bordeaux.)
-2. **Votre nom et une photo** de vous ou de l'atelier : acceptez-vous qu'ils apparaissent sur le site ?
-3. **L'année de création** de la marque.
-4. **Vos comptes existants** : Pinterest, Etsy ? Vendez-vous parfois en personne (marchés de créateurs, salons) ?
-5. **Les réponses aux questions du premier guide** (fermeture de réglage, nom exact du coloris orange, consignes d'entretien, photos portées).
-6. **Des contacts presse ou blogs**, si vous en avez.
+Reçu le 2 novembre 2026 :
+
+1. **Votre phrase de présentation** : « à Bordeaux », en gardant « Sud-Ouest » là où c'est possible pour parler de la région. Phrase retenue : « Esprit Docker : casquettes docker en coton, ornées d'un bijou posé et cousu à la main dans l'atelier de Morgane Le Mouee à Bordeaux, depuis 2025. »
+2. **Votre nom et une photo** : acceptés. Trois photos portées reçues.
+3. **L'année de création** : 2025.
+4. **Les réponses aux questions du premier guide** : toutes reçues (boucle de réglage à l'arrière, réglable sur la tête, nom des coloris, entretien, façon de porter, question la plus fréquente sur la taille).
+5. **Vos comptes et ventes en personne** : Vinted (que vous gardez séparé du site), dépôt en boutique chez Klay Store à Dax et chez Ornamenta Tattoo Shop à Langon, un événement à Langon pour Octobre rose.
+
+Il nous reste à vous demander :
+
+1. **Les boutiques de Dax et de Langon** : vos casquettes y sont-elles en dépôt-vente ou achetées par les boutiques ? Depuis quand ? Et quel est le nom exact du lieu de l'événement de Langon, et l'année ?
+2. **Pinterest et Etsy** : n'avez-vous aucun compte pour l'instant ?
+3. **Des contacts presse ou blogs**, si vous en avez (question restée sans réponse).
+4. **L'âge de vos clients**, en gros (vous nous avez dit qu'ils viennent de toute la France et d'Europe).
 
 ## Prochaines étapes
 
@@ -147,15 +155,19 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Annuaires de créateurs : sélection faite et conditions vérifiées sur chaque site (deux à inscrire en priorité, trois à vérifier avant) ; les sites qui exigent du « fabriqué en France » sont écartés, la marque ne peut pas le revendiquer. Textes de fiche et deux versions de la présentation Instagram (« à Bordeaux » ou « dans le Sud-Ouest ») rédigés.
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
 - Mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun) : Esprit Docker n'est cité dans aucune des 30 réponses ; les marques recommandées à la place sont relevées pour guider la suite.
+- Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Quatre points restent à préciser avec vous (boutiques de Dax et Langon, Pinterest et Etsy, contacts presse, âge des clients).
 - Corrections du site mises en ligne : descriptions des fiches, Livraison et Entretien lisibles, carte d'identité de la marque, comptage anonyme des ventes par canal avec le bouton « M'opposer au comptage », textes légaux à jour. Vérifié en ligne sur l'accueil et une fiche produit. La rubrique « Guides » reste cachée tant qu'aucun guide n'est publié.
 - Bing prévenu des 19 pages du site (accusé de réception reçu).
-- Pages « À propos » et « Questions fréquentes » construites : qui fait les casquettes, où et comment, ce que la marque n'est pas (ni la marque Esprit, ni un bonnet docker) ; 13 questions (prix, matière, taille, entretien, livraison, retours, avis). Vérifiées (lisibles par Google et les IA, accessibilité). Elles restent cachées jusqu'à vos réponses à 6 questions (votre nom sur la page, année de création, lieu de l'atelier, broderie du logo, matière des bijoux, type de fermeture).
+- Pages « À propos » et « Questions fréquentes » construites : qui fait les casquettes, où et comment, ce que la marque n'est pas (ni la marque Esprit, ni un bonnet docker) ; 13 questions (prix, matière, taille, entretien, livraison, retours, boutiques). Vérifiées (lisibles par Google et les IA, accessibilité). Elles restent cachées jusqu'à vos réponses à 6 questions (votre nom sur la page, année de création, lieu de l'atelier, broderie du logo, matière des bijoux, type de fermeture).
+- Google Merchant Center vérifié : plus aucun produit refusé, les 6 casquettes trouvées par Google sur le site sont en cours d'examen. Deux réglages à corriger pour coller aux conditions de vente : les retours sont déclarés gratuits (ils sont à la charge du client, sous 14 jours), et la livraison n'indique que Colissimo à 8,50 €, offerte dès 99,98 € (le point relais à 3,50 € manque, et la livraison est offerte dès 100 €).
+- Pages « À propos » et « Questions fréquentes » complétées avec vos réponses (votre nom, création en 2025, atelier à Gauriaguet, logo brodé à Bordeaux, bijoux en métal, boucle réglable, boutiques de Dax et Langon) et prêtes à mettre en ligne : vérifiées sur une copie du site, notes maximales en accessibilité et en référencement. Vinted n'y apparaît pas, comme vous le souhaitez.
+- Présentation de la marque corrigée sur le site (carte d'identité pour Google et les IA, descriptions de l'accueil et de la collection) : « logo brodé à Bordeaux, bijou cousu à la main en Gironde », au lieu de « assemblées à Bordeaux ». Prête pour la prochaine mise en ligne ; trois phrases de la page d'accueil restent à aligner.
 
 **En cours**
 
 - Bing Webmaster Tools (l'équivalent de Search Console chez Bing) : branchement du site.
-- Google Merchant Center : correction des produits refusés et envoi de la liste complète des casquettes.
-- Pages « À propos » et « Questions fréquentes » : prêtes, en attente de vos réponses, puis mise en ligne.
+- Google Merchant Center : correction des réglages livraison et retours, envoi de la liste complète des 73 casquettes, puis examen par Google.
+- Pages « À propos » et « Questions fréquentes » : prêtes, à mettre en ligne avec la prochaine mise à jour du site.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane, après le choix « Bordeaux » ou « Sud-Ouest » : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique

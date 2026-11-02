@@ -2,7 +2,7 @@
 type: message-client
 client: esprit-docker
 maj: 2026-11-02
-statut: à envoyer
+statut: réponses reçues le 2026-11-02 (4 points à relancer, voir le bas du fichier)
 ---
 
 # Esprit Docker : questions en attente pour Morgane (novembre 2026)
@@ -75,3 +75,26 @@ D'où vient chaque question, pour reporter les réponses :
 Dédoublonnés : la phrase Bordeaux/Sud-Ouest (3 sources), le nom et la photo, les photos portées (guide n°6 et n°9), les comptes existants (doc client et plan).
 
 Hors Morgane, à vérifier de ton côté : le marqueur `[À VALIDER : règles actuelles de Vinted sur les liens externes]` du plan (section Contraintes). Il ne dépend pas d'elle.
+
+## Réponses reçues (2026-11-02) et points restants
+
+Réponses dans [questions-morgane-2026-11-reponses.docx](attachments/questions-morgane-2026-11-reponses.docx) ; photos portées dans `attachments/`.
+
+| Q | Réponse | Reporté dans |
+|---|---|---|
+| 1 | Bordeaux, garder « Sud-Ouest » là où c'est possible | profil, plan, doc client |
+| 2 | Nom et photo : oui | profil, plan, doc client |
+| 3 | 2025 | profil, plan, doc client |
+| 4 | Boucle à l'arrière, réglable docker posé, queue de cheval basse : oui | guide |
+| 5 | Les deux noms selon le produit : Orange Corail sur l'Origine, Orange Terracotta sur les autres (vérifié dans le code du site) | guide, profil |
+| 6 | Logo brodé à l'avant, à Bordeaux | guide, profil |
+| 7 | 39 € = Origine ; 100 % coton | profil |
+| 8 | Toute la France, voire Europe ; âge non précisé | profil (marqueur `[À VALIDER : tranche d'âge]` laissé) |
+| 9 | Vinted (cloisonné), pas de Pinterest ni d'Etsy cité ; dépôt chez Klay Store (Dax) et Ornamenta Tattoo Shop (Langon) ; événement Octobre rose à Langon | profil, plan |
+| 10 | Pas de réponse | à relancer |
+| 11 | Consignes d'entretien reçues (celles de la fiche du site) | guide (section entretien ajoutée) |
+| 12 | Réponse donnée dans la case 13 (cheveux attachés ou détachés, pose droite ou basculée) | guide |
+| 13 | Taille : plage 54 à 60 cm, ajusté ou large selon la morphologie, les cheveux, le style | guide |
+
+À relancer : nature des dépôts de Dax et Langon et nom exact du lieu de l'événement ; Pinterest et Etsy (aucun compte ?) ; contacts presse ; tranche d'âge.
+À vérifier de ton côté : les fiches produit disent « brodé dans le Sud-Ouest », à aligner sur « à Bordeaux » (Morgane a dit Bordeaux), et le marqueur Vinted du plan.

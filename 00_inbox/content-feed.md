@@ -238,3 +238,8 @@ Matière brute extraite des daily notes. Lu par n8n toutes les 48h pour génére
 - Résultat mesurable (catamaran d'excursions, Martinique) : maquette vs site actuel sur téléphone — performance 61 → 95, accessibilité 83 → 100, accueil 1 792 → 495 Ko, grande image affichée en 2,7 s au lieu de 10,3 s ; réservation en 9 gestes et 3 étapes.
 - Étude terrain (Rhodes, 15 opérateurs rejoués sur téléphone) : aucun loueur en direct ne vend un catamaran privé en réservation immédiate, seules les plateformes le font — et le prospect y vend lui-même son bateau ~1 250 €. Angle : « demande + WhatsApp » bien fait suffit à être au niveau, la commission plateforme est l'argument.
 - Comparaison à l'aveugle d'une maquette de prospection face à des sites de yachting haut de gamme (Edmiston, Burgess) : 1re au classement général au 2e passage, après une passe de corrections issue de 7 revues.
+
+## 2026-11-02
+
+- Esprit Docker (pilote seo-geo) : 0 citation sur 30 réponses posées à ChatGPT, Perplexity et Gemini, et 0 sur 32 chez Claude. Google met la marque n°1 sur son nom, mais les moteurs IA recommandent d'autres marques, car presque rien ne décrit Esprit Docker hors de son site. Premier levier : être décrit ailleurs, de façon cohérente (annuaires, profils, page À propos, Bing).
+- Mise en ligne SEO/GEO sur Cloudflare Pages en 6 minutes, puis 19 URL envoyées à Bing via IndexNow (HTTP 202).

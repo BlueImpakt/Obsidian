@@ -38,8 +38,6 @@ body_synced: 2026-10-05
 - [ ] Envoyer à Morgane [[referencement-google-ia]] et récupérer ses réponses (phrase de marque, nom et photo, année de création, comptes existants, questions du guide)
 
 ## Journal
-- 2026-10-05 : Sur [[esprit-docker-site]] — profil Instagram @esprit_docker audité (31/100 : pas d'épinglés ni highlights, bio tronquée en anglais, dernier post il y a 32 jours) ; voice.md des skills ig-* renseigné (FR, CTA mot-clé `DOCKER`) ; carousel « Composez votre docker » rédigé, en attente de validation.
-- 2026-10-28 : Sur [[esprit-docker-site]] — audit SEO et corrections écrites (301 apex → www, canonicals, JSON-LD, sitemap), non déployées.
 - 2026-10-31 : Sur [[esprit-docker-site]] — corrections SEO, performance et accessibilité déployées en prod (commit 9c86356) ; prochaine étape : référencement (Search Console sur le compte Google du client, mots-clés, contenu).
 - 2026-10-31 : Sur [[esprit-docker-site]] — note Vinted (4,9/5 · 239 évaluations) affichée sous le bouton d'achat de toutes les fiches, sans recopier d'avis (CGU Vinted) ; prochaine étape : collecter ses propres avis après livraison.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle L'Essentielle mis en ligne (photos normalisées, couleur Orange Terracotta) ; bloc « Nouvelle collection » prêt, en attente de déploiement.
@@ -54,6 +52,7 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — Provenance des ventes passée en compteur anonyme (option B, exemption CNIL, rien envoyé à Mollie, opposition dans « Gérer mes cookies », textes légaux réécrits ; commit 1094ebf) ; migration SQL appliquée sur Neon avec compte de lecture seule `seo_geo_lecture` ; point zéro GEO : Claude ne cite Esprit Docker dans aucune des 32 réponses, mesure sur Sonnet 5.5 (~1,70 $/mois) ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; premier guide « porter une casquette docker » en brouillon ; branches non déployées
 - 2026-11-02 : Sur [[esprit-docker-site]] — Search Console branchée à l'outil seo-geo (propriété Domaine validée, compte de service prêt, API à activer) ; positions Google : n°1 sur la marque, absent du top 10 ailleurs.
 - 2026-11-02 : Sur [[esprit-docker-site]] — document [[referencement-google-ia]] : trace en langage simple de tout le travail SEO/GEO ; plan entité de marque codé sur la branche (`OnlineStore` + `sameAs`, descriptions à jour, IndexNow, commit e749994) ; compte Merchant Center créé.
+- 2026-11-02 : Sur [[esprit-docker-site]] — SEO/GEO déployé en prod (IndexNow envoyé), GEO manuel 0 citation sur 30, flux Merchant Center et pages À propos/FAQ prêts non déployés, réponses de Morgane intégrées
 
 ## Liens
 - Projets : [[esprit-docker-site]]
