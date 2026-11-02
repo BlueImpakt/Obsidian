@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, ty-domino]
-created: 2026-10-31
+created: 2026-11-02
 projet: ty-domino-refonte
 parent: ty-domino-refonte
 genere_par: maquette-outils/envoi
@@ -10,11 +10,11 @@ genere_par: maquette-outils/envoi
 
 Projet : [[ty-domino-refonte]] · Client : [[ty-domino]] · Parent : [[prospect-charter]] · Source : outil `maquette-outils/envoi`, config `envoi/exemples/envoi.json`
 
-Dossier d'envoi de la maquette Ty Domino : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est publié ni envoyé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
+Dossier d'envoi de la maquette Ty Domino : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est envoyé ; seule la page privée est en ligne, en lien non référencé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
 
 ## À faire avant le premier envoi
 - [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
-- [ ] Héberger la page privée et la maquette en lien privé, puis remplacer `PITCH_LIEN_PAGE` (aucun lien traçant, aucun pixel)
+- [x] Page privée et maquette hébergées en lien privé, non référencé : https://ty-domino.maquettes.blue-impakt.org/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[td-sous-titres-fr.srt]]), déposer `voix-melvin-fr.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
@@ -60,7 +60,7 @@ Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je r
 Votre programme est déjà écrit étape par étape, de l’îlet Madame à l’îlet Chancel, et vos passagers parlent tous du calme, de la voile et du repas.
 4,9 sur 394 avis Google, mais votre page contact envoie les e-mails vers info@monsite.fr, l’adresse du modèle Wix, et pour réserver il faut remplir un formulaire puis attendre la réponse.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
-[IMAGE : td-couverture-video-fr.jpg, cliquable vers PITCH_LIEN_PAGE]
+[IMAGE : td-couverture-video-fr.jpg, cliquable vers https://ty-domino.maquettes.blue-impakt.org/p/]
 Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
 Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
@@ -82,7 +82,7 @@ Objet : Ty Domino : un détail tiré de vos avis
 Bonjour Bruno Desporte,
 
 Un détail tiré de vos avis : au Robert, aucun catamaran à voile en petit comité ne se réserve en ligne aujourd’hui : celui qui le fera le premier captera les clients qui réservent le soir, depuis leur location.
-Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : PITCH_LIEN_PAGE
+Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : https://ty-domino.maquettes.blue-impakt.org/p/
 15 minutes cette semaine ou la suivante ?
 Un « stop » suffit pour ne plus recevoir de message.
 
@@ -96,7 +96,7 @@ Objet : Ty Domino : je clos de mon côté
 Bonjour Bruno Desporte,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : PITCH_LIEN_PAGE
+La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : https://ty-domino.maquettes.blue-impakt.org/p/
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt

@@ -4,7 +4,7 @@ created: 2026-10-28
 statut: encours
 client: rm-croisieres
 parent: prospect-charter
-body_synced: 2026-10-28
+body_synced: 2026-11-02
 ---
 
 # rm-croisieres-refonte
@@ -25,6 +25,7 @@ body_synced: 2026-10-28
 - 2026-10-28 (midi) : hero en photo HD fournie par Melvin, plein écran, titre « Choisissez votre cap et votre bateau » ; accueil : hero → visites 3D → Lagoon 43 → flotte (Liberta, Manureva, Yurelle, Sea Naaps, Bieckert, Madelon) ; dernière porte PASS sur a77f3cd, passe « première lecture » non encore commitée ; dossier d'envoi et vidéo à refaire quand Melvin aura fini ses retours.
 - 2026-10-28 (fin de journée) : accueil refait en hero photo plein écran (d1212b6, 8e25b55) ; vidéo 72,3 s et dossier d'envoi final dans `sortie/envoi-final-3/` (61a9b06), note de relecture à jour ; rien envoyé. Lighthouse à remesurer machine libre (`py -I C:/Users/LENOVO/Documents/GitHub/maquette-outils/porte-qualite/porte_qualite.py gate.json --sortie sortie/porte-37 --seulement lighthouse`).
 - 2026-10-28 (nuit) : travail arrêté à la demande de Melvin. Porte n° 37 : 10 mesures Lighthouse sur 11 au vert, fiche Manureva mobile en échec de justesse (4,0 s, blocage 256 ms), non corrigé et absent de la note de relecture. Cartes de l'accueil : Liberta, Take It Easy, Yurelle, Madelon, Sea Naaps, Bieckert (9a337e9) ; la vidéo du dossier d'envoi montre encore l'ancien ordre.
+- 2026-11-02 : maquette publiée sur rm-croisieres.maquettes.blue-impakt.org (Vercel direct), page privée /p/ et couverture vérifiées, lien valable jusqu'au 10/11 ; la vidéo du dossier d'envoi montre encore Ola 2 (à refaire) ; rien envoyé.
 
 ## Décisions techniques
 - Demande + calendrier, pas de paiement en ligne en phase 1 ; phase 2 : widget ou API Booking Manager.
@@ -57,6 +58,7 @@ body_synced: 2026-10-28
 - 2026-10-28 : hero refait sur la photo HD de Melvin (dézoom ×1,5-1,8, titre « Choisissez votre cap et votre bateau », boutons croisières / flotte, numéro du bureau en bas à droite), sections Lagoon 43 et visites 3D ajoutées, flotte de l'accueil revue (Yurelle, Sea Naaps) ; porte PASS 9/9 (a77f3cd, accueil 2,3 s mobile), puis passe « première lecture » (hero plein écran, visites 3D en 2e) en attente du verdict de la porte.
 - 2026-10-28 : Accueil refait en hero photo plein écran (d1212b6, dézoom ×1,5 sur 14 s, 8e25b55) ; vidéo refaite à 72,3 s avec sous-titres lisibles, dossier d'envoi final dans `sortie/envoi-final-3/` (61a9b06), rien envoyé ; Lighthouse à remesurer machine libre.
 - 2026-10-28 : Porte n° 37 : fiche Manureva mobile en échec de justesse (4,0 s, blocage 256 ms) ; maquette arrêtée à la demande de Melvin ; cartes de l'accueil réordonnées (Yurelle, Madelon à la place d'Ola 2 et Yurelle ; porte n° 38, 9a337e9), vidéo non refaite.
+- 2026-11-02 : maquette publiée sur rm-croisieres.maquettes.blue-impakt.org (déploiement Vercel direct, `--deployer` échouait), /p/ et couverture vérifiés, lien valable jusqu'au 10/11 ; vidéo à refaire (montre encore Ola 2) ; rien envoyé
 
 ## Liens
 - Projet parent : [[prospect-charter]]

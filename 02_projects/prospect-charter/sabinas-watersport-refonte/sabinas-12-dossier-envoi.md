@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, sabinas-watersport]
-created: 2026-11-01
+created: 2026-11-02
 projet: sabinas-watersport-refonte
 parent: sabinas-watersport-refonte
 genere_par: maquette-outils/envoi
@@ -14,7 +14,7 @@ Dossier d'envoi de la maquette Sabinas Watersport Rhodos : vidéo, avant/après,
 
 ## À faire avant le premier envoi
 - [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
-- [x] Page privée et maquette hébergées en lien privé, non référencé : https://sabinas-xuygcn.vercel.app/p/ (aucun lien traçant, aucun pixel)
+- [x] Page privée et maquette hébergées en lien privé, non référencé : https://sabinas.maquettes.blue-impakt.org/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[sabinas-sous-titres-en.srt]]), déposer `voix-melvin-en.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
@@ -61,7 +61,7 @@ I’m Melvin, a sailing enthusiast and web designer: I sail, and I rebuild websi
 5.0 out of 5 from 510 reviews on Google, and 4.9 on Tripadvisor: your guests clearly love the day.
 Your trips are spread over three websites, none of them shows those reviews, and the request form asks for neither a date nor a number of guests.
 I turned that into a mock-up, on my own initiative and with no commitment: a one-minute video, below.
-[IMAGE: sabinas-couverture-video-en.jpg, linked to https://sabinas-xuygcn.vercel.app/p/]
+[IMAGE: sabinas-couverture-video-en.jpg, linked to https://sabinas.maquettes.blue-impakt.org/p/]
 Would you have 15 minutes this week to look at it together?
 If this is not for you, just reply “stop” and I won’t write again.
 
@@ -83,7 +83,7 @@ Objet : Sabinas Watersport Rhodos: a detail from your reviews
 Hello Sabina,
 
 A detail from your reviews: 
-In the mock-up, a guest’s request reaches you complete and priced, and you confirm it in two taps, deposit link included. It is at the end of the video: https://sabinas-xuygcn.vercel.app/p/
+In the mock-up, a guest’s request reaches you complete and priced, and you confirm it in two taps, deposit link included. It is at the end of the video: https://sabinas.maquettes.blue-impakt.org/p/
 15 minutes this week or next?
 A “stop” is enough and I won’t write again.
 
@@ -97,7 +97,7 @@ Objet : Sabinas Watersport Rhodos: closing on my side
 Hello Sabina,
 
 Without a reply, I am closing this on my side.
-The video stays online at the same address, if you would like to show it to your team: https://sabinas-xuygcn.vercel.app/p/
+The video stays online at the same address, if you would like to show it to your team: https://sabinas.maquettes.blue-impakt.org/p/
 Have a good season,
 
 Melvin Perrottet, Blue Impakt

@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: remote
 origine_lead: prospection à froid (Melvin)
 tjm:
-body_synced: 2026-11-01
+body_synced: 2026-11-02
 ---
 
 # sabinas-watersport
@@ -20,14 +20,15 @@ body_synced: 2026-11-01
 - **Réputation** : Google 5,0/510 et TripAdvisor 4,9/443 (reconfirmés le 2026-10-31), n° 1 à Lardos (à reconfirmer).
 
 ## Historique des échanges
-- Aucun contact pour l'instant : approche prévue à froid, par lien vers une maquette mobile envoyé par e-mail/WhatsApp.
+- Aucun contact pour l'instant : approche prévue à froid, par lien vers une maquette mobile envoyé par e-mail/WhatsApp ; e-mail de relance EN préparé (2026-11-02), envoi à faire.
 
 ## Décisions prises
 - Positionnement de la maquette : luxury & exclusive (maquette v1 itérée, 2026-10-21).
 - Comparaison A/B avant envoi : maquette v1 vs maquette concurrente piste C « Horizon » (Prompt 3D).
 - Maquette hébergée sur Vercel (lien privé noindex) ; plan de redirection 301 des 3 domaines défini (2026-10-22).
-- Maquette v2 au niveau du skill maquette-prospect (porte qualité PASS, 903 Ko, a11y 100, 4 langues), pas encore redéployée (2026-10-31).
-- Bandeau cookies masqué sur vidéo/avant-après ; italien gardé seulement si l'équipe parle italien (2026-11-01).
+- Maquette v2 au niveau du skill maquette-prospect (porte qualité PASS, 903 Ko, a11y 100, 4 langues) (2026-10-31) ; republiée le 2026-11-01 (performance en ligne 79 → 94).
+- Bandeau cookies masqué sur vidéo/avant-après ; italien gardé sur 2 sources (2026-11-01).
+- Maquettes servies sur un sous-domaine blue-impakt.org (anti-spam), mail de relance régénéré sans lien vercel.app (2026-11-02).
 
 ## Besoins identifiés
 - 3 sites Jimdo éclatés (2007, 2017, 2022) → un seul site, une seule mise à jour par an.
@@ -44,8 +45,7 @@ body_synced: 2026-11-01
 - **Prochaine échéance** : `dolphin-tours-rhodos.com` expire le 2026-12-01 (argument de calendrier) ; mise en ligne cible mi-janvier 2027, avant la saison
 
 ## Next actions
-- [ ] Redéployer la maquette v2 (au niveau du skill maquette-prospect, porte qualité PASS, 4 langues) sur Vercel, puis l'envoyer (lien privé) + accroche WhatsApp DE/EN et e-mail de relance EN, prêts (voir [[sabinas-watersport-refonte]])
-- [ ] Confirmer que l'équipe parle italien, sinon retirer l'italien de la v2 (voir [[sabinas-watersport-refonte]])
+- [ ] Envoyer l'e-mail de relance EN (v2 + vidéo, lien sous-domaine blue-impakt.org) + accroche WhatsApp DE/EN, prêts (voir [[sabinas-watersport-refonte]])
 
 ## Journal
 - 2026-10-21 : Sur [[sabinas-watersport-refonte]] — analyse des 3 sites livrée, stack et offre cadrées, maquette mobile DE/EN écrite (vérification en cours)
@@ -59,6 +59,10 @@ body_synced: 2026-11-01
 - 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette en cours de mise au niveau du skill maquette-prospect ; avis reconfirmés (Google 5,0/510, Tripadvisor 4,9/443).
 - 2026-10-31 : Sur [[sabinas-watersport-refonte]] — maquette v2 au niveau du skill maquette-prospect, porte qualité PASS (903 Ko, a11y 100), 4 langues ; pas encore redéployée ni envoyée.
 - 2026-11-01 : Sur [[sabinas-watersport-refonte]] — bandeau cookies masqué sur vidéo/avant-après ; italien de la v2 gardé seulement si l'équipe parle italien.
+- 2026-11-01 : Sur [[sabinas-watersport-refonte]] — italien gardé sur 2 sources, performance en ligne 79 → 94, v2 republiée.
+- 2026-11-02 : Sur [[sabinas-watersport-refonte]] — e-mail de relance anglais préparé (v2 + vidéo) ; envoi à faire
+- 2026-11-02 : Sur [[sabinas-watersport-refonte]] — maquettes servies sur un sous-domaine blue-impakt.org (anti-spam), mail de relance régénéré sans lien vercel.app.
+- 2026-11-02 : Sur [[sabinas-watersport-refonte]] — titre de la vidéo et de la couverture remplacé par « One website for all your trips »
 
 ## Liens
 - Projets : [[sabinas-watersport-refonte]]

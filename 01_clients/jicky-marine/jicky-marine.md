@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: france
 origine_lead: agent prospect-charter (run Saint-Barthélemy du 2026-10-23)
 tjm:
-body_synced: 2026-10-29
+body_synced: 2026-11-01
 ---
 
 # jicky-marine
@@ -26,6 +26,8 @@ body_synced: 2026-10-29
 
 ## Décisions prises
 - 2026-10-25 : ne pas vendre « le paiement en ligne » (déjà en place) ; vendre la réservation sur demande sans paperasse, phase 1 sans calendrier, Up2pay conservé.
+- 2026-10-27 : benchmark concurrents (aucun gros loueur de St-Barth n'a de réservation instantanée) : le parcours sur demande tient.
+- 2026-10-27 : flotte à l'échelle retenue pour l'accueil de la maquette ; « Lagoon 420 » renommé « Lagoon 42 » (modèle exact à confirmer avec Jicky).
 
 ## Besoins identifiés
 - Site en tableaux HTML des années 2000, illisible sur mobile (prix hors écran), uniquement en anglais, coquilles.
@@ -43,8 +45,6 @@ body_synced: 2026-10-29
 - [ ] Premier contact (voir [[jicky-marine-refonte]])
 
 ## Journal
-- 2026-10-27 : Sur [[jicky-marine-refonte]] — Galerie corrigée ; benchmark concurrents : aucun gros loueur de St-Barth n'a de réservation instantanée, le parcours sur demande tient.
-- 2026-10-27 : Sur [[jicky-marine-refonte]] — photos principales refaites (Nano Banana, à faire valider), tarifs regroupés, perf mobile corrigée (accueil iPhone 3,15 → 1,94 Mo), flotte à l'échelle retenue pour l'accueil.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — rendu « plâtre blanc » de la flotte à l'échelle essayé sur Pardo 43 et Sanya 57, aperçu des 13 bateaux en cours.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — photos des cartes chargées après le hero (ff3a790), affichage principal iPhone 4G lente ~6,9 → ~6,1 s.
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — flotte à l'échelle révisée : 18 bateaux en trois-quarts avant même sens, catamarans voiles affalées, photos manquantes prises sur le web.
@@ -58,6 +58,8 @@ body_synced: 2026-10-29
 - 2026-10-28 : Sur [[jicky-marine-refonte]] — page privée finalisée (coordonnées, logo sans lien, titre « la réservation en ligne, sans perdre la main »), porte qualité FAIL.
 - 2026-10-29 : Sur [[jicky-marine-refonte]] — poids accueil, focus et faits corrigés ; porte encore FAIL (photos agrandies, LCP mobile).
 - 2026-10-27 : Leopard 45 : photo de Melvin en principale (1 376 px au lieu de 537), doublon retiré (2b2cf72) ; « Lagoon 420 » renommé « Lagoon 42 » sur toutes les pages (2e42e0c), identifiant interne inchangé — modèle exact à confirmer avec Jicky.
+- 2026-11-01 : Sur [[jicky-marine-refonte]] — page « Services aux yachts » ajoutée, revues corrigées, maquette 1re à l'aveugle sur 5 écrans sur 6.
+- 2026-11-02 : Sur [[jicky-marine-refonte]] — maquette servie sur jicky-marine.maquettes.blue-impakt.org, brouillon J0 régénéré
 
 ## Liens
 - Projets : [[jicky-marine-refonte]] (sous-projet de [[prospect-charter]])

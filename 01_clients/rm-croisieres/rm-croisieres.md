@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: france
 origine_lead: agent prospect-charter (run Martinique du 2026-10-23)
 tjm:
-body_synced: 2026-10-28
+body_synced: 2026-11-02
 ---
 
 # rm-croisieres
@@ -36,10 +36,11 @@ body_synced: 2026-10-28
 - **TJM / tarif pratiqué** : à définir
 - **Devis en cours** : non
 - **Facturé à ce jour** : 0
-- **Prochaine échéance** : premier contact
+- **Prochaine échéance** : premier contact — maquette en ligne (rm-croisieres.maquettes.blue-impakt.org), lien valable jusqu'au 10/11, rien envoyé à ce jour
 
 ## Journal
 - 2026-10-28 : Sur [[rm-croisieres-refonte]] — maquette arrêtée par Melvin ; porte n° 37 en échec de justesse sur la fiche Manureva mobile, cartes de l'accueil réordonnées (9a337e9).
+- 2026-11-02 : Sur [[rm-croisieres-refonte]] — maquette en ligne sur rm-croisieres.maquettes.blue-impakt.org, lien valable jusqu'au 10/11, rien envoyé
 
 ## Liens
 - Projet : [[rm-croisieres-refonte]]

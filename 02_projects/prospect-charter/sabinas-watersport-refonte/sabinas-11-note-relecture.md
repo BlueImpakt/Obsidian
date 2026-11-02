@@ -15,8 +15,8 @@ Projet : [[sabinas-watersport-refonte]] · Client : [[sabinas-watersport]] · So
 
 | | Adresse | État |
 |---|---|---|
-| **v1** (21/10, citée dans l'accroche) | https://sabinas-concept-x7k2m9.vercel.app/ | **intacte**, projet Vercel `sabinas-concept-x7k2m9`, rien redéployé |
-| **v2** (cette passe) | https://sabinas-xuygcn.vercel.app/ · page privée https://sabinas-xuygcn.vercel.app/p/ | nouveau projet Vercel `sabinas-xuygcn` ; la maquette renvoie vers `/p/` 7 jours après J0 (J0 par défaut : mardi 3/11) |
+| **v1** (21/10, citée dans l'accroche) | https://sabinas-concept-x7k2m9.vercel.app/ · aussi https://sabinas-v1.maquettes.blue-impakt.org/ | **intacte**, projet Vercel `sabinas-concept-x7k2m9`, rien redéployé |
+| **v2** (cette passe) | https://sabinas.maquettes.blue-impakt.org/ · page privée https://sabinas.maquettes.blue-impakt.org/p/ (aussi sabinas-xuygcn.vercel.app) | nouveau projet Vercel `sabinas-xuygcn` ; la maquette renvoie vers `/p/` 7 jours après J0 (J0 par défaut : mardi 3/11) |
 
 Rien n'est envoyé. `PITCH_CONTACT` est vide. Dossier d'envoi : `sortie/envoi/` (hors git), note dans le vault `sabinas-12-dossier-envoi`.
 
@@ -99,3 +99,7 @@ Safari, sur https://sabinas-xuygcn.vercel.app/, en portrait puis en paysage :
 5. Recommence en cochant « I'm booking for a guest » : nom du client, réception, qui paie ; vérifie le résumé et le bureau.
 6. Pied de page « Hotels and agencies ».
 7. VoiceOver sur l'accueil et la demande. Langues IT et DE dans le menu.
+
+## Adresses propres (02/11)
+
+Les liens *.vercel.app passent mal les anti-spam (mail de prospection transféré vers l'adresse pro : jamais arrivé). Les deux versions ont une adresse sur blue-impakt.org : CNAME générique `*.maquettes` → `cname.vercel-dns.com` chez Cloudflare (nuage gris), une fois pour toutes ; chaque maquette est rattachée à son projet Vercel par l'outil d'envoi (`publication.domaine`).

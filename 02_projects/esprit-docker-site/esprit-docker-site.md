@@ -3,7 +3,7 @@ tags: [project, encours, esprit-docker]
 created: 2026-08-29
 statut: encours
 client: esprit-docker
-body_synced: 2026-10-31
+body_synced: 2026-11-02
 ---
 
 # esprit-docker-site
@@ -25,6 +25,8 @@ body_synced: 2026-10-31
 - SEO / perf / a11y (2026-10-31) : corrections SEO du 28/10 + correctifs performance (hero rendu serveur, images via `images.esprit-docker.com`, WebP, cache statique 30 j) et accessibilité déployés en prod (commit `9c86356`) ; vérifié en ligne : 301 apex → www, sitemap 200, JSON-LD présent. LCP non remesuré après déploiement. Étape suivante : référencement (Search Console, mots-clés, contenu).
 - Avis (2026-10-31) : ligne « ★★★★★ 4,9/5 · 239 évaluations Vinted » sous le bouton d'achat de toutes les fiches (commit `ba5d513`, en ligne) ; aucun texte d'avis Vinted repris (CGU Vinted). Fondu, onglet « Avis » et page `/avis` conçus, en attente d'une collecte d'avis propres.
 - Modèle Steppe, ex-L'Essentielle (2026-10-31) : 21 photos en ligne (7 coloris × face/profil/dos ; script `scripts/essentiel-import-photos.mjs`, Orange Terracotta pour ce modèle, Orange Corail écartée côté serveur) ; bloc « Nouveau Docker » en tête de `/collection` déployé (commit `89fca47`, vérifié en ligne). Animations de la page Collection prêtes en local, non déployées.
+- Section `/guides` en MDX livrée (2026-11-02, commit `120692f`, brouillons exclus, sitemap conditionnel), vérifiée dans le navigateur ; durcissement en cours contre un guide mal formé.
+- Provenance des ventes (tâches 1 à 3) validée en relecture, non déployée : migration SQL à passer avant déploiement, point CNIL à trancher. Outil `seo-geo` cadré avec Esprit Docker en pilote (spec + 2 plans).
 
 ## Décisions techniques
 - **Stack** : Next.js (App Router), déploiement Cloudflare Pages (`@cloudflare/next-on-pages`, wrangler)
@@ -55,10 +57,10 @@ body_synced: 2026-10-31
 - [ ] Mettre à jour le skill `set-image-espritdocker` (slugs avec tirets, cas sujet plus large que la cible : cible forcée + ombre atténuée avant recadrage) — accord Melvin en attente
 - [ ] Steppe vert : récupérer les bons fichiers photo auprès de Melvin (le zip Photoroom (1) est identique à l'ancien) puis relancer `--remplacer`
 - [ ] Déployer les correctifs Atelier mobile (« 66 combinaisons » centré, pastilles espacées)
+- [ ] Esprit Docker : passer la migration SQL de provenance AVANT tout déploiement ; trancher le point CNIL (consentement pour le stockage de provenance)
+- [ ] seo-geo : renseigner la clé API dans `.env` pour les appels réels de mesure GEO (Claude, DataForSEO)
 
 ## Journal
-- 2026-08-29 : Repo identifié et analysé (`github.com/espritdocker/esprit-docker`), fiche projet créée
-- 2026-09-02 : Fix mail de suivi colis Sendcloud (voir [[esprit-docker]] pour le détail du diagnostic) — ajout d'une note "vérifiez vos spams" dans `emailCommande.ts` et `succes/page.tsx`. Commit `944dca9` sur `master`.
 - 2026-09-02 : Path B implémenté pour le mail "colis expédié" (voir [[esprit-docker]] pour le diagnostic complet) — `emailExpedition.ts` (envoi Brevo, même charte que la confirmation) + hook dans le webhook Sendcloud + colonne `commandes.suivi_email_envoye_at` (verrou anti-doublon). Migration exécutée et vérifiée sur Neon prod (projet `esprit-docker`, branche `production`). Commit+push `20a6fc6` sur `master`.
 - 2026-09-04 : Graphify (graphe de code tree-sitter, voir `03_knowledge/outils.md`) installé et activé — 1108 nœuds/1673 edges, nudge `/graphify` actif en session. `.claude/settings.json` renommé en `.claude/settings.local.json` + gitignored (le hook contient un chemin `graphify.exe` propre à la machine de Melvin, à ne jamais committer).
 - 2026-10-05 : voice.md des skills ig-* complété depuis le profil Instagram (lu dans Chrome, lecture seule) ; langue FR, CTA `DOCKER`. `/ig-profile` : 31/100. Carousel « Composez votre docker » (8 slides) rédigé, à valider avant construction.
@@ -69,6 +71,11 @@ body_synced: 2026-10-31
 - 2026-10-31 : L'Essentielle : 21 photos (7 couleurs × face/profil/dos, vrais dos partout) en ligne, transparence reconstruite depuis les PNG à fond blanc, script `scripts/essentiel-import-photos.mjs` ; en-tête du bloc « Nouvelle collection » refait (« NOUVELLE » / « COLLECTION » en diagonale 45° de chaque côté de la carte), vérifié desktop, non déployé.
 - 2026-10-31 : Modèle L'Essentielle renommé « Steppe » (Orange Corail écartée côté serveur), bloc « Nouveau Docker » de /collection finalisé et déployé (89fca47, vérifié en ligne) ; descriptions des 13 modèles mises à jour ; animations de la page Collection prêtes, non déployées.
 - 2026-10-31 : Section « Nouveau docker » Steppe sur l'accueil, finitions fiche produit (logo, note Vinted, bouton retour), prix minimum corrigé, Steppe/Terracotta retirés de l'Atelier — déployé (`0be017b`, `c37a609`, `a01e609`) ; correctifs Atelier mobile prêts en local
+- 2026-11-02 : Outil SEO/GEO `seo-geo` cadré avec Esprit Docker en pilote (spec + 2 plans) ; côté site, provenance des ventes (tâches 1 à 3) validée en relecture, section `/guides` en cours ; migration à passer avant déploiement, point CNIL à trancher
+- 2026-11-02 : Section `/guides` en MDX livrée (commit 120692f, brouillons exclus, sitemap conditionnel), vérifiée dans le navigateur ; durcissement en cours contre un guide mal formé.
+- 2026-11-02 : Revue finale branche attribution + /guides : défaut critique Safari < 16.4 (lookbehind regex) corrigé en vague finale ; « Steppe » = modèle Origine déjà au sitemap ; consentement CNIL (provenance) à trancher avant déploiement
+- 2026-11-02 : Vague finale de corrections de la revue de branche terminée (lookbehind regex supprimé pour Safari < 16.4, 28 tests verts, build propre), non poussée ; reste migration SQL provenance et point CNIL avant déploiement
+- 2026-11-02 : pilote de l'outil seo-geo sur Esprit Docker : audit technique rangé (images mobile lourdes, même méta sur les 13 fiches, Livraison/Entretien invisibles dans le HTML initial), brief du guide « porter-casquette-docker » audité et corrigé, rédaction à venir
 
 ## Liens
 - Client : [[esprit-docker]]

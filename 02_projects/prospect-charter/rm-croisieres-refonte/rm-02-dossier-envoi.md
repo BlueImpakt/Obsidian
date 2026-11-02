@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, rm-croisieres]
-created: 2026-10-28
+created: 2026-11-02
 projet: rm-croisieres-refonte
 parent: rm-croisieres-refonte
 genere_par: maquette-outils/envoi
@@ -10,11 +10,11 @@ genere_par: maquette-outils/envoi
 
 Projet : [[rm-croisieres-refonte]] · Client : [[rm-croisieres]] · Parent : [[prospect-charter]] · Source : outil `maquette-outils/envoi`, config `envoi/exemples/envoi.json`
 
-Dossier d'envoi de la maquette RM Croisières : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est publié ni envoyé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
+Dossier d'envoi de la maquette RM Croisières : vidéo, avant/après, chiffres, page privée et messages. **Tout est en brouillon** : rien n'est envoyé ; seule la page privée est en ligne, en lien non référencé, Melvin relit et envoie lui-même. Langue du gérant : **FR**.
 
 ## À faire avant le premier envoi
-- [ ] Remplacer `PITCH_CONTACT` (email + téléphone de Melvin) dans les messages et la page privée
-- [ ] Héberger la page privée et la maquette en lien privé, puis remplacer `PITCH_LIEN_PAGE` (aucun lien traçant, aucun pixel)
+- [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
+- [x] Page privée et maquette hébergées en lien privé, non référencé : https://rm-croisieres.maquettes.blue-impakt.org/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[rm-sous-titres-fr.srt]]), déposer `voix-melvin-fr.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
@@ -59,12 +59,12 @@ Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je r
 Vos itinéraires sont déjà écrits nuit par nuit, du Marin aux Grenadines, et votre flotte va du monocoque au Sunreef 50 avec équipage.
 Vos 22 bateaux sont déjà proposés semaine par semaine chez 12knots, mais votre propre site ne montre aucune disponibilité, et le bouton « Rentrons en contact » de l'accueil mène à une page cassée.
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
-[IMAGE : rm-couverture-video-fr.jpg, cliquable vers PITCH_LIEN_PAGE]
+[IMAGE : rm-couverture-video-fr.jpg, cliquable vers https://rm-croisieres.maquettes.blue-impakt.org/p/]
 Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
 Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+3, WhatsApp au +596 696 72 25 44
@@ -81,12 +81,12 @@ Objet : RM Croisières : un détail tiré de vos avis
 Bonjour,
 
 Un détail tiré de vos avis : chez 12knots, deux avis de 2025 parlent de l’entretien à bord (pompe de cale, climatisation) : une liste d’arrivée claire et un message la veille rassurent avant même l’embarquement.
-Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : PITCH_LIEN_PAGE
+Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : https://rm-croisieres.maquettes.blue-impakt.org/p/
 15 minutes cette semaine ou la suivante ?
 Un « stop » suffit pour ne plus recevoir de message.
 
 Melvin Perrottet, Blue Impakt
-PITCH_CONTACT
+melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
 ```
 
 ### J+15, email
@@ -95,13 +95,13 @@ Objet : RM Croisières : je clos de mon côté
 Bonjour,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La maquette reste en ligne 30 jours à la même adresse, si vous voulez la montrer à votre équipe : PITCH_LIEN_PAGE
+La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : https://rm-croisieres.maquettes.blue-impakt.org/p/
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.3 / 5, 20 avis Google, relevé : 23/10/2026 (agent prospect-charter, resultats/prospects-charter-v2.csv).
+Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.3 / 5, 20 avis Google, relevé : 23/10/2026 (agent prospect-charter, resultats/prospects-charter-v2.csv).
 
 ## Chiffres
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), page d’accueil · 28/10/2026 · source : rm-croisieres-refonte/sortie/porte-26/resultat.json et sortie/lighthouse-avant/

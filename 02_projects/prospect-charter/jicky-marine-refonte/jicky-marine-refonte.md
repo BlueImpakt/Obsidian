@@ -4,7 +4,7 @@ created: 2026-10-25
 statut: encours
 client: jicky-marine
 parent: prospect-charter
-body_synced: 2026-10-29
+body_synced: 2026-11-01
 ---
 
 # jicky-marine-refonte
@@ -28,6 +28,7 @@ body_synced: 2026-10-29
 - 2026-10-28 (nuit) : page privée republiée avec mention Blue Impakt, lien « disponible 7 jours » et message d'expiration corrigé ; J+15 ne promet plus 30 jours. Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
 - 2026-10-28 (nuit, suite) : page privée avec ligne « Voir en grand » (5 visuels ordinateur/téléphone et mesures en nouvelle fenêtre), captures avant/après refaites sans mention « non publié ». Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
 - 2026-10-28/29 : page privée finalisée (coordonnées de Melvin, logo sans lien, titre « la réservation en ligne, sans perdre la main », avant/après téléphone + ordinateur, 5 questions) ; plus de PITCH_ dans le dossier. Porte qualité : poids accueil, focus et faits corrigés le 29/10, reste FAIL sur 8 photos agrandies et le LCP mobile bridé. Toujours aucun contact avec Jicky.
+- 2026-11-01 : page « Services aux yachts » EN/FR ajoutée à la maquette (livraisons, déchets, fret Miami sur devis, formulaire à estimation, vue bureau), navigation revue ; revues textes/a11y/Finish-Gate corrigées (a42bbdc, 31 contrôles OK) ; comparaison à l'aveugle : 1re sur 5 écrans sur 6, 2e sur la fiche 1 440 px derrière Edmiston ; vidéo, avant/après et captures refaits. Toujours aucun contact avec Jicky.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -55,7 +56,7 @@ body_synced: 2026-10-29
 - Porte qualité FAIL sur Jicky : la météo (art. 9 des CGV) n'apparaît pas avant l'envoi de la demande ; `docs/decisions.md` affirmait à tort l'absence d'articles météo et mineurs.
 
 ## Next actions
-- [ ] Relire sur téléphone la maquette déployée (https://jicky-marine-ltdnit.vercel.app/, déployée sur Vercel le 2026-10-28)
+- [ ] Relire sur téléphone la maquette déployée (https://jicky-marine.maquettes.blue-impakt.org/, adresse propre depuis le 2026-11-02 ; l'ancienne *.vercel.app marche encore)
 - [ ] Rédiger le message d'accroche (site illisible sur mobile + Booking Form avec carte par email) avec le lien de la démo
 - [ ] Demander à Jicky des photos haute définition (Bali 54, Pardo 43 vignette 454 px ; Axopar 37 et Nautitech 47 remplacées le 2026-10-27 par des retouches Nano Banana, Leopard 45 par la photo de Melvin)
 - [x] Traduire en FR les pages client du design C (accueil, flotte, fiche, demande) — fait le 2026-10-25 (commit b30670f)
@@ -75,11 +76,11 @@ body_synced: 2026-10-29
 - [ ] Flotte à l'échelle : relancer le Fjord 53 dans Nano Banana (`research/nano-banana-30deg/PROMPTS.md`, section « Relance ») puis l'intégrer
 - [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; maquette calée sur la photo (28,4 m), décision Melvin du 2026-10-28
 - [ ] Vérifier que les photos du hero téléphone se chargent sur la version en ligne (manquantes repérées le 2026-10-28)
+- [ ] Repasser la porte qualité puis relancer `chiffres` : la fiche chiffres date du 27/10 (avant les corrections de chargement et la page Services aux yachts) ; republier la page privée Vercel (anciennes vidéo et images) avec accord de Melvin
+- [ ] Fiche 1 440 px (2e derrière Edmiston) : aligner prix et titre sur la même ligne de base, homogénéiser les vignettes, supprimer le blanc sous la galerie ; mobile : barre basse qui recouvre les miniatures, texte du hero sur la coque
+- [ ] Services aux yachts : faire confirmer par Jicky ce que transporte une livraison VIP et les conditions de règlement des livraisons (marqués « À confirmer » sur la page)
 
 ## Journal
-- 2026-10-27 : Photos des cartes de l'accueil mises en attente derrière le hero (ff3a790, 33 tests) : affichage principal iPhone 4G lente ~6,9 → ~6,1 s en médiane ; Lighthouse simulé ne voit pas le gain.
-- 2026-10-27 : Flotte à l'échelle révisée : 18 bateaux en trois-quarts avant, même sens, catamarans voiles affalées avec hauteur de mât réelle ; photos manquantes prises sur le web (même modèle, même année). Doute : « Lagoon 420 2026 » probablement un Lagoon 42.
-- 2026-10-27 : Flotte à l'échelle intégrée à l'accueil avant les vignettes (dbe42dd puis corrections 20c3b54 et suivant) : 18 silhouettes plâtre 3/4 avant (photos Jicky + même modèle sur internet), mâts à la hauteur officielle (specs chantiers), section épinglée avec défilement horizontal au scroll. Revues animation et accessibilité faites et corrigées. Pipeline : research/depth/detourer-lot.mjs (BiRefNet), research/echelle.py, research/platre.py. À vérifier avec Jicky : Lagoon 420 = Lagoon 42, Sunseeker 60 = Predator 1re gén., modèle exact du Sunseeker 52.
 - 2026-10-27 : Flotte à l'échelle jugée insuffisante par Melvin (angles incohérents, objets parasites, Sanya 57 plus petit que Lagoon 55, mâts coupés) : reprise lancée avec photos internet au bon angle, gréement redessiné et échelle des voiliers calée sur la tête de mât.
 - 2026-10-28 : Flotte à l'échelle refaite (acf918c) : 18 photos internet en trois-quarts avant, caméra basse (sous-agents de recherche, cahier research/refs-internet/CAHIER-PHOTOS.md), gréement redessiné au-dessus de la bôme d'après des points relevés sur chaque photo, mâts entiers à la hauteur officielle, parasites et lettrage gommés. Sanya 57 désormais plus long que le Lagoon 55 (Lagoon calé sur sa coque de 16,56 m). Identifications : « Sunseeker 52 » = Camargue 50, « Sunseeker 60 » = Predator 56 2000-2004 — à confirmer avec Jicky. Leçon : les photos de drone gonflent la hauteur des bateaux (Leopard 53 : 8,7 m mesurés pour 5,7 m) : exiger une caméra basse.
 - 2026-10-27 : Profils couleur des photos convertis en sRGB (9c8a98b, 36 fichiers, couleurs fidèles au site d'origine) ; message de la veille corrigé à 390 px (c994c7d) ; dossier d'envoi créé ([[jicky-02-dossier-envoi]] : vidéos 75 s, avant/après, page privée, brouillons J0-J+15, rien envoyé) ; porte qualité FAIL : météo absente du tunnel avant l'envoi alors que les CGV ont un article météo.
@@ -92,6 +93,9 @@ body_synced: 2026-10-29
 - 2026-10-28 : Page privée finalisée : PITCH_CONTACT rempli (email, téléphone, WhatsApp, 7bf9bd1), logo Blue Impakt sans lien (aabb931), titre « la réservation en ligne, sans perdre la main » (8e48837), carte « 3 étapes / 2 taps » (9a88118, a0aedc6), avant/après téléphone + ordinateur (a55b8a9), 5 questions concept (199cbce). Porte qualité FAIL (poids accueil, photos agrandies, focus, météo, Leopard 88).
 - 2026-10-29 : Porte qualité : poids de l'accueil mobile (1 736 → 1 123 Ko, silhouettes chargées à la première interaction), focus des champs en erreur et faits du Leopard 88 corrigés ; reste FAIL sur 8 photos agrandies (Pardo 43, Sanya) et le LCP mobile bridé (flotte 5,2 s, Fairline 7,3 s).
 - 2026-10-27 : Leopard 45 : photo de Melvin en principale (1 376 px au lieu de 537), doublon retiré (2b2cf72) ; « Lagoon 420 » renommé « Lagoon 42 » sur toutes les pages (2e42e0c), identifiant interne inchangé — modèle exact à confirmer avec Jicky.
+- 2026-11-02 : Hébergement sur adresse propre https://jicky-marine.maquettes.blue-impakt.org (page privée /p/), plus de lien *.vercel.app dans les messages (anti-spam) ; republié avec la vidéo (73,7 s) et l'avant/après refaits le 01/11 ; brouillons J0-J+15 et note d'envoi régénérés.
+- 2026-11-01 : Page « Services aux yachts » EN/FR (livraisons, déchets, fret Miami sur devis, formulaire à estimation, vue bureau) et navigation revue ; revues textes/a11y/Finish-Gate corrigées (a42bbdc, 31 contrôles OK) ; comparaison à l'aveugle : 1re sur 5 écrans sur 6, 2e sur la fiche 1 440 px derrière Edmiston ; vidéo, avant/après et captures refaits.
+- 2026-11-02 : Maquette basculée sur jicky-marine.maquettes.blue-impakt.org (plus de lien vercel.app dans l'envoi, anti-spam) ; brouillon J0 régénéré avec la ligne de présentation
 
 ## Liens
 - Projet parent : [[prospect-charter]]

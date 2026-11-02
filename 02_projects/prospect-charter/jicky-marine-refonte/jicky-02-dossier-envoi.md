@@ -1,6 +1,6 @@
 ---
 tags: [project, encours, jicky-marine]
-created: 2026-10-29
+created: 2026-11-02
 projet: jicky-marine-refonte
 parent: jicky-marine-refonte
 genere_par: maquette-outils/envoi
@@ -14,7 +14,7 @@ Dossier d'envoi de la maquette Jicky Marine : vidéo, avant/après, chiffres, pa
 
 ## À faire avant le premier envoi
 - [x] Coordonnées de Melvin dans les messages et la page privée (email, téléphone, WhatsApp)
-- [x] Page privée et maquette hébergées en lien privé, non référencé : https://jicky-marine-ltdnit.vercel.app/p/ (aucun lien traçant, aucun pixel)
+- [x] Page privée et maquette hébergées en lien privé, non référencé : https://jicky-marine.maquettes.blue-impakt.org/p/ (aucun lien traçant, aucun pixel)
 - [ ] Trancher l'offre « prix pilote contre étude de cas » (marquée **À CONFIRMER PAR MELVIN** sur la page)
 - [ ] Choisir la date de J0 (proposée : 03/11/2026) et relire chaque message
 - [ ] Facultatif : enregistrer la voix sur le script minuté ([[jicky-sous-titres-fr.srt]]), déposer `voix-melvin-fr.wav` à côté de la config, relancer `py -I envoi.py video --sans-capture`
@@ -57,15 +57,10 @@ Bonjour,
 Je m’appelle Melvin, passionné de voile et web designer : je navigue, et je refais des sites pour ceux qui vivent de la mer.
 4,6 sur 5 et 75 avis sur Tripadvisor : vos clients y citent vos équipages par leur prénom.
 Une flotte de 18 bateaux depuis 2004 à St Barth, mais votre site est illisible sur mobile et chaque réservation passe par un échange d'emails, là où les agences encaissent en ligne.
-
 J’en ai fait une maquette, de ma propre initiative et sans engagement : une minute de vidéo, ci-dessous.
-[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers https://jicky-marine-ltdnit.vercel.app/p/].
-La maquette est disponible dans le lien également. 
-
-Auriez-vous 15 minutes dans les jours à venir pour en discuter ?
-
-Les acteurs de la mer méritent eux aussi les meilleurs design. 
-
+[IMAGE : jicky-couverture-video-fr.jpg, cliquable vers https://jicky-marine.maquettes.blue-impakt.org/p/]
+Auriez-vous 15 minutes cette semaine pour la regarder ensemble ?
+Si le sujet ne vous intéresse pas, répondez « stop » et je ne vous écrirai plus.
 
 Melvin Perrottet, Blue Impakt
 melvin.perrottet@blue-impakt.org · +33 6 36 81 72 74 · WhatsApp : https://wa.me/33636817274
@@ -85,7 +80,7 @@ Objet : Jicky Marine : un détail tiré de vos avis
 Bonjour,
 
 Un détail tiré de vos avis : en novembre 2025, un client a salué le bateau et l’équipage, mais regretté des instructions d’arrivée incomplètes : le bateau n’accoste qu’une fois tout le groupe sur le ponton, le parking est rare, l’agent difficile à reconnaître.
-Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : https://jicky-marine-ltdnit.vercel.app/p/
+Dans la maquette, la veille de chaque sortie, le client reçoit automatiquement l’heure, le ponton, le parking et la façon de reconnaître votre agent. Vous le voyez à la fin de la vidéo : https://jicky-marine.maquettes.blue-impakt.org/p/
 15 minutes cette semaine ou la suivante ?
 Un « stop » suffit pour ne plus recevoir de message.
 
@@ -99,13 +94,13 @@ Objet : Jicky Marine : je clos de mon côté
 Bonjour,
 
 Sans réponse de votre part, je clos le sujet de mon côté.
-La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : https://jicky-marine-ltdnit.vercel.app/p/
+La vidéo reste en ligne à la même adresse, si vous voulez la montrer à votre équipe : https://jicky-marine.maquettes.blue-impakt.org/p/
 Bonne saison,
 
 Melvin Perrottet, Blue Impakt
 ```
 
-Règles appliquées : J0 de 5 à 7 lignes, une ligne de présentation juste après la salutation, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
+Règles appliquées : J0 de 5 à 7 lignes, une seule question, une ligne « stop », « de ma propre initiative, sans engagement », ni prix ni technologies, aucun pixel ni lien traçant (CNIL), pas de tiret cadratin. Fait flatteur : 4.6 / 5, 75 avis Tripadvisor, relevé : 25/10/2026 (jicky-marine-refonte/docs/avis-clients.md).
 
 ## Chiffres
 Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 passages, page d’accueil · 27/10/2026 · source : jicky-marine-refonte/docs/revues/web-quality.md, tableaux A et B (commit 3e6b647) ; référencement de la maquette sans son noindex de prototype (66 avec) ; demande actuelle : CGV art. 3.2 (prospection-charter/docs/etudes/2026-10-25-jicky-marine-paiement.md) ; 3 étapes : porte qualité, contrôle tunnel ; 2 taps : vue bureau de la maquette (office.html, « Relire le message » puis « Envoyer avec le lien de paiement »)
@@ -140,12 +135,12 @@ Mesures : Lighthouse 12.8.2, profil mobile (4G lente simulée), médiane de 3 pa
 | 40,4 | Enfin ses coordonnées. Rien à payer à ce stade. |
 | 44,0 | La demande arrive à votre bureau, complète. |
 | 46,6 | Côté bureau : le bateau, la date, les invités et le prix, déjà calculé. |
-| 51,8 | Vous relisez le message. Rien ne part sans vous. |
-| 55,2 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
-| 60,7 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
-| 66,4 | Ce qui avait manqué à un client en novembre 2025. |
-| 69,3 | Prototype privé : vos photos, vos tarifs. |
-| 71,8 | Prochain pas : 15 minutes ensemble. |
+| 52,0 | Vous relisez le message. Rien ne part sans vous. |
+| 55,3 | Un tap : la confirmation part avec le lien de paiement Up2pay. |
+| 60,1 | La veille, le client recevra l’heure, le ponton, le parking et comment reconnaître votre agent. |
+| 65,8 | Ce qui avait manqué à un client en novembre 2025. |
+| 68,7 | Prototype privé : vos photos, vos tarifs. |
+| 71,2 | Prochain pas : 15 minutes ensemble. |
 
 ## Liens
 - Projet parent : [[jicky-marine-refonte]]

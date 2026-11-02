@@ -9,7 +9,7 @@ projet: rm-croisieres-refonte
 Projet : [[rm-croisieres-refonte]] · Client : [[rm-croisieres]] · Source : repo `rm-croisieres-refonte`, `docs/note-relecture.md`
 
 
-Maquette locale : lancer le serveur `rm-maquette` (`.claude/launch.json`, port 4178), puis http://localhost:4178/. Page pour le gérant : `concept.html`. Rien n'est déployé ni envoyé.
+Maquette locale : lancer le serveur `rm-maquette` (`.claude/launch.json`, port 4178), puis http://localhost:4178/. Page pour le gérant : `concept.html`. En ligne depuis le 02/11/2026 sur https://rm-croisieres.maquettes.blue-impakt.org/ (page privée `/p/`, lien valable jusqu'au 10/11/2026 pour un J0 le 04/11) ; rien n'est envoyé.
 
 ## L'idée
 **« Choisissez votre cap et votre bateau. »** Le premier écran est la photo plein cadre d'un catamaran au bord d'un banc de sable (version HD que tu as fournie d'une image du diaporama de RM), avec un zoom lent de 10 s. Le titre est posé dessus. À droite, une carte translucide déroule nuit par nuit « 8 jours, Les Grenadines depuis Saint-Vincent », la route que RM publie déjà. Palette tirée des cartes de RM (marine #1E3D58, sable #C7936E), Bodoni Moda (écho au logo) et Albert Sans.

@@ -4,7 +4,7 @@ created: 2026-10-21
 statut: encours
 client: sabinas-watersport
 parent: prospect-charter
-body_synced: 2026-11-01
+body_synced: 2026-11-02
 ---
 
 # sabinas-watersport-refonte
@@ -34,7 +34,9 @@ body_synced: 2026-11-01
 ## État actuel
 - 2026-10-22 : analyse terminée ; maquette v1 (`maquette/`) déployée sur Vercel (noindex, lien privé), plan de redirection 301 des 3 domaines rédigé (§1.6 du doc stack), accroche WhatsApp DE/EN rédigée avec le lien de la démo, page concept enrichie (« Ce qu'il y a derrière le site »). Maquette concurrente au Prompt 3D (`maquette-3d/`, piste C « Horizon ») : corrections finish-gate en cours, puis comparaison A/B. Reste : contact de Melvin dans la maquette (`PITCH_CONTACT`), reconfirmation des chiffres d'avis, envoi.
 - 2026-10-23 : e-mail de relance EN finalisé (stack détaillée, demande de créneau de 10 min), pas encore envoyé.
-- 2026-10-31 : maquette `maquette/` mise au niveau du skill [[maquette-prospect]] : hero plein écran (vue drone HD), en-tête avec l'accroche de Sabina, grille de 6 cartes pleines, section « Prix et conditions » (seul endroit des tarifs), acompte réel de 150 €, WhatsApp pré-rédigé à chaque étape, calendrier borné aux saisons réelles, photos q95 régénérées depuis les originaux, 4 langues (EN, DE, IT, FR ; DE et IT relus par agents). Erreurs de la v1 corrigées : « dès 640 € » sur le speedboat (400 €), acompte de 30 % inventé, 479 avis (510). Porte qualité n° 6 **PASS** (LCP téléphone en vrai bridage 3,8 s pour 4,0 s, poids 903 Ko, accessibilité et bonnes pratiques 100, 45 faits vérifiés en 4 langues, tunnel 7 gestes). Commits a3a3d82 → 59aea5d. **Pas redéployée** : la version en ligne est encore la v1.
+- 2026-10-31 : maquette `maquette/` mise au niveau du skill [[maquette-prospect]] : hero plein écran (vue drone HD), en-tête avec l'accroche de Sabina, grille de 6 cartes pleines, section « Prix et conditions » (seul endroit des tarifs), acompte réel de 150 €, WhatsApp pré-rédigé à chaque étape, calendrier borné aux saisons réelles, photos q95 régénérées depuis les originaux, 4 langues (EN, DE, IT, FR ; DE et IT relus par agents). Erreurs de la v1 corrigées : « dès 640 € » sur le speedboat (400 €), acompte de 30 % inventé, 479 avis (510). Porte qualité n° 6 **PASS** (LCP téléphone en vrai bridage 3,8 s pour 4,0 s, poids 903 Ko, accessibilité et bonnes pratiques 100, 45 faits vérifiés en 4 langues, tunnel 7 gestes). Commits a3a3d82 → 59aea5d. Dossier d'envoi fait ; **v2 publiée** (page privée `/p/`), v1 intacte.
+- 2026-11-01 : retours de Melvin appliqués sur la v2 (bandeau prototype, galerie 5 éléments, 3e carte « 3 → 1 », performance en ligne 79 → 94), porte n° 13 PASS, v2 republiée. Italien gardé (2 sources indépendantes).
+- 2026-11-02 : e-mail de relance EN prêt mais **non reçu** (probable filtrage du lien vercel.app). Maquettes migrées sur `sabinas.maquettes.blue-impakt.org` (v1 : `sabinas-v1.…`), page privée, messages et mail régénérés. Reste : envoi (J0 à adapter).
 
 ## Décisions techniques
 - **Un seul site** sur `sabinas-watersport.com` (le nom qui porte les avis Google), avec deux univers *Boat trips* et *Watersports*. `catamaran-yachtsailing-rhodos.com` et `dolphin-tours-rhodos.com` redirigés page par page (plan 301 rédigé, §1.6 du doc stack).
@@ -59,19 +61,15 @@ body_synced: 2026-11-01
 - [ ] Vérifier avec Sabina : point de rendez-vous catamaran (Stafilia Beach, pas Kiotari) et voisin de Dolphin Tours (Aulus Lindos vs Lindian Village)
 - [ ] Trancher l'hébergement des automatisations (n8n auto-hébergé ~6,5 €/mois vs Convex, tarifs officiels à vérifier)
 - [ ] Envoyer l'e-mail de relance à Sabina (version finale dans [[sabinas-08-message-accroche]]) ; harmoniser la durée proposée (10 min e-mail vs 15 min WhatsApp DE)
-- [ ] Relire la v2 ([[sabinas-11-note-relecture]]) et la tester 10 min sur iPhone sur https://sabinas-xuygcn.vercel.app/ (bureau et mode intermédiaire compris) ; trancher : recadrage portrait du hero, bouton principal, mise en page du hero sur ordinateur, adresse mail affichée
+- [ ] Relire la v2 ([[sabinas-11-note-relecture]]) et la tester 10 min sur iPhone sur https://sabinas.maquettes.blue-impakt.org/ (bureau et mode intermédiaire compris) ; trancher : recadrage portrait du hero, bouton principal, mise en page du hero sur ordinateur, adresse mail affichée
 - [x] Revues de la v2 : comparaison à l'aveugle (1re, 7,8 contre 7,5 pour Edmiston), Finish-Gate, personas, accessibilité, code, couverture du site ; dossier d'envoi ([[sabinas-12-dossier-envoi]]) (2026-10-31)
 - [ ] Messages d'envoi : adapter le J0 (modèle de premier contact alors que Sabina a déjà reçu la v1) et écrire ou sauter le J+8 (aucun détail d'avis vérifié) ; J0 par défaut mardi 3/11, lien de la maquette v2 valable jusqu'au 10/11
 - [ ] Demander à Sabina le modèle du voilier (coque « Gib'Sea 302 », annonce Click&Boat « Dufour 30 Classic ») et le rôle de Roland / nom « Dolphin Tours »
 - [ ] Poser à Sabina les 5 questions de l'étude de réservation (solde, météo, annulation, délai de réponse, hôtels)
-- [ ] Italien : demander à Sabina si quelqu'un de l'équipe parle italien ; sinon retirer l'IT de la v2 (cliente « Giulia Rossi » du bureau en FR/DE) et republier
+- [x] Italien : gardé sur 2 sources indépendantes (Click&Boat, Manawa) — décision du 2026-11-01
+- [ ] J0 : remplacer « none of them shows those reviews » par « none of them shows your 5.0 on Google » (le badge Tripadvisor 460 voyageurs existe sur sabinas-watersport.com)
 
 ## Journal
-- 2026-10-21 : Maquette v1 livrée (home avec carte vedette + lignes tarifaires, fiche catamaran avec carte d'itinéraire, réservation 3 étapes, écran concept pour Sabina ; EN officiel + FR/DE ; photos client en WebP ; Motion). Revues Finish-Gate, WCAG AA et textes appliquées. Message d'accroche DE rédigé. Polar écarté (interdit les services de voyage), Stripe conservé.
-- 2026-10-21 : Prompt 3D écrit ([[sabinas-07-prompt-3d-direction-artistique]], 2 transcripts YouTube + accès vault en lecture seule) pour un test A/B : maquette parallèle `maquette-3d/` construite sans voir `maquette/`.
-- 2026-10-21 : Maquette v1 itérée : walkthrough après = 6/10 frictions résolues ; tarifs sports nautiques en page détail ; vedette par filtre ; renommage Private / Half-Private tour, ton luxury & exclusive ; galeries fléchées ; hero drone HD ; 7 vidéos YouTube en nocookie ; bug Motion (scale(0)) corrigé.
-- 2026-10-21 : Maquette 3D : 3 pistes en aveugle (A Bordalbum, B Carte de bord, C Horizon), Melvin choisit C (+ mode soleil clair) ; home, fiche, réservation et écran Für Sie construits ; a11y et LCP OK, finish-gate KO (1 bloquant, 8 majeurs) en correction.
-- 2026-10-21 : Maquette v1 : liens d'avis Google / Tripadvisor intégrés et centrés dans leurs cartes de note (EN/FR/DE), scripts en `?v=36`.
 - 2026-10-21 : Maquette v1 peaufinée : header « Exclusive boat trips » / Watersports, footer Facebook + LinkedIn, hero « Your own sailing day », photos watersports de Sabina (7 cartes), galeries PC 5 éléments sans défilement avec vidéo au centre tenant dans la première vue ; scripts en `?v=53`.
 - 2026-10-21 : Maquette v1 : vidéo YouTube dans le hero, vidéos réparties par Melvin entre galeries et accueil, carte remplacée par une vraie carte OpenStreetMap à 4 repères (spots de Sabina non placés faute de coordonnées fiables) ; revue ux-copy + design-critique et boucle prospection à 4/5, reste le contact de réponse et l'hébergement privé (scripts `?v=68`).
 - 2026-10-22 : Plan de redirection 301 des 3 domaines rédigé (§1.6 du doc stack) ; maquette déployée sur Vercel (noindex, lien privé), à utiliser pour l'accroche une fois PITCH_CONTACT rempli.
@@ -82,8 +80,11 @@ body_synced: 2026-11-01
 - 2026-10-31 : Passe v2 terminée : vue bureau de Sabina (confirmer en 2 gestes, alerte vent, planning), mode intermédiaire (réception d'hôtel, agence), audit de couverture (modèle du voilier et « retour sous voiles » retirés), étude des tunnels de Rhodes (réservation instantanée seulement sur les plateformes, où Sabina vend), comparaison à l'aveugle 1re ; porte n° 10 PASS. Dossier d'envoi fait (vidéo EN 68 s, avant/après, messages). **v2 publiée sur https://sabinas-xuygcn.vercel.app/** (page privée `/p/`), v1 intacte sur sabinas-concept-x7k2m9. Commit 957daa4.
 - 2026-10-31 : Dossier d'envoi v2 corrigé côté outil (J+8 réglable, attente d'images limitée) ; J0 à adapter (second contact après la v1), J+8 sans détail d'avis vérifié.
 - 2026-11-01 : Dossier d'envoi : bandeau cookies du site d'origine masqué sur vidéo et avant/après (outil e75b595). Italien de la v2 remis en cause : gardé seulement si un membre de l'équipe parle italien, sinon retrait et republication (~20 min).
-
 - 2026-11-01 : Retours de Melvin sur la v2 : bandeau du prototype (comme Jicky), ligne sous « Sabinas », galerie 5 éléments vidéo au centre, vidéo de « Who we are », fenêtre cookies cachée dans l'avant/après, 3e carte « 3 → 1 », performance 79 → 94 en ligne (content-visibility, photo Android q85). Porte n° 13 PASS, v2 republiée, v1 intacte.
+- 2026-11-01 : Italien gardé sur 2 sources indépendantes (Click&Boat, Manawa), règle « 2 sources minimum » ajoutée au skill maquette-prospect ; bandeau prototype, 3e carte « 3 → 1 » et performance en ligne 79 → 94 déjà au Journal ; J0 à corriger : « none of them shows those reviews » inexact (badge Tripadvisor sur sabinas-watersport.com) → « your 5.0 on Google ».
+- 2026-11-02 : E-mail de relance anglais prêt (`envoi/email-relance-2026-11-02.html`, v2 + vidéo `/p/`) ; non-réception diagnostiquée côté blue-impakt.org (DNS OK, adresse pro probablement en redirection)
+- 2026-11-02 : Mail de relance non reçu (probable filtrage du lien vercel.app) ; maquettes v1/v2 migrées sur `sabinas(-v1).maquettes.blue-impakt.org` via CNAME générique Cloudflare, page privée, messages et mail régénérés, rattachement Vercel automatisé dans `publier`.
+- 2026-11-02 : Titre vidéo et couverture changé en « One website for all your trips », republié en ligne (0206313)
 
 ## Liens
 - Projet parent : [[prospect-charter]]
