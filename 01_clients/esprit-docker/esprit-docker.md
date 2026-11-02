@@ -38,7 +38,6 @@ body_synced: 2026-10-05
 - [ ] Envoyer à Morgane [[referencement-google-ia]] et récupérer ses réponses (phrase de marque, nom et photo, année de création, comptes existants, questions du guide)
 
 ## Journal
-- 2026-10-31 : Sur [[esprit-docker-site]] — modèle L'Essentielle mis en ligne (photos normalisées, couleur Orange Terracotta) ; bloc « Nouvelle collection » prêt, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — 21 photos L'Essentielle (7 couleurs, 3 vues) en ligne ; en-tête « NOUVELLE / COLLECTION » en diagonale refait, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle Steppe (ex-L'Essentielle) en ligne, bloc « Nouveau Docker » sur /collection déployé (89fca47).
 - 2026-10-31 : Sur [[esprit-docker-site]] — section Steppe sur l'accueil, finitions fiche produit, Atelier sans Steppe, déployé (`a01e609`)
@@ -53,6 +52,7 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — SEO/GEO déployé en prod (IndexNow envoyé), GEO manuel 0 citation sur 30, flux Merchant Center et pages À propos/FAQ prêts non déployés, réponses de Morgane intégrées
 - 2026-11-02 : Sur [[esprit-docker-site]] — phrase de marque corrigée (bijou cousu en Gironde) dans métas et JSON-LD, commit dee8675, non fusionné
 - 2026-11-02 : Sur [[esprit-docker-site]] — Perplexity remesuré question par question, pages À propos/FAQ fusionnées (non déployées), retours et livraison Merchant Center alignés sur les CGV
+- 2026-11-02 : Sur [[esprit-docker-site]] — Bing Webmaster Tools branché, Merchant Center corrigé et flux de 73 produits importé (examen Google en cours), GEO manuel remesuré (ChatGPT fait, Gemini en cours)
 
 ## Liens
 - Projets : [[esprit-docker-site]]

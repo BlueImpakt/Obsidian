@@ -32,10 +32,10 @@ Le travail consiste donc à rendre la marque visible et compréhensible pour ces
 | Google, 21 autres recherches suivies (« casquette docker », « casquette marin »…) | absent des 10 premiers résultats |
 | Résumés IA de Google | Esprit Docker cité uniquement sur la recherche de son nom |
 | Claude, 16 questions d'acheteurs posées deux fois | cité 0 fois sur 32 ; quand on lui demande « Esprit Docker est-elle une bonne marque ? », il répond ne pas connaître de marque de ce nom |
-| ChatGPT, Perplexity et Gemini, 10 questions d'acheteurs chacun | cité 0 fois sur 30 ; à la question « Esprit Docker est-elle une bonne marque ? », ChatGPT répond ne pas pouvoir confirmer cette marque, Perplexity la juge crédible sans citer votre site, Gemini ne la nomme pas |
+| ChatGPT, Perplexity et Gemini, 10 questions d'acheteurs chacun | cité 2 fois sur 30, uniquement à la question qui contient le nom « Esprit Docker » (Perplexity et Gemini citent alors votre site) ; ChatGPT ne le cite pas et dit ne pas pouvoir confirmer cette marque ; sur les 27 questions d'acheteurs qui ne contiennent pas le nom, jamais cité |
 | Visites venues de Google, août à octobre | 19 affichages, 2 clics, tous sur le nom de la marque |
 
-**Qui les assistants IA recommandent à la place** : ChatGPT met en avant Béton Ciré, MIARAKA et Saint James ; Perplexity s'appuie surtout sur Etsy, Blanc Bonnet et Maison Bonnefoy ; Gemini renvoie presque toujours vers le site bonnet-docker.fr, qui revient aussi chez Claude et Perplexity. Votre site n'apparaît dans aucune de leurs sources. Ces mesures ont été faites une fois par question, et les réponses d'une IA peuvent varier d'un jour à l'autre : ce sont des repères, pas des chiffres exacts.
+**Qui les assistants IA recommandent à la place** : ChatGPT met en avant Béton Ciré, Miaraka et Maison Bonnefoy ; Perplexity s'appuie surtout sur Etsy, Personaliz, Novella Hats et Maison Bonnefoy ;Gemini cite Béton Ciré, Tess Atelier, Miaraka et le site bonnet-docker.fr, qui revient aussi chez Claude et Perplexity. Ces trois mesures ont été faites une fois par question, sans compte, et les réponses d'une IA peuvent varier d'un jour à l'autre : ce sont des repères, pas des chiffres exacts. Ce qu'on retient : on trouve votre site quand on tape votre nom, pas quand on cherche une casquette docker.
 
 Ce point de départ servira de référence : chaque mois, les mêmes mesures sont refaites et comparées.
 
@@ -120,7 +120,7 @@ Il nous reste à vous demander :
 
 | Quand | Quoi |
 |---|---|
-| Prochaine mise en ligne | corrections du site, compteur des ventes par canal, rubrique Guides |
+| Prochaine mise en ligne | pages « À propos » et « Questions fréquentes », liste Merchant Center mise à jour automatiquement, premier guide |
 | Ce mois-ci | Merchant Center, page « L'atelier », présentation identique sur les profils |
 | Début décembre | premier rapport mensuel : comparaison avec le point de départ |
 | Ensuite | un à deux guides par mois, annuaires, avis clients |
@@ -153,9 +153,10 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : liste complète des 73 casquettes (13 modèles, chaque coloris) préparée pour Google, avec prix, photos, disponibilité et lien vers la bonne page ; toutes les pages et photos vérifiées.
 - Google Merchant Center : le site saura fournir lui-même cette liste à Google, mise à jour automatiquement à chaque changement de prix, de stock ou de coloris (prêt, en ligne à la prochaine mise en ligne).
 - Annuaires de créateurs : sélection faite et conditions vérifiées sur chaque site (deux à inscrire en priorité, trois à vérifier avant) ; les sites qui exigent du « fabriqué en France » sont écartés, la marque ne peut pas le revendiquer. Textes de fiche et deux versions de la présentation Instagram (« à Bordeaux » ou « dans le Sud-Ouest ») rédigés.
+- Présentation de la marque corrigée : Morgane personnalise des casquettes de base (bijou cousu, logo brodé), elle ne les fabrique pas ; les textes ne disent plus « imaginées » mais « personnalisées dans l'atelier ».
 - Choix du lieu dans la présentation de la marque : « Bordeaux » partout, « Sud-Ouest » seulement pour éviter de répéter « Bordeaux » dans un même texte (décision de Melvin).
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
-- Mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun) : Esprit Docker n'est cité dans aucune des 30 réponses ; les marques recommandées à la place sont relevées pour guider la suite.
+- 2 novembre : mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun, une discussion neuve par question, sans compte) : Esprit Docker est cité 2 fois sur 30, uniquement quand la question contient son nom ; les marques recommandées à la place sont relevées pour guider la suite.
 - Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Quatre points restent à préciser avec vous (boutiques de Dax et Langon, Pinterest et Etsy, contacts presse, âge des clients).
 - Corrections du site mises en ligne : descriptions des fiches, Livraison et Entretien lisibles, carte d'identité de la marque, comptage anonyme des ventes par canal avec le bouton « M'opposer au comptage », textes légaux à jour. Vérifié en ligne sur l'accueil et une fiche produit. La rubrique « Guides » reste cachée tant qu'aucun guide n'est publié.
 - Bing prévenu des 19 pages du site (accusé de réception reçu).
@@ -166,10 +167,10 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : conditions de retour corrigées (14 jours, produit neuf, retour par la poste à la charge du client, remboursement sous 14 jours), elles étaient déclarées gratuites et limitées aux produits défectueux.
 - Google Merchant Center : livraison corrigée, offerte dès 100 € et non plus 99,98 €, et point relais Mondial Relay à 3,50 € ajouté à côté de Colissimo à domicile à 8,50 €.
 - Google Merchant Center : liste des 73 casquettes envoyée à Google pour la France, acceptée sans aucune erreur ; Google l'examine (jusqu'à 3 jours ouvrés).
+- Bing Webmaster Tools (l'équivalent de Search Console chez Bing) branché avec votre compte Google Esprit Docker : site importé depuis Search Console, plan du site envoyé à Bing. L'accueil est déjà indexé par Bing, sans problème relevé ; les autres pages seront découvertes dans les prochains jours.
 
 **En cours**
 
-- Bing Webmaster Tools (l'équivalent de Search Console chez Bing) : branchement du site.
 - Google Merchant Center : examen des 73 casquettes par Google ; ensuite, mise à jour automatique de la liste à brancher une fois le site remis en ligne.
 - Pages « À propos » et « Questions fréquentes » : prêtes, à mettre en ligne avec la prochaine mise à jour du site.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane : inscription aux annuaires, création du compte Pinterest et publication des épingles.

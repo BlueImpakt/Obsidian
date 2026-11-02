@@ -63,14 +63,11 @@ body_synced: 2026-11-02
 - [ ] Chantier marque pour les moteurs (Claude ne cite Esprit Docker dans aucune des 32 réponses) : indexation, fiche d'établissement Google, mentions externes (Vinted, Instagram, annuaires), JSON-LD Organization
 - [ ] Fusionner et déployer `feat/flux-merchant` (8609d8b) et `feat/pages-a-propos-faq` (125cf8d), puis `npm run indexnow`
 - [ ] Arbitrer la phrase de marque « assemblées à Bordeaux » (accueil, layout, `DESCRIPTION_MARQUE`) vs atelier de Gauriaguet
-- [ ] Merchant Center : corriger retours (14 jours, frais à la charge du client, lien CGV) et livraison (Mondial Relay 3,50 €, offerte dès 100 €), importer le flux des 73 produits
-- [ ] Bing Webmaster Tools : import depuis Search Console (Bing ne connaît pas encore le site)
 - [ ] Guide « porter une casquette docker » : passer `brouillon: false`, commiter et déployer
 - [ ] Annuaires : inscrire Créateurs Français et LesCréatrices.fr, créer le compte Pinterest (rien inscrit à ce jour)
 - [ ] Aligner la phrase de marque dans `PageAccueil.tsx` (« Assemblé à la main à Bordeaux », « Pose et finition main à Bordeaux », « …dans le Sud-Ouest à Bordeaux ») une fois la modification en cours terminée, puis sur Instagram, annuaires et Merchant Center
 
 ## Journal
-- 2026-10-31 : Avis Vinted : recopie des textes abandonnée (CGU Vinted : pas de reproduction sans accord écrit) ; ligne « ★★★★★ 4,9/5 · 239 évaluations Vinted » ajoutée sous le bouton d'achat de toutes les fiches (src/lib/avisVinted.ts), déployée (ba5d513) et vérifiée desktop + mobile. Spec avis (fondu, onglet, page /avis) gardée pour une collecte d'avis propres.
 - 2026-10-31 : Nouveau modèle L'Essentielle : photos des 4 coloris normalisées au format catalogue (WebP ~180 Ko au lieu de PNG 2,8 Mo) + dos, publiées en R2/Neon ; Orange Corail remplacé par « Orange Terracotta » pour ce modèle ; bloc « Nouvelle collection » en tête de /collection et masquage des couleurs non proposées codés, vérifiés en local, non déployés.
 - 2026-10-31 : L'Essentielle : 21 photos (7 couleurs × face/profil/dos, vrais dos partout) en ligne, transparence reconstruite depuis les PNG à fond blanc, script `scripts/essentiel-import-photos.mjs` ; en-tête du bloc « Nouvelle collection » refait (« NOUVELLE » / « COLLECTION » en diagonale 45° de chaque côté de la carte), vérifié desktop, non déployé.
 - 2026-10-31 : Modèle L'Essentielle renommé « Steppe » (Orange Corail écartée côté serveur), bloc « Nouveau Docker » de /collection finalisé et déployé (89fca47, vérifié en ligne) ; descriptions des 13 modèles mises à jour ; animations de la page Collection prêtes, non déployées.
@@ -85,6 +82,7 @@ body_synced: 2026-11-02
 - 2026-11-02 : SEO/GEO en prod sur `master` (e749994, 6 min Cloudflare, vérifié, IndexNow 19 URL HTTP 202) ; GEO manuel 0 citation sur 30 (ChatGPT, Perplexity, Gemini) ; flux Merchant Center 73 produits (`feat/flux-merchant`, 8609d8b) et pages `/a-propos` + `/faq` (`feat/pages-a-propos-faq`, 125cf8d) prêts, non déployés ; réponses de Morgane intégrées, guide prêt à publier
 - 2026-11-02 : Phrase de marque corrigée (logo brodé à Bordeaux, bijou cousu à la main en Gironde) dans JSON-LD, layout, méta accueil et /collection, commit dee8675 sur feat/pages-a-propos-faq ; reste PageAccueil.tsx et les profils externes
 - 2026-11-02 : GEO manuel : série Perplexity jugée non fiable (10 questions dans une seule conversation), remesure question par question en navigateur intégré en cours ; `feat/pages-a-propos-faq` fusionnée en avance rapide dans `feat/seo-geo-attribution-guides` (43 tests verts), non déployée ; Merchant Center : retours 14 jours et livraison (Colissimo dès 100 €, Mondial Relay) corrigés
+- 2026-11-02 : Bing Webmaster Tools branché (import Search Console, sitemap soumis à la main, accueil indexé) ; Merchant Center : retours, livraison et flux de 73 produits importés, en attente d'examen Google ; GEO manuel remesuré question par question (ChatGPT fait, Gemini en cours)
 
 ## Liens
 - Client : [[esprit-docker]]
