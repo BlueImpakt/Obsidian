@@ -38,8 +38,6 @@ body_synced: 2026-10-05
 - [ ] Envoyer à Morgane [[referencement-google-ia]] et récupérer ses réponses (phrase de marque, nom et photo, année de création, comptes existants, questions du guide)
 
 ## Journal
-- 2026-10-31 : Sur [[esprit-docker-site]] — corrections SEO, performance et accessibilité déployées en prod (commit 9c86356) ; prochaine étape : référencement (Search Console sur le compte Google du client, mots-clés, contenu).
-- 2026-10-31 : Sur [[esprit-docker-site]] — note Vinted (4,9/5 · 239 évaluations) affichée sous le bouton d'achat de toutes les fiches, sans recopier d'avis (CGU Vinted) ; prochaine étape : collecter ses propres avis après livraison.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle L'Essentielle mis en ligne (photos normalisées, couleur Orange Terracotta) ; bloc « Nouvelle collection » prêt, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — 21 photos L'Essentielle (7 couleurs, 3 vues) en ligne ; en-tête « NOUVELLE / COLLECTION » en diagonale refait, en attente de déploiement.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle Steppe (ex-L'Essentielle) en ligne, bloc « Nouveau Docker » sur /collection déployé (89fca47).
@@ -53,6 +51,8 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — Search Console branchée à l'outil seo-geo (propriété Domaine validée, compte de service prêt, API à activer) ; positions Google : n°1 sur la marque, absent du top 10 ailleurs.
 - 2026-11-02 : Sur [[esprit-docker-site]] — document [[referencement-google-ia]] : trace en langage simple de tout le travail SEO/GEO ; plan entité de marque codé sur la branche (`OnlineStore` + `sameAs`, descriptions à jour, IndexNow, commit e749994) ; compte Merchant Center créé.
 - 2026-11-02 : Sur [[esprit-docker-site]] — SEO/GEO déployé en prod (IndexNow envoyé), GEO manuel 0 citation sur 30, flux Merchant Center et pages À propos/FAQ prêts non déployés, réponses de Morgane intégrées
+- 2026-11-02 : Sur [[esprit-docker-site]] — phrase de marque corrigée (bijou cousu en Gironde) dans métas et JSON-LD, commit dee8675, non fusionné
+- 2026-11-02 : Sur [[esprit-docker-site]] — Perplexity remesuré question par question, pages À propos/FAQ fusionnées (non déployées), retours et livraison Merchant Center alignés sur les CGV
 
 ## Liens
 - Projets : [[esprit-docker-site]]

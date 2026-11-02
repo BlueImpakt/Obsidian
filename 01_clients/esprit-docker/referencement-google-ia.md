@@ -80,7 +80,7 @@ Le premier guide, « Comment porter une casquette docker », est rédigé. Vos r
 ### 5. Les accès Google, à votre nom
 
 - **Google Search Console** (le tableau de bord gratuit de Google pour votre site) : votre propriété esprit-docker.com est validée. Vous en restez propriétaire ; Blue Impakt y a un accès pour le suivi.
-- **Google Merchant Center** (pour que vos casquettes apparaissent gratuitement dans Google Shopping) : compte créé, configuration en cours.
+- **Google Merchant Center** (pour que vos casquettes apparaissent gratuitement dans Google Shopping) : compte créé, livraison et retours déclarés comme sur le site, 73 casquettes envoyées et en cours d'examen par Google.
 
 ### 6. Un plan pour que les IA reconnaissent Esprit Docker
 
@@ -153,6 +153,7 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : liste complète des 73 casquettes (13 modèles, chaque coloris) préparée pour Google, avec prix, photos, disponibilité et lien vers la bonne page ; toutes les pages et photos vérifiées.
 - Google Merchant Center : le site saura fournir lui-même cette liste à Google, mise à jour automatiquement à chaque changement de prix, de stock ou de coloris (prêt, en ligne à la prochaine mise en ligne).
 - Annuaires de créateurs : sélection faite et conditions vérifiées sur chaque site (deux à inscrire en priorité, trois à vérifier avant) ; les sites qui exigent du « fabriqué en France » sont écartés, la marque ne peut pas le revendiquer. Textes de fiche et deux versions de la présentation Instagram (« à Bordeaux » ou « dans le Sud-Ouest ») rédigés.
+- Choix du lieu dans la présentation de la marque : « Bordeaux » partout, « Sud-Ouest » seulement pour éviter de répéter « Bordeaux » dans un même texte (décision de Melvin).
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
 - Mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun) : Esprit Docker n'est cité dans aucune des 30 réponses ; les marques recommandées à la place sont relevées pour guider la suite.
 - Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Quatre points restent à préciser avec vous (boutiques de Dax et Langon, Pinterest et Etsy, contacts presse, âge des clients).
@@ -162,13 +163,16 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center vérifié : plus aucun produit refusé, les 6 casquettes trouvées par Google sur le site sont en cours d'examen. Deux réglages à corriger pour coller aux conditions de vente : les retours sont déclarés gratuits (ils sont à la charge du client, sous 14 jours), et la livraison n'indique que Colissimo à 8,50 €, offerte dès 99,98 € (le point relais à 3,50 € manque, et la livraison est offerte dès 100 €).
 - Pages « À propos » et « Questions fréquentes » complétées avec vos réponses (votre nom, création en 2025, atelier à Gauriaguet, logo brodé à Bordeaux, bijoux en métal, boucle réglable, boutiques de Dax et Langon) et prêtes à mettre en ligne : vérifiées sur une copie du site, notes maximales en accessibilité et en référencement. Vinted n'y apparaît pas, comme vous le souhaitez.
 - Présentation de la marque corrigée sur le site (carte d'identité pour Google et les IA, descriptions de l'accueil et de la collection) : « logo brodé à Bordeaux, bijou cousu à la main en Gironde », au lieu de « assemblées à Bordeaux ». Prête pour la prochaine mise en ligne ; trois phrases de la page d'accueil restent à aligner.
+- Google Merchant Center : conditions de retour corrigées (14 jours, produit neuf, retour par la poste à la charge du client, remboursement sous 14 jours), elles étaient déclarées gratuites et limitées aux produits défectueux.
+- Google Merchant Center : livraison corrigée, offerte dès 100 € et non plus 99,98 €, et point relais Mondial Relay à 3,50 € ajouté à côté de Colissimo à domicile à 8,50 €.
+- Google Merchant Center : liste des 73 casquettes envoyée à Google pour la France, acceptée sans aucune erreur ; Google l'examine (jusqu'à 3 jours ouvrés).
 
 **En cours**
 
 - Bing Webmaster Tools (l'équivalent de Search Console chez Bing) : branchement du site.
-- Google Merchant Center : correction des réglages livraison et retours, envoi de la liste complète des 73 casquettes, puis examen par Google.
+- Google Merchant Center : examen des 73 casquettes par Google ; ensuite, mise à jour automatique de la liste à brancher une fois le site remis en ligne.
 - Pages « À propos » et « Questions fréquentes » : prêtes, à mettre en ligne avec la prochaine mise à jour du site.
-- Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane, après le choix « Bordeaux » ou « Sud-Ouest » : inscription aux annuaires, création du compte Pinterest et publication des épingles.
+- Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
 
