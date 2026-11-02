@@ -9,3 +9,5 @@ Entrées archivées automatiquement (seuil `## Journal` > 15, voir CLAUDE.md). H
 - 2026-10-31 : Sur [[esprit-docker-site]] — corrections SEO, performance et accessibilité déployées en prod (commit 9c86356) ; prochaine étape : référencement (Search Console sur le compte Google du client, mots-clés, contenu).
 - 2026-10-31 : Sur [[esprit-docker-site]] — note Vinted (4,9/5 · 239 évaluations) affichée sous le bouton d'achat de toutes les fiches, sans recopier d'avis (CGU Vinted) ; prochaine étape : collecter ses propres avis après livraison.
 - 2026-10-31 : Sur [[esprit-docker-site]] — modèle L'Essentielle mis en ligne (photos normalisées, couleur Orange Terracotta) ; bloc « Nouvelle collection » prêt, en attente de déploiement.
+- 2026-10-31 : Sur [[esprit-docker-site]] — 21 photos L'Essentielle (7 couleurs, 3 vues) en ligne ; en-tête « NOUVELLE / COLLECTION » en diagonale refait, en attente de déploiement.
+- 2026-10-31 : Sur [[esprit-docker-site]] — modèle Steppe (ex-L'Essentielle) en ligne, bloc « Nouveau Docker » sur /collection déployé (89fca47).

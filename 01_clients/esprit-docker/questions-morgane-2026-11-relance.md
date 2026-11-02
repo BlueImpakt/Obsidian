@@ -2,7 +2,7 @@
 type: message-client
 client: esprit-docker
 maj: 2026-11-02
-statut: à envoyer
+statut: réponses reçues le 2026-11-02 (seul l'âge des clients reste ouvert)
 ---
 
 # Esprit Docker : relance pour Morgane (5 points restants)
@@ -41,3 +41,15 @@ Melvin
 | bonus | cible dans `profil.md` (marqueur tranche d'âge) | `profil.md` |
 
 Une fois les réponses reçues : mettre à jour `profil.md` (retirer les marqueurs correspondants), le plan, le document client (section « Il nous reste à vous demander » et journal de bord).
+
+## Réponses reçues (2026-11-02)
+
+1. Ornamenta Tattoo Shop (Langon) : dépôt-vente. Klay Store (Dax) : Morgane paie un loyer pour exposer. Ni dates ni sites des boutiques donnés.
+2. Lieu « VB », 2026.
+3. Aucun compte Pinterest ni Etsy.
+4. Aucun contact presse ou blog.
+5. « Brodé à Bordeaux » ; « Sud-Ouest » admis pour éviter de répéter Bordeaux dans un même contenu.
+Bonus (âge des clients) : pas de réponse, marqueur laissé dans `profil.md`.
+
+Reporté dans `profil.md`, le plan (`2026-11-plan-entite.md`), `referencement-google-ia.md` (section « Ce dont nous avons besoin » et journal de bord).
+À faire côté code du site : fiches produit, « brodé dans le Sud-Ouest » devient « brodé à Bordeaux ».

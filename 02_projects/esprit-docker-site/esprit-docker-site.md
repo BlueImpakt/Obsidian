@@ -66,10 +66,10 @@ body_synced: 2026-11-02
 - [ ] Guide « porter une casquette docker » : passer `brouillon: false`, commiter et déployer
 - [ ] Annuaires : inscrire Créateurs Français et LesCréatrices.fr, créer le compte Pinterest (rien inscrit à ce jour)
 - [ ] Aligner la phrase de marque dans `PageAccueil.tsx` (« Assemblé à la main à Bordeaux », « Pose et finition main à Bordeaux », « …dans le Sud-Ouest à Bordeaux ») une fois la modification en cours terminée, puis sur Instagram, annuaires et Merchant Center
+- [ ] Demander le feu vert à Melvin puis pousser sur `master` le déploiement groupé (`58f1097` : redirection steppe → origine, À propos/FAQ, flux Merchant), puis `npm run indexnow`
+- [ ] Poser à Morgane : qui fabrique les casquettes de base et où ; accepte-t-elle que son nom soit public
 
 ## Journal
-- 2026-10-31 : Nouveau modèle L'Essentielle : photos des 4 coloris normalisées au format catalogue (WebP ~180 Ko au lieu de PNG 2,8 Mo) + dos, publiées en R2/Neon ; Orange Corail remplacé par « Orange Terracotta » pour ce modèle ; bloc « Nouvelle collection » en tête de /collection et masquage des couleurs non proposées codés, vérifiés en local, non déployés.
-- 2026-10-31 : L'Essentielle : 21 photos (7 couleurs × face/profil/dos, vrais dos partout) en ligne, transparence reconstruite depuis les PNG à fond blanc, script `scripts/essentiel-import-photos.mjs` ; en-tête du bloc « Nouvelle collection » refait (« NOUVELLE » / « COLLECTION » en diagonale 45° de chaque côté de la carte), vérifié desktop, non déployé.
 - 2026-10-31 : Modèle L'Essentielle renommé « Steppe » (Orange Corail écartée côté serveur), bloc « Nouveau Docker » de /collection finalisé et déployé (89fca47, vérifié en ligne) ; descriptions des 13 modèles mises à jour ; animations de la page Collection prêtes, non déployées.
 - 2026-10-31 : Section « Nouveau docker » Steppe sur l'accueil, finitions fiche produit (logo, note Vinted, bouton retour), prix minimum corrigé, Steppe/Terracotta retirés de l'Atelier — déployé (`0be017b`, `c37a609`, `a01e609`) ; correctifs Atelier mobile prêts en local
 - 2026-11-02 : Outil SEO/GEO `seo-geo` cadré avec Esprit Docker en pilote (spec + 2 plans) ; côté site, provenance des ventes (tâches 1 à 3) validée en relecture, section `/guides` en cours ; migration à passer avant déploiement, point CNIL à trancher
@@ -83,6 +83,8 @@ body_synced: 2026-11-02
 - 2026-11-02 : Phrase de marque corrigée (logo brodé à Bordeaux, bijou cousu à la main en Gironde) dans JSON-LD, layout, méta accueil et /collection, commit dee8675 sur feat/pages-a-propos-faq ; reste PageAccueil.tsx et les profils externes
 - 2026-11-02 : GEO manuel : série Perplexity jugée non fiable (10 questions dans une seule conversation), remesure question par question en navigateur intégré en cours ; `feat/pages-a-propos-faq` fusionnée en avance rapide dans `feat/seo-geo-attribution-guides` (43 tests verts), non déployée ; Merchant Center : retours 14 jours et livraison (Colissimo dès 100 €, Mondial Relay) corrigés
 - 2026-11-02 : Bing Webmaster Tools branché (import Search Console, sitemap soumis à la main, accueil indexé) ; Merchant Center : retours, livraison et flux de 73 produits importés, en attente d'examen Google ; GEO manuel remesuré question par question (ChatGPT fait, Gemini en cours)
+- 2026-11-02 : Morgane personnalise des casquettes de base (jamais « fabrique ») : formules corrigées dans les documents annuaires, profil et plan d'entité ; lieu de marque = « Bordeaux » par défaut, « Sud-Ouest » pour éviter la répétition.
+- 2026-11-02 : GEO manuel final (question par question, sans compte) : marque citée 2 fois sur 30, seulement à la q10 contenant son nom ; redirection 301 steppe → origine testée (`2bb3abe`, branche `fix/redirection-steppe`), déploiement groupé avec À propos/FAQ et flux Merchant en attente du feu vert.
 
 ## Liens
 - Client : [[esprit-docker]]

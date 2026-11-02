@@ -103,24 +103,20 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 
 Reçu le 2 novembre 2026 :
 
-1. **Votre phrase de présentation** : « à Bordeaux », en gardant « Sud-Ouest » là où c'est possible pour parler de la région. Phrase retenue : « Esprit Docker : casquettes docker en coton, ornées d'un bijou posé et cousu à la main dans l'atelier de Morgane Le Mouee à Bordeaux, depuis 2025. »
+1. **Votre phrase de présentation** : « brodé à Bordeaux », avec « Sud-Ouest » admis en variante pour éviter de répéter Bordeaux dans un même texte. Phrase retenue : « Esprit Docker : casquettes docker en coton, ornées d'un bijou posé et cousu à la main dans l'atelier de Morgane Le Mouee à Bordeaux, depuis 2025. »
 2. **Votre nom et une photo** : acceptés. Trois photos portées reçues.
 3. **L'année de création** : 2025.
 4. **Les réponses aux questions du premier guide** : toutes reçues (boucle de réglage à l'arrière, réglable sur la tête, nom des coloris, entretien, façon de porter, question la plus fréquente sur la taille).
-5. **Vos comptes et ventes en personne** : Vinted (que vous gardez séparé du site), dépôt en boutique chez Klay Store à Dax et chez Ornamenta Tattoo Shop à Langon, un événement à Langon pour Octobre rose.
+5. **Vos comptes et ventes en personne** : Vinted (que vous gardez séparé du site), dépôt-vente chez Ornamenta Tattoo Shop à Langon, espace d'exposition chez Klay Store à Dax, un événement à VB (Langon) en 2026 pour Octobre rose. Aucun compte Pinterest ni Etsy pour l'instant.
+6. **Des contacts presse ou blogs** : aucun pour l'instant, nous ferons le repérage de notre côté.
 
-Il nous reste à vous demander :
-
-1. **Les boutiques de Dax et de Langon** : vos casquettes y sont-elles en dépôt-vente ou achetées par les boutiques ? Depuis quand ? Et quel est le nom exact du lieu de l'événement de Langon, et l'année ?
-2. **Pinterest et Etsy** : n'avez-vous aucun compte pour l'instant ?
-3. **Des contacts presse ou blogs**, si vous en avez (question restée sans réponse).
-4. **L'âge de vos clients**, en gros (vous nous avez dit qu'ils viennent de toute la France et d'Europe).
+Il nous reste une seule question, facultative : **l'âge de vos clients**, en gros (vous nous avez dit qu'ils viennent de toute la France et d'Europe).
 
 ## Prochaines étapes
 
 | Quand | Quoi |
 |---|---|
-| Prochaine mise en ligne | pages « À propos » et « Questions fréquentes », liste Merchant Center mise à jour automatiquement, premier guide |
+| Prochaine mise en ligne | premier guide, « Comment porter une casquette docker » |
 | Ce mois-ci | Merchant Center, page « L'atelier », présentation identique sur les profils |
 | Début décembre | premier rapport mensuel : comparaison avec le point de départ |
 | Ensuite | un à deux guides par mois, annuaires, avis clients |
@@ -157,7 +153,7 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Choix du lieu dans la présentation de la marque : « Bordeaux » partout, « Sud-Ouest » seulement pour éviter de répéter « Bordeaux » dans un même texte (décision de Melvin).
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
 - 2 novembre : mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun, une discussion neuve par question, sans compte) : Esprit Docker est cité 2 fois sur 30, uniquement quand la question contient son nom ; les marques recommandées à la place sont relevées pour guider la suite.
-- Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Quatre points restent à préciser avec vous (boutiques de Dax et Langon, Pinterest et Etsy, contacts presse, âge des clients).
+- Vos réponses reçues et intégrées : phrase de marque « à Bordeaux » (« Sud-Ouest » gardé pour parler de la région), nom et photos acceptés, création en 2025, guide « Comment porter une casquette docker » complété (réglage, coloris, entretien, taille) et sans point en attente. Un second échange a réglé le reste : dépôt-vente à Langon, espace d'exposition à Dax, pas de compte Pinterest ni Etsy, pas de contact presse, « brodé à Bordeaux » partout. Seul l'âge de vos clients reste à préciser (facultatif).
 - Corrections du site mises en ligne : descriptions des fiches, Livraison et Entretien lisibles, carte d'identité de la marque, comptage anonyme des ventes par canal avec le bouton « M'opposer au comptage », textes légaux à jour. Vérifié en ligne sur l'accueil et une fiche produit. La rubrique « Guides » reste cachée tant qu'aucun guide n'est publié.
 - Bing prévenu des 19 pages du site (accusé de réception reçu).
 - Pages « À propos » et « Questions fréquentes » construites : qui fait les casquettes, où et comment, ce que la marque n'est pas (ni la marque Esprit, ni un bonnet docker) ; 13 questions (prix, matière, taille, entretien, livraison, retours, boutiques). Vérifiées (lisibles par Google et les IA, accessibilité). Elles restent cachées jusqu'à vos réponses à 6 questions (votre nom sur la page, année de création, lieu de l'atelier, broderie du logo, matière des bijoux, type de fermeture).
@@ -168,11 +164,12 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : livraison corrigée, offerte dès 100 € et non plus 99,98 €, et point relais Mondial Relay à 3,50 € ajouté à côté de Colissimo à domicile à 8,50 €.
 - Google Merchant Center : liste des 73 casquettes envoyée à Google pour la France, acceptée sans aucune erreur ; Google l'examine (jusqu'à 3 jours ouvrés).
 - Bing Webmaster Tools (l'équivalent de Search Console chez Bing) branché avec votre compte Google Esprit Docker : site importé depuis Search Console, plan du site envoyé à Bing. L'accueil est déjà indexé par Bing, sans problème relevé ; les autres pages seront découvertes dans les prochains jours.
+- Deuxième mise en ligne du jour : pages « À propos » et « Questions fréquentes » en ligne et ajoutées au plan du site, présentation de la marque alignée sur le site, liste des 73 casquettes servie par le site pour Google Merchant Center. Les anciennes adresses du modèle Steppe (/collection/steppe/…) mènent désormais à la page du modèle Origine, coloris compris, au lieu d'une page introuvable. Vérifié en ligne ; Bing prévenu des deux nouvelles pages.
+- Google Search Console : plan du site (21 pages) envoyé à Google ; test en direct réussi, Google peut le lire. Le premier passage de Google prend en général quelques heures à quelques jours.
 
 **En cours**
 
-- Google Merchant Center : examen des 73 casquettes par Google ; ensuite, mise à jour automatique de la liste à brancher une fois le site remis en ligne.
-- Pages « À propos » et « Questions fréquentes » : prêtes, à mettre en ligne avec la prochaine mise à jour du site.
+- Google Merchant Center : examen des 73 casquettes par Google ; la liste servie par le site est en ligne, reste à la brancher dans Merchant Center pour une mise à jour automatique.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
