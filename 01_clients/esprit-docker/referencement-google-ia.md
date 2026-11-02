@@ -31,6 +31,27 @@ Trace du travail de référencement (Google et assistants IA) mené pour Esprit 
 | Vinted | note affichée sur les fiches | retiré du site, comme vous le souhaitez |
 | Suivi | aucun | rapport mensuel : Google, assistants IA, ventes par canal |
 
+## Temps passé
+
+Temps de travail mesuré dans l'historique des échanges, pauses longues exclues, arrondi à la demi-heure. Le soir du 2 novembre, plusieurs chantiers ont avancé en parallèle : le temps écoulé à l'horloge est plus court que le total.
+
+| Tâche | Temps |
+|---|---|
+| Cadrage, étude de deux outils du marché, conception de la méthode | 2 h |
+| Construction de l'outil de suivi (réutilisable pour d'autres sites) | 2 h |
+| Premier passage sur Esprit Docker : portrait de la marque, recherches suivies, audit, premier guide | 1 h |
+| Ventes par canal et règles de la CNIL | 30 min |
+| Accès Google, Bing et base de données ; mesure du point de départ | 2 h |
+| Plan de reconnaissance de la marque, corrections du site, document de suivi | 30 min |
+| Mises en ligne, Bing, redirections, correction des images de l'accueil | 1 h |
+| Google Merchant Center | 1 h |
+| Pages « À propos » et « Questions fréquentes » | 1 h |
+| Questions à Morgane et intégration des réponses | 30 min |
+| Mesure manuelle dans ChatGPT, Perplexity et Gemini | 1 h |
+| Annuaires et Pinterest | 30 min |
+| Demandes de passage prioritaire à Google | 30 min |
+| **Total** | **13 h 30** |
+
 ## Le point de départ (mesuré le 2 novembre 2026)
 
 | Mesure | Résultat |
@@ -73,8 +94,8 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 - Vos réponses reçues et intégrées : phrase de marque, nom et photos, création en 2025, atelier à Gauriaguet, boutiques de Dax et Langon, réponses du guide.
 - Première mise en ligne : textes des 73 fiches, livraison et entretien lisibles, présentation de la marque pour les moteurs, compteur anonyme des ventes par canal et bouton « M'opposer au comptage », textes légaux à jour, Vinted retiré du site.
 - Guide « Comment porter une casquette docker » publié avec la rubrique « Guides ».
-- Deuxième mise en ligne : pages « À propos » et « Questions fréquentes », phrase de marque alignée, liste des casquettes pour Google, redirection des anciennes adresses Steppe.
-- Google Search Console : propriété validée, plan du site (21 pages) envoyé et lu par Google.
+- Deuxième mise en ligne : pages « À propos » et « Questions fréquentes », phrase de marque alignée, liste des casquettes pour Google, redirection des anciennes adresses Steppe, photos de l'accueil allégées (le logo et les photos d'ambiance, cassés un moment après la mise en ligne, ont été réparés le soir même).
+- Google Search Console : propriété validée, plan du site (21 pages) envoyé et lu par Google ; passage prioritaire demandé à Google pour les trois nouvelles pages (« À propos », « Questions fréquentes », guide), l'accueil ayant déjà été revu par Google le jour même.
 - Bing Webmaster Tools branché ; Bing prévenu de toutes les pages du site.
 - Google Merchant Center : compte créé ; livraison (point relais 3,50 €, domicile 8,50 €, offerte dès 100 €) et retours (14 jours, à la charge du client) déclarés comme dans les conditions de vente ; 73 casquettes lues chaque nuit sur le site, photos et informations conformes aux règles de Google.
 - Annuaires de créateurs sélectionnés (ceux qui exigent du « fabriqué en France » écartés) ; textes de fiche, présentation Instagram et guide Pinterest rédigés.
