@@ -80,7 +80,7 @@ Le premier guide, « Comment porter une casquette docker », est rédigé. Vos r
 ### 5. Les accès Google, à votre nom
 
 - **Google Search Console** (le tableau de bord gratuit de Google pour votre site) : votre propriété esprit-docker.com est validée. Vous en restez propriétaire ; Blue Impakt y a un accès pour le suivi.
-- **Google Merchant Center** (pour que vos casquettes apparaissent gratuitement dans Google Shopping) : compte créé, livraison et retours déclarés comme sur le site, 73 casquettes envoyées et en cours d'examen par Google.
+- **Google Merchant Center** (pour que vos casquettes apparaissent gratuitement dans Google Shopping) : compte créé, livraison et retours déclarés comme sur le site, 73 casquettes lues automatiquement sur le site chaque nuit, en cours d'examen par Google.
 
 ### 6. Un plan pour que les IA reconnaissent Esprit Docker
 
@@ -165,11 +165,12 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : liste des 73 casquettes envoyée à Google pour la France, acceptée sans aucune erreur ; Google l'examine (jusqu'à 3 jours ouvrés).
 - Bing Webmaster Tools (l'équivalent de Search Console chez Bing) branché avec votre compte Google Esprit Docker : site importé depuis Search Console, plan du site envoyé à Bing. L'accueil est déjà indexé par Bing, sans problème relevé ; les autres pages seront découvertes dans les prochains jours.
 - Deuxième mise en ligne du jour : pages « À propos » et « Questions fréquentes » en ligne et ajoutées au plan du site, présentation de la marque alignée sur le site, liste des 73 casquettes servie par le site pour Google Merchant Center. Les anciennes adresses du modèle Steppe (/collection/steppe/…) mènent désormais à la page du modèle Origine, coloris compris, au lieu d'une page introuvable. Vérifié en ligne ; Bing prévenu des deux nouvelles pages.
+- Google Merchant Center : la liste des casquettes est maintenant lue directement sur le site chaque nuit ; un changement de prix, de stock ou de coloris remonte tout seul chez Google. Première lecture réussie : 73 casquettes, aucune erreur.
 - Google Search Console : plan du site (21 pages) envoyé à Google ; test en direct réussi, Google peut le lire. Le premier passage de Google prend en général quelques heures à quelques jours.
 
 **En cours**
 
-- Google Merchant Center : examen des 73 casquettes par Google ; la liste servie par le site est en ligne, reste à la brancher dans Merchant Center pour une mise à jour automatique.
+- Google Merchant Center : examen des 73 casquettes par Google (jusqu'à 3 jours ouvrés) ; retrait de l'ancienne liste envoyée à la main, remplacée par la lecture automatique.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
