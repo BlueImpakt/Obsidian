@@ -1,12 +1,12 @@
 ---
-type: livrable-client
+type: suivi-client
 client: esprit-docker
 maj: 2026-11-02
 ---
 
 # Esprit Docker : être trouvé sur Google et par les assistants IA
 
-Document de suivi pour Morgane, mis à jour à chaque étape. Dernière mise à jour : 2 novembre 2026.
+Trace de tout le travail de référencement (Google et assistants IA) mené pour Esprit Docker, en langage simple. Mis à jour à chaque étape ; le détail daté est dans le journal de bord, en fin de document. Dernière mise à jour : 2 novembre 2026.
 
 ## En bref
 
@@ -113,6 +113,44 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 | Ce mois-ci | Merchant Center, page « L'atelier », présentation identique sur les profils |
 | Début décembre | premier rapport mensuel : comparaison avec le point de départ |
 | Ensuite | un à deux guides par mois, annuaires, avis clients |
+
+## Journal de bord
+
+Une ligne par action réalisée. Les actions en cours sont listées à part.
+
+**Octobre 2026**
+
+- 28/10 : audit du référencement du site ; corrections préparées (une seule adresse officielle, www.esprit-docker.com, vers laquelle l'adresse sans « www » redirige ; adresse de référence déclarée sur chaque page ; carte d'identité de la marque pour les moteurs ; plan du site pour Google).
+- 31/10 : corrections de référencement, de vitesse et d'accessibilité mises en ligne.
+- 31/10 : note Vinted (4,9/5) affichée sur les fiches produit, sans recopier d'avis (règles de Vinted).
+
+**2 novembre 2026**
+
+- Méthode de suivi Google et IA mise au point, avec Esprit Docker comme premier site suivi.
+- Portrait de la marque, 26 recherches suivies, 16 questions d'acheteurs, concurrents identifiés.
+- Audit technique de l'accueil, de la collection et d'une fiche produit.
+- Description propre à chacune des 73 fiches produit dans les résultats Google.
+- Informations Livraison et Entretien des fiches rendues lisibles par Google et les IA.
+- Ventes par canal : compteur anonyme (Google, Instagram, IA…), solution choisie pour respecter les règles de la CNIL, possibilité de s'y opposer dans « Gérer mes cookies », politique de confidentialité et mentions légales mises à jour, base de données préparée.
+- Rubrique « Guides » créée sur le site ; premier guide, « Comment porter une casquette docker », rédigé et en attente de vos réponses.
+- Google Search Console : propriété esprit-docker.com validée (vous en restez propriétaire), outil de mesure branché.
+- Mesure du point de départ : Google, assistants IA, visites et ventes.
+- Plan pour faire reconnaître la marque par les assistants IA.
+- Carte d'identité de la marque reliée à Instagram et Vinted ; descriptions du site mises à jour (13 modèles, et non plus « 6 créations »)  ; Bing prévenu rapidement à chaque mise en ligne.
+- Google Merchant Center : compte créé.
+- Questions à vous poser rassemblées en un seul message.
+- Google Merchant Center : liste complète des 73 casquettes (13 modèles, chaque coloris) préparée pour Google, avec prix, photos, disponibilité et lien vers la bonne page ; toutes les pages et photos vérifiées.
+- Google Merchant Center : le site saura fournir lui-même cette liste à Google, mise à jour automatiquement à chaque changement de prix, de stock ou de coloris (prêt, en ligne à la prochaine mise en ligne).
+- Annuaires de créateurs : sélection faite et conditions vérifiées sur chaque site (deux à inscrire en priorité, trois à vérifier avant) ; les sites qui exigent du « fabriqué en France » sont écartés, la marque ne peut pas le revendiquer. Textes de fiche et deux versions de la présentation Instagram (« à Bordeaux » ou « dans le Sud-Ouest ») rédigés.
+- Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
+
+**En cours**
+
+- Mise en ligne des corrections préparées depuis le 2 novembre.
+- Google Merchant Center : correction des produits refusés et envoi de la liste complète des casquettes.
+- Pages « L'atelier » et « Questions fréquentes ».
+- Mesure manuelle dans ChatGPT, Perplexity et Gemini.
+- Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane, après le choix « Bordeaux » ou « Sud-Ouest » : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
 

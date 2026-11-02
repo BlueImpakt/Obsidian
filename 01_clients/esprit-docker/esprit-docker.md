@@ -29,7 +29,7 @@ body_synced: 2026-10-05
 - Site e-commerce Next.js pour vente de chapeaux, avec gestion avancée de variantes produit (photos par face/profil, motifs, détourage)
 
 ## Devis / propositions
-- 2026-11-02 : proposition SEO/GEO en brouillon, [[proposition-seo-geo]] (valorisation 5,5 j = 1 925 € HT ; recommandé : 700 € HT de mise en place au tarif pilote + 90 € HT / mois sur 3 mois d'essai)
+-
 
 ## Next actions
 - [ ] Test end-to-end du flux Brevo « expédié » (commande + paiement + marquage expédiée + annulation Sendcloud) — Melvin
@@ -53,9 +53,9 @@ body_synced: 2026-10-05
 - 2026-11-02 : Sur [[esprit-docker-site]] — audit technique SEO/GEO du pilote seo-geo rangé, premier guide en cours de brief
 - 2026-11-02 : Sur [[esprit-docker-site]] — Provenance des ventes passée en compteur anonyme (option B, exemption CNIL, rien envoyé à Mollie, opposition dans « Gérer mes cookies », textes légaux réécrits ; commit 1094ebf) ; migration SQL appliquée sur Neon avec compte de lecture seule `seo_geo_lecture` ; point zéro GEO : Claude ne cite Esprit Docker dans aucune des 32 réponses, mesure sur Sonnet 5.5 (~1,70 $/mois) ; 73 méta descriptions uniques et onglets Livraison/Entretien dans le HTML ; premier guide « porter une casquette docker » en brouillon ; branches non déployées
 - 2026-11-02 : Sur [[esprit-docker-site]] — Search Console branchée à l'outil seo-geo (propriété Domaine validée, compte de service prêt, API à activer) ; positions Google : n°1 sur la marque, absent du top 10 ailleurs.
-- 2026-11-02 : Sur [[esprit-docker-site]] — document client [[referencement-google-ia]] (langage simple, base de facturation du SEO/GEO) ; plan entité de marque codé sur la branche (`OnlineStore` + `sameAs`, descriptions à jour, IndexNow, commit e749994) ; compte Merchant Center créé.
+- 2026-11-02 : Sur [[esprit-docker-site]] — document [[referencement-google-ia]] : trace en langage simple de tout le travail SEO/GEO ; plan entité de marque codé sur la branche (`OnlineStore` + `sameAs`, descriptions à jour, IndexNow, commit e749994) ; compte Merchant Center créé.
 
 ## Liens
 - Projets : [[esprit-docker-site]]
-- Livrable client, référencement Google et IA : [[referencement-google-ia]]
+- Trace du travail SEO/GEO (langage simple) : [[referencement-google-ia]]
 - Patterns utilisés : [[pipeline-assets-produit-ecommerce]]
