@@ -1,3 +1,12 @@
+---
+tags: [project-doc, sabinas-watersport]
+created: 2026-10-21
+projet: sabinas-watersport-refonte
+source: GitHub/sabina-watersport-refonte/docs/10-revue-prospection.md
+---
+
+↩ [[sabinas-watersport-refonte]]
+
 # Revue finale : la maquette est-elle solide pour la prospection ?
 
 Date : 21/10/2026. Relecture faite sans sous-agent (skills `ux-copy`, `design-critique`, passage persona), sur la version `?v=68`.
