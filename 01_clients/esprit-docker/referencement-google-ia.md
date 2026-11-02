@@ -13,7 +13,7 @@ Trace de tout le travail de référencement (Google et assistants IA) mené pour
 - Aujourd'hui, Google connaît Esprit Docker quand on tape son nom, mais presque personne ne le trouve autrement.
 - Les assistants IA (ChatGPT, Claude, Gemini, Perplexity), que de plus en plus d'acheteurs consultent avant d'acheter, ne connaissent pas encore la marque.
 - Nous avons mesuré ce point de départ, corrigé le site, mis en place un suivi mensuel et préparé un plan pour faire connaître la marque à ces outils.
-- Les corrections du site sont prêtes ; elles seront mises en ligne une fois les dernières vérifications faites.
+- Les corrections du site sont en ligne depuis le 2 novembre 2026.
 
 ## Pourquoi c'est important
 
@@ -32,7 +32,10 @@ Le travail consiste donc à rendre la marque visible et compréhensible pour ces
 | Google, 21 autres recherches suivies (« casquette docker », « casquette marin »…) | absent des 10 premiers résultats |
 | Résumés IA de Google | Esprit Docker cité uniquement sur la recherche de son nom |
 | Claude, 16 questions d'acheteurs posées deux fois | cité 0 fois sur 32 ; quand on lui demande « Esprit Docker est-elle une bonne marque ? », il répond ne pas connaître de marque de ce nom |
+| ChatGPT, Perplexity et Gemini, 10 questions d'acheteurs chacun | cité 0 fois sur 30 ; à la question « Esprit Docker est-elle une bonne marque ? », ChatGPT répond ne pas pouvoir confirmer cette marque, Perplexity la juge crédible sans citer votre site, Gemini ne la nomme pas |
 | Visites venues de Google, août à octobre | 19 affichages, 2 clics, tous sur le nom de la marque |
+
+**Qui les assistants IA recommandent à la place** : ChatGPT met en avant Béton Ciré, MIARAKA et Saint James ; Perplexity s'appuie surtout sur Etsy, Blanc Bonnet et Maison Bonnefoy ; Gemini renvoie presque toujours vers le site bonnet-docker.fr, qui revient aussi chez Claude et Perplexity. Votre site n'apparaît dans aucune de leurs sources. Ces mesures ont été faites une fois par question, et les réponses d'une IA peuvent varier d'un jour à l'autre : ce sont des repères, pas des chiffres exacts.
 
 Ce point de départ servira de référence : chaque mois, les mêmes mesures sont refaites et comparées.
 
@@ -143,13 +146,16 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Google Merchant Center : le site saura fournir lui-même cette liste à Google, mise à jour automatiquement à chaque changement de prix, de stock ou de coloris (prêt, en ligne à la prochaine mise en ligne).
 - Annuaires de créateurs : sélection faite et conditions vérifiées sur chaque site (deux à inscrire en priorité, trois à vérifier avant) ; les sites qui exigent du « fabriqué en France » sont écartés, la marque ne peut pas le revendiquer. Textes de fiche et deux versions de la présentation Instagram (« à Bordeaux » ou « dans le Sud-Ouest ») rédigés.
 - Pinterest : guide pas à pas rédigé (création du compte, rattachement du site, 5 tableaux, une épingle par modèle avec titre, description et lien prêts à coller). Rien n'est encore inscrit ni créé.
+- Mesure du point de départ dans ChatGPT, Perplexity et Gemini (10 questions chacun) : Esprit Docker n'est cité dans aucune des 30 réponses ; les marques recommandées à la place sont relevées pour guider la suite.
+- Corrections du site mises en ligne : descriptions des fiches, Livraison et Entretien lisibles, carte d'identité de la marque, comptage anonyme des ventes par canal avec le bouton « M'opposer au comptage », textes légaux à jour. Vérifié en ligne sur l'accueil et une fiche produit. La rubrique « Guides » reste cachée tant qu'aucun guide n'est publié.
+- Bing prévenu des 19 pages du site (accusé de réception reçu).
+- Pages « À propos » et « Questions fréquentes » construites : qui fait les casquettes, où et comment, ce que la marque n'est pas (ni la marque Esprit, ni un bonnet docker) ; 13 questions (prix, matière, taille, entretien, livraison, retours, avis). Vérifiées (lisibles par Google et les IA, accessibilité). Elles restent cachées jusqu'à vos réponses à 6 questions (votre nom sur la page, année de création, lieu de l'atelier, broderie du logo, matière des bijoux, type de fermeture).
 
 **En cours**
 
-- Mise en ligne des corrections préparées depuis le 2 novembre.
+- Bing Webmaster Tools (l'équivalent de Search Console chez Bing) : branchement du site.
 - Google Merchant Center : correction des produits refusés et envoi de la liste complète des casquettes.
-- Pages « L'atelier » et « Questions fréquentes ».
-- Mesure manuelle dans ChatGPT, Perplexity et Gemini.
+- Pages « À propos » et « Questions fréquentes » : prêtes, en attente de vos réponses, puis mise en ligne.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane, après le choix « Bordeaux » ou « Sud-Ouest » : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
