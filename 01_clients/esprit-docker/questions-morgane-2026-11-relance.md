@@ -44,7 +44,7 @@ Une fois les réponses reçues : mettre à jour `profil.md` (retirer les marqueu
 
 ## Réponses reçues (2026-11-02)
 
-1. Ornamenta Tattoo Shop (Langon) : dépôt-vente. Klay Store (Dax) : Morgane paie un loyer pour exposer. Ni dates ni sites des boutiques donnés.
+1. Ornamenta Tattoo Shop (Langon) : dépôt-vente. Klay Store (Dax) : Morgane paie un loyer pour exposer. Pas de dates. Comptes Instagram des boutiques envoyés ensuite par Melvin : https://www.instagram.com/klay.conceptstore (Dax) et https://www.instagram.com/esko.ornamenta (Langon).
 2. Lieu « VB », 2026.
 3. Aucun compte Pinterest ni Etsy.
 4. Aucun contact presse ou blog.

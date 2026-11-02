@@ -58,7 +58,7 @@ Les chiffres viennent directement de Google et des outils de mesure. Le rapport 
 
 - **Une description propre à chaque casquette** : les 73 pages produit avaient le même texte de présentation dans les résultats Google. Chacune a maintenant le sien (modèle, coloris, prix, finition).
 - **Les informations Livraison et Entretien** des fiches produit sont maintenant lues par Google et les IA ; elles étaient invisibles pour eux.
-- **Une « carte d'identité » de la marque**, cachée dans le code du site : elle dit aux moteurs que le site est une boutique en ligne, ce qu'elle vend, et la relie à vos comptes Instagram et Vinted. C'est ce qui aide un moteur à comprendre que toutes ces pages parlent de la même marque.
+- **Une « carte d'identité » de la marque**, cachée dans le code du site : elle dit aux moteurs que le site est une boutique en ligne, ce qu'elle vend, et la relie à votre compte Instagram (le lien vers Vinted va être retiré, la note peut rester en texte : vous gardez les deux séparés). C'est ce qui aide un moteur à comprendre que toutes ces pages parlent de la même marque.
 - **Des descriptions à jour** : le site annonçait encore « 6 créations uniques » alors que la collection compte 13 modèles.
 - **Une mise à jour express des moteurs** : à chaque mise en ligne, Bing (sur lequel s'appuie notamment ChatGPT) est prévenu des pages nouvelles ou modifiées, au lieu d'attendre son passage.
 
@@ -86,7 +86,7 @@ Le premier guide, « Comment porter une casquette docker », est rédigé. Vos r
 
 Le nom « Esprit Docker » prête à confusion pour les IA : elles le confondent avec la marque Esprit ou avec des bonnets d'autres marques appelés « esprit docker ». Le plan prévoit, par ordre de priorité :
 
-1. une présentation identique de la marque partout (site, Instagram, Vinted, annuaires) ;
+1. une présentation identique de la marque partout (site, Instagram, annuaires ; pas Vinted, que vous gardez séparé) ;
 2. une page « L'atelier » ou « À propos » : qui fait les casquettes, où, comment ;
 3. l'inscription de la boutique sur Google Merchant Center ;
 4. un compte Pinterest avec une épingle par modèle ;
@@ -103,7 +103,7 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 
 Reçu le 2 novembre 2026 :
 
-1. **Votre phrase de présentation** : « brodé à Bordeaux », avec « Sud-Ouest » admis en variante pour éviter de répéter Bordeaux dans un même texte. Phrase retenue : « Esprit Docker : casquettes docker en coton, ornées d'un bijou posé et cousu à la main dans l'atelier de Morgane Le Mouee à Bordeaux, depuis 2025. »
+1. **Votre phrase de présentation** : « brodé à Bordeaux », avec « Sud-Ouest » admis en variante pour éviter de répéter Bordeaux dans un même texte. Phrase retenue : « Esprit Docker : casquettes docker en coton ornées d'un bijou en métal, logo brodé à Bordeaux, bijou cousu à la main en Gironde, par Morgane Le Mouee, depuis 2025. »
 2. **Votre nom et une photo** : acceptés. Trois photos portées reçues.
 3. **L'année de création** : 2025.
 4. **Les réponses aux questions du premier guide** : toutes reçues (boucle de réglage à l'arrière, réglable sur la tête, nom des coloris, entretien, façon de porter, question la plus fréquente sur la taille).
@@ -167,10 +167,12 @@ Une ligne par action réalisée. Les actions en cours sont listées à part.
 - Deuxième mise en ligne du jour : pages « À propos » et « Questions fréquentes » en ligne et ajoutées au plan du site, présentation de la marque alignée sur le site, liste des 73 casquettes servie par le site pour Google Merchant Center. Les anciennes adresses du modèle Steppe (/collection/steppe/…) mènent désormais à la page du modèle Origine, coloris compris, au lieu d'une page introuvable. Vérifié en ligne ; Bing prévenu des deux nouvelles pages.
 - Google Merchant Center : la liste des casquettes est maintenant lue directement sur le site chaque nuit ; un changement de prix, de stock ou de coloris remonte tout seul chez Google. Première lecture réussie : 73 casquettes, aucune erreur.
 - Google Search Console : plan du site (21 pages) envoyé à Google ; test en direct réussi, Google peut le lire. Le premier passage de Google prend en général quelques heures à quelques jours.
+- Google Merchant Center : ancienne liste envoyée à la main retirée ; seule reste la lecture automatique sur le site (73 casquettes, aucun problème signalé).
+- Google Merchant Center : photos et informations des casquettes vérifiées une à une face aux règles de Google (format et taille des photos, casquettes « unisexe » et « adulte », informations obligatoires en France) : tout est conforme. Aucun produit refusé à ce stade.
 
 **En cours**
 
-- Google Merchant Center : examen des 73 casquettes par Google (jusqu'à 3 jours ouvrés) ; retrait de l'ancienne liste envoyée à la main, remplacée par la lecture automatique.
+- Google Merchant Center : examen des 73 casquettes par Google (jusqu'à 3 jours ouvrés) ; vérification prévue le 5 novembre.
 - Annuaires de créateurs et Pinterest : documents prêts ; reste à faire par Morgane : inscription aux annuaires, création du compte Pinterest et publication des épingles.
 
 ## Petit lexique
