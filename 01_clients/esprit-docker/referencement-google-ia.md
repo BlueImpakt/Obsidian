@@ -100,6 +100,15 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 - Google Merchant Center : compte créé ; livraison (point relais 3,50 €, domicile 8,50 €, offerte dès 100 €) et retours (14 jours, à la charge du client) déclarés comme dans les conditions de vente ; 73 casquettes lues chaque nuit sur le site, photos et informations conformes aux règles de Google.
 - Annuaires de créateurs sélectionnés (ceux qui exigent du « fabriqué en France » écartés) ; textes de fiche, présentation Instagram et guide Pinterest rédigés.
 
+**5 novembre 2026**
+
+- Google Merchant Center : l'examen est terminé, aucune casquette refusée et aucun problème signalé. 2 casquettes sont approuvées et 72 sont classées « stock limité » par Google ; nous vérifions ce que cela signifie. Le site a déjà reçu 3 clics depuis Google Shopping.
+- Google Merchant Center, précision : le libellé « stock limité » ne parle pas du stock, il veut dire « visibilité limitée ». Pour ces casquettes, Google n'a pas fini de vérifier les photos ; elles s'affichent déjà, mais moins souvent, et rien n'est à corriger. Le même jour, 8 casquettes sont entièrement approuvées. Les casquettes n'apparaissent qu'aux personnes qui cherchent depuis la France, seul pays de livraison déclaré, et jamais dans le bloc « Produits sponsorisés », réservé aux publicités payantes.
+- Recherches qui comptent : en France, « casquette sans visière » est tapée environ 3 600 fois par mois, « bonnet docker » 2 400 fois (surtout en novembre et décembre), « casquette marin » 1 300 fois et « casquette docker » 720 fois. « Bonnet docker » désigne le même objet que la casquette docker ; « bonnet », « bonnet homme » et « bonnet femme » visent des bonnets d'hiver en maille, donc écartés. Sur « casquette marin », Google montre surtout la casquette de marin breton à visière.
+- Fiches des 73 casquettes : leur titre dans Google commence désormais par « Casquette docker » (par exemple « Casquette docker Sakura, Rouge Grenat ») et leur description dit aussi « bonnet docker ». En ligne depuis le 5 novembre, Google et Bing prévenus.
+- Page Collection : nouveau titre « La Collection de casquettes docker » et une courte présentation qui reprend les mots que les gens cherchent (casquette sans visière, bonnet docker, casquette marin). La FAQ et la page À propos disent maintenant que le bonnet docker est la même forme. En ligne depuis le 5 novembre.
+- Trois nouveaux guides rédigés et vérifiés, en brouillon (pas encore visibles sur le site) : « Casquette sans visière : bien la choisir », « Bonnet docker ou casquette docker : quelle différence ? » et « Casquette marin : avec ou sans visière, laquelle choisir ? ». Quelques questions courtes à Morgane (hiver, couture du bijou, séchage, taille hors 54 à 60 cm) avant de les publier.
+
 ## Petit lexique
 
 - **Référencement (SEO)** : ce qui aide un site à apparaître dans Google. **GEO** : la même chose pour les assistants IA.

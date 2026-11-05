@@ -5,7 +5,7 @@ statut: discussion
 priorite: p1
 secteur: artisanat
 localisation: france
-body_synced: 2026-10-29
+body_synced: 2026-11-05
 ---
 
 # sellerie-confort
@@ -29,6 +29,8 @@ body_synced: 2026-10-29
 - 2026-10-21/22 : vidéo promo Instagram (Remotion, rushes IA) : v1 29 s, variantes dézoom et « loupes matières » (33,4 s), version « infos » ; version client « Maquette » prête le 22/10, rien envoyé à la cliente — à envoyer en relance de l'audit le 28-29/10. Détail : [[sellerie-confort-configurateur]]
 - 2026-10-27 : audit SEO de sellerieconfort.com livré — bases saines ; freins : fiches en double, codes internes dans les titres, LCP mobile ~19,6 s, page Divi de sauvegarde indexée
 - 2026-10-29 : Valérie répond à l'audit avec une série de questions : OK pour la Phase 2, pas pour la Phase 3 pour l'instant (coût) ; mail hostile de VIMAWEB transmis par elle (profil de Melvin, conditions sur le configurateur), qui l'agace ; elle propose à Melvin de reprendre la maintenance. Réponses écrites et offre de maintenance envoyées via elle. Détail : [[reprise-maintenance]]
+- 2026-11-04 : réunion à trois (avec VIMAWEB), collaboration a priori possible ; demande d'un configurateur indépendant du plugin. Détail : [[sellerie-confort-configurateur]]
+- 2026-11-05 : écrans de gestion de l'essai de configurateur livrés et relus ; contrat unique avec Melvin, coordination directe avec VIMAWEB (accord écrit par mail, Valérie en copie)
 
 ## Décisions prises
 - Phase 1 = audit technique avant chiffrage ferme de la Phase 2, **1 400 € HT** (4 j × 350 €) déduits de la Phase 2 si suite ; elle inclut, sans supplément, l'audit des automatisations, le suivi du parcours et le panier perdu
@@ -37,7 +39,8 @@ body_synced: 2026-10-29
 - WordPress conservé pour la refonte (moins cher et moins risqué que du from scratch) — à confirmer par l'audit
 - Images d'origine conservées pour les modèles existants ; pour une nouvelle matière, grande photo haute résolution (texture maître) préférée au petit carré répété, échelle auto à prévoir en Phase 2
 - Dev de la Phase 2 (17/10, repris dans le rapport le 20/10) : copie exacte de la prod sur l'hébergement, données clients comprises, neutralisée, encadrée par une clause RGPD de sous-traitance (art. 28) au contrat de Phase 2
-- Aucun échange direct avec VIMAWEB (29/10) : tout passe par écrit, via Valérie ; Phase 2 développée en local sur sauvegarde de la prod, pas sur leur dev
+- Aucun échange direct avec VIMAWEB (29/10) : tout passe par écrit, via Valérie ; Phase 2 développée en local sur sauvegarde de la prod, pas sur leur dev — **nuancé le 04/11** : réunion à trois, collaboration avec VIMAWEB a priori possible ; **05/11 : coordination directe avec VIMAWEB** (accord écrit par mail, Valérie en copie), contrat unique avec Melvin
+- 04/11 : configurateur demandé indépendant du plugin (et d'APF), décision de Melvin ; essai réussi sur 5 modèles (prix identiques, sans plugin ni APF) ; détails dans [[sellerie-confort-configurateur]]
 
 ## Besoins identifiés
 - Ajouter une couleur ou une matière beaucoup plus simplement (regroupement par famille au lieu d'une photo par selle, par zone, par matière)
@@ -51,16 +54,12 @@ body_synced: 2026-10-29
 - **Chiffrage du 19/10, revu le 20/10** (Word + PDF `chiffrage-phases-1-2-3.docx` + variante fourchette, repris dans le rapport client) : Phase 2 = **17,5 j écran de gestion compris + 200 € HT d'outils = 6 325 € HT, 4 925 € HT à payer (Phase 1 déduite)**, sous le plafond de 7 000 € HT, paiement 50 % à la commande / 50 % à la mise en production ; Phase 3 (refonte complète du site + automatisations) = **20 à 28,5 j, 7 000 à 9 975 € HT**
 - **Rapport client Phase 1 (20/10, artefact claude.ai + PDF v2, non envoyé)** : chiffrage aligné sur le Word (17,5 j d'un bloc, l'option 15 j + écran de gestion abandonnée), détail par lot conservé, relu et corrigé ; incohérences restantes à trancher, mail de synthèse prêt
 - **29/10** : Phase 2 acceptée sur le principe (4 925 € HT confirmés, contrat à signer, garantie corrective 6 mois) ; Phase 3 repoussée. **Offre maintenance** : reprise du site en l'état 700 € HT + 175 € HT/mois sur 12 mois, rien en supplément pendant les phases de refonte — réponse attendue
+- **04/11 : chiffrage révisé 20 à 26 j** (configurateur indépendant du plugin), proposition à Valérie au même prix, Phase 2 toujours plafonnée à 7 000 € HT, garantie 6 mois, maintenance configurateur 75 € HT/mois
 
 ## Next actions
 - [ ] Réunion du 2026-10-07 : voir les next actions de [[sellerie-confort-configurateur]] (toutes les actions du projet y vivent)
 
 ## Journal
-- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
-- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — groupes de configuration identifiés : Africa Twin 1100 = 1000 ; Transalp 600 dans un groupe de 41 fiches
-- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Remotion pour Instagram en brainstorming (V1 100 % graphisme, scénario Africa Twin → configurateur → motarde), 3 pistes visuelles maquettées
-- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Instagram : rushes IA validés (Google Flow), tâches 1 à 8 du montage Remotion validées, assemblage final en cours
-- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo : film complet de 30 s assemblé avec son, derniers défauts de rendu en correction
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Reel 30 s v1 livrée et relue ; retours de Melvin en cours d'intégration.
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo v1 29 s livrée avec les retours de Melvin, variante « dézoom » de fin lancée sur copie.
 - 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo : variante dézoom2 rendue (gros plan selle, motarde qui entre au recul).
@@ -71,6 +70,11 @@ body_synced: 2026-10-29
 - 2026-10-27 : Sur [[sellerie-confort-configurateur]] — audit SEO de sellerieconfort.com livré : bases saines, freins = fiches en double, codes internes dans les titres, LCP mobile ~19,6 s, page Divi de sauvegarde indexée.
 - 2026-10-29 : Sur [[sellerie-confort-configurateur]] — Phase 2 acceptée (4 925 € HT), Phase 3 repoussée ; après un mail hostile de VIMAWEB, offre de reprise de maintenance envoyée (700 € HT + 175 € HT/mois), aucun échange direct avec VIMAWEB.
 - 2026-10-29 : Sur [[sellerie-confort-configurateur]] — Phase 2 démarrée en local sur une sauvegarde complète de la prod demandée par Valérie (clause RGPD + anonymisation), mise en prod après bascule de l'hébergement.
+- 2026-11-04 : Sur [[sellerie-confort-configurateur]] — réunion à trois, collaboration avec VIMAWEB a priori possible ; demande d'un configurateur indépendant du plugin (et d'APF, décision de Melvin). Détails dans la fiche projet.
+- 2026-11-04 : Sur [[sellerie-confort-configurateur]] — essai de configurateur indépendant réussi sur 5 modèles (prix identiques, sans plugin ni APF), chiffrage révisé 20 à 26 j ; proposition à Valérie au même prix, Phase 2 plafonnée à 7 000 € HT, garantie 6 mois et maintenance configurateur 75 € HT/mois.
+- 2026-11-05 : Sur [[sellerie-confort-configurateur]] — écrans de gestion de l'essai livrés et relus ; contrat unique avec Melvin, coordination directe avec VIMAWEB (accord écrit par mail, Valérie en copie)
+- 2026-11-05 : Sur [[sellerie-confort-configurateur]] — Contrat Phase 2 rédigé (8 pages, 4 925 € HT après déduction Phase 1, plafond 7 000 € HT) ; devis au prix initial avec 1 j de plus sur l'écran de gestion (18,5 j) et 1 j offert
+- 2026-11-05 : Sur [[sellerie-confort-configurateur]] — devis Phase 2 envoyé à Valérie (4 925 € HT après déduction Phase 1) et contrat aligné (démarrage à la signature, mise en production visée décembre 2026)
 
 ## Liens
 - Projets : [[sellerie-confort-configurateur]]

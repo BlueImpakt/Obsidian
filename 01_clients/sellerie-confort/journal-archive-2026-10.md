@@ -45,3 +45,8 @@ Entrées archivées automatiquement (seuil `## Journal` > 15, voir CLAUDE.md). H
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — liste des demandes à VIMAWEB pour le dev Phase 2 (accès SSH/SFTP, données perso, isolation, circuit dev → prod)
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — accès au dev et propriété du code documentés, état des lieux statistique livré (GA4 pages vues seulement, cookies posés malgré refus = non conforme CNIL), méthode Phase 2 copie locale sans données → dev → préprod → prod, rapport exporté en PDF v2.
 - 2026-10-20 : Sur [[sellerie-confort-configurateur]] — rapport client aligné sur le Word : Phase 2 6 325 € HT (4 925 € à payer, 50/50 commande / mise en prod), Phase 3 7 000 à 9 975 € HT ; relecture complète, accord de neutralisation du dev demandé à Valérie.
+- 2026-10-20 : Sur [[sellerie-confort-configurateur]] — champs année/taille/poids du configurateur passés en listes déroulantes (copie 8090, tests au vert)
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — groupes de configuration identifiés : Africa Twin 1100 = 1000 ; Transalp 600 dans un groupe de 41 fiches
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Remotion pour Instagram en brainstorming (V1 100 % graphisme, scénario Africa Twin → configurateur → motarde), 3 pistes visuelles maquettées
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo Instagram : rushes IA validés (Google Flow), tâches 1 à 8 du montage Remotion validées, assemblage final en cours
+- 2026-10-21 : Sur [[sellerie-confort-configurateur]] — vidéo promo : film complet de 30 s assemblé avec son, derniers défauts de rendu en correction

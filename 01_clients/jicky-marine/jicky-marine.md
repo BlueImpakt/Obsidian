@@ -7,7 +7,7 @@ secteur: tourisme
 localisation: france
 origine_lead: agent prospect-charter (run Saint-Barthélemy du 2026-10-23)
 tjm:
-body_synced: 2026-11-01
+body_synced: 2026-11-02
 ---
 
 # jicky-marine
@@ -42,7 +42,7 @@ body_synced: 2026-11-01
 - **Prochaine échéance** : premier contact
 
 ## Next actions
-- [ ] Premier contact (voir [[jicky-marine-refonte]])
+- [ ] Premier contact : envoi du mail J0 (brouillon prêt, maquette servie sur jicky-marine.maquettes.blue-impakt.org) — voir [[jicky-marine-refonte]]
 
 ## Journal
 - 2026-10-27 : Sur [[jicky-marine-refonte]] — photos des cartes chargées après le hero (ff3a790), affichage principal iPhone 4G lente ~6,9 → ~6,1 s.

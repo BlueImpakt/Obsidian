@@ -4,7 +4,7 @@ created: 2026-10-25
 statut: encours
 client: jicky-marine
 parent: prospect-charter
-body_synced: 2026-11-01
+body_synced: 2026-11-02
 ---
 
 # jicky-marine-refonte
@@ -29,6 +29,7 @@ body_synced: 2026-11-01
 - 2026-10-28 (nuit, suite) : page privée avec ligne « Voir en grand » (5 visuels ordinateur/téléphone et mesures en nouvelle fenêtre), captures avant/après refaites sans mention « non publié ». Reste `PITCH_CONTACT` ; aucun contact avec Jicky.
 - 2026-10-28/29 : page privée finalisée (coordonnées de Melvin, logo sans lien, titre « la réservation en ligne, sans perdre la main », avant/après téléphone + ordinateur, 5 questions) ; plus de PITCH_ dans le dossier. Porte qualité : poids accueil, focus et faits corrigés le 29/10, reste FAIL sur 8 photos agrandies et le LCP mobile bridé. Toujours aucun contact avec Jicky.
 - 2026-11-01 : page « Services aux yachts » EN/FR ajoutée à la maquette (livraisons, déchets, fret Miami sur devis, formulaire à estimation, vue bureau), navigation revue ; revues textes/a11y/Finish-Gate corrigées (a42bbdc, 31 contrôles OK) ; comparaison à l'aveugle : 1re sur 5 écrans sur 6, 2e sur la fiche 1 440 px derrière Edmiston ; vidéo, avant/après et captures refaits. Toujours aucun contact avec Jicky.
+- 2026-11-02 : maquette et page privée basculées sur l'adresse propre https://jicky-marine.maquettes.blue-impakt.org (page privée /p/), plus de lien *.vercel.app dans les messages (anti-spam) ; vidéo (73,7 s) et avant/après du 01/11 republiés ; brouillons J0-J+15 et note d'envoi régénérés, image de couverture du J0 pointée vers sa copie en ligne (méthode Outlook : insérer l'image depuis le fichier puis lien Ctrl+K). Toujours aucun contact avec Jicky.
 
 ## Décisions techniques
 - **Garder Up2pay** (Crédit Agricole, déjà sous contrat) pour toutes les cartes ; virement pour les gros montants. Stripe exclu (Saint-Barth non supporté).
@@ -76,7 +77,7 @@ body_synced: 2026-11-01
 - [ ] Flotte à l'échelle : relancer le Fjord 53 dans Nano Banana (`research/nano-banana-30deg/PROMPTS.md`, section « Relance ») puis l'intégrer
 - [ ] Flotte à l'échelle : faire confirmer par Jicky la hauteur réelle du mât du Sanya 57 (photo ≈ 28 m contre 22,25-23 m publiés, option « light air » ?) ; maquette calée sur la photo (28,4 m), décision Melvin du 2026-10-28
 - [ ] Vérifier que les photos du hero téléphone se chargent sur la version en ligne (manquantes repérées le 2026-10-28)
-- [ ] Repasser la porte qualité puis relancer `chiffres` : la fiche chiffres date du 27/10 (avant les corrections de chargement et la page Services aux yachts) ; republier la page privée Vercel (anciennes vidéo et images) avec accord de Melvin
+- [ ] Repasser la porte qualité puis relancer `chiffres` : la fiche chiffres date du 27/10 (avant les corrections de chargement et la page Services aux yachts) ; vidéo et avant/après du 01/11 déjà republiés sur l'adresse propre le 2026-11-02
 - [ ] Fiche 1 440 px (2e derrière Edmiston) : aligner prix et titre sur la même ligne de base, homogénéiser les vignettes, supprimer le blanc sous la galerie ; mobile : barre basse qui recouvre les miniatures, texte du hero sur la coque
 - [ ] Services aux yachts : faire confirmer par Jicky ce que transporte une livraison VIP et les conditions de règlement des livraisons (marqués « À confirmer » sur la page)
 

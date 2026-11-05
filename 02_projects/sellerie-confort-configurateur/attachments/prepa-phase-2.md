@@ -13,6 +13,8 @@ Projet : [[sellerie-confort-configurateur]] · Client : [[sellerie-confort]]
 
 ## 1. Chiffrage (version du 20/10)
 
+> **Révisé le 04/11** : à la réunion avec VIMAWEB et Valérie, demande d'un configurateur indépendant du plugin et d'APF. Nouveau chiffrage et options au §3. Le tableau ci-dessous reste la base « plugin conservé » (option B du §3).
+
 Taux 350 € HT par jour, TVA non applicable (art. 293 B du CGI). Document Word : `sellerieconfort-refonte/Phase 1/chiffrage-phases-1-2-3-fourchette.docx` (et version à montant fixe `chiffrage-phases-1-2-3.docx`).
 
 ### Phase 2 : refonte du configurateur
@@ -151,3 +153,82 @@ Une copie exacte garde les clés de paiement de production, les vrais e-mails cl
 - plugin signalé comme compromis non exécuté, et recherche du fichier `wp-comments-posts.php` dans la copie.
 
 **À préparer par Melvin** : la clause RGPD de sous-traitance, le script de neutralisation, et la demande à VIMAWEB (envoyée par Valérie).
+
+## 3. Configurateur indépendant (réunion VIMAWEB et Valérie du 04/11)
+
+### Ce qui a été demandé
+- Réunion à trois le 04/11 : a priori, pas de problème pour travailler avec VIMAWEB (la reprise de la maintenance, voir [[reprise-maintenance]], est donc à reconsidérer).
+- VIMAWEB souhaite un **configurateur développé hors du plugin Product Configurator for WooCommerce (Marc Lacroix, « mklacroix »)**, y compris hors de la 2.0.0, pour ne pas risquer de casse liée au plugin.
+- Décision de Melvin : **APF (Advanced Product Fields) est retiré aussi**, pour le même objectif d'indépendance.
+- Plus de travail, mais plus de liberté.
+
+### Ce qui dépend aujourd'hui du plugin et d'APF (relu dans `maquette-branchee/sc-maquette`)
+- **Déjà indépendant** : l'interface (rendu des calques, étapes, récapitulatif, partage par lien).
+- **Plugin** : données lues par `mkl_pc('db')->get('layers'|'content')` ; ajout au panier par un « pont » qui recopie la configuration dans le formulaire caché du plugin puis clique son bouton ; panier, commande, image de la configuration ; éditeur d'administration des calques utilisé par Valérie. L'écran de gestion (`sc-gestion-configurateur`) s'appuie sur le filtre interne `mkl_pc/db/get` et écrit dans `_mkl_product_configurator_content`.
+- **APF** : toutes les options et informations de commande (hauteur, gel, chauffage, type de commande, options supplémentaires, champs de broderie, informations pilote), avec prix et conditions, par groupe de champs `_wapf_fieldgroup` sur chaque fiche. L'**étiquette de production** (code VIMAWEB) lit les champs APF.
+
+### Chiffrage d'un configurateur indépendant (plugin et APF retirés)
+
+| Lot | Durée | Détail |
+|---|---|---|
+| Environnements dev et préprod | 1 j | Inchangé |
+| Modèle de données et migration | 3 à 4 j | Remplace « passage en 2.0.0 » et « données du catalogue » : les 46 configurations dans nos données WordPress (post_meta), les 345 fiches rattachées, images existantes réutilisées sans doublon |
+| Configurateur branché sur nos données | 2 à 2,5 j | Le prototype, branché sur nos données au lieu du plugin |
+| Panier et commande | 3,5 à 4,5 j | Nouveau : ajout au panier, contrôle des choix et du prix côté serveur, panier, commande, courriels, factures PDF, étiquette et fiche d'habillage, image de la configuration, affichage des anciennes commandes faites avec le plugin |
+| Options (remplace APF) | 1,5 à 2 j | Options dans nos données (prix, conditions par modèle), migration des groupes de champs APF des 345 fiches |
+| Fiche produit et design | 1,5 à 2 j | Inchangé ou presque |
+| Broderies et nid d'abeille | 3 j | Inchangé |
+| Écran de gestion devenu l'éditeur complet | 5 à 6,5 j | Matières, plus création d'une configuration, de ses calques, de ses angles et dépôt des images par choix (l'éditeur du plugin disparaît), plus gestion des options |
+| Adaptations liées au retrait d'APF | 1 j | Panier, commande, courriels, factures et étiquette de production (code VIMAWEB) |
+| Recette et mise en production | 3,5 à 4 j | Plus de parcours à tester, retrait du plugin et d'APF, vérification du code VIMAWEB qui en dépend |
+| **Total** | **25 à 30,5 j** | **8 750 à 10 675 € HT**, plus 200 € HT d'outils (au lieu de 17,5 j et 6 125 € HT) |
+
+- Plugin seul retiré, APF conservé : 21 à 25,5 j (7 350 à 8 925 € HT).
+- Les commandes passées gardent les valeurs APF en texte : lisibles sans APF. Celles du plugin demandent un affichage de compatibilité.
+- **Ce qui peut faire monter l'estimation** : des modules payants du plugin utilisés (prix par choix, conditions entre choix, plusieurs vues) à refaire. Inventaire des fonctions réellement utilisées à faire sur la copie locale pour resserrer la fourchette.
+- Calendrier : livraison qui glisse vers janvier.
+
+### Failles connues du plugin
+- **CVE-2025-54674** : faille de type CSRF, gravité moyenne, versions jusqu'à 1.4.4 ([GitHub Advisory](https://github.com/advisories/GHSA-fpvv-xmjr-h8hp)).
+- **CVE-2026-105872** : injection d'objet PHP, gravité haute, versions jusqu'à 1.7.5, publiée le 09/10/2026, **corrigée en 1.7.6** ([HOL Guard](https://hol.org/guard/security/cves/CVE-2026-105872-wordpress-product-configurator-for-woocommerce)).
+- **La prod est en 1.7.6 : les deux sont corrigées.** Aucune faille ouverte connue à ce jour.
+
+### Le risque de casse : réel ou prétexte ?
+- **Fondé en partie** : l'approche « plugin conservé » se branche sur un mécanisme interne du plugin (filtre `mkl_pc/db/get`, format de données), qu'une mise à jour majeure peut casser (la 2.0.0 a beaucoup changé) ; plugin maintenu par un seul développeur ; faille sérieuse corrigée en octobre 2026 ; et c'est VIMAWEB qui applique les mises à jour, donc qui serait mis en cause. Vouloir une frontière nette les protège, c'est légitime.
+- **Exagéré** : avec une préprod où les mises à jour sont testées, le risque est faible ; la plupart des boutiques WooCommerce tournent sur des extensions tierces ; ils gardent Divi et des dizaines d'extensions, l'exigence ne vise que le périmètre de Melvin.
+- **Effet réel** : tout le risque et 40 à 75 % de travail en plus passent sur Melvin. Accepté au même prix, c'est là qu'il serait en difficulté.
+
+### Options à présenter à Valérie
+- **Option A, configurateur indépendant** (recommandée si le budget suit) : 25 à 30,5 j par avenant (changement de périmètre demandé le 04/11). Conditions :
+  1. nouveau chiffrage validé par Valérie ;
+  2. frontière écrite : configurateur et options = Blue Impakt, le reste = VIMAWEB, origine d'un incident établie par le journal des modifications et les empreintes des fichiers (protège aussi Melvin des effets de leurs mises à jour) ;
+  3. calendrier ajusté ;
+  4. garantie de 6 mois sur tout le configurateur, prise en compte dans le prix.
+- **Option B, plugin conservé avec périmètre élargi** (si le surcoût est refusé) : plugin 2.0.0 et APF gardés, mais **dans le périmètre de Melvin** : VIMAWEB ne les met plus à jour, Melvin le fait après test en préprod. Le risque de casse lié aux mises à jour disparaît sans réécrire le configurateur. Chiffrage du §1 (17,5 j).
+
+**Prochaines étapes** : inventaire des fonctions du plugin utilisées (pour resserrer la fourchette de l'option A) ; rédaction des deux options pour Valérie.
+
+### Résultat de l'essai (04/11/2026)
+
+Essai sur la copie locale, 5 fiches (Duke, Z 900, Africa Twin 1100, BMW F 900 XR nid d'abeille, Z 1000 SX), plugin et APF coupés. Compte rendu complet : `sellerieconfort-refonte/Phase 2/essai-independant/compte-rendu.md` (branche `essai-configurateur-independant`), journal du temps et captures dans le même dossier.
+
+- **Possible** : configuration, panier, commande, administration, courriel, facture PDF et étiquette VIMAWEB fonctionnent sans le plugin ni APF, sans toucher au code de VIMAWEB. Prix identiques au site actuel (10/10). Attaques refusées. Prototype intact sans le cookie. Deux réserves pour la version complète (remède simple, à faire et tester) : anciennes commandes et paniers en cours qui contiennent des objets du plugin (erreur fatale possible une fois le plugin retiré) ; motif de broderie APF faux sur la Duke (le premier choix est imposé, défaut repris du prototype).
+- **Temps mesuré** : ≈ 3 h 25 de construction par agents IA (4 h 22 d'horloge avec les relectures). Pas converti en jours : les rapports mesuré / papier (de moins de 1 % à 5 % selon les lots) montrent que l'écriture du code n'est pas le poste lourd. Le reste à faire est chiffré lot par lot ; recette, validations avec Valérie et intégration ne sont pas compressées.
+
+| Lot | Papier | Révisé | Pourquoi |
+|---|---|---|---|
+| Environnements dev et préprod | 1 j | 1 j | Inchangé (essai en local seulement) |
+| Modèle de données et migration | 3 à 4 j | 2 à 3 j | Format compatible, migration exacte sur 5 fiches ; reste le regroupement en 46 configurations partagées (non testé) et sa validation |
+| Configurateur branché sur nos données | 2 à 2,5 j | 1 à 1,5 j | Front identique au prototype du premier coup ; reste le contrôle des 345 fiches et le branchement de la fiche produit (`fiche.php`, `?sc_fiche`) sur nos données (la fiche elle-même est au lot « Fiche produit et design ») |
+| Panier et commande | 3,5 à 4,5 j | 2 à 3 j | Fait et testé sur 5 fiches ; restent anciennes commandes du plugin (objets du plugin stockés dans les lignes : classes de compatibilité ou migration des meta), paniers et sessions à la bascule, paiements réels, fiche d'habillage |
+| Options (remplace APF) | 1,5 à 2 j | 1 à 1,5 j | Règles et prix validés ; reste la migration des 345 fiches et les chemins de prix non comparés |
+| Fiche produit et design | 1,5 à 2 j | 1,5 à 2 j | Hors essai |
+| Broderies et nid d'abeille | 3 j | 3 à 3,5 j | Hors essai (nid d'abeille généré) ; en plus, correspondance logo du calque ↔ motif APF sur toutes les configurations (fausse sur la Duke) et calques de broderie absents (BMW 32182) |
+| Écran de gestion devenu l'éditeur complet | 5 à 6,5 j | 3,5 à 4,5 j | Éditeur, options et matières faits en version dépouillée ; pas d'angles à faire (un seul partout) ; restent création d'une configuration, ajout d'une matière, écrans finis, formation |
+| Adaptations liées au retrait d'APF | 1 j | 0,5 j | Étiquette et factures compatibles sans changement ; reste l'inventaire du code VIMAWEB |
+| Recette et mise en production | 3,5 à 4 j | 3,5 à 4 j | Inchangé : dépend de Valérie, des paiements réels et de la bascule en prod |
+| Appropriation du code de l'essai (nouveau) | — | 1 à 1,5 j | Code écrit par des agents (≈ 5 300 lignes et ≈ 3 900 lignes de tests) : lecture et appropriation par Melvin, qui le garantit 6 mois |
+| **Total** | **25 à 30,5 j** | **20 à 26 j** | **7 000 à 9 100 € HT** (+ 200 € HT d'outils), au lieu de 8 750 à 10 675 € HT |
+
+- Écart avec l'option B (17,5 j) : 2,5 à 8,5 j (875 à 2 975 € HT). Plafond de 16 j dépassé dans tous les cas.
+- Défauts existants trouvés en route (thème VIMAWEB `functions.php:912`, factures PDF qui décodent les entités, BMW 32182 impossible à mettre au panier par le prototype, donnée APF de la Z 1000 SX, erreur fatale de `sc-relance` avec un panier du plugin, motif de broderie imposé sur la Duke, broderie non dessinée sur la BMW 32182) : compte rendu §6.
