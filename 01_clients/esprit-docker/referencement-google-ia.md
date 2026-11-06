@@ -111,7 +111,8 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 
 **6 novembre 2026**
 
-- Pages À propos et FAQ : l'origine de la casquette de base est désormais indiquée « fabriquée en Asie », comme partout ailleurs. En ligne, Google et Bing prévenus.
+- Pages À propos, FAQ et conditions de vente : l'origine de la casquette de base est désormais indiquée « fabriquée en Asie », comme partout ailleurs. En ligne, Google et Bing prévenus.
+- Page Collection : le titre redevient « La Collection » et la courte présentation passe sous les casquettes, pour garder une ouverture épurée ; les mots recherchés (casquettes docker, casquette sans visière, bonnet docker) restent sur la page. En ligne, Google et Bing prévenus.
 
 ## Petit lexique
 
