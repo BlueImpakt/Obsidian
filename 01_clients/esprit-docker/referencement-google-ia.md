@@ -109,6 +109,10 @@ Personne ne peut garantir une place sur Google ou une citation par une IA : ces 
 - Page Collection : nouveau titre « La Collection de casquettes docker » et une courte présentation qui reprend les mots que les gens cherchent (casquette sans visière, bonnet docker, casquette marin). La FAQ et la page À propos disent maintenant que le bonnet docker est la même forme. En ligne depuis le 5 novembre.
 - Trois nouveaux guides rédigés et vérifiés, en brouillon (pas encore visibles sur le site) : « Casquette sans visière : bien la choisir », « Bonnet docker ou casquette docker : quelle différence ? » et « Casquette marin : avec ou sans visière, laquelle choisir ? ». Quelques questions courtes à Morgane (hiver, couture du bijou, séchage, taille hors 54 à 60 cm) avant de les publier.
 
+**6 novembre 2026**
+
+- Pages À propos et FAQ : l'origine de la casquette de base est désormais indiquée « fabriquée en Asie », comme partout ailleurs. En ligne, Google et Bing prévenus.
+
 ## Petit lexique
 
 - **Référencement (SEO)** : ce qui aide un site à apparaître dans Google. **GEO** : la même chose pour les assistants IA.
